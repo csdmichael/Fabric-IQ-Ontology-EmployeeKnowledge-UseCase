@@ -1,0 +1,17 @@
+============================================================
+SHIFT HANDOFF NOTES
+Date: 2025-01-11
+Author: Avery Wilson (Specialist, Operations)
+Location: Portland
+============================================================
+
+Shift Handoff Notes - Operations
+---------------------------------
+Throughput: 98.2% of daily target achieved. One line pause (17 min) due to sensor fault.
+Maintenance completed PM-2244 on reactor unit 5 - sign-off obtained.
+Safety: Near-miss incident reported in Bay 3 - RCA in progress (INC-7723).
+Night shift supervisor: Jordan Nguyen.
+
+============================================================
+Skills: Azure AI, MLOps, Fabric, Python
+Next shift supervisor - please review and sign off.

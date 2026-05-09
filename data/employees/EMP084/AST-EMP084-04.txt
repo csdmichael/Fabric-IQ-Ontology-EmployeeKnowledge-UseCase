@@ -1,0 +1,17 @@
+============================================================
+SHIFT HANDOFF NOTES
+Date: 2025-03-30
+Author: Morgan Smith (Analyst, Finance)
+Location: Hsinchu
+============================================================
+
+Shift Handoff Notes - Finance Ops
+----------------------------------
+Month-end close in progress - AP entries pending GL posting (est. 2 hrs).
+FX revaluation run completed; 3 currency pairs require manual review.
+Budget upload for Q3 forecast submitted to Anaplan at 16:00.
+Tax filing submission confirmed by external advisor.
+
+============================================================
+Skills: TypeScript, Synapse, Python, Power BI
+Next shift supervisor - please review and sign off.

@@ -7,6 +7,8 @@
 - [Technologies Used](#technologies-used)
 - [Configuration Strategy (No Hardcoding)](#configuration-strategy-no-hardcoding)
 - [Synthetic Data Design](#synthetic-data-design)
+- [Employee Asset Generation](#employee-asset-generation)
+- [Upload Workflow – Datasource Ingestion](#upload-workflow--datasource-ingestion)
 - [Data Pipeline in Microsoft Fabric](#data-pipeline-in-microsoft-fabric)
 - [Document Intelligence & Confidence Scoring](#document-intelligence--confidence-scoring)
 - [Semantic Model & ERD](#semantic-model--erd)
@@ -40,18 +42,31 @@ It includes:
 │   ├── endpoints.json
 │   ├── fabric-settings.json
 │   ├── ontology-config.json
-│   ├── workflows.json
+│   ├── workflows.json          # CI, deploy, and upload settings
 │   └── terraform.tfvars.json
 ├── .github/workflows/
 │   ├── ci.yml
-│   └── deploy.yml
+│   ├── deploy.yml
+│   └── upload-employee-assets.yml
 ├── data/
 │   ├── employees.json
-│   ├── digital_assets.json
+│   ├── digital_assets.json     # 600 assets (pptx, pdf, docx, txt, one, xlsx)
 │   ├── emails.json
 │   ├── org_hierarchy.json
 │   ├── parsed_documents_cosmosdb.json
-│   └── storage_map.json
+│   ├── storage_map.json
+│   └── employees/              # generated actual asset files
+│       ├── EMP001/
+│       │   ├── EML-EMP001.eml
+│       │   ├── AST-EMP001-01.pptx
+│       │   ├── AST-EMP001-02.pdf
+│       │   ├── AST-EMP001-03.docx
+│       │   ├── AST-EMP001-04.txt
+│       │   ├── AST-EMP001-05.one
+│       │   └── AST-EMP001-06.xlsx
+│       └── … (EMP002–EMP100 same structure)
+├── scripts/
+│   └── generate_employee_files.py
 ├── docs/
 │   ├── architecture-diagram.svg
 │   ├── data-pipeline-diagram.svg
@@ -96,17 +111,92 @@ Config key resolution examples:
 
 ## Synthetic Data Design
 Data includes **100 employees** and enterprise digital assets expected in Lam Research-like environments:
-- OneDrive assets in multiple formats: **pptx, pdf, docx, txt, one (OneNote)**
+- OneDrive assets in multiple formats: **pptx, pdf, docx, txt, one (OneNote), xlsx**
 - Employee email records and ownership metadata
 - Reporting hierarchy with manager mappings
 - Azure storage paths mapped for raw/processed zones and OneLake target paths
 
 Primary data files:
 - `data/employees.json`
-- `data/digital_assets.json`
+- `data/digital_assets.json` – 600 assets total (6 per employee): pptx, pdf, docx, txt, one, xlsx
 - `data/emails.json`
 - `data/org_hierarchy.json`
 - `data/storage_map.json`
+- `data/parsed_documents_cosmosdb.json` – 600 parsed document records
+
+## Employee Asset Generation
+
+The `data/employees/` folder contains **700 actual files** (7 per employee × 100 employees) generated from the JSON data sources.
+
+### File types per employee
+
+| File | Type | Description |
+|------|------|-------------|
+| `EML-EMPXXX.eml` | Email | RFC 2822 weekly status update email |
+| `AST-EMPXXX-01.pptx` | Presentation | 4-slide PowerPoint deck (title + 3 content slides) |
+| `AST-EMPXXX-02.pdf` | PDF | Process compliance document |
+| `AST-EMPXXX-03.docx` | Word | Design specification document with metadata table |
+| `AST-EMPXXX-04.txt` | Text | Shift handoff notes |
+| `AST-EMPXXX-05.one` | OneNote | Notebook export (ZIP container with markdown + manifest) |
+| `AST-EMPXXX-06.xlsx` | Spreadsheet | Department-specific data tracker with styled headers |
+
+All file content is **department-aware** – Manufacturing employees get equipment OEE trackers, Finance employees get budget variance spreadsheets, R&D employees get experiment data logs, etc.
+
+### Regenerating files
+
+```bash
+pip install python-pptx python-docx openpyxl reportlab
+python scripts/generate_employee_files.py
+```
+
+The script is idempotent – it skips files that already exist. Delete individual files (or the whole `data/employees/` directory) to force regeneration.
+
+### xlsx additions to JSON
+
+`data/digital_assets.json` was extended with 100 `AST-EMPXXX-06` spreadsheet entries (one per employee) and `data/parsed_documents_cosmosdb.json` was extended with matching parse records. Both files now contain **600 entries each**.
+
+## Upload Workflow – Datasource Ingestion
+
+The workflow `.github/workflows/upload-employee-assets.yml` uploads all employee assets from `data/employees/` to the Azure Blob Storage container that the Fabric data pipeline monitors.
+
+### How it works
+
+1. **`load-config` job** – reads _all_ configuration from config files (zero hardcoded values):
+   - `config/workflows.json` → Python version, local assets path, secret names, Azure CLI version
+   - `config/fabric-settings.json` → target blob container (`storage.inputContainer`)
+   - `data/storage_map.json` → blob path template (`onedriveIngestionPathTemplate`)
+2. **`upload-assets` job** – authenticates with Azure via OIDC, then uploads every file to `{container}/{employeeId}/{filename}` using Azure CLI.
+
+### Triggers
+
+| Trigger | Behaviour |
+|---------|-----------|
+| `push` to `main` (paths: `data/employees/**`) | Automatically uploads changed assets |
+| `workflow_dispatch` with `dry_run: false` | Manual full upload |
+| `workflow_dispatch` with `dry_run: true` | Lists files that would be uploaded without uploading |
+
+### Required GitHub secrets
+
+| Secret name | Description |
+|-------------|-------------|
+| `AZURE_CREDENTIALS` | Azure service principal JSON (for `azure/login`) |
+| `AZURE_STORAGE_ACCOUNT` | Storage account name (no endpoint URL – just the account name) |
+
+The secret _names_ themselves are read from `config/workflows.json` (`upload.azureCredentialsSecretName` and `upload.storageAccountSecretName`) so they can be changed without editing the workflow YAML.
+
+### Configuration reference (`config/workflows.json → upload`)
+
+```jsonc
+"upload": {
+  "pythonVersion": "3.12",          // Python version for the runner
+  "localAssetsPath": "data/employees",  // relative path to asset files
+  "fabricSettingsFile": "config/fabric-settings.json",  // container name source
+  "storageMapFile": "data/storage_map.json",            // path template source
+  "azureCliVersion": "2.x",
+  "azureCredentialsSecretName": "AZURE_CREDENTIALS",    // GitHub secret name
+  "storageAccountSecretName": "AZURE_STORAGE_ACCOUNT"  // GitHub secret name
+}
+```
 
 ## Data Pipeline in Microsoft Fabric
 ![Data Pipeline Diagram](docs/data-pipeline-diagram.svg)
@@ -207,6 +297,12 @@ Workflows are split for fast, dependency-aware execution:
   - `load-config` reads deploy settings from `config/workflows.json`
   - `package-fabric-bundle` and `terraform-plan` run in parallel
   - `terraform-apply` runs only when `workflow_dispatch` input `apply=true` and after dependencies succeed
+
+- `.github/workflows/upload-employee-assets.yml`
+  - `load-config` reads upload settings from `config/workflows.json`, `config/fabric-settings.json`, and `data/storage_map.json`
+  - `upload-assets` authenticates with Azure via OIDC and uploads all files under `data/employees/` to the configured Azure Blob container
+  - Supports `dry_run` mode (lists files without uploading)
+  - Triggered automatically on `push` to `main` when files under `data/employees/**` change
 
 All component-specific workflow configuration is centralized in:
 - `config/workflows.json`

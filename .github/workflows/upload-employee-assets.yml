@@ -1,0 +1,159 @@
+name: Upload Employee Assets to Azure Blob Storage
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run – list files without uploading"
+        required: false
+        default: "false"
+  push:
+    branches:
+      - main
+    paths:
+      - "data/employees/**"
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  load-config:
+    runs-on: ubuntu-latest
+    outputs:
+      python_version: ${{ steps.read.outputs.python_version }}
+      local_assets_path: ${{ steps.read.outputs.local_assets_path }}
+      storage_container: ${{ steps.read.outputs.storage_container }}
+      ingestion_path_template: ${{ steps.read.outputs.ingestion_path_template }}
+      azure_cli_version: ${{ steps.read.outputs.azure_cli_version }}
+      azure_credentials_secret: ${{ steps.read.outputs.azure_credentials_secret }}
+      storage_account_secret: ${{ steps.read.outputs.storage_account_secret }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: read
+        name: Read upload configuration from config files
+        run: |
+          set -euo pipefail
+
+          # Read all upload settings from config/workflows.json (no hardcoding)
+          python_version=$(jq -r '.upload.pythonVersion' config/workflows.json)
+          local_assets_path=$(jq -r '.upload.localAssetsPath' config/workflows.json)
+          azure_cli_version=$(jq -r '.upload.azureCliVersion' config/workflows.json)
+          azure_credentials_secret=$(jq -r '.upload.azureCredentialsSecretName' config/workflows.json)
+          storage_account_secret=$(jq -r '.upload.storageAccountSecretName' config/workflows.json)
+          fabric_settings_file=$(jq -r '.upload.fabricSettingsFile' config/workflows.json)
+          storage_map_file=$(jq -r '.upload.storageMapFile' config/workflows.json)
+
+          # Read container name from fabric-settings.json (referenced via workflow config)
+          storage_container=$(jq -r '.storage.inputContainer' "$fabric_settings_file")
+
+          # Read ingestion path template from storage_map.json
+          ingestion_path_template=$(jq -r '.onedriveIngestionPathTemplate' "$storage_map_file")
+
+          echo "python_version=$python_version" >> "$GITHUB_OUTPUT"
+          echo "local_assets_path=$local_assets_path" >> "$GITHUB_OUTPUT"
+          echo "storage_container=$storage_container" >> "$GITHUB_OUTPUT"
+          echo "ingestion_path_template=$ingestion_path_template" >> "$GITHUB_OUTPUT"
+          echo "azure_cli_version=$azure_cli_version" >> "$GITHUB_OUTPUT"
+          echo "azure_credentials_secret=$azure_credentials_secret" >> "$GITHUB_OUTPUT"
+          echo "storage_account_secret=$storage_account_secret" >> "$GITHUB_OUTPUT"
+
+          echo "=== Resolved upload configuration ==="
+          echo "  local_assets_path   : $local_assets_path"
+          echo "  storage_container   : $storage_container"
+          echo "  ingestion_path_tmpl : $ingestion_path_template"
+
+  upload-assets:
+    needs: load-config
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ needs.load-config.outputs.python_version }}
+
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets[needs.load-config.outputs.azure_credentials_secret] }}
+
+      - name: Upload employee assets to Azure Blob Storage
+        env:
+          LOCAL_ASSETS_PATH: ${{ needs.load-config.outputs.local_assets_path }}
+          STORAGE_CONTAINER: ${{ needs.load-config.outputs.storage_container }}
+          INGESTION_PATH_TEMPLATE: ${{ needs.load-config.outputs.ingestion_path_template }}
+          STORAGE_ACCOUNT: ${{ secrets[needs.load-config.outputs.storage_account_secret] }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import os, pathlib, subprocess, sys
+
+          local_root   = pathlib.Path(os.environ["LOCAL_ASSETS_PATH"])
+          container    = os.environ["STORAGE_CONTAINER"]
+          path_tmpl    = os.environ["INGESTION_PATH_TEMPLATE"]   # e.g. "{employeeId}/"
+          account      = os.environ["STORAGE_ACCOUNT"]
+          dry_run      = os.environ.get("DRY_RUN", "false").lower() == "true"
+
+          if not local_root.exists():
+              raise SystemExit(f"Assets directory not found: {local_root}")
+
+          uploaded = 0
+          errors   = 0
+
+          # Walk each employee sub-folder (EMP001, EMP002, …)
+          for emp_dir in sorted(local_root.iterdir()):
+              if not emp_dir.is_dir():
+                  continue
+
+              emp_id    = emp_dir.name
+              blob_prefix = path_tmpl.replace("{employeeId}", emp_id)
+
+              for asset_file in sorted(emp_dir.iterdir()):
+                  if not asset_file.is_file():
+                      continue
+
+                  blob_path = f"{blob_prefix}{asset_file.name}"
+
+                  if dry_run:
+                      print(f"[DRY-RUN] Would upload: {asset_file} -> {container}/{blob_path}")
+                      uploaded += 1
+                      continue
+
+                  cmd = [
+                      "az", "storage", "blob", "upload",
+                      "--account-name", account,
+                      "--container-name", container,
+                      "--name",          blob_path,
+                      "--file",          str(asset_file),
+                      "--overwrite",
+                      "--auth-mode",     "login",
+                      "--output",        "none",
+                  ]
+
+                  result = subprocess.run(cmd, capture_output=True, text=True)
+                  if result.returncode != 0:
+                      print(f"ERROR uploading {blob_path}: {result.stderr.strip()}", file=sys.stderr)
+                      errors += 1
+                  else:
+                      print(f"Uploaded: {blob_path}")
+                      uploaded += 1
+
+          print(f"\nSummary – uploaded: {uploaded}, errors: {errors}")
+          if errors:
+              raise SystemExit(f"{errors} file(s) failed to upload.")
+          PY
+
+      - name: Upload summary
+        if: always()
+        run: |
+          echo "### Employee Asset Upload" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Setting | Value |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---------|-------|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Container | ${{ needs.load-config.outputs.storage_container }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Local path | ${{ needs.load-config.outputs.local_assets_path }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Dry run | ${{ github.event.inputs.dry_run || 'false' }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Trigger | ${{ github.event_name }} |" >> "$GITHUB_STEP_SUMMARY"
