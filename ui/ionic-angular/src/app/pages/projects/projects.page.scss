@@ -1,0 +1,35 @@
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.skill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 8px 0;
+}
+
+.employee-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: 4px 0;
+    border-bottom: 1px solid var(--ion-color-light);
+    font-size: 0.9rem;
+  }
+}
+
+.selected-row {
+  background-color: var(--ion-color-light);
+}
+
+h5 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}

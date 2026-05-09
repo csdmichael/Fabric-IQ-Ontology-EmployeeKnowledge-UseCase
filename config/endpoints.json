@@ -20,7 +20,7 @@
     "copilotStudioUrl": "https://copilotstudio.microsoft.com"
   },
   "hosting": {
-    "uiPublicUrl": "https://foundry-privatevnet-ui.azurewebsites.net",
+    "uiPublicUrl": "https://fabric-iq-emp-knowledge-ui.azurewebsites.net",
     "apiUrl": "https://foundry-privatevnet-api.azurewebsites.net"
   }
 }

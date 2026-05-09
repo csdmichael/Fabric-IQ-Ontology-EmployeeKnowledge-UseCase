@@ -7,6 +7,13 @@
       "ref": "../dataflows/employee_ingestion_dataflow.json"
     },
     {
+      "name": "IngestProjectData",
+      "type": "Copy",
+      "source": "AzureBlob.employee-knowledge-raw/projects.json",
+      "target": "OneLake.Staging.Projects",
+      "endpointConfigKey": "azure.blobStorageEndpoint"
+    },
+    {
       "name": "ClassifyWithDocIntelligence",
       "type": "Notebook",
       "uses": "AzureDocumentIntelligence",

@@ -1,0 +1,108 @@
+<ion-content class="ion-padding">
+  <h2>Projects</h2>
+  <p>{{ description }}</p>
+
+  <div *ngIf="loadError" class="viewer-error">{{ loadError }}</div>
+
+  <div class="search-panel">
+    <ion-item lines="none">
+      <ion-label position="stacked">Search Projects</ion-label>
+      <ion-input
+        [value]="query"
+        (ionInput)="onQueryInput($any($event.target).value || '')"
+        placeholder="Search by name, description, skill, or employee ID">
+      </ion-input>
+    </ion-item>
+
+    <div class="filter-row">
+      <ion-item lines="none">
+        <ion-label>Status</ion-label>
+        <ion-select
+          [value]="statusFilter"
+          placeholder="All"
+          (ionChange)="onStatusFilter($any($event.detail).value || '')">
+          <ion-select-option value="">All</ion-select-option>
+          <ion-select-option *ngFor="let s of statuses" [value]="s">{{ s }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Department</ion-label>
+        <ion-select
+          [value]="departmentFilter"
+          placeholder="All"
+          (ionChange)="onDepartmentFilter($any($event.detail).value || '')">
+          <ion-select-option value="">All</ion-select-option>
+          <ion-select-option *ngFor="let d of departments" [value]="d">{{ d }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-button size="small" color="medium" fill="outline" (click)="clearFilters()">Clear</ion-button>
+    </div>
+  </div>
+
+  <div class="layout-grid">
+    <div class="layout-card">
+      <h3>Project List</h3>
+      <p class="meta">{{ totalProjects }} matching projects • Page {{ page }} of {{ totalPages }}</p>
+
+      <div class="asset-table">
+        <div class="asset-row header">
+          <span>ID</span><span>Name</span><span>Dept</span><span>Status</span><span>Team</span>
+        </div>
+        <div
+          class="asset-row"
+          *ngFor="let project of pagedProjects"
+          [class.selected-row]="selectedProject?.projectId === project.projectId"
+          (click)="selectProject(project)"
+          style="cursor:pointer">
+          <span>{{ project.projectId }}</span>
+          <span>{{ project.name }}</span>
+          <span>{{ project.department }}</span>
+          <span>
+            <ion-badge [color]="statusColor(project.status)">{{ project.status }}</ion-badge>
+          </span>
+          <span>{{ project.employeeIds.length }} members</span>
+        </div>
+      </div>
+
+      <div class="pagination-row">
+        <ion-button size="small" fill="outline" [disabled]="page <= 1" (click)="goToPreviousPage()">Previous</ion-button>
+        <ion-button size="small" fill="outline" [disabled]="page >= totalPages" (click)="goToNextPage()">Next</ion-button>
+      </div>
+    </div>
+
+    <div class="layout-card">
+      <h3>Project Detail</h3>
+
+      <div *ngIf="!selectedProject" class="viewer-placeholder">
+        Click a project row to view details and team members.
+      </div>
+
+      <div *ngIf="selectedProject">
+        <p class="meta"><strong>{{ selectedProject.projectId }}</strong> — {{ selectedProject.department }}</p>
+        <h4>{{ selectedProject.name }}</h4>
+        <p>{{ selectedProject.description }}</p>
+
+        <p class="meta">
+          <strong>Status:</strong>
+          <ion-badge [color]="statusColor(selectedProject.status)">{{ selectedProject.status }}</ion-badge>
+          &nbsp;&nbsp;
+          <strong>Start:</strong> {{ selectedProject.startDate }}
+          <span *ngIf="selectedProject.endDate">&nbsp;&nbsp;<strong>End:</strong> {{ selectedProject.endDate }}</span>
+        </p>
+
+        <div class="skill-row">
+          <ion-chip *ngFor="let skill of selectedProject.skills" color="primary">
+            <ion-label>{{ skill }}</ion-label>
+          </ion-chip>
+        </div>
+
+        <h5>Team Members ({{ selectedProject.employeeIds.length }})</h5>
+        <ul class="employee-list">
+          <li *ngFor="let empId of selectedProject.employeeIds">{{ employeeDisplay(empId) }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -38,6 +38,21 @@ variable "cosmos_container_name" {
   description = "Cosmos DB SQL container name."
 }
 
+variable "ui_app_service_name" {
+  type        = string
+  description = "Name of the new UI App Service in the ai-myaacoub resource group."
+}
+
+variable "ui_resource_group_name" {
+  type        = string
+  description = "Resource group that contains the existing App Service Plan for the UI."
+}
+
+variable "ui_app_service_plan_name" {
+  type        = string
+  description = "Name of the existing App Service Plan to reuse for the UI app."
+}
+
 variable "tags" {
   type        = map(string)
   description = "Tags applied to all resources."
