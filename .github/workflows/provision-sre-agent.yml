@@ -55,12 +55,12 @@ jobs:
   load-config:
     runs-on: ubuntu-latest
     outputs:
-      terraform_version:     ${{ steps.read.outputs.terraform_version }}
-      tf_dir:                ${{ steps.read.outputs.tf_dir }}
-      tf_var_file:           ${{ steps.read.outputs.tf_var_file }}
-      tf_targets:            ${{ steps.read.outputs.tf_targets }}
+      terraform_version:      ${{ steps.read.outputs.terraform_version }}
+      tf_dir:                 ${{ steps.read.outputs.tf_dir }}
+      tf_var_file:            ${{ steps.read.outputs.tf_var_file }}
+      tf_targets:             ${{ steps.read.outputs.tf_targets }}
       monitor_resource_group: ${{ steps.read.outputs.monitor_resource_group }}
-      azure_subscription_id: ${{ steps.read.outputs.azure_subscription_id }}
+      azure_subscription_id:  ${{ steps.read.outputs.azure_subscription_id }}
     steps:
       - uses: actions/checkout@v4
 
@@ -76,16 +76,44 @@ jobs:
           # Build -target flags from the targets array in config
           tf_targets=$(jq -r '.sre.terraformTargets | map("-target=" + .) | join(" ")' config/workflows.json)
 
-          echo "terraform_version=$terraform_version"         >> "$GITHUB_OUTPUT"
-          echo "tf_dir=$tf_dir"                               >> "$GITHUB_OUTPUT"
-          echo "tf_var_file=$tf_var_file"                     >> "$GITHUB_OUTPUT"
+          echo "terraform_version=$terraform_version"           >> "$GITHUB_OUTPUT"
+          echo "tf_dir=$tf_dir"                                 >> "$GITHUB_OUTPUT"
+          echo "tf_var_file=$tf_var_file"                       >> "$GITHUB_OUTPUT"
           echo "monitor_resource_group=$monitor_resource_group" >> "$GITHUB_OUTPUT"
-          echo "azure_subscription_id=$azure_subscription_id" >> "$GITHUB_OUTPUT"
-          echo "tf_targets=$tf_targets"                       >> "$GITHUB_OUTPUT"
+          echo "azure_subscription_id=$azure_subscription_id"   >> "$GITHUB_OUTPUT"
+          echo "tf_targets=$tf_targets"                         >> "$GITHUB_OUTPUT"
+
+  # ── Detect Azure auth method (mirrors the pattern in deploy.yml) ─────────────
+  check-auth:
+    runs-on: ubuntu-latest
+    outputs:
+      auth_mode: ${{ steps.detect.outputs.auth_mode }}
+    steps:
+      - id: detect
+        name: Detect Azure credential availability
+        env:
+          _CLIENT_ID:    ${{ secrets.AZURE_CLIENT_ID }}
+          _TENANT_ID:    ${{ secrets.AZURE_TENANT_ID }}
+          _CREDENTIALS:  ${{ secrets.AZURE_CREDENTIALS }}
+        run: |
+          if [[ -n "${_CLIENT_ID}" && -n "${_TENANT_ID}" ]]; then
+            echo "auth_mode=oidc" >> "$GITHUB_OUTPUT"
+            echo "Azure OIDC credentials detected (AZURE_CLIENT_ID + AZURE_TENANT_ID)."
+          elif [[ -n "${_CREDENTIALS}" ]]; then
+            echo "auth_mode=sp" >> "$GITHUB_OUTPUT"
+            echo "Azure service principal credentials detected (AZURE_CREDENTIALS)."
+          else
+            echo "auth_mode=none" >> "$GITHUB_OUTPUT"
+            echo "::warning::No Azure credentials found. SRE plan/apply steps will be skipped."
+            echo "Set AZURE_CLIENT_ID + AZURE_TENANT_ID (OIDC) or AZURE_CREDENTIALS (service principal JSON)."
+          fi
 
   # ── 2. Plan SRE component changes ────────────────────────────────────────────
   sre-plan:
-    needs: load-config
+    needs:
+      - load-config
+      - check-auth
+    if: needs.check-auth.outputs.auth_mode != 'none'
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -97,27 +125,20 @@ jobs:
         with:
           terraform_version: ${{ needs.load-config.outputs.terraform_version }}
 
-      # ── Azure login (OIDC preferred, service principal JSON fallback) ─────────
-      - name: Azure Login
-        if: ${{ secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '' }}
+      # ── Azure login (mirrors check-auth output) ──────────────────────────────
+      - name: Azure Login (OIDC)
+        if: needs.check-auth.outputs.auth_mode == 'oidc'
         uses: azure/login@v2
         with:
           client-id:       ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id:       ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID != '' && secrets.AZURE_SUBSCRIPTION_ID || needs.load-config.outputs.azure_subscription_id }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID || needs.load-config.outputs.azure_subscription_id }}
 
-      - name: Azure Login (service principal JSON credentials fallback)
-        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '') && secrets.AZURE_CREDENTIALS != '' }}
+      - name: Azure Login (service principal JSON)
+        if: needs.check-auth.outputs.auth_mode == 'sp'
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - name: Validate Azure authentication inputs
-        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '') && secrets.AZURE_CREDENTIALS == '' }}
-        run: |
-          echo "Missing Azure auth configuration." >&2
-          echo "Set either AZURE_CLIENT_ID/AZURE_TENANT_ID[/AZURE_SUBSCRIPTION_ID] or AZURE_CREDENTIALS JSON secret." >&2
-          exit 1
 
       # ── Resolve runtime variable overrides ───────────────────────────────────
       - name: Resolve SRE variable overrides
@@ -179,6 +200,7 @@ jobs:
     needs:
       - load-config
       - sre-plan
+      - check-auth
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -190,26 +212,19 @@ jobs:
         with:
           terraform_version: ${{ needs.load-config.outputs.terraform_version }}
 
-      - name: Azure Login
-        if: ${{ secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '' }}
+      - name: Azure Login (OIDC)
+        if: needs.check-auth.outputs.auth_mode == 'oidc'
         uses: azure/login@v2
         with:
           client-id:       ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id:       ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID != '' && secrets.AZURE_SUBSCRIPTION_ID || needs.load-config.outputs.azure_subscription_id }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID || needs.load-config.outputs.azure_subscription_id }}
 
-      - name: Azure Login (service principal JSON credentials fallback)
-        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '') && secrets.AZURE_CREDENTIALS != '' }}
+      - name: Azure Login (service principal JSON)
+        if: needs.check-auth.outputs.auth_mode == 'sp'
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - name: Validate Azure authentication inputs
-        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '') && secrets.AZURE_CREDENTIALS == '' }}
-        run: |
-          echo "Missing Azure auth configuration." >&2
-          echo "Set either AZURE_CLIENT_ID/AZURE_TENANT_ID[/AZURE_SUBSCRIPTION_ID] or AZURE_CREDENTIALS JSON secret." >&2
-          exit 1
 
       - uses: actions/download-artifact@v4.1.3
         with:
@@ -264,6 +279,7 @@ jobs:
     if: ${{ github.event.inputs.apply == 'true' && github.event.inputs.destroy == 'true' }}
     needs:
       - load-config
+      - check-auth
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -275,26 +291,19 @@ jobs:
         with:
           terraform_version: ${{ needs.load-config.outputs.terraform_version }}
 
-      - name: Azure Login
-        if: ${{ secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '' }}
+      - name: Azure Login (OIDC)
+        if: needs.check-auth.outputs.auth_mode == 'oidc'
         uses: azure/login@v2
         with:
           client-id:       ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id:       ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID != '' && secrets.AZURE_SUBSCRIPTION_ID || needs.load-config.outputs.azure_subscription_id }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID || needs.load-config.outputs.azure_subscription_id }}
 
-      - name: Azure Login (service principal JSON credentials fallback)
-        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '') && secrets.AZURE_CREDENTIALS != '' }}
+      - name: Azure Login (service principal JSON)
+        if: needs.check-auth.outputs.auth_mode == 'sp'
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - name: Validate Azure authentication inputs
-        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '') && secrets.AZURE_CREDENTIALS == '' }}
-        run: |
-          echo "Missing Azure auth configuration." >&2
-          echo "Set either AZURE_CLIENT_ID/AZURE_TENANT_ID[/AZURE_SUBSCRIPTION_ID] or AZURE_CREDENTIALS JSON secret." >&2
-          exit 1
 
       - name: Terraform init
         run: |
@@ -312,3 +321,35 @@ jobs:
             -var-file="$TF_VAR_FILE" \
             $TF_TARGETS \
             -auto-approve
+
+  # ── 5. Summary ────────────────────────────────────────────────────────────────
+  sre-summary:
+    if: always()
+    needs:
+      - load-config
+      - check-auth
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report SRE provisioning status
+        env:
+          AUTH_MODE:              ${{ needs.check-auth.outputs.auth_mode }}
+          MONITOR_RESOURCE_GROUP: ${{ needs.load-config.outputs.monitor_resource_group }}
+        run: |
+          echo "### SRE Agent Provisioning Summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          if [[ "$AUTH_MODE" == "none" ]]; then
+            echo "⚠️ **Azure credentials not configured** — SRE plan/apply steps were skipped." >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "To enable provisioning, add the following GitHub repository secrets:" >> "$GITHUB_STEP_SUMMARY"
+            echo "- \`AZURE_CLIENT_ID\` + \`AZURE_TENANT_ID\` + \`AZURE_SUBSCRIPTION_ID\` (OIDC — recommended)" >> "$GITHUB_STEP_SUMMARY"
+            echo "- OR \`AZURE_CREDENTIALS\` (service principal JSON — fallback)" >> "$GITHUB_STEP_SUMMARY"
+            echo "- \`SRE_ALERT_EMAIL\` — email DL for alert notifications (optional)" >> "$GITHUB_STEP_SUMMARY"
+            echo "- \`SRE_WEBHOOK_URL\` — Teams webhook URL for action group (optional)" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "✅ **Azure credentials detected** (mode: \`$AUTH_MODE\`)" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Config | Value |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|--------|-------|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Azure auth mode | \`$AUTH_MODE\` |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Monitor resource group | \`$MONITOR_RESOURCE_GROUP\` |" >> "$GITHUB_STEP_SUMMARY"

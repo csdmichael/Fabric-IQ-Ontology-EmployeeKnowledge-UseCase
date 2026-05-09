@@ -1,0 +1,27 @@
+# Terraform
+terraform/.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfplan
+sre-tfplan
+tfplan
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Node / UI
+node_modules/
+ui/ionic-angular/dist/
+ui/ionic-angular/dist-deploy/
+ui/ionic-angular/ui-deployment.zip
+
+# Misc
+*.zip
+.DS_Store

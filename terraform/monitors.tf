@@ -330,8 +330,8 @@ resource "azurerm_logic_app_workflow" "incident_response" {
   tags                = var.tags
 
   parameters = {
-    "$connections"   = jsonencode({})
-    "cosmosEndpoint" = azurerm_cosmosdb_account.main.endpoint
+    "$connections"    = jsonencode({})
+    "cosmosEndpoint"  = azurerm_cosmosdb_account.main.endpoint
     "teamsWebhookUrl" = var.sre_webhook_url
   }
 
@@ -365,27 +365,27 @@ resource "azurerm_logic_app_trigger_http_request" "alert_receiver" {
           essentials = {
             type = "object"
             properties = {
-              alertId          = { type = "string" }
-              alertRule        = { type = "string" }
-              severity         = { type = "string" }
-              signalType       = { type = "string" }
-              monitorCondition = { type = "string" }
-              monitoringService = { type = "string" }
-              alertTargetIDs   = { type = "array", items = { type = "string" } }
-              configurationItems = { type = "array", items = { type = "string" } }
-              originAlertId    = { type = "string" }
-              firedDateTime    = { type = "string" }
-              description      = { type = "string" }
-              essentialsVersion = { type = "string" }
+              alertId             = { type = "string" }
+              alertRule           = { type = "string" }
+              severity            = { type = "string" }
+              signalType          = { type = "string" }
+              monitorCondition    = { type = "string" }
+              monitoringService   = { type = "string" }
+              alertTargetIDs      = { type = "array", items = { type = "string" } }
+              configurationItems  = { type = "array", items = { type = "string" } }
+              originAlertId       = { type = "string" }
+              firedDateTime       = { type = "string" }
+              description         = { type = "string" }
+              essentialsVersion   = { type = "string" }
               alertContextVersion = { type = "string" }
             }
           }
           alertContext = {
             type = "object"
             properties = {
-              properties  = { type = "object" }
+              properties    = { type = "object" }
               conditionType = { type = "string" }
-              condition   = { type = "object" }
+              condition     = { type = "object" }
             }
           }
         }
@@ -399,21 +399,21 @@ resource "azurerm_logic_app_action_custom" "log_incident" {
   logic_app_id = azurerm_logic_app_workflow.incident_response.id
 
   body = jsonencode({
-    type    = "Http"
-    inputs  = {
-      method  = "POST"
-      uri     = "@{parameters('cosmosEndpoint')}/dbs/EmployeeKnowledgeGraph/colls/Incidents/docs"
+    type = "Http"
+    inputs = {
+      method = "POST"
+      uri    = "@{parameters('cosmosEndpoint')}/dbs/EmployeeKnowledgeGraph/colls/Incidents/docs"
       headers = {
         "x-ms-documentdb-partitionkey" = "[\"@{triggerBody()?['data']?['essentials']?['alertRule']}\"]"
         "Content-Type"                 = "application/json"
       }
       body = {
-        id         = "@{guid()}"
-        alertRule  = "@{triggerBody()?['data']?['essentials']?['alertRule']}"
-        severity   = "@{triggerBody()?['data']?['essentials']?['severity']}"
-        firedAt    = "@{triggerBody()?['data']?['essentials']?['firedDateTime']}"
-        description = "@{triggerBody()?['data']?['essentials']?['description']}"
-        status     = "Open"
+        id           = "@{guid()}"
+        alertRule    = "@{triggerBody()?['data']?['essentials']?['alertRule']}"
+        severity     = "@{triggerBody()?['data']?['essentials']?['severity']}"
+        firedAt      = "@{triggerBody()?['data']?['essentials']?['firedDateTime']}"
+        description  = "@{triggerBody()?['data']?['essentials']?['description']}"
+        status       = "Open"
         incidentType = "AzureMonitorAlert"
       }
     }
@@ -426,23 +426,23 @@ resource "azurerm_logic_app_action_custom" "notify_teams" {
   logic_app_id = azurerm_logic_app_workflow.incident_response.id
 
   body = jsonencode({
-    type   = "Http"
+    type = "Http"
     inputs = {
       method  = "POST"
       uri     = "@{parameters('teamsWebhookUrl')}"
       headers = { "Content-Type" = "application/json" }
       body = {
-        "@type"      = "MessageCard"
-        "@context"   = "http://schema.org/extensions"
-        themeColor   = "FF0000"
-        summary      = "Fabric IQ Monitor Alert Fired"
-        sections     = [
+        "@type"    = "MessageCard"
+        "@context" = "http://schema.org/extensions"
+        themeColor = "FF0000"
+        summary    = "Fabric IQ Monitor Alert Fired"
+        sections = [
           {
             activityTitle    = "🚨 Fabric IQ – Monitor Alert"
             activitySubtitle = "@{triggerBody()?['data']?['essentials']?['alertRule']}"
             facts = [
-              { name = "Severity",    value = "@{triggerBody()?['data']?['essentials']?['severity']}" },
-              { name = "Fired At",    value = "@{triggerBody()?['data']?['essentials']?['firedDateTime']}" },
+              { name = "Severity", value = "@{triggerBody()?['data']?['essentials']?['severity']}" },
+              { name = "Fired At", value = "@{triggerBody()?['data']?['essentials']?['firedDateTime']}" },
               { name = "Description", value = "@{triggerBody()?['data']?['essentials']?['description']}" }
             ]
           }

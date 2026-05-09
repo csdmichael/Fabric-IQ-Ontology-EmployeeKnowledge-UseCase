@@ -1,0 +1,274 @@
+name: Test Deployed API, UI, and SRE Agent
+
+# Smoke-tests the live UI and API App Service endpoints and validates the
+# SRE agent configuration defined in config/azure-hosting-resources.json.
+#
+# Triggered manually or automatically when the deployment config changes.
+# Does NOT require Azure credentials — the tests hit public HTTP endpoints
+# and validate local config files only.
+
+on:
+  workflow_dispatch:
+    inputs:
+      ui_url_override:
+        description: "Override the UI URL to test (leave empty to use config/azure-hosting-resources.json)"
+        required: false
+        default: ""
+      api_url_override:
+        description: "Override the API URL to test (leave empty to use config/azure-hosting-resources.json)"
+        required: false
+        default: ""
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/test-deployment.yml"
+      - "config/azure-hosting-resources.json"
+      - "config/endpoints.json"
+      - "fabric/agents/sre_agent.json"
+
+permissions:
+  contents: read
+
+jobs:
+  # ── 1. Read target URLs and SRE agent config from repo config files ──────────
+  load-config:
+    runs-on: ubuntu-latest
+    outputs:
+      ui_url:             ${{ steps.read.outputs.ui_url }}
+      api_url:            ${{ steps.read.outputs.api_url }}
+      sre_agent_name:     ${{ steps.read.outputs.sre_agent_name }}
+      sre_resource_group: ${{ steps.read.outputs.sre_resource_group }}
+      sre_foundry_ep:     ${{ steps.read.outputs.sre_foundry_ep }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: read
+        run: |
+          set -euo pipefail
+
+          # Prefer workflow_dispatch overrides; fall back to config file values
+          ui_url="${{ github.event.inputs.ui_url_override }}"
+          api_url="${{ github.event.inputs.api_url_override }}"
+
+          if [[ -z "$ui_url" ]]; then
+            ui_url=$(jq -r '.hosting.uiWebApp.publicUrl' config/azure-hosting-resources.json)
+          fi
+          if [[ -z "$api_url" ]]; then
+            api_url=$(jq -r '.hosting.apiWebApp.url' config/azure-hosting-resources.json)
+          fi
+
+          sre_agent_name=$(jq -r '.sreAgent.name'                   config/azure-hosting-resources.json)
+          sre_resource_group=$(jq -r '.sreAgent.resourceGroup'      config/azure-hosting-resources.json)
+          sre_foundry_ep=$(jq -r '.sreAgent.foundryProjectEndpoint' config/azure-hosting-resources.json)
+
+          echo "ui_url=$ui_url"                       >> "$GITHUB_OUTPUT"
+          echo "api_url=$api_url"                     >> "$GITHUB_OUTPUT"
+          echo "sre_agent_name=$sre_agent_name"       >> "$GITHUB_OUTPUT"
+          echo "sre_resource_group=$sre_resource_group" >> "$GITHUB_OUTPUT"
+          echo "sre_foundry_ep=$sre_foundry_ep"       >> "$GITHUB_OUTPUT"
+
+  # ── 2. Smoke-test the deployed UI endpoint ───────────────────────────────────
+  test-ui:
+    needs: load-config
+    runs-on: ubuntu-latest
+    steps:
+      - name: Smoke-test UI endpoint
+        env:
+          UI_URL: ${{ needs.load-config.outputs.ui_url }}
+        run: |
+          set -euo pipefail
+          echo "Testing UI endpoint: $UI_URL"
+
+          HTTP_CODE=$(curl -s -o /tmp/ui_response.txt -w "%{http_code}" \
+            --max-time 30 \
+            --retry 3 \
+            --retry-delay 5 \
+            "$UI_URL")
+
+          echo "HTTP status: $HTTP_CODE"
+          if [[ "$HTTP_CODE" -ge 200 && "$HTTP_CODE" -lt 400 ]]; then
+            echo "✅ UI endpoint is reachable (HTTP $HTTP_CODE)"
+          elif [[ "$HTTP_CODE" -eq 000 ]]; then
+            echo "❌ UI endpoint is unreachable (connection failed or timed out)" >&2
+            echo "   This may indicate the App Service is stopped or not yet deployed." >&2
+            exit 1
+          else
+            echo "⚠️  UI endpoint returned HTTP $HTTP_CODE — may indicate a partial outage." >&2
+            # Treat 5xx as failure; 4xx as warning (app may require auth)
+            if [[ "$HTTP_CODE" -ge 500 ]]; then
+              exit 1
+            fi
+            echo "Treating HTTP $HTTP_CODE as a warning (authentication or redirect)."
+          fi
+
+      - name: Upload UI response sample
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-response-sample
+          path: /tmp/ui_response.txt
+          retention-days: 3
+
+  # ── 3. Smoke-test the deployed API endpoint ──────────────────────────────────
+  test-api:
+    needs: load-config
+    runs-on: ubuntu-latest
+    steps:
+      - name: Smoke-test API health endpoint
+        env:
+          API_URL: ${{ needs.load-config.outputs.api_url }}
+        run: |
+          set -euo pipefail
+          echo "Testing API endpoint: $API_URL"
+
+          # Try common health check paths in order of preference
+          HEALTH_CODE=0
+          for path in "/health" "/api/health" "/healthz" "/status" "/"; do
+            TARGET="${API_URL}${path}"
+            echo "Trying: $TARGET"
+            HTTP_CODE=$(curl -s -o /tmp/api_response.txt -w "%{http_code}" \
+              --max-time 20 \
+              --retry 2 \
+              --retry-delay 3 \
+              "$TARGET" 2>/dev/null || echo "000")
+
+            echo "  → HTTP $HTTP_CODE"
+            if [[ "$HTTP_CODE" -ge 200 && "$HTTP_CODE" -lt 400 ]]; then
+              HEALTH_CODE="$HTTP_CODE"
+              echo "✅ API endpoint responded at ${path} (HTTP $HTTP_CODE)"
+              break
+            fi
+          done
+
+          if [[ "$HEALTH_CODE" -eq 0 ]]; then
+            echo "⚠️  API endpoint did not return a 2xx/3xx on any standard health path." >&2
+            echo "   The API App Service may not yet have application code deployed." >&2
+            echo "   Infrastructure is provisioned but app code deployment is pending." >&2
+            # Non-fatal: the App Service might exist but have no app yet
+            exit 0
+          fi
+
+      - name: Upload API response sample
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-response-sample
+          path: /tmp/api_response.txt
+          retention-days: 3
+
+  # ── 4. Validate SRE agent configuration ──────────────────────────────────────
+  test-sre-agent-config:
+    needs: load-config
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate SRE agent JSON definition
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, sys
+
+          # Load and validate the SRE agent definition
+          with open("fabric/agents/sre_agent.json") as f:
+              agent = json.load(f)
+
+          required_fields = ["agentName", "description", "resourceGroup", "foundryAccount",
+                             "model", "systemPrompt", "tools", "samplePrompts", "deployment"]
+          missing = [field for field in required_fields if field not in agent]
+          if missing:
+              raise SystemExit(f"SRE agent definition is missing required fields: {missing}")
+
+          if not agent["tools"]:
+              raise SystemExit("SRE agent has no tools configured.")
+
+          if len(agent["samplePrompts"]) < 3:
+              raise SystemExit("SRE agent must have at least 3 sample prompts.")
+
+          print(f"✅ SRE agent '{agent['agentName']}' definition is valid.")
+          print(f"   Model:         {agent['model']}")
+          print(f"   Resource group: {agent['resourceGroup']}")
+          print(f"   Tools:         {len(agent['tools'])} configured")
+          print(f"   Sample prompts: {len(agent['samplePrompts'])} defined")
+          PY
+
+      - name: Validate SRE agent config in azure-hosting-resources.json
+        env:
+          SRE_AGENT_NAME:     ${{ needs.load-config.outputs.sre_agent_name }}
+          SRE_RESOURCE_GROUP: ${{ needs.load-config.outputs.sre_resource_group }}
+          SRE_FOUNDRY_EP:     ${{ needs.load-config.outputs.sre_foundry_ep }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os
+
+          with open("config/azure-hosting-resources.json") as f:
+              cfg = json.load(f)
+
+          sre = cfg.get("sreAgent", {})
+          if not sre:
+              raise SystemExit("sreAgent section is missing from config/azure-hosting-resources.json")
+
+          required_keys = ["name", "resourceGroup", "foundryAccount",
+                           "foundryProjectEndpoint", "agentModel", "monitoringResources"]
+          missing = [k for k in required_keys if not sre.get(k)]
+          if missing:
+              raise SystemExit(f"sreAgent config is missing required keys: {missing}")
+
+          # Cross-check: resource group must match the hosting resource group
+          hosting_rg = cfg.get("resourceGroup", "")
+          sre_rg = sre["resourceGroup"]
+          if sre_rg != hosting_rg:
+              print(f"⚠️  SRE agent resource group '{sre_rg}' differs from main resource group '{hosting_rg}'.")
+              print("   This is allowed if the SRE agent is intentionally in a different group.")
+          else:
+              print(f"✅ SRE agent is in the same resource group as the main deployment: '{sre_rg}'")
+
+          print(f"✅ SRE agent config is valid in azure-hosting-resources.json")
+          print(f"   Agent name:      {sre['name']}")
+          print(f"   Resource group:  {sre['resourceGroup']}")
+          print(f"   Foundry account: {sre['foundryAccount']}")
+          print(f"   Model:           {sre['agentModel']}")
+          monitoring = sre.get("monitoringResources", {})
+          print(f"   Action group:    {monitoring.get('actionGroupName', 'not set')}")
+          print(f"   Log Analytics:   {monitoring.get('logAnalyticsWorkspace', 'not set')}")
+          print(f"   Incident LA:     {monitoring.get('incidentLogicApp', 'not set')}")
+          PY
+
+  # ── 5. Summary ────────────────────────────────────────────────────────────────
+  test-summary:
+    if: always()
+    needs:
+      - load-config
+      - test-ui
+      - test-api
+      - test-sre-agent-config
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report test results
+        env:
+          UI_URL:             ${{ needs.load-config.outputs.ui_url }}
+          API_URL:            ${{ needs.load-config.outputs.api_url }}
+          SRE_AGENT_NAME:     ${{ needs.load-config.outputs.sre_agent_name }}
+          SRE_RESOURCE_GROUP: ${{ needs.load-config.outputs.sre_resource_group }}
+          UI_RESULT:          ${{ needs.test-ui.result }}
+          API_RESULT:         ${{ needs.test-api.result }}
+          SRE_RESULT:         ${{ needs.test-sre-agent-config.result }}
+        run: |
+          ui_icon="✅"
+          api_icon="✅"
+          sre_icon="✅"
+          [[ "$UI_RESULT" != "success" ]]  && ui_icon="❌"
+          [[ "$API_RESULT" != "success" ]] && api_icon="⚠️"
+          [[ "$SRE_RESULT" != "success" ]] && sre_icon="❌"
+
+          echo "### Deployment Test Results" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Component | URL / Name | Status |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|-----------|------------|--------|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| UI App Service | [\`$UI_URL\`]($UI_URL) | $ui_icon \`$UI_RESULT\` |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| API App Service | \`$API_URL\` | $api_icon \`$API_RESULT\` |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| SRE Agent config | \`$SRE_AGENT_NAME\` in \`$SRE_RESOURCE_GROUP\` | $sre_icon \`$SRE_RESULT\` |" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "> The API smoke test is non-fatal when no application code is deployed yet — infrastructure may exist without app artifacts." >> "$GITHUB_STEP_SUMMARY"

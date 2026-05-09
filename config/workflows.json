@@ -42,6 +42,8 @@
     "terraformWorkingDirectory": "terraform",
     "terraformVarFile": "../config/terraform.tfvars.json",
     "monitorResourceGroup": "ai-myaacoub",
+    "sreAgentDefinition": "fabric/agents/sre_agent.json",
+    "sreAgentConfigKey": "sreAgent",
     "terraformTargets": [
       "data.azurerm_log_analytics_workspace.sre",
       "azurerm_log_analytics_workspace.main",
@@ -60,5 +62,14 @@
       "azurerm_logic_app_action_custom.log_incident",
       "azurerm_logic_app_action_custom.notify_teams"
     ]
+  },
+  "test": {
+    "uiUrlConfigPath": "hosting.uiWebApp.publicUrl",
+    "apiUrlConfigPath": "hosting.apiWebApp.url",
+    "sreAgentConfigPath": "sreAgent",
+    "httpTimeoutSeconds": 30,
+    "httpRetries": 3,
+    "apiHealthPaths": ["/health", "/api/health", "/healthz", "/status", "/"],
+    "artifactRetentionDays": 3
   }
 }

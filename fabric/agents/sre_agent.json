@@ -1,0 +1,55 @@
+{
+  "agentName": "FabricIQSREAgent",
+  "description": "Azure AI Foundry SRE agent for automated incident monitoring, diagnostics, and response for the Fabric IQ Employee Knowledge services deployed in ai-myaacoub.",
+  "resourceGroup": "ai-myaacoub",
+  "foundryAccount": "002-ai-poc-private",
+  "model": "gpt-4o",
+  "systemPrompt": "You are an SRE (Site Reliability Engineering) agent for the Fabric IQ Employee Knowledge platform. Your responsibilities are:\n1. Monitor the health of the UI app service (fabric-iq-emp-knowledge-ui), API app service (fabric-iq-emp-knowledge-api), Azure Storage (aistoragemyaacoub), and Cosmos DB (cosmos-ai-poc).\n2. Investigate Azure Monitor alerts and provide root cause analysis.\n3. Suggest or execute remediation actions for common failure modes (high error rates, latency spikes, storage availability drops, Cosmos DB RU throttling).\n4. Summarize incidents and update the incident log in Cosmos DB.\n5. Notify the SRE team via the configured Teams webhook when a new incident is detected or resolved.\nAlways cite the resource name, alert rule, and timestamp when describing an incident. Prefer non-destructive remediation actions and escalate when auto-remediation is not safe.",
+  "tools": [
+    {
+      "type": "azure_monitor",
+      "description": "Query Azure Monitor metrics and alerts for UI app service, API app service, Storage, and Cosmos DB.",
+      "resources": [
+        "fabric-iq-emp-knowledge-ui",
+        "fabric-iq-emp-knowledge-api",
+        "aistoragemyaacoub",
+        "cosmos-ai-poc"
+      ]
+    },
+    {
+      "type": "log_analytics",
+      "description": "Query Log Analytics workspace for application logs, diagnostic events, and custom KQL queries.",
+      "workspace": "law-fabriciq-emp-knowledge"
+    },
+    {
+      "type": "cosmos_db",
+      "description": "Read and write incident records to the Incidents container in the EmployeeKnowledgeGraph Cosmos DB database.",
+      "account": "cosmos-ai-poc",
+      "database": "EmployeeKnowledgeGraph",
+      "container": "Incidents"
+    },
+    {
+      "type": "logic_app_webhook",
+      "description": "Trigger the incident response Logic App to log incidents and send Teams notifications.",
+      "logicApp": "logic-fabriciq-incident-response"
+    }
+  ],
+  "samplePrompts": [
+    "What Azure Monitor alerts have fired in the last hour for Fabric IQ services?",
+    "Show me the HTTP 5xx error rate for the UI app service over the last 24 hours.",
+    "Is the Cosmos DB RU consumption within healthy limits?",
+    "What is the current availability of the blob storage account?",
+    "List all open incidents in the Cosmos DB Incidents container.",
+    "Investigate the latest alert for cosmos-ai-poc and suggest remediation steps.",
+    "Summarize the SRE status for the Fabric IQ Employee Knowledge platform.",
+    "Which documents had low confidence parse scores in the last hour?",
+    "Show the average API response time trend for the past 6 hours.",
+    "Trigger a Teams notification for a new Sev2 storage availability incident."
+  ],
+  "deployment": {
+    "resourceGroup": "ai-myaacoub",
+    "foundryProjectEndpoint": "https://002-ai-poc-private.services.ai.azure.com/api/projects/proj-default",
+    "outputAgentId": "{sreAgentId}",
+    "notes": "Deploy this agent via the Azure AI Foundry portal or CLI using the foundryProjectEndpoint above. Set the SRE_AGENT_ID output in config/azure-hosting-resources.json sreAgent section after deployment."
+  }
+}
