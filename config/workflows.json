@@ -36,5 +36,29 @@
     "azureCliVersion": "2.x",
     "azureCredentialsSecretName": "AZURE_CREDENTIALS",
     "storageAccountSecretName": "AZURE_STORAGE_ACCOUNT"
+  },
+  "sre": {
+    "terraformVersion": "1.8.5",
+    "terraformWorkingDirectory": "terraform",
+    "terraformVarFile": "../config/terraform.tfvars.json",
+    "monitorResourceGroup": "ai-myaacoub",
+    "terraformTargets": [
+      "data.azurerm_log_analytics_workspace.sre",
+      "azurerm_log_analytics_workspace.main",
+      "azurerm_monitor_action_group.sre",
+      "azurerm_monitor_diagnostic_setting.storage",
+      "azurerm_monitor_diagnostic_setting.cosmos",
+      "azurerm_monitor_diagnostic_setting.ui_app",
+      "azurerm_monitor_metric_alert.storage_availability",
+      "azurerm_monitor_metric_alert.cosmos_server_errors",
+      "azurerm_monitor_metric_alert.cosmos_ru_throttle",
+      "azurerm_monitor_metric_alert.ui_http5xx",
+      "azurerm_monitor_metric_alert.ui_response_time",
+      "azurerm_monitor_scheduled_query_rules_alert_v2.low_confidence_docs",
+      "azurerm_logic_app_workflow.incident_response",
+      "azurerm_logic_app_trigger_http_request.alert_receiver",
+      "azurerm_logic_app_action_custom.log_incident",
+      "azurerm_logic_app_action_custom.notify_teams"
+    ]
   }
 }
