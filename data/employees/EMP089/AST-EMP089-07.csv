@@ -1,0 +1,11 @@
+title,Equipment Inventory Tracker
+employee,Drew Kim
+department,Manufacturing
+role,Architect
+date,2025-01-12
+
+Line ID,Equipment,OEE %,Downtime (min),Units Produced,Defect Rate %
+L-01,CNC Mill A,87.4,12,4200,0.8
+L-02,Assembly Arm B,91.0,5,5100,0.3
+L-03,Conveyor Unit C,78.2,45,3800,1.2
+L-04,Laser Cutter D,94.5,3,6000,0.1

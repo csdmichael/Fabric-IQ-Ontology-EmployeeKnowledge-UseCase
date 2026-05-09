@@ -1,0 +1,11 @@
+title,Shift Productivity Report
+employee,Avery Wilson
+department,Operations
+role,Specialist
+date,2025-01-25
+
+Shift,Supervisor,Start,End,Units,Target,Efficiency %
+Morning,Team Lead A,06:00,14:00,4800,5000,96.0
+Afternoon,Team Lead B,14:00,22:00,5100,5000,102.0
+Night,Team Lead C,22:00,06:00,4600,5000,92.0
+Weekend,Team Lead D,08:00,20:00,9200,9500,96.8

@@ -1,0 +1,11 @@
+title,Skills Matrix
+employee,Jamie Brown
+department,HR
+role,Manager
+date,2025-01-21
+
+Employee ID,Name,Department,Role,Skills,Last Review Date,Rating
+EMP006,Avery Wilson,Operations,Specialist,"Azure AI, Fabric",2025-03-15,4.2
+EMP011,Alex Garcia,IT,Lead,"Synapse, TypeScript",2025-03-10,3.9
+EMP016,Avery Wilson,Engineering,Engineer,"Python, SQL",2025-02-28,4.5
+EMP021,Alex Garcia,Procurement,Senior Engineer,"Ontology, MLOps",2025-03-20,4.0

@@ -70,6 +70,48 @@
     }
   },
   {
+    "assetId": "AST-EMP001-06",
+    "employeeId": "EMP001",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Equipment inventory tracker - EMP001",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-14",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP001/AST-EMP001-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP001-07",
+    "employeeId": "EMP001",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP001",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-08",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP001/AST-EMP001-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP001-08",
+    "employeeId": "EMP001",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP001",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-09",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP001/AST-EMP001-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP002-01",
     "employeeId": "EMP002",
     "assetType": "presentation",
@@ -137,6 +179,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP002/AST-EMP002-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP002-06",
+    "employeeId": "EMP002",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Skills matrix - EMP002",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-15",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP002/AST-EMP002-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP002-07",
+    "employeeId": "EMP002",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP002",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-09",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP002/AST-EMP002-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP002-08",
+    "employeeId": "EMP002",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP002",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-10",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP002/AST-EMP002-08.md"
     }
   },
   {
@@ -210,6 +294,48 @@
     }
   },
   {
+    "assetId": "AST-EMP003-06",
+    "employeeId": "EMP003",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "System resource utilization - EMP003",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-16",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP003/AST-EMP003-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP003-07",
+    "employeeId": "EMP003",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP003",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-10",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP003/AST-EMP003-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP003-08",
+    "employeeId": "EMP003",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP003",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-11",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP003/AST-EMP003-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP004-01",
     "employeeId": "EMP004",
     "assetType": "presentation",
@@ -277,6 +403,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP004/AST-EMP004-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP004-06",
+    "employeeId": "EMP004",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Budget tracker - EMP004",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-17",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP004/AST-EMP004-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP004-07",
+    "employeeId": "EMP004",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP004",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-11",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP004/AST-EMP004-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP004-08",
+    "employeeId": "EMP004",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP004",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-12",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP004/AST-EMP004-08.md"
     }
   },
   {
@@ -350,6 +518,48 @@
     }
   },
   {
+    "assetId": "AST-EMP005-06",
+    "employeeId": "EMP005",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Vendor comparison - EMP005",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-18",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP005/AST-EMP005-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP005-07",
+    "employeeId": "EMP005",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP005",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-12",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP005/AST-EMP005-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP005-08",
+    "employeeId": "EMP005",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP005",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-13",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP005/AST-EMP005-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP006-01",
     "employeeId": "EMP006",
     "assetType": "presentation",
@@ -417,6 +627,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP006/AST-EMP006-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP006-06",
+    "employeeId": "EMP006",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Shift productivity report - EMP006",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-19",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP006/AST-EMP006-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP006-07",
+    "employeeId": "EMP006",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP006",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-13",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP006/AST-EMP006-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP006-08",
+    "employeeId": "EMP006",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP006",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-14",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP006/AST-EMP006-08.md"
     }
   },
   {
@@ -490,6 +742,48 @@
     }
   },
   {
+    "assetId": "AST-EMP007-06",
+    "employeeId": "EMP007",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Experiment data log - EMP007",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-20",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP007/AST-EMP007-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP007-07",
+    "employeeId": "EMP007",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP007",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-14",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP007/AST-EMP007-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP007-08",
+    "employeeId": "EMP007",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP007",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-15",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP007/AST-EMP007-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP008-01",
     "employeeId": "EMP008",
     "assetType": "presentation",
@@ -557,6 +851,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP008/AST-EMP008-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP008-06",
+    "employeeId": "EMP008",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Project resource tracker - EMP008",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-21",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP008/AST-EMP008-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP008-07",
+    "employeeId": "EMP008",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP008",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-15",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP008/AST-EMP008-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP008-08",
+    "employeeId": "EMP008",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP008",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-16",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP008/AST-EMP008-08.md"
     }
   },
   {
@@ -630,6 +966,48 @@
     }
   },
   {
+    "assetId": "AST-EMP009-06",
+    "employeeId": "EMP009",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Equipment inventory tracker - EMP009",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-22",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP009/AST-EMP009-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP009-07",
+    "employeeId": "EMP009",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP009",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-16",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP009/AST-EMP009-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP009-08",
+    "employeeId": "EMP009",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP009",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-17",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP009/AST-EMP009-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP010-01",
     "employeeId": "EMP010",
     "assetType": "presentation",
@@ -697,6 +1075,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP010/AST-EMP010-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP010-06",
+    "employeeId": "EMP010",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Skills matrix - EMP010",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-23",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP010/AST-EMP010-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP010-07",
+    "employeeId": "EMP010",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP010",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-17",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP010/AST-EMP010-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP010-08",
+    "employeeId": "EMP010",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP010",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-18",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP010/AST-EMP010-08.md"
     }
   },
   {
@@ -770,6 +1190,48 @@
     }
   },
   {
+    "assetId": "AST-EMP011-06",
+    "employeeId": "EMP011",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "System resource utilization - EMP011",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-24",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP011/AST-EMP011-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP011-07",
+    "employeeId": "EMP011",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP011",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-18",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP011/AST-EMP011-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP011-08",
+    "employeeId": "EMP011",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP011",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-19",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP011/AST-EMP011-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP012-01",
     "employeeId": "EMP012",
     "assetType": "presentation",
@@ -837,6 +1299,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP012/AST-EMP012-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP012-06",
+    "employeeId": "EMP012",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Budget tracker - EMP012",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-25",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP012/AST-EMP012-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP012-07",
+    "employeeId": "EMP012",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP012",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-19",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP012/AST-EMP012-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP012-08",
+    "employeeId": "EMP012",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP012",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-20",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP012/AST-EMP012-08.md"
     }
   },
   {
@@ -910,6 +1414,48 @@
     }
   },
   {
+    "assetId": "AST-EMP013-06",
+    "employeeId": "EMP013",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Vendor comparison - EMP013",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-26",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP013/AST-EMP013-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP013-07",
+    "employeeId": "EMP013",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP013",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-20",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP013/AST-EMP013-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP013-08",
+    "employeeId": "EMP013",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP013",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-21",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP013/AST-EMP013-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP014-01",
     "employeeId": "EMP014",
     "assetType": "presentation",
@@ -977,6 +1523,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP014/AST-EMP014-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP014-06",
+    "employeeId": "EMP014",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Shift productivity report - EMP014",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-27",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP014/AST-EMP014-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP014-07",
+    "employeeId": "EMP014",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP014",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-21",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP014/AST-EMP014-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP014-08",
+    "employeeId": "EMP014",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP014",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-22",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP014/AST-EMP014-08.md"
     }
   },
   {
@@ -1050,6 +1638,48 @@
     }
   },
   {
+    "assetId": "AST-EMP015-06",
+    "employeeId": "EMP015",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Experiment data log - EMP015",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-28",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP015/AST-EMP015-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP015-07",
+    "employeeId": "EMP015",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP015",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-22",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP015/AST-EMP015-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP015-08",
+    "employeeId": "EMP015",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP015",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-23",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP015/AST-EMP015-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP016-01",
     "employeeId": "EMP016",
     "assetType": "presentation",
@@ -1117,6 +1747,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP016/AST-EMP016-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP016-06",
+    "employeeId": "EMP016",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Project resource tracker - EMP016",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-29",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP016/AST-EMP016-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP016-07",
+    "employeeId": "EMP016",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP016",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-23",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP016/AST-EMP016-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP016-08",
+    "employeeId": "EMP016",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP016",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-24",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP016/AST-EMP016-08.md"
     }
   },
   {
@@ -1190,6 +1862,48 @@
     }
   },
   {
+    "assetId": "AST-EMP017-06",
+    "employeeId": "EMP017",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Equipment inventory tracker - EMP017",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-30",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP017/AST-EMP017-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP017-07",
+    "employeeId": "EMP017",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP017",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-24",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP017/AST-EMP017-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP017-08",
+    "employeeId": "EMP017",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP017",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-25",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP017/AST-EMP017-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP018-01",
     "employeeId": "EMP018",
     "assetType": "presentation",
@@ -1257,6 +1971,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP018/AST-EMP018-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP018-06",
+    "employeeId": "EMP018",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Skills matrix - EMP018",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-31",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP018/AST-EMP018-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP018-07",
+    "employeeId": "EMP018",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP018",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-25",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP018/AST-EMP018-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP018-08",
+    "employeeId": "EMP018",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP018",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-26",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP018/AST-EMP018-08.md"
     }
   },
   {
@@ -1330,6 +2086,48 @@
     }
   },
   {
+    "assetId": "AST-EMP019-06",
+    "employeeId": "EMP019",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "System resource utilization - EMP019",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-01",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP019/AST-EMP019-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP019-07",
+    "employeeId": "EMP019",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP019",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-26",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP019/AST-EMP019-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP019-08",
+    "employeeId": "EMP019",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP019",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-27",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP019/AST-EMP019-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP020-01",
     "employeeId": "EMP020",
     "assetType": "presentation",
@@ -1397,6 +2195,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP020/AST-EMP020-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP020-06",
+    "employeeId": "EMP020",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Budget tracker - EMP020",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-02",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP020/AST-EMP020-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP020-07",
+    "employeeId": "EMP020",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP020",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-27",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP020/AST-EMP020-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP020-08",
+    "employeeId": "EMP020",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP020",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-28",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP020/AST-EMP020-08.md"
     }
   },
   {
@@ -1470,6 +2310,48 @@
     }
   },
   {
+    "assetId": "AST-EMP021-06",
+    "employeeId": "EMP021",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Vendor comparison - EMP021",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-03",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP021/AST-EMP021-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP021-07",
+    "employeeId": "EMP021",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP021",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-28",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP021/AST-EMP021-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP021-08",
+    "employeeId": "EMP021",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP021",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-29",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP021/AST-EMP021-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP022-01",
     "employeeId": "EMP022",
     "assetType": "presentation",
@@ -1537,6 +2419,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP022/AST-EMP022-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP022-06",
+    "employeeId": "EMP022",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Shift productivity report - EMP022",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-04",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP022/AST-EMP022-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP022-07",
+    "employeeId": "EMP022",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP022",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-29",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP022/AST-EMP022-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP022-08",
+    "employeeId": "EMP022",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP022",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-30",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP022/AST-EMP022-08.md"
     }
   },
   {
@@ -1610,6 +2534,48 @@
     }
   },
   {
+    "assetId": "AST-EMP023-06",
+    "employeeId": "EMP023",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Experiment data log - EMP023",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-05",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP023/AST-EMP023-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP023-07",
+    "employeeId": "EMP023",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP023",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-30",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP023/AST-EMP023-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP023-08",
+    "employeeId": "EMP023",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP023",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-31",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP023/AST-EMP023-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP024-01",
     "employeeId": "EMP024",
     "assetType": "presentation",
@@ -1677,6 +2643,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP024/AST-EMP024-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP024-06",
+    "employeeId": "EMP024",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Project resource tracker - EMP024",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-06",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP024/AST-EMP024-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP024-07",
+    "employeeId": "EMP024",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP024",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-31",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP024/AST-EMP024-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP024-08",
+    "employeeId": "EMP024",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP024",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-32",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP024/AST-EMP024-08.md"
     }
   },
   {
@@ -1750,6 +2758,48 @@
     }
   },
   {
+    "assetId": "AST-EMP025-06",
+    "employeeId": "EMP025",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Equipment inventory tracker - EMP025",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-07",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP025/AST-EMP025-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP025-07",
+    "employeeId": "EMP025",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP025",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-32",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP025/AST-EMP025-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP025-08",
+    "employeeId": "EMP025",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP025",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-33",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP025/AST-EMP025-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP026-01",
     "employeeId": "EMP026",
     "assetType": "presentation",
@@ -1817,6 +2867,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP026/AST-EMP026-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP026-06",
+    "employeeId": "EMP026",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Skills matrix - EMP026",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-08",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP026/AST-EMP026-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP026-07",
+    "employeeId": "EMP026",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP026",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-33",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP026/AST-EMP026-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP026-08",
+    "employeeId": "EMP026",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP026",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-34",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP026/AST-EMP026-08.md"
     }
   },
   {
@@ -1890,6 +2982,48 @@
     }
   },
   {
+    "assetId": "AST-EMP027-06",
+    "employeeId": "EMP027",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "System resource utilization - EMP027",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-09",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP027/AST-EMP027-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP027-07",
+    "employeeId": "EMP027",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP027",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-34",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP027/AST-EMP027-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP027-08",
+    "employeeId": "EMP027",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP027",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-35",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP027/AST-EMP027-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP028-01",
     "employeeId": "EMP028",
     "assetType": "presentation",
@@ -1957,6 +3091,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP028/AST-EMP028-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP028-06",
+    "employeeId": "EMP028",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Budget tracker - EMP028",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-10",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP028/AST-EMP028-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP028-07",
+    "employeeId": "EMP028",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP028",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-07",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP028/AST-EMP028-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP028-08",
+    "employeeId": "EMP028",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP028",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-08",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP028/AST-EMP028-08.md"
     }
   },
   {
@@ -2030,6 +3206,48 @@
     }
   },
   {
+    "assetId": "AST-EMP029-06",
+    "employeeId": "EMP029",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Vendor comparison - EMP029",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-11",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP029/AST-EMP029-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP029-07",
+    "employeeId": "EMP029",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP029",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-08",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP029/AST-EMP029-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP029-08",
+    "employeeId": "EMP029",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP029",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-09",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP029/AST-EMP029-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP030-01",
     "employeeId": "EMP030",
     "assetType": "presentation",
@@ -2097,6 +3315,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP030/AST-EMP030-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP030-06",
+    "employeeId": "EMP030",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Shift productivity report - EMP030",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-12",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP030/AST-EMP030-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP030-07",
+    "employeeId": "EMP030",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP030",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-09",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP030/AST-EMP030-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP030-08",
+    "employeeId": "EMP030",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP030",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-10",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP030/AST-EMP030-08.md"
     }
   },
   {
@@ -2170,6 +3430,48 @@
     }
   },
   {
+    "assetId": "AST-EMP031-06",
+    "employeeId": "EMP031",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Experiment data log - EMP031",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-13",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP031/AST-EMP031-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP031-07",
+    "employeeId": "EMP031",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP031",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-10",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP031/AST-EMP031-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP031-08",
+    "employeeId": "EMP031",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP031",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-11",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP031/AST-EMP031-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP032-01",
     "employeeId": "EMP032",
     "assetType": "presentation",
@@ -2237,6 +3539,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP032/AST-EMP032-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP032-06",
+    "employeeId": "EMP032",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Project resource tracker - EMP032",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-14",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP032/AST-EMP032-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP032-07",
+    "employeeId": "EMP032",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP032",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-11",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP032/AST-EMP032-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP032-08",
+    "employeeId": "EMP032",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP032",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-12",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP032/AST-EMP032-08.md"
     }
   },
   {
@@ -2310,6 +3654,48 @@
     }
   },
   {
+    "assetId": "AST-EMP033-06",
+    "employeeId": "EMP033",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Equipment inventory tracker - EMP033",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-15",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP033/AST-EMP033-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP033-07",
+    "employeeId": "EMP033",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP033",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-12",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP033/AST-EMP033-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP033-08",
+    "employeeId": "EMP033",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP033",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-13",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP033/AST-EMP033-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP034-01",
     "employeeId": "EMP034",
     "assetType": "presentation",
@@ -2377,6 +3763,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP034/AST-EMP034-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP034-06",
+    "employeeId": "EMP034",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Skills matrix - EMP034",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-16",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP034/AST-EMP034-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP034-07",
+    "employeeId": "EMP034",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP034",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-13",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP034/AST-EMP034-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP034-08",
+    "employeeId": "EMP034",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP034",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-14",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP034/AST-EMP034-08.md"
     }
   },
   {
@@ -2450,6 +3878,48 @@
     }
   },
   {
+    "assetId": "AST-EMP035-06",
+    "employeeId": "EMP035",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "System resource utilization - EMP035",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-17",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP035/AST-EMP035-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP035-07",
+    "employeeId": "EMP035",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP035",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-14",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP035/AST-EMP035-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP035-08",
+    "employeeId": "EMP035",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP035",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-15",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP035/AST-EMP035-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP036-01",
     "employeeId": "EMP036",
     "assetType": "presentation",
@@ -2517,6 +3987,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP036/AST-EMP036-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP036-06",
+    "employeeId": "EMP036",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Budget tracker - EMP036",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-18",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP036/AST-EMP036-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP036-07",
+    "employeeId": "EMP036",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP036",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-15",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP036/AST-EMP036-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP036-08",
+    "employeeId": "EMP036",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP036",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-16",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP036/AST-EMP036-08.md"
     }
   },
   {
@@ -2590,6 +4102,48 @@
     }
   },
   {
+    "assetId": "AST-EMP037-06",
+    "employeeId": "EMP037",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Vendor comparison - EMP037",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-19",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP037/AST-EMP037-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP037-07",
+    "employeeId": "EMP037",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP037",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-16",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP037/AST-EMP037-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP037-08",
+    "employeeId": "EMP037",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP037",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-17",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP037/AST-EMP037-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP038-01",
     "employeeId": "EMP038",
     "assetType": "presentation",
@@ -2657,6 +4211,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP038/AST-EMP038-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP038-06",
+    "employeeId": "EMP038",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Shift productivity report - EMP038",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-20",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP038/AST-EMP038-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP038-07",
+    "employeeId": "EMP038",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP038",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-17",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP038/AST-EMP038-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP038-08",
+    "employeeId": "EMP038",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP038",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-18",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP038/AST-EMP038-08.md"
     }
   },
   {
@@ -2730,6 +4326,48 @@
     }
   },
   {
+    "assetId": "AST-EMP039-06",
+    "employeeId": "EMP039",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Experiment data log - EMP039",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-21",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP039/AST-EMP039-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP039-07",
+    "employeeId": "EMP039",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP039",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-18",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP039/AST-EMP039-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP039-08",
+    "employeeId": "EMP039",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP039",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-19",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP039/AST-EMP039-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP040-01",
     "employeeId": "EMP040",
     "assetType": "presentation",
@@ -2797,6 +4435,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP040/AST-EMP040-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP040-06",
+    "employeeId": "EMP040",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Project resource tracker - EMP040",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-22",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP040/AST-EMP040-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP040-07",
+    "employeeId": "EMP040",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP040",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-19",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP040/AST-EMP040-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP040-08",
+    "employeeId": "EMP040",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP040",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-20",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP040/AST-EMP040-08.md"
     }
   },
   {
@@ -2870,6 +4550,48 @@
     }
   },
   {
+    "assetId": "AST-EMP041-06",
+    "employeeId": "EMP041",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Equipment inventory tracker - EMP041",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-23",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP041/AST-EMP041-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP041-07",
+    "employeeId": "EMP041",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP041",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-20",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP041/AST-EMP041-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP041-08",
+    "employeeId": "EMP041",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP041",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-21",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP041/AST-EMP041-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP042-01",
     "employeeId": "EMP042",
     "assetType": "presentation",
@@ -2937,6 +4659,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP042/AST-EMP042-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP042-06",
+    "employeeId": "EMP042",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Skills matrix - EMP042",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-24",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP042/AST-EMP042-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP042-07",
+    "employeeId": "EMP042",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP042",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-21",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP042/AST-EMP042-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP042-08",
+    "employeeId": "EMP042",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP042",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-22",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP042/AST-EMP042-08.md"
     }
   },
   {
@@ -3010,6 +4774,48 @@
     }
   },
   {
+    "assetId": "AST-EMP043-06",
+    "employeeId": "EMP043",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "System resource utilization - EMP043",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-25",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP043/AST-EMP043-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP043-07",
+    "employeeId": "EMP043",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP043",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-22",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP043/AST-EMP043-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP043-08",
+    "employeeId": "EMP043",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP043",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-23",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP043/AST-EMP043-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP044-01",
     "employeeId": "EMP044",
     "assetType": "presentation",
@@ -3077,6 +4883,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP044/AST-EMP044-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP044-06",
+    "employeeId": "EMP044",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Budget tracker - EMP044",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-26",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP044/AST-EMP044-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP044-07",
+    "employeeId": "EMP044",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP044",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-23",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP044/AST-EMP044-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP044-08",
+    "employeeId": "EMP044",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP044",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-24",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP044/AST-EMP044-08.md"
     }
   },
   {
@@ -3150,6 +4998,48 @@
     }
   },
   {
+    "assetId": "AST-EMP045-06",
+    "employeeId": "EMP045",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Vendor comparison - EMP045",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-27",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP045/AST-EMP045-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP045-07",
+    "employeeId": "EMP045",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP045",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-24",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP045/AST-EMP045-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP045-08",
+    "employeeId": "EMP045",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP045",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-25",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP045/AST-EMP045-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP046-01",
     "employeeId": "EMP046",
     "assetType": "presentation",
@@ -3217,6 +5107,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP046/AST-EMP046-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP046-06",
+    "employeeId": "EMP046",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Shift productivity report - EMP046",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-02-28",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP046/AST-EMP046-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP046-07",
+    "employeeId": "EMP046",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP046",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-25",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP046/AST-EMP046-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP046-08",
+    "employeeId": "EMP046",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP046",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-26",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP046/AST-EMP046-08.md"
     }
   },
   {
@@ -3290,6 +5222,48 @@
     }
   },
   {
+    "assetId": "AST-EMP047-06",
+    "employeeId": "EMP047",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Experiment data log - EMP047",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-01",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP047/AST-EMP047-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP047-07",
+    "employeeId": "EMP047",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP047",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-26",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP047/AST-EMP047-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP047-08",
+    "employeeId": "EMP047",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP047",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-27",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP047/AST-EMP047-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP048-01",
     "employeeId": "EMP048",
     "assetType": "presentation",
@@ -3357,6 +5331,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP048/AST-EMP048-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP048-06",
+    "employeeId": "EMP048",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Project resource tracker - EMP048",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-02",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP048/AST-EMP048-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP048-07",
+    "employeeId": "EMP048",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP048",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-27",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP048/AST-EMP048-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP048-08",
+    "employeeId": "EMP048",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP048",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-28",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP048/AST-EMP048-08.md"
     }
   },
   {
@@ -3430,6 +5446,48 @@
     }
   },
   {
+    "assetId": "AST-EMP049-06",
+    "employeeId": "EMP049",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Equipment inventory tracker - EMP049",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-03",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP049/AST-EMP049-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP049-07",
+    "employeeId": "EMP049",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP049",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-28",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP049/AST-EMP049-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP049-08",
+    "employeeId": "EMP049",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP049",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-29",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP049/AST-EMP049-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP050-01",
     "employeeId": "EMP050",
     "assetType": "presentation",
@@ -3497,6 +5555,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP050/AST-EMP050-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP050-06",
+    "employeeId": "EMP050",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Skills matrix - EMP050",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-04",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP050/AST-EMP050-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP050-07",
+    "employeeId": "EMP050",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP050",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-29",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP050/AST-EMP050-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP050-08",
+    "employeeId": "EMP050",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP050",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-30",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP050/AST-EMP050-08.md"
     }
   },
   {
@@ -3570,6 +5670,48 @@
     }
   },
   {
+    "assetId": "AST-EMP051-06",
+    "employeeId": "EMP051",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "System resource utilization - EMP051",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-05",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP051/AST-EMP051-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP051-07",
+    "employeeId": "EMP051",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP051",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-30",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP051/AST-EMP051-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP051-08",
+    "employeeId": "EMP051",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP051",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-31",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP051/AST-EMP051-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP052-01",
     "employeeId": "EMP052",
     "assetType": "presentation",
@@ -3637,6 +5779,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP052/AST-EMP052-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP052-06",
+    "employeeId": "EMP052",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Budget tracker - EMP052",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-06",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP052/AST-EMP052-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP052-07",
+    "employeeId": "EMP052",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP052",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-31",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP052/AST-EMP052-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP052-08",
+    "employeeId": "EMP052",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP052",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-32",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP052/AST-EMP052-08.md"
     }
   },
   {
@@ -3710,6 +5894,48 @@
     }
   },
   {
+    "assetId": "AST-EMP053-06",
+    "employeeId": "EMP053",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Vendor comparison - EMP053",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-07",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP053/AST-EMP053-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP053-07",
+    "employeeId": "EMP053",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP053",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-32",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP053/AST-EMP053-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP053-08",
+    "employeeId": "EMP053",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP053",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-33",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP053/AST-EMP053-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP054-01",
     "employeeId": "EMP054",
     "assetType": "presentation",
@@ -3777,6 +6003,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP054/AST-EMP054-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP054-06",
+    "employeeId": "EMP054",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Shift productivity report - EMP054",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-08",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP054/AST-EMP054-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP054-07",
+    "employeeId": "EMP054",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP054",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-33",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP054/AST-EMP054-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP054-08",
+    "employeeId": "EMP054",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP054",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-34",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP054/AST-EMP054-08.md"
     }
   },
   {
@@ -3850,6 +6118,48 @@
     }
   },
   {
+    "assetId": "AST-EMP055-06",
+    "employeeId": "EMP055",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Experiment data log - EMP055",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-09",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP055/AST-EMP055-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP055-07",
+    "employeeId": "EMP055",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP055",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-34",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP055/AST-EMP055-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP055-08",
+    "employeeId": "EMP055",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP055",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-35",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP055/AST-EMP055-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP056-01",
     "employeeId": "EMP056",
     "assetType": "presentation",
@@ -3917,6 +6227,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP056/AST-EMP056-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP056-06",
+    "employeeId": "EMP056",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Project resource tracker - EMP056",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-10",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP056/AST-EMP056-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP056-07",
+    "employeeId": "EMP056",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP056",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-07",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP056/AST-EMP056-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP056-08",
+    "employeeId": "EMP056",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP056",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-08",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP056/AST-EMP056-08.md"
     }
   },
   {
@@ -3990,6 +6342,48 @@
     }
   },
   {
+    "assetId": "AST-EMP057-06",
+    "employeeId": "EMP057",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Equipment inventory tracker - EMP057",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-11",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP057/AST-EMP057-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP057-07",
+    "employeeId": "EMP057",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP057",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-08",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP057/AST-EMP057-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP057-08",
+    "employeeId": "EMP057",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP057",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-09",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP057/AST-EMP057-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP058-01",
     "employeeId": "EMP058",
     "assetType": "presentation",
@@ -4057,6 +6451,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP058/AST-EMP058-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP058-06",
+    "employeeId": "EMP058",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Skills matrix - EMP058",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-12",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP058/AST-EMP058-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP058-07",
+    "employeeId": "EMP058",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP058",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-09",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP058/AST-EMP058-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP058-08",
+    "employeeId": "EMP058",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP058",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-10",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP058/AST-EMP058-08.md"
     }
   },
   {
@@ -4130,6 +6566,48 @@
     }
   },
   {
+    "assetId": "AST-EMP059-06",
+    "employeeId": "EMP059",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "System resource utilization - EMP059",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-13",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP059/AST-EMP059-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP059-07",
+    "employeeId": "EMP059",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP059",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-10",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP059/AST-EMP059-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP059-08",
+    "employeeId": "EMP059",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP059",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-11",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP059/AST-EMP059-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP060-01",
     "employeeId": "EMP060",
     "assetType": "presentation",
@@ -4197,6 +6675,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP060/AST-EMP060-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP060-06",
+    "employeeId": "EMP060",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Budget tracker - EMP060",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-14",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP060/AST-EMP060-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP060-07",
+    "employeeId": "EMP060",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP060",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-11",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP060/AST-EMP060-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP060-08",
+    "employeeId": "EMP060",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP060",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-12",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP060/AST-EMP060-08.md"
     }
   },
   {
@@ -4270,6 +6790,48 @@
     }
   },
   {
+    "assetId": "AST-EMP061-06",
+    "employeeId": "EMP061",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Vendor comparison - EMP061",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-15",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP061/AST-EMP061-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP061-07",
+    "employeeId": "EMP061",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP061",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-12",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP061/AST-EMP061-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP061-08",
+    "employeeId": "EMP061",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP061",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-13",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP061/AST-EMP061-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP062-01",
     "employeeId": "EMP062",
     "assetType": "presentation",
@@ -4337,6 +6899,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP062/AST-EMP062-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP062-06",
+    "employeeId": "EMP062",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Shift productivity report - EMP062",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-16",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP062/AST-EMP062-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP062-07",
+    "employeeId": "EMP062",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP062",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-13",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP062/AST-EMP062-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP062-08",
+    "employeeId": "EMP062",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP062",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-14",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP062/AST-EMP062-08.md"
     }
   },
   {
@@ -4410,6 +7014,48 @@
     }
   },
   {
+    "assetId": "AST-EMP063-06",
+    "employeeId": "EMP063",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Experiment data log - EMP063",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-17",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP063/AST-EMP063-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP063-07",
+    "employeeId": "EMP063",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP063",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-14",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP063/AST-EMP063-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP063-08",
+    "employeeId": "EMP063",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP063",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-15",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP063/AST-EMP063-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP064-01",
     "employeeId": "EMP064",
     "assetType": "presentation",
@@ -4477,6 +7123,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP064/AST-EMP064-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP064-06",
+    "employeeId": "EMP064",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Project resource tracker - EMP064",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-18",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP064/AST-EMP064-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP064-07",
+    "employeeId": "EMP064",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP064",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-15",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP064/AST-EMP064-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP064-08",
+    "employeeId": "EMP064",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP064",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-16",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP064/AST-EMP064-08.md"
     }
   },
   {
@@ -4550,6 +7238,48 @@
     }
   },
   {
+    "assetId": "AST-EMP065-06",
+    "employeeId": "EMP065",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Equipment inventory tracker - EMP065",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-19",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP065/AST-EMP065-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP065-07",
+    "employeeId": "EMP065",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP065",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-16",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP065/AST-EMP065-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP065-08",
+    "employeeId": "EMP065",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP065",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-17",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP065/AST-EMP065-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP066-01",
     "employeeId": "EMP066",
     "assetType": "presentation",
@@ -4617,6 +7347,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP066/AST-EMP066-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP066-06",
+    "employeeId": "EMP066",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Skills matrix - EMP066",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-20",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP066/AST-EMP066-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP066-07",
+    "employeeId": "EMP066",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP066",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-17",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP066/AST-EMP066-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP066-08",
+    "employeeId": "EMP066",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP066",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-18",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP066/AST-EMP066-08.md"
     }
   },
   {
@@ -4690,6 +7462,48 @@
     }
   },
   {
+    "assetId": "AST-EMP067-06",
+    "employeeId": "EMP067",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "System resource utilization - EMP067",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-21",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP067/AST-EMP067-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP067-07",
+    "employeeId": "EMP067",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP067",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-18",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP067/AST-EMP067-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP067-08",
+    "employeeId": "EMP067",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP067",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-19",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP067/AST-EMP067-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP068-01",
     "employeeId": "EMP068",
     "assetType": "presentation",
@@ -4757,6 +7571,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP068/AST-EMP068-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP068-06",
+    "employeeId": "EMP068",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Budget tracker - EMP068",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-22",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP068/AST-EMP068-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP068-07",
+    "employeeId": "EMP068",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP068",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-19",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP068/AST-EMP068-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP068-08",
+    "employeeId": "EMP068",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP068",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-20",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP068/AST-EMP068-08.md"
     }
   },
   {
@@ -4830,6 +7686,48 @@
     }
   },
   {
+    "assetId": "AST-EMP069-06",
+    "employeeId": "EMP069",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Vendor comparison - EMP069",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-23",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP069/AST-EMP069-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP069-07",
+    "employeeId": "EMP069",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP069",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-20",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP069/AST-EMP069-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP069-08",
+    "employeeId": "EMP069",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP069",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-21",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP069/AST-EMP069-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP070-01",
     "employeeId": "EMP070",
     "assetType": "presentation",
@@ -4897,6 +7795,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP070/AST-EMP070-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP070-06",
+    "employeeId": "EMP070",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Shift productivity report - EMP070",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-24",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP070/AST-EMP070-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP070-07",
+    "employeeId": "EMP070",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP070",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-21",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP070/AST-EMP070-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP070-08",
+    "employeeId": "EMP070",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP070",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-22",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP070/AST-EMP070-08.md"
     }
   },
   {
@@ -4970,6 +7910,48 @@
     }
   },
   {
+    "assetId": "AST-EMP071-06",
+    "employeeId": "EMP071",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Experiment data log - EMP071",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-25",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP071/AST-EMP071-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP071-07",
+    "employeeId": "EMP071",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP071",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-22",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP071/AST-EMP071-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP071-08",
+    "employeeId": "EMP071",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP071",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-23",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP071/AST-EMP071-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP072-01",
     "employeeId": "EMP072",
     "assetType": "presentation",
@@ -5037,6 +8019,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP072/AST-EMP072-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP072-06",
+    "employeeId": "EMP072",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Project resource tracker - EMP072",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-26",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP072/AST-EMP072-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP072-07",
+    "employeeId": "EMP072",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP072",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-23",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP072/AST-EMP072-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP072-08",
+    "employeeId": "EMP072",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP072",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-24",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP072/AST-EMP072-08.md"
     }
   },
   {
@@ -5110,6 +8134,48 @@
     }
   },
   {
+    "assetId": "AST-EMP073-06",
+    "employeeId": "EMP073",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Equipment inventory tracker - EMP073",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-27",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP073/AST-EMP073-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP073-07",
+    "employeeId": "EMP073",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP073",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-24",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP073/AST-EMP073-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP073-08",
+    "employeeId": "EMP073",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP073",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-25",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP073/AST-EMP073-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP074-01",
     "employeeId": "EMP074",
     "assetType": "presentation",
@@ -5177,6 +8243,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP074/AST-EMP074-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP074-06",
+    "employeeId": "EMP074",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Skills matrix - EMP074",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-28",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP074/AST-EMP074-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP074-07",
+    "employeeId": "EMP074",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP074",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-25",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP074/AST-EMP074-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP074-08",
+    "employeeId": "EMP074",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP074",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-26",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP074/AST-EMP074-08.md"
     }
   },
   {
@@ -5250,6 +8358,48 @@
     }
   },
   {
+    "assetId": "AST-EMP075-06",
+    "employeeId": "EMP075",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "System resource utilization - EMP075",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-29",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP075/AST-EMP075-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP075-07",
+    "employeeId": "EMP075",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP075",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-26",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP075/AST-EMP075-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP075-08",
+    "employeeId": "EMP075",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP075",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-27",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP075/AST-EMP075-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP076-01",
     "employeeId": "EMP076",
     "assetType": "presentation",
@@ -5317,6 +8467,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP076/AST-EMP076-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP076-06",
+    "employeeId": "EMP076",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Budget tracker - EMP076",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-30",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP076/AST-EMP076-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP076-07",
+    "employeeId": "EMP076",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP076",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-27",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP076/AST-EMP076-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP076-08",
+    "employeeId": "EMP076",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP076",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-28",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP076/AST-EMP076-08.md"
     }
   },
   {
@@ -5390,6 +8582,48 @@
     }
   },
   {
+    "assetId": "AST-EMP077-06",
+    "employeeId": "EMP077",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Vendor comparison - EMP077",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-03-31",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP077/AST-EMP077-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP077-07",
+    "employeeId": "EMP077",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP077",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-28",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP077/AST-EMP077-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP077-08",
+    "employeeId": "EMP077",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP077",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-29",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP077/AST-EMP077-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP078-01",
     "employeeId": "EMP078",
     "assetType": "presentation",
@@ -5457,6 +8691,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP078/AST-EMP078-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP078-06",
+    "employeeId": "EMP078",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Shift productivity report - EMP078",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-01",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP078/AST-EMP078-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP078-07",
+    "employeeId": "EMP078",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP078",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-29",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP078/AST-EMP078-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP078-08",
+    "employeeId": "EMP078",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP078",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-30",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP078/AST-EMP078-08.md"
     }
   },
   {
@@ -5530,6 +8806,48 @@
     }
   },
   {
+    "assetId": "AST-EMP079-06",
+    "employeeId": "EMP079",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Experiment data log - EMP079",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-02",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP079/AST-EMP079-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP079-07",
+    "employeeId": "EMP079",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP079",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-30",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP079/AST-EMP079-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP079-08",
+    "employeeId": "EMP079",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP079",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-31",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP079/AST-EMP079-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP080-01",
     "employeeId": "EMP080",
     "assetType": "presentation",
@@ -5597,6 +8915,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP080/AST-EMP080-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP080-06",
+    "employeeId": "EMP080",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Project resource tracker - EMP080",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-03",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP080/AST-EMP080-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP080-07",
+    "employeeId": "EMP080",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP080",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-31",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP080/AST-EMP080-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP080-08",
+    "employeeId": "EMP080",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP080",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-32",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP080/AST-EMP080-08.md"
     }
   },
   {
@@ -5670,6 +9030,48 @@
     }
   },
   {
+    "assetId": "AST-EMP081-06",
+    "employeeId": "EMP081",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Equipment inventory tracker - EMP081",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-04",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP081/AST-EMP081-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP081-07",
+    "employeeId": "EMP081",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP081",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-32",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP081/AST-EMP081-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP081-08",
+    "employeeId": "EMP081",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP081",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-33",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP081/AST-EMP081-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP082-01",
     "employeeId": "EMP082",
     "assetType": "presentation",
@@ -5737,6 +9139,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP082/AST-EMP082-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP082-06",
+    "employeeId": "EMP082",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Skills matrix - EMP082",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-05",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP082/AST-EMP082-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP082-07",
+    "employeeId": "EMP082",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP082",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-33",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP082/AST-EMP082-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP082-08",
+    "employeeId": "EMP082",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP082",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-34",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP082/AST-EMP082-08.md"
     }
   },
   {
@@ -5810,6 +9254,48 @@
     }
   },
   {
+    "assetId": "AST-EMP083-06",
+    "employeeId": "EMP083",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "System resource utilization - EMP083",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-06",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP083/AST-EMP083-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP083-07",
+    "employeeId": "EMP083",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP083",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-34",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP083/AST-EMP083-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP083-08",
+    "employeeId": "EMP083",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP083",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-35",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP083/AST-EMP083-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP084-01",
     "employeeId": "EMP084",
     "assetType": "presentation",
@@ -5877,6 +9363,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP084/AST-EMP084-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP084-06",
+    "employeeId": "EMP084",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Budget tracker - EMP084",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-07",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP084/AST-EMP084-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP084-07",
+    "employeeId": "EMP084",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP084",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-07",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP084/AST-EMP084-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP084-08",
+    "employeeId": "EMP084",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP084",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-08",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP084/AST-EMP084-08.md"
     }
   },
   {
@@ -5950,6 +9478,48 @@
     }
   },
   {
+    "assetId": "AST-EMP085-06",
+    "employeeId": "EMP085",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Vendor comparison - EMP085",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-08",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP085/AST-EMP085-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP085-07",
+    "employeeId": "EMP085",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP085",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-08",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP085/AST-EMP085-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP085-08",
+    "employeeId": "EMP085",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP085",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-09",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP085/AST-EMP085-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP086-01",
     "employeeId": "EMP086",
     "assetType": "presentation",
@@ -6017,6 +9587,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP086/AST-EMP086-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP086-06",
+    "employeeId": "EMP086",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Shift productivity report - EMP086",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-09",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP086/AST-EMP086-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP086-07",
+    "employeeId": "EMP086",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP086",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-09",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP086/AST-EMP086-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP086-08",
+    "employeeId": "EMP086",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP086",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-10",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP086/AST-EMP086-08.md"
     }
   },
   {
@@ -6090,6 +9702,48 @@
     }
   },
   {
+    "assetId": "AST-EMP087-06",
+    "employeeId": "EMP087",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Experiment data log - EMP087",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-10",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP087/AST-EMP087-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP087-07",
+    "employeeId": "EMP087",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP087",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-10",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP087/AST-EMP087-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP087-08",
+    "employeeId": "EMP087",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP087",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-11",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP087/AST-EMP087-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP088-01",
     "employeeId": "EMP088",
     "assetType": "presentation",
@@ -6157,6 +9811,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP088/AST-EMP088-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP088-06",
+    "employeeId": "EMP088",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Project resource tracker - EMP088",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-11",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP088/AST-EMP088-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP088-07",
+    "employeeId": "EMP088",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP088",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-11",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP088/AST-EMP088-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP088-08",
+    "employeeId": "EMP088",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP088",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-12",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP088/AST-EMP088-08.md"
     }
   },
   {
@@ -6230,6 +9926,48 @@
     }
   },
   {
+    "assetId": "AST-EMP089-06",
+    "employeeId": "EMP089",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Equipment inventory tracker - EMP089",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-12",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP089/AST-EMP089-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP089-07",
+    "employeeId": "EMP089",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP089",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-12",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP089/AST-EMP089-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP089-08",
+    "employeeId": "EMP089",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP089",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-13",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP089/AST-EMP089-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP090-01",
     "employeeId": "EMP090",
     "assetType": "presentation",
@@ -6297,6 +10035,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP090/AST-EMP090-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP090-06",
+    "employeeId": "EMP090",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Skills matrix - EMP090",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-13",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP090/AST-EMP090-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP090-07",
+    "employeeId": "EMP090",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP090",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-13",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP090/AST-EMP090-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP090-08",
+    "employeeId": "EMP090",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP090",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-14",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP090/AST-EMP090-08.md"
     }
   },
   {
@@ -6370,6 +10150,48 @@
     }
   },
   {
+    "assetId": "AST-EMP091-06",
+    "employeeId": "EMP091",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "System resource utilization - EMP091",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-14",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP091/AST-EMP091-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP091-07",
+    "employeeId": "EMP091",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP091",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-14",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP091/AST-EMP091-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP091-08",
+    "employeeId": "EMP091",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP091",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-15",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP091/AST-EMP091-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP092-01",
     "employeeId": "EMP092",
     "assetType": "presentation",
@@ -6437,6 +10259,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP092/AST-EMP092-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP092-06",
+    "employeeId": "EMP092",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Budget tracker - EMP092",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-15",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP092/AST-EMP092-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP092-07",
+    "employeeId": "EMP092",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP092",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-15",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP092/AST-EMP092-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP092-08",
+    "employeeId": "EMP092",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP092",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-16",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP092/AST-EMP092-08.md"
     }
   },
   {
@@ -6510,6 +10374,48 @@
     }
   },
   {
+    "assetId": "AST-EMP093-06",
+    "employeeId": "EMP093",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Vendor comparison - EMP093",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-16",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP093/AST-EMP093-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP093-07",
+    "employeeId": "EMP093",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP093",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-16",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP093/AST-EMP093-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP093-08",
+    "employeeId": "EMP093",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP093",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-17",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP093/AST-EMP093-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP094-01",
     "employeeId": "EMP094",
     "assetType": "presentation",
@@ -6577,6 +10483,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP094/AST-EMP094-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP094-06",
+    "employeeId": "EMP094",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Shift productivity report - EMP094",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-17",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP094/AST-EMP094-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP094-07",
+    "employeeId": "EMP094",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP094",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-17",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP094/AST-EMP094-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP094-08",
+    "employeeId": "EMP094",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP094",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-18",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP094/AST-EMP094-08.md"
     }
   },
   {
@@ -6650,6 +10598,48 @@
     }
   },
   {
+    "assetId": "AST-EMP095-06",
+    "employeeId": "EMP095",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Experiment data log - EMP095",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-18",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP095/AST-EMP095-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP095-07",
+    "employeeId": "EMP095",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP095",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-18",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP095/AST-EMP095-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP095-08",
+    "employeeId": "EMP095",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP095",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-19",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP095/AST-EMP095-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP096-01",
     "employeeId": "EMP096",
     "assetType": "presentation",
@@ -6717,6 +10707,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP096/AST-EMP096-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP096-06",
+    "employeeId": "EMP096",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Project resource tracker - EMP096",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-19",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP096/AST-EMP096-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP096-07",
+    "employeeId": "EMP096",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP096",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-19",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP096/AST-EMP096-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP096-08",
+    "employeeId": "EMP096",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP096",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-20",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP096/AST-EMP096-08.md"
     }
   },
   {
@@ -6790,6 +10822,48 @@
     }
   },
   {
+    "assetId": "AST-EMP097-06",
+    "employeeId": "EMP097",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Equipment inventory tracker - EMP097",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-20",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP097/AST-EMP097-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP097-07",
+    "employeeId": "EMP097",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP097",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-20",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP097/AST-EMP097-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP097-08",
+    "employeeId": "EMP097",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP097",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-21",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP097/AST-EMP097-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP098-01",
     "employeeId": "EMP098",
     "assetType": "presentation",
@@ -6857,6 +10931,48 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP098/AST-EMP098-05.one"
+    }
+  },
+  {
+    "assetId": "AST-EMP098-06",
+    "employeeId": "EMP098",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "Skills matrix - EMP098",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-21",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP098/AST-EMP098-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP098-07",
+    "employeeId": "EMP098",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP098",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-21",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP098/AST-EMP098-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP098-08",
+    "employeeId": "EMP098",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP098",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-22",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP098/AST-EMP098-08.md"
     }
   },
   {
@@ -6930,6 +11046,48 @@
     }
   },
   {
+    "assetId": "AST-EMP099-06",
+    "employeeId": "EMP099",
+    "assetType": "spreadsheet",
+    "format": "xlsx",
+    "title": "System resource utilization - EMP099",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-04-22",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP099/AST-EMP099-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP099-07",
+    "employeeId": "EMP099",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP099",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-22",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP099/AST-EMP099-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP099-08",
+    "employeeId": "EMP099",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP099",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-23",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP099/AST-EMP099-08.md"
+    }
+  },
+  {
     "assetId": "AST-EMP100-01",
     "employeeId": "EMP100",
     "assetType": "presentation",
@@ -7000,1392 +11158,6 @@
     }
   },
   {
-    "assetId": "AST-EMP001-06",
-    "employeeId": "EMP001",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Equipment inventory tracker - EMP001",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-01-14",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP001/AST-EMP001-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP002-06",
-    "employeeId": "EMP002",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Skills matrix - EMP002",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-01-15",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP002/AST-EMP002-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP003-06",
-    "employeeId": "EMP003",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "System resource utilization - EMP003",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-01-16",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP003/AST-EMP003-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP004-06",
-    "employeeId": "EMP004",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Budget tracker - EMP004",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-01-17",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP004/AST-EMP004-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP005-06",
-    "employeeId": "EMP005",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Vendor comparison - EMP005",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-01-18",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP005/AST-EMP005-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP006-06",
-    "employeeId": "EMP006",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Shift productivity report - EMP006",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-01-19",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP006/AST-EMP006-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP007-06",
-    "employeeId": "EMP007",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Experiment data log - EMP007",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-01-20",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP007/AST-EMP007-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP008-06",
-    "employeeId": "EMP008",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Project resource tracker - EMP008",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-01-21",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP008/AST-EMP008-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP009-06",
-    "employeeId": "EMP009",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Equipment inventory tracker - EMP009",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-01-22",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP009/AST-EMP009-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP010-06",
-    "employeeId": "EMP010",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Skills matrix - EMP010",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-01-23",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP010/AST-EMP010-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP011-06",
-    "employeeId": "EMP011",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "System resource utilization - EMP011",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-01-24",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP011/AST-EMP011-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP012-06",
-    "employeeId": "EMP012",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Budget tracker - EMP012",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-01-25",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP012/AST-EMP012-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP013-06",
-    "employeeId": "EMP013",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Vendor comparison - EMP013",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-01-26",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP013/AST-EMP013-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP014-06",
-    "employeeId": "EMP014",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Shift productivity report - EMP014",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-01-27",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP014/AST-EMP014-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP015-06",
-    "employeeId": "EMP015",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Experiment data log - EMP015",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-01-28",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP015/AST-EMP015-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP016-06",
-    "employeeId": "EMP016",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Project resource tracker - EMP016",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-01-29",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP016/AST-EMP016-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP017-06",
-    "employeeId": "EMP017",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Equipment inventory tracker - EMP017",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-01-30",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP017/AST-EMP017-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP018-06",
-    "employeeId": "EMP018",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Skills matrix - EMP018",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-01-31",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP018/AST-EMP018-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP019-06",
-    "employeeId": "EMP019",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "System resource utilization - EMP019",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-01",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP019/AST-EMP019-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP020-06",
-    "employeeId": "EMP020",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Budget tracker - EMP020",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-02",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP020/AST-EMP020-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP021-06",
-    "employeeId": "EMP021",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Vendor comparison - EMP021",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-03",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP021/AST-EMP021-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP022-06",
-    "employeeId": "EMP022",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Shift productivity report - EMP022",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-04",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP022/AST-EMP022-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP023-06",
-    "employeeId": "EMP023",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Experiment data log - EMP023",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-05",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP023/AST-EMP023-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP024-06",
-    "employeeId": "EMP024",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Project resource tracker - EMP024",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-06",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP024/AST-EMP024-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP025-06",
-    "employeeId": "EMP025",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Equipment inventory tracker - EMP025",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-07",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP025/AST-EMP025-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP026-06",
-    "employeeId": "EMP026",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Skills matrix - EMP026",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-08",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP026/AST-EMP026-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP027-06",
-    "employeeId": "EMP027",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "System resource utilization - EMP027",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-09",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP027/AST-EMP027-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP028-06",
-    "employeeId": "EMP028",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Budget tracker - EMP028",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-10",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP028/AST-EMP028-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP029-06",
-    "employeeId": "EMP029",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Vendor comparison - EMP029",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-11",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP029/AST-EMP029-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP030-06",
-    "employeeId": "EMP030",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Shift productivity report - EMP030",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-12",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP030/AST-EMP030-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP031-06",
-    "employeeId": "EMP031",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Experiment data log - EMP031",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-13",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP031/AST-EMP031-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP032-06",
-    "employeeId": "EMP032",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Project resource tracker - EMP032",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-14",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP032/AST-EMP032-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP033-06",
-    "employeeId": "EMP033",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Equipment inventory tracker - EMP033",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-15",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP033/AST-EMP033-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP034-06",
-    "employeeId": "EMP034",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Skills matrix - EMP034",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-16",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP034/AST-EMP034-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP035-06",
-    "employeeId": "EMP035",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "System resource utilization - EMP035",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-17",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP035/AST-EMP035-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP036-06",
-    "employeeId": "EMP036",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Budget tracker - EMP036",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-18",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP036/AST-EMP036-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP037-06",
-    "employeeId": "EMP037",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Vendor comparison - EMP037",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-19",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP037/AST-EMP037-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP038-06",
-    "employeeId": "EMP038",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Shift productivity report - EMP038",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-20",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP038/AST-EMP038-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP039-06",
-    "employeeId": "EMP039",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Experiment data log - EMP039",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-21",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP039/AST-EMP039-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP040-06",
-    "employeeId": "EMP040",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Project resource tracker - EMP040",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-22",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP040/AST-EMP040-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP041-06",
-    "employeeId": "EMP041",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Equipment inventory tracker - EMP041",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-23",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP041/AST-EMP041-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP042-06",
-    "employeeId": "EMP042",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Skills matrix - EMP042",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-24",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP042/AST-EMP042-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP043-06",
-    "employeeId": "EMP043",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "System resource utilization - EMP043",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-25",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP043/AST-EMP043-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP044-06",
-    "employeeId": "EMP044",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Budget tracker - EMP044",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-26",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP044/AST-EMP044-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP045-06",
-    "employeeId": "EMP045",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Vendor comparison - EMP045",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-27",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP045/AST-EMP045-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP046-06",
-    "employeeId": "EMP046",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Shift productivity report - EMP046",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-02-28",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP046/AST-EMP046-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP047-06",
-    "employeeId": "EMP047",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Experiment data log - EMP047",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-01",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP047/AST-EMP047-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP048-06",
-    "employeeId": "EMP048",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Project resource tracker - EMP048",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-02",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP048/AST-EMP048-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP049-06",
-    "employeeId": "EMP049",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Equipment inventory tracker - EMP049",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-03",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP049/AST-EMP049-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP050-06",
-    "employeeId": "EMP050",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Skills matrix - EMP050",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-04",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP050/AST-EMP050-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP051-06",
-    "employeeId": "EMP051",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "System resource utilization - EMP051",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-05",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP051/AST-EMP051-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP052-06",
-    "employeeId": "EMP052",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Budget tracker - EMP052",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-06",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP052/AST-EMP052-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP053-06",
-    "employeeId": "EMP053",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Vendor comparison - EMP053",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-07",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP053/AST-EMP053-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP054-06",
-    "employeeId": "EMP054",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Shift productivity report - EMP054",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-08",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP054/AST-EMP054-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP055-06",
-    "employeeId": "EMP055",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Experiment data log - EMP055",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-09",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP055/AST-EMP055-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP056-06",
-    "employeeId": "EMP056",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Project resource tracker - EMP056",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-10",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP056/AST-EMP056-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP057-06",
-    "employeeId": "EMP057",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Equipment inventory tracker - EMP057",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-11",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP057/AST-EMP057-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP058-06",
-    "employeeId": "EMP058",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Skills matrix - EMP058",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-12",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP058/AST-EMP058-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP059-06",
-    "employeeId": "EMP059",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "System resource utilization - EMP059",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-13",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP059/AST-EMP059-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP060-06",
-    "employeeId": "EMP060",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Budget tracker - EMP060",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-14",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP060/AST-EMP060-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP061-06",
-    "employeeId": "EMP061",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Vendor comparison - EMP061",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-15",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP061/AST-EMP061-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP062-06",
-    "employeeId": "EMP062",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Shift productivity report - EMP062",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-16",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP062/AST-EMP062-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP063-06",
-    "employeeId": "EMP063",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Experiment data log - EMP063",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-17",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP063/AST-EMP063-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP064-06",
-    "employeeId": "EMP064",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Project resource tracker - EMP064",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-18",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP064/AST-EMP064-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP065-06",
-    "employeeId": "EMP065",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Equipment inventory tracker - EMP065",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-19",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP065/AST-EMP065-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP066-06",
-    "employeeId": "EMP066",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Skills matrix - EMP066",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-20",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP066/AST-EMP066-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP067-06",
-    "employeeId": "EMP067",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "System resource utilization - EMP067",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-21",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP067/AST-EMP067-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP068-06",
-    "employeeId": "EMP068",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Budget tracker - EMP068",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-22",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP068/AST-EMP068-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP069-06",
-    "employeeId": "EMP069",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Vendor comparison - EMP069",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-23",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP069/AST-EMP069-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP070-06",
-    "employeeId": "EMP070",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Shift productivity report - EMP070",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-24",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP070/AST-EMP070-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP071-06",
-    "employeeId": "EMP071",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Experiment data log - EMP071",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-25",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP071/AST-EMP071-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP072-06",
-    "employeeId": "EMP072",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Project resource tracker - EMP072",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-26",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP072/AST-EMP072-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP073-06",
-    "employeeId": "EMP073",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Equipment inventory tracker - EMP073",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-27",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP073/AST-EMP073-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP074-06",
-    "employeeId": "EMP074",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Skills matrix - EMP074",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-28",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP074/AST-EMP074-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP075-06",
-    "employeeId": "EMP075",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "System resource utilization - EMP075",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-29",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP075/AST-EMP075-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP076-06",
-    "employeeId": "EMP076",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Budget tracker - EMP076",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-30",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP076/AST-EMP076-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP077-06",
-    "employeeId": "EMP077",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Vendor comparison - EMP077",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-03-31",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP077/AST-EMP077-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP078-06",
-    "employeeId": "EMP078",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Shift productivity report - EMP078",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-01",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP078/AST-EMP078-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP079-06",
-    "employeeId": "EMP079",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Experiment data log - EMP079",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-02",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP079/AST-EMP079-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP080-06",
-    "employeeId": "EMP080",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Project resource tracker - EMP080",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-03",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP080/AST-EMP080-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP081-06",
-    "employeeId": "EMP081",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Equipment inventory tracker - EMP081",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-04",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP081/AST-EMP081-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP082-06",
-    "employeeId": "EMP082",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Skills matrix - EMP082",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-05",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP082/AST-EMP082-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP083-06",
-    "employeeId": "EMP083",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "System resource utilization - EMP083",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-06",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP083/AST-EMP083-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP084-06",
-    "employeeId": "EMP084",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Budget tracker - EMP084",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-07",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP084/AST-EMP084-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP085-06",
-    "employeeId": "EMP085",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Vendor comparison - EMP085",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-08",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP085/AST-EMP085-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP086-06",
-    "employeeId": "EMP086",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Shift productivity report - EMP086",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-09",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP086/AST-EMP086-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP087-06",
-    "employeeId": "EMP087",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Experiment data log - EMP087",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-10",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP087/AST-EMP087-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP088-06",
-    "employeeId": "EMP088",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Project resource tracker - EMP088",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-11",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP088/AST-EMP088-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP089-06",
-    "employeeId": "EMP089",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Equipment inventory tracker - EMP089",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-12",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP089/AST-EMP089-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP090-06",
-    "employeeId": "EMP090",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Skills matrix - EMP090",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-13",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP090/AST-EMP090-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP091-06",
-    "employeeId": "EMP091",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "System resource utilization - EMP091",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-14",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP091/AST-EMP091-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP092-06",
-    "employeeId": "EMP092",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Budget tracker - EMP092",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-15",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP092/AST-EMP092-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP093-06",
-    "employeeId": "EMP093",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Vendor comparison - EMP093",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-16",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP093/AST-EMP093-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP094-06",
-    "employeeId": "EMP094",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Shift productivity report - EMP094",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-17",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP094/AST-EMP094-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP095-06",
-    "employeeId": "EMP095",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Experiment data log - EMP095",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-18",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP095/AST-EMP095-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP096-06",
-    "employeeId": "EMP096",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Project resource tracker - EMP096",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-19",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP096/AST-EMP096-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP097-06",
-    "employeeId": "EMP097",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Equipment inventory tracker - EMP097",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-20",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP097/AST-EMP097-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP098-06",
-    "employeeId": "EMP098",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "Skills matrix - EMP098",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-21",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP098/AST-EMP098-06.xlsx"
-    }
-  },
-  {
-    "assetId": "AST-EMP099-06",
-    "employeeId": "EMP099",
-    "assetType": "spreadsheet",
-    "format": "xlsx",
-    "title": "System resource utilization - EMP099",
-    "sourceSystem": "OneDrive",
-    "lastModified": "2025-04-22",
-    "storageRef": {
-      "endpointConfigKey": "azure.blobStorageEndpoint",
-      "container": "employee-knowledge-raw",
-      "relativePath": "EMP099/AST-EMP099-06.xlsx"
-    }
-  },
-  {
     "assetId": "AST-EMP100-06",
     "employeeId": "EMP100",
     "assetType": "spreadsheet",
@@ -8397,6 +11169,34 @@
       "endpointConfigKey": "azure.blobStorageEndpoint",
       "container": "employee-knowledge-raw",
       "relativePath": "EMP100/AST-EMP100-06.xlsx"
+    }
+  },
+  {
+    "assetId": "AST-EMP100-07",
+    "employeeId": "EMP100",
+    "assetType": "spreadsheet-csv",
+    "format": "csv",
+    "title": "Department metrics export - EMP100",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-23",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP100/AST-EMP100-07.csv"
+    }
+  },
+  {
+    "assetId": "AST-EMP100-08",
+    "employeeId": "EMP100",
+    "assetType": "knowledge-note",
+    "format": "md",
+    "title": "Knowledge summary notes - EMP100",
+    "sourceSystem": "OneDrive",
+    "lastModified": "2025-01-24",
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP100/AST-EMP100-08.md"
     }
   }
 ]

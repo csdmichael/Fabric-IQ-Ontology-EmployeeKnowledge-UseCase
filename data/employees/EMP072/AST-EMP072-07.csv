@@ -1,0 +1,11 @@
+title,Project Resource Tracker
+employee,Jordan Nguyen
+department,Engineering
+role,Engineer
+date,2025-01-23
+
+Project,Milestone,Owner,Planned,Actual,Status,Resources
+Proj Alpha,M1 - Design,Team A,2025-02-01,2025-01-29,Done,4
+Proj Beta,M2 - Build,Team B,2025-03-15,2025-03-20,Delayed,6
+Proj Gamma,M1 - Design,Team C,2025-04-01,2025-04-01,On Track,3
+Proj Delta,M3 - Test,Team A,2025-05-01,,At Risk,5

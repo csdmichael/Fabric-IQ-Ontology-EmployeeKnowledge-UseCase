@@ -65,6 +65,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp001-05"
   },
   {
+    "documentId": "AST-EMP001-06",
+    "employeeId": "EMP001",
+    "classification": "Manufacturing",
+    "documentConfidence": 0.73,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.73,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp001-06"
+  },
+  {
+    "documentId": "AST-EMP001-07",
+    "employeeId": "EMP001",
+    "classification": "Engineering",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.72,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-05-08T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp001-07"
+  },
+  {
+    "documentId": "AST-EMP001-08",
+    "employeeId": "EMP001",
+    "classification": "Procurement",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.7,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-05-08T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp001-08"
+  },
+  {
     "documentId": "AST-EMP002-01",
     "employeeId": "EMP002",
     "classification": "Engineering",
@@ -128,6 +167,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp002-05"
+  },
+  {
+    "documentId": "AST-EMP002-06",
+    "employeeId": "EMP002",
+    "classification": "HR",
+    "documentConfidence": 0.74,
+    "sectionConfidence": {
+      "metadata": 0.69,
+      "content": 0.74,
+      "entities": 0.62
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp002-06"
+  },
+  {
+    "documentId": "AST-EMP002-07",
+    "employeeId": "EMP002",
+    "classification": "Procurement",
+    "documentConfidence": 0.75,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.75,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-09T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp002-07"
+  },
+  {
+    "documentId": "AST-EMP002-08",
+    "employeeId": "EMP002",
+    "classification": "Operations",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.72,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-09T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp002-08"
   },
   {
     "documentId": "AST-EMP003-01",
@@ -195,6 +273,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp003-05"
   },
   {
+    "documentId": "AST-EMP003-06",
+    "employeeId": "EMP003",
+    "classification": "IT",
+    "documentConfidence": 0.75,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.75,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp003-06"
+  },
+  {
+    "documentId": "AST-EMP003-07",
+    "employeeId": "EMP003",
+    "classification": "Operations",
+    "documentConfidence": 0.77,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.77,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-10T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp003-07"
+  },
+  {
+    "documentId": "AST-EMP003-08",
+    "employeeId": "EMP003",
+    "classification": "Safety",
+    "documentConfidence": 0.74,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.74,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-10T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp003-08"
+  },
+  {
     "documentId": "AST-EMP004-01",
     "employeeId": "EMP004",
     "classification": "Operations",
@@ -258,6 +375,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp004-05"
+  },
+  {
+    "documentId": "AST-EMP004-06",
+    "employeeId": "EMP004",
+    "classification": "Finance",
+    "documentConfidence": 0.76,
+    "sectionConfidence": {
+      "metadata": 0.71,
+      "content": 0.76,
+      "entities": 0.64
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp004-06"
+  },
+  {
+    "documentId": "AST-EMP004-07",
+    "employeeId": "EMP004",
+    "classification": "Safety",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.8,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-11T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp004-07"
+  },
+  {
+    "documentId": "AST-EMP004-08",
+    "employeeId": "EMP004",
+    "classification": "Finance",
+    "documentConfidence": 0.76,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.76,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-11T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp004-08"
   },
   {
     "documentId": "AST-EMP005-01",
@@ -325,6 +481,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp005-05"
   },
   {
+    "documentId": "AST-EMP005-06",
+    "employeeId": "EMP005",
+    "classification": "Procurement",
+    "documentConfidence": 0.77,
+    "sectionConfidence": {
+      "metadata": 0.72,
+      "content": 0.77,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp005-06"
+  },
+  {
+    "documentId": "AST-EMP005-07",
+    "employeeId": "EMP005",
+    "classification": "Finance",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.72,
+      "content": 0.82,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-12T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp005-07"
+  },
+  {
+    "documentId": "AST-EMP005-08",
+    "employeeId": "EMP005",
+    "classification": "R&D",
+    "documentConfidence": 0.78,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.78,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-05-12T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp005-08"
+  },
+  {
     "documentId": "AST-EMP006-01",
     "employeeId": "EMP006",
     "classification": "Safety",
@@ -388,6 +583,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp006-05"
+  },
+  {
+    "documentId": "AST-EMP006-06",
+    "employeeId": "EMP006",
+    "classification": "Operations",
+    "documentConfidence": 0.78,
+    "sectionConfidence": {
+      "metadata": 0.73,
+      "content": 0.78,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp006-06"
+  },
+  {
+    "documentId": "AST-EMP006-07",
+    "employeeId": "EMP006",
+    "classification": "R&D",
+    "documentConfidence": 0.85,
+    "sectionConfidence": {
+      "metadata": 0.74,
+      "content": 0.85,
+      "entities": 0.58
+    },
+    "parsedAt": "2026-05-13T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp006-07"
+  },
+  {
+    "documentId": "AST-EMP006-08",
+    "employeeId": "EMP006",
+    "classification": "HR",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.6,
+      "content": 0.8,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-05-13T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp006-08"
   },
   {
     "documentId": "AST-EMP007-01",
@@ -455,6 +689,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp007-05"
   },
   {
+    "documentId": "AST-EMP007-06",
+    "employeeId": "EMP007",
+    "classification": "R&D",
+    "documentConfidence": 0.79,
+    "sectionConfidence": {
+      "metadata": 0.74,
+      "content": 0.79,
+      "entities": 0.67
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp007-06"
+  },
+  {
+    "documentId": "AST-EMP007-07",
+    "employeeId": "EMP007",
+    "classification": "HR",
+    "documentConfidence": 0.88,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.88,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-05-14T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp007-07"
+  },
+  {
+    "documentId": "AST-EMP007-08",
+    "employeeId": "EMP007",
+    "classification": "Engineering",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.82,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-14T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp007-08"
+  },
+  {
     "documentId": "AST-EMP008-01",
     "employeeId": "EMP008",
     "classification": "Finance",
@@ -518,6 +791,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp008-05"
+  },
+  {
+    "documentId": "AST-EMP008-06",
+    "employeeId": "EMP008",
+    "classification": "Engineering",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.75,
+      "content": 0.8,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp008-06"
+  },
+  {
+    "documentId": "AST-EMP008-07",
+    "employeeId": "EMP008",
+    "classification": "Engineering",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.7,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-15T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp008-07"
+  },
+  {
+    "documentId": "AST-EMP008-08",
+    "employeeId": "EMP008",
+    "classification": "Procurement",
+    "documentConfidence": 0.84,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.84,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-15T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp008-08"
   },
   {
     "documentId": "AST-EMP009-01",
@@ -585,6 +897,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp009-05"
   },
   {
+    "documentId": "AST-EMP009-06",
+    "employeeId": "EMP009",
+    "classification": "Manufacturing",
+    "documentConfidence": 0.81,
+    "sectionConfidence": {
+      "metadata": 0.76,
+      "content": 0.81,
+      "entities": 0.69
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp009-06"
+  },
+  {
+    "documentId": "AST-EMP009-07",
+    "employeeId": "EMP009",
+    "classification": "Procurement",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.72,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-16T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp009-07"
+  },
+  {
+    "documentId": "AST-EMP009-08",
+    "employeeId": "EMP009",
+    "classification": "Operations",
+    "documentConfidence": 0.68,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.68,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-16T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp009-08"
+  },
+  {
     "documentId": "AST-EMP010-01",
     "employeeId": "EMP010",
     "classification": "R&D",
@@ -648,6 +999,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp010-05"
+  },
+  {
+    "documentId": "AST-EMP010-06",
+    "employeeId": "EMP010",
+    "classification": "HR",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.77,
+      "content": 0.82,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp010-06"
+  },
+  {
+    "documentId": "AST-EMP010-07",
+    "employeeId": "EMP010",
+    "classification": "Operations",
+    "documentConfidence": 0.75,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.75,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-17T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp010-07"
+  },
+  {
+    "documentId": "AST-EMP010-08",
+    "employeeId": "EMP010",
+    "classification": "Safety",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.7,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-05-17T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp010-08"
   },
   {
     "documentId": "AST-EMP011-01",
@@ -715,6 +1105,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp011-05"
   },
   {
+    "documentId": "AST-EMP011-06",
+    "employeeId": "EMP011",
+    "classification": "IT",
+    "documentConfidence": 0.83,
+    "sectionConfidence": {
+      "metadata": 0.78,
+      "content": 0.83,
+      "entities": 0.71
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp011-06"
+  },
+  {
+    "documentId": "AST-EMP011-07",
+    "employeeId": "EMP011",
+    "classification": "Safety",
+    "documentConfidence": 0.77,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.77,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-18T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp011-07"
+  },
+  {
+    "documentId": "AST-EMP011-08",
+    "employeeId": "EMP011",
+    "classification": "Finance",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.72,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-05-18T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp011-08"
+  },
+  {
     "documentId": "AST-EMP012-01",
     "employeeId": "EMP012",
     "classification": "Engineering",
@@ -778,6 +1207,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp012-05"
+  },
+  {
+    "documentId": "AST-EMP012-06",
+    "employeeId": "EMP012",
+    "classification": "Finance",
+    "documentConfidence": 0.84,
+    "sectionConfidence": {
+      "metadata": 0.79,
+      "content": 0.84,
+      "entities": 0.72
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp012-06"
+  },
+  {
+    "documentId": "AST-EMP012-07",
+    "employeeId": "EMP012",
+    "classification": "Finance",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.72,
+      "content": 0.8,
+      "entities": 0.58
+    },
+    "parsedAt": "2026-05-19T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp012-07"
+  },
+  {
+    "documentId": "AST-EMP012-08",
+    "employeeId": "EMP012",
+    "classification": "R&D",
+    "documentConfidence": 0.74,
+    "sectionConfidence": {
+      "metadata": 0.6,
+      "content": 0.74,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-19T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp012-08"
   },
   {
     "documentId": "AST-EMP013-01",
@@ -845,6 +1313,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp013-05"
   },
   {
+    "documentId": "AST-EMP013-06",
+    "employeeId": "EMP013",
+    "classification": "Procurement",
+    "documentConfidence": 0.85,
+    "sectionConfidence": {
+      "metadata": 0.8,
+      "content": 0.85,
+      "entities": 0.73
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp013-06"
+  },
+  {
+    "documentId": "AST-EMP013-07",
+    "employeeId": "EMP013",
+    "classification": "R&D",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.74,
+      "content": 0.82,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-05-20T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp013-07"
+  },
+  {
+    "documentId": "AST-EMP013-08",
+    "employeeId": "EMP013",
+    "classification": "HR",
+    "documentConfidence": 0.76,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.76,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-20T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp013-08"
+  },
+  {
     "documentId": "AST-EMP014-01",
     "employeeId": "EMP014",
     "classification": "Finance",
@@ -908,6 +1415,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp014-05"
+  },
+  {
+    "documentId": "AST-EMP014-06",
+    "employeeId": "EMP014",
+    "classification": "Operations",
+    "documentConfidence": 0.86,
+    "sectionConfidence": {
+      "metadata": 0.81,
+      "content": 0.86,
+      "entities": 0.74
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp014-06"
+  },
+  {
+    "documentId": "AST-EMP014-07",
+    "employeeId": "EMP014",
+    "classification": "HR",
+    "documentConfidence": 0.85,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.85,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-21T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp014-07"
+  },
+  {
+    "documentId": "AST-EMP014-08",
+    "employeeId": "EMP014",
+    "classification": "Engineering",
+    "documentConfidence": 0.78,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.78,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-21T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp014-08"
   },
   {
     "documentId": "AST-EMP015-01",
@@ -975,6 +1521,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp015-05"
   },
   {
+    "documentId": "AST-EMP015-06",
+    "employeeId": "EMP015",
+    "classification": "R&D",
+    "documentConfidence": 0.87,
+    "sectionConfidence": {
+      "metadata": 0.82,
+      "content": 0.87,
+      "entities": 0.75
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp015-06"
+  },
+  {
+    "documentId": "AST-EMP015-07",
+    "employeeId": "EMP015",
+    "classification": "Engineering",
+    "documentConfidence": 0.88,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.88,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-22T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp015-07"
+  },
+  {
+    "documentId": "AST-EMP015-08",
+    "employeeId": "EMP015",
+    "classification": "Procurement",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.8,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-05-22T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp015-08"
+  },
+  {
     "documentId": "AST-EMP016-01",
     "employeeId": "EMP016",
     "classification": "R&D",
@@ -1038,6 +1623,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp016-05"
+  },
+  {
+    "documentId": "AST-EMP016-06",
+    "employeeId": "EMP016",
+    "classification": "Engineering",
+    "documentConfidence": 0.88,
+    "sectionConfidence": {
+      "metadata": 0.83,
+      "content": 0.88,
+      "entities": 0.76
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp016-06"
+  },
+  {
+    "documentId": "AST-EMP016-07",
+    "employeeId": "EMP016",
+    "classification": "Procurement",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.7,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-23T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp016-07"
+  },
+  {
+    "documentId": "AST-EMP016-08",
+    "employeeId": "EMP016",
+    "classification": "Operations",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.82,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-05-23T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp016-08"
   },
   {
     "documentId": "AST-EMP017-01",
@@ -1105,6 +1729,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp017-05"
   },
   {
+    "documentId": "AST-EMP017-06",
+    "employeeId": "EMP017",
+    "classification": "Manufacturing",
+    "documentConfidence": 0.89,
+    "sectionConfidence": {
+      "metadata": 0.84,
+      "content": 0.89,
+      "entities": 0.77
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp017-06"
+  },
+  {
+    "documentId": "AST-EMP017-07",
+    "employeeId": "EMP017",
+    "classification": "Operations",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.72,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-24T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp017-07"
+  },
+  {
+    "documentId": "AST-EMP017-08",
+    "employeeId": "EMP017",
+    "classification": "Safety",
+    "documentConfidence": 0.84,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.84,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-24T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp017-08"
+  },
+  {
     "documentId": "AST-EMP018-01",
     "employeeId": "EMP018",
     "classification": "Finance",
@@ -1168,6 +1831,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp018-05"
+  },
+  {
+    "documentId": "AST-EMP018-06",
+    "employeeId": "EMP018",
+    "classification": "HR",
+    "documentConfidence": 0.9,
+    "sectionConfidence": {
+      "metadata": 0.85,
+      "content": 0.9,
+      "entities": 0.78
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp018-06"
+  },
+  {
+    "documentId": "AST-EMP018-07",
+    "employeeId": "EMP018",
+    "classification": "Safety",
+    "documentConfidence": 0.75,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.75,
+      "entities": 0.58
+    },
+    "parsedAt": "2026-05-25T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp018-07"
+  },
+  {
+    "documentId": "AST-EMP018-08",
+    "employeeId": "EMP018",
+    "classification": "Finance",
+    "documentConfidence": 0.68,
+    "sectionConfidence": {
+      "metadata": 0.6,
+      "content": 0.68,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-25T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp018-08"
   },
   {
     "documentId": "AST-EMP019-01",
@@ -1235,6 +1937,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp019-05"
   },
   {
+    "documentId": "AST-EMP019-06",
+    "employeeId": "EMP019",
+    "classification": "IT",
+    "documentConfidence": 0.91,
+    "sectionConfidence": {
+      "metadata": 0.86,
+      "content": 0.91,
+      "entities": 0.79
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp019-06"
+  },
+  {
+    "documentId": "AST-EMP019-07",
+    "employeeId": "EMP019",
+    "classification": "Finance",
+    "documentConfidence": 0.77,
+    "sectionConfidence": {
+      "metadata": 0.72,
+      "content": 0.77,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-05-26T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp019-07"
+  },
+  {
+    "documentId": "AST-EMP019-08",
+    "employeeId": "EMP019",
+    "classification": "R&D",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.7,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-26T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp019-08"
+  },
+  {
     "documentId": "AST-EMP020-01",
     "employeeId": "EMP020",
     "classification": "Finance",
@@ -1298,6 +2039,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp020-05"
+  },
+  {
+    "documentId": "AST-EMP020-06",
+    "employeeId": "EMP020",
+    "classification": "Finance",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.67,
+      "content": 0.72,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp020-06"
+  },
+  {
+    "documentId": "AST-EMP020-07",
+    "employeeId": "EMP020",
+    "classification": "R&D",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.74,
+      "content": 0.8,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-27T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp020-07"
+  },
+  {
+    "documentId": "AST-EMP020-08",
+    "employeeId": "EMP020",
+    "classification": "HR",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.72,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-05-27T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp020-08"
   },
   {
     "documentId": "AST-EMP021-01",
@@ -1365,6 +2145,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp021-05"
   },
   {
+    "documentId": "AST-EMP021-06",
+    "employeeId": "EMP021",
+    "classification": "Procurement",
+    "documentConfidence": 0.73,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.73,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp021-06"
+  },
+  {
+    "documentId": "AST-EMP021-07",
+    "employeeId": "EMP021",
+    "classification": "HR",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.82,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-28T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp021-07"
+  },
+  {
+    "documentId": "AST-EMP021-08",
+    "employeeId": "EMP021",
+    "classification": "Engineering",
+    "documentConfidence": 0.74,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.74,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-05-28T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp021-08"
+  },
+  {
     "documentId": "AST-EMP022-01",
     "employeeId": "EMP022",
     "classification": "Safety",
@@ -1428,6 +2247,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp022-05"
+  },
+  {
+    "documentId": "AST-EMP022-06",
+    "employeeId": "EMP022",
+    "classification": "Operations",
+    "documentConfidence": 0.74,
+    "sectionConfidence": {
+      "metadata": 0.69,
+      "content": 0.74,
+      "entities": 0.62
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp022-06"
+  },
+  {
+    "documentId": "AST-EMP022-07",
+    "employeeId": "EMP022",
+    "classification": "Engineering",
+    "documentConfidence": 0.85,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.85,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-29T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp022-07"
+  },
+  {
+    "documentId": "AST-EMP022-08",
+    "employeeId": "EMP022",
+    "classification": "Procurement",
+    "documentConfidence": 0.76,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.76,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-29T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp022-08"
   },
   {
     "documentId": "AST-EMP023-01",
@@ -1495,6 +2353,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp023-05"
   },
   {
+    "documentId": "AST-EMP023-06",
+    "employeeId": "EMP023",
+    "classification": "R&D",
+    "documentConfidence": 0.75,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.75,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp023-06"
+  },
+  {
+    "documentId": "AST-EMP023-07",
+    "employeeId": "EMP023",
+    "classification": "Procurement",
+    "documentConfidence": 0.88,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.88,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-30T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp023-07"
+  },
+  {
+    "documentId": "AST-EMP023-08",
+    "employeeId": "EMP023",
+    "classification": "Operations",
+    "documentConfidence": 0.78,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.78,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-30T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp023-08"
+  },
+  {
     "documentId": "AST-EMP024-01",
     "employeeId": "EMP024",
     "classification": "Operations",
@@ -1558,6 +2455,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp024-05"
+  },
+  {
+    "documentId": "AST-EMP024-06",
+    "employeeId": "EMP024",
+    "classification": "Engineering",
+    "documentConfidence": 0.76,
+    "sectionConfidence": {
+      "metadata": 0.71,
+      "content": 0.76,
+      "entities": 0.64
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp024-06"
+  },
+  {
+    "documentId": "AST-EMP024-07",
+    "employeeId": "EMP024",
+    "classification": "Operations",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.7,
+      "entities": 0.58
+    },
+    "parsedAt": "2026-05-31T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp024-07"
+  },
+  {
+    "documentId": "AST-EMP024-08",
+    "employeeId": "EMP024",
+    "classification": "Safety",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.6,
+      "content": 0.8,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-31T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp024-08"
   },
   {
     "documentId": "AST-EMP025-01",
@@ -1625,6 +2561,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp025-05"
   },
   {
+    "documentId": "AST-EMP025-06",
+    "employeeId": "EMP025",
+    "classification": "Manufacturing",
+    "documentConfidence": 0.77,
+    "sectionConfidence": {
+      "metadata": 0.72,
+      "content": 0.77,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp025-06"
+  },
+  {
+    "documentId": "AST-EMP025-07",
+    "employeeId": "EMP025",
+    "classification": "Safety",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.72,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-06-01T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp025-07"
+  },
+  {
+    "documentId": "AST-EMP025-08",
+    "employeeId": "EMP025",
+    "classification": "Finance",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.82,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-06-01T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp025-08"
+  },
+  {
     "documentId": "AST-EMP026-01",
     "employeeId": "EMP026",
     "classification": "R&D",
@@ -1688,6 +2663,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp026-05"
+  },
+  {
+    "documentId": "AST-EMP026-06",
+    "employeeId": "EMP026",
+    "classification": "HR",
+    "documentConfidence": 0.78,
+    "sectionConfidence": {
+      "metadata": 0.73,
+      "content": 0.78,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp026-06"
+  },
+  {
+    "documentId": "AST-EMP026-07",
+    "employeeId": "EMP026",
+    "classification": "Finance",
+    "documentConfidence": 0.75,
+    "sectionConfidence": {
+      "metadata": 0.72,
+      "content": 0.75,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-06-02T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp026-07"
+  },
+  {
+    "documentId": "AST-EMP026-08",
+    "employeeId": "EMP026",
+    "classification": "R&D",
+    "documentConfidence": 0.84,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.84,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-06-02T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp026-08"
   },
   {
     "documentId": "AST-EMP027-01",
@@ -1755,6 +2769,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp027-05"
   },
   {
+    "documentId": "AST-EMP027-06",
+    "employeeId": "EMP027",
+    "classification": "IT",
+    "documentConfidence": 0.79,
+    "sectionConfidence": {
+      "metadata": 0.74,
+      "content": 0.79,
+      "entities": 0.67
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp027-06"
+  },
+  {
+    "documentId": "AST-EMP027-07",
+    "employeeId": "EMP027",
+    "classification": "R&D",
+    "documentConfidence": 0.77,
+    "sectionConfidence": {
+      "metadata": 0.74,
+      "content": 0.77,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp027-07"
+  },
+  {
+    "documentId": "AST-EMP027-08",
+    "employeeId": "EMP027",
+    "classification": "HR",
+    "documentConfidence": 0.68,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.68,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp027-08"
+  },
+  {
     "documentId": "AST-EMP028-01",
     "employeeId": "EMP028",
     "classification": "Operations",
@@ -1818,6 +2871,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp028-05"
+  },
+  {
+    "documentId": "AST-EMP028-06",
+    "employeeId": "EMP028",
+    "classification": "Finance",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.75,
+      "content": 0.8,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp028-06"
+  },
+  {
+    "documentId": "AST-EMP028-07",
+    "employeeId": "EMP028",
+    "classification": "HR",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.8,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-08T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp028-07"
+  },
+  {
+    "documentId": "AST-EMP028-08",
+    "employeeId": "EMP028",
+    "classification": "Engineering",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.7,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-08T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp028-08"
   },
   {
     "documentId": "AST-EMP029-01",
@@ -1885,6 +2977,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp029-05"
   },
   {
+    "documentId": "AST-EMP029-06",
+    "employeeId": "EMP029",
+    "classification": "Procurement",
+    "documentConfidence": 0.81,
+    "sectionConfidence": {
+      "metadata": 0.76,
+      "content": 0.81,
+      "entities": 0.69
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp029-06"
+  },
+  {
+    "documentId": "AST-EMP029-07",
+    "employeeId": "EMP029",
+    "classification": "Engineering",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.82,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-09T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp029-07"
+  },
+  {
+    "documentId": "AST-EMP029-08",
+    "employeeId": "EMP029",
+    "classification": "Procurement",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.72,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-09T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp029-08"
+  },
+  {
     "documentId": "AST-EMP030-01",
     "employeeId": "EMP030",
     "classification": "Engineering",
@@ -1948,6 +3079,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp030-05"
+  },
+  {
+    "documentId": "AST-EMP030-06",
+    "employeeId": "EMP030",
+    "classification": "Operations",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.77,
+      "content": 0.82,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp030-06"
+  },
+  {
+    "documentId": "AST-EMP030-07",
+    "employeeId": "EMP030",
+    "classification": "Procurement",
+    "documentConfidence": 0.85,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.85,
+      "entities": 0.58
+    },
+    "parsedAt": "2026-05-10T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp030-07"
+  },
+  {
+    "documentId": "AST-EMP030-08",
+    "employeeId": "EMP030",
+    "classification": "Operations",
+    "documentConfidence": 0.74,
+    "sectionConfidence": {
+      "metadata": 0.6,
+      "content": 0.74,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-05-10T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp030-08"
   },
   {
     "documentId": "AST-EMP031-01",
@@ -2015,6 +3185,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp031-05"
   },
   {
+    "documentId": "AST-EMP031-06",
+    "employeeId": "EMP031",
+    "classification": "R&D",
+    "documentConfidence": 0.83,
+    "sectionConfidence": {
+      "metadata": 0.78,
+      "content": 0.83,
+      "entities": 0.71
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp031-06"
+  },
+  {
+    "documentId": "AST-EMP031-07",
+    "employeeId": "EMP031",
+    "classification": "Operations",
+    "documentConfidence": 0.88,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.88,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-05-11T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp031-07"
+  },
+  {
+    "documentId": "AST-EMP031-08",
+    "employeeId": "EMP031",
+    "classification": "Safety",
+    "documentConfidence": 0.76,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.76,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-05-11T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp031-08"
+  },
+  {
     "documentId": "AST-EMP032-01",
     "employeeId": "EMP032",
     "classification": "R&D",
@@ -2078,6 +3287,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp032-05"
+  },
+  {
+    "documentId": "AST-EMP032-06",
+    "employeeId": "EMP032",
+    "classification": "Engineering",
+    "documentConfidence": 0.84,
+    "sectionConfidence": {
+      "metadata": 0.79,
+      "content": 0.84,
+      "entities": 0.72
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp032-06"
+  },
+  {
+    "documentId": "AST-EMP032-07",
+    "employeeId": "EMP032",
+    "classification": "Safety",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.7,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-12T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp032-07"
+  },
+  {
+    "documentId": "AST-EMP032-08",
+    "employeeId": "EMP032",
+    "classification": "Finance",
+    "documentConfidence": 0.78,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.78,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-12T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp032-08"
   },
   {
     "documentId": "AST-EMP033-01",
@@ -2145,6 +3393,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp033-05"
   },
   {
+    "documentId": "AST-EMP033-06",
+    "employeeId": "EMP033",
+    "classification": "Manufacturing",
+    "documentConfidence": 0.85,
+    "sectionConfidence": {
+      "metadata": 0.8,
+      "content": 0.85,
+      "entities": 0.73
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp033-06"
+  },
+  {
+    "documentId": "AST-EMP033-07",
+    "employeeId": "EMP033",
+    "classification": "Finance",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.72,
+      "content": 0.72,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-13T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp033-07"
+  },
+  {
+    "documentId": "AST-EMP033-08",
+    "employeeId": "EMP033",
+    "classification": "R&D",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.8,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-13T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp033-08"
+  },
+  {
     "documentId": "AST-EMP034-01",
     "employeeId": "EMP034",
     "classification": "R&D",
@@ -2208,6 +3495,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp034-05"
+  },
+  {
+    "documentId": "AST-EMP034-06",
+    "employeeId": "EMP034",
+    "classification": "HR",
+    "documentConfidence": 0.86,
+    "sectionConfidence": {
+      "metadata": 0.81,
+      "content": 0.86,
+      "entities": 0.74
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp034-06"
+  },
+  {
+    "documentId": "AST-EMP034-07",
+    "employeeId": "EMP034",
+    "classification": "R&D",
+    "documentConfidence": 0.75,
+    "sectionConfidence": {
+      "metadata": 0.74,
+      "content": 0.75,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-14T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp034-07"
+  },
+  {
+    "documentId": "AST-EMP034-08",
+    "employeeId": "EMP034",
+    "classification": "HR",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.82,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-14T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp034-08"
   },
   {
     "documentId": "AST-EMP035-01",
@@ -2275,6 +3601,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp035-05"
   },
   {
+    "documentId": "AST-EMP035-06",
+    "employeeId": "EMP035",
+    "classification": "IT",
+    "documentConfidence": 0.87,
+    "sectionConfidence": {
+      "metadata": 0.82,
+      "content": 0.87,
+      "entities": 0.75
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp035-06"
+  },
+  {
+    "documentId": "AST-EMP035-07",
+    "employeeId": "EMP035",
+    "classification": "HR",
+    "documentConfidence": 0.77,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.77,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-15T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp035-07"
+  },
+  {
+    "documentId": "AST-EMP035-08",
+    "employeeId": "EMP035",
+    "classification": "Engineering",
+    "documentConfidence": 0.84,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.84,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-05-15T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp035-08"
+  },
+  {
     "documentId": "AST-EMP036-01",
     "employeeId": "EMP036",
     "classification": "Engineering",
@@ -2338,6 +3703,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp036-05"
+  },
+  {
+    "documentId": "AST-EMP036-06",
+    "employeeId": "EMP036",
+    "classification": "Finance",
+    "documentConfidence": 0.88,
+    "sectionConfidence": {
+      "metadata": 0.83,
+      "content": 0.88,
+      "entities": 0.76
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp036-06"
+  },
+  {
+    "documentId": "AST-EMP036-07",
+    "employeeId": "EMP036",
+    "classification": "Engineering",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.8,
+      "entities": 0.58
+    },
+    "parsedAt": "2026-05-16T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp036-07"
+  },
+  {
+    "documentId": "AST-EMP036-08",
+    "employeeId": "EMP036",
+    "classification": "Procurement",
+    "documentConfidence": 0.68,
+    "sectionConfidence": {
+      "metadata": 0.6,
+      "content": 0.68,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-05-16T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp036-08"
   },
   {
     "documentId": "AST-EMP037-01",
@@ -2405,6 +3809,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp037-05"
   },
   {
+    "documentId": "AST-EMP037-06",
+    "employeeId": "EMP037",
+    "classification": "Procurement",
+    "documentConfidence": 0.89,
+    "sectionConfidence": {
+      "metadata": 0.84,
+      "content": 0.89,
+      "entities": 0.77
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp037-06"
+  },
+  {
+    "documentId": "AST-EMP037-07",
+    "employeeId": "EMP037",
+    "classification": "Procurement",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.82,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-05-17T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp037-07"
+  },
+  {
+    "documentId": "AST-EMP037-08",
+    "employeeId": "EMP037",
+    "classification": "Operations",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.7,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-17T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp037-08"
+  },
+  {
     "documentId": "AST-EMP038-01",
     "employeeId": "EMP038",
     "classification": "Finance",
@@ -2468,6 +3911,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp038-05"
+  },
+  {
+    "documentId": "AST-EMP038-06",
+    "employeeId": "EMP038",
+    "classification": "Operations",
+    "documentConfidence": 0.9,
+    "sectionConfidence": {
+      "metadata": 0.85,
+      "content": 0.9,
+      "entities": 0.78
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp038-06"
+  },
+  {
+    "documentId": "AST-EMP038-07",
+    "employeeId": "EMP038",
+    "classification": "Operations",
+    "documentConfidence": 0.85,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.85,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-18T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp038-07"
+  },
+  {
+    "documentId": "AST-EMP038-08",
+    "employeeId": "EMP038",
+    "classification": "Safety",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.72,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-18T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp038-08"
   },
   {
     "documentId": "AST-EMP039-01",
@@ -2535,6 +4017,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp039-05"
   },
   {
+    "documentId": "AST-EMP039-06",
+    "employeeId": "EMP039",
+    "classification": "R&D",
+    "documentConfidence": 0.91,
+    "sectionConfidence": {
+      "metadata": 0.86,
+      "content": 0.91,
+      "entities": 0.79
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp039-06"
+  },
+  {
+    "documentId": "AST-EMP039-07",
+    "employeeId": "EMP039",
+    "classification": "Safety",
+    "documentConfidence": 0.88,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.88,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-19T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp039-07"
+  },
+  {
+    "documentId": "AST-EMP039-08",
+    "employeeId": "EMP039",
+    "classification": "Finance",
+    "documentConfidence": 0.74,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.74,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-19T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp039-08"
+  },
+  {
     "documentId": "AST-EMP040-01",
     "employeeId": "EMP040",
     "classification": "Engineering",
@@ -2598,6 +4119,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp040-05"
+  },
+  {
+    "documentId": "AST-EMP040-06",
+    "employeeId": "EMP040",
+    "classification": "Engineering",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.67,
+      "content": 0.72,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp040-06"
+  },
+  {
+    "documentId": "AST-EMP040-07",
+    "employeeId": "EMP040",
+    "classification": "Finance",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.72,
+      "content": 0.7,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-20T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp040-07"
+  },
+  {
+    "documentId": "AST-EMP040-08",
+    "employeeId": "EMP040",
+    "classification": "R&D",
+    "documentConfidence": 0.76,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.76,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-05-20T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp040-08"
   },
   {
     "documentId": "AST-EMP041-01",
@@ -2665,6 +4225,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp041-05"
   },
   {
+    "documentId": "AST-EMP041-06",
+    "employeeId": "EMP041",
+    "classification": "Manufacturing",
+    "documentConfidence": 0.73,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.73,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp041-06"
+  },
+  {
+    "documentId": "AST-EMP041-07",
+    "employeeId": "EMP041",
+    "classification": "R&D",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.74,
+      "content": 0.72,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-21T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp041-07"
+  },
+  {
+    "documentId": "AST-EMP041-08",
+    "employeeId": "EMP041",
+    "classification": "HR",
+    "documentConfidence": 0.78,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.78,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-05-21T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp041-08"
+  },
+  {
     "documentId": "AST-EMP042-01",
     "employeeId": "EMP042",
     "classification": "R&D",
@@ -2728,6 +4327,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp042-05"
+  },
+  {
+    "documentId": "AST-EMP042-06",
+    "employeeId": "EMP042",
+    "classification": "HR",
+    "documentConfidence": 0.74,
+    "sectionConfidence": {
+      "metadata": 0.69,
+      "content": 0.74,
+      "entities": 0.62
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp042-06"
+  },
+  {
+    "documentId": "AST-EMP042-07",
+    "employeeId": "EMP042",
+    "classification": "HR",
+    "documentConfidence": 0.75,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.75,
+      "entities": 0.58
+    },
+    "parsedAt": "2026-05-22T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp042-07"
+  },
+  {
+    "documentId": "AST-EMP042-08",
+    "employeeId": "EMP042",
+    "classification": "Engineering",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.6,
+      "content": 0.8,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-22T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp042-08"
   },
   {
     "documentId": "AST-EMP043-01",
@@ -2795,6 +4433,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp043-05"
   },
   {
+    "documentId": "AST-EMP043-06",
+    "employeeId": "EMP043",
+    "classification": "IT",
+    "documentConfidence": 0.75,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.75,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp043-06"
+  },
+  {
+    "documentId": "AST-EMP043-07",
+    "employeeId": "EMP043",
+    "classification": "Engineering",
+    "documentConfidence": 0.77,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.77,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-05-23T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp043-07"
+  },
+  {
+    "documentId": "AST-EMP043-08",
+    "employeeId": "EMP043",
+    "classification": "Procurement",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.82,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-23T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp043-08"
+  },
+  {
     "documentId": "AST-EMP044-01",
     "employeeId": "EMP044",
     "classification": "R&D",
@@ -2858,6 +4535,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp044-05"
+  },
+  {
+    "documentId": "AST-EMP044-06",
+    "employeeId": "EMP044",
+    "classification": "Finance",
+    "documentConfidence": 0.76,
+    "sectionConfidence": {
+      "metadata": 0.71,
+      "content": 0.76,
+      "entities": 0.64
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp044-06"
+  },
+  {
+    "documentId": "AST-EMP044-07",
+    "employeeId": "EMP044",
+    "classification": "Procurement",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.8,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-24T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp044-07"
+  },
+  {
+    "documentId": "AST-EMP044-08",
+    "employeeId": "EMP044",
+    "classification": "Operations",
+    "documentConfidence": 0.84,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.84,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-24T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp044-08"
   },
   {
     "documentId": "AST-EMP045-01",
@@ -2925,6 +4641,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp045-05"
   },
   {
+    "documentId": "AST-EMP045-06",
+    "employeeId": "EMP045",
+    "classification": "Procurement",
+    "documentConfidence": 0.77,
+    "sectionConfidence": {
+      "metadata": 0.72,
+      "content": 0.77,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp045-06"
+  },
+  {
+    "documentId": "AST-EMP045-07",
+    "employeeId": "EMP045",
+    "classification": "Operations",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.82,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-25T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp045-07"
+  },
+  {
+    "documentId": "AST-EMP045-08",
+    "employeeId": "EMP045",
+    "classification": "Safety",
+    "documentConfidence": 0.68,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.68,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-05-25T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp045-08"
+  },
+  {
     "documentId": "AST-EMP046-01",
     "employeeId": "EMP046",
     "classification": "Operations",
@@ -2988,6 +4743,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp046-05"
+  },
+  {
+    "documentId": "AST-EMP046-06",
+    "employeeId": "EMP046",
+    "classification": "Operations",
+    "documentConfidence": 0.78,
+    "sectionConfidence": {
+      "metadata": 0.73,
+      "content": 0.78,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp046-06"
+  },
+  {
+    "documentId": "AST-EMP046-07",
+    "employeeId": "EMP046",
+    "classification": "Safety",
+    "documentConfidence": 0.85,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.85,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-26T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp046-07"
+  },
+  {
+    "documentId": "AST-EMP046-08",
+    "employeeId": "EMP046",
+    "classification": "Finance",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.7,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-05-26T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp046-08"
   },
   {
     "documentId": "AST-EMP047-01",
@@ -3055,6 +4849,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp047-05"
   },
   {
+    "documentId": "AST-EMP047-06",
+    "employeeId": "EMP047",
+    "classification": "R&D",
+    "documentConfidence": 0.79,
+    "sectionConfidence": {
+      "metadata": 0.74,
+      "content": 0.79,
+      "entities": 0.67
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp047-06"
+  },
+  {
+    "documentId": "AST-EMP047-07",
+    "employeeId": "EMP047",
+    "classification": "Finance",
+    "documentConfidence": 0.88,
+    "sectionConfidence": {
+      "metadata": 0.72,
+      "content": 0.88,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-27T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp047-07"
+  },
+  {
+    "documentId": "AST-EMP047-08",
+    "employeeId": "EMP047",
+    "classification": "R&D",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.72,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-27T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp047-08"
+  },
+  {
     "documentId": "AST-EMP048-01",
     "employeeId": "EMP048",
     "classification": "Safety",
@@ -3118,6 +4951,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp048-05"
+  },
+  {
+    "documentId": "AST-EMP048-06",
+    "employeeId": "EMP048",
+    "classification": "Engineering",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.75,
+      "content": 0.8,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp048-06"
+  },
+  {
+    "documentId": "AST-EMP048-07",
+    "employeeId": "EMP048",
+    "classification": "R&D",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.74,
+      "content": 0.7,
+      "entities": 0.58
+    },
+    "parsedAt": "2026-05-28T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp048-07"
+  },
+  {
+    "documentId": "AST-EMP048-08",
+    "employeeId": "EMP048",
+    "classification": "HR",
+    "documentConfidence": 0.74,
+    "sectionConfidence": {
+      "metadata": 0.6,
+      "content": 0.74,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-28T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp048-08"
   },
   {
     "documentId": "AST-EMP049-01",
@@ -3185,6 +5057,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp049-05"
   },
   {
+    "documentId": "AST-EMP049-06",
+    "employeeId": "EMP049",
+    "classification": "Manufacturing",
+    "documentConfidence": 0.81,
+    "sectionConfidence": {
+      "metadata": 0.76,
+      "content": 0.81,
+      "entities": 0.69
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp049-06"
+  },
+  {
+    "documentId": "AST-EMP049-07",
+    "employeeId": "EMP049",
+    "classification": "HR",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.72,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-05-29T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp049-07"
+  },
+  {
+    "documentId": "AST-EMP049-08",
+    "employeeId": "EMP049",
+    "classification": "Engineering",
+    "documentConfidence": 0.76,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.76,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-29T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp049-08"
+  },
+  {
     "documentId": "AST-EMP050-01",
     "employeeId": "EMP050",
     "classification": "Finance",
@@ -3248,6 +5159,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp050-05"
+  },
+  {
+    "documentId": "AST-EMP050-06",
+    "employeeId": "EMP050",
+    "classification": "HR",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.77,
+      "content": 0.82,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp050-06"
+  },
+  {
+    "documentId": "AST-EMP050-07",
+    "employeeId": "EMP050",
+    "classification": "Engineering",
+    "documentConfidence": 0.75,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.75,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-30T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp050-07"
+  },
+  {
+    "documentId": "AST-EMP050-08",
+    "employeeId": "EMP050",
+    "classification": "Procurement",
+    "documentConfidence": 0.78,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.78,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-05-30T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp050-08"
   },
   {
     "documentId": "AST-EMP051-01",
@@ -3315,6 +5265,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp051-05"
   },
   {
+    "documentId": "AST-EMP051-06",
+    "employeeId": "EMP051",
+    "classification": "IT",
+    "documentConfidence": 0.83,
+    "sectionConfidence": {
+      "metadata": 0.78,
+      "content": 0.83,
+      "entities": 0.71
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp051-06"
+  },
+  {
+    "documentId": "AST-EMP051-07",
+    "employeeId": "EMP051",
+    "classification": "Procurement",
+    "documentConfidence": 0.77,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.77,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-31T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp051-07"
+  },
+  {
+    "documentId": "AST-EMP051-08",
+    "employeeId": "EMP051",
+    "classification": "Operations",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.8,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-05-31T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp051-08"
+  },
+  {
     "documentId": "AST-EMP052-01",
     "employeeId": "EMP052",
     "classification": "Safety",
@@ -3378,6 +5367,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp052-05"
+  },
+  {
+    "documentId": "AST-EMP052-06",
+    "employeeId": "EMP052",
+    "classification": "Finance",
+    "documentConfidence": 0.84,
+    "sectionConfidence": {
+      "metadata": 0.79,
+      "content": 0.84,
+      "entities": 0.72
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp052-06"
+  },
+  {
+    "documentId": "AST-EMP052-07",
+    "employeeId": "EMP052",
+    "classification": "Operations",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.8,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-06-01T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp052-07"
+  },
+  {
+    "documentId": "AST-EMP052-08",
+    "employeeId": "EMP052",
+    "classification": "Safety",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.82,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-06-01T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp052-08"
   },
   {
     "documentId": "AST-EMP053-01",
@@ -3445,6 +5473,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp053-05"
   },
   {
+    "documentId": "AST-EMP053-06",
+    "employeeId": "EMP053",
+    "classification": "Procurement",
+    "documentConfidence": 0.85,
+    "sectionConfidence": {
+      "metadata": 0.8,
+      "content": 0.85,
+      "entities": 0.73
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp053-06"
+  },
+  {
+    "documentId": "AST-EMP053-07",
+    "employeeId": "EMP053",
+    "classification": "Safety",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.82,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-06-02T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp053-07"
+  },
+  {
+    "documentId": "AST-EMP053-08",
+    "employeeId": "EMP053",
+    "classification": "Finance",
+    "documentConfidence": 0.84,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.84,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-06-02T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp053-08"
+  },
+  {
     "documentId": "AST-EMP054-01",
     "employeeId": "EMP054",
     "classification": "Operations",
@@ -3508,6 +5575,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp054-05"
+  },
+  {
+    "documentId": "AST-EMP054-06",
+    "employeeId": "EMP054",
+    "classification": "Operations",
+    "documentConfidence": 0.86,
+    "sectionConfidence": {
+      "metadata": 0.81,
+      "content": 0.86,
+      "entities": 0.74
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp054-06"
+  },
+  {
+    "documentId": "AST-EMP054-07",
+    "employeeId": "EMP054",
+    "classification": "Finance",
+    "documentConfidence": 0.85,
+    "sectionConfidence": {
+      "metadata": 0.72,
+      "content": 0.85,
+      "entities": 0.58
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp054-07"
+  },
+  {
+    "documentId": "AST-EMP054-08",
+    "employeeId": "EMP054",
+    "classification": "R&D",
+    "documentConfidence": 0.68,
+    "sectionConfidence": {
+      "metadata": 0.6,
+      "content": 0.68,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp054-08"
   },
   {
     "documentId": "AST-EMP055-01",
@@ -3575,6 +5681,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp055-05"
   },
   {
+    "documentId": "AST-EMP055-06",
+    "employeeId": "EMP055",
+    "classification": "R&D",
+    "documentConfidence": 0.87,
+    "sectionConfidence": {
+      "metadata": 0.82,
+      "content": 0.87,
+      "entities": 0.75
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp055-06"
+  },
+  {
+    "documentId": "AST-EMP055-07",
+    "employeeId": "EMP055",
+    "classification": "R&D",
+    "documentConfidence": 0.88,
+    "sectionConfidence": {
+      "metadata": 0.74,
+      "content": 0.88,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-05-08T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp055-07"
+  },
+  {
+    "documentId": "AST-EMP055-08",
+    "employeeId": "EMP055",
+    "classification": "HR",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.7,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-05-08T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp055-08"
+  },
+  {
     "documentId": "AST-EMP056-01",
     "employeeId": "EMP056",
     "classification": "Safety",
@@ -3638,6 +5783,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp056-05"
+  },
+  {
+    "documentId": "AST-EMP056-06",
+    "employeeId": "EMP056",
+    "classification": "Engineering",
+    "documentConfidence": 0.88,
+    "sectionConfidence": {
+      "metadata": 0.83,
+      "content": 0.88,
+      "entities": 0.76
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp056-06"
+  },
+  {
+    "documentId": "AST-EMP056-07",
+    "employeeId": "EMP056",
+    "classification": "HR",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.7,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-09T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp056-07"
+  },
+  {
+    "documentId": "AST-EMP056-08",
+    "employeeId": "EMP056",
+    "classification": "Engineering",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.72,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-05-09T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp056-08"
   },
   {
     "documentId": "AST-EMP057-01",
@@ -3705,6 +5889,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp057-05"
   },
   {
+    "documentId": "AST-EMP057-06",
+    "employeeId": "EMP057",
+    "classification": "Manufacturing",
+    "documentConfidence": 0.89,
+    "sectionConfidence": {
+      "metadata": 0.84,
+      "content": 0.89,
+      "entities": 0.77
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp057-06"
+  },
+  {
+    "documentId": "AST-EMP057-07",
+    "employeeId": "EMP057",
+    "classification": "Engineering",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.72,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-10T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp057-07"
+  },
+  {
+    "documentId": "AST-EMP057-08",
+    "employeeId": "EMP057",
+    "classification": "Procurement",
+    "documentConfidence": 0.74,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.74,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-10T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp057-08"
+  },
+  {
     "documentId": "AST-EMP058-01",
     "employeeId": "EMP058",
     "classification": "Safety",
@@ -3768,6 +5991,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp058-05"
+  },
+  {
+    "documentId": "AST-EMP058-06",
+    "employeeId": "EMP058",
+    "classification": "HR",
+    "documentConfidence": 0.9,
+    "sectionConfidence": {
+      "metadata": 0.85,
+      "content": 0.9,
+      "entities": 0.78
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp058-06"
+  },
+  {
+    "documentId": "AST-EMP058-07",
+    "employeeId": "EMP058",
+    "classification": "Procurement",
+    "documentConfidence": 0.75,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.75,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-11T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp058-07"
+  },
+  {
+    "documentId": "AST-EMP058-08",
+    "employeeId": "EMP058",
+    "classification": "Operations",
+    "documentConfidence": 0.76,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.76,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-11T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp058-08"
   },
   {
     "documentId": "AST-EMP059-01",
@@ -3835,6 +6097,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp059-05"
   },
   {
+    "documentId": "AST-EMP059-06",
+    "employeeId": "EMP059",
+    "classification": "IT",
+    "documentConfidence": 0.91,
+    "sectionConfidence": {
+      "metadata": 0.86,
+      "content": 0.91,
+      "entities": 0.79
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp059-06"
+  },
+  {
+    "documentId": "AST-EMP059-07",
+    "employeeId": "EMP059",
+    "classification": "Operations",
+    "documentConfidence": 0.77,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.77,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-12T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp059-07"
+  },
+  {
+    "documentId": "AST-EMP059-08",
+    "employeeId": "EMP059",
+    "classification": "Safety",
+    "documentConfidence": 0.78,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.78,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-12T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp059-08"
+  },
+  {
     "documentId": "AST-EMP060-01",
     "employeeId": "EMP060",
     "classification": "Safety",
@@ -3898,6 +6199,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp060-05"
+  },
+  {
+    "documentId": "AST-EMP060-06",
+    "employeeId": "EMP060",
+    "classification": "Finance",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.67,
+      "content": 0.72,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp060-06"
+  },
+  {
+    "documentId": "AST-EMP060-07",
+    "employeeId": "EMP060",
+    "classification": "Safety",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.8,
+      "entities": 0.58
+    },
+    "parsedAt": "2026-05-13T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp060-07"
+  },
+  {
+    "documentId": "AST-EMP060-08",
+    "employeeId": "EMP060",
+    "classification": "Finance",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.6,
+      "content": 0.8,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-05-13T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp060-08"
   },
   {
     "documentId": "AST-EMP061-01",
@@ -3965,6 +6305,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp061-05"
   },
   {
+    "documentId": "AST-EMP061-06",
+    "employeeId": "EMP061",
+    "classification": "Procurement",
+    "documentConfidence": 0.73,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.73,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp061-06"
+  },
+  {
+    "documentId": "AST-EMP061-07",
+    "employeeId": "EMP061",
+    "classification": "Finance",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.72,
+      "content": 0.82,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-05-14T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp061-07"
+  },
+  {
+    "documentId": "AST-EMP061-08",
+    "employeeId": "EMP061",
+    "classification": "R&D",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.82,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-05-14T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp061-08"
+  },
+  {
     "documentId": "AST-EMP062-01",
     "employeeId": "EMP062",
     "classification": "R&D",
@@ -4028,6 +6407,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp062-05"
+  },
+  {
+    "documentId": "AST-EMP062-06",
+    "employeeId": "EMP062",
+    "classification": "Operations",
+    "documentConfidence": 0.74,
+    "sectionConfidence": {
+      "metadata": 0.69,
+      "content": 0.74,
+      "entities": 0.62
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp062-06"
+  },
+  {
+    "documentId": "AST-EMP062-07",
+    "employeeId": "EMP062",
+    "classification": "R&D",
+    "documentConfidence": 0.85,
+    "sectionConfidence": {
+      "metadata": 0.74,
+      "content": 0.85,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-15T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp062-07"
+  },
+  {
+    "documentId": "AST-EMP062-08",
+    "employeeId": "EMP062",
+    "classification": "HR",
+    "documentConfidence": 0.84,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.84,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-15T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp062-08"
   },
   {
     "documentId": "AST-EMP063-01",
@@ -4095,6 +6513,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp063-05"
   },
   {
+    "documentId": "AST-EMP063-06",
+    "employeeId": "EMP063",
+    "classification": "R&D",
+    "documentConfidence": 0.75,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.75,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp063-06"
+  },
+  {
+    "documentId": "AST-EMP063-07",
+    "employeeId": "EMP063",
+    "classification": "HR",
+    "documentConfidence": 0.88,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.88,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-16T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp063-07"
+  },
+  {
+    "documentId": "AST-EMP063-08",
+    "employeeId": "EMP063",
+    "classification": "Engineering",
+    "documentConfidence": 0.68,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.68,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-16T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp063-08"
+  },
+  {
     "documentId": "AST-EMP064-01",
     "employeeId": "EMP064",
     "classification": "Engineering",
@@ -4158,6 +6615,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp064-05"
+  },
+  {
+    "documentId": "AST-EMP064-06",
+    "employeeId": "EMP064",
+    "classification": "Engineering",
+    "documentConfidence": 0.76,
+    "sectionConfidence": {
+      "metadata": 0.71,
+      "content": 0.76,
+      "entities": 0.64
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp064-06"
+  },
+  {
+    "documentId": "AST-EMP064-07",
+    "employeeId": "EMP064",
+    "classification": "Engineering",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.7,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-17T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp064-07"
+  },
+  {
+    "documentId": "AST-EMP064-08",
+    "employeeId": "EMP064",
+    "classification": "Procurement",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.7,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-17T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp064-08"
   },
   {
     "documentId": "AST-EMP065-01",
@@ -4225,6 +6721,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp065-05"
   },
   {
+    "documentId": "AST-EMP065-06",
+    "employeeId": "EMP065",
+    "classification": "Manufacturing",
+    "documentConfidence": 0.77,
+    "sectionConfidence": {
+      "metadata": 0.72,
+      "content": 0.77,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp065-06"
+  },
+  {
+    "documentId": "AST-EMP065-07",
+    "employeeId": "EMP065",
+    "classification": "Procurement",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.72,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-18T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp065-07"
+  },
+  {
+    "documentId": "AST-EMP065-08",
+    "employeeId": "EMP065",
+    "classification": "Operations",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.72,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-05-18T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp065-08"
+  },
+  {
     "documentId": "AST-EMP066-01",
     "employeeId": "EMP066",
     "classification": "Operations",
@@ -4288,6 +6823,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp066-05"
+  },
+  {
+    "documentId": "AST-EMP066-06",
+    "employeeId": "EMP066",
+    "classification": "HR",
+    "documentConfidence": 0.78,
+    "sectionConfidence": {
+      "metadata": 0.73,
+      "content": 0.78,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp066-06"
+  },
+  {
+    "documentId": "AST-EMP066-07",
+    "employeeId": "EMP066",
+    "classification": "Operations",
+    "documentConfidence": 0.75,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.75,
+      "entities": 0.58
+    },
+    "parsedAt": "2026-05-19T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp066-07"
+  },
+  {
+    "documentId": "AST-EMP066-08",
+    "employeeId": "EMP066",
+    "classification": "Safety",
+    "documentConfidence": 0.74,
+    "sectionConfidence": {
+      "metadata": 0.6,
+      "content": 0.74,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-05-19T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp066-08"
   },
   {
     "documentId": "AST-EMP067-01",
@@ -4355,6 +6929,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp067-05"
   },
   {
+    "documentId": "AST-EMP067-06",
+    "employeeId": "EMP067",
+    "classification": "IT",
+    "documentConfidence": 0.79,
+    "sectionConfidence": {
+      "metadata": 0.74,
+      "content": 0.79,
+      "entities": 0.67
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp067-06"
+  },
+  {
+    "documentId": "AST-EMP067-07",
+    "employeeId": "EMP067",
+    "classification": "Safety",
+    "documentConfidence": 0.77,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.77,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-05-20T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp067-07"
+  },
+  {
+    "documentId": "AST-EMP067-08",
+    "employeeId": "EMP067",
+    "classification": "Finance",
+    "documentConfidence": 0.76,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.76,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-20T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp067-08"
+  },
+  {
     "documentId": "AST-EMP068-01",
     "employeeId": "EMP068",
     "classification": "Safety",
@@ -4418,6 +7031,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp068-05"
+  },
+  {
+    "documentId": "AST-EMP068-06",
+    "employeeId": "EMP068",
+    "classification": "Finance",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.75,
+      "content": 0.8,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp068-06"
+  },
+  {
+    "documentId": "AST-EMP068-07",
+    "employeeId": "EMP068",
+    "classification": "Finance",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.72,
+      "content": 0.8,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-21T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp068-07"
+  },
+  {
+    "documentId": "AST-EMP068-08",
+    "employeeId": "EMP068",
+    "classification": "R&D",
+    "documentConfidence": 0.78,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.78,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-21T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp068-08"
   },
   {
     "documentId": "AST-EMP069-01",
@@ -4485,6 +7137,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp069-05"
   },
   {
+    "documentId": "AST-EMP069-06",
+    "employeeId": "EMP069",
+    "classification": "Procurement",
+    "documentConfidence": 0.81,
+    "sectionConfidence": {
+      "metadata": 0.76,
+      "content": 0.81,
+      "entities": 0.69
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp069-06"
+  },
+  {
+    "documentId": "AST-EMP069-07",
+    "employeeId": "EMP069",
+    "classification": "R&D",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.74,
+      "content": 0.82,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-22T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp069-07"
+  },
+  {
+    "documentId": "AST-EMP069-08",
+    "employeeId": "EMP069",
+    "classification": "HR",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.8,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-22T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp069-08"
+  },
+  {
     "documentId": "AST-EMP070-01",
     "employeeId": "EMP070",
     "classification": "Finance",
@@ -4548,6 +7239,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp070-05"
+  },
+  {
+    "documentId": "AST-EMP070-06",
+    "employeeId": "EMP070",
+    "classification": "Operations",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.77,
+      "content": 0.82,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp070-06"
+  },
+  {
+    "documentId": "AST-EMP070-07",
+    "employeeId": "EMP070",
+    "classification": "HR",
+    "documentConfidence": 0.85,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.85,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-23T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp070-07"
+  },
+  {
+    "documentId": "AST-EMP070-08",
+    "employeeId": "EMP070",
+    "classification": "Engineering",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.82,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-05-23T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp070-08"
   },
   {
     "documentId": "AST-EMP071-01",
@@ -4615,6 +7345,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp071-05"
   },
   {
+    "documentId": "AST-EMP071-06",
+    "employeeId": "EMP071",
+    "classification": "R&D",
+    "documentConfidence": 0.83,
+    "sectionConfidence": {
+      "metadata": 0.78,
+      "content": 0.83,
+      "entities": 0.71
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp071-06"
+  },
+  {
+    "documentId": "AST-EMP071-07",
+    "employeeId": "EMP071",
+    "classification": "Engineering",
+    "documentConfidence": 0.88,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.88,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-24T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp071-07"
+  },
+  {
+    "documentId": "AST-EMP071-08",
+    "employeeId": "EMP071",
+    "classification": "Procurement",
+    "documentConfidence": 0.84,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.84,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-05-24T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp071-08"
+  },
+  {
     "documentId": "AST-EMP072-01",
     "employeeId": "EMP072",
     "classification": "R&D",
@@ -4678,6 +7447,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp072-05"
+  },
+  {
+    "documentId": "AST-EMP072-06",
+    "employeeId": "EMP072",
+    "classification": "Engineering",
+    "documentConfidence": 0.84,
+    "sectionConfidence": {
+      "metadata": 0.79,
+      "content": 0.84,
+      "entities": 0.72
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp072-06"
+  },
+  {
+    "documentId": "AST-EMP072-07",
+    "employeeId": "EMP072",
+    "classification": "Procurement",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.7,
+      "entities": 0.58
+    },
+    "parsedAt": "2026-05-25T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp072-07"
+  },
+  {
+    "documentId": "AST-EMP072-08",
+    "employeeId": "EMP072",
+    "classification": "Operations",
+    "documentConfidence": 0.68,
+    "sectionConfidence": {
+      "metadata": 0.6,
+      "content": 0.68,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-25T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp072-08"
   },
   {
     "documentId": "AST-EMP073-01",
@@ -4745,6 +7553,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp073-05"
   },
   {
+    "documentId": "AST-EMP073-06",
+    "employeeId": "EMP073",
+    "classification": "Manufacturing",
+    "documentConfidence": 0.85,
+    "sectionConfidence": {
+      "metadata": 0.8,
+      "content": 0.85,
+      "entities": 0.73
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp073-06"
+  },
+  {
+    "documentId": "AST-EMP073-07",
+    "employeeId": "EMP073",
+    "classification": "Operations",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.72,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-05-26T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp073-07"
+  },
+  {
+    "documentId": "AST-EMP073-08",
+    "employeeId": "EMP073",
+    "classification": "Safety",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.7,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-26T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp073-08"
+  },
+  {
     "documentId": "AST-EMP074-01",
     "employeeId": "EMP074",
     "classification": "R&D",
@@ -4808,6 +7655,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp074-05"
+  },
+  {
+    "documentId": "AST-EMP074-06",
+    "employeeId": "EMP074",
+    "classification": "HR",
+    "documentConfidence": 0.86,
+    "sectionConfidence": {
+      "metadata": 0.81,
+      "content": 0.86,
+      "entities": 0.74
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp074-06"
+  },
+  {
+    "documentId": "AST-EMP074-07",
+    "employeeId": "EMP074",
+    "classification": "Safety",
+    "documentConfidence": 0.75,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.75,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-27T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp074-07"
+  },
+  {
+    "documentId": "AST-EMP074-08",
+    "employeeId": "EMP074",
+    "classification": "Finance",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.72,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-27T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp074-08"
   },
   {
     "documentId": "AST-EMP075-01",
@@ -4875,6 +7761,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp075-05"
   },
   {
+    "documentId": "AST-EMP075-06",
+    "employeeId": "EMP075",
+    "classification": "IT",
+    "documentConfidence": 0.87,
+    "sectionConfidence": {
+      "metadata": 0.82,
+      "content": 0.87,
+      "entities": 0.75
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp075-06"
+  },
+  {
+    "documentId": "AST-EMP075-07",
+    "employeeId": "EMP075",
+    "classification": "Finance",
+    "documentConfidence": 0.77,
+    "sectionConfidence": {
+      "metadata": 0.72,
+      "content": 0.77,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-28T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp075-07"
+  },
+  {
+    "documentId": "AST-EMP075-08",
+    "employeeId": "EMP075",
+    "classification": "R&D",
+    "documentConfidence": 0.74,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.74,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-05-28T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp075-08"
+  },
+  {
     "documentId": "AST-EMP076-01",
     "employeeId": "EMP076",
     "classification": "Engineering",
@@ -4938,6 +7863,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp076-05"
+  },
+  {
+    "documentId": "AST-EMP076-06",
+    "employeeId": "EMP076",
+    "classification": "Finance",
+    "documentConfidence": 0.88,
+    "sectionConfidence": {
+      "metadata": 0.83,
+      "content": 0.88,
+      "entities": 0.76
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp076-06"
+  },
+  {
+    "documentId": "AST-EMP076-07",
+    "employeeId": "EMP076",
+    "classification": "R&D",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.74,
+      "content": 0.8,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-29T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp076-07"
+  },
+  {
+    "documentId": "AST-EMP076-08",
+    "employeeId": "EMP076",
+    "classification": "HR",
+    "documentConfidence": 0.76,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.76,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-05-29T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp076-08"
   },
   {
     "documentId": "AST-EMP077-01",
@@ -5005,6 +7969,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp077-05"
   },
   {
+    "documentId": "AST-EMP077-06",
+    "employeeId": "EMP077",
+    "classification": "Procurement",
+    "documentConfidence": 0.89,
+    "sectionConfidence": {
+      "metadata": 0.84,
+      "content": 0.89,
+      "entities": 0.77
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp077-06"
+  },
+  {
+    "documentId": "AST-EMP077-07",
+    "employeeId": "EMP077",
+    "classification": "HR",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.82,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-30T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp077-07"
+  },
+  {
+    "documentId": "AST-EMP077-08",
+    "employeeId": "EMP077",
+    "classification": "Engineering",
+    "documentConfidence": 0.78,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.78,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-30T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp077-08"
+  },
+  {
     "documentId": "AST-EMP078-01",
     "employeeId": "EMP078",
     "classification": "R&D",
@@ -5068,6 +8071,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp078-05"
+  },
+  {
+    "documentId": "AST-EMP078-06",
+    "employeeId": "EMP078",
+    "classification": "Operations",
+    "documentConfidence": 0.9,
+    "sectionConfidence": {
+      "metadata": 0.85,
+      "content": 0.9,
+      "entities": 0.78
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp078-06"
+  },
+  {
+    "documentId": "AST-EMP078-07",
+    "employeeId": "EMP078",
+    "classification": "Engineering",
+    "documentConfidence": 0.85,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.85,
+      "entities": 0.58
+    },
+    "parsedAt": "2026-05-31T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp078-07"
+  },
+  {
+    "documentId": "AST-EMP078-08",
+    "employeeId": "EMP078",
+    "classification": "Procurement",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.6,
+      "content": 0.8,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-31T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp078-08"
   },
   {
     "documentId": "AST-EMP079-01",
@@ -5135,6 +8177,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp079-05"
   },
   {
+    "documentId": "AST-EMP079-06",
+    "employeeId": "EMP079",
+    "classification": "R&D",
+    "documentConfidence": 0.91,
+    "sectionConfidence": {
+      "metadata": 0.86,
+      "content": 0.91,
+      "entities": 0.79
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp079-06"
+  },
+  {
+    "documentId": "AST-EMP079-07",
+    "employeeId": "EMP079",
+    "classification": "Procurement",
+    "documentConfidence": 0.88,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.88,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-06-01T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp079-07"
+  },
+  {
+    "documentId": "AST-EMP079-08",
+    "employeeId": "EMP079",
+    "classification": "Operations",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.82,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-06-01T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp079-08"
+  },
+  {
     "documentId": "AST-EMP080-01",
     "employeeId": "EMP080",
     "classification": "R&D",
@@ -5198,6 +8279,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp080-05"
+  },
+  {
+    "documentId": "AST-EMP080-06",
+    "employeeId": "EMP080",
+    "classification": "Engineering",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.67,
+      "content": 0.72,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp080-06"
+  },
+  {
+    "documentId": "AST-EMP080-07",
+    "employeeId": "EMP080",
+    "classification": "Operations",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.7,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-06-02T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp080-07"
+  },
+  {
+    "documentId": "AST-EMP080-08",
+    "employeeId": "EMP080",
+    "classification": "Safety",
+    "documentConfidence": 0.84,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.84,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-06-02T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp080-08"
   },
   {
     "documentId": "AST-EMP081-01",
@@ -5265,6 +8385,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp081-05"
   },
   {
+    "documentId": "AST-EMP081-06",
+    "employeeId": "EMP081",
+    "classification": "Manufacturing",
+    "documentConfidence": 0.73,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.73,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp081-06"
+  },
+  {
+    "documentId": "AST-EMP081-07",
+    "employeeId": "EMP081",
+    "classification": "Safety",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.72,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp081-07"
+  },
+  {
+    "documentId": "AST-EMP081-08",
+    "employeeId": "EMP081",
+    "classification": "Finance",
+    "documentConfidence": 0.68,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.68,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp081-08"
+  },
+  {
     "documentId": "AST-EMP082-01",
     "employeeId": "EMP082",
     "classification": "Safety",
@@ -5328,6 +8487,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp082-05"
+  },
+  {
+    "documentId": "AST-EMP082-06",
+    "employeeId": "EMP082",
+    "classification": "HR",
+    "documentConfidence": 0.74,
+    "sectionConfidence": {
+      "metadata": 0.69,
+      "content": 0.74,
+      "entities": 0.62
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp082-06"
+  },
+  {
+    "documentId": "AST-EMP082-07",
+    "employeeId": "EMP082",
+    "classification": "Finance",
+    "documentConfidence": 0.75,
+    "sectionConfidence": {
+      "metadata": 0.72,
+      "content": 0.75,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-08T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp082-07"
+  },
+  {
+    "documentId": "AST-EMP082-08",
+    "employeeId": "EMP082",
+    "classification": "R&D",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.7,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-08T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp082-08"
   },
   {
     "documentId": "AST-EMP083-01",
@@ -5395,6 +8593,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp083-05"
   },
   {
+    "documentId": "AST-EMP083-06",
+    "employeeId": "EMP083",
+    "classification": "IT",
+    "documentConfidence": 0.75,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.75,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp083-06"
+  },
+  {
+    "documentId": "AST-EMP083-07",
+    "employeeId": "EMP083",
+    "classification": "R&D",
+    "documentConfidence": 0.77,
+    "sectionConfidence": {
+      "metadata": 0.74,
+      "content": 0.77,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-09T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp083-07"
+  },
+  {
+    "documentId": "AST-EMP083-08",
+    "employeeId": "EMP083",
+    "classification": "HR",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.72,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-09T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp083-08"
+  },
+  {
     "documentId": "AST-EMP084-01",
     "employeeId": "EMP084",
     "classification": "Safety",
@@ -5458,6 +8695,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp084-05"
+  },
+  {
+    "documentId": "AST-EMP084-06",
+    "employeeId": "EMP084",
+    "classification": "Finance",
+    "documentConfidence": 0.76,
+    "sectionConfidence": {
+      "metadata": 0.71,
+      "content": 0.76,
+      "entities": 0.64
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp084-06"
+  },
+  {
+    "documentId": "AST-EMP084-07",
+    "employeeId": "EMP084",
+    "classification": "HR",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.8,
+      "entities": 0.58
+    },
+    "parsedAt": "2026-05-10T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp084-07"
+  },
+  {
+    "documentId": "AST-EMP084-08",
+    "employeeId": "EMP084",
+    "classification": "Engineering",
+    "documentConfidence": 0.74,
+    "sectionConfidence": {
+      "metadata": 0.6,
+      "content": 0.74,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-10T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp084-08"
   },
   {
     "documentId": "AST-EMP085-01",
@@ -5525,6 +8801,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp085-05"
   },
   {
+    "documentId": "AST-EMP085-06",
+    "employeeId": "EMP085",
+    "classification": "Procurement",
+    "documentConfidence": 0.77,
+    "sectionConfidence": {
+      "metadata": 0.72,
+      "content": 0.77,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp085-06"
+  },
+  {
+    "documentId": "AST-EMP085-07",
+    "employeeId": "EMP085",
+    "classification": "Engineering",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.82,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-05-11T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp085-07"
+  },
+  {
+    "documentId": "AST-EMP085-08",
+    "employeeId": "EMP085",
+    "classification": "Procurement",
+    "documentConfidence": 0.76,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.76,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-05-11T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp085-08"
+  },
+  {
     "documentId": "AST-EMP086-01",
     "employeeId": "EMP086",
     "classification": "Engineering",
@@ -5588,6 +8903,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp086-05"
+  },
+  {
+    "documentId": "AST-EMP086-06",
+    "employeeId": "EMP086",
+    "classification": "Operations",
+    "documentConfidence": 0.78,
+    "sectionConfidence": {
+      "metadata": 0.73,
+      "content": 0.78,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp086-06"
+  },
+  {
+    "documentId": "AST-EMP086-07",
+    "employeeId": "EMP086",
+    "classification": "Procurement",
+    "documentConfidence": 0.85,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.85,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-12T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp086-07"
+  },
+  {
+    "documentId": "AST-EMP086-08",
+    "employeeId": "EMP086",
+    "classification": "Operations",
+    "documentConfidence": 0.78,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.78,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-05-12T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp086-08"
   },
   {
     "documentId": "AST-EMP087-01",
@@ -5655,6 +9009,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp087-05"
   },
   {
+    "documentId": "AST-EMP087-06",
+    "employeeId": "EMP087",
+    "classification": "R&D",
+    "documentConfidence": 0.79,
+    "sectionConfidence": {
+      "metadata": 0.74,
+      "content": 0.79,
+      "entities": 0.67
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp087-06"
+  },
+  {
+    "documentId": "AST-EMP087-07",
+    "employeeId": "EMP087",
+    "classification": "Operations",
+    "documentConfidence": 0.88,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.88,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-13T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp087-07"
+  },
+  {
+    "documentId": "AST-EMP087-08",
+    "employeeId": "EMP087",
+    "classification": "Safety",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.8,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-13T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp087-08"
+  },
+  {
     "documentId": "AST-EMP088-01",
     "employeeId": "EMP088",
     "classification": "Finance",
@@ -5718,6 +9111,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp088-05"
+  },
+  {
+    "documentId": "AST-EMP088-06",
+    "employeeId": "EMP088",
+    "classification": "Engineering",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.75,
+      "content": 0.8,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp088-06"
+  },
+  {
+    "documentId": "AST-EMP088-07",
+    "employeeId": "EMP088",
+    "classification": "Safety",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.7,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-14T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp088-07"
+  },
+  {
+    "documentId": "AST-EMP088-08",
+    "employeeId": "EMP088",
+    "classification": "Finance",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.82,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-14T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp088-08"
   },
   {
     "documentId": "AST-EMP089-01",
@@ -5785,6 +9217,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp089-05"
   },
   {
+    "documentId": "AST-EMP089-06",
+    "employeeId": "EMP089",
+    "classification": "Manufacturing",
+    "documentConfidence": 0.81,
+    "sectionConfidence": {
+      "metadata": 0.76,
+      "content": 0.81,
+      "entities": 0.69
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp089-06"
+  },
+  {
+    "documentId": "AST-EMP089-07",
+    "employeeId": "EMP089",
+    "classification": "Finance",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.72,
+      "content": 0.72,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-15T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp089-07"
+  },
+  {
+    "documentId": "AST-EMP089-08",
+    "employeeId": "EMP089",
+    "classification": "R&D",
+    "documentConfidence": 0.84,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.84,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-15T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp089-08"
+  },
+  {
     "documentId": "AST-EMP090-01",
     "employeeId": "EMP090",
     "classification": "Engineering",
@@ -5848,6 +9319,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp090-05"
+  },
+  {
+    "documentId": "AST-EMP090-06",
+    "employeeId": "EMP090",
+    "classification": "HR",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.77,
+      "content": 0.82,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp090-06"
+  },
+  {
+    "documentId": "AST-EMP090-07",
+    "employeeId": "EMP090",
+    "classification": "R&D",
+    "documentConfidence": 0.75,
+    "sectionConfidence": {
+      "metadata": 0.74,
+      "content": 0.75,
+      "entities": 0.58
+    },
+    "parsedAt": "2026-05-16T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp090-07"
+  },
+  {
+    "documentId": "AST-EMP090-08",
+    "employeeId": "EMP090",
+    "classification": "HR",
+    "documentConfidence": 0.68,
+    "sectionConfidence": {
+      "metadata": 0.6,
+      "content": 0.68,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-05-16T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp090-08"
   },
   {
     "documentId": "AST-EMP091-01",
@@ -5915,6 +9425,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp091-05"
   },
   {
+    "documentId": "AST-EMP091-06",
+    "employeeId": "EMP091",
+    "classification": "IT",
+    "documentConfidence": 0.83,
+    "sectionConfidence": {
+      "metadata": 0.78,
+      "content": 0.83,
+      "entities": 0.71
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp091-06"
+  },
+  {
+    "documentId": "AST-EMP091-07",
+    "employeeId": "EMP091",
+    "classification": "HR",
+    "documentConfidence": 0.77,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.77,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-05-17T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp091-07"
+  },
+  {
+    "documentId": "AST-EMP091-08",
+    "employeeId": "EMP091",
+    "classification": "Engineering",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.7,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-05-17T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp091-08"
+  },
+  {
     "documentId": "AST-EMP092-01",
     "employeeId": "EMP092",
     "classification": "Safety",
@@ -5978,6 +9527,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp092-05"
+  },
+  {
+    "documentId": "AST-EMP092-06",
+    "employeeId": "EMP092",
+    "classification": "Finance",
+    "documentConfidence": 0.84,
+    "sectionConfidence": {
+      "metadata": 0.79,
+      "content": 0.84,
+      "entities": 0.72
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp092-06"
+  },
+  {
+    "documentId": "AST-EMP092-07",
+    "employeeId": "EMP092",
+    "classification": "Engineering",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.8,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-18T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp092-07"
+  },
+  {
+    "documentId": "AST-EMP092-08",
+    "employeeId": "EMP092",
+    "classification": "Procurement",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.72,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-18T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp092-08"
   },
   {
     "documentId": "AST-EMP093-01",
@@ -6045,6 +9633,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp093-05"
   },
   {
+    "documentId": "AST-EMP093-06",
+    "employeeId": "EMP093",
+    "classification": "Procurement",
+    "documentConfidence": 0.85,
+    "sectionConfidence": {
+      "metadata": 0.8,
+      "content": 0.85,
+      "entities": 0.73
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp093-06"
+  },
+  {
+    "documentId": "AST-EMP093-07",
+    "employeeId": "EMP093",
+    "classification": "Procurement",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.82,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-19T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp093-07"
+  },
+  {
+    "documentId": "AST-EMP093-08",
+    "employeeId": "EMP093",
+    "classification": "Operations",
+    "documentConfidence": 0.74,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.74,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-19T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp093-08"
+  },
+  {
     "documentId": "AST-EMP094-01",
     "employeeId": "EMP094",
     "classification": "Finance",
@@ -6108,6 +9735,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp094-05"
+  },
+  {
+    "documentId": "AST-EMP094-06",
+    "employeeId": "EMP094",
+    "classification": "Operations",
+    "documentConfidence": 0.86,
+    "sectionConfidence": {
+      "metadata": 0.81,
+      "content": 0.86,
+      "entities": 0.74
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp094-06"
+  },
+  {
+    "documentId": "AST-EMP094-07",
+    "employeeId": "EMP094",
+    "classification": "Operations",
+    "documentConfidence": 0.85,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.85,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-20T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp094-07"
+  },
+  {
+    "documentId": "AST-EMP094-08",
+    "employeeId": "EMP094",
+    "classification": "Safety",
+    "documentConfidence": 0.76,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.76,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-20T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp094-08"
   },
   {
     "documentId": "AST-EMP095-01",
@@ -6175,6 +9841,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp095-05"
   },
   {
+    "documentId": "AST-EMP095-06",
+    "employeeId": "EMP095",
+    "classification": "R&D",
+    "documentConfidence": 0.87,
+    "sectionConfidence": {
+      "metadata": 0.82,
+      "content": 0.87,
+      "entities": 0.75
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp095-06"
+  },
+  {
+    "documentId": "AST-EMP095-07",
+    "employeeId": "EMP095",
+    "classification": "Safety",
+    "documentConfidence": 0.88,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.88,
+      "entities": 0.7
+    },
+    "parsedAt": "2026-05-21T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp095-07"
+  },
+  {
+    "documentId": "AST-EMP095-08",
+    "employeeId": "EMP095",
+    "classification": "Finance",
+    "documentConfidence": 0.78,
+    "sectionConfidence": {
+      "metadata": 0.7,
+      "content": 0.78,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-05-21T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp095-08"
+  },
+  {
     "documentId": "AST-EMP096-01",
     "employeeId": "EMP096",
     "classification": "Operations",
@@ -6238,6 +9943,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp096-05"
+  },
+  {
+    "documentId": "AST-EMP096-06",
+    "employeeId": "EMP096",
+    "classification": "Engineering",
+    "documentConfidence": 0.88,
+    "sectionConfidence": {
+      "metadata": 0.83,
+      "content": 0.88,
+      "entities": 0.76
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp096-06"
+  },
+  {
+    "documentId": "AST-EMP096-07",
+    "employeeId": "EMP096",
+    "classification": "Finance",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.72,
+      "content": 0.7,
+      "entities": 0.58
+    },
+    "parsedAt": "2026-05-22T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp096-07"
+  },
+  {
+    "documentId": "AST-EMP096-08",
+    "employeeId": "EMP096",
+    "classification": "R&D",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.6,
+      "content": 0.8,
+      "entities": 0.59
+    },
+    "parsedAt": "2026-05-22T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp096-08"
   },
   {
     "documentId": "AST-EMP097-01",
@@ -6305,6 +10049,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp097-05"
   },
   {
+    "documentId": "AST-EMP097-06",
+    "employeeId": "EMP097",
+    "classification": "Manufacturing",
+    "documentConfidence": 0.89,
+    "sectionConfidence": {
+      "metadata": 0.84,
+      "content": 0.89,
+      "entities": 0.77
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp097-06"
+  },
+  {
+    "documentId": "AST-EMP097-07",
+    "employeeId": "EMP097",
+    "classification": "R&D",
+    "documentConfidence": 0.72,
+    "sectionConfidence": {
+      "metadata": 0.74,
+      "content": 0.72,
+      "entities": 0.6
+    },
+    "parsedAt": "2026-05-23T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp097-07"
+  },
+  {
+    "documentId": "AST-EMP097-08",
+    "employeeId": "EMP097",
+    "classification": "HR",
+    "documentConfidence": 0.82,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.82,
+      "entities": 0.61
+    },
+    "parsedAt": "2026-05-23T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp097-08"
+  },
+  {
     "documentId": "AST-EMP098-01",
     "employeeId": "EMP098",
     "classification": "Operations",
@@ -6368,6 +10151,45 @@
     },
     "parsedAt": "2026-05-06T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp098-05"
+  },
+  {
+    "documentId": "AST-EMP098-06",
+    "employeeId": "EMP098",
+    "classification": "HR",
+    "documentConfidence": 0.9,
+    "sectionConfidence": {
+      "metadata": 0.85,
+      "content": 0.9,
+      "entities": 0.78
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp098-06"
+  },
+  {
+    "documentId": "AST-EMP098-07",
+    "employeeId": "EMP098",
+    "classification": "HR",
+    "documentConfidence": 0.75,
+    "sectionConfidence": {
+      "metadata": 0.62,
+      "content": 0.75,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-24T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp098-07"
+  },
+  {
+    "documentId": "AST-EMP098-08",
+    "employeeId": "EMP098",
+    "classification": "Engineering",
+    "documentConfidence": 0.84,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.84,
+      "entities": 0.63
+    },
+    "parsedAt": "2026-05-24T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp098-08"
   },
   {
     "documentId": "AST-EMP099-01",
@@ -6435,6 +10257,45 @@
     "cosmosDbRecordId": "cosmos-ast-emp099-05"
   },
   {
+    "documentId": "AST-EMP099-06",
+    "employeeId": "EMP099",
+    "classification": "IT",
+    "documentConfidence": 0.91,
+    "sectionConfidence": {
+      "metadata": 0.86,
+      "content": 0.91,
+      "entities": 0.79
+    },
+    "parsedAt": "2026-05-07T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp099-06"
+  },
+  {
+    "documentId": "AST-EMP099-07",
+    "employeeId": "EMP099",
+    "classification": "Engineering",
+    "documentConfidence": 0.77,
+    "sectionConfidence": {
+      "metadata": 0.64,
+      "content": 0.77,
+      "entities": 0.66
+    },
+    "parsedAt": "2026-05-25T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp099-07"
+  },
+  {
+    "documentId": "AST-EMP099-08",
+    "employeeId": "EMP099",
+    "classification": "Procurement",
+    "documentConfidence": 0.68,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.68,
+      "entities": 0.65
+    },
+    "parsedAt": "2026-05-25T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp099-08"
+  },
+  {
     "documentId": "AST-EMP100-01",
     "employeeId": "EMP100",
     "classification": "Finance",
@@ -6500,1293 +10361,6 @@
     "cosmosDbRecordId": "cosmos-ast-emp100-05"
   },
   {
-    "documentId": "AST-EMP001-06",
-    "employeeId": "EMP001",
-    "classification": "Manufacturing",
-    "documentConfidence": 0.73,
-    "sectionConfidence": {
-      "metadata": 0.68,
-      "content": 0.73,
-      "entities": 0.61
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp001-06"
-  },
-  {
-    "documentId": "AST-EMP002-06",
-    "employeeId": "EMP002",
-    "classification": "HR",
-    "documentConfidence": 0.74,
-    "sectionConfidence": {
-      "metadata": 0.69,
-      "content": 0.74,
-      "entities": 0.62
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp002-06"
-  },
-  {
-    "documentId": "AST-EMP003-06",
-    "employeeId": "EMP003",
-    "classification": "IT",
-    "documentConfidence": 0.75,
-    "sectionConfidence": {
-      "metadata": 0.7,
-      "content": 0.75,
-      "entities": 0.63
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp003-06"
-  },
-  {
-    "documentId": "AST-EMP004-06",
-    "employeeId": "EMP004",
-    "classification": "Finance",
-    "documentConfidence": 0.76,
-    "sectionConfidence": {
-      "metadata": 0.71,
-      "content": 0.76,
-      "entities": 0.64
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp004-06"
-  },
-  {
-    "documentId": "AST-EMP005-06",
-    "employeeId": "EMP005",
-    "classification": "Procurement",
-    "documentConfidence": 0.77,
-    "sectionConfidence": {
-      "metadata": 0.72,
-      "content": 0.77,
-      "entities": 0.65
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp005-06"
-  },
-  {
-    "documentId": "AST-EMP006-06",
-    "employeeId": "EMP006",
-    "classification": "Operations",
-    "documentConfidence": 0.78,
-    "sectionConfidence": {
-      "metadata": 0.73,
-      "content": 0.78,
-      "entities": 0.66
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp006-06"
-  },
-  {
-    "documentId": "AST-EMP007-06",
-    "employeeId": "EMP007",
-    "classification": "R&D",
-    "documentConfidence": 0.79,
-    "sectionConfidence": {
-      "metadata": 0.74,
-      "content": 0.79,
-      "entities": 0.67
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp007-06"
-  },
-  {
-    "documentId": "AST-EMP008-06",
-    "employeeId": "EMP008",
-    "classification": "Engineering",
-    "documentConfidence": 0.8,
-    "sectionConfidence": {
-      "metadata": 0.75,
-      "content": 0.8,
-      "entities": 0.68
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp008-06"
-  },
-  {
-    "documentId": "AST-EMP009-06",
-    "employeeId": "EMP009",
-    "classification": "Manufacturing",
-    "documentConfidence": 0.81,
-    "sectionConfidence": {
-      "metadata": 0.76,
-      "content": 0.81,
-      "entities": 0.69
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp009-06"
-  },
-  {
-    "documentId": "AST-EMP010-06",
-    "employeeId": "EMP010",
-    "classification": "HR",
-    "documentConfidence": 0.82,
-    "sectionConfidence": {
-      "metadata": 0.77,
-      "content": 0.82,
-      "entities": 0.7
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp010-06"
-  },
-  {
-    "documentId": "AST-EMP011-06",
-    "employeeId": "EMP011",
-    "classification": "IT",
-    "documentConfidence": 0.83,
-    "sectionConfidence": {
-      "metadata": 0.78,
-      "content": 0.83,
-      "entities": 0.71
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp011-06"
-  },
-  {
-    "documentId": "AST-EMP012-06",
-    "employeeId": "EMP012",
-    "classification": "Finance",
-    "documentConfidence": 0.84,
-    "sectionConfidence": {
-      "metadata": 0.79,
-      "content": 0.84,
-      "entities": 0.72
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp012-06"
-  },
-  {
-    "documentId": "AST-EMP013-06",
-    "employeeId": "EMP013",
-    "classification": "Procurement",
-    "documentConfidence": 0.85,
-    "sectionConfidence": {
-      "metadata": 0.8,
-      "content": 0.85,
-      "entities": 0.73
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp013-06"
-  },
-  {
-    "documentId": "AST-EMP014-06",
-    "employeeId": "EMP014",
-    "classification": "Operations",
-    "documentConfidence": 0.86,
-    "sectionConfidence": {
-      "metadata": 0.81,
-      "content": 0.86,
-      "entities": 0.74
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp014-06"
-  },
-  {
-    "documentId": "AST-EMP015-06",
-    "employeeId": "EMP015",
-    "classification": "R&D",
-    "documentConfidence": 0.87,
-    "sectionConfidence": {
-      "metadata": 0.82,
-      "content": 0.87,
-      "entities": 0.75
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp015-06"
-  },
-  {
-    "documentId": "AST-EMP016-06",
-    "employeeId": "EMP016",
-    "classification": "Engineering",
-    "documentConfidence": 0.88,
-    "sectionConfidence": {
-      "metadata": 0.83,
-      "content": 0.88,
-      "entities": 0.76
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp016-06"
-  },
-  {
-    "documentId": "AST-EMP017-06",
-    "employeeId": "EMP017",
-    "classification": "Manufacturing",
-    "documentConfidence": 0.89,
-    "sectionConfidence": {
-      "metadata": 0.84,
-      "content": 0.89,
-      "entities": 0.77
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp017-06"
-  },
-  {
-    "documentId": "AST-EMP018-06",
-    "employeeId": "EMP018",
-    "classification": "HR",
-    "documentConfidence": 0.9,
-    "sectionConfidence": {
-      "metadata": 0.85,
-      "content": 0.9,
-      "entities": 0.78
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp018-06"
-  },
-  {
-    "documentId": "AST-EMP019-06",
-    "employeeId": "EMP019",
-    "classification": "IT",
-    "documentConfidence": 0.91,
-    "sectionConfidence": {
-      "metadata": 0.86,
-      "content": 0.91,
-      "entities": 0.79
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp019-06"
-  },
-  {
-    "documentId": "AST-EMP020-06",
-    "employeeId": "EMP020",
-    "classification": "Finance",
-    "documentConfidence": 0.72,
-    "sectionConfidence": {
-      "metadata": 0.67,
-      "content": 0.72,
-      "entities": 0.6
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp020-06"
-  },
-  {
-    "documentId": "AST-EMP021-06",
-    "employeeId": "EMP021",
-    "classification": "Procurement",
-    "documentConfidence": 0.73,
-    "sectionConfidence": {
-      "metadata": 0.68,
-      "content": 0.73,
-      "entities": 0.61
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp021-06"
-  },
-  {
-    "documentId": "AST-EMP022-06",
-    "employeeId": "EMP022",
-    "classification": "Operations",
-    "documentConfidence": 0.74,
-    "sectionConfidence": {
-      "metadata": 0.69,
-      "content": 0.74,
-      "entities": 0.62
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp022-06"
-  },
-  {
-    "documentId": "AST-EMP023-06",
-    "employeeId": "EMP023",
-    "classification": "R&D",
-    "documentConfidence": 0.75,
-    "sectionConfidence": {
-      "metadata": 0.7,
-      "content": 0.75,
-      "entities": 0.63
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp023-06"
-  },
-  {
-    "documentId": "AST-EMP024-06",
-    "employeeId": "EMP024",
-    "classification": "Engineering",
-    "documentConfidence": 0.76,
-    "sectionConfidence": {
-      "metadata": 0.71,
-      "content": 0.76,
-      "entities": 0.64
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp024-06"
-  },
-  {
-    "documentId": "AST-EMP025-06",
-    "employeeId": "EMP025",
-    "classification": "Manufacturing",
-    "documentConfidence": 0.77,
-    "sectionConfidence": {
-      "metadata": 0.72,
-      "content": 0.77,
-      "entities": 0.65
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp025-06"
-  },
-  {
-    "documentId": "AST-EMP026-06",
-    "employeeId": "EMP026",
-    "classification": "HR",
-    "documentConfidence": 0.78,
-    "sectionConfidence": {
-      "metadata": 0.73,
-      "content": 0.78,
-      "entities": 0.66
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp026-06"
-  },
-  {
-    "documentId": "AST-EMP027-06",
-    "employeeId": "EMP027",
-    "classification": "IT",
-    "documentConfidence": 0.79,
-    "sectionConfidence": {
-      "metadata": 0.74,
-      "content": 0.79,
-      "entities": 0.67
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp027-06"
-  },
-  {
-    "documentId": "AST-EMP028-06",
-    "employeeId": "EMP028",
-    "classification": "Finance",
-    "documentConfidence": 0.8,
-    "sectionConfidence": {
-      "metadata": 0.75,
-      "content": 0.8,
-      "entities": 0.68
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp028-06"
-  },
-  {
-    "documentId": "AST-EMP029-06",
-    "employeeId": "EMP029",
-    "classification": "Procurement",
-    "documentConfidence": 0.81,
-    "sectionConfidence": {
-      "metadata": 0.76,
-      "content": 0.81,
-      "entities": 0.69
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp029-06"
-  },
-  {
-    "documentId": "AST-EMP030-06",
-    "employeeId": "EMP030",
-    "classification": "Operations",
-    "documentConfidence": 0.82,
-    "sectionConfidence": {
-      "metadata": 0.77,
-      "content": 0.82,
-      "entities": 0.7
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp030-06"
-  },
-  {
-    "documentId": "AST-EMP031-06",
-    "employeeId": "EMP031",
-    "classification": "R&D",
-    "documentConfidence": 0.83,
-    "sectionConfidence": {
-      "metadata": 0.78,
-      "content": 0.83,
-      "entities": 0.71
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp031-06"
-  },
-  {
-    "documentId": "AST-EMP032-06",
-    "employeeId": "EMP032",
-    "classification": "Engineering",
-    "documentConfidence": 0.84,
-    "sectionConfidence": {
-      "metadata": 0.79,
-      "content": 0.84,
-      "entities": 0.72
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp032-06"
-  },
-  {
-    "documentId": "AST-EMP033-06",
-    "employeeId": "EMP033",
-    "classification": "Manufacturing",
-    "documentConfidence": 0.85,
-    "sectionConfidence": {
-      "metadata": 0.8,
-      "content": 0.85,
-      "entities": 0.73
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp033-06"
-  },
-  {
-    "documentId": "AST-EMP034-06",
-    "employeeId": "EMP034",
-    "classification": "HR",
-    "documentConfidence": 0.86,
-    "sectionConfidence": {
-      "metadata": 0.81,
-      "content": 0.86,
-      "entities": 0.74
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp034-06"
-  },
-  {
-    "documentId": "AST-EMP035-06",
-    "employeeId": "EMP035",
-    "classification": "IT",
-    "documentConfidence": 0.87,
-    "sectionConfidence": {
-      "metadata": 0.82,
-      "content": 0.87,
-      "entities": 0.75
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp035-06"
-  },
-  {
-    "documentId": "AST-EMP036-06",
-    "employeeId": "EMP036",
-    "classification": "Finance",
-    "documentConfidence": 0.88,
-    "sectionConfidence": {
-      "metadata": 0.83,
-      "content": 0.88,
-      "entities": 0.76
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp036-06"
-  },
-  {
-    "documentId": "AST-EMP037-06",
-    "employeeId": "EMP037",
-    "classification": "Procurement",
-    "documentConfidence": 0.89,
-    "sectionConfidence": {
-      "metadata": 0.84,
-      "content": 0.89,
-      "entities": 0.77
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp037-06"
-  },
-  {
-    "documentId": "AST-EMP038-06",
-    "employeeId": "EMP038",
-    "classification": "Operations",
-    "documentConfidence": 0.9,
-    "sectionConfidence": {
-      "metadata": 0.85,
-      "content": 0.9,
-      "entities": 0.78
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp038-06"
-  },
-  {
-    "documentId": "AST-EMP039-06",
-    "employeeId": "EMP039",
-    "classification": "R&D",
-    "documentConfidence": 0.91,
-    "sectionConfidence": {
-      "metadata": 0.86,
-      "content": 0.91,
-      "entities": 0.79
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp039-06"
-  },
-  {
-    "documentId": "AST-EMP040-06",
-    "employeeId": "EMP040",
-    "classification": "Engineering",
-    "documentConfidence": 0.72,
-    "sectionConfidence": {
-      "metadata": 0.67,
-      "content": 0.72,
-      "entities": 0.6
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp040-06"
-  },
-  {
-    "documentId": "AST-EMP041-06",
-    "employeeId": "EMP041",
-    "classification": "Manufacturing",
-    "documentConfidence": 0.73,
-    "sectionConfidence": {
-      "metadata": 0.68,
-      "content": 0.73,
-      "entities": 0.61
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp041-06"
-  },
-  {
-    "documentId": "AST-EMP042-06",
-    "employeeId": "EMP042",
-    "classification": "HR",
-    "documentConfidence": 0.74,
-    "sectionConfidence": {
-      "metadata": 0.69,
-      "content": 0.74,
-      "entities": 0.62
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp042-06"
-  },
-  {
-    "documentId": "AST-EMP043-06",
-    "employeeId": "EMP043",
-    "classification": "IT",
-    "documentConfidence": 0.75,
-    "sectionConfidence": {
-      "metadata": 0.7,
-      "content": 0.75,
-      "entities": 0.63
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp043-06"
-  },
-  {
-    "documentId": "AST-EMP044-06",
-    "employeeId": "EMP044",
-    "classification": "Finance",
-    "documentConfidence": 0.76,
-    "sectionConfidence": {
-      "metadata": 0.71,
-      "content": 0.76,
-      "entities": 0.64
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp044-06"
-  },
-  {
-    "documentId": "AST-EMP045-06",
-    "employeeId": "EMP045",
-    "classification": "Procurement",
-    "documentConfidence": 0.77,
-    "sectionConfidence": {
-      "metadata": 0.72,
-      "content": 0.77,
-      "entities": 0.65
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp045-06"
-  },
-  {
-    "documentId": "AST-EMP046-06",
-    "employeeId": "EMP046",
-    "classification": "Operations",
-    "documentConfidence": 0.78,
-    "sectionConfidence": {
-      "metadata": 0.73,
-      "content": 0.78,
-      "entities": 0.66
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp046-06"
-  },
-  {
-    "documentId": "AST-EMP047-06",
-    "employeeId": "EMP047",
-    "classification": "R&D",
-    "documentConfidence": 0.79,
-    "sectionConfidence": {
-      "metadata": 0.74,
-      "content": 0.79,
-      "entities": 0.67
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp047-06"
-  },
-  {
-    "documentId": "AST-EMP048-06",
-    "employeeId": "EMP048",
-    "classification": "Engineering",
-    "documentConfidence": 0.8,
-    "sectionConfidence": {
-      "metadata": 0.75,
-      "content": 0.8,
-      "entities": 0.68
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp048-06"
-  },
-  {
-    "documentId": "AST-EMP049-06",
-    "employeeId": "EMP049",
-    "classification": "Manufacturing",
-    "documentConfidence": 0.81,
-    "sectionConfidence": {
-      "metadata": 0.76,
-      "content": 0.81,
-      "entities": 0.69
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp049-06"
-  },
-  {
-    "documentId": "AST-EMP050-06",
-    "employeeId": "EMP050",
-    "classification": "HR",
-    "documentConfidence": 0.82,
-    "sectionConfidence": {
-      "metadata": 0.77,
-      "content": 0.82,
-      "entities": 0.7
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp050-06"
-  },
-  {
-    "documentId": "AST-EMP051-06",
-    "employeeId": "EMP051",
-    "classification": "IT",
-    "documentConfidence": 0.83,
-    "sectionConfidence": {
-      "metadata": 0.78,
-      "content": 0.83,
-      "entities": 0.71
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp051-06"
-  },
-  {
-    "documentId": "AST-EMP052-06",
-    "employeeId": "EMP052",
-    "classification": "Finance",
-    "documentConfidence": 0.84,
-    "sectionConfidence": {
-      "metadata": 0.79,
-      "content": 0.84,
-      "entities": 0.72
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp052-06"
-  },
-  {
-    "documentId": "AST-EMP053-06",
-    "employeeId": "EMP053",
-    "classification": "Procurement",
-    "documentConfidence": 0.85,
-    "sectionConfidence": {
-      "metadata": 0.8,
-      "content": 0.85,
-      "entities": 0.73
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp053-06"
-  },
-  {
-    "documentId": "AST-EMP054-06",
-    "employeeId": "EMP054",
-    "classification": "Operations",
-    "documentConfidence": 0.86,
-    "sectionConfidence": {
-      "metadata": 0.81,
-      "content": 0.86,
-      "entities": 0.74
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp054-06"
-  },
-  {
-    "documentId": "AST-EMP055-06",
-    "employeeId": "EMP055",
-    "classification": "R&D",
-    "documentConfidence": 0.87,
-    "sectionConfidence": {
-      "metadata": 0.82,
-      "content": 0.87,
-      "entities": 0.75
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp055-06"
-  },
-  {
-    "documentId": "AST-EMP056-06",
-    "employeeId": "EMP056",
-    "classification": "Engineering",
-    "documentConfidence": 0.88,
-    "sectionConfidence": {
-      "metadata": 0.83,
-      "content": 0.88,
-      "entities": 0.76
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp056-06"
-  },
-  {
-    "documentId": "AST-EMP057-06",
-    "employeeId": "EMP057",
-    "classification": "Manufacturing",
-    "documentConfidence": 0.89,
-    "sectionConfidence": {
-      "metadata": 0.84,
-      "content": 0.89,
-      "entities": 0.77
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp057-06"
-  },
-  {
-    "documentId": "AST-EMP058-06",
-    "employeeId": "EMP058",
-    "classification": "HR",
-    "documentConfidence": 0.9,
-    "sectionConfidence": {
-      "metadata": 0.85,
-      "content": 0.9,
-      "entities": 0.78
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp058-06"
-  },
-  {
-    "documentId": "AST-EMP059-06",
-    "employeeId": "EMP059",
-    "classification": "IT",
-    "documentConfidence": 0.91,
-    "sectionConfidence": {
-      "metadata": 0.86,
-      "content": 0.91,
-      "entities": 0.79
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp059-06"
-  },
-  {
-    "documentId": "AST-EMP060-06",
-    "employeeId": "EMP060",
-    "classification": "Finance",
-    "documentConfidence": 0.72,
-    "sectionConfidence": {
-      "metadata": 0.67,
-      "content": 0.72,
-      "entities": 0.6
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp060-06"
-  },
-  {
-    "documentId": "AST-EMP061-06",
-    "employeeId": "EMP061",
-    "classification": "Procurement",
-    "documentConfidence": 0.73,
-    "sectionConfidence": {
-      "metadata": 0.68,
-      "content": 0.73,
-      "entities": 0.61
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp061-06"
-  },
-  {
-    "documentId": "AST-EMP062-06",
-    "employeeId": "EMP062",
-    "classification": "Operations",
-    "documentConfidence": 0.74,
-    "sectionConfidence": {
-      "metadata": 0.69,
-      "content": 0.74,
-      "entities": 0.62
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp062-06"
-  },
-  {
-    "documentId": "AST-EMP063-06",
-    "employeeId": "EMP063",
-    "classification": "R&D",
-    "documentConfidence": 0.75,
-    "sectionConfidence": {
-      "metadata": 0.7,
-      "content": 0.75,
-      "entities": 0.63
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp063-06"
-  },
-  {
-    "documentId": "AST-EMP064-06",
-    "employeeId": "EMP064",
-    "classification": "Engineering",
-    "documentConfidence": 0.76,
-    "sectionConfidence": {
-      "metadata": 0.71,
-      "content": 0.76,
-      "entities": 0.64
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp064-06"
-  },
-  {
-    "documentId": "AST-EMP065-06",
-    "employeeId": "EMP065",
-    "classification": "Manufacturing",
-    "documentConfidence": 0.77,
-    "sectionConfidence": {
-      "metadata": 0.72,
-      "content": 0.77,
-      "entities": 0.65
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp065-06"
-  },
-  {
-    "documentId": "AST-EMP066-06",
-    "employeeId": "EMP066",
-    "classification": "HR",
-    "documentConfidence": 0.78,
-    "sectionConfidence": {
-      "metadata": 0.73,
-      "content": 0.78,
-      "entities": 0.66
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp066-06"
-  },
-  {
-    "documentId": "AST-EMP067-06",
-    "employeeId": "EMP067",
-    "classification": "IT",
-    "documentConfidence": 0.79,
-    "sectionConfidence": {
-      "metadata": 0.74,
-      "content": 0.79,
-      "entities": 0.67
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp067-06"
-  },
-  {
-    "documentId": "AST-EMP068-06",
-    "employeeId": "EMP068",
-    "classification": "Finance",
-    "documentConfidence": 0.8,
-    "sectionConfidence": {
-      "metadata": 0.75,
-      "content": 0.8,
-      "entities": 0.68
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp068-06"
-  },
-  {
-    "documentId": "AST-EMP069-06",
-    "employeeId": "EMP069",
-    "classification": "Procurement",
-    "documentConfidence": 0.81,
-    "sectionConfidence": {
-      "metadata": 0.76,
-      "content": 0.81,
-      "entities": 0.69
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp069-06"
-  },
-  {
-    "documentId": "AST-EMP070-06",
-    "employeeId": "EMP070",
-    "classification": "Operations",
-    "documentConfidence": 0.82,
-    "sectionConfidence": {
-      "metadata": 0.77,
-      "content": 0.82,
-      "entities": 0.7
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp070-06"
-  },
-  {
-    "documentId": "AST-EMP071-06",
-    "employeeId": "EMP071",
-    "classification": "R&D",
-    "documentConfidence": 0.83,
-    "sectionConfidence": {
-      "metadata": 0.78,
-      "content": 0.83,
-      "entities": 0.71
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp071-06"
-  },
-  {
-    "documentId": "AST-EMP072-06",
-    "employeeId": "EMP072",
-    "classification": "Engineering",
-    "documentConfidence": 0.84,
-    "sectionConfidence": {
-      "metadata": 0.79,
-      "content": 0.84,
-      "entities": 0.72
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp072-06"
-  },
-  {
-    "documentId": "AST-EMP073-06",
-    "employeeId": "EMP073",
-    "classification": "Manufacturing",
-    "documentConfidence": 0.85,
-    "sectionConfidence": {
-      "metadata": 0.8,
-      "content": 0.85,
-      "entities": 0.73
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp073-06"
-  },
-  {
-    "documentId": "AST-EMP074-06",
-    "employeeId": "EMP074",
-    "classification": "HR",
-    "documentConfidence": 0.86,
-    "sectionConfidence": {
-      "metadata": 0.81,
-      "content": 0.86,
-      "entities": 0.74
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp074-06"
-  },
-  {
-    "documentId": "AST-EMP075-06",
-    "employeeId": "EMP075",
-    "classification": "IT",
-    "documentConfidence": 0.87,
-    "sectionConfidence": {
-      "metadata": 0.82,
-      "content": 0.87,
-      "entities": 0.75
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp075-06"
-  },
-  {
-    "documentId": "AST-EMP076-06",
-    "employeeId": "EMP076",
-    "classification": "Finance",
-    "documentConfidence": 0.88,
-    "sectionConfidence": {
-      "metadata": 0.83,
-      "content": 0.88,
-      "entities": 0.76
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp076-06"
-  },
-  {
-    "documentId": "AST-EMP077-06",
-    "employeeId": "EMP077",
-    "classification": "Procurement",
-    "documentConfidence": 0.89,
-    "sectionConfidence": {
-      "metadata": 0.84,
-      "content": 0.89,
-      "entities": 0.77
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp077-06"
-  },
-  {
-    "documentId": "AST-EMP078-06",
-    "employeeId": "EMP078",
-    "classification": "Operations",
-    "documentConfidence": 0.9,
-    "sectionConfidence": {
-      "metadata": 0.85,
-      "content": 0.9,
-      "entities": 0.78
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp078-06"
-  },
-  {
-    "documentId": "AST-EMP079-06",
-    "employeeId": "EMP079",
-    "classification": "R&D",
-    "documentConfidence": 0.91,
-    "sectionConfidence": {
-      "metadata": 0.86,
-      "content": 0.91,
-      "entities": 0.79
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp079-06"
-  },
-  {
-    "documentId": "AST-EMP080-06",
-    "employeeId": "EMP080",
-    "classification": "Engineering",
-    "documentConfidence": 0.72,
-    "sectionConfidence": {
-      "metadata": 0.67,
-      "content": 0.72,
-      "entities": 0.6
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp080-06"
-  },
-  {
-    "documentId": "AST-EMP081-06",
-    "employeeId": "EMP081",
-    "classification": "Manufacturing",
-    "documentConfidence": 0.73,
-    "sectionConfidence": {
-      "metadata": 0.68,
-      "content": 0.73,
-      "entities": 0.61
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp081-06"
-  },
-  {
-    "documentId": "AST-EMP082-06",
-    "employeeId": "EMP082",
-    "classification": "HR",
-    "documentConfidence": 0.74,
-    "sectionConfidence": {
-      "metadata": 0.69,
-      "content": 0.74,
-      "entities": 0.62
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp082-06"
-  },
-  {
-    "documentId": "AST-EMP083-06",
-    "employeeId": "EMP083",
-    "classification": "IT",
-    "documentConfidence": 0.75,
-    "sectionConfidence": {
-      "metadata": 0.7,
-      "content": 0.75,
-      "entities": 0.63
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp083-06"
-  },
-  {
-    "documentId": "AST-EMP084-06",
-    "employeeId": "EMP084",
-    "classification": "Finance",
-    "documentConfidence": 0.76,
-    "sectionConfidence": {
-      "metadata": 0.71,
-      "content": 0.76,
-      "entities": 0.64
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp084-06"
-  },
-  {
-    "documentId": "AST-EMP085-06",
-    "employeeId": "EMP085",
-    "classification": "Procurement",
-    "documentConfidence": 0.77,
-    "sectionConfidence": {
-      "metadata": 0.72,
-      "content": 0.77,
-      "entities": 0.65
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp085-06"
-  },
-  {
-    "documentId": "AST-EMP086-06",
-    "employeeId": "EMP086",
-    "classification": "Operations",
-    "documentConfidence": 0.78,
-    "sectionConfidence": {
-      "metadata": 0.73,
-      "content": 0.78,
-      "entities": 0.66
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp086-06"
-  },
-  {
-    "documentId": "AST-EMP087-06",
-    "employeeId": "EMP087",
-    "classification": "R&D",
-    "documentConfidence": 0.79,
-    "sectionConfidence": {
-      "metadata": 0.74,
-      "content": 0.79,
-      "entities": 0.67
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp087-06"
-  },
-  {
-    "documentId": "AST-EMP088-06",
-    "employeeId": "EMP088",
-    "classification": "Engineering",
-    "documentConfidence": 0.8,
-    "sectionConfidence": {
-      "metadata": 0.75,
-      "content": 0.8,
-      "entities": 0.68
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp088-06"
-  },
-  {
-    "documentId": "AST-EMP089-06",
-    "employeeId": "EMP089",
-    "classification": "Manufacturing",
-    "documentConfidence": 0.81,
-    "sectionConfidence": {
-      "metadata": 0.76,
-      "content": 0.81,
-      "entities": 0.69
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp089-06"
-  },
-  {
-    "documentId": "AST-EMP090-06",
-    "employeeId": "EMP090",
-    "classification": "HR",
-    "documentConfidence": 0.82,
-    "sectionConfidence": {
-      "metadata": 0.77,
-      "content": 0.82,
-      "entities": 0.7
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp090-06"
-  },
-  {
-    "documentId": "AST-EMP091-06",
-    "employeeId": "EMP091",
-    "classification": "IT",
-    "documentConfidence": 0.83,
-    "sectionConfidence": {
-      "metadata": 0.78,
-      "content": 0.83,
-      "entities": 0.71
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp091-06"
-  },
-  {
-    "documentId": "AST-EMP092-06",
-    "employeeId": "EMP092",
-    "classification": "Finance",
-    "documentConfidence": 0.84,
-    "sectionConfidence": {
-      "metadata": 0.79,
-      "content": 0.84,
-      "entities": 0.72
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp092-06"
-  },
-  {
-    "documentId": "AST-EMP093-06",
-    "employeeId": "EMP093",
-    "classification": "Procurement",
-    "documentConfidence": 0.85,
-    "sectionConfidence": {
-      "metadata": 0.8,
-      "content": 0.85,
-      "entities": 0.73
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp093-06"
-  },
-  {
-    "documentId": "AST-EMP094-06",
-    "employeeId": "EMP094",
-    "classification": "Operations",
-    "documentConfidence": 0.86,
-    "sectionConfidence": {
-      "metadata": 0.81,
-      "content": 0.86,
-      "entities": 0.74
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp094-06"
-  },
-  {
-    "documentId": "AST-EMP095-06",
-    "employeeId": "EMP095",
-    "classification": "R&D",
-    "documentConfidence": 0.87,
-    "sectionConfidence": {
-      "metadata": 0.82,
-      "content": 0.87,
-      "entities": 0.75
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp095-06"
-  },
-  {
-    "documentId": "AST-EMP096-06",
-    "employeeId": "EMP096",
-    "classification": "Engineering",
-    "documentConfidence": 0.88,
-    "sectionConfidence": {
-      "metadata": 0.83,
-      "content": 0.88,
-      "entities": 0.76
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp096-06"
-  },
-  {
-    "documentId": "AST-EMP097-06",
-    "employeeId": "EMP097",
-    "classification": "Manufacturing",
-    "documentConfidence": 0.89,
-    "sectionConfidence": {
-      "metadata": 0.84,
-      "content": 0.89,
-      "entities": 0.77
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp097-06"
-  },
-  {
-    "documentId": "AST-EMP098-06",
-    "employeeId": "EMP098",
-    "classification": "HR",
-    "documentConfidence": 0.9,
-    "sectionConfidence": {
-      "metadata": 0.85,
-      "content": 0.9,
-      "entities": 0.78
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp098-06"
-  },
-  {
-    "documentId": "AST-EMP099-06",
-    "employeeId": "EMP099",
-    "classification": "IT",
-    "documentConfidence": 0.91,
-    "sectionConfidence": {
-      "metadata": 0.86,
-      "content": 0.91,
-      "entities": 0.79
-    },
-    "parsedAt": "2026-05-07T09:00:00Z",
-    "cosmosDbRecordId": "cosmos-ast-emp099-06"
-  },
-  {
     "documentId": "AST-EMP100-06",
     "employeeId": "EMP100",
     "classification": "Finance",
@@ -7798,5 +10372,31 @@
     },
     "parsedAt": "2026-05-07T09:00:00Z",
     "cosmosDbRecordId": "cosmos-ast-emp100-06"
+  },
+  {
+    "documentId": "AST-EMP100-07",
+    "employeeId": "EMP100",
+    "classification": "Procurement",
+    "documentConfidence": 0.8,
+    "sectionConfidence": {
+      "metadata": 0.66,
+      "content": 0.8,
+      "entities": 0.68
+    },
+    "parsedAt": "2026-05-26T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp100-07"
+  },
+  {
+    "documentId": "AST-EMP100-08",
+    "employeeId": "EMP100",
+    "classification": "Operations",
+    "documentConfidence": 0.7,
+    "sectionConfidence": {
+      "metadata": 0.68,
+      "content": 0.7,
+      "entities": 0.57
+    },
+    "parsedAt": "2026-05-26T09:00:00Z",
+    "cosmosDbRecordId": "cosmos-ast-emp100-08"
   }
 ]

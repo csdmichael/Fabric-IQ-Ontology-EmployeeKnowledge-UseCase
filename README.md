@@ -15,6 +15,10 @@
 - [Fabric IQ Ontology](#fabric-iq-ontology)
 - [Fabric Data Agent](#fabric-data-agent)
 - [Ionic + Angular + TypeScript UI](#ionic--angular--typescript-ui)
+- [Reusable Azure Hosting Resources (ai-myaacoub)](#reusable-azure-hosting-resources-ai-myaacoub)
+- [Managed Identity Setup](#managed-identity-setup)
+- [Private Networking Model](#private-networking-model)
+- [Prompt Catalog](#prompt-catalog)
 - [Teams & Copilot Agent Packaging Steps](#teams--copilot-agent-packaging-steps)
 - [GitHub Workflows](#github-workflows)
 - [Terraform Deployment](#terraform-deployment)
@@ -22,15 +26,16 @@
 - [License](#license)
 
 ## Project Description
-This repository provides a complete **demo blueprint** for implementing an **Employee Knowledge Graph** use case with **Microsoft Fabric IQ**.  
+This repository provides a complete **demo blueprint** for implementing an **Employee Knowledge Graph** use case with **Microsoft Fabric IQ**.
+
 It includes:
 - Config-driven endpoints and runtime settings
-- Synthetic enterprise data for 100 employees and digital assets
+- Synthetic enterprise data for 100 employees and multi-format digital assets
 - Fabric-style dataflow/pipeline artifacts
 - Document intelligence parsing outputs with section/document confidence
-- OneLake semantic-model definitions and ontology mapping
-- Fabric Data Agent prompt pack (20 prompts)
-- Ionic/Angular/TypeScript UI scaffold with responsive layouts (web/tablet/mobile)
+- OneLake semantic model definitions and ontology mapping
+- Fabric Data Agent prompt pack with citation-ready prompts
+- Ionic/Angular/TypeScript UI scaffold with responsive layouts and document browsing
 
 ## Architecture
 ![Architecture Diagram](docs/architecture-diagram.svg)
@@ -39,10 +44,11 @@ It includes:
 ```text
 .
 ├── config/
+│   ├── azure-hosting-resources.json
 │   ├── endpoints.json
 │   ├── fabric-settings.json
 │   ├── ontology-config.json
-│   ├── workflows.json          # CI, deploy, and upload settings
+│   ├── workflows.json
 │   └── terraform.tfvars.json
 ├── .github/workflows/
 │   ├── ci.yml
@@ -50,21 +56,12 @@ It includes:
 │   └── upload-employee-assets.yml
 ├── data/
 │   ├── employees.json
-│   ├── digital_assets.json     # 600 assets (pptx, pdf, docx, txt, one, xlsx)
+│   ├── digital_assets.json
 │   ├── emails.json
 │   ├── org_hierarchy.json
 │   ├── parsed_documents_cosmosdb.json
 │   ├── storage_map.json
-│   └── employees/              # generated actual asset files
-│       ├── EMP001/
-│       │   ├── EML-EMP001.eml
-│       │   ├── AST-EMP001-01.pptx
-│       │   ├── AST-EMP001-02.pdf
-│       │   ├── AST-EMP001-03.docx
-│       │   ├── AST-EMP001-04.txt
-│       │   ├── AST-EMP001-05.one
-│       │   └── AST-EMP001-06.xlsx
-│       └── … (EMP002–EMP100 same structure)
+│   └── employees/
 ├── scripts/
 │   └── generate_employee_files.py
 ├── docs/
@@ -97,113 +94,49 @@ It includes:
 
 ## Configuration Strategy (No Hardcoding)
 All platform endpoints and runtime options are centralized in `/config`:
-- `config/endpoints.json`: Azure + Fabric + integration URLs/IDs
-- `config/fabric-settings.json`: ingestion behavior, thresholds, storage names
+- `config/endpoints.json`: Azure/Fabric/integration URLs and IDs
+- `config/fabric-settings.json`: ingestion behavior, thresholds, and networking policy flags
+- `config/azure-hosting-resources.json`: reusable existing hosting resources in `ai-myaacoub`
 - `config/ontology-config.json`: ontology name, entities, and relationship catalog
 
-UI and pipeline artifacts reference config files rather than embedding environment values directly.
-
-Config key resolution examples:
-- `azure.blobStorageEndpoint` → Azure Blob endpoint template in `config/endpoints.json`
-- `azure.documentIntelligenceEndpoint` → Document Intelligence endpoint in `config/endpoints.json`
-- `azure.cosmosDbEndpoint` → Cosmos DB endpoint in `config/endpoints.json`
-- `microsoftFabric.workspaceId` / `microsoftFabric.lakehouseId` → OneLake workspace/lakehouse IDs
-
 ## Synthetic Data Design
-Data includes **100 employees** and enterprise digital assets expected in Lam Research-like environments:
-- OneDrive assets in multiple formats: **pptx, pdf, docx, txt, one (OneNote), xlsx**
-- Employee email records and ownership metadata
-- Reporting hierarchy with manager mappings
-- Azure storage paths mapped for raw/processed zones and OneLake target paths
+Data includes **100 employees** and enterprise digital assets expected in Lam Research-like environments.
 
-Primary data files:
+Primary files:
 - `data/employees.json`
-- `data/digital_assets.json` – 600 assets total (6 per employee): pptx, pdf, docx, txt, one, xlsx
-- `data/emails.json`
+- `data/digital_assets.json` – **800 assets total (8 per employee)**
+- `data/emails.json` – **100 emails (1 per employee)**
 - `data/org_hierarchy.json`
 - `data/storage_map.json`
-- `data/parsed_documents_cosmosdb.json` – 600 parsed document records
+- `data/parsed_documents_cosmosdb.json` – **800 parse records**
 
 ## Employee Asset Generation
-
-The `data/employees/` folder contains **700 actual files** (7 per employee × 100 employees) generated from the JSON data sources.
+`data/employees/` now contains **900 generated files** total (9 per employee × 100 employees).
 
 ### File types per employee
-
-| File | Type | Description |
-|------|------|-------------|
-| `EML-EMPXXX.eml` | Email | RFC 2822 weekly status update email |
-| `AST-EMPXXX-01.pptx` | Presentation | 4-slide PowerPoint deck (title + 3 content slides) |
-| `AST-EMPXXX-02.pdf` | PDF | Process compliance document |
-| `AST-EMPXXX-03.docx` | Word | Design specification document with metadata table |
-| `AST-EMPXXX-04.txt` | Text | Shift handoff notes |
-| `AST-EMPXXX-05.one` | OneNote | Notebook export (ZIP container with markdown + manifest) |
-| `AST-EMPXXX-06.xlsx` | Spreadsheet | Department-specific data tracker with styled headers |
-
-All file content is **department-aware** – Manufacturing employees get equipment OEE trackers, Finance employees get budget variance spreadsheets, R&D employees get experiment data logs, etc.
+| File | Type |
+|------|------|
+| `EML-EMPXXX.eml` | Email |
+| `AST-EMPXXX-01.pptx` | Presentation |
+| `AST-EMPXXX-02.pdf` | PDF |
+| `AST-EMPXXX-03.docx` | Word |
+| `AST-EMPXXX-04.txt` | Text |
+| `AST-EMPXXX-05.one` | OneNote export |
+| `AST-EMPXXX-06.xlsx` | Spreadsheet |
+| `AST-EMPXXX-07.csv` | CSV metrics export |
+| `AST-EMPXXX-08.md` | Markdown knowledge notes |
 
 ### Regenerating files
-
 ```bash
 pip install python-pptx python-docx openpyxl reportlab
 python scripts/generate_employee_files.py
 ```
 
-The script is idempotent – it skips files that already exist. Delete individual files (or the whole `data/employees/` directory) to force regeneration.
-
-### xlsx additions to JSON
-
-`data/digital_assets.json` was extended with 100 `AST-EMPXXX-06` spreadsheet entries (one per employee) and `data/parsed_documents_cosmosdb.json` was extended with matching parse records. Both files now contain **600 entries each**.
-
 ## Upload Workflow – Datasource Ingestion
-
-The workflow `.github/workflows/upload-employee-assets.yml` uploads all employee assets from `data/employees/` to the Azure Blob Storage container that the Fabric data pipeline monitors.
-
-### How it works
-
-1. **`load-config` job** – reads _all_ configuration from config files (zero hardcoded values):
-   - `config/workflows.json` → Python version, local assets path, secret names, Azure CLI version
-   - `config/fabric-settings.json` → target blob container (`storage.inputContainer`)
-   - `data/storage_map.json` → blob path template (`onedriveIngestionPathTemplate`)
-2. **`upload-assets` job** – authenticates with Azure via OIDC, then uploads every file to `{container}/{employeeId}/{filename}` using Azure CLI.
-
-### Triggers
-
-| Trigger | Behaviour |
-|---------|-----------|
-| `push` to `main` (paths: `data/employees/**`) | Automatically uploads changed assets |
-| `workflow_dispatch` with `dry_run: false` | Manual full upload |
-| `workflow_dispatch` with `dry_run: true` | Lists files that would be uploaded without uploading |
-
-### Required GitHub secrets
-
-| Secret name | Description |
-|-------------|-------------|
-| `AZURE_CREDENTIALS` | Azure service principal JSON (for `azure/login`) |
-| `AZURE_STORAGE_ACCOUNT` | Storage account name (no endpoint URL – just the account name) |
-
-> **Note on secret names:** GitHub Actions requires secrets to be referenced with static names in YAML for security (dynamic secret lookup would expose all repository secrets to the runner). The secret names `AZURE_CREDENTIALS` and `AZURE_STORAGE_ACCOUNT` are documented in `config/workflows.json` under `upload.azureCredentialsSecretName` and `upload.storageAccountSecretName` for reference. All other workflow settings (container name, local path, Python version, path template) are fully config-driven.
-
-### Configuration reference (`config/workflows.json → upload`)
-
-```jsonc
-"upload": {
-  "pythonVersion": "3.12",          // Python version for the runner
-  "localAssetsPath": "data/employees",  // relative path to asset files
-  "fabricSettingsFile": "config/fabric-settings.json",  // container name source
-  "storageMapFile": "data/storage_map.json",            // path template source
-  "azureCliVersion": "2.x",
-  "azureCredentialsSecretName": "AZURE_CREDENTIALS",    // GitHub secret name
-  "storageAccountSecretName": "AZURE_STORAGE_ACCOUNT"  // GitHub secret name
-}
-```
+`.github/workflows/upload-employee-assets.yml` uploads all generated employee assets from `data/employees/` to Azure Blob Storage.
 
 ## Data Pipeline in Microsoft Fabric
 ![Data Pipeline Diagram](docs/data-pipeline-diagram.svg)
-
-Pipeline artifacts:
-- `fabric/dataflows/employee_ingestion_dataflow.json`
-- `fabric/pipelines/employee_knowledge_pipeline.json`
 
 Flow summary:
 1. Ingest from Azure Blob/File into OneLake staging
@@ -213,8 +146,7 @@ Flow summary:
 5. Refresh semantic model for analytics and agent experiences
 
 ## Document Intelligence & Confidence Scoring
-Parsed output is persisted in:
-- `data/parsed_documents_cosmosdb.json`
+Parsed output is persisted in `data/parsed_documents_cosmosdb.json`.
 
 Each document record includes:
 - `documentConfidence`
@@ -223,21 +155,11 @@ Each document record includes:
 - `sectionConfidence.entities`
 - employee ownership and classification category
 
-This enables confidence rollups **by field section and by document**.
-
-Default threshold note:
-- `config/fabric-settings.json` sets `confidenceThreshold` to `0.72` as a balanced demo baseline.
-- Increase threshold for stricter quality gating; lower it when recall/coverage is more important.
-
 ## Semantic Model & ERD
 ![Semantic Model ERD](docs/semantic-model-erd.svg)
 
 Semantic model definition:
 - `fabric/semantic-model/employee_knowledge_semantic_model.json`
-
-Fact/Dimension layout:
-- Facts: parsing confidence, employee asset activity
-- Dimensions: employee, department, asset type, date
 
 ## Fabric IQ Ontology
 ![Ontology Diagram](docs/ontology-diagram.svg)
@@ -246,75 +168,92 @@ Ontology artifacts:
 - `fabric/ontology/fabric_iq_ontology.json`
 - `config/ontology-config.json`
 
-Core business entities are linked to OneLake graph-oriented tables for query and agent grounding.
-
 ## Fabric Data Agent
-Data agent package metadata is defined in:
+Agent package metadata:
 - `fabric/agents/employee_knowledge_agent.json`
 
-Includes **20 sample prompts** for employee-knowledge analysis (copy/execute scenarios for chat UX).
+The 20 sample prompts are now citation-oriented and explicitly instruct responses to include:
+- `documentId`
+- `cosmosDbRecordId`
+- `storageRef.relativePath`
 
 ## Ionic + Angular + TypeScript UI
-UI scaffold is located in:
+UI scaffold:
 - `ui/ionic-angular/`
 
-Implemented pages with left navigation:
-- Data Sources (employee assets + org hierarchy)
-- Ingestion & Intelligence (Fabric flow + parsing layer)
-- Data Agent Prompts (copy/execute prompt interactions)
-- Agent Packaging (zip export + Teams/Copilot import)
+Implemented page capabilities:
+- **Data Sources**: employee + asset search autocomplete, filtering, pagination, and asset list browsing
+- **Document Viewer**: in-browser preview flow for pptx/docx/pdf/one/txt/eml/csv/md (with format-aware rendering strategy)
+- **Ingestion & Intelligence**: Fabric pipeline and intelligence layer narrative
+- **Data Agent Prompts**: prompt interactions aligned with citation requirements
+- **Agent Packaging**: Teams/Copilot packaging flow
 
-Responsive behavior is included for:
-- **Web** (3-column content emphasis)
-- **Tablet** (2-column layout)
-- **Mobile** (single-column stack)
-
-Preview page for quick visual:
+Preview page:
 - `docs/ui-preview.html`
 
-UI screenshot:
-![UI Screenshot](docs/ui-screenshot.png)
+## Reusable Azure Hosting Resources (ai-myaacoub)
+This repository now includes reusable hosting/network metadata under:
+- `config/azure-hosting-resources.json`
+
+Configured references include:
+- Resource group: `ai-myaacoub`
+- UI web app: `foundry-privatevnet-ui` (public)
+- API web app: `foundry-privatevnet-api`
+- APIM: `ai-gateway-apim-poc-my`
+- AI Search: `aisearch-poc-myaacoub`
+- Foundry account: `002-ai-poc-private`
+- Cosmos DB: `cosmos-ai-poc`
+- Storage account: `aistoragemyaacoub`
+- Existing VNet and private endpoint naming guidance
+
+## Managed Identity Setup
+Use managed identities for app-to-data-plane access instead of secrets.
+
+1. Enable **System Assigned Managed Identity** on app hosts (API/UI or backend workers).
+2. Grant least-privilege RBAC on required resources:
+   - Storage: `Storage Blob Data Reader/Contributor` as needed
+   - Cosmos DB: `Cosmos DB Built-in Data Reader/Contributor` as needed
+   - APIM/Foundry integrations: only required role scopes
+3. Remove embedded credentials from app settings and use Entra token-based auth.
+4. Validate token acquisition and resource access paths before production rollout.
+
+## Private Networking Model
+Private connectivity is expected for all data-plane services except UI exposure.
+
+Policy flags are in `config/fabric-settings.json`:
+- `networking.usePrivateEndpoints = true`
+- `networking.useExistingVnet = true`
+- `networking.uiInternetExposed = true`
+
+Expected pattern:
+- **Private**: Storage, Cosmos DB, AI Search, Foundry
+- **Public**: UI endpoint only
+
+## Prompt Catalog
+Prompt requirements are consolidated and organized in:
+- `docs/prompts.txt`
+
+This file includes:
+- Original baseline scope requirements
+- New enhancement requirements
+- Citation behavior requirements for prompts/agent responses
 
 ## Teams & Copilot Agent Packaging Steps
 1. Export agent definition from `fabric/agents/employee_knowledge_agent.json`
 2. Package as `FabricEmployeeKnowledgeAgent.zip`
 3. Open Teams Developer Portal: <https://dev.teams.microsoft.com>
-4. Import the zip package as a custom agent/app
+4. Import zip package as custom agent/app
 5. Validate prompt execution and data access permissions
 6. Publish for Teams and Microsoft Copilot usage
 
 ## GitHub Workflows
-Workflows are split for fast, dependency-aware execution:
-
-- `.github/workflows/ci.yml`
-  - `load-config` job reads all workflow/runtime settings from `config/workflows.json`
-  - Parallel validation jobs:
-    - `validate-json`
-    - `validate-ui-scaffold`
-    - `terraform-fmt-validate`
-
-- `.github/workflows/deploy.yml`
-  - `load-config` reads deploy settings from `config/workflows.json`
-  - `package-fabric-bundle` and `terraform-plan` run in parallel
-  - `terraform-apply` runs only when `workflow_dispatch` input `apply=true` and after dependencies succeed
-
-- `.github/workflows/upload-employee-assets.yml`
-  - `load-config` reads upload settings from `config/workflows.json`, `config/fabric-settings.json`, and `data/storage_map.json`
-  - `upload-assets` authenticates with Azure via OIDC and uploads all files under `data/employees/` to the configured Azure Blob container
-  - Supports `dry_run` mode (lists files without uploading)
-  - Triggered automatically on `push` to `main` when files under `data/employees/**` change
-
-All component-specific workflow configuration is centralized in:
-- `config/workflows.json`
+- `.github/workflows/ci.yml`: JSON/UI/Terraform validation checks
+- `.github/workflows/deploy.yml`: deployment packaging and Terraform plan/apply flow
+- `.github/workflows/upload-employee-assets.yml`: asset upload to Azure Blob, with dry-run mode
 
 ## Terraform Deployment
-Terraform resources are in `terraform/` and use variables from:
+Terraform resources are in `terraform/` and use values from:
 - `config/terraform.tfvars.json`
-
-Provisioned components:
-- Azure Resource Group
-- Azure Storage Account + raw/processed containers
-- Azure Cosmos DB account + SQL database + SQL container
 
 Typical commands:
 ```bash
@@ -326,12 +265,12 @@ terraform apply -var-file=../config/terraform.tfvars.json
 
 ## Best Practices
 - Keep endpoints and IDs in `/config` only
-- Keep workflow behavior/runtime values in `config/workflows.json` instead of workflow YAML
-- Use staged zones (raw → processed → curated) in OneLake
+- Prefer managed identities over secret-based access
+- Keep private endpoints and VNet boundaries for data-plane services
+- Expose only UI publicly when required
 - Track confidence metrics for governance and reprocessing
-- Separate semantic model and ontology concerns for maintainability
-- Maintain prompt catalog for reusable business query patterns
-- Keep UI responsive and task-oriented for different device classes
+- Maintain a prompt catalog with explicit citation expectations
+- Keep UI responsive and task-oriented for web/tablet/mobile
 
 ## License
 See [LICENSE](LICENSE).

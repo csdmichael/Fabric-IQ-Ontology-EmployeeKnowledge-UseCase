@@ -1,9 +1,12 @@
 {
   "azure": {
-    "blobStorageEndpoint": "https://{storageAccount}.blob.core.windows.net",
-    "fileStorageEndpoint": "https://{storageAccount}.file.core.windows.net",
-    "cosmosDbEndpoint": "https://{cosmosAccount}.documents.azure.com:443/",
-    "documentIntelligenceEndpoint": "https://{docIntelResource}.cognitiveservices.azure.com/"
+    "blobStorageEndpoint": "https://aistoragemyaacoub.blob.core.windows.net",
+    "fileStorageEndpoint": "https://aistoragemyaacoub.file.core.windows.net",
+    "cosmosDbEndpoint": "https://cosmos-ai-poc.documents.azure.com:443/",
+    "documentIntelligenceEndpoint": "https://{docIntelResource}.cognitiveservices.azure.com/",
+    "aiSearchEndpoint": "https://aisearch-poc-myaacoub.search.windows.net",
+    "apiManagementGateway": "https://ai-gateway-apim-poc-my.azure-api.net",
+    "foundryProjectEndpoint": "https://002-ai-poc-private.services.ai.azure.com/api/projects/proj-default"
   },
   "microsoftFabric": {
     "workspaceId": "{fabricWorkspaceId}",
@@ -15,5 +18,9 @@
   "integration": {
     "teamsDevPortalUrl": "https://dev.teams.microsoft.com",
     "copilotStudioUrl": "https://copilotstudio.microsoft.com"
+  },
+  "hosting": {
+    "uiPublicUrl": "https://foundry-privatevnet-ui.azurewebsites.net",
+    "apiUrl": "https://foundry-privatevnet-api.azurewebsites.net"
   }
 }

@@ -1,0 +1,11 @@
+title,Vendor Comparison
+employee,Alex Garcia
+department,Procurement
+role,Senior Engineer
+date,2025-01-12
+
+Vendor,Category,Score,On-Time %,Quality %,Spend YTD ($K)
+Acme Components,Semiconductors,4.2,97,99,1450
+GlobalParts Inc,Mechanical,3.8,91,96,820
+TechSupply Co,Electronics,4.5,99,98,2100
+CleanRoom Solutions,Consumables,3.6,88,95,340

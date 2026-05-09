@@ -12,6 +12,8 @@ Files generated per employee:
   AST-EMPXXX-04.txt       (plain text notes)
   AST-EMPXXX-05.one       (onenote notebook placeholder)
   AST-EMPXXX-06.xlsx      (spreadsheet)
+  AST-EMPXXX-07.csv       (csv export)
+  AST-EMPXXX-08.md        (markdown knowledge notes)
 
 Usage:
   python scripts/generate_employee_files.py
@@ -20,6 +22,7 @@ Usage:
 import json
 import os
 import pathlib
+import csv
 import textwrap
 from datetime import datetime
 
@@ -546,9 +549,14 @@ def generate_one(path: pathlib.Path, emp: dict, asset: dict) -> None:
         f"{', '.join(emp.get('skills', []))}\n"
     )
 
+    emp_id = emp["employeeId"]
+    name_slug = emp["displayName"].lower().replace(" ", ".")
+    emp_suffix = emp_id.replace("EMP", "")
+    derived_sender = f"{name_slug}{emp_suffix}@lamresearch.example.com"
+
     manifest = json.dumps({
         "notebookName": title,
-        "exportedBy": emp["email"],
+        "exportedBy": derived_sender,
         "exportDate": date_str,
         "format": "onenote-text-export",
     }, indent=2)
@@ -617,6 +625,54 @@ def generate_xlsx(path: pathlib.Path, emp: dict, asset: dict) -> None:
     wb.save(str(path))
 
 
+def generate_csv(path: pathlib.Path, emp: dict, asset: dict) -> None:
+    """Generate a .csv export file using department tracker headers/rows."""
+    dept = emp["department"]
+    dd = get_dept_data(dept)
+    headers = dd["xlsx_headers"]
+    rows = dd["xlsx_rows"]
+
+    with path.open("w", encoding="utf-8", newline="") as fh:
+        writer = csv.writer(fh)
+        writer.writerow(["title", dd["xlsx_title"]])
+        writer.writerow(["employee", emp["displayName"]])
+        writer.writerow(["department", dept])
+        writer.writerow(["role", emp["role"]])
+        writer.writerow(["date", asset.get("lastModified", "")])
+        writer.writerow([])
+        writer.writerow(headers)
+        for row in rows:
+            writer.writerow(row)
+
+
+def generate_md(path: pathlib.Path, emp: dict, asset: dict) -> None:
+    """Generate a markdown summary file for quick browser rendering."""
+    dept = emp["department"]
+    dd = get_dept_data(dept)
+    title = asset.get("title", f"Knowledge Summary - {emp['displayName']}")
+    date_str = asset.get("lastModified", "2025-01-01")
+    skills = ", ".join(emp.get("skills", []))
+
+    content = textwrap.dedent(f"""\
+    # {title}
+
+    - **Employee:** {emp['displayName']} ({emp['employeeId']})
+    - **Role / Department:** {emp['role']} / {dept}
+    - **Location:** {emp.get('location', '')}
+    - **Last Modified:** {date_str}
+    - **Skills:** {skills}
+
+    ## Department Focus Areas
+    - {dd['pptx_topics'][0]}
+    - {dd['pptx_topics'][1]}
+    - {dd['pptx_topics'][2]}
+
+    ## Notes
+    {dd['txt_notes']}
+    """)
+    path.write_text(content, encoding="utf-8")
+
+
 # ── main ─────────────────────────────────────────────────────────────────────
 
 def main() -> None:
@@ -663,6 +719,10 @@ def main() -> None:
                     generate_one(out, emp, asset)
                 elif fmt == "xlsx":
                     generate_xlsx(out, emp, asset)
+                elif fmt == "csv":
+                    generate_csv(out, emp, asset)
+                elif fmt == "md":
+                    generate_md(out, emp, asset)
                 else:
                     out.write_text(f"# Placeholder for {fname}\n", encoding="utf-8")
                 generated += 1
