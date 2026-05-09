@@ -1,0 +1,222 @@
+[
+  {
+    "projectId": "PRJ001",
+    "name": "NextGen Etch Process Automation",
+    "description": "Automate wafer etch process control using ML-based anomaly detection to reduce defect rates and improve equipment uptime.",
+    "department": "Manufacturing",
+    "status": "Active",
+    "startDate": "2024-01-15",
+    "endDate": null,
+    "employeeIds": ["EMP001", "EMP003", "EMP007", "EMP012", "EMP028"],
+    "skills": ["MLOps", "Python", "Azure AI", "Manufacturing"]
+  },
+  {
+    "projectId": "PRJ002",
+    "name": "Employee Knowledge Graph Platform",
+    "description": "Build a Microsoft Fabric-powered ontology and knowledge graph indexing all employee skills, documents, and org relationships.",
+    "department": "IT",
+    "status": "Active",
+    "startDate": "2024-02-01",
+    "endDate": null,
+    "employeeIds": ["EMP002", "EMP004", "EMP009", "EMP015", "EMP031", "EMP047"],
+    "skills": ["Fabric", "Ontology", "Power BI", "Azure AI", "TypeScript"]
+  },
+  {
+    "projectId": "PRJ003",
+    "name": "Global HR Analytics Dashboard",
+    "description": "Deliver a real-time HR analytics suite covering headcount trends, attrition prediction, and talent gap analysis across all regions.",
+    "department": "HR",
+    "status": "Active",
+    "startDate": "2024-03-10",
+    "endDate": null,
+    "employeeIds": ["EMP002", "EMP006", "EMP018", "EMP033", "EMP052"],
+    "skills": ["Power BI", "Synapse", "Python", "Kusto"]
+  },
+  {
+    "projectId": "PRJ004",
+    "name": "Semiconductor Yield Improvement Initiative",
+    "description": "Cross-functional project to identify root causes of below-spec yield using statistical process control and AI-driven root cause analysis.",
+    "department": "R&D",
+    "status": "Active",
+    "startDate": "2023-11-01",
+    "endDate": null,
+    "employeeIds": ["EMP005", "EMP011", "EMP022", "EMP038", "EMP061", "EMP074"],
+    "skills": ["Python", "MLOps", "Azure AI", "Manufacturing", "Ontology"]
+  },
+  {
+    "projectId": "PRJ005",
+    "name": "Procurement Cost Optimization",
+    "description": "Leverage AI-driven spend analysis and supplier benchmarking to reduce procurement costs by 12% within fiscal year.",
+    "department": "Procurement",
+    "status": "Active",
+    "startDate": "2024-04-01",
+    "endDate": null,
+    "employeeIds": ["EMP008", "EMP016", "EMP029", "EMP045"],
+    "skills": ["Power BI", "Python", "Synapse"]
+  },
+  {
+    "projectId": "PRJ006",
+    "name": "Private AI Foundry Integration",
+    "description": "Connect internal engineering systems to Azure AI Foundry via private endpoints and APIM gateway for secure model access.",
+    "department": "IT",
+    "status": "Active",
+    "startDate": "2024-05-15",
+    "endDate": null,
+    "employeeIds": ["EMP003", "EMP009", "EMP020", "EMP036", "EMP058"],
+    "skills": ["Azure AI", "TypeScript", "Fabric", "MLOps"]
+  },
+  {
+    "projectId": "PRJ007",
+    "name": "Safety Compliance Digitization",
+    "description": "Replace paper-based safety audit processes with a digital platform backed by Cosmos DB and document intelligence parsing.",
+    "department": "Operations",
+    "status": "Completed",
+    "startDate": "2023-06-01",
+    "endDate": "2024-02-28",
+    "employeeIds": ["EMP010", "EMP019", "EMP034", "EMP050"],
+    "skills": ["Python", "Azure AI", "Fabric"]
+  },
+  {
+    "projectId": "PRJ008",
+    "name": "Fab Equipment Digital Twin",
+    "description": "Create real-time digital twins of fabrication equipment using IoT telemetry and Azure Synapse analytics for predictive maintenance.",
+    "department": "Manufacturing",
+    "status": "Active",
+    "startDate": "2024-01-01",
+    "endDate": null,
+    "employeeIds": ["EMP001", "EMP013", "EMP024", "EMP041", "EMP065", "EMP083"],
+    "skills": ["Azure AI", "Synapse", "Python", "MLOps"]
+  },
+  {
+    "projectId": "PRJ009",
+    "name": "Talent Mobility & Reskilling Program",
+    "description": "Identify internal talent redeployment opportunities using skill ontology matching and recommend reskilling paths via AI copilot.",
+    "department": "HR",
+    "status": "Active",
+    "startDate": "2024-06-01",
+    "endDate": null,
+    "employeeIds": ["EMP002", "EMP014", "EMP026", "EMP043", "EMP067"],
+    "skills": ["Ontology", "Fabric", "Power BI", "Azure AI"]
+  },
+  {
+    "projectId": "PRJ010",
+    "name": "OneLake Semantic Layer Rollout",
+    "description": "Standardize enterprise data products on OneLake with governed semantic models and certified dataset publishing for all business units.",
+    "department": "IT",
+    "status": "Active",
+    "startDate": "2024-03-01",
+    "endDate": null,
+    "employeeIds": ["EMP004", "EMP009", "EMP021", "EMP037", "EMP054", "EMP072"],
+    "skills": ["Fabric", "Power BI", "Synapse", "Kusto"]
+  },
+  {
+    "projectId": "PRJ011",
+    "name": "Global Supply Chain Visibility",
+    "description": "Integrate supplier EDI feeds, logistics APIs, and ERP data into a unified supply chain monitoring dashboard with AI alerting.",
+    "department": "Procurement",
+    "status": "Planning",
+    "startDate": "2024-09-01",
+    "endDate": null,
+    "employeeIds": ["EMP008", "EMP017", "EMP030", "EMP046", "EMP069"],
+    "skills": ["Python", "Synapse", "Power BI", "Azure AI"]
+  },
+  {
+    "projectId": "PRJ012",
+    "name": "Plasma Process ML Optimization",
+    "description": "Apply reinforcement learning to continuously tune plasma etch recipe parameters for optimal uniformity and selectivity.",
+    "department": "R&D",
+    "status": "Active",
+    "startDate": "2023-09-01",
+    "endDate": null,
+    "employeeIds": ["EMP005", "EMP023", "EMP039", "EMP060", "EMP076"],
+    "skills": ["MLOps", "Python", "Azure AI"]
+  },
+  {
+    "projectId": "PRJ013",
+    "name": "Internal Copilot for Engineering",
+    "description": "Deploy a Microsoft Copilot Studio agent grounded on internal engineering documentation, spec sheets, and failure analysis reports.",
+    "department": "IT",
+    "status": "Active",
+    "startDate": "2024-07-01",
+    "endDate": null,
+    "employeeIds": ["EMP003", "EMP009", "EMP025", "EMP042", "EMP063", "EMP080"],
+    "skills": ["Azure AI", "Fabric", "Ontology", "TypeScript"]
+  },
+  {
+    "projectId": "PRJ014",
+    "name": "Finance Reporting Modernization",
+    "description": "Migrate legacy Finance reporting from on-prem SSRS to Power BI with live Synapse connections and certified KPI definitions.",
+    "department": "Finance",
+    "status": "Completed",
+    "startDate": "2023-04-01",
+    "endDate": "2024-01-31",
+    "employeeIds": ["EMP015", "EMP027", "EMP044", "EMP062"],
+    "skills": ["Power BI", "Synapse", "Kusto"]
+  },
+  {
+    "projectId": "PRJ015",
+    "name": "Cleanroom Environmental Monitoring",
+    "description": "Deploy IoT-based environmental sensors across cleanroom facilities and build a real-time alerting platform for airborne particle thresholds.",
+    "department": "Operations",
+    "status": "Active",
+    "startDate": "2024-02-15",
+    "endDate": null,
+    "employeeIds": ["EMP010", "EMP032", "EMP048", "EMP070", "EMP087"],
+    "skills": ["Azure AI", "Python", "Synapse"]
+  },
+  {
+    "projectId": "PRJ016",
+    "name": "Document Intelligence Parsing Pipeline",
+    "description": "Automate extraction and classification of engineering documents using Azure AI Document Intelligence with confidence-scored output to Cosmos DB.",
+    "department": "IT",
+    "status": "Completed",
+    "startDate": "2023-08-01",
+    "endDate": "2024-03-31",
+    "employeeIds": ["EMP003", "EMP007", "EMP020", "EMP035", "EMP055"],
+    "skills": ["Azure AI", "Python", "Fabric", "MLOps"]
+  },
+  {
+    "projectId": "PRJ017",
+    "name": "Enterprise Search & Knowledge Retrieval",
+    "description": "Implement Azure AI Search over OneLake and Cosmos DB to enable semantic search across all employee knowledge artifacts and project content.",
+    "department": "IT",
+    "status": "Active",
+    "startDate": "2024-05-01",
+    "endDate": null,
+    "employeeIds": ["EMP004", "EMP009", "EMP022", "EMP040", "EMP059", "EMP078"],
+    "skills": ["Azure AI", "Fabric", "Python", "TypeScript", "Ontology"]
+  },
+  {
+    "projectId": "PRJ018",
+    "name": "Sustainability & Carbon Footprint Tracking",
+    "description": "Build an ESG data platform tracking energy consumption, water usage, and carbon emissions across all Lam Research manufacturing sites.",
+    "department": "Operations",
+    "status": "Planning",
+    "startDate": "2024-10-01",
+    "endDate": null,
+    "employeeIds": ["EMP010", "EMP018", "EMP031", "EMP049", "EMP068"],
+    "skills": ["Power BI", "Synapse", "Python"]
+  },
+  {
+    "projectId": "PRJ019",
+    "name": "Wafer Metrology Data Lake",
+    "description": "Centralize wafer metrology measurements from multiple fab tools into a governed OneLake data lake with lineage tracking and quality gates.",
+    "department": "R&D",
+    "status": "Active",
+    "startDate": "2024-01-20",
+    "endDate": null,
+    "employeeIds": ["EMP005", "EMP011", "EMP024", "EMP038", "EMP057", "EMP075", "EMP090"],
+    "skills": ["Fabric", "Synapse", "Python", "Kusto"]
+  },
+  {
+    "projectId": "PRJ020",
+    "name": "Workforce Planning & Scenario Modelling",
+    "description": "Build a scenario modelling tool enabling HR and Finance to simulate headcount growth, skill gap evolution, and budget impact for 3-year plans.",
+    "department": "HR",
+    "status": "Planning",
+    "startDate": "2024-11-01",
+    "endDate": null,
+    "employeeIds": ["EMP002", "EMP006", "EMP014", "EMP027", "EMP044", "EMP066"],
+    "skills": ["Power BI", "Python", "Fabric", "Synapse"]
+  }
+]

@@ -9,6 +9,7 @@
 - [Deployment & Component URLs](#deployment--component-urls)
 - [Synthetic Data Design](#synthetic-data-design)
 - [Employee Asset Generation](#employee-asset-generation)
+- [Project Data](#project-data)
 - [Upload Workflow – Datasource Ingestion](#upload-workflow--datasource-ingestion)
 - [Data Pipeline in Microsoft Fabric](#data-pipeline-in-microsoft-fabric)
 - [Document Intelligence & Confidence Scoring](#document-intelligence--confidence-scoring)
@@ -60,6 +61,7 @@ It includes:
 │   ├── digital_assets.json
 │   ├── emails.json
 │   ├── org_hierarchy.json
+│   ├── projects.json
 │   ├── parsed_documents_cosmosdb.json
 │   ├── storage_map.json
 │   └── employees/
@@ -103,7 +105,7 @@ All platform endpoints and runtime options are centralized in `/config`:
 ## Deployment & Component URLs
 | Component | URL / Link | Source |
 |---|---|---|
-| UI Web App | https://foundry-privatevnet-ui.azurewebsites.net | `config/endpoints.json` (`hosting.uiPublicUrl`) |
+| UI Web App | https://fabric-iq-emp-knowledge-ui.azurewebsites.net | `config/endpoints.json` (`hosting.uiPublicUrl`) |
 | API Web App | https://foundry-privatevnet-api.azurewebsites.net | `config/endpoints.json` (`hosting.apiUrl`) |
 | API Management Gateway | https://ai-gateway-apim-poc-my.azure-api.net | `config/endpoints.json` (`azure.apiManagementGateway`) |
 | Azure Blob Storage Endpoint | https://aistoragemyaacoub.blob.core.windows.net | `config/endpoints.json` (`azure.blobStorageEndpoint`) |
@@ -148,6 +150,26 @@ Primary files:
 pip install python-pptx python-docx openpyxl reportlab
 python scripts/generate_employee_files.py
 ```
+
+## Project Data
+`data/projects.json` contains **20 synthetic projects** spanning all departments and employee groups.
+
+Each project record includes:
+- `projectId` – unique identifier (e.g. `PRJ001`)
+- `name` – descriptive project title
+- `description` – business context and goals
+- `department` – owning department (Manufacturing, R&D, IT, HR, Procurement, Operations, Finance)
+- `status` – `Active`, `Completed`, or `Planning`
+- `startDate` / `endDate` – ISO-8601 dates (endDate is `null` for ongoing projects)
+- `employeeIds` – list of assigned employees (3–7 per project)
+- `skills` – required skills matching the employee skill ontology
+
+The ontology edge `Employee → CONTRIBUTES_TO → Project` is defined in:
+- `fabric/ontology/fabric_iq_ontology.json`
+- `config/ontology-config.json`
+
+Project data is uploaded to `employee-knowledge-raw/projects.json` on Azure Blob Storage and ingested by the `IngestProjectData` pipeline activity.
+
 
 ## Upload Workflow – Datasource Ingestion
 `.github/workflows/upload-employee-assets.yml` uploads all generated employee assets from `data/employees/` to Azure Blob Storage.
@@ -200,6 +222,7 @@ UI scaffold:
 
 Implemented page capabilities:
 - **Data Sources**: employee + asset search autocomplete, filtering, pagination, and asset list browsing
+- **Projects**: browse 20 employee-linked projects; filter by department/status; view team assignments and required skills
 - **Document Viewer**: in-browser preview flow for pptx/docx/pdf/one/txt/eml/csv/md (with format-aware rendering strategy)
 - **Ingestion & Intelligence**: Fabric pipeline and intelligence layer narrative
 - **Data Agent Prompts**: prompt interactions aligned with citation requirements
@@ -214,7 +237,7 @@ This repository now includes reusable hosting/network metadata under:
 
 Configured references include:
 - Resource group: `ai-myaacoub`
-- UI web app: `foundry-privatevnet-ui` (public)
+- UI web app: `fabric-iq-emp-knowledge-ui` (new, dedicated, public) — reuses `plan-taxforms` App Service Plan
 - API web app: `foundry-privatevnet-api`
 - APIM: `ai-gateway-apim-poc-my`
 - AI Search: `aisearch-poc-myaacoub`

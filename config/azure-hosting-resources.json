@@ -4,10 +4,10 @@
   "location": "eastus",
   "hosting": {
     "uiWebApp": {
-      "name": "foundry-privatevnet-ui",
-      "publicUrl": "https://foundry-privatevnet-ui.azurewebsites.net",
+      "name": "fabric-iq-emp-knowledge-ui",
+      "publicUrl": "https://fabric-iq-emp-knowledge-ui.azurewebsites.net",
       "internetExposed": true,
-      "notes": "UI is public by design for end-user access."
+      "notes": "New dedicated UI app service for Fabric IQ Employee Knowledge demo. Does not share with other apps."
     },
     "apiWebApp": {
       "name": "foundry-privatevnet-api",

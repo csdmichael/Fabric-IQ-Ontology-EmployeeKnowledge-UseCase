@@ -12,6 +12,7 @@ on:
       - main
     paths:
       - "data/employees/**"
+      - "data/projects.json"
 
 permissions:
   contents: read
@@ -167,3 +168,20 @@ jobs:
           echo "| Local path | ${{ needs.load-config.outputs.local_assets_path }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Dry run | ${{ github.event.inputs.dry_run || 'false' }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Trigger | ${{ github.event_name }} |" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload projects.json to Azure Blob Storage
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
+          STORAGE_CONTAINER: ${{ needs.load-config.outputs.storage_container }}
+        run: |
+          set -euo pipefail
+          az storage blob upload \
+            --account-name "$STORAGE_ACCOUNT" \
+            --container-name "$STORAGE_CONTAINER" \
+            --name "projects.json" \
+            --file "data/projects.json" \
+            --overwrite \
+            --auth-mode login \
+            --output none
+          echo "Uploaded data/projects.json -> ${STORAGE_CONTAINER}/projects.json"

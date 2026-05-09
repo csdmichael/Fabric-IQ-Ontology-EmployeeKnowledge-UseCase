@@ -34,6 +34,11 @@
       "from": "Employee",
       "to": "Skill",
       "relationship": "HAS"
+    },
+    {
+      "from": "Employee",
+      "to": "Project",
+      "relationship": "CONTRIBUTES_TO"
     }
   ],
   "onelakeLink": "/Lakehouses/EmployeeKnowledge/Lakehouse/Tables/OntologyGraph"

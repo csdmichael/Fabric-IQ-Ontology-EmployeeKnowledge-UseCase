@@ -154,3 +154,74 @@ jobs:
           set -euo pipefail
           terraform init
           terraform apply -auto-approve tfplan
+
+  deploy-ui:
+    if: ${{ github.event.inputs.apply == 'true' }}
+    needs:
+      - terraform-apply
+      - load-config
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Azure Login
+        if: ${{ secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '' }}
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID != '' && secrets.AZURE_SUBSCRIPTION_ID || needs.load-config.outputs.azure_subscription_id }}
+      - name: Azure Login (service principal JSON credentials fallback)
+        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '') && secrets.AZURE_CREDENTIALS != '' }}
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Validate Azure authentication inputs
+        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '') && secrets.AZURE_CREDENTIALS == '' }}
+        run: |
+          echo "Missing Azure auth configuration." >&2
+          echo "Set either AZURE_CLIENT_ID/AZURE_TENANT_ID[/AZURE_SUBSCRIPTION_ID] or AZURE_CREDENTIALS JSON secret." >&2
+          exit 1
+      - name: Upload projects.json to Azure Blob Storage
+        env:
+          STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
+        run: |
+          set -euo pipefail
+          az storage blob upload \
+            --account-name "$STORAGE_ACCOUNT" \
+            --container-name "employee-knowledge-raw" \
+            --name "projects.json" \
+            --file "data/projects.json" \
+            --overwrite \
+            --auth-mode login \
+            --output none
+          echo "Uploaded data/projects.json -> employee-knowledge-raw/projects.json"
+      - name: Package UI for deployment
+        run: |
+          set -euo pipefail
+          UI_DIR="ui/ionic-angular"
+          # This UI is a demo scaffold. In a production pipeline replace the steps below with:
+          #   npm ci --prefix "$UI_DIR"
+          #   npm run build --prefix "$UI_DIR"   # ionic build → dist/
+          # and zip the dist/ output instead.
+          # For the demo we package the static source assets (config, data, src) directly so
+          # the app service can serve them via a static-file host or custom server.
+          mkdir -p "$UI_DIR/dist-deploy/config" "$UI_DIR/dist-deploy/data"
+          cp config/endpoints.json "$UI_DIR/dist-deploy/config/endpoints.json"
+          cp data/employees.json data/digital_assets.json data/projects.json "$UI_DIR/dist-deploy/data/"
+          # Copy UI source files into deployment root
+          cp -r "$UI_DIR/src/." "$UI_DIR/dist-deploy/"
+          cd "$UI_DIR/dist-deploy"
+          zip -r ../ui-deployment.zip .
+      - name: Deploy UI to App Service
+        env:
+          UI_APP_NAME: fabric-iq-emp-knowledge-ui
+          RESOURCE_GROUP: ai-myaacoub
+        run: |
+          set -euo pipefail
+          az webapp deploy \
+            --resource-group "$RESOURCE_GROUP" \
+            --name "$UI_APP_NAME" \
+            --src-path "ui/ionic-angular/ui-deployment.zip" \
+            --type zip \
+            --async false
+          echo "UI deployed to https://${UI_APP_NAME}.azurewebsites.net"

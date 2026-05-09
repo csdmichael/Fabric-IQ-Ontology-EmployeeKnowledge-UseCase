@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   readonly pages = [
     { title: 'Data Sources', url: '/data-sources' },
+    { title: 'Projects', url: '/projects' },
     { title: 'Ingestion & Intelligence', url: '/ingestion-flow' },
     { title: 'Data Agent Prompts', url: '/agent-prompts' },
     { title: 'Agent Packaging', url: '/agent-package' }

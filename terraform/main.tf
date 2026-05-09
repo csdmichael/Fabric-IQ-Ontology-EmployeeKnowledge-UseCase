@@ -63,3 +63,41 @@ resource "azurerm_cosmosdb_sql_container" "parsed_documents" {
     indexing_mode = "consistent"
   }
 }
+
+# ── UI App Service (new, dedicated) ────────────────────────────────────────
+# Looks up the existing App Service Plan in ai-myaacoub (not managed by this
+# Terraform workspace) and creates a new web app that shares it.
+data "azurerm_resource_group" "ui" {
+  name = var.ui_resource_group_name
+}
+
+data "azurerm_service_plan" "ui" {
+  name                = var.ui_app_service_plan_name
+  resource_group_name = data.azurerm_resource_group.ui.name
+}
+
+resource "azurerm_linux_web_app" "ui" {
+  name                = var.ui_app_service_name
+  resource_group_name = data.azurerm_resource_group.ui.name
+  location            = data.azurerm_resource_group.ui.location
+  service_plan_id     = data.azurerm_service_plan.ui.id
+
+  site_config {
+    # always_on = false is appropriate for this demo environment to stay within
+    # the B1 SKU free quota. Set to true for production workloads to eliminate cold starts.
+    always_on = false
+
+    application_stack {
+      node_version = "20-lts"
+    }
+  }
+
+  app_settings = {
+    "WEBSITE_RUN_FROM_PACKAGE" = "1"
+    "SCM_DO_BUILD_DURING_DEPLOYMENT" = "false"
+  }
+
+  https_only = true
+
+  tags = var.tags
+}
