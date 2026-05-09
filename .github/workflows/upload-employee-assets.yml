@@ -25,9 +25,6 @@ jobs:
       local_assets_path: ${{ steps.read.outputs.local_assets_path }}
       storage_container: ${{ steps.read.outputs.storage_container }}
       ingestion_path_template: ${{ steps.read.outputs.ingestion_path_template }}
-      azure_cli_version: ${{ steps.read.outputs.azure_cli_version }}
-      azure_credentials_secret: ${{ steps.read.outputs.azure_credentials_secret }}
-      storage_account_secret: ${{ steps.read.outputs.storage_account_secret }}
     steps:
       - uses: actions/checkout@v4
 
@@ -36,16 +33,13 @@ jobs:
         run: |
           set -euo pipefail
 
-          # Read all upload settings from config/workflows.json (no hardcoding)
+          # Read runtime settings from config/workflows.json (no hardcoding in YAML)
           python_version=$(jq -r '.upload.pythonVersion' config/workflows.json)
           local_assets_path=$(jq -r '.upload.localAssetsPath' config/workflows.json)
-          azure_cli_version=$(jq -r '.upload.azureCliVersion' config/workflows.json)
-          azure_credentials_secret=$(jq -r '.upload.azureCredentialsSecretName' config/workflows.json)
-          storage_account_secret=$(jq -r '.upload.storageAccountSecretName' config/workflows.json)
           fabric_settings_file=$(jq -r '.upload.fabricSettingsFile' config/workflows.json)
           storage_map_file=$(jq -r '.upload.storageMapFile' config/workflows.json)
 
-          # Read container name from fabric-settings.json (referenced via workflow config)
+          # Read container name from fabric-settings.json (path referenced by workflow config)
           storage_container=$(jq -r '.storage.inputContainer' "$fabric_settings_file")
 
           # Read ingestion path template from storage_map.json
@@ -55,9 +49,6 @@ jobs:
           echo "local_assets_path=$local_assets_path" >> "$GITHUB_OUTPUT"
           echo "storage_container=$storage_container" >> "$GITHUB_OUTPUT"
           echo "ingestion_path_template=$ingestion_path_template" >> "$GITHUB_OUTPUT"
-          echo "azure_cli_version=$azure_cli_version" >> "$GITHUB_OUTPUT"
-          echo "azure_credentials_secret=$azure_credentials_secret" >> "$GITHUB_OUTPUT"
-          echo "storage_account_secret=$storage_account_secret" >> "$GITHUB_OUTPUT"
 
           echo "=== Resolved upload configuration ==="
           echo "  local_assets_path   : $local_assets_path"
@@ -74,28 +65,31 @@ jobs:
         with:
           python-version: ${{ needs.load-config.outputs.python_version }}
 
+      # Secret names are documented in config/workflows.json under upload.azureCredentialsSecretName
+      # and upload.storageAccountSecretName. They are referenced statically here (required by GitHub
+      # Actions security model – dynamic secret lookup exposes all secrets to the runner).
       - name: Azure Login
         uses: azure/login@v2
         with:
-          creds: ${{ secrets[needs.load-config.outputs.azure_credentials_secret] }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Upload employee assets to Azure Blob Storage
         env:
           LOCAL_ASSETS_PATH: ${{ needs.load-config.outputs.local_assets_path }}
           STORAGE_CONTAINER: ${{ needs.load-config.outputs.storage_container }}
           INGESTION_PATH_TEMPLATE: ${{ needs.load-config.outputs.ingestion_path_template }}
-          STORAGE_ACCOUNT: ${{ secrets[needs.load-config.outputs.storage_account_secret] }}
+          STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
           DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
         run: |
           set -euo pipefail
           python - <<'PY'
           import os, pathlib, subprocess, sys
 
-          local_root   = pathlib.Path(os.environ["LOCAL_ASSETS_PATH"])
-          container    = os.environ["STORAGE_CONTAINER"]
-          path_tmpl    = os.environ["INGESTION_PATH_TEMPLATE"]   # e.g. "{employeeId}/"
-          account      = os.environ["STORAGE_ACCOUNT"]
-          dry_run      = os.environ.get("DRY_RUN", "false").lower() == "true"
+          local_root    = pathlib.Path(os.environ["LOCAL_ASSETS_PATH"])
+          container     = os.environ["STORAGE_CONTAINER"]
+          path_tmpl     = os.environ["INGESTION_PATH_TEMPLATE"]   # e.g. "{employeeId}/"
+          account       = os.environ["STORAGE_ACCOUNT"]
+          dry_run       = os.environ.get("DRY_RUN", "false").lower() == "true"
 
           if not local_root.exists():
               raise SystemExit(f"Assets directory not found: {local_root}")
@@ -108,17 +102,17 @@ jobs:
               if not emp_dir.is_dir():
                   continue
 
-              emp_id    = emp_dir.name
+              emp_id      = emp_dir.name
               blob_prefix = path_tmpl.replace("{employeeId}", emp_id)
 
               for asset_file in sorted(emp_dir.iterdir()):
                   if not asset_file.is_file():
                       continue
 
-                  blob_path = f"{blob_prefix}{asset_file.name}"
+                  blob_name = f"{blob_prefix}{asset_file.name}"
 
                   if dry_run:
-                      print(f"[DRY-RUN] Would upload: {asset_file} -> {container}/{blob_path}")
+                      print(f"[DRY-RUN] Would upload: {asset_file.name} -> {container}/{blob_name}")
                       uploaded += 1
                       continue
 
@@ -126,7 +120,7 @@ jobs:
                       "az", "storage", "blob", "upload",
                       "--account-name", account,
                       "--container-name", container,
-                      "--name",          blob_path,
+                      "--name",          blob_name,
                       "--file",          str(asset_file),
                       "--overwrite",
                       "--auth-mode",     "login",
@@ -135,13 +129,13 @@ jobs:
 
                   result = subprocess.run(cmd, capture_output=True, text=True)
                   if result.returncode != 0:
-                      print(f"ERROR uploading {blob_path}: {result.stderr.strip()}", file=sys.stderr)
+                      print(f"ERROR uploading {blob_name}: {result.stderr.strip()}", file=sys.stderr)
                       errors += 1
                   else:
-                      print(f"Uploaded: {blob_path}")
+                      print(f"OK: {blob_name}")
                       uploaded += 1
 
-          print(f"\nSummary – uploaded: {uploaded}, errors: {errors}")
+          print(f"\nSummary - uploaded: {uploaded}, errors: {errors}")
           if errors:
               raise SystemExit(f"{errors} file(s) failed to upload.")
           PY

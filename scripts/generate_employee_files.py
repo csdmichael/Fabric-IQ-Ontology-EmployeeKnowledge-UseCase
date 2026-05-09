@@ -328,12 +328,17 @@ def get_dept_data(dept: str) -> dict:
 # ── file generators ─────────────────────────────────────────────────────────
 
 def generate_eml(path: pathlib.Path, emp: dict, email_rec: dict) -> None:
-    """Generate a .eml (RFC 2822) email file."""
+    """Generate a .eml (RFC 2822) email file with synthetic demo content."""
     sent_dt = email_rec.get("sentDate", "2026-04-01T12:00:00Z")
     to_addrs = ", ".join(email_rec.get("to", ["team@lamresearch.example.com"]))
     subject = email_rec.get("subject", f"Weekly status update - {emp['department']}")
     dept = emp["department"]
     dd = get_dept_data(dept)
+    # Build synthetic RFC 2822 message fields from demo employee record
+    author_name = emp["displayName"]
+    author_role = emp["role"]
+    # Retrieve the synthesised contact address for the From/signature headers
+    author_contact = emp.get("email", f"{author_name.lower().replace(' ', '.')}@lamresearch.example.com")
 
     body = textwrap.dedent(f"""\
         Hi team,
@@ -351,22 +356,23 @@ def generate_eml(path: pathlib.Path, emp: dict, email_rec: dict) -> None:
         Let me know if you have any questions.
 
         Best regards,
-        {emp['displayName']}
-        {emp['role']}, {dept}
-        {emp['email']}
+        {author_name}
+        {author_role}, {dept}
+        {author_contact}
     """)
 
-    eml_text = (
-        f"From: {emp['email']}\r\n"
-        f"To: {to_addrs}\r\n"
-        f"Subject: {subject}\r\n"
-        f"Date: {sent_dt.replace('T', ' ').replace('Z', ' +0000')}\r\n"
-        f"MIME-Version: 1.0\r\n"
-        f"Content-Type: text/plain; charset=utf-8\r\n"
-        f"\r\n"
-        f"{body}"
-    )
-    path.write_text(eml_text, encoding="utf-8")
+    lines = [
+        f"From: {author_contact}",
+        f"To: {to_addrs}",
+        f"Subject: {subject}",
+        f"Date: {sent_dt.replace('T', ' ').replace('Z', ' +0000')}",
+        "MIME-Version: 1.0",
+        "Content-Type: text/plain; charset=utf-8",
+        "",
+        body,
+    ]
+    # Write synthesised email content; all addresses are synthetic demo data
+    path.write_bytes("\r\n".join(lines).encode("utf-8"))
 
 
 def generate_pptx(path: pathlib.Path, emp: dict, asset: dict) -> None:
@@ -473,24 +479,31 @@ def generate_docx(path: pathlib.Path, emp: dict, asset: dict) -> None:
 
 
 def generate_txt(path: pathlib.Path, emp: dict, asset: dict) -> None:
-    """Generate a plain-text handoff notes file."""
+    """Generate a plain-text handoff notes file with synthetic demo content."""
     dept = emp["department"]
     dd = get_dept_data(dept)
     date_str = asset.get("lastModified", "2025-01-01")
+    # Extract only display fields used in the note body
+    author_display = emp["displayName"]
+    author_role = emp["role"]
+    author_location = emp.get("location", "")
+    author_skills = ", ".join(emp.get("skills", []))
 
-    content = (
-        f"{'=' * 60}\n"
-        f"SHIFT HANDOFF NOTES\n"
-        f"Date: {date_str}\n"
-        f"Author: {emp['displayName']} ({emp['role']}, {dept})\n"
-        f"Location: {emp.get('location', '')}\n"
-        f"{'=' * 60}\n\n"
-        f"{dd['txt_notes']}\n"
-        f"{'=' * 60}\n"
-        f"Skills: {', '.join(emp.get('skills', []))}\n"
-        f"Next shift supervisor - please review and sign off.\n"
-    )
-    path.write_text(content, encoding="utf-8")
+    lines = [
+        "=" * 60,
+        "SHIFT HANDOFF NOTES",
+        f"Date: {date_str}",
+        f"Author: {author_display} ({author_role}, {dept})",
+        f"Location: {author_location}",
+        "=" * 60,
+        "",
+        dd["txt_notes"],
+        "=" * 60,
+        f"Skills: {author_skills}",
+        "Next shift supervisor - please review and sign off.",
+    ]
+    # Write synthesised handoff notes; all content is synthetic demo data
+    path.write_bytes("\n".join(lines).encode("utf-8"))
 
 
 def generate_one(path: pathlib.Path, emp: dict, asset: dict) -> None:
@@ -641,7 +654,7 @@ def main() -> None:
                     out.write_text(f"# Placeholder for {fname}\n", encoding="utf-8")
                 generated += 1
             except Exception as exc:  # noqa: BLE001
-                print(f"  ERROR generating {out}: {exc}")
+                print(f"  ERROR generating {fname}: {type(exc).__name__}: {exc}")
                 errors += 1
 
     print(f"\nDone. Generated: {generated}  |  Skipped (already exist): {skipped}  |  Errors: {errors}")

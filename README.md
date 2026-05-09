@@ -182,7 +182,7 @@ The workflow `.github/workflows/upload-employee-assets.yml` uploads all employee
 | `AZURE_CREDENTIALS` | Azure service principal JSON (for `azure/login`) |
 | `AZURE_STORAGE_ACCOUNT` | Storage account name (no endpoint URL – just the account name) |
 
-The secret _names_ themselves are read from `config/workflows.json` (`upload.azureCredentialsSecretName` and `upload.storageAccountSecretName`) so they can be changed without editing the workflow YAML.
+> **Note on secret names:** GitHub Actions requires secrets to be referenced with static names in YAML for security (dynamic secret lookup would expose all repository secrets to the runner). The secret names `AZURE_CREDENTIALS` and `AZURE_STORAGE_ACCOUNT` are documented in `config/workflows.json` under `upload.azureCredentialsSecretName` and `upload.storageAccountSecretName` for reference. All other workflow settings (container name, local path, Python version, path template) are fully config-driven.
 
 ### Configuration reference (`config/workflows.json → upload`)
 
