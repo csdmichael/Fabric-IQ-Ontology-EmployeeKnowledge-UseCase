@@ -1,0 +1,11 @@
+title,Experiment Data Log
+employee,Casey Lee
+department,R&D
+role,Director
+date,2025-02-27
+
+Experiment ID,Hypothesis,Status,Outcome,Confidence,Next Steps
+EXP-2026-041,Low-temp deposition,Complete,Positive,0.87,IP disclosure
+EXP-2026-042,Novel etchant blend,In Progress,Pending,,Continue
+EXP-2026-043,Surface treatment A,Complete,Inconclusive,0.51,Redesign
+EXP-2026-044,Plasma optimisation,Planned,Pending,,Start Q3

@@ -1,0 +1,53 @@
+{
+  "subscriptionId": "86b37969-9445-49cf-b03f-d8866235171c",
+  "resourceGroup": "ai-myaacoub",
+  "location": "eastus",
+  "hosting": {
+    "uiWebApp": {
+      "name": "foundry-privatevnet-ui",
+      "publicUrl": "https://foundry-privatevnet-ui.azurewebsites.net",
+      "internetExposed": true,
+      "notes": "UI is public by design for end-user access."
+    },
+    "apiWebApp": {
+      "name": "foundry-privatevnet-api",
+      "url": "https://foundry-privatevnet-api.azurewebsites.net",
+      "internetExposed": false,
+      "notes": "Integrate via VNet route and private backend access patterns."
+    },
+    "appServicePlan": {
+      "name": "plan-taxforms",
+      "sku": "B1"
+    },
+    "apiManagement": {
+      "name": "ai-gateway-apim-poc-my",
+      "gatewayUrl": "https://ai-gateway-apim-poc-my.azure-api.net",
+      "resourceId": "/subscriptions/86b37969-9445-49cf-b03f-d8866235171c/resourceGroups/ai-myaacoub/providers/Microsoft.ApiManagement/service/ai-gateway-apim-poc-my"
+    }
+  },
+  "dataAndAi": {
+    "storageAccount": "aistoragemyaacoub",
+    "cosmosDbAccount": "cosmos-ai-poc",
+    "aiSearch": "aisearch-poc-myaacoub",
+    "foundryAccount": "002-ai-poc-private"
+  },
+  "networking": {
+    "vnetName": "vnet-salespoc-westus2",
+    "appServiceSubnet": "snet-appservice",
+    "privateEndpointSubnet": "snet-private-endpoints",
+    "privateEndpoints": {
+      "storageBlob": "pe-blob-westus2",
+      "cosmosSql": "pe-cosmos-westus2",
+      "sqlServer": "pe-sql-westus2"
+    },
+    "privateDnsZonesExpected": [
+      "privatelink.blob.core.windows.net",
+      "privatelink.documents.azure.com",
+      "privatelink.database.windows.net"
+    ]
+  },
+  "managedIdentity": {
+    "strategy": "system-assigned",
+    "notes": "Enable managed identity on hosted services, then assign least-privilege RBAC on Storage, Cosmos DB, and APIM/Foundry dependencies."
+  }
+}

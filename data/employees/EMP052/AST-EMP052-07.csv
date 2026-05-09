@@ -1,0 +1,11 @@
+title,Budget Tracker
+employee,Jordan Nguyen
+department,Finance
+role,Analyst
+date,2025-02-24
+
+Cost Centre,Budget ($K),Actual ($K),Variance ($K),Variance %,Status
+CC-1001 Engineering,2500,2380,120,4.8,Under
+CC-1002 Operations,1800,1920,-120,-6.7,Over
+CC-1003 R&D,3200,3100,100,3.1,Under
+CC-1004 IT,1200,1195,5,0.4,On Track

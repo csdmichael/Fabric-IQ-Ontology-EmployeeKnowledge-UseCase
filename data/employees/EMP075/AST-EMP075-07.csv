@@ -1,0 +1,11 @@
+title,System Resource Utilization
+employee,Casey Lee
+department,IT
+role,Lead
+date,2025-02-19
+
+Server,CPU %,Memory %,Disk %,Network (Mbps),Status
+PROD-APP-01,42,67,55,1200,OK
+PROD-SQL-02,58,81,88,880,WARNING
+DEV-WEB-01,15,34,40,200,OK
+TEST-API-01,28,52,62,450,OK

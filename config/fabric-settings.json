@@ -26,5 +26,19 @@
       "content": 0.55,
       "entities": 0.25
     }
+  },
+  "networking": {
+    "usePrivateEndpoints": true,
+    "useExistingVnet": true,
+    "uiInternetExposed": true,
+    "privateDataPlane": [
+      "storage",
+      "cosmosdb",
+      "ai-search",
+      "foundry"
+    ],
+    "publicPlane": [
+      "ui"
+    ]
   }
 }

@@ -1,7 +1,77 @@
 <ion-content class="ion-padding">
   <h2>Data Sources</h2>
   <p>{{ description }}</p>
-  <div class="layout-card">
-    <p>Responsive layouts: web (3-column), tablet (2-column), mobile (single-column).</p>
+
+  <div class="search-panel">
+    <ion-item lines="none">
+      <ion-label position="stacked">Search Employee or Asset</ion-label>
+      <ion-input
+        [value]="query"
+        (ionInput)="onQueryInput($any($event.target).value || '')"
+        list="employee-asset-suggestions"
+        placeholder="Type employee name/id, email, asset id, title, or format">
+      </ion-input>
+      <datalist id="employee-asset-suggestions">
+        <option *ngFor="let suggestion of suggestions" [value]="suggestion"></option>
+      </datalist>
+    </ion-item>
+    <div class="search-actions">
+      <ion-button size="small" color="medium" fill="outline" (click)="clearFilters()">Clear</ion-button>
+    </div>
+    <div class="hint-row" *ngIf="suggestions.length > 0">
+      <span>Quick picks:</span>
+      <ion-chip *ngFor="let suggestion of suggestions.slice(0, 4)" (click)="applySuggestion(suggestion)">
+        <ion-label>{{ suggestion }}</ion-label>
+      </ion-chip>
+    </div>
+  </div>
+
+  <div class="layout-grid">
+    <div class="layout-card">
+      <h3>Employee Assets</h3>
+      <p class="meta">{{ totalAssets }} matching assets • Page {{ page }} of {{ totalPages }}</p>
+
+      <div class="asset-table">
+        <div class="asset-row header">
+          <span>Asset</span><span>Employee</span><span>Format</span><span>Preview</span>
+        </div>
+        <div class="asset-row" *ngFor="let asset of pagedAssets">
+          <span>{{ asset.assetId }}</span>
+          <span>{{ employeeDisplay(asset.employeeId) }}</span>
+          <span>{{ asset.format }}</span>
+          <span>
+            <ion-button size="small" fill="clear" (click)="previewAsset(asset)">View</ion-button>
+          </span>
+        </div>
+      </div>
+
+      <div class="pagination-row">
+        <ion-button size="small" fill="outline" [disabled]="page <= 1" (click)="goToPreviousPage()">Previous</ion-button>
+        <ion-button size="small" fill="outline" [disabled]="page >= totalPages" (click)="goToNextPage()">Next</ion-button>
+      </div>
+    </div>
+
+    <div class="layout-card">
+      <h3>Document Viewer</h3>
+      <p class="meta">Supports browser render for pptx/docx/pdf/one/txt/eml/csv/md when source is reachable.</p>
+
+      <div *ngIf="!selectedAsset" class="viewer-placeholder">
+        Select an asset row and click <strong>View</strong> to open preview.
+      </div>
+
+      <div *ngIf="selectedAsset">
+        <p class="meta">
+          <strong>{{ selectedAsset.assetId }}</strong> • {{ selectedAsset.title }} • {{ selectedAsset.format }}
+        </p>
+
+        <iframe *ngIf="previewType === 'iframe'" [src]="previewUrl" class="document-frame" title="Document Preview"></iframe>
+
+        <pre *ngIf="previewType === 'text'" class="text-preview">{{ previewText }}</pre>
+
+        <div *ngIf="previewType === 'unsupported'" class="viewer-error">
+          {{ previewError }}
+        </div>
+      </div>
+    </div>
   </div>
 </ion-content>
