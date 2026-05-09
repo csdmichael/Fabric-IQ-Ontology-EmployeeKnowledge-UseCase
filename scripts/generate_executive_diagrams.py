@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import io
 import math
+import tempfile
 import textwrap
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -11,7 +13,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DOCS_DIR = REPO_ROOT / "docs"
-ICON_CACHE_DIR = Path("/tmp/fabric-iq-diagram-icons")
+ICON_CACHE_DIR = Path(tempfile.gettempdir()) / "fabric-iq-diagram-icons"
 
 ICON_URLS = {
     # Fabric workload icons
@@ -62,8 +64,11 @@ def ensure_icons() -> None:
         target = ICON_CACHE_DIR / f"{name}.svg"
         if target.exists():
             continue
-        with urllib.request.urlopen(url, timeout=30) as response:
-            target.write_bytes(response.read())
+        try:
+            with urllib.request.urlopen(url, timeout=30) as response:
+                target.write_bytes(response.read())
+        except (urllib.error.URLError, TimeoutError) as exc:
+            raise RuntimeError(f"Failed to download icon '{name}' from {url}") from exc
 
 
 def render_icon(name: str, size: int = 52) -> Image.Image:
@@ -72,7 +77,7 @@ def render_icon(name: str, size: int = 52) -> Image.Image:
     return Image.open(io.BytesIO(png_data)).convert("RGBA")
 
 
-def text_size(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.ImageFont) -> tuple[int, int]:
+def measure_text(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.ImageFont) -> tuple[int, int]:
     bbox = draw.textbbox((0, 0), text, font=font)
     return bbox[2] - bbox[0], bbox[3] - bbox[1]
 
@@ -233,7 +238,7 @@ def generate_semantic_erd() -> None:
         "Business entities, relationships and analytics grain for Microsoft Fabric",
     )
 
-    def entity(x: int, y: int, title: str, fields: list[str], icon: str, fill: str) -> tuple[int, int, int, int]:
+    def draw_erd_entity(x: int, y: int, title: str, fields: list[str], icon: str, fill: str) -> tuple[int, int, int, int]:
         h = 90 + 42 * len(fields)
         rounded_box(draw, (x, y, x + 430, y + h), fill=fill, outline="#94A3B8", width=2, radius=18)
         icon_img = render_icon(icon, size=46)
@@ -246,14 +251,14 @@ def generate_semantic_erd() -> None:
             ty += 38
         return (x, y, x + 430, y + h)
 
-    emp = entity(120, 220, "dim_employee", ["PK employee_id", "name", "department_id", "manager_id", "title"], "fabric", "#EFF6FF")
-    dept = entity(690, 220, "dim_department", ["PK department_id", "department_name", "cost_center"], "data_warehouse", "#F5F3FF")
-    skill = entity(1260, 220, "dim_skill", ["PK skill_id", "skill_name", "skill_domain"], "graph_intelligence", "#F0FDFA")
-    proj = entity(120, 620, "dim_project", ["PK project_id", "project_name", "status", "start_date"], "power_bi", "#FEFCE8")
-    doc = entity(690, 620, "fact_document", ["PK doc_id", "FK employee_id", "doc_type", "confidence_score", "ingested_at"], "databases", "#FEF2F2")
-    rel = entity(1260, 620, "bridge_employee_skill_project", ["FK employee_id", "FK skill_id", "FK project_id", "role", "evidence_doc_id"], "one_lake", "#ECFDF5")
+    emp = draw_erd_entity(120, 220, "dim_employee", ["PK employee_id", "name", "department_id", "manager_id", "title"], "fabric", "#EFF6FF")
+    dept = draw_erd_entity(690, 220, "dim_department", ["PK department_id", "department_name", "cost_center"], "data_warehouse", "#F5F3FF")
+    skill = draw_erd_entity(1260, 220, "dim_skill", ["PK skill_id", "skill_name", "skill_domain"], "graph_intelligence", "#F0FDFA")
+    proj = draw_erd_entity(120, 620, "dim_project", ["PK project_id", "project_name", "status", "start_date"], "power_bi", "#FEFCE8")
+    doc = draw_erd_entity(690, 620, "fact_document", ["PK doc_id", "FK employee_id", "doc_type", "confidence_score", "ingested_at"], "databases", "#FEF2F2")
+    rel = draw_erd_entity(1260, 620, "bridge_employee_skill_project", ["FK employee_id", "FK skill_id", "FK project_id", "role", "evidence_doc_id"], "one_lake", "#ECFDF5")
 
-    def c(box: tuple[int, int, int, int], side: str) -> tuple[int, int]:
+    def connector_point(box: tuple[int, int, int, int], side: str) -> tuple[int, int]:
         x1, y1, x2, y2 = box
         if side == "r":
             return (x2, (y1 + y2) // 2)
@@ -263,13 +268,13 @@ def generate_semantic_erd() -> None:
             return ((x1 + x2) // 2, y2)
         return ((x1 + x2) // 2, y1)
 
-    draw_arrow(draw, c(emp, "r"), c(dept, "l"), color="#475569")
-    draw_arrow(draw, c(emp, "r"), c(skill, "l"), color="#475569")
-    draw_arrow(draw, c(emp, "b"), c(proj, "t"), color="#475569")
-    draw_arrow(draw, c(emp, "b"), c(doc, "t"), color="#475569")
-    draw_arrow(draw, c(skill, "b"), c(rel, "t"), color="#475569")
-    draw_arrow(draw, c(proj, "r"), c(rel, "l"), color="#475569")
-    draw_arrow(draw, c(doc, "r"), c(rel, "l"), color="#475569")
+    draw_arrow(draw, connector_point(emp, "r"), connector_point(dept, "l"), color="#475569")
+    draw_arrow(draw, connector_point(emp, "r"), connector_point(skill, "l"), color="#475569")
+    draw_arrow(draw, connector_point(emp, "b"), connector_point(proj, "t"), color="#475569")
+    draw_arrow(draw, connector_point(emp, "b"), connector_point(doc, "t"), color="#475569")
+    draw_arrow(draw, connector_point(skill, "b"), connector_point(rel, "t"), color="#475569")
+    draw_arrow(draw, connector_point(proj, "r"), connector_point(rel, "l"), color="#475569")
+    draw_arrow(draw, connector_point(doc, "r"), connector_point(rel, "l"), color="#475569")
 
     draw.text((120, 1080), "Model intent: enable governed employee expertise analytics and ontology-backed agent retrieval.", font=get_font(22), fill="#334155")
 
@@ -286,34 +291,34 @@ def generate_ontology_diagram() -> None:
         "Executive graph view of people, knowledge assets, capabilities and project contribution",
     )
 
-    def node(x: int, y: int, title: str, icon: str, fill: str) -> tuple[int, int]:
+    def draw_ontology_node(x: int, y: int, title: str, icon: str, fill: str) -> tuple[int, int]:
         rounded_box(draw, (x - 150, y - 70, x + 150, y + 70), fill=fill, outline="#94A3B8", width=2, radius=24)
         icon_img = render_icon(icon, size=42)
         img.alpha_composite(icon_img, (x - 130, y - 22))
-        w, h = text_size(draw, title, get_font(26, bold=True))
+        w, h = measure_text(draw, title, get_font(26, bold=True))
         draw.text((x - (w // 2) + 18, y - (h // 2)), title, font=get_font(26, bold=True), fill="#0F172A")
         return (x, y)
 
-    p_employee = node(520, 340, "Employee", "fabric", "#EFF6FF")
-    p_manager = node(520, 620, "Manager", "fabric", "#EFF6FF")
-    p_department = node(900, 340, "Department", "data_warehouse", "#F5F3FF")
-    p_skill = node(1280, 220, "Skill", "graph_intelligence", "#F0FDFA")
-    p_project = node(1280, 460, "Project", "power_bi", "#FEFCE8")
-    p_document = node(900, 620, "Document", "databases", "#FEF2F2")
-    p_onelake = node(1660, 340, "OntologyGraph", "one_lake", "#ECFDF5")
+    p_employee = draw_ontology_node(520, 340, "Employee", "fabric", "#EFF6FF")
+    p_manager = draw_ontology_node(520, 620, "Manager", "fabric", "#EFF6FF")
+    p_department = draw_ontology_node(900, 340, "Department", "data_warehouse", "#F5F3FF")
+    p_skill = draw_ontology_node(1280, 220, "Skill", "graph_intelligence", "#F0FDFA")
+    p_project = draw_ontology_node(1280, 460, "Project", "power_bi", "#FEFCE8")
+    p_document = draw_ontology_node(900, 620, "Document", "databases", "#FEF2F2")
+    p_onelake = draw_ontology_node(1660, 340, "OntologyGraph", "one_lake", "#ECFDF5")
 
-    def edge(a: tuple[int, int], b: tuple[int, int], label: str, color: str = "#475569") -> None:
+    def draw_labeled_edge(a: tuple[int, int], b: tuple[int, int], label: str, color: str = "#475569") -> None:
         draw_arrow(draw, a, b, color=color, width=4)
         mx, my = (a[0] + b[0]) // 2, (a[1] + b[1]) // 2
         rounded_box(draw, (mx - 110, my - 24, mx + 110, my + 24), fill="#FFFFFF", outline="#CBD5E1", width=1, radius=14)
-        tw, th = text_size(draw, label, get_font(18, bold=True))
+        tw, th = measure_text(draw, label, get_font(18, bold=True))
         draw.text((mx - tw // 2, my - th // 2), label, font=get_font(18, bold=True), fill="#1E293B")
 
-    edge((p_employee[0], p_employee[1] + 72), (p_manager[0], p_manager[1] - 72), "REPORTS_TO")
-    edge((p_employee[0] + 152, p_employee[1]), (p_department[0] - 152, p_department[1]), "BELONGS_TO")
-    edge((p_employee[0] + 120, p_employee[1] - 50), (p_skill[0] - 140, p_skill[1] + 50), "HAS")
-    edge((p_employee[0] + 130, p_employee[1] + 46), (p_project[0] - 140, p_project[1] - 46), "CONTRIBUTES_TO")
-    edge((p_employee[0] + 155, p_employee[1] + 70), (p_document[0] - 155, p_document[1] - 70), "OWNS")
+    draw_labeled_edge((p_employee[0], p_employee[1] + 72), (p_manager[0], p_manager[1] - 72), "REPORTS_TO")
+    draw_labeled_edge((p_employee[0] + 152, p_employee[1]), (p_department[0] - 152, p_department[1]), "BELONGS_TO")
+    draw_labeled_edge((p_employee[0] + 120, p_employee[1] - 50), (p_skill[0] - 140, p_skill[1] + 50), "HAS")
+    draw_labeled_edge((p_employee[0] + 130, p_employee[1] + 46), (p_project[0] - 140, p_project[1] - 46), "CONTRIBUTES_TO")
+    draw_labeled_edge((p_employee[0] + 155, p_employee[1] + 70), (p_document[0] - 155, p_document[1] - 70), "OWNS")
 
     for src in [p_employee, p_manager, p_department, p_skill, p_project, p_document]:
         draw_arrow(draw, (src[0] + 155, src[1]), (p_onelake[0] - 155, p_onelake[1]), color="#0F766E", width=3)
