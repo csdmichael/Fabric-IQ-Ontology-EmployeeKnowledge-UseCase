@@ -1,20 +1,13 @@
-    # Knowledge summary notes - EMP055
+# Knowledge Summary Notes
 
-    - **Employee ID:** EMP055
-    - **Department:** R&D
-    - **Last Modified:** 2025-01-35
-    - **Skill Domains:** MLOps, TypeScript, Fabric, Azure AI
+This markdown document is a synthetic demo artifact used to validate
+ingestion, parsing, indexing, and browser rendering paths.
 
-    ## Department Focus Areas
-    - Research Portfolio Status
-    - IP Filing Pipeline
-    - Technology Readiness Levels
+## Focus Areas
+- Operational readiness
+- Documentation quality
+- Confidence-score monitoring
 
-    ## Notes
-    Shift Handoff Notes - R&D Lab
-------------------------------
-Experiment batch EXP-2026-047 completed - results uploaded to LIMS.
-Reactor temperature anomaly at 11:30 - auto-corrected, data flagged for review.
-IP disclosure submitted for novel deposition process - ref: IPD-883.
-Equipment: Spectroscope S4 offline for calibration, available tomorrow.
-
+## Notes
+This file intentionally omits personal fields and is safe for broad sharing
+in demo environments.

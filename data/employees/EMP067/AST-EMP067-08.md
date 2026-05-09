@@ -1,20 +1,13 @@
-    # Knowledge summary notes - EMP067
+# Knowledge Summary Notes
 
-    - **Employee ID:** EMP067
-    - **Department:** IT
-    - **Last Modified:** 2025-01-19
-    - **Skill Domains:** TypeScript, MLOps, Python, Kusto
+This markdown document is a synthetic demo artifact used to validate
+ingestion, parsing, indexing, and browser rendering paths.
 
-    ## Department Focus Areas
-    - Infrastructure Utilisation Dashboard
-    - Security Patch Status
-    - Cloud Cost Optimisation
+## Focus Areas
+- Operational readiness
+- Documentation quality
+- Confidence-score monitoring
 
-    ## Notes
-    Shift Handoff Notes - IT Ops
------------------------------
-Patching window completed at 03:00 - all 142 servers updated, zero failures.
-Alert: Disk utilisation on PROD-SQL-02 at 88% - ticket raised (TKT-5504).
-Azure cost report sent to FinOps team; anomalous spend spike on storage egress investigated.
-On-call roster updated for next week.
-
+## Notes
+This file intentionally omits personal fields and is safe for broad sharing
+in demo environments.

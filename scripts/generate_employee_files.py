@@ -647,27 +647,20 @@ def generate_csv(path: pathlib.Path, emp: dict, asset: dict) -> None:
 
 def generate_md(path: pathlib.Path, emp: dict, asset: dict) -> None:
     """Generate a markdown summary file for quick browser rendering."""
-    dept = emp["department"]
-    dd = get_dept_data(dept)
-    title = asset.get("title", f"Knowledge Summary - {emp['employeeId']}")
-    date_str = asset.get("lastModified", "2025-01-01")
-    skills = ", ".join(emp.get("skills", []))
+    content = textwrap.dedent("""\
+    # Knowledge Summary Notes
 
-    content = textwrap.dedent(f"""\
-    # {title}
+    This markdown document is a synthetic demo artifact used to validate
+    ingestion, parsing, indexing, and browser rendering paths.
 
-    - **Employee ID:** {emp['employeeId']}
-    - **Department:** {dept}
-    - **Last Modified:** {date_str}
-    - **Skill Domains:** {skills}
-
-    ## Department Focus Areas
-    - {dd['pptx_topics'][0]}
-    - {dd['pptx_topics'][1]}
-    - {dd['pptx_topics'][2]}
+    ## Focus Areas
+    - Operational readiness
+    - Documentation quality
+    - Confidence-score monitoring
 
     ## Notes
-    {dd['txt_notes']}
+    This file intentionally omits personal fields and is safe for broad sharing
+    in demo environments.
     """)
     path.write_text(content, encoding="utf-8")
 

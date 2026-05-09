@@ -1,20 +1,13 @@
-    # Knowledge summary notes - EMP081
+# Knowledge Summary Notes
 
-    - **Employee ID:** EMP081
-    - **Department:** Manufacturing
-    - **Last Modified:** 2025-01-33
-    - **Skill Domains:** SQL, Fabric, Ontology, TypeScript
+This markdown document is a synthetic demo artifact used to validate
+ingestion, parsing, indexing, and browser rendering paths.
 
-    ## Department Focus Areas
-    - Production Line Efficiency
-    - Equipment OEE Metrics
-    - Safety Compliance Update
+## Focus Areas
+- Operational readiness
+- Documentation quality
+- Confidence-score monitoring
 
-    ## Notes
-    Shift Handoff Notes
--------------------
-Equipment status: Line 3 conveyor belt replaced at 14:30 - running nominal.
-Pending: Chemical vapor sensor calibration due next shift.
-ESD checks completed for all workstations. No anomalies.
-Open ticket: TKT-4821 - intermittent pressure alarm, maintenance notified.
-
+## Notes
+This file intentionally omits personal fields and is safe for broad sharing
+in demo environments.

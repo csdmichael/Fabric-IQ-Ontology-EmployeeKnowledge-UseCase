@@ -1,20 +1,13 @@
-    # Knowledge summary notes - EMP024
+# Knowledge Summary Notes
 
-    - **Employee ID:** EMP024
-    - **Department:** Engineering
-    - **Last Modified:** 2025-01-32
-    - **Skill Domains:** Kusto, SQL, Power BI, Synapse
+This markdown document is a synthetic demo artifact used to validate
+ingestion, parsing, indexing, and browser rendering paths.
 
-    ## Department Focus Areas
-    - Sprint Velocity Trends
-    - Technical Debt Dashboard
-    - Architecture Review Outcomes
+## Focus Areas
+- Operational readiness
+- Documentation quality
+- Confidence-score monitoring
 
-    ## Notes
-    Shift Handoff Notes - Engineering
-----------------------------------
-Sprint 42 completed: 34 of 36 story points delivered. Two items carried forward.
-Production deploy v2.4.1 completed at 15:00 - health checks passing, rollback ready.
-Open: CVE-2025-1234 dependency patch under review - ETA 48 hrs.
-Tech debt spike scheduled for next sprint: logging framework migration.
-
+## Notes
+This file intentionally omits personal fields and is safe for broad sharing
+in demo environments.

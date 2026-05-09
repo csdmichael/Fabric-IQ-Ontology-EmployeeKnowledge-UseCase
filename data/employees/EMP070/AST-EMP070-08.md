@@ -1,20 +1,13 @@
-    # Knowledge summary notes - EMP070
+# Knowledge Summary Notes
 
-    - **Employee ID:** EMP070
-    - **Department:** Operations
-    - **Last Modified:** 2025-01-22
-    - **Skill Domains:** Kusto, MLOps, SQL, Power BI
+This markdown document is a synthetic demo artifact used to validate
+ingestion, parsing, indexing, and browser rendering paths.
 
-    ## Department Focus Areas
-    - Shift Productivity Dashboard
-    - Throughput vs. Target
-    - Incident Response Metrics
+## Focus Areas
+- Operational readiness
+- Documentation quality
+- Confidence-score monitoring
 
-    ## Notes
-    Shift Handoff Notes - Operations
----------------------------------
-Throughput: 98.2% of daily target achieved. One line pause (17 min) due to sensor fault.
-Maintenance completed PM-2244 on reactor unit 5 - sign-off obtained.
-Safety: Near-miss incident reported in Bay 3 - RCA in progress (INC-7723).
-Night shift supervisor: Jordan Nguyen.
-
+## Notes
+This file intentionally omits personal fields and is safe for broad sharing
+in demo environments.

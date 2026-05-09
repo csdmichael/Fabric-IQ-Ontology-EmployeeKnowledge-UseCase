@@ -1,20 +1,13 @@
-    # Knowledge summary notes - EMP036
+# Knowledge Summary Notes
 
-    - **Employee ID:** EMP036
-    - **Department:** Finance
-    - **Last Modified:** 2025-01-16
-    - **Skill Domains:** Ontology, Power BI, Synapse, TypeScript
+This markdown document is a synthetic demo artifact used to validate
+ingestion, parsing, indexing, and browser rendering paths.
 
-    ## Department Focus Areas
-    - Q2 Budget Variance Report
-    - CapEx vs OpEx Analysis
-    - Forecast Accuracy Metrics
+## Focus Areas
+- Operational readiness
+- Documentation quality
+- Confidence-score monitoring
 
-    ## Notes
-    Shift Handoff Notes - Finance Ops
-----------------------------------
-Month-end close in progress - AP entries pending GL posting (est. 2 hrs).
-FX revaluation run completed; 3 currency pairs require manual review.
-Budget upload for Q3 forecast submitted to Anaplan at 16:00.
-Tax filing submission confirmed by external advisor.
-
+## Notes
+This file intentionally omits personal fields and is safe for broad sharing
+in demo environments.
