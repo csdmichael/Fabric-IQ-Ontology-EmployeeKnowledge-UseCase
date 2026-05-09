@@ -77,7 +77,11 @@ def render_icon(name: str, size: int = 52) -> Image.Image:
     return Image.open(io.BytesIO(png_data)).convert("RGBA")
 
 
-def measure_text(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.ImageFont) -> tuple[int, int]:
+def measure_text(
+    draw: ImageDraw.ImageDraw,
+    text: str,
+    font: ImageFont.FreeTypeFont | ImageFont.ImageFont,
+) -> tuple[int, int]:
     bbox = draw.textbbox((0, 0), text, font=font)
     return bbox[2] - bbox[0], bbox[3] - bbox[1]
 
@@ -222,8 +226,18 @@ def generate_pipeline_diagram() -> None:
     draw_arrow(draw, (310, 560), (310, 450))
 
     rounded_box(draw, (120, 900, 2080, 1120), fill="#FFFFFF", outline="#CBD5E1", width=2, radius=22)
-    draw.text((160, 940), "Controls: schema standardization • confidence thresholds • data quality checks • governed semantic refresh", font=get_font(24, bold=True), fill="#1E293B")
-    draw.text((160, 995), "Executive benefit: fast onboarding, discoverable expertise, explainable lineage, and consistent KPI analytics.", font=get_font(22), fill="#475569")
+    draw.text(
+        (160, 940),
+        "Controls: schema standardization • confidence thresholds • data quality checks • governed semantic refresh",
+        font=get_font(24, bold=True),
+        fill="#1E293B",
+    )
+    draw.text(
+        (160, 995),
+        "Executive benefit: fast onboarding, discoverable expertise, explainable lineage, and consistent KPI analytics.",
+        font=get_font(22),
+        fill="#475569",
+    )
 
     img.convert("RGB").save(DOCS_DIR / "data-pipeline-diagram.png", format="PNG", optimize=True)
 
