@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP036
 
-    - **Employee:** Avery Wilson (EMP036)
-    - **Role / Department:** Analyst / Finance
-    - **Location:** Fremont
+    - **Employee ID:** EMP036
+    - **Department:** Finance
     - **Last Modified:** 2025-01-16
-    - **Skills:** Ontology, Power BI, Synapse, TypeScript
+    - **Skill Domains:** Ontology, Power BI, Synapse, TypeScript
 
     ## Department Focus Areas
     - Q2 Budget Variance Report

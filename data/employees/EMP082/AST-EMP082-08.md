@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP082
 
-    - **Employee:** Jordan Nguyen (EMP082)
-    - **Role / Department:** Manager / HR
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP082
+    - **Department:** HR
     - **Last Modified:** 2025-01-34
-    - **Skills:** SQL, Kusto, MLOps, Fabric
+    - **Skill Domains:** SQL, Kusto, MLOps, Fabric
 
     ## Department Focus Areas
     - Q2 Talent Acquisition Update

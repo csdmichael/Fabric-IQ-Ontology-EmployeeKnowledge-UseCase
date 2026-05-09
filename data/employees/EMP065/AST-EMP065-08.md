@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP065
 
-    - **Employee:** Casey Lee (EMP065)
-    - **Role / Department:** Architect / Manufacturing
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP065
+    - **Department:** Manufacturing
     - **Last Modified:** 2025-01-17
-    - **Skills:** Power BI, TypeScript, MLOps, SQL
+    - **Skill Domains:** Power BI, TypeScript, MLOps, SQL
 
     ## Department Focus Areas
     - Production Line Efficiency

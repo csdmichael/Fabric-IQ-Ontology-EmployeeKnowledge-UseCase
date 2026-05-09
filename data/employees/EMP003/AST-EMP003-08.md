@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP003
 
-    - **Employee:** Taylor Miller (EMP003)
-    - **Role / Department:** Lead / IT
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP003
+    - **Department:** IT
     - **Last Modified:** 2025-01-11
-    - **Skills:** TypeScript, Azure AI, Ontology, MLOps
+    - **Skill Domains:** TypeScript, Azure AI, Ontology, MLOps
 
     ## Department Focus Areas
     - Infrastructure Utilisation Dashboard

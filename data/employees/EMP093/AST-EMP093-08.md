@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP093
 
-    - **Employee:** Taylor Miller (EMP093)
-    - **Role / Department:** Senior Engineer / Procurement
-    - **Location:** Austin
+    - **Employee ID:** EMP093
+    - **Department:** Procurement
     - **Last Modified:** 2025-01-17
-    - **Skills:** Kusto, TypeScript, MLOps, Fabric
+    - **Skill Domains:** Kusto, TypeScript, MLOps, Fabric
 
     ## Department Focus Areas
     - Vendor Scorecard Q2

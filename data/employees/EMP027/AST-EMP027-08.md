@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP027
 
-    - **Employee:** Riley Patel (EMP027)
-    - **Role / Department:** Lead / IT
-    - **Location:** Fremont
+    - **Employee ID:** EMP027
+    - **Department:** IT
     - **Last Modified:** 2025-01-35
-    - **Skills:** Synapse, Python, Ontology, Azure AI
+    - **Skill Domains:** Synapse, Python, Ontology, Azure AI
 
     ## Department Focus Areas
     - Infrastructure Utilisation Dashboard

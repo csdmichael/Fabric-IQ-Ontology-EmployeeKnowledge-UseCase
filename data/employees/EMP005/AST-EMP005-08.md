@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP005
 
-    - **Employee:** Casey Lee (EMP005)
-    - **Role / Department:** Senior Engineer / Procurement
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP005
+    - **Department:** Procurement
     - **Last Modified:** 2025-01-13
-    - **Skills:** Ontology, SQL, Python, MLOps
+    - **Skill Domains:** Ontology, SQL, Python, MLOps
 
     ## Department Focus Areas
     - Vendor Scorecard Q2

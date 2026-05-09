@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP009
 
-    - **Employee:** Drew Kim (EMP009)
-    - **Role / Department:** Architect / Manufacturing
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP009
+    - **Department:** Manufacturing
     - **Last Modified:** 2025-01-17
-    - **Skills:** Power BI, Fabric, MLOps, SQL
+    - **Skill Domains:** Power BI, Fabric, MLOps, SQL
 
     ## Department Focus Areas
     - Production Line Efficiency

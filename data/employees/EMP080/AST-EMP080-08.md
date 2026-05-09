@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP080
 
-    - **Employee:** Skyler Chen (EMP080)
-    - **Role / Department:** Engineer / Engineering
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP080
+    - **Department:** Engineering
     - **Last Modified:** 2025-01-32
-    - **Skills:** Synapse, Ontology, Power BI, Python
+    - **Skill Domains:** Synapse, Ontology, Power BI, Python
 
     ## Department Focus Areas
     - Sprint Velocity Trends

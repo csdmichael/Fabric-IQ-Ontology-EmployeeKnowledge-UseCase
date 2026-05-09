@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP035
 
-    - **Employee:** Casey Lee (EMP035)
-    - **Role / Department:** Lead / IT
-    - **Location:** Fremont
+    - **Employee ID:** EMP035
+    - **Department:** IT
     - **Last Modified:** 2025-01-15
-    - **Skills:** Azure AI, MLOps, TypeScript, Kusto
+    - **Skill Domains:** Azure AI, MLOps, TypeScript, Kusto
 
     ## Department Focus Areas
     - Infrastructure Utilisation Dashboard

@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP096
 
-    - **Employee:** Avery Wilson (EMP096)
-    - **Role / Department:** Engineer / Engineering
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP096
+    - **Department:** Engineering
     - **Last Modified:** 2025-01-20
-    - **Skills:** Synapse, MLOps, Azure AI, TypeScript
+    - **Skill Domains:** Synapse, MLOps, Azure AI, TypeScript
 
     ## Department Focus Areas
     - Sprint Velocity Trends

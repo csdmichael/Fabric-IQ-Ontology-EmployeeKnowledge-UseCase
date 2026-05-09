@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP068
 
-    - **Employee:** Jamie Brown (EMP068)
-    - **Role / Department:** Analyst / Finance
-    - **Location:** Austin
+    - **Employee ID:** EMP068
+    - **Department:** Finance
     - **Last Modified:** 2025-01-20
-    - **Skills:** Ontology, Kusto, Fabric, Synapse
+    - **Skill Domains:** Ontology, Kusto, Fabric, Synapse
 
     ## Department Focus Areas
     - Q2 Budget Variance Report

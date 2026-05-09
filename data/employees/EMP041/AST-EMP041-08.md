@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP041
 
-    - **Employee:** Alex Garcia (EMP041)
-    - **Role / Department:** Architect / Manufacturing
-    - **Location:** Portland
+    - **Employee ID:** EMP041
+    - **Department:** Manufacturing
     - **Last Modified:** 2025-01-21
-    - **Skills:** Kusto, Power BI, Azure AI, Fabric
+    - **Skill Domains:** Kusto, Power BI, Azure AI, Fabric
 
     ## Department Focus Areas
     - Production Line Efficiency

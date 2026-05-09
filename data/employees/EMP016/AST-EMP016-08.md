@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP016
 
-    - **Employee:** Avery Wilson (EMP016)
-    - **Role / Department:** Engineer / Engineering
-    - **Location:** Fremont
+    - **Employee ID:** EMP016
+    - **Department:** Engineering
     - **Last Modified:** 2025-01-24
-    - **Skills:** Kusto, Fabric, Synapse, Azure AI
+    - **Skill Domains:** Kusto, Fabric, Synapse, Azure AI
 
     ## Department Focus Areas
     - Sprint Velocity Trends

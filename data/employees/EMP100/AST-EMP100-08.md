@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP100
 
-    - **Employee:** Skyler Chen (EMP100)
-    - **Role / Department:** Analyst / Finance
-    - **Location:** Austin
+    - **Employee ID:** EMP100
+    - **Department:** Finance
     - **Last Modified:** 2025-01-24
-    - **Skills:** Python, Power BI, MLOps, Kusto
+    - **Skill Domains:** Python, Power BI, MLOps, Kusto
 
     ## Department Focus Areas
     - Q2 Budget Variance Report

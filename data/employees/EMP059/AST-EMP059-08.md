@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP059
 
-    - **Employee:** Drew Kim (EMP059)
-    - **Role / Department:** Lead / IT
-    - **Location:** Portland
+    - **Employee ID:** EMP059
+    - **Department:** IT
     - **Last Modified:** 2025-01-11
-    - **Skills:** Synapse, Python, Power BI, Fabric
+    - **Skill Domains:** Synapse, Python, Power BI, Fabric
 
     ## Department Focus Areas
     - Infrastructure Utilisation Dashboard

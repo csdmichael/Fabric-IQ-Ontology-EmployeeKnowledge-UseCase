@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP034
 
-    - **Employee:** Morgan Smith (EMP034)
-    - **Role / Department:** Manager / HR
-    - **Location:** Fremont
+    - **Employee ID:** EMP034
+    - **Department:** HR
     - **Last Modified:** 2025-01-14
-    - **Skills:** Python, Ontology, SQL, Kusto
+    - **Skill Domains:** Python, Ontology, SQL, Kusto
 
     ## Department Focus Areas
     - Q2 Talent Acquisition Update

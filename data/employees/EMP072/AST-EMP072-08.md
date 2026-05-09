@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP072
 
-    - **Employee:** Jordan Nguyen (EMP072)
-    - **Role / Department:** Engineer / Engineering
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP072
+    - **Department:** Engineering
     - **Last Modified:** 2025-01-24
-    - **Skills:** TypeScript, Azure AI, Kusto, Python
+    - **Skill Domains:** TypeScript, Azure AI, Kusto, Python
 
     ## Department Focus Areas
     - Sprint Velocity Trends

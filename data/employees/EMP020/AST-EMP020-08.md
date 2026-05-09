@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP020
 
-    - **Employee:** Skyler Chen (EMP020)
-    - **Role / Department:** Analyst / Finance
-    - **Location:** Austin
+    - **Employee ID:** EMP020
+    - **Department:** Finance
     - **Last Modified:** 2025-01-28
-    - **Skills:** Synapse, Power BI, Kusto, Ontology
+    - **Skill Domains:** Synapse, Power BI, Kusto, Ontology
 
     ## Department Focus Areas
     - Q2 Budget Variance Report

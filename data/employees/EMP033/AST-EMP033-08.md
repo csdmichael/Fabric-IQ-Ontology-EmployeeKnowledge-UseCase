@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP033
 
-    - **Employee:** Taylor Miller (EMP033)
-    - **Role / Department:** Architect / Manufacturing
-    - **Location:** Fremont
+    - **Employee ID:** EMP033
+    - **Department:** Manufacturing
     - **Last Modified:** 2025-01-13
-    - **Skills:** Synapse, Power BI, SQL, Fabric
+    - **Skill Domains:** Synapse, Power BI, SQL, Fabric
 
     ## Department Focus Areas
     - Production Line Efficiency

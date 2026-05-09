@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP013
 
-    - **Employee:** Taylor Miller (EMP013)
-    - **Role / Department:** Senior Engineer / Procurement
-    - **Location:** Austin
+    - **Employee ID:** EMP013
+    - **Department:** Procurement
     - **Last Modified:** 2025-01-21
-    - **Skills:** Python, Azure AI, SQL, Ontology
+    - **Skill Domains:** Python, Azure AI, SQL, Ontology
 
     ## Department Focus Areas
     - Vendor Scorecard Q2

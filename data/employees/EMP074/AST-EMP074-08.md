@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP074
 
-    - **Employee:** Morgan Smith (EMP074)
-    - **Role / Department:** Manager / HR
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP074
+    - **Department:** HR
     - **Last Modified:** 2025-01-26
-    - **Skills:** TypeScript, SQL, Kusto, Azure AI
+    - **Skill Domains:** TypeScript, SQL, Kusto, Azure AI
 
     ## Department Focus Areas
     - Q2 Talent Acquisition Update

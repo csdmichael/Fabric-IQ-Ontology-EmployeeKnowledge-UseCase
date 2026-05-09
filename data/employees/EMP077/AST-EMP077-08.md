@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP077
 
-    - **Employee:** Riley Patel (EMP077)
-    - **Role / Department:** Senior Engineer / Procurement
-    - **Location:** Austin
+    - **Employee ID:** EMP077
+    - **Department:** Procurement
     - **Last Modified:** 2025-01-29
-    - **Skills:** Kusto, Azure AI, Fabric, Ontology
+    - **Skill Domains:** Kusto, Azure AI, Fabric, Ontology
 
     ## Department Focus Areas
     - Vendor Scorecard Q2

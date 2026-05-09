@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP071
 
-    - **Employee:** Alex Garcia (EMP071)
-    - **Role / Department:** Director / R&D
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP071
+    - **Department:** R&D
     - **Last Modified:** 2025-01-23
-    - **Skills:** SQL, MLOps, Python, Kusto
+    - **Skill Domains:** SQL, MLOps, Python, Kusto
 
     ## Department Focus Areas
     - Research Portfolio Status

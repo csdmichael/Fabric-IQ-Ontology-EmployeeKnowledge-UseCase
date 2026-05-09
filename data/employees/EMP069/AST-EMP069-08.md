@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP069
 
-    - **Employee:** Drew Kim (EMP069)
-    - **Role / Department:** Senior Engineer / Procurement
-    - **Location:** Austin
+    - **Employee ID:** EMP069
+    - **Department:** Procurement
     - **Last Modified:** 2025-01-21
-    - **Skills:** TypeScript, MLOps, Power BI, Azure AI
+    - **Skill Domains:** TypeScript, MLOps, Power BI, Azure AI
 
     ## Department Focus Areas
     - Vendor Scorecard Q2

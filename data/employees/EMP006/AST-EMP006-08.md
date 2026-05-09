@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP006
 
-    - **Employee:** Avery Wilson (EMP006)
-    - **Role / Department:** Specialist / Operations
-    - **Location:** Portland
+    - **Employee ID:** EMP006
+    - **Department:** Operations
     - **Last Modified:** 2025-01-14
-    - **Skills:** Azure AI, MLOps, Fabric, Python
+    - **Skill Domains:** Azure AI, MLOps, Fabric, Python
 
     ## Department Focus Areas
     - Shift Productivity Dashboard

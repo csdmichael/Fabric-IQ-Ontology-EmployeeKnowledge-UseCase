@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP032
 
-    - **Employee:** Jordan Nguyen (EMP032)
-    - **Role / Department:** Engineer / Engineering
-    - **Location:** Fremont
+    - **Employee ID:** EMP032
+    - **Department:** Engineering
     - **Last Modified:** 2025-01-12
-    - **Skills:** Kusto, MLOps, Fabric, TypeScript
+    - **Skill Domains:** Kusto, MLOps, Fabric, TypeScript
 
     ## Department Focus Areas
     - Sprint Velocity Trends

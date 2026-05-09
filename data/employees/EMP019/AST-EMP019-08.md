@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP019
 
-    - **Employee:** Drew Kim (EMP019)
-    - **Role / Department:** Lead / IT
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP019
+    - **Department:** IT
     - **Last Modified:** 2025-01-27
-    - **Skills:** Ontology, MLOps, Kusto, SQL
+    - **Skill Domains:** Ontology, MLOps, Kusto, SQL
 
     ## Department Focus Areas
     - Infrastructure Utilisation Dashboard

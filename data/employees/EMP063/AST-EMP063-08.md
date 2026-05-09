@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP063
 
-    - **Employee:** Taylor Miller (EMP063)
-    - **Role / Department:** Director / R&D
-    - **Location:** Portland
+    - **Employee ID:** EMP063
+    - **Department:** R&D
     - **Last Modified:** 2025-01-15
-    - **Skills:** Ontology, Kusto, Python, TypeScript
+    - **Skill Domains:** Ontology, Kusto, Python, TypeScript
 
     ## Department Focus Areas
     - Research Portfolio Status

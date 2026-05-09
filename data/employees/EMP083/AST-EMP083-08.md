@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP083
 
-    - **Employee:** Taylor Miller (EMP083)
-    - **Role / Department:** Lead / IT
-    - **Location:** Austin
+    - **Employee ID:** EMP083
+    - **Department:** IT
     - **Last Modified:** 2025-01-35
-    - **Skills:** Power BI, Fabric, Kusto, Python
+    - **Skill Domains:** Power BI, Fabric, Kusto, Python
 
     ## Department Focus Areas
     - Infrastructure Utilisation Dashboard

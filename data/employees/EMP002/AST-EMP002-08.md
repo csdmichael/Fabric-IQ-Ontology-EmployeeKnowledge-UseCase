@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP002
 
-    - **Employee:** Jordan Nguyen (EMP002)
-    - **Role / Department:** Manager / HR
-    - **Location:** Portland
+    - **Employee ID:** EMP002
+    - **Department:** HR
     - **Last Modified:** 2025-01-10
-    - **Skills:** Power BI, Ontology, Kusto, Fabric
+    - **Skill Domains:** Power BI, Ontology, Kusto, Fabric
 
     ## Department Focus Areas
     - Q2 Talent Acquisition Update

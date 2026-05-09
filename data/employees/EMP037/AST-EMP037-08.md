@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP037
 
-    - **Employee:** Riley Patel (EMP037)
-    - **Role / Department:** Senior Engineer / Procurement
-    - **Location:** Fremont
+    - **Employee ID:** EMP037
+    - **Department:** Procurement
     - **Last Modified:** 2025-01-17
-    - **Skills:** Ontology, Kusto, Synapse, SQL
+    - **Skill Domains:** Ontology, Kusto, Synapse, SQL
 
     ## Department Focus Areas
     - Vendor Scorecard Q2

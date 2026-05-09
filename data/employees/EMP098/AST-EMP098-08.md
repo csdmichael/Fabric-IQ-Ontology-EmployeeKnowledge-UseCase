@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP098
 
-    - **Employee:** Jamie Brown (EMP098)
-    - **Role / Department:** Manager / HR
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP098
+    - **Department:** HR
     - **Last Modified:** 2025-01-22
-    - **Skills:** Synapse, SQL, TypeScript, Ontology
+    - **Skill Domains:** Synapse, SQL, TypeScript, Ontology
 
     ## Department Focus Areas
     - Q2 Talent Acquisition Update

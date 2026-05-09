@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP081
 
-    - **Employee:** Alex Garcia (EMP081)
-    - **Role / Department:** Architect / Manufacturing
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP081
+    - **Department:** Manufacturing
     - **Last Modified:** 2025-01-33
-    - **Skills:** SQL, Fabric, Ontology, TypeScript
+    - **Skill Domains:** SQL, Fabric, Ontology, TypeScript
 
     ## Department Focus Areas
     - Production Line Efficiency

@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP076
 
-    - **Employee:** Avery Wilson (EMP076)
-    - **Role / Department:** Analyst / Finance
-    - **Location:** Austin
+    - **Employee ID:** EMP076
+    - **Department:** Finance
     - **Last Modified:** 2025-01-28
-    - **Skills:** Fabric, Power BI, Kusto, Azure AI
+    - **Skill Domains:** Fabric, Power BI, Kusto, Azure AI
 
     ## Department Focus Areas
     - Q2 Budget Variance Report

@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP062
 
-    - **Employee:** Jordan Nguyen (EMP062)
-    - **Role / Department:** Specialist / Operations
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP062
+    - **Department:** Operations
     - **Last Modified:** 2025-01-14
-    - **Skills:** SQL, Kusto, TypeScript, Power BI
+    - **Skill Domains:** SQL, Kusto, TypeScript, Power BI
 
     ## Department Focus Areas
     - Shift Productivity Dashboard

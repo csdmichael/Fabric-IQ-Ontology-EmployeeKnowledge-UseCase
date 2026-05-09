@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP088
 
-    - **Employee:** Jamie Brown (EMP088)
-    - **Role / Department:** Engineer / Engineering
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP088
+    - **Department:** Engineering
     - **Last Modified:** 2025-01-12
-    - **Skills:** SQL, Ontology, Azure AI, TypeScript
+    - **Skill Domains:** SQL, Ontology, Azure AI, TypeScript
 
     ## Department Focus Areas
     - Sprint Velocity Trends

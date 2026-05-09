@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP061
 
-    - **Employee:** Alex Garcia (EMP061)
-    - **Role / Department:** Senior Engineer / Procurement
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP061
+    - **Department:** Procurement
     - **Last Modified:** 2025-01-13
-    - **Skills:** Azure AI, Ontology, Power BI, TypeScript
+    - **Skill Domains:** Azure AI, Ontology, Power BI, TypeScript
 
     ## Department Focus Areas
     - Vendor Scorecard Q2

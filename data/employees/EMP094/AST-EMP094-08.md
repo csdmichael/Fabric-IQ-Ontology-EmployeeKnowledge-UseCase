@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP094
 
-    - **Employee:** Morgan Smith (EMP094)
-    - **Role / Department:** Specialist / Operations
-    - **Location:** Austin
+    - **Employee ID:** EMP094
+    - **Department:** Operations
     - **Last Modified:** 2025-01-18
-    - **Skills:** Ontology, MLOps, Azure AI, TypeScript
+    - **Skill Domains:** Ontology, MLOps, Azure AI, TypeScript
 
     ## Department Focus Areas
     - Shift Productivity Dashboard

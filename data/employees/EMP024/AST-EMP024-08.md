@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP024
 
-    - **Employee:** Morgan Smith (EMP024)
-    - **Role / Department:** Engineer / Engineering
-    - **Location:** Fremont
+    - **Employee ID:** EMP024
+    - **Department:** Engineering
     - **Last Modified:** 2025-01-32
-    - **Skills:** Kusto, SQL, Power BI, Synapse
+    - **Skill Domains:** Kusto, SQL, Power BI, Synapse
 
     ## Department Focus Areas
     - Sprint Velocity Trends

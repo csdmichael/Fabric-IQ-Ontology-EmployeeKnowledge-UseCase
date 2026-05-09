@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP092
 
-    - **Employee:** Jordan Nguyen (EMP092)
-    - **Role / Department:** Analyst / Finance
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP092
+    - **Department:** Finance
     - **Last Modified:** 2025-01-16
-    - **Skills:** Synapse, Power BI, TypeScript, Python
+    - **Skill Domains:** Synapse, Power BI, TypeScript, Python
 
     ## Department Focus Areas
     - Q2 Budget Variance Report

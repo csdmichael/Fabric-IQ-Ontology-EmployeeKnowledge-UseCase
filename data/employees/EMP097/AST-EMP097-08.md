@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP097
 
-    - **Employee:** Riley Patel (EMP097)
-    - **Role / Department:** Architect / Manufacturing
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP097
+    - **Department:** Manufacturing
     - **Last Modified:** 2025-01-21
-    - **Skills:** MLOps, Fabric, TypeScript, SQL
+    - **Skill Domains:** MLOps, Fabric, TypeScript, SQL
 
     ## Department Focus Areas
     - Production Line Efficiency

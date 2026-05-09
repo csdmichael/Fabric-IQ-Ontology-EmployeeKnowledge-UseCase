@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP011
 
-    - **Employee:** Alex Garcia (EMP011)
-    - **Role / Department:** Lead / IT
-    - **Location:** Portland
+    - **Employee ID:** EMP011
+    - **Department:** IT
     - **Last Modified:** 2025-01-19
-    - **Skills:** Synapse, TypeScript, Ontology, Azure AI
+    - **Skill Domains:** Synapse, TypeScript, Ontology, Azure AI
 
     ## Department Focus Areas
     - Infrastructure Utilisation Dashboard

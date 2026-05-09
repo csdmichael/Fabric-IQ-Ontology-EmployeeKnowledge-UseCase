@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP038
 
-    - **Employee:** Jamie Brown (EMP038)
-    - **Role / Department:** Specialist / Operations
-    - **Location:** Fremont
+    - **Employee ID:** EMP038
+    - **Department:** Operations
     - **Last Modified:** 2025-01-18
-    - **Skills:** Synapse, Kusto, TypeScript, Python
+    - **Skill Domains:** Synapse, Kusto, TypeScript, Python
 
     ## Department Focus Areas
     - Shift Productivity Dashboard

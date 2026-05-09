@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP073
 
-    - **Employee:** Taylor Miller (EMP073)
-    - **Role / Department:** Architect / Manufacturing
-    - **Location:** Fremont
+    - **Employee ID:** EMP073
+    - **Department:** Manufacturing
     - **Last Modified:** 2025-01-25
-    - **Skills:** Ontology, SQL, Azure AI, Python
+    - **Skill Domains:** Ontology, SQL, Azure AI, Python
 
     ## Department Focus Areas
     - Production Line Efficiency

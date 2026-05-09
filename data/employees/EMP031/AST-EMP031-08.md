@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP031
 
-    - **Employee:** Alex Garcia (EMP031)
-    - **Role / Department:** Director / R&D
-    - **Location:** Fremont
+    - **Employee ID:** EMP031
+    - **Department:** R&D
     - **Last Modified:** 2025-01-11
-    - **Skills:** Python, Fabric, Azure AI, Synapse
+    - **Skill Domains:** Python, Fabric, Azure AI, Synapse
 
     ## Department Focus Areas
     - Research Portfolio Status

@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP054
 
-    - **Employee:** Morgan Smith (EMP054)
-    - **Role / Department:** Specialist / Operations
-    - **Location:** Fremont
+    - **Employee ID:** EMP054
+    - **Department:** Operations
     - **Last Modified:** 2025-01-34
-    - **Skills:** MLOps, Kusto, Python, Azure AI
+    - **Skill Domains:** MLOps, Kusto, Python, Azure AI
 
     ## Department Focus Areas
     - Shift Productivity Dashboard

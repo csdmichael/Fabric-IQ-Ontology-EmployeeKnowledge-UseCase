@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP021
 
-    - **Employee:** Alex Garcia (EMP021)
-    - **Role / Department:** Senior Engineer / Procurement
-    - **Location:** Portland
+    - **Employee ID:** EMP021
+    - **Department:** Procurement
     - **Last Modified:** 2025-01-29
-    - **Skills:** Kusto, SQL, Fabric, Synapse
+    - **Skill Domains:** Kusto, SQL, Fabric, Synapse
 
     ## Department Focus Areas
     - Vendor Scorecard Q2

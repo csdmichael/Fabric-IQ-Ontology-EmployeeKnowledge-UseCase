@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP049
 
-    - **Employee:** Drew Kim (EMP049)
-    - **Role / Department:** Architect / Manufacturing
-    - **Location:** Portland
+    - **Employee ID:** EMP049
+    - **Department:** Manufacturing
     - **Last Modified:** 2025-01-29
-    - **Skills:** Ontology, SQL, Python, Fabric
+    - **Skill Domains:** Ontology, SQL, Python, Fabric
 
     ## Department Focus Areas
     - Production Line Efficiency

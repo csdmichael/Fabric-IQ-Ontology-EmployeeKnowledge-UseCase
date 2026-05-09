@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP008
 
-    - **Employee:** Jamie Brown (EMP008)
-    - **Role / Department:** Engineer / Engineering
-    - **Location:** Austin
+    - **Employee ID:** EMP008
+    - **Department:** Engineering
     - **Last Modified:** 2025-01-16
-    - **Skills:** SQL, Kusto, Synapse, Fabric
+    - **Skill Domains:** SQL, Kusto, Synapse, Fabric
 
     ## Department Focus Areas
     - Sprint Velocity Trends

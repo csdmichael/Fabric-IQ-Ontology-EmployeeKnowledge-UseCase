@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP066
 
-    - **Employee:** Avery Wilson (EMP066)
-    - **Role / Department:** Manager / HR
-    - **Location:** Fremont
+    - **Employee ID:** EMP066
+    - **Department:** HR
     - **Last Modified:** 2025-01-18
-    - **Skills:** Python, Kusto, SQL, Ontology
+    - **Skill Domains:** Python, Kusto, SQL, Ontology
 
     ## Department Focus Areas
     - Q2 Talent Acquisition Update

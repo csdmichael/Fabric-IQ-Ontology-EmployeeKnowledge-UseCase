@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP078
 
-    - **Employee:** Jamie Brown (EMP078)
-    - **Role / Department:** Specialist / Operations
-    - **Location:** Portland
+    - **Employee ID:** EMP078
+    - **Department:** Operations
     - **Last Modified:** 2025-01-30
-    - **Skills:** Azure AI, Fabric, TypeScript, Kusto
+    - **Skill Domains:** Azure AI, Fabric, TypeScript, Kusto
 
     ## Department Focus Areas
     - Shift Productivity Dashboard

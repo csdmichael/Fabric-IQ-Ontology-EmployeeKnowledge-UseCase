@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP056
 
-    - **Employee:** Avery Wilson (EMP056)
-    - **Role / Department:** Engineer / Engineering
-    - **Location:** Austin
+    - **Employee ID:** EMP056
+    - **Department:** Engineering
     - **Last Modified:** 2025-01-08
-    - **Skills:** SQL, Fabric, Kusto, Azure AI
+    - **Skill Domains:** SQL, Fabric, Kusto, Azure AI
 
     ## Department Focus Areas
     - Sprint Velocity Trends

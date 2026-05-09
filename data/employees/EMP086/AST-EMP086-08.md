@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP086
 
-    - **Employee:** Avery Wilson (EMP086)
-    - **Role / Department:** Specialist / Operations
-    - **Location:** Austin
+    - **Employee ID:** EMP086
+    - **Department:** Operations
     - **Last Modified:** 2025-01-10
-    - **Skills:** Ontology, MLOps, Synapse, SQL
+    - **Skill Domains:** Ontology, MLOps, Synapse, SQL
 
     ## Department Focus Areas
     - Shift Productivity Dashboard

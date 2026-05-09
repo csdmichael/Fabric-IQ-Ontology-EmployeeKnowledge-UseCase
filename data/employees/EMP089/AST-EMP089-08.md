@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP089
 
-    - **Employee:** Drew Kim (EMP089)
-    - **Role / Department:** Architect / Manufacturing
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP089
+    - **Department:** Manufacturing
     - **Last Modified:** 2025-01-13
-    - **Skills:** Ontology, SQL, MLOps, Fabric
+    - **Skill Domains:** Ontology, SQL, MLOps, Fabric
 
     ## Department Focus Areas
     - Production Line Efficiency

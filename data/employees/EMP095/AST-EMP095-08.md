@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP095
 
-    - **Employee:** Casey Lee (EMP095)
-    - **Role / Department:** Director / R&D
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP095
+    - **Department:** R&D
     - **Last Modified:** 2025-01-19
-    - **Skills:** TypeScript, SQL, Ontology, Synapse
+    - **Skill Domains:** TypeScript, SQL, Ontology, Synapse
 
     ## Department Focus Areas
     - Research Portfolio Status

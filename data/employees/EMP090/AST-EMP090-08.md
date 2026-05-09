@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP090
 
-    - **Employee:** Skyler Chen (EMP090)
-    - **Role / Department:** Manager / HR
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP090
+    - **Department:** HR
     - **Last Modified:** 2025-01-14
-    - **Skills:** SQL, Synapse, MLOps, Azure AI
+    - **Skill Domains:** SQL, Synapse, MLOps, Azure AI
 
     ## Department Focus Areas
     - Q2 Talent Acquisition Update

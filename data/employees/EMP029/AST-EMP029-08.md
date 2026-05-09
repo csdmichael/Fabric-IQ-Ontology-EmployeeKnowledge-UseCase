@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP029
 
-    - **Employee:** Drew Kim (EMP029)
-    - **Role / Department:** Senior Engineer / Procurement
-    - **Location:** Portland
+    - **Employee ID:** EMP029
+    - **Department:** Procurement
     - **Last Modified:** 2025-01-09
-    - **Skills:** Power BI, Azure AI, Synapse, Ontology
+    - **Skill Domains:** Power BI, Azure AI, Synapse, Ontology
 
     ## Department Focus Areas
     - Vendor Scorecard Q2

@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP052
 
-    - **Employee:** Jordan Nguyen (EMP052)
-    - **Role / Department:** Analyst / Finance
-    - **Location:** Fremont
+    - **Employee ID:** EMP052
+    - **Department:** Finance
     - **Last Modified:** 2025-01-32
-    - **Skills:** SQL, Ontology, Python, Kusto
+    - **Skill Domains:** SQL, Ontology, Python, Kusto
 
     ## Department Focus Areas
     - Q2 Budget Variance Report

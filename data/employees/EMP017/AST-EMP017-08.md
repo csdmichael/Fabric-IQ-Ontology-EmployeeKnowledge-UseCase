@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP017
 
-    - **Employee:** Riley Patel (EMP017)
-    - **Role / Department:** Architect / Manufacturing
-    - **Location:** Fremont
+    - **Employee ID:** EMP017
+    - **Department:** Manufacturing
     - **Last Modified:** 2025-01-25
-    - **Skills:** Python, Ontology, Synapse, SQL
+    - **Skill Domains:** Python, Ontology, Synapse, SQL
 
     ## Department Focus Areas
     - Production Line Efficiency

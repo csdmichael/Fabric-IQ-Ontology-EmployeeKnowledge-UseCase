@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP050
 
-    - **Employee:** Skyler Chen (EMP050)
-    - **Role / Department:** Manager / HR
-    - **Location:** Fremont
+    - **Employee ID:** EMP050
+    - **Department:** HR
     - **Last Modified:** 2025-01-30
-    - **Skills:** Kusto, Fabric, SQL, MLOps
+    - **Skill Domains:** Kusto, Fabric, SQL, MLOps
 
     ## Department Focus Areas
     - Q2 Talent Acquisition Update

@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP018
 
-    - **Employee:** Jamie Brown (EMP018)
-    - **Role / Department:** Manager / HR
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP018
+    - **Department:** HR
     - **Last Modified:** 2025-01-26
-    - **Skills:** Power BI, SQL, Kusto, TypeScript
+    - **Skill Domains:** Power BI, SQL, Kusto, TypeScript
 
     ## Department Focus Areas
     - Q2 Talent Acquisition Update

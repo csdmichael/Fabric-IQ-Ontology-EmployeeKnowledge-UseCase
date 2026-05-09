@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP014
 
-    - **Employee:** Morgan Smith (EMP014)
-    - **Role / Department:** Specialist / Operations
-    - **Location:** Austin
+    - **Employee ID:** EMP014
+    - **Department:** Operations
     - **Last Modified:** 2025-01-22
-    - **Skills:** Azure AI, Ontology, Kusto, Fabric
+    - **Skill Domains:** Azure AI, Ontology, Kusto, Fabric
 
     ## Department Focus Areas
     - Shift Productivity Dashboard

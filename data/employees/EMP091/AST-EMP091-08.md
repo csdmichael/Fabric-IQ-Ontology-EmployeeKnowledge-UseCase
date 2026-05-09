@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP091
 
-    - **Employee:** Alex Garcia (EMP091)
-    - **Role / Department:** Lead / IT
-    - **Location:** Fremont
+    - **Employee ID:** EMP091
+    - **Department:** IT
     - **Last Modified:** 2025-01-15
-    - **Skills:** Power BI, Python, Fabric, Ontology
+    - **Skill Domains:** Power BI, Python, Fabric, Ontology
 
     ## Department Focus Areas
     - Infrastructure Utilisation Dashboard

@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP001
 
-    - **Employee:** Alex Garcia (EMP001)
-    - **Role / Department:** Architect / Manufacturing
-    - **Location:** Fremont
+    - **Employee ID:** EMP001
+    - **Department:** Manufacturing
     - **Last Modified:** 2025-01-09
-    - **Skills:** Fabric, Python, Synapse, Power BI
+    - **Skill Domains:** Fabric, Python, Synapse, Power BI
 
     ## Department Focus Areas
     - Production Line Efficiency

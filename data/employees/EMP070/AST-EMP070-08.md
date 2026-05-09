@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP070
 
-    - **Employee:** Skyler Chen (EMP070)
-    - **Role / Department:** Specialist / Operations
-    - **Location:** Fremont
+    - **Employee ID:** EMP070
+    - **Department:** Operations
     - **Last Modified:** 2025-01-22
-    - **Skills:** Kusto, MLOps, SQL, Power BI
+    - **Skill Domains:** Kusto, MLOps, SQL, Power BI
 
     ## Department Focus Areas
     - Shift Productivity Dashboard

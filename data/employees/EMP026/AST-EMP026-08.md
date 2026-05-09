@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP026
 
-    - **Employee:** Avery Wilson (EMP026)
-    - **Role / Department:** Manager / HR
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP026
+    - **Department:** HR
     - **Last Modified:** 2025-01-34
-    - **Skills:** Synapse, Python, TypeScript, Ontology
+    - **Skill Domains:** Synapse, Python, TypeScript, Ontology
 
     ## Department Focus Areas
     - Q2 Talent Acquisition Update

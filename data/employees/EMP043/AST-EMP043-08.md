@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP043
 
-    - **Employee:** Taylor Miller (EMP043)
-    - **Role / Department:** Lead / IT
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP043
+    - **Department:** IT
     - **Last Modified:** 2025-01-23
-    - **Skills:** Synapse, Ontology, MLOps, Azure AI
+    - **Skill Domains:** Synapse, Ontology, MLOps, Azure AI
 
     ## Department Focus Areas
     - Infrastructure Utilisation Dashboard

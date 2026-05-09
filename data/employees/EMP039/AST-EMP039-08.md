@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP039
 
-    - **Employee:** Drew Kim (EMP039)
-    - **Role / Department:** Director / R&D
-    - **Location:** Fremont
+    - **Employee ID:** EMP039
+    - **Department:** R&D
     - **Last Modified:** 2025-01-19
-    - **Skills:** Python, SQL, Fabric, Ontology
+    - **Skill Domains:** Python, SQL, Fabric, Ontology
 
     ## Department Focus Areas
     - Research Portfolio Status

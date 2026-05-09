@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP085
 
-    - **Employee:** Casey Lee (EMP085)
-    - **Role / Department:** Senior Engineer / Procurement
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP085
+    - **Department:** Procurement
     - **Last Modified:** 2025-01-09
-    - **Skills:** Synapse, Ontology, Python, Kusto
+    - **Skill Domains:** Synapse, Ontology, Python, Kusto
 
     ## Department Focus Areas
     - Vendor Scorecard Q2

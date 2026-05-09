@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP058
 
-    - **Employee:** Jamie Brown (EMP058)
-    - **Role / Department:** Manager / HR
-    - **Location:** Austin
+    - **Employee ID:** EMP058
+    - **Department:** HR
     - **Last Modified:** 2025-01-10
-    - **Skills:** Kusto, Power BI, TypeScript, MLOps
+    - **Skill Domains:** Kusto, Power BI, TypeScript, MLOps
 
     ## Department Focus Areas
     - Q2 Talent Acquisition Update

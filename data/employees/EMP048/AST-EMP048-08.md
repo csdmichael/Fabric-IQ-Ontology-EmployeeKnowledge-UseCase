@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP048
 
-    - **Employee:** Jamie Brown (EMP048)
-    - **Role / Department:** Engineer / Engineering
-    - **Location:** Fremont
+    - **Employee ID:** EMP048
+    - **Department:** Engineering
     - **Last Modified:** 2025-01-28
-    - **Skills:** Power BI, MLOps, Synapse, SQL
+    - **Skill Domains:** Power BI, MLOps, Synapse, SQL
 
     ## Department Focus Areas
     - Sprint Velocity Trends

@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP060
 
-    - **Employee:** Skyler Chen (EMP060)
-    - **Role / Department:** Analyst / Finance
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP060
+    - **Department:** Finance
     - **Last Modified:** 2025-01-12
-    - **Skills:** MLOps, Ontology, Fabric, Synapse
+    - **Skill Domains:** MLOps, Ontology, Fabric, Synapse
 
     ## Department Focus Areas
     - Q2 Budget Variance Report

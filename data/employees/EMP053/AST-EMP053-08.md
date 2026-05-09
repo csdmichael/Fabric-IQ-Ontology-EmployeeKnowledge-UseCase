@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP053
 
-    - **Employee:** Taylor Miller (EMP053)
-    - **Role / Department:** Senior Engineer / Procurement
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP053
+    - **Department:** Procurement
     - **Last Modified:** 2025-01-33
-    - **Skills:** Azure AI, Fabric, SQL, MLOps
+    - **Skill Domains:** Azure AI, Fabric, SQL, MLOps
 
     ## Department Focus Areas
     - Vendor Scorecard Q2

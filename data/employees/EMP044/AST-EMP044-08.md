@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP044
 
-    - **Employee:** Morgan Smith (EMP044)
-    - **Role / Department:** Analyst / Finance
-    - **Location:** Fremont
+    - **Employee ID:** EMP044
+    - **Department:** Finance
     - **Last Modified:** 2025-01-24
-    - **Skills:** SQL, Ontology, TypeScript, Python
+    - **Skill Domains:** SQL, Ontology, TypeScript, Python
 
     ## Department Focus Areas
     - Q2 Budget Variance Report

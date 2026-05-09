@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP023
 
-    - **Employee:** Taylor Miller (EMP023)
-    - **Role / Department:** Director / R&D
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP023
+    - **Department:** R&D
     - **Last Modified:** 2025-01-31
-    - **Skills:** Power BI, Azure AI, Python, Fabric
+    - **Skill Domains:** Power BI, Azure AI, Python, Fabric
 
     ## Department Focus Areas
     - Research Portfolio Status

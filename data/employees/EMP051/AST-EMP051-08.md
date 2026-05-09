@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP051
 
-    - **Employee:** Alex Garcia (EMP051)
-    - **Role / Department:** Lead / IT
-    - **Location:** Austin
+    - **Employee ID:** EMP051
+    - **Department:** IT
     - **Last Modified:** 2025-01-31
-    - **Skills:** Power BI, MLOps, Ontology, Python
+    - **Skill Domains:** Power BI, MLOps, Ontology, Python
 
     ## Department Focus Areas
     - Infrastructure Utilisation Dashboard

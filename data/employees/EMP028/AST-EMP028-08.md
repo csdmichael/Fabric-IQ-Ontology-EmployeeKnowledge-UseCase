@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP028
 
-    - **Employee:** Jamie Brown (EMP028)
-    - **Role / Department:** Analyst / Finance
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP028
+    - **Department:** Finance
     - **Last Modified:** 2025-01-08
-    - **Skills:** SQL, Power BI, Fabric, MLOps
+    - **Skill Domains:** SQL, Power BI, Fabric, MLOps
 
     ## Department Focus Areas
     - Q2 Budget Variance Report

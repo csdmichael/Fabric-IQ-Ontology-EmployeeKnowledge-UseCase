@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP004
 
-    - **Employee:** Morgan Smith (EMP004)
-    - **Role / Department:** Analyst / Finance
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP004
+    - **Department:** Finance
     - **Last Modified:** 2025-01-12
-    - **Skills:** TypeScript, Synapse, SQL, MLOps
+    - **Skill Domains:** TypeScript, Synapse, SQL, MLOps
 
     ## Department Focus Areas
     - Q2 Budget Variance Report

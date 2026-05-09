@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP057
 
-    - **Employee:** Riley Patel (EMP057)
-    - **Role / Department:** Architect / Manufacturing
-    - **Location:** Austin
+    - **Employee ID:** EMP057
+    - **Department:** Manufacturing
     - **Last Modified:** 2025-01-09
-    - **Skills:** Ontology, Azure AI, Python, Fabric
+    - **Skill Domains:** Ontology, Azure AI, Python, Fabric
 
     ## Department Focus Areas
     - Production Line Efficiency

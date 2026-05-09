@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP055
 
-    - **Employee:** Casey Lee (EMP055)
-    - **Role / Department:** Director / R&D
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP055
+    - **Department:** R&D
     - **Last Modified:** 2025-01-35
-    - **Skills:** MLOps, TypeScript, Fabric, Azure AI
+    - **Skill Domains:** MLOps, TypeScript, Fabric, Azure AI
 
     ## Department Focus Areas
     - Research Portfolio Status

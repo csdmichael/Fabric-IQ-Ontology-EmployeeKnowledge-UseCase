@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP025
 
-    - **Employee:** Casey Lee (EMP025)
-    - **Role / Department:** Architect / Manufacturing
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP025
+    - **Department:** Manufacturing
     - **Last Modified:** 2025-01-33
-    - **Skills:** Ontology, Kusto, TypeScript, Fabric
+    - **Skill Domains:** Ontology, Kusto, TypeScript, Fabric
 
     ## Department Focus Areas
     - Production Line Efficiency

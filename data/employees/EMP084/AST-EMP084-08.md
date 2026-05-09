@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP084
 
-    - **Employee:** Morgan Smith (EMP084)
-    - **Role / Department:** Analyst / Finance
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP084
+    - **Department:** Finance
     - **Last Modified:** 2025-01-08
-    - **Skills:** TypeScript, Synapse, Python, Power BI
+    - **Skill Domains:** TypeScript, Synapse, Python, Power BI
 
     ## Department Focus Areas
     - Q2 Budget Variance Report

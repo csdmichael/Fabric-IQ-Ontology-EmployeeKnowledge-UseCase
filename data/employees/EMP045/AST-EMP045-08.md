@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP045
 
-    - **Employee:** Casey Lee (EMP045)
-    - **Role / Department:** Senior Engineer / Procurement
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP045
+    - **Department:** Procurement
     - **Last Modified:** 2025-01-25
-    - **Skills:** Ontology, MLOps, TypeScript, Synapse
+    - **Skill Domains:** Ontology, MLOps, TypeScript, Synapse
 
     ## Department Focus Areas
     - Vendor Scorecard Q2

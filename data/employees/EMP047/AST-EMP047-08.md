@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP047
 
-    - **Employee:** Riley Patel (EMP047)
-    - **Role / Department:** Director / R&D
-    - **Location:** Austin
+    - **Employee ID:** EMP047
+    - **Department:** R&D
     - **Last Modified:** 2025-01-27
-    - **Skills:** Power BI, TypeScript, MLOps, Fabric
+    - **Skill Domains:** Power BI, TypeScript, MLOps, Fabric
 
     ## Department Focus Areas
     - Research Portfolio Status

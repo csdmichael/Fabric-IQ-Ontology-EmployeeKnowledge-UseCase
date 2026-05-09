@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP075
 
-    - **Employee:** Casey Lee (EMP075)
-    - **Role / Department:** Lead / IT
-    - **Location:** Portland
+    - **Employee ID:** EMP075
+    - **Department:** IT
     - **Last Modified:** 2025-01-27
-    - **Skills:** Python, Power BI, Kusto, Synapse
+    - **Skill Domains:** Python, Power BI, Kusto, Synapse
 
     ## Department Focus Areas
     - Infrastructure Utilisation Dashboard

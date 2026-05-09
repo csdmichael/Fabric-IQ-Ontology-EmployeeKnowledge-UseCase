@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP007
 
-    - **Employee:** Riley Patel (EMP007)
-    - **Role / Department:** Director / R&D
-    - **Location:** Austin
+    - **Employee ID:** EMP007
+    - **Department:** R&D
     - **Last Modified:** 2025-01-15
-    - **Skills:** Python, Kusto, TypeScript, Synapse
+    - **Skill Domains:** Python, Kusto, TypeScript, Synapse
 
     ## Department Focus Areas
     - Research Portfolio Status

@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP010
 
-    - **Employee:** Skyler Chen (EMP010)
-    - **Role / Department:** Manager / HR
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP010
+    - **Department:** HR
     - **Last Modified:** 2025-01-18
-    - **Skills:** MLOps, Fabric, TypeScript, Ontology
+    - **Skill Domains:** MLOps, Fabric, TypeScript, Ontology
 
     ## Department Focus Areas
     - Q2 Talent Acquisition Update

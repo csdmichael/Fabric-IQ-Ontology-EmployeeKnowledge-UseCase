@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP022
 
-    - **Employee:** Jordan Nguyen (EMP022)
-    - **Role / Department:** Specialist / Operations
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP022
+    - **Department:** Operations
     - **Last Modified:** 2025-01-30
-    - **Skills:** Python, Kusto, Ontology, MLOps
+    - **Skill Domains:** Python, Kusto, Ontology, MLOps
 
     ## Department Focus Areas
     - Shift Productivity Dashboard

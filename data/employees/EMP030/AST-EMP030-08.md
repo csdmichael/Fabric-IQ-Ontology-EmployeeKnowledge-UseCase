@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP030
 
-    - **Employee:** Skyler Chen (EMP030)
-    - **Role / Department:** Specialist / Operations
-    - **Location:** Fremont
+    - **Employee ID:** EMP030
+    - **Department:** Operations
     - **Last Modified:** 2025-01-10
-    - **Skills:** Fabric, Azure AI, Python, SQL
+    - **Skill Domains:** Fabric, Azure AI, Python, SQL
 
     ## Department Focus Areas
     - Shift Productivity Dashboard

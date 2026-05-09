@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP046
 
-    - **Employee:** Avery Wilson (EMP046)
-    - **Role / Department:** Specialist / Operations
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP046
+    - **Department:** Operations
     - **Last Modified:** 2025-01-26
-    - **Skills:** Power BI, Ontology, MLOps, Fabric
+    - **Skill Domains:** Power BI, Ontology, MLOps, Fabric
 
     ## Department Focus Areas
     - Shift Productivity Dashboard

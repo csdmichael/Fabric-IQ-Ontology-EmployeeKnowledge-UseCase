@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP040
 
-    - **Employee:** Skyler Chen (EMP040)
-    - **Role / Department:** Engineer / Engineering
-    - **Location:** Fremont
+    - **Employee ID:** EMP040
+    - **Department:** Engineering
     - **Last Modified:** 2025-01-20
-    - **Skills:** Azure AI, Synapse, Kusto, SQL
+    - **Skill Domains:** Azure AI, Synapse, Kusto, SQL
 
     ## Department Focus Areas
     - Sprint Velocity Trends

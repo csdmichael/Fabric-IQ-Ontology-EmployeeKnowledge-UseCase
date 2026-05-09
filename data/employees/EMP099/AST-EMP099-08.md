@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP099
 
-    - **Employee:** Drew Kim (EMP099)
-    - **Role / Department:** Lead / IT
-    - **Location:** Portland
+    - **Employee ID:** EMP099
+    - **Department:** IT
     - **Last Modified:** 2025-01-23
-    - **Skills:** Fabric, Power BI, Ontology, Kusto
+    - **Skill Domains:** Fabric, Power BI, Ontology, Kusto
 
     ## Department Focus Areas
     - Infrastructure Utilisation Dashboard

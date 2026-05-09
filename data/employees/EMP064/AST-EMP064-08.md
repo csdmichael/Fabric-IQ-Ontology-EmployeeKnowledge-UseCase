@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP064
 
-    - **Employee:** Morgan Smith (EMP064)
-    - **Role / Department:** Engineer / Engineering
-    - **Location:** Portland
+    - **Employee ID:** EMP064
+    - **Department:** Engineering
     - **Last Modified:** 2025-01-16
-    - **Skills:** SQL, Power BI, Azure AI, Python
+    - **Skill Domains:** SQL, Power BI, Azure AI, Python
 
     ## Department Focus Areas
     - Sprint Velocity Trends

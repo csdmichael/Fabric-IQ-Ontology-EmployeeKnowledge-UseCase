@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP079
 
-    - **Employee:** Drew Kim (EMP079)
-    - **Role / Department:** Director / R&D
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP079
+    - **Department:** R&D
     - **Last Modified:** 2025-01-31
-    - **Skills:** Fabric, Python, TypeScript, SQL
+    - **Skill Domains:** Fabric, Python, TypeScript, SQL
 
     ## Department Focus Areas
     - Research Portfolio Status

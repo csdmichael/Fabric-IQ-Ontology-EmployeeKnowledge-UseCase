@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP087
 
-    - **Employee:** Riley Patel (EMP087)
-    - **Role / Department:** Director / R&D
-    - **Location:** Bengaluru
+    - **Employee ID:** EMP087
+    - **Department:** R&D
     - **Last Modified:** 2025-01-11
-    - **Skills:** SQL, Power BI, Ontology, Kusto
+    - **Skill Domains:** SQL, Power BI, Ontology, Kusto
 
     ## Department Focus Areas
     - Research Portfolio Status

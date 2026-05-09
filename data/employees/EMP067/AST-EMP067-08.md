@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP067
 
-    - **Employee:** Riley Patel (EMP067)
-    - **Role / Department:** Lead / IT
-    - **Location:** Austin
+    - **Employee ID:** EMP067
+    - **Department:** IT
     - **Last Modified:** 2025-01-19
-    - **Skills:** TypeScript, MLOps, Python, Kusto
+    - **Skill Domains:** TypeScript, MLOps, Python, Kusto
 
     ## Department Focus Areas
     - Infrastructure Utilisation Dashboard

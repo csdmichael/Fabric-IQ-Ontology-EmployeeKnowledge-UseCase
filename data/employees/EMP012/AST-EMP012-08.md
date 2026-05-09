@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP012
 
-    - **Employee:** Jordan Nguyen (EMP012)
-    - **Role / Department:** Analyst / Finance
-    - **Location:** Hsinchu
+    - **Employee ID:** EMP012
+    - **Department:** Finance
     - **Last Modified:** 2025-01-20
-    - **Skills:** MLOps, Fabric, Python, TypeScript
+    - **Skill Domains:** MLOps, Fabric, Python, TypeScript
 
     ## Department Focus Areas
     - Q2 Budget Variance Report

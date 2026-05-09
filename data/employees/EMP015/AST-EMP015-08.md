@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP015
 
-    - **Employee:** Casey Lee (EMP015)
-    - **Role / Department:** Director / R&D
-    - **Location:** Austin
+    - **Employee ID:** EMP015
+    - **Department:** R&D
     - **Last Modified:** 2025-01-23
-    - **Skills:** Kusto, TypeScript, Python, Ontology
+    - **Skill Domains:** Kusto, TypeScript, Python, Ontology
 
     ## Department Focus Areas
     - Research Portfolio Status

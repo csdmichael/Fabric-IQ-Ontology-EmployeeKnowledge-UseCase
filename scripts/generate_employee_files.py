@@ -649,18 +649,17 @@ def generate_md(path: pathlib.Path, emp: dict, asset: dict) -> None:
     """Generate a markdown summary file for quick browser rendering."""
     dept = emp["department"]
     dd = get_dept_data(dept)
-    title = asset.get("title", f"Knowledge Summary - {emp['displayName']}")
+    title = asset.get("title", f"Knowledge Summary - {emp['employeeId']}")
     date_str = asset.get("lastModified", "2025-01-01")
     skills = ", ".join(emp.get("skills", []))
 
     content = textwrap.dedent(f"""\
     # {title}
 
-    - **Employee:** {emp['displayName']} ({emp['employeeId']})
-    - **Role / Department:** {emp['role']} / {dept}
-    - **Location:** {emp.get('location', '')}
+    - **Employee ID:** {emp['employeeId']}
+    - **Department:** {dept}
     - **Last Modified:** {date_str}
-    - **Skills:** {skills}
+    - **Skill Domains:** {skills}
 
     ## Department Focus Areas
     - {dd['pptx_topics'][0]}

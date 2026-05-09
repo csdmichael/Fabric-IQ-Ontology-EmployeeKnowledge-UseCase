@@ -1,10 +1,9 @@
     # Knowledge summary notes - EMP042
 
-    - **Employee:** Jordan Nguyen (EMP042)
-    - **Role / Department:** Manager / HR
-    - **Location:** Portland
+    - **Employee ID:** EMP042
+    - **Department:** HR
     - **Last Modified:** 2025-01-22
-    - **Skills:** Synapse, SQL, MLOps, Power BI
+    - **Skill Domains:** Synapse, SQL, MLOps, Power BI
 
     ## Department Focus Areas
     - Q2 Talent Acquisition Update
