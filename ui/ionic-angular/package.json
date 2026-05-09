@@ -7,8 +7,8 @@
     "build": "ionic build"
   },
   "dependencies": {
-    "@angular/common": "^18.0.0",
-    "@angular/core": "^18.0.0",
+    "@angular/common": "^19.2.20",
+    "@angular/core": "^19.2.20",
     "@ionic/angular": "^8.0.0",
     "rxjs": "^7.8.0",
     "typescript": "^5.5.0"
