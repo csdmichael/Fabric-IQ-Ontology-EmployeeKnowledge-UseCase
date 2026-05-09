@@ -1,0 +1,31 @@
+{
+  "ci": {
+    "pythonVersion": "3.12",
+    "nodeVersion": "20",
+    "terraformVersion": "1.8.5",
+    "jsonValidationGlobs": [
+      "config/*.json",
+      "data/*.json",
+      "fabric/**/*.json"
+    ],
+    "uiRequiredFiles": [
+      "ui/ionic-angular/package.json",
+      "ui/ionic-angular/src/app/app.component.ts",
+      "ui/ionic-angular/src/app/app.component.html",
+      "ui/ionic-angular/src/app/services/config.service.ts"
+    ],
+    "terraformWorkingDirectory": "terraform",
+    "terraformVarFile": "../config/terraform.tfvars.json"
+  },
+  "deploy": {
+    "terraformWorkingDirectory": "terraform",
+    "terraformVarFile": "../config/terraform.tfvars.json",
+    "artifactName": "fabric-iq-deployment-bundle",
+    "artifactPaths": [
+      "config",
+      "fabric",
+      "data",
+      "docs"
+    ]
+  }
+}

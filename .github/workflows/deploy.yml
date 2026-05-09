@@ -1,0 +1,113 @@
+name: Deploy Infrastructure and Artifacts
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: "Run terraform apply after successful plan"
+        required: true
+        default: "false"
+
+jobs:
+  load-config:
+    runs-on: ubuntu-latest
+    outputs:
+      terraform_version: ${{ steps.read.outputs.terraform_version }}
+      tf_dir: ${{ steps.read.outputs.tf_dir }}
+      tf_var_file: ${{ steps.read.outputs.tf_var_file }}
+      artifact_name: ${{ steps.read.outputs.artifact_name }}
+      artifact_paths: ${{ steps.read.outputs.artifact_paths }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: read
+        run: |
+          set -euo pipefail
+          terraform_version=$(jq -r '.ci.terraformVersion' config/workflows.json)
+          tf_dir=$(jq -r '.deploy.terraformWorkingDirectory' config/workflows.json)
+          tf_var_file=$(jq -r '.deploy.terraformVarFile' config/workflows.json)
+          artifact_name=$(jq -r '.deploy.artifactName' config/workflows.json)
+          artifact_paths=$(jq -c '.deploy.artifactPaths' config/workflows.json)
+
+          echo "terraform_version=$terraform_version" >> "$GITHUB_OUTPUT"
+          echo "tf_dir=$tf_dir" >> "$GITHUB_OUTPUT"
+          echo "tf_var_file=$tf_var_file" >> "$GITHUB_OUTPUT"
+          echo "artifact_name=$artifact_name" >> "$GITHUB_OUTPUT"
+          echo "artifact_paths=$artifact_paths" >> "$GITHUB_OUTPUT"
+
+  package-fabric-bundle:
+    needs: load-config
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build deployment bundle
+        env:
+          ARTIFACT_PATHS: ${{ needs.load-config.outputs.artifact_paths }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, os, pathlib, zipfile
+          paths = json.loads(os.environ['ARTIFACT_PATHS'])
+          out = pathlib.Path('fabric-deployment-bundle.zip')
+          with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED) as z:
+              for p in paths:
+                  path = pathlib.Path(p)
+                  if path.is_file():
+                      z.write(path, path)
+                  else:
+                      for item in path.rglob('*'):
+                          if item.is_file():
+                              z.write(item, item)
+          print(f'Created {out}')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ needs.load-config.outputs.artifact_name }}
+          path: fabric-deployment-bundle.zip
+
+  terraform-plan:
+    needs: load-config
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ needs.load-config.outputs.tf_dir }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ needs.load-config.outputs.terraform_version }}
+      - name: Terraform init and plan
+        env:
+          TF_VAR_FILE: ${{ needs.load-config.outputs.tf_var_file }}
+        run: |
+          set -euo pipefail
+          terraform init
+          terraform plan -var-file="$TF_VAR_FILE" -out=tfplan
+      - uses: actions/upload-artifact@v4
+        with:
+          name: terraform-plan
+          path: ${{ needs.load-config.outputs.tf_dir }}/tfplan
+
+  terraform-apply:
+    if: ${{ github.event.inputs.apply == 'true' }}
+    needs:
+      - terraform-plan
+      - package-fabric-bundle
+      - load-config
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ needs.load-config.outputs.tf_dir }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ needs.load-config.outputs.terraform_version }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: terraform-plan
+          path: ${{ needs.load-config.outputs.tf_dir }}
+      - name: Terraform apply
+        run: |
+          set -euo pipefail
+          terraform init
+          terraform apply -auto-approve tfplan

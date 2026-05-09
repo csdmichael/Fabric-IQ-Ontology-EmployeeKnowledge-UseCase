@@ -14,6 +14,8 @@
 - [Fabric Data Agent](#fabric-data-agent)
 - [Ionic + Angular + TypeScript UI](#ionic--angular--typescript-ui)
 - [Teams & Copilot Agent Packaging Steps](#teams--copilot-agent-packaging-steps)
+- [GitHub Workflows](#github-workflows)
+- [Terraform Deployment](#terraform-deployment)
 - [Best Practices](#best-practices)
 - [License](#license)
 
@@ -37,7 +39,12 @@ It includes:
 ├── config/
 │   ├── endpoints.json
 │   ├── fabric-settings.json
-│   └── ontology-config.json
+│   ├── ontology-config.json
+│   ├── workflows.json
+│   └── terraform.tfvars.json
+├── .github/workflows/
+│   ├── ci.yml
+│   └── deploy.yml
 ├── data/
 │   ├── employees.json
 │   ├── digital_assets.json
@@ -60,6 +67,7 @@ It includes:
 │   └── agents/
 ├── ui/
 │   └── ionic-angular/
+├── terraform/
 ├── LICENSE
 └── README.md
 ```
@@ -185,8 +193,44 @@ UI screenshot:
 5. Validate prompt execution and data access permissions
 6. Publish for Teams and Microsoft Copilot usage
 
+## GitHub Workflows
+Workflows are split for fast, dependency-aware execution:
+
+- `.github/workflows/ci.yml`
+  - `load-config` job reads all workflow/runtime settings from `config/workflows.json`
+  - Parallel validation jobs:
+    - `validate-json`
+    - `validate-ui-scaffold`
+    - `terraform-fmt-validate`
+
+- `.github/workflows/deploy.yml`
+  - `load-config` reads deploy settings from `config/workflows.json`
+  - `package-fabric-bundle` and `terraform-plan` run in parallel
+  - `terraform-apply` runs only when `workflow_dispatch` input `apply=true` and after dependencies succeed
+
+All component-specific workflow configuration is centralized in:
+- `config/workflows.json`
+
+## Terraform Deployment
+Terraform resources are in `terraform/` and use variables from:
+- `config/terraform.tfvars.json`
+
+Provisioned components:
+- Azure Resource Group
+- Azure Storage Account + raw/processed containers
+- Azure Cosmos DB account + SQL database + SQL container
+
+Typical commands:
+```bash
+cd terraform
+terraform init
+terraform plan -var-file=../config/terraform.tfvars.json
+terraform apply -var-file=../config/terraform.tfvars.json
+```
+
 ## Best Practices
 - Keep endpoints and IDs in `/config` only
+- Keep workflow behavior/runtime values in `config/workflows.json` instead of workflow YAML
 - Use staged zones (raw → processed → curated) in OneLake
 - Track confidence metrics for governance and reprocessing
 - Separate semantic model and ontology concerns for maintainability

@@ -1,0 +1,114 @@
+name: CI Validation
+
+on:
+  push:
+    branches-ignore:
+      - main
+  pull_request:
+
+jobs:
+  load-config:
+    runs-on: ubuntu-latest
+    outputs:
+      python_version: ${{ steps.read.outputs.python_version }}
+      node_version: ${{ steps.read.outputs.node_version }}
+      terraform_version: ${{ steps.read.outputs.terraform_version }}
+      json_globs: ${{ steps.read.outputs.json_globs }}
+      ui_required_files: ${{ steps.read.outputs.ui_required_files }}
+      tf_dir: ${{ steps.read.outputs.tf_dir }}
+      tf_var_file: ${{ steps.read.outputs.tf_var_file }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: read
+        run: |
+          set -euo pipefail
+          python_version=$(jq -r '.ci.pythonVersion' config/workflows.json)
+          node_version=$(jq -r '.ci.nodeVersion' config/workflows.json)
+          terraform_version=$(jq -r '.ci.terraformVersion' config/workflows.json)
+          json_globs=$(jq -c '.ci.jsonValidationGlobs' config/workflows.json)
+          ui_required_files=$(jq -c '.ci.uiRequiredFiles' config/workflows.json)
+          tf_dir=$(jq -r '.ci.terraformWorkingDirectory' config/workflows.json)
+          tf_var_file=$(jq -r '.ci.terraformVarFile' config/workflows.json)
+
+          echo "python_version=$python_version" >> "$GITHUB_OUTPUT"
+          echo "node_version=$node_version" >> "$GITHUB_OUTPUT"
+          echo "terraform_version=$terraform_version" >> "$GITHUB_OUTPUT"
+          echo "json_globs=$json_globs" >> "$GITHUB_OUTPUT"
+          echo "ui_required_files=$ui_required_files" >> "$GITHUB_OUTPUT"
+          echo "tf_dir=$tf_dir" >> "$GITHUB_OUTPUT"
+          echo "tf_var_file=$tf_var_file" >> "$GITHUB_OUTPUT"
+
+  validate-json:
+    needs: load-config
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ needs.load-config.outputs.python_version }}
+      - name: Validate JSON files
+        env:
+          JSON_GLOBS: ${{ needs.load-config.outputs.json_globs }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, glob, os
+          patterns = json.loads(os.environ['JSON_GLOBS'])
+          files = []
+          for p in patterns:
+              files.extend(glob.glob(p, recursive=True))
+          if not files:
+              raise SystemExit('No JSON files found for validation')
+          for f in files:
+              with open(f) as handle:
+                  json.load(handle)
+          print(f'Validated {len(files)} JSON files successfully')
+          PY
+
+  validate-ui-scaffold:
+    needs: load-config
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ needs.load-config.outputs.node_version }}
+      - name: Validate required UI files and package metadata
+        env:
+          REQUIRED_FILES: ${{ needs.load-config.outputs.ui_required_files }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, os, pathlib
+          files = json.loads(os.environ['REQUIRED_FILES'])
+          missing = [f for f in files if not pathlib.Path(f).exists()]
+          if missing:
+              raise SystemExit(f'Missing required UI files: {missing}')
+          pkg = json.loads(pathlib.Path('ui/ionic-angular/package.json').read_text())
+          required_deps = {'@ionic/angular', '@angular/core', 'typescript'}
+          installed = set(pkg.get('dependencies', {}).keys())
+          missing_deps = sorted(required_deps - installed)
+          if missing_deps:
+              raise SystemExit(f'Missing dependencies: {missing_deps}')
+          print('UI scaffold validation completed')
+          PY
+
+  terraform-fmt-validate:
+    needs: load-config
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ needs.load-config.outputs.tf_dir }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ needs.load-config.outputs.terraform_version }}
+      - name: Terraform fmt and validate
+        env:
+          TF_VAR_FILE: ${{ needs.load-config.outputs.tf_var_file }}
+        run: |
+          set -euo pipefail
+          terraform fmt -check -recursive
+          terraform init -backend=false
+          terraform validate -var-file="$TF_VAR_FILE"
