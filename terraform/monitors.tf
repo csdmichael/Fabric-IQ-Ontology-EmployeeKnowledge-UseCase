@@ -33,7 +33,7 @@ locals {
 resource "azurerm_monitor_action_group" "sre" {
   name                = "ag-fabriciq-sre"
   resource_group_name = var.monitor_resource_group_name
-  short_name          = "fabriciq-sre"
+  short_name          = "fab-iq-sre"
   tags                = var.tags
 
   dynamic "email_receiver" {
@@ -295,7 +295,7 @@ resource "azurerm_monitor_scheduled_query_rules_alert_v2" "low_confidence_docs" 
       | where ResourceProvider == "MICROSOFT.DOCUMENTDB"
       | where Category == "DataPlaneRequests"
       | where requestResourceId_s contains "EmployeeDocumentParsing"
-      | where todouble(properties_s) < 0.5
+      | where todouble(parse_json(properties_s).documentConfidence) < 0.5
       | summarize LowConfidenceCount = count()
       | where LowConfidenceCount > 10
     KQL
@@ -330,13 +330,23 @@ resource "azurerm_logic_app_workflow" "incident_response" {
   tags                = var.tags
 
   parameters = {
-    "$connections" = jsonencode({})
+    "$connections"   = jsonencode({})
+    "cosmosEndpoint" = azurerm_cosmosdb_account.main.endpoint
+    "teamsWebhookUrl" = var.sre_webhook_url
   }
 
   workflow_parameters = {
     "$connections" = jsonencode({
       defaultValue = {}
       type         = "Object"
+    })
+    "cosmosEndpoint" = jsonencode({
+      defaultValue = ""
+      type         = "String"
+    })
+    "teamsWebhookUrl" = jsonencode({
+      defaultValue = ""
+      type         = "String"
     })
   }
 }
