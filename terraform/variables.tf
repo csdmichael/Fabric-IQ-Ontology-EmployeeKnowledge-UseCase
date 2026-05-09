@@ -57,3 +57,29 @@ variable "tags" {
   type        = map(string)
   description = "Tags applied to all resources."
 }
+
+# ── Azure Monitor variables ───────────────────────────────────────────────────
+
+variable "monitor_resource_group_name" {
+  type        = string
+  description = "Resource group where the shared SRE monitor resources (action group, Log Analytics) live. Defaults to the ui_resource_group_name (ai-myaacoub)."
+  default     = "ai-myaacoub"
+}
+
+variable "existing_log_analytics_workspace_name" {
+  type        = string
+  description = "Name of an existing Log Analytics workspace in monitor_resource_group_name to reuse. Leave empty to create a new workspace."
+  default     = ""
+}
+
+variable "sre_alert_email" {
+  type        = string
+  description = "Email address for the SRE action group alert notifications."
+  default     = ""
+}
+
+variable "sre_webhook_url" {
+  type        = string
+  description = "Webhook URL for the SRE action group (e.g. Teams incoming webhook or existing SRE agent endpoint)."
+  default     = ""
+}

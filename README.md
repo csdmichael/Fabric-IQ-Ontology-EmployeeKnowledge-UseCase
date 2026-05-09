@@ -22,10 +22,13 @@
 - [Reusable Azure Hosting Resources (ai-myaacoub)](#reusable-azure-hosting-resources-ai-myaacoub)
 - [Managed Identity Setup](#managed-identity-setup)
 - [Private Networking Model](#private-networking-model)
+- [Azure Monitor & SRE](#azure-monitor--sre)
+- [Incident Response](#incident-response)
 - [Prompt Catalog](#prompt-catalog)
 - [Teams & Copilot Agent Packaging Steps](#teams--copilot-agent-packaging-steps)
 - [GitHub Workflows](#github-workflows)
 - [Terraform Deployment](#terraform-deployment)
+- [Demo Script](#demo-script)
 - [Best Practices](#best-practices)
 - [License](#license)
 
@@ -98,10 +101,16 @@ It includes:
 │   └── generate_employee_files.py
 ├── docs/
 │   ├── architecture-diagram.png
+│   ├── architecture-diagram.svg
 │   ├── data-pipeline-diagram.png
+│   ├── data-pipeline-diagram.svg
 │   ├── semantic-model-erd.png
+│   ├── semantic-model-erd.svg
 │   ├── ontology-diagram.png
+│   ├── ontology-diagram.svg
 │   ├── prompts.txt
+│   ├── incident-response-plan.md
+│   ├── DEMO_SCRIPT.md
 │   └── ui-preview.html
 ├── fabric/
 │   ├── dataflows/
@@ -112,6 +121,11 @@ It includes:
 ├── ui/
 │   └── ionic-angular/
 ├── terraform/
+│   ├── main.tf
+│   ├── monitors.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+│   └── versions.tf
 ├── LICENSE
 └── README.md
 ```
@@ -120,7 +134,10 @@ It includes:
 - **Microsoft Fabric** (OneLake, Pipelines, Dataflows, Semantic Models, Data Agent)
 - **Azure Storage** (Blob/File landing zones)
 - **Azure AI Document Intelligence / Content Understanding**
-- **Azure Cosmos DB** (parsed JSON outputs)
+- **Azure Cosmos DB** (parsed JSON outputs, incident records)
+- **Azure Monitor** (Diagnostic Settings, Metric Alerts, Scheduled Query Rules)
+- **Azure Log Analytics** (centralized log aggregation and query)
+- **Azure Logic Apps** (HTTP trigger-based incident response orchestration)
 - **Ionic + Angular + TypeScript** (UI)
 - **JSON/SVG** artifacts for demo portability
 
@@ -275,14 +292,74 @@ Expected pattern:
 - **Private**: Storage, Cosmos DB, AI Search, Foundry
 - **Public**: UI endpoint only
 
+## Azure Monitor & SRE
+
+All managed resources are instrumented with Azure Monitor diagnostics and metric alerts, deployed via `terraform/monitors.tf`.
+
+### Diagnostic Settings
+
+| Resource | Log Categories | Metrics |
+|----------|---------------|---------|
+| Storage Account (`stfabriciqdemodata01`) | StorageRead, StorageWrite, StorageDelete | Transaction |
+| Cosmos DB (`cosmos-fabriciq-demo-01`) | DataPlaneRequests, QueryRuntimeStatistics, PartitionKeyStatistics, ControlPlaneRequests | Requests |
+| UI App Service (`fabric-iq-emp-knowledge-ui`) | AppServiceHTTPLogs, AppServiceConsoleLogs, AppServiceAppLogs | AllMetrics |
+
+All diagnostic logs route to a **Log Analytics workspace** (`law-fabriciq-emp-knowledge` or an existing workspace in `ai-myaacoub` if `existing_log_analytics_workspace_name` is set in `config/terraform.tfvars.json`).
+
+### Alert Rules
+
+| Alert | Threshold | Severity |
+|-------|-----------|----------|
+| Storage availability | Average < 99% over 15 min | Sev 1 |
+| Cosmos DB 5xx errors | Count > 5 in 5 min | Sev 1 |
+| Cosmos DB 429 throttling | Count > 10 in 5 min | Sev 2 |
+| UI App Service HTTP 5xx | Count > 5 in 5 min | Sev 1 |
+| UI App Service response time | Average > 5s over 15 min | Sev 2 |
+| Low parse confidence (scheduled query) | > 10 docs with confidence < 0.5 in 1 hr | Sev 2 |
+
+### SRE Action Group
+
+The **SRE Action Group** (`ag-fabriciq-sre`) is provisioned in the `ai-myaacoub` resource group, reusing the shared SRE notification infrastructure. It can notify via:
+- **Email** – set `sre_alert_email` in `config/terraform.tfvars.json`
+- **Webhook** – set `sre_webhook_url` to the Logic App trigger URL (captured from `terraform output incident_response_logic_app_trigger_url`)
+
+To reuse an existing Log Analytics workspace in `ai-myaacoub`, set `existing_log_analytics_workspace_name` in `config/terraform.tfvars.json` to the workspace name.
+
+### Incident Response Logic App
+
+The **Logic App** (`logic-fabriciq-incident-response`) provides an HTTP trigger that acts as the alert webhook receiver. When an alert fires it:
+1. Parses the Azure Monitor common alert schema payload
+2. Logs an incident record to the Cosmos DB `Incidents` container
+3. Sends a Teams MessageCard to the SRE channel
+
+After first `terraform apply`, run:
+```bash
+terraform output -raw incident_response_logic_app_trigger_url
+```
+Set this URL as `sre_webhook_url` in `config/terraform.tfvars.json` and re-apply to wire the full end-to-end flow.
+
+## Incident Response
+
+The full incident response plan is maintained at:
+- **[docs/incident-response-plan.md](docs/incident-response-plan.md)**
+
+It includes:
+- Severity level definitions (Sev 1–4) with response SLAs
+- Per-alert playbooks: triage steps, remediation, and escalation triggers
+- Escalation matrix with roles, contact methods, and conditions
+- Post-incident review process and incident record schema (Cosmos DB `Incidents` container)
+
 ## Prompt Catalog
 Prompt requirements are consolidated and organized in:
 - `docs/prompts.txt`
 
 This file includes:
-- Original baseline scope requirements
-- New enhancement requirements
-- Citation behavior requirements for prompts/agent responses
+- Original baseline scope requirements (Section 1)
+- Enhancement requirements (Section 2)
+- Citation behavior requirements for prompts/agent responses (Section 3)
+- Azure Monitor & SRE requirements (Section 4)
+- Incident response requirements (Section 5)
+- Architecture & demo documentation requirements (Section 6)
 
 ## Teams & Copilot Agent Packaging Steps
 1. Export agent definition from `fabric/agents/employee_knowledge_agent.json`
@@ -301,6 +378,12 @@ This file includes:
 Terraform resources are in `terraform/` and use values from:
 - `config/terraform.tfvars.json`
 
+Modules:
+- `terraform/main.tf` – core resources (Storage, Cosmos DB, App Service)
+- `terraform/monitors.tf` – Azure Monitor resources (Log Analytics, Action Group, Diagnostic Settings, Metric Alerts, Scheduled Query Rules, Logic App)
+- `terraform/variables.tf` – all input variables including monitor variables
+- `terraform/outputs.tf` – outputs including monitor action group ID and Logic App trigger URL
+
 Typical commands:
 ```bash
 cd terraform
@@ -308,6 +391,33 @@ terraform init
 terraform plan -var-file=../config/terraform.tfvars.json
 terraform apply -var-file=../config/terraform.tfvars.json
 ```
+
+After apply, wire the Logic App webhook:
+```bash
+# Capture Logic App HTTP trigger URL and update sre_webhook_url in config/terraform.tfvars.json
+terraform output -raw incident_response_logic_app_trigger_url
+```
+
+Monitor variables (set in `config/terraform.tfvars.json`):
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `monitor_resource_group_name` | `ai-myaacoub` | RG for SRE monitor resources |
+| `existing_log_analytics_workspace_name` | `""` | Existing workspace name to reuse; leave empty to create new |
+| `sre_alert_email` | `""` | SRE email DL for alert notifications |
+| `sre_webhook_url` | `""` | Logic App HTTP trigger URL (set after first apply) |
+
+## Demo Script
+
+A comprehensive step-by-step demo script is available at:
+- **[docs/DEMO_SCRIPT.md](docs/DEMO_SCRIPT.md)**
+
+The demo script covers:
+- Prerequisites and setup commands
+- Full 30–45 minute demo (8 Acts): architecture, data pipeline, semantic model, UI walk-through, Data Agent prompts, Azure Monitor dashboard, incident response flow, Teams/Copilot packaging
+- Sample Data Agent prompts with expected citation response format
+- Abbreviated 15-minute demo path
+- Q&A talking points
 
 ## Best Practices
 - Keep endpoints and IDs in `/config` only
@@ -317,6 +427,10 @@ terraform apply -var-file=../config/terraform.tfvars.json
 - Track confidence metrics for governance and reprocessing
 - Maintain a prompt catalog with explicit citation expectations
 - Keep UI responsive and task-oriented for web/tablet/mobile
+- Enable diagnostic settings on all managed resources from day one
+- Route all alerts to a shared SRE action group for consistent incident routing
+- Log incident records to Cosmos DB for trend analysis and post-incident review
+- Review and update alert thresholds after model updates or traffic changes
 
 ## License
 See [LICENSE](LICENSE).

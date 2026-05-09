@@ -39,3 +39,35 @@
 2. Citation targets should include documentId, cosmosDbRecordId, and source storage path.
 3. Prompts should support employee lookup, asset lookup, confidence analysis, hierarchy analysis, and department rollups.
 4. Prompts should support operational troubleshooting scenarios (missing parse records, stale assets, low-confidence assets).
+
+## 4) Azure Monitor & SRE Requirements
+1. Add Azure Monitor diagnostic settings for all managed resources: Storage Account, Cosmos DB, and UI App Service.
+2. Route all diagnostic logs to a Log Analytics workspace (reuse existing workspace in ai-myaacoub if available, otherwise create new).
+3. Create an SRE action group (ag-fabriciq-sre) that notifies via email DL and HTTP webhook.
+4. Reuse the existing SRE agent notification infrastructure in ai-myaacoub resource group.
+5. Add metric alerts for: Storage availability (<99%), Cosmos DB 5xx errors (>5 in 5 min), Cosmos DB 429 throttling (>10 in 5 min), UI App Service HTTP 5xx (>5 in 5 min), UI average response time (>5s over 15 min).
+6. Add a scheduled query rule alert for documents with parse confidence below 0.5 (>10 in 1 hour).
+7. All monitor and alert resources should be parameterized via Terraform variables with sensible defaults.
+8. Generate a Logic App with an HTTP trigger to serve as the incident response webhook receiver.
+9. The Logic App should: parse the alert payload, log an incident record to Cosmos DB, and send a Teams notification card to the SRE channel.
+10. After first `terraform apply`, the Logic App trigger URL should be captured from Terraform output (`incident_response_logic_app_trigger_url`) and set as the sre_webhook_url tfvar or action group webhook.
+11. Document all monitoring resources, alert thresholds, and the Logic App flow in the README.
+12. Reference the incident response plan from the README.
+
+## 5) Incident Response Requirements
+1. Maintain an incident response plan at `docs/incident-response-plan.md`.
+2. Define severity levels: Sev 1 (15-min SLA), Sev 2 (30-min), Sev 3 (2-hour), Sev 4 (next business day).
+3. Include a playbook for each alert: Storage availability, Cosmos DB 5xx, Cosmos DB 429, UI 5xx, UI response time, low parse confidence.
+4. Each playbook should include: triage steps, remediation steps, and escalation trigger.
+5. Include an escalation matrix with role, contact method, and condition.
+6. Include a post-incident review template and process.
+7. Incident records should be logged to a dedicated Cosmos DB container (`Incidents`).
+8. Reference `docs/incident-response-plan.md` from the main README.
+
+## 6) Architecture & Demo Documentation Requirements
+1. Update the architecture diagram (SVG) to include an Azure Monitor + SRE layer showing: Log Analytics workspace, Action Group, metric alerts, Logic App HTTP trigger.
+2. Generate a comprehensive demo script at `docs/DEMO_SCRIPT.md` covering all major features end-to-end.
+3. The demo script should include: setup prerequisites, step-by-step walkthrough, expected outputs, UI navigation guide, and data agent prompt examples.
+4. Reference `docs/DEMO_SCRIPT.md` from the main README.
+5. Keep the README Table of Contents accurate and complete after all changes.
+
