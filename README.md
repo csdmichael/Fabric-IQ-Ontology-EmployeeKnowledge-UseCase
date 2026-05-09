@@ -1,5 +1,7 @@
 # Microsoft Fabric IQ – Employee Knowledge Graph Demo
 
+> **Architecture diagrams and data-flow visuals are presented first below for quick reference, followed by full project documentation.**
+
 ## Table of Contents
 - [Architecture](#architecture)
 - [Data Pipeline in Microsoft Fabric](#data-pipeline-in-microsoft-fabric)
