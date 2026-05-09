@@ -93,7 +93,7 @@ resource "azurerm_linux_web_app" "ui" {
   }
 
   app_settings = {
-    "WEBSITE_RUN_FROM_PACKAGE" = "1"
+    "WEBSITE_RUN_FROM_PACKAGE"       = "1"
     "SCM_DO_BUILD_DURING_DEPLOYMENT" = "false"
   }
 
