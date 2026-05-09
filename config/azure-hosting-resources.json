@@ -10,10 +10,10 @@
       "notes": "New dedicated UI app service for Fabric IQ Employee Knowledge demo. Does not share with other apps."
     },
     "apiWebApp": {
-      "name": "foundry-privatevnet-api",
-      "url": "https://foundry-privatevnet-api.azurewebsites.net",
+      "name": "fabric-iq-emp-knowledge-api",
+      "url": "https://fabric-iq-emp-knowledge-api.azurewebsites.net",
       "internetExposed": false,
-      "notes": "Integrate via VNet route and private backend access patterns."
+      "notes": "New dedicated API app service for Fabric IQ Employee Knowledge demo. Does not share with other apps. Provisioned on the existing plan-taxforms App Service Plan in ai-myaacoub."
     },
     "appServicePlan": {
       "name": "plan-taxforms",

@@ -21,6 +21,6 @@
   },
   "hosting": {
     "uiPublicUrl": "https://fabric-iq-emp-knowledge-ui.azurewebsites.net",
-    "apiUrl": "https://foundry-privatevnet-api.azurewebsites.net"
+    "apiUrl": "https://fabric-iq-emp-knowledge-api.azurewebsites.net"
   }
 }

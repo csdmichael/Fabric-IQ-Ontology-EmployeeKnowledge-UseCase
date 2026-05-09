@@ -14,3 +14,8 @@ output "ui_app_service_url" {
   value       = "https://${azurerm_linux_web_app.ui.default_hostname}"
   description = "Public URL of the newly provisioned UI App Service."
 }
+
+output "api_app_service_url" {
+  value       = "https://${azurerm_linux_web_app.api.default_hostname}"
+  description = "Public URL of the newly provisioned dedicated API App Service."
+}

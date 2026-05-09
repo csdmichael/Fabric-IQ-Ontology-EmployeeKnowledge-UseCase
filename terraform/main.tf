@@ -101,3 +101,40 @@ resource "azurerm_linux_web_app" "ui" {
 
   tags = var.tags
 }
+
+# ── API App Service (new, dedicated) ───────────────────────────────────────
+# Looks up the existing App Service Plan (not managed by this Terraform
+# workspace) and creates a new web app for the Fabric IQ API. This does NOT
+# touch the pre-existing foundry-privatevnet-api app that hosts other workloads.
+data "azurerm_resource_group" "api" {
+  name = var.api_resource_group_name
+}
+
+data "azurerm_service_plan" "api" {
+  name                = var.api_app_service_plan_name
+  resource_group_name = data.azurerm_resource_group.api.name
+}
+
+resource "azurerm_linux_web_app" "api" {
+  name                = var.api_app_service_name
+  resource_group_name = data.azurerm_resource_group.api.name
+  location            = data.azurerm_resource_group.api.location
+  service_plan_id     = data.azurerm_service_plan.api.id
+
+  site_config {
+    always_on = false
+
+    application_stack {
+      python_version = "3.12"
+    }
+  }
+
+  app_settings = {
+    "WEBSITE_RUN_FROM_PACKAGE"       = "1"
+    "SCM_DO_BUILD_DURING_DEPLOYMENT" = "false"
+  }
+
+  https_only = true
+
+  tags = var.tags
+}
