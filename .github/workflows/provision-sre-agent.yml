@@ -36,6 +36,15 @@ on:
         description: "Override SRE alert email (falls back to SRE_ALERT_EMAIL secret)"
         required: false
         default: ""
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/provision-sre-agent.yml"
+      - "config/workflows.json"
+      - "config/azure-hosting-resources.json"
+      - "config/terraform.tfvars.json"
+      - "terraform/**"
 
 permissions:
   contents: read

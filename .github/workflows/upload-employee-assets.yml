@@ -15,8 +15,12 @@ on:
     branches:
       - main
     paths:
+      - ".github/workflows/upload-employee-assets.yml"
+      - "config/workflows.json"
+      - "config/fabric-settings.json"
       - "data/employees/**"
       - "data/projects.json"
+      - "data/storage_map.json"
 
 permissions:
   contents: read

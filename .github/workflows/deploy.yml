@@ -11,6 +11,17 @@ on:
         options:
           - "false"
           - "true"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/deploy.yml"
+      - "config/**"
+      - "data/**"
+      - "docs/**"
+      - "fabric/**"
+      - "terraform/**"
+      - "ui/**"
 
 permissions:
   contents: read
