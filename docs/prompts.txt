@@ -1,0 +1,18 @@
+Implement a demo of Microsoft Fabric IQ to implement employee knowledge graph use case.
+Create a config folder for all endpoints and config values. Don’t hardcode anything.
+Include a readme file that describes the architecture with a diagram, project description, folder structure, technologies used, data structure used, best practices.
+Create a docs folder and place in it the architecture diagram and display it in readme file. Also in docs folder, add prompts.txt file to put the information in this prompt to coding assistant for generating this project.
+Add license file for Michael Yaacoub at Microsoft.
+Create a data folder and generate data for 100 employees including one drive docs in many formats such as ppt & pdf & word & txt and onenote, emails and all relevant assets that an employee in lam research could have. Build org hierarchy too. Store data in something like azure file storage or blob storage or use relevant azure storage for this data.
+Build needed data flows and pipelines using Microsoft Fabric to ingest the data. Leveraging document intelligence or content understanding to classify then parse documents and categorize based on employee and confidence score per document. When you generate data, ensure that it will have different levels of confidence scores when you roll up all fields by section and by document. The result of parsing docs can be stored as json in cosmos db.
+The data should end up in Fabric one-lake and build relevant semantic models in fabric.
+In readme describe data pipelines and semantic models storing ERD diagrams in docs folder.
+Also for business context implement fabric IQ ontology and link it to data in onelake. Generate ontology diagrams and store them in docs folder and display them in read.
+The readme file should be one only and create a TOC on top to navigate quickly to each section in readme.
+Leverage data agent from fabric to allow querying of the data.
+Generate a ui in ionic, angular, typescript and create a different layout per device type (web, mobile, tablet) on multiple pages with left navigation menu to:
+- visualize data sources including digital assets per employee and org structure as input data
+- Show data flow of data ingestion in Fabric and intelligence layer like document intelligence or content understanding.
+- Build a page to integrate fabric data agent with sample 20 prompts from the employees data with ability to copy prompt or trigger it to execute in chat with one click
+- Generate a page to package fabric agent as zip and download it and add link to teams dev portal so I can import agent in teams and copilot. Write steps to download and import agent.
+- add Microsoft logo in header and in footer add my name and job title & LinkedIn profile and GitHub url.

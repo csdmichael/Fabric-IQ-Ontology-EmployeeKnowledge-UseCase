@@ -1,0 +1,1602 @@
+[
+  {
+    "employeeId": "EMP001",
+    "displayName": "Alex Garcia",
+    "email": "alex.garcia1@lamresearch.example.com",
+    "department": "Manufacturing",
+    "role": "Architect",
+    "location": "Fremont",
+    "managerEmployeeId": null,
+    "skills": [
+      "Fabric",
+      "Python",
+      "Synapse",
+      "Power BI"
+    ],
+    "hireDate": "2012-02-01"
+  },
+  {
+    "employeeId": "EMP002",
+    "displayName": "Jordan Nguyen",
+    "email": "jordan.nguyen2@lamresearch.example.com",
+    "department": "HR",
+    "role": "Manager",
+    "location": "Portland",
+    "managerEmployeeId": null,
+    "skills": [
+      "Power BI",
+      "Ontology",
+      "Kusto",
+      "Fabric"
+    ],
+    "hireDate": "2012-03-03"
+  },
+  {
+    "employeeId": "EMP003",
+    "displayName": "Taylor Miller",
+    "email": "taylor.miller3@lamresearch.example.com",
+    "department": "IT",
+    "role": "Lead",
+    "location": "Bengaluru",
+    "managerEmployeeId": null,
+    "skills": [
+      "TypeScript",
+      "Azure AI",
+      "Ontology",
+      "MLOps"
+    ],
+    "hireDate": "2012-04-03"
+  },
+  {
+    "employeeId": "EMP004",
+    "displayName": "Morgan Smith",
+    "email": "morgan.smith4@lamresearch.example.com",
+    "department": "Finance",
+    "role": "Analyst",
+    "location": "Hsinchu",
+    "managerEmployeeId": null,
+    "skills": [
+      "TypeScript",
+      "Synapse",
+      "SQL",
+      "MLOps"
+    ],
+    "hireDate": "2012-05-04"
+  },
+  {
+    "employeeId": "EMP005",
+    "displayName": "Casey Lee",
+    "email": "casey.lee5@lamresearch.example.com",
+    "department": "Procurement",
+    "role": "Senior Engineer",
+    "location": "Bengaluru",
+    "managerEmployeeId": null,
+    "skills": [
+      "Ontology",
+      "SQL",
+      "Python",
+      "MLOps"
+    ],
+    "hireDate": "2012-06-04"
+  },
+  {
+    "employeeId": "EMP006",
+    "displayName": "Avery Wilson",
+    "email": "avery.wilson6@lamresearch.example.com",
+    "department": "Operations",
+    "role": "Specialist",
+    "location": "Portland",
+    "managerEmployeeId": "EMP001",
+    "skills": [
+      "Azure AI",
+      "MLOps",
+      "Fabric",
+      "Python"
+    ],
+    "hireDate": "2012-07-05"
+  },
+  {
+    "employeeId": "EMP007",
+    "displayName": "Riley Patel",
+    "email": "riley.patel7@lamresearch.example.com",
+    "department": "R&D",
+    "role": "Director",
+    "location": "Austin",
+    "managerEmployeeId": "EMP001",
+    "skills": [
+      "Python",
+      "Kusto",
+      "TypeScript",
+      "Synapse"
+    ],
+    "hireDate": "2012-08-05"
+  },
+  {
+    "employeeId": "EMP008",
+    "displayName": "Jamie Brown",
+    "email": "jamie.brown8@lamresearch.example.com",
+    "department": "Engineering",
+    "role": "Engineer",
+    "location": "Austin",
+    "managerEmployeeId": "EMP001",
+    "skills": [
+      "SQL",
+      "Kusto",
+      "Synapse",
+      "Fabric"
+    ],
+    "hireDate": "2012-09-05"
+  },
+  {
+    "employeeId": "EMP009",
+    "displayName": "Drew Kim",
+    "email": "drew.kim9@lamresearch.example.com",
+    "department": "Manufacturing",
+    "role": "Architect",
+    "location": "Hsinchu",
+    "managerEmployeeId": "EMP001",
+    "skills": [
+      "Power BI",
+      "Fabric",
+      "MLOps",
+      "SQL"
+    ],
+    "hireDate": "2012-10-06"
+  },
+  {
+    "employeeId": "EMP010",
+    "displayName": "Skyler Chen",
+    "email": "skyler.chen10@lamresearch.example.com",
+    "department": "HR",
+    "role": "Manager",
+    "location": "Hsinchu",
+    "managerEmployeeId": "EMP001",
+    "skills": [
+      "MLOps",
+      "Fabric",
+      "TypeScript",
+      "Ontology"
+    ],
+    "hireDate": "2012-11-06"
+  },
+  {
+    "employeeId": "EMP011",
+    "displayName": "Alex Garcia",
+    "email": "alex.garcia11@lamresearch.example.com",
+    "department": "IT",
+    "role": "Lead",
+    "location": "Portland",
+    "managerEmployeeId": "EMP002",
+    "skills": [
+      "Synapse",
+      "TypeScript",
+      "Ontology",
+      "Azure AI"
+    ],
+    "hireDate": "2012-12-07"
+  },
+  {
+    "employeeId": "EMP012",
+    "displayName": "Jordan Nguyen",
+    "email": "jordan.nguyen12@lamresearch.example.com",
+    "department": "Finance",
+    "role": "Analyst",
+    "location": "Hsinchu",
+    "managerEmployeeId": "EMP002",
+    "skills": [
+      "MLOps",
+      "Fabric",
+      "Python",
+      "TypeScript"
+    ],
+    "hireDate": "2013-01-07"
+  },
+  {
+    "employeeId": "EMP013",
+    "displayName": "Taylor Miller",
+    "email": "taylor.miller13@lamresearch.example.com",
+    "department": "Procurement",
+    "role": "Senior Engineer",
+    "location": "Austin",
+    "managerEmployeeId": "EMP002",
+    "skills": [
+      "Python",
+      "Azure AI",
+      "SQL",
+      "Ontology"
+    ],
+    "hireDate": "2013-02-07"
+  },
+  {
+    "employeeId": "EMP014",
+    "displayName": "Morgan Smith",
+    "email": "morgan.smith14@lamresearch.example.com",
+    "department": "Operations",
+    "role": "Specialist",
+    "location": "Austin",
+    "managerEmployeeId": "EMP002",
+    "skills": [
+      "Azure AI",
+      "Ontology",
+      "Kusto",
+      "Fabric"
+    ],
+    "hireDate": "2013-03-10"
+  },
+  {
+    "employeeId": "EMP015",
+    "displayName": "Casey Lee",
+    "email": "casey.lee15@lamresearch.example.com",
+    "department": "R&D",
+    "role": "Director",
+    "location": "Austin",
+    "managerEmployeeId": "EMP002",
+    "skills": [
+      "Kusto",
+      "TypeScript",
+      "Python",
+      "Ontology"
+    ],
+    "hireDate": "2013-04-10"
+  },
+  {
+    "employeeId": "EMP016",
+    "displayName": "Avery Wilson",
+    "email": "avery.wilson16@lamresearch.example.com",
+    "department": "Engineering",
+    "role": "Engineer",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP003",
+    "skills": [
+      "Kusto",
+      "Fabric",
+      "Synapse",
+      "Azure AI"
+    ],
+    "hireDate": "2013-05-11"
+  },
+  {
+    "employeeId": "EMP017",
+    "displayName": "Riley Patel",
+    "email": "riley.patel17@lamresearch.example.com",
+    "department": "Manufacturing",
+    "role": "Architect",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP003",
+    "skills": [
+      "Python",
+      "Ontology",
+      "Synapse",
+      "SQL"
+    ],
+    "hireDate": "2013-06-11"
+  },
+  {
+    "employeeId": "EMP018",
+    "displayName": "Jamie Brown",
+    "email": "jamie.brown18@lamresearch.example.com",
+    "department": "HR",
+    "role": "Manager",
+    "location": "Hsinchu",
+    "managerEmployeeId": "EMP003",
+    "skills": [
+      "Power BI",
+      "SQL",
+      "Kusto",
+      "TypeScript"
+    ],
+    "hireDate": "2013-07-12"
+  },
+  {
+    "employeeId": "EMP019",
+    "displayName": "Drew Kim",
+    "email": "drew.kim19@lamresearch.example.com",
+    "department": "IT",
+    "role": "Lead",
+    "location": "Bengaluru",
+    "managerEmployeeId": "EMP003",
+    "skills": [
+      "Ontology",
+      "MLOps",
+      "Kusto",
+      "SQL"
+    ],
+    "hireDate": "2013-08-12"
+  },
+  {
+    "employeeId": "EMP020",
+    "displayName": "Skyler Chen",
+    "email": "skyler.chen20@lamresearch.example.com",
+    "department": "Finance",
+    "role": "Analyst",
+    "location": "Austin",
+    "managerEmployeeId": "EMP003",
+    "skills": [
+      "Synapse",
+      "Power BI",
+      "Kusto",
+      "Ontology"
+    ],
+    "hireDate": "2013-09-12"
+  },
+  {
+    "employeeId": "EMP021",
+    "displayName": "Alex Garcia",
+    "email": "alex.garcia21@lamresearch.example.com",
+    "department": "Procurement",
+    "role": "Senior Engineer",
+    "location": "Portland",
+    "managerEmployeeId": "EMP004",
+    "skills": [
+      "Kusto",
+      "SQL",
+      "Fabric",
+      "Synapse"
+    ],
+    "hireDate": "2013-10-13"
+  },
+  {
+    "employeeId": "EMP022",
+    "displayName": "Jordan Nguyen",
+    "email": "jordan.nguyen22@lamresearch.example.com",
+    "department": "Operations",
+    "role": "Specialist",
+    "location": "Bengaluru",
+    "managerEmployeeId": "EMP004",
+    "skills": [
+      "Python",
+      "Kusto",
+      "Ontology",
+      "MLOps"
+    ],
+    "hireDate": "2013-11-13"
+  },
+  {
+    "employeeId": "EMP023",
+    "displayName": "Taylor Miller",
+    "email": "taylor.miller23@lamresearch.example.com",
+    "department": "R&D",
+    "role": "Director",
+    "location": "Hsinchu",
+    "managerEmployeeId": "EMP004",
+    "skills": [
+      "Power BI",
+      "Azure AI",
+      "Python",
+      "Fabric"
+    ],
+    "hireDate": "2013-12-14"
+  },
+  {
+    "employeeId": "EMP024",
+    "displayName": "Morgan Smith",
+    "email": "morgan.smith24@lamresearch.example.com",
+    "department": "Engineering",
+    "role": "Engineer",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP004",
+    "skills": [
+      "Kusto",
+      "SQL",
+      "Power BI",
+      "Synapse"
+    ],
+    "hireDate": "2014-01-14"
+  },
+  {
+    "employeeId": "EMP025",
+    "displayName": "Casey Lee",
+    "email": "casey.lee25@lamresearch.example.com",
+    "department": "Manufacturing",
+    "role": "Architect",
+    "location": "Hsinchu",
+    "managerEmployeeId": "EMP004",
+    "skills": [
+      "Ontology",
+      "Kusto",
+      "TypeScript",
+      "Fabric"
+    ],
+    "hireDate": "2014-02-14"
+  },
+  {
+    "employeeId": "EMP026",
+    "displayName": "Avery Wilson",
+    "email": "avery.wilson26@lamresearch.example.com",
+    "department": "HR",
+    "role": "Manager",
+    "location": "Bengaluru",
+    "managerEmployeeId": "EMP005",
+    "skills": [
+      "Synapse",
+      "Python",
+      "TypeScript",
+      "Ontology"
+    ],
+    "hireDate": "2014-03-17"
+  },
+  {
+    "employeeId": "EMP027",
+    "displayName": "Riley Patel",
+    "email": "riley.patel27@lamresearch.example.com",
+    "department": "IT",
+    "role": "Lead",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP005",
+    "skills": [
+      "Synapse",
+      "Python",
+      "Ontology",
+      "Azure AI"
+    ],
+    "hireDate": "2014-04-17"
+  },
+  {
+    "employeeId": "EMP028",
+    "displayName": "Jamie Brown",
+    "email": "jamie.brown28@lamresearch.example.com",
+    "department": "Finance",
+    "role": "Analyst",
+    "location": "Bengaluru",
+    "managerEmployeeId": "EMP005",
+    "skills": [
+      "SQL",
+      "Power BI",
+      "Fabric",
+      "MLOps"
+    ],
+    "hireDate": "2014-05-18"
+  },
+  {
+    "employeeId": "EMP029",
+    "displayName": "Drew Kim",
+    "email": "drew.kim29@lamresearch.example.com",
+    "department": "Procurement",
+    "role": "Senior Engineer",
+    "location": "Portland",
+    "managerEmployeeId": "EMP005",
+    "skills": [
+      "Power BI",
+      "Azure AI",
+      "Synapse",
+      "Ontology"
+    ],
+    "hireDate": "2014-06-18"
+  },
+  {
+    "employeeId": "EMP030",
+    "displayName": "Skyler Chen",
+    "email": "skyler.chen30@lamresearch.example.com",
+    "department": "Operations",
+    "role": "Specialist",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP005",
+    "skills": [
+      "Fabric",
+      "Azure AI",
+      "Python",
+      "SQL"
+    ],
+    "hireDate": "2014-07-19"
+  },
+  {
+    "employeeId": "EMP031",
+    "displayName": "Alex Garcia",
+    "email": "alex.garcia31@lamresearch.example.com",
+    "department": "R&D",
+    "role": "Director",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP006",
+    "skills": [
+      "Python",
+      "Fabric",
+      "Azure AI",
+      "Synapse"
+    ],
+    "hireDate": "2014-08-19"
+  },
+  {
+    "employeeId": "EMP032",
+    "displayName": "Jordan Nguyen",
+    "email": "jordan.nguyen32@lamresearch.example.com",
+    "department": "Engineering",
+    "role": "Engineer",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP006",
+    "skills": [
+      "Kusto",
+      "MLOps",
+      "Fabric",
+      "TypeScript"
+    ],
+    "hireDate": "2014-09-19"
+  },
+  {
+    "employeeId": "EMP033",
+    "displayName": "Taylor Miller",
+    "email": "taylor.miller33@lamresearch.example.com",
+    "department": "Manufacturing",
+    "role": "Architect",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP006",
+    "skills": [
+      "Synapse",
+      "Power BI",
+      "SQL",
+      "Fabric"
+    ],
+    "hireDate": "2014-10-20"
+  },
+  {
+    "employeeId": "EMP034",
+    "displayName": "Morgan Smith",
+    "email": "morgan.smith34@lamresearch.example.com",
+    "department": "HR",
+    "role": "Manager",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP006",
+    "skills": [
+      "Python",
+      "Ontology",
+      "SQL",
+      "Kusto"
+    ],
+    "hireDate": "2014-11-20"
+  },
+  {
+    "employeeId": "EMP035",
+    "displayName": "Casey Lee",
+    "email": "casey.lee35@lamresearch.example.com",
+    "department": "IT",
+    "role": "Lead",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP006",
+    "skills": [
+      "Azure AI",
+      "MLOps",
+      "TypeScript",
+      "Kusto"
+    ],
+    "hireDate": "2014-12-21"
+  },
+  {
+    "employeeId": "EMP036",
+    "displayName": "Avery Wilson",
+    "email": "avery.wilson36@lamresearch.example.com",
+    "department": "Finance",
+    "role": "Analyst",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP007",
+    "skills": [
+      "Ontology",
+      "Power BI",
+      "Synapse",
+      "TypeScript"
+    ],
+    "hireDate": "2015-01-21"
+  },
+  {
+    "employeeId": "EMP037",
+    "displayName": "Riley Patel",
+    "email": "riley.patel37@lamresearch.example.com",
+    "department": "Procurement",
+    "role": "Senior Engineer",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP007",
+    "skills": [
+      "Ontology",
+      "Kusto",
+      "Synapse",
+      "SQL"
+    ],
+    "hireDate": "2015-02-21"
+  },
+  {
+    "employeeId": "EMP038",
+    "displayName": "Jamie Brown",
+    "email": "jamie.brown38@lamresearch.example.com",
+    "department": "Operations",
+    "role": "Specialist",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP007",
+    "skills": [
+      "Synapse",
+      "Kusto",
+      "TypeScript",
+      "Python"
+    ],
+    "hireDate": "2015-03-24"
+  },
+  {
+    "employeeId": "EMP039",
+    "displayName": "Drew Kim",
+    "email": "drew.kim39@lamresearch.example.com",
+    "department": "R&D",
+    "role": "Director",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP007",
+    "skills": [
+      "Python",
+      "SQL",
+      "Fabric",
+      "Ontology"
+    ],
+    "hireDate": "2015-04-24"
+  },
+  {
+    "employeeId": "EMP040",
+    "displayName": "Skyler Chen",
+    "email": "skyler.chen40@lamresearch.example.com",
+    "department": "Engineering",
+    "role": "Engineer",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP007",
+    "skills": [
+      "Azure AI",
+      "Synapse",
+      "Kusto",
+      "SQL"
+    ],
+    "hireDate": "2015-05-25"
+  },
+  {
+    "employeeId": "EMP041",
+    "displayName": "Alex Garcia",
+    "email": "alex.garcia41@lamresearch.example.com",
+    "department": "Manufacturing",
+    "role": "Architect",
+    "location": "Portland",
+    "managerEmployeeId": "EMP008",
+    "skills": [
+      "Kusto",
+      "Power BI",
+      "Azure AI",
+      "Fabric"
+    ],
+    "hireDate": "2015-06-25"
+  },
+  {
+    "employeeId": "EMP042",
+    "displayName": "Jordan Nguyen",
+    "email": "jordan.nguyen42@lamresearch.example.com",
+    "department": "HR",
+    "role": "Manager",
+    "location": "Portland",
+    "managerEmployeeId": "EMP008",
+    "skills": [
+      "Synapse",
+      "SQL",
+      "MLOps",
+      "Power BI"
+    ],
+    "hireDate": "2015-07-26"
+  },
+  {
+    "employeeId": "EMP043",
+    "displayName": "Taylor Miller",
+    "email": "taylor.miller43@lamresearch.example.com",
+    "department": "IT",
+    "role": "Lead",
+    "location": "Hsinchu",
+    "managerEmployeeId": "EMP008",
+    "skills": [
+      "Synapse",
+      "Ontology",
+      "MLOps",
+      "Azure AI"
+    ],
+    "hireDate": "2015-08-26"
+  },
+  {
+    "employeeId": "EMP044",
+    "displayName": "Morgan Smith",
+    "email": "morgan.smith44@lamresearch.example.com",
+    "department": "Finance",
+    "role": "Analyst",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP008",
+    "skills": [
+      "SQL",
+      "Ontology",
+      "TypeScript",
+      "Python"
+    ],
+    "hireDate": "2015-09-26"
+  },
+  {
+    "employeeId": "EMP045",
+    "displayName": "Casey Lee",
+    "email": "casey.lee45@lamresearch.example.com",
+    "department": "Procurement",
+    "role": "Senior Engineer",
+    "location": "Hsinchu",
+    "managerEmployeeId": "EMP008",
+    "skills": [
+      "Ontology",
+      "MLOps",
+      "TypeScript",
+      "Synapse"
+    ],
+    "hireDate": "2015-10-27"
+  },
+  {
+    "employeeId": "EMP046",
+    "displayName": "Avery Wilson",
+    "email": "avery.wilson46@lamresearch.example.com",
+    "department": "Operations",
+    "role": "Specialist",
+    "location": "Bengaluru",
+    "managerEmployeeId": "EMP009",
+    "skills": [
+      "Power BI",
+      "Ontology",
+      "MLOps",
+      "Fabric"
+    ],
+    "hireDate": "2015-11-27"
+  },
+  {
+    "employeeId": "EMP047",
+    "displayName": "Riley Patel",
+    "email": "riley.patel47@lamresearch.example.com",
+    "department": "R&D",
+    "role": "Director",
+    "location": "Austin",
+    "managerEmployeeId": "EMP009",
+    "skills": [
+      "Power BI",
+      "TypeScript",
+      "MLOps",
+      "Fabric"
+    ],
+    "hireDate": "2015-12-28"
+  },
+  {
+    "employeeId": "EMP048",
+    "displayName": "Jamie Brown",
+    "email": "jamie.brown48@lamresearch.example.com",
+    "department": "Engineering",
+    "role": "Engineer",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP009",
+    "skills": [
+      "Power BI",
+      "MLOps",
+      "Synapse",
+      "SQL"
+    ],
+    "hireDate": "2016-01-28"
+  },
+  {
+    "employeeId": "EMP049",
+    "displayName": "Drew Kim",
+    "email": "drew.kim49@lamresearch.example.com",
+    "department": "Manufacturing",
+    "role": "Architect",
+    "location": "Portland",
+    "managerEmployeeId": "EMP009",
+    "skills": [
+      "Ontology",
+      "SQL",
+      "Python",
+      "Fabric"
+    ],
+    "hireDate": "2016-02-28"
+  },
+  {
+    "employeeId": "EMP050",
+    "displayName": "Skyler Chen",
+    "email": "skyler.chen50@lamresearch.example.com",
+    "department": "HR",
+    "role": "Manager",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP009",
+    "skills": [
+      "Kusto",
+      "Fabric",
+      "SQL",
+      "MLOps"
+    ],
+    "hireDate": "2016-03-30"
+  },
+  {
+    "employeeId": "EMP051",
+    "displayName": "Alex Garcia",
+    "email": "alex.garcia51@lamresearch.example.com",
+    "department": "IT",
+    "role": "Lead",
+    "location": "Austin",
+    "managerEmployeeId": "EMP010",
+    "skills": [
+      "Power BI",
+      "MLOps",
+      "Ontology",
+      "Python"
+    ],
+    "hireDate": "2016-04-30"
+  },
+  {
+    "employeeId": "EMP052",
+    "displayName": "Jordan Nguyen",
+    "email": "jordan.nguyen52@lamresearch.example.com",
+    "department": "Finance",
+    "role": "Analyst",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP010",
+    "skills": [
+      "SQL",
+      "Ontology",
+      "Python",
+      "Kusto"
+    ],
+    "hireDate": "2016-05-31"
+  },
+  {
+    "employeeId": "EMP053",
+    "displayName": "Taylor Miller",
+    "email": "taylor.miller53@lamresearch.example.com",
+    "department": "Procurement",
+    "role": "Senior Engineer",
+    "location": "Hsinchu",
+    "managerEmployeeId": "EMP010",
+    "skills": [
+      "Azure AI",
+      "Fabric",
+      "SQL",
+      "MLOps"
+    ],
+    "hireDate": "2016-07-01"
+  },
+  {
+    "employeeId": "EMP054",
+    "displayName": "Morgan Smith",
+    "email": "morgan.smith54@lamresearch.example.com",
+    "department": "Operations",
+    "role": "Specialist",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP010",
+    "skills": [
+      "MLOps",
+      "Kusto",
+      "Python",
+      "Azure AI"
+    ],
+    "hireDate": "2016-08-01"
+  },
+  {
+    "employeeId": "EMP055",
+    "displayName": "Casey Lee",
+    "email": "casey.lee55@lamresearch.example.com",
+    "department": "R&D",
+    "role": "Director",
+    "location": "Bengaluru",
+    "managerEmployeeId": "EMP010",
+    "skills": [
+      "MLOps",
+      "TypeScript",
+      "Fabric",
+      "Azure AI"
+    ],
+    "hireDate": "2016-09-01"
+  },
+  {
+    "employeeId": "EMP056",
+    "displayName": "Avery Wilson",
+    "email": "avery.wilson56@lamresearch.example.com",
+    "department": "Engineering",
+    "role": "Engineer",
+    "location": "Austin",
+    "managerEmployeeId": "EMP011",
+    "skills": [
+      "SQL",
+      "Fabric",
+      "Kusto",
+      "Azure AI"
+    ],
+    "hireDate": "2016-10-02"
+  },
+  {
+    "employeeId": "EMP057",
+    "displayName": "Riley Patel",
+    "email": "riley.patel57@lamresearch.example.com",
+    "department": "Manufacturing",
+    "role": "Architect",
+    "location": "Austin",
+    "managerEmployeeId": "EMP011",
+    "skills": [
+      "Ontology",
+      "Azure AI",
+      "Python",
+      "Fabric"
+    ],
+    "hireDate": "2016-11-02"
+  },
+  {
+    "employeeId": "EMP058",
+    "displayName": "Jamie Brown",
+    "email": "jamie.brown58@lamresearch.example.com",
+    "department": "HR",
+    "role": "Manager",
+    "location": "Austin",
+    "managerEmployeeId": "EMP011",
+    "skills": [
+      "Kusto",
+      "Power BI",
+      "TypeScript",
+      "MLOps"
+    ],
+    "hireDate": "2016-12-03"
+  },
+  {
+    "employeeId": "EMP059",
+    "displayName": "Drew Kim",
+    "email": "drew.kim59@lamresearch.example.com",
+    "department": "IT",
+    "role": "Lead",
+    "location": "Portland",
+    "managerEmployeeId": "EMP011",
+    "skills": [
+      "Synapse",
+      "Python",
+      "Power BI",
+      "Fabric"
+    ],
+    "hireDate": "2017-01-03"
+  },
+  {
+    "employeeId": "EMP060",
+    "displayName": "Skyler Chen",
+    "email": "skyler.chen60@lamresearch.example.com",
+    "department": "Finance",
+    "role": "Analyst",
+    "location": "Hsinchu",
+    "managerEmployeeId": "EMP011",
+    "skills": [
+      "MLOps",
+      "Ontology",
+      "Fabric",
+      "Synapse"
+    ],
+    "hireDate": "2017-02-03"
+  },
+  {
+    "employeeId": "EMP061",
+    "displayName": "Alex Garcia",
+    "email": "alex.garcia61@lamresearch.example.com",
+    "department": "Procurement",
+    "role": "Senior Engineer",
+    "location": "Bengaluru",
+    "managerEmployeeId": "EMP012",
+    "skills": [
+      "Azure AI",
+      "Ontology",
+      "Power BI",
+      "TypeScript"
+    ],
+    "hireDate": "2017-03-06"
+  },
+  {
+    "employeeId": "EMP062",
+    "displayName": "Jordan Nguyen",
+    "email": "jordan.nguyen62@lamresearch.example.com",
+    "department": "Operations",
+    "role": "Specialist",
+    "location": "Bengaluru",
+    "managerEmployeeId": "EMP012",
+    "skills": [
+      "SQL",
+      "Kusto",
+      "TypeScript",
+      "Power BI"
+    ],
+    "hireDate": "2017-04-06"
+  },
+  {
+    "employeeId": "EMP063",
+    "displayName": "Taylor Miller",
+    "email": "taylor.miller63@lamresearch.example.com",
+    "department": "R&D",
+    "role": "Director",
+    "location": "Portland",
+    "managerEmployeeId": "EMP012",
+    "skills": [
+      "Ontology",
+      "Kusto",
+      "Python",
+      "TypeScript"
+    ],
+    "hireDate": "2017-05-07"
+  },
+  {
+    "employeeId": "EMP064",
+    "displayName": "Morgan Smith",
+    "email": "morgan.smith64@lamresearch.example.com",
+    "department": "Engineering",
+    "role": "Engineer",
+    "location": "Portland",
+    "managerEmployeeId": "EMP012",
+    "skills": [
+      "SQL",
+      "Power BI",
+      "Azure AI",
+      "Python"
+    ],
+    "hireDate": "2017-06-07"
+  },
+  {
+    "employeeId": "EMP065",
+    "displayName": "Casey Lee",
+    "email": "casey.lee65@lamresearch.example.com",
+    "department": "Manufacturing",
+    "role": "Architect",
+    "location": "Bengaluru",
+    "managerEmployeeId": "EMP012",
+    "skills": [
+      "Power BI",
+      "TypeScript",
+      "MLOps",
+      "SQL"
+    ],
+    "hireDate": "2017-07-08"
+  },
+  {
+    "employeeId": "EMP066",
+    "displayName": "Avery Wilson",
+    "email": "avery.wilson66@lamresearch.example.com",
+    "department": "HR",
+    "role": "Manager",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP013",
+    "skills": [
+      "Python",
+      "Kusto",
+      "SQL",
+      "Ontology"
+    ],
+    "hireDate": "2017-08-08"
+  },
+  {
+    "employeeId": "EMP067",
+    "displayName": "Riley Patel",
+    "email": "riley.patel67@lamresearch.example.com",
+    "department": "IT",
+    "role": "Lead",
+    "location": "Austin",
+    "managerEmployeeId": "EMP013",
+    "skills": [
+      "TypeScript",
+      "MLOps",
+      "Python",
+      "Kusto"
+    ],
+    "hireDate": "2017-09-08"
+  },
+  {
+    "employeeId": "EMP068",
+    "displayName": "Jamie Brown",
+    "email": "jamie.brown68@lamresearch.example.com",
+    "department": "Finance",
+    "role": "Analyst",
+    "location": "Austin",
+    "managerEmployeeId": "EMP013",
+    "skills": [
+      "Ontology",
+      "Kusto",
+      "Fabric",
+      "Synapse"
+    ],
+    "hireDate": "2017-10-09"
+  },
+  {
+    "employeeId": "EMP069",
+    "displayName": "Drew Kim",
+    "email": "drew.kim69@lamresearch.example.com",
+    "department": "Procurement",
+    "role": "Senior Engineer",
+    "location": "Austin",
+    "managerEmployeeId": "EMP013",
+    "skills": [
+      "TypeScript",
+      "MLOps",
+      "Power BI",
+      "Azure AI"
+    ],
+    "hireDate": "2017-11-09"
+  },
+  {
+    "employeeId": "EMP070",
+    "displayName": "Skyler Chen",
+    "email": "skyler.chen70@lamresearch.example.com",
+    "department": "Operations",
+    "role": "Specialist",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP013",
+    "skills": [
+      "Kusto",
+      "MLOps",
+      "SQL",
+      "Power BI"
+    ],
+    "hireDate": "2017-12-10"
+  },
+  {
+    "employeeId": "EMP071",
+    "displayName": "Alex Garcia",
+    "email": "alex.garcia71@lamresearch.example.com",
+    "department": "R&D",
+    "role": "Director",
+    "location": "Hsinchu",
+    "managerEmployeeId": "EMP014",
+    "skills": [
+      "SQL",
+      "MLOps",
+      "Python",
+      "Kusto"
+    ],
+    "hireDate": "2018-01-10"
+  },
+  {
+    "employeeId": "EMP072",
+    "displayName": "Jordan Nguyen",
+    "email": "jordan.nguyen72@lamresearch.example.com",
+    "department": "Engineering",
+    "role": "Engineer",
+    "location": "Hsinchu",
+    "managerEmployeeId": "EMP014",
+    "skills": [
+      "TypeScript",
+      "Azure AI",
+      "Kusto",
+      "Python"
+    ],
+    "hireDate": "2018-02-10"
+  },
+  {
+    "employeeId": "EMP073",
+    "displayName": "Taylor Miller",
+    "email": "taylor.miller73@lamresearch.example.com",
+    "department": "Manufacturing",
+    "role": "Architect",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP014",
+    "skills": [
+      "Ontology",
+      "SQL",
+      "Azure AI",
+      "Python"
+    ],
+    "hireDate": "2018-03-13"
+  },
+  {
+    "employeeId": "EMP074",
+    "displayName": "Morgan Smith",
+    "email": "morgan.smith74@lamresearch.example.com",
+    "department": "HR",
+    "role": "Manager",
+    "location": "Hsinchu",
+    "managerEmployeeId": "EMP014",
+    "skills": [
+      "TypeScript",
+      "SQL",
+      "Kusto",
+      "Azure AI"
+    ],
+    "hireDate": "2018-04-13"
+  },
+  {
+    "employeeId": "EMP075",
+    "displayName": "Casey Lee",
+    "email": "casey.lee75@lamresearch.example.com",
+    "department": "IT",
+    "role": "Lead",
+    "location": "Portland",
+    "managerEmployeeId": "EMP014",
+    "skills": [
+      "Python",
+      "Power BI",
+      "Kusto",
+      "Synapse"
+    ],
+    "hireDate": "2018-05-14"
+  },
+  {
+    "employeeId": "EMP076",
+    "displayName": "Avery Wilson",
+    "email": "avery.wilson76@lamresearch.example.com",
+    "department": "Finance",
+    "role": "Analyst",
+    "location": "Austin",
+    "managerEmployeeId": "EMP015",
+    "skills": [
+      "Fabric",
+      "Power BI",
+      "Kusto",
+      "Azure AI"
+    ],
+    "hireDate": "2018-06-14"
+  },
+  {
+    "employeeId": "EMP077",
+    "displayName": "Riley Patel",
+    "email": "riley.patel77@lamresearch.example.com",
+    "department": "Procurement",
+    "role": "Senior Engineer",
+    "location": "Austin",
+    "managerEmployeeId": "EMP015",
+    "skills": [
+      "Kusto",
+      "Azure AI",
+      "Fabric",
+      "Ontology"
+    ],
+    "hireDate": "2018-07-15"
+  },
+  {
+    "employeeId": "EMP078",
+    "displayName": "Jamie Brown",
+    "email": "jamie.brown78@lamresearch.example.com",
+    "department": "Operations",
+    "role": "Specialist",
+    "location": "Portland",
+    "managerEmployeeId": "EMP015",
+    "skills": [
+      "Azure AI",
+      "Fabric",
+      "TypeScript",
+      "Kusto"
+    ],
+    "hireDate": "2018-08-15"
+  },
+  {
+    "employeeId": "EMP079",
+    "displayName": "Drew Kim",
+    "email": "drew.kim79@lamresearch.example.com",
+    "department": "R&D",
+    "role": "Director",
+    "location": "Hsinchu",
+    "managerEmployeeId": "EMP015",
+    "skills": [
+      "Fabric",
+      "Python",
+      "TypeScript",
+      "SQL"
+    ],
+    "hireDate": "2018-09-15"
+  },
+  {
+    "employeeId": "EMP080",
+    "displayName": "Skyler Chen",
+    "email": "skyler.chen80@lamresearch.example.com",
+    "department": "Engineering",
+    "role": "Engineer",
+    "location": "Hsinchu",
+    "managerEmployeeId": "EMP015",
+    "skills": [
+      "Synapse",
+      "Ontology",
+      "Power BI",
+      "Python"
+    ],
+    "hireDate": "2018-10-16"
+  },
+  {
+    "employeeId": "EMP081",
+    "displayName": "Alex Garcia",
+    "email": "alex.garcia81@lamresearch.example.com",
+    "department": "Manufacturing",
+    "role": "Architect",
+    "location": "Bengaluru",
+    "managerEmployeeId": "EMP016",
+    "skills": [
+      "SQL",
+      "Fabric",
+      "Ontology",
+      "TypeScript"
+    ],
+    "hireDate": "2018-11-16"
+  },
+  {
+    "employeeId": "EMP082",
+    "displayName": "Jordan Nguyen",
+    "email": "jordan.nguyen82@lamresearch.example.com",
+    "department": "HR",
+    "role": "Manager",
+    "location": "Bengaluru",
+    "managerEmployeeId": "EMP016",
+    "skills": [
+      "SQL",
+      "Kusto",
+      "MLOps",
+      "Fabric"
+    ],
+    "hireDate": "2018-12-17"
+  },
+  {
+    "employeeId": "EMP083",
+    "displayName": "Taylor Miller",
+    "email": "taylor.miller83@lamresearch.example.com",
+    "department": "IT",
+    "role": "Lead",
+    "location": "Austin",
+    "managerEmployeeId": "EMP016",
+    "skills": [
+      "Power BI",
+      "Fabric",
+      "Kusto",
+      "Python"
+    ],
+    "hireDate": "2019-01-17"
+  },
+  {
+    "employeeId": "EMP084",
+    "displayName": "Morgan Smith",
+    "email": "morgan.smith84@lamresearch.example.com",
+    "department": "Finance",
+    "role": "Analyst",
+    "location": "Hsinchu",
+    "managerEmployeeId": "EMP016",
+    "skills": [
+      "TypeScript",
+      "Synapse",
+      "Python",
+      "Power BI"
+    ],
+    "hireDate": "2019-02-17"
+  },
+  {
+    "employeeId": "EMP085",
+    "displayName": "Casey Lee",
+    "email": "casey.lee85@lamresearch.example.com",
+    "department": "Procurement",
+    "role": "Senior Engineer",
+    "location": "Bengaluru",
+    "managerEmployeeId": "EMP016",
+    "skills": [
+      "Synapse",
+      "Ontology",
+      "Python",
+      "Kusto"
+    ],
+    "hireDate": "2019-03-20"
+  },
+  {
+    "employeeId": "EMP086",
+    "displayName": "Avery Wilson",
+    "email": "avery.wilson86@lamresearch.example.com",
+    "department": "Operations",
+    "role": "Specialist",
+    "location": "Austin",
+    "managerEmployeeId": "EMP017",
+    "skills": [
+      "Ontology",
+      "MLOps",
+      "Synapse",
+      "SQL"
+    ],
+    "hireDate": "2019-04-20"
+  },
+  {
+    "employeeId": "EMP087",
+    "displayName": "Riley Patel",
+    "email": "riley.patel87@lamresearch.example.com",
+    "department": "R&D",
+    "role": "Director",
+    "location": "Bengaluru",
+    "managerEmployeeId": "EMP017",
+    "skills": [
+      "SQL",
+      "Power BI",
+      "Ontology",
+      "Kusto"
+    ],
+    "hireDate": "2019-05-21"
+  },
+  {
+    "employeeId": "EMP088",
+    "displayName": "Jamie Brown",
+    "email": "jamie.brown88@lamresearch.example.com",
+    "department": "Engineering",
+    "role": "Engineer",
+    "location": "Bengaluru",
+    "managerEmployeeId": "EMP017",
+    "skills": [
+      "SQL",
+      "Ontology",
+      "Azure AI",
+      "TypeScript"
+    ],
+    "hireDate": "2019-06-21"
+  },
+  {
+    "employeeId": "EMP089",
+    "displayName": "Drew Kim",
+    "email": "drew.kim89@lamresearch.example.com",
+    "department": "Manufacturing",
+    "role": "Architect",
+    "location": "Hsinchu",
+    "managerEmployeeId": "EMP017",
+    "skills": [
+      "Ontology",
+      "SQL",
+      "MLOps",
+      "Fabric"
+    ],
+    "hireDate": "2019-07-22"
+  },
+  {
+    "employeeId": "EMP090",
+    "displayName": "Skyler Chen",
+    "email": "skyler.chen90@lamresearch.example.com",
+    "department": "HR",
+    "role": "Manager",
+    "location": "Bengaluru",
+    "managerEmployeeId": "EMP017",
+    "skills": [
+      "SQL",
+      "Synapse",
+      "MLOps",
+      "Azure AI"
+    ],
+    "hireDate": "2019-08-22"
+  },
+  {
+    "employeeId": "EMP091",
+    "displayName": "Alex Garcia",
+    "email": "alex.garcia91@lamresearch.example.com",
+    "department": "IT",
+    "role": "Lead",
+    "location": "Fremont",
+    "managerEmployeeId": "EMP018",
+    "skills": [
+      "Power BI",
+      "Python",
+      "Fabric",
+      "Ontology"
+    ],
+    "hireDate": "2019-09-22"
+  },
+  {
+    "employeeId": "EMP092",
+    "displayName": "Jordan Nguyen",
+    "email": "jordan.nguyen92@lamresearch.example.com",
+    "department": "Finance",
+    "role": "Analyst",
+    "location": "Bengaluru",
+    "managerEmployeeId": "EMP018",
+    "skills": [
+      "Synapse",
+      "Power BI",
+      "TypeScript",
+      "Python"
+    ],
+    "hireDate": "2019-10-23"
+  },
+  {
+    "employeeId": "EMP093",
+    "displayName": "Taylor Miller",
+    "email": "taylor.miller93@lamresearch.example.com",
+    "department": "Procurement",
+    "role": "Senior Engineer",
+    "location": "Austin",
+    "managerEmployeeId": "EMP018",
+    "skills": [
+      "Kusto",
+      "TypeScript",
+      "MLOps",
+      "Fabric"
+    ],
+    "hireDate": "2019-11-23"
+  },
+  {
+    "employeeId": "EMP094",
+    "displayName": "Morgan Smith",
+    "email": "morgan.smith94@lamresearch.example.com",
+    "department": "Operations",
+    "role": "Specialist",
+    "location": "Austin",
+    "managerEmployeeId": "EMP018",
+    "skills": [
+      "Ontology",
+      "MLOps",
+      "Azure AI",
+      "TypeScript"
+    ],
+    "hireDate": "2019-12-24"
+  },
+  {
+    "employeeId": "EMP095",
+    "displayName": "Casey Lee",
+    "email": "casey.lee95@lamresearch.example.com",
+    "department": "R&D",
+    "role": "Director",
+    "location": "Bengaluru",
+    "managerEmployeeId": "EMP018",
+    "skills": [
+      "TypeScript",
+      "SQL",
+      "Ontology",
+      "Synapse"
+    ],
+    "hireDate": "2020-01-24"
+  },
+  {
+    "employeeId": "EMP096",
+    "displayName": "Avery Wilson",
+    "email": "avery.wilson96@lamresearch.example.com",
+    "department": "Engineering",
+    "role": "Engineer",
+    "location": "Hsinchu",
+    "managerEmployeeId": "EMP019",
+    "skills": [
+      "Synapse",
+      "MLOps",
+      "Azure AI",
+      "TypeScript"
+    ],
+    "hireDate": "2020-02-24"
+  },
+  {
+    "employeeId": "EMP097",
+    "displayName": "Riley Patel",
+    "email": "riley.patel97@lamresearch.example.com",
+    "department": "Manufacturing",
+    "role": "Architect",
+    "location": "Bengaluru",
+    "managerEmployeeId": "EMP019",
+    "skills": [
+      "MLOps",
+      "Fabric",
+      "TypeScript",
+      "SQL"
+    ],
+    "hireDate": "2020-03-26"
+  },
+  {
+    "employeeId": "EMP098",
+    "displayName": "Jamie Brown",
+    "email": "jamie.brown98@lamresearch.example.com",
+    "department": "HR",
+    "role": "Manager",
+    "location": "Hsinchu",
+    "managerEmployeeId": "EMP019",
+    "skills": [
+      "Synapse",
+      "SQL",
+      "TypeScript",
+      "Ontology"
+    ],
+    "hireDate": "2020-04-26"
+  },
+  {
+    "employeeId": "EMP099",
+    "displayName": "Drew Kim",
+    "email": "drew.kim99@lamresearch.example.com",
+    "department": "IT",
+    "role": "Lead",
+    "location": "Portland",
+    "managerEmployeeId": "EMP019",
+    "skills": [
+      "Fabric",
+      "Power BI",
+      "Ontology",
+      "Kusto"
+    ],
+    "hireDate": "2020-05-27"
+  },
+  {
+    "employeeId": "EMP100",
+    "displayName": "Skyler Chen",
+    "email": "skyler.chen100@lamresearch.example.com",
+    "department": "Finance",
+    "role": "Analyst",
+    "location": "Austin",
+    "managerEmployeeId": "EMP019",
+    "skills": [
+      "Python",
+      "Power BI",
+      "MLOps",
+      "Kusto"
+    ],
+    "hireDate": "2020-06-27"
+  }
+]

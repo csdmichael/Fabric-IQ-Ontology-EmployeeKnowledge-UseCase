@@ -1,0 +1,23 @@
+{
+  "raw": {
+    "storageConfigKey": "azure.blobStorageEndpoint",
+    "container": "employee-knowledge-raw",
+    "protocol": "https"
+  },
+  "processed": {
+    "storageConfigKey": "azure.blobStorageEndpoint",
+    "container": "employee-knowledge-processed",
+    "protocol": "https"
+  },
+  "onedriveIngestionPathTemplate": "{employeeId}/",
+  "cosmosDb": {
+    "endpointConfigKey": "azure.cosmosDbEndpoint",
+    "database": "EmployeeKnowledgeGraph",
+    "container": "EmployeeDocumentParsing"
+  },
+  "oneLake": {
+    "workspaceConfigKey": "microsoftFabric.workspaceId",
+    "lakehouseConfigKey": "microsoftFabric.lakehouseId",
+    "relativePath": "Tables/"
+  }
+}

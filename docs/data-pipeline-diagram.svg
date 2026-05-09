@@ -1,0 +1,16 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='720'>
+<rect width='1200' height='720' fill='white'/>
+<text x='40' y='50' font-size='28' font-family='Arial' fill='#111'>Fabric Data Pipeline Flow</text>
+<rect x='40' y='70' width='1120' height='58' fill='#f3f6fb' stroke='#8aa4c8' rx='8'/>
+<text x='60' y='100' font-size='20' font-family='Arial' fill='#1f2d3d'>Stage 1: Ingest from Azure Storage -> OneLake Staging</text>
+<rect x='40' y='160' width='1120' height='58' fill='#f3f6fb' stroke='#8aa4c8' rx='8'/>
+<text x='60' y='190' font-size='20' font-family='Arial' fill='#1f2d3d'>Stage 2: Classify/Parse with Azure Document Intelligence</text>
+<rect x='40' y='250' width='1120' height='58' fill='#f3f6fb' stroke='#8aa4c8' rx='8'/>
+<text x='60' y='280' font-size='20' font-family='Arial' fill='#1f2d3d'>Stage 3: Persist parsed JSON + confidence to Cosmos DB</text>
+<rect x='40' y='340' width='1120' height='58' fill='#f3f6fb' stroke='#8aa4c8' rx='8'/>
+<text x='60' y='370' font-size='20' font-family='Arial' fill='#1f2d3d'>Stage 4: Curate and model in OneLake Delta tables</text>
+<rect x='40' y='430' width='1120' height='58' fill='#f3f6fb' stroke='#8aa4c8' rx='8'/>
+<text x='60' y='460' font-size='20' font-family='Arial' fill='#1f2d3d'>Stage 5: Refresh semantic model and ontology graph</text>
+<rect x='40' y='520' width='1120' height='58' fill='#f3f6fb' stroke='#8aa4c8' rx='8'/>
+<text x='60' y='550' font-size='20' font-family='Arial' fill='#1f2d3d'>Stage 6: Serve Fabric Data Agent to Ionic app / Teams / Copilot</text>
+</svg>

@@ -1,0 +1,32 @@
+{
+  "agentName": "FabricEmployeeKnowledgeAgent",
+  "description": "Fabric data agent for employee knowledge graph exploration.",
+  "semanticModel": "sm_employee_knowledge",
+  "ontology": "FabricIQEmployeeKnowledge",
+  "samplePrompts": [
+    "Show all assets for EMP014 and average confidence score by format.",
+    "Which department has the lowest average document confidence this month?",
+    "List employees with OneNote assets containing safety-related terms.",
+    "Find managers with more than 20 direct and indirect reports.",
+    "Show top 10 employees by number of parsed documents.",
+    "What are the most common document categories in R&D?",
+    "Get all emails mentioning procurement delays and owner employees.",
+    "Compare confidence scores between PDF and DOCX for Operations.",
+    "List employees who own at least one PPTX and one OneNote document.",
+    "Find assets with confidence below 0.70 and suggest reprocessing order.",
+    "Show org hierarchy path for EMP077.",
+    "Which skills correlate with high confidence parsing results?",
+    "Display all documents mapped to project codenames in Engineering.",
+    "Find stale assets not modified in the last 120 days.",
+    "Show confidence rollup by section metadata/content/entities.",
+    "List all assets loaded to OneLake but missing Cosmos DB parse results.",
+    "Identify employees with cross-department collaboration emails.",
+    "Show average confidence trend by week for Finance.",
+    "Find top 5 entities extracted from OneNote records.",
+    "Generate briefing summary for manager EMP004 team knowledge assets."
+  ],
+  "packaging": {
+    "outputZip": "FabricEmployeeKnowledgeAgent.zip",
+    "teamsImportUrl": "https://dev.teams.microsoft.com"
+  }
+}

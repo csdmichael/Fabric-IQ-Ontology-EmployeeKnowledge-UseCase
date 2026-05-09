@@ -1,0 +1,23 @@
+{
+  "ontologyName": "FabricIQEmployeeKnowledge",
+  "version": "1.0.0",
+  "entities": [
+    "Employee",
+    "Manager",
+    "Department",
+    "Document",
+    "Email",
+    "OneNote",
+    "Project",
+    "Skill"
+  ],
+  "relationships": [
+    "Employee_REPORTS_TO_Manager",
+    "Employee_BELONGS_TO_Department",
+    "Employee_OWNS_Document",
+    "Employee_WRITES_Email",
+    "Employee_MAINTAINS_OneNote",
+    "Employee_CONTRIBUTES_TO_Project",
+    "Employee_HAS_Skill"
+  ]
+}

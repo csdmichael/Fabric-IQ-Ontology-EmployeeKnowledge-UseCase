@@ -1,0 +1,23 @@
+{
+  "name": "sm_employee_knowledge",
+  "facts": [
+    "FactDocumentParsingConfidence",
+    "FactEmployeeAssetActivity"
+  ],
+  "dimensions": [
+    "DimEmployee",
+    "DimDepartment",
+    "DimAssetType",
+    "DimDate"
+  ],
+  "relationships": [
+    "FactEmployeeAssetActivity.employeeId -> DimEmployee.employeeId",
+    "FactDocumentParsingConfidence.assetId -> DimAssetType.assetId",
+    "DimEmployee.departmentId -> DimDepartment.departmentId"
+  ],
+  "measures": [
+    "AvgDocumentConfidence",
+    "AssetsPerEmployee",
+    "DocumentsByCategory"
+  ]
+}
