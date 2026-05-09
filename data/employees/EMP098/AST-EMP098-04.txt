@@ -1,0 +1,17 @@
+============================================================
+SHIFT HANDOFF NOTES
+Date: 2025-04-13
+Author: Jamie Brown (Manager, HR)
+Location: Hsinchu
+============================================================
+
+Shift Handoff Notes - HR Ops
+----------------------------
+New hire batch (8 employees) onboarded today - IT tickets submitted for laptop provisioning.
+Benefits enrollment window closes Friday - reminder emails scheduled.
+Open: two performance review escalations pending manager response.
+HRIS sync ran successfully at 09:00 - no errors.
+
+============================================================
+Skills: Synapse, SQL, TypeScript, Ontology
+Next shift supervisor - please review and sign off.

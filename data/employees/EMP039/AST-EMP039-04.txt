@@ -1,0 +1,17 @@
+============================================================
+SHIFT HANDOFF NOTES
+Date: 2025-02-13
+Author: Drew Kim (Director, R&D)
+Location: Fremont
+============================================================
+
+Shift Handoff Notes - R&D Lab
+------------------------------
+Experiment batch EXP-2026-047 completed - results uploaded to LIMS.
+Reactor temperature anomaly at 11:30 - auto-corrected, data flagged for review.
+IP disclosure submitted for novel deposition process - ref: IPD-883.
+Equipment: Spectroscope S4 offline for calibration, available tomorrow.
+
+============================================================
+Skills: Python, SQL, Fabric, Ontology
+Next shift supervisor - please review and sign off.

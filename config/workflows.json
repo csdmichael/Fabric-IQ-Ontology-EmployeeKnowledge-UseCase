@@ -27,5 +27,14 @@
       "data",
       "docs"
     ]
+  },
+  "upload": {
+    "pythonVersion": "3.12",
+    "localAssetsPath": "data/employees",
+    "fabricSettingsFile": "config/fabric-settings.json",
+    "storageMapFile": "data/storage_map.json",
+    "azureCliVersion": "2.x",
+    "azureCredentialsSecretName": "AZURE_CREDENTIALS",
+    "storageAccountSecretName": "AZURE_STORAGE_ACCOUNT"
   }
 }

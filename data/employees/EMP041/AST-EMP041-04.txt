@@ -1,0 +1,17 @@
+============================================================
+SHIFT HANDOFF NOTES
+Date: 2025-02-15
+Author: Alex Garcia (Architect, Manufacturing)
+Location: Portland
+============================================================
+
+Shift Handoff Notes
+-------------------
+Equipment status: Line 3 conveyor belt replaced at 14:30 - running nominal.
+Pending: Chemical vapor sensor calibration due next shift.
+ESD checks completed for all workstations. No anomalies.
+Open ticket: TKT-4821 - intermittent pressure alarm, maintenance notified.
+
+============================================================
+Skills: Kusto, Power BI, Azure AI, Fabric
+Next shift supervisor - please review and sign off.
