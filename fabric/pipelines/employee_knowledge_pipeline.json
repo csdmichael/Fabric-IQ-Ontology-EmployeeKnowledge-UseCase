@@ -9,12 +9,14 @@
     {
       "name": "ClassifyWithDocIntelligence",
       "type": "Notebook",
-      "uses": "AzureDocumentIntelligence"
+      "uses": "AzureDocumentIntelligence",
+      "endpointConfigKey": "azure.documentIntelligenceEndpoint"
     },
     {
       "name": "PersistParsingToCosmos",
       "type": "Copy",
-      "target": "CosmosDB.EmployeeDocumentParsing"
+      "target": "CosmosDB.EmployeeDocumentParsing",
+      "endpointConfigKey": "azure.cosmosDbEndpoint"
     },
     {
       "name": "LoadCuratedToOneLake",

@@ -164,6 +164,9 @@ Responsive behavior is included for:
 Preview page for quick visual:
 - `docs/ui-preview.html`
 
+UI screenshot:
+![UI Screenshot](docs/ui-screenshot.png)
+
 ## Teams & Copilot Agent Packaging Steps
 1. Export agent definition from `fabric/agents/employee_knowledge_agent.json`
 2. Package as `FabricEmployeeKnowledgeAgent.zip`

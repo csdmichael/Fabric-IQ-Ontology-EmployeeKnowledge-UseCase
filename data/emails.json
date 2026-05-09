@@ -7,8 +7,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-02T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP001/EML-EMP001.eml",
-    "documentConfidence": 0.65
+    "documentConfidence": 0.65,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP001/EML-EMP001.eml"
+    }
   },
   {
     "emailId": "EML-EMP002",
@@ -18,8 +22,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-03T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP002/EML-EMP002.eml",
-    "documentConfidence": 0.73
+    "documentConfidence": 0.73,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP002/EML-EMP002.eml"
+    }
   },
   {
     "emailId": "EML-EMP003",
@@ -29,8 +37,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-04T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP003/EML-EMP003.eml",
-    "documentConfidence": 0.62
+    "documentConfidence": 0.62,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP003/EML-EMP003.eml"
+    }
   },
   {
     "emailId": "EML-EMP004",
@@ -40,8 +52,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-05T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP004/EML-EMP004.eml",
-    "documentConfidence": 0.62
+    "documentConfidence": 0.62,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP004/EML-EMP004.eml"
+    }
   },
   {
     "emailId": "EML-EMP005",
@@ -51,8 +67,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-06T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP005/EML-EMP005.eml",
-    "documentConfidence": 0.67
+    "documentConfidence": 0.67,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP005/EML-EMP005.eml"
+    }
   },
   {
     "emailId": "EML-EMP006",
@@ -62,8 +82,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-07T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP006/EML-EMP006.eml",
-    "documentConfidence": 0.93
+    "documentConfidence": 0.93,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP006/EML-EMP006.eml"
+    }
   },
   {
     "emailId": "EML-EMP007",
@@ -73,8 +97,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-08T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP007/EML-EMP007.eml",
-    "documentConfidence": 0.8
+    "documentConfidence": 0.8,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP007/EML-EMP007.eml"
+    }
   },
   {
     "emailId": "EML-EMP008",
@@ -84,8 +112,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-09T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP008/EML-EMP008.eml",
-    "documentConfidence": 0.76
+    "documentConfidence": 0.76,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP008/EML-EMP008.eml"
+    }
   },
   {
     "emailId": "EML-EMP009",
@@ -95,8 +127,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-10T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP009/EML-EMP009.eml",
-    "documentConfidence": 0.94
+    "documentConfidence": 0.94,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP009/EML-EMP009.eml"
+    }
   },
   {
     "emailId": "EML-EMP010",
@@ -106,8 +142,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-11T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP010/EML-EMP010.eml",
-    "documentConfidence": 0.78
+    "documentConfidence": 0.78,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP010/EML-EMP010.eml"
+    }
   },
   {
     "emailId": "EML-EMP011",
@@ -117,8 +157,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-12T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP011/EML-EMP011.eml",
-    "documentConfidence": 0.85
+    "documentConfidence": 0.85,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP011/EML-EMP011.eml"
+    }
   },
   {
     "emailId": "EML-EMP012",
@@ -128,8 +172,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-13T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP012/EML-EMP012.eml",
-    "documentConfidence": 0.72
+    "documentConfidence": 0.72,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP012/EML-EMP012.eml"
+    }
   },
   {
     "emailId": "EML-EMP013",
@@ -139,8 +187,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-14T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP013/EML-EMP013.eml",
-    "documentConfidence": 0.86
+    "documentConfidence": 0.86,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP013/EML-EMP013.eml"
+    }
   },
   {
     "emailId": "EML-EMP014",
@@ -150,8 +202,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-15T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP014/EML-EMP014.eml",
-    "documentConfidence": 0.61
+    "documentConfidence": 0.61,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP014/EML-EMP014.eml"
+    }
   },
   {
     "emailId": "EML-EMP015",
@@ -161,8 +217,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-16T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP015/EML-EMP015.eml",
-    "documentConfidence": 0.67
+    "documentConfidence": 0.67,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP015/EML-EMP015.eml"
+    }
   },
   {
     "emailId": "EML-EMP016",
@@ -172,8 +232,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-17T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP016/EML-EMP016.eml",
-    "documentConfidence": 0.74
+    "documentConfidence": 0.74,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP016/EML-EMP016.eml"
+    }
   },
   {
     "emailId": "EML-EMP017",
@@ -183,8 +247,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-18T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP017/EML-EMP017.eml",
-    "documentConfidence": 0.94
+    "documentConfidence": 0.94,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP017/EML-EMP017.eml"
+    }
   },
   {
     "emailId": "EML-EMP018",
@@ -194,8 +262,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-19T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP018/EML-EMP018.eml",
-    "documentConfidence": 0.81
+    "documentConfidence": 0.81,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP018/EML-EMP018.eml"
+    }
   },
   {
     "emailId": "EML-EMP019",
@@ -205,8 +277,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-20T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP019/EML-EMP019.eml",
-    "documentConfidence": 0.73
+    "documentConfidence": 0.73,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP019/EML-EMP019.eml"
+    }
   },
   {
     "emailId": "EML-EMP020",
@@ -216,8 +292,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-21T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP020/EML-EMP020.eml",
-    "documentConfidence": 0.77
+    "documentConfidence": 0.77,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP020/EML-EMP020.eml"
+    }
   },
   {
     "emailId": "EML-EMP021",
@@ -227,8 +307,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-22T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP021/EML-EMP021.eml",
-    "documentConfidence": 0.72
+    "documentConfidence": 0.72,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP021/EML-EMP021.eml"
+    }
   },
   {
     "emailId": "EML-EMP022",
@@ -238,8 +322,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-23T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP022/EML-EMP022.eml",
-    "documentConfidence": 0.66
+    "documentConfidence": 0.66,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP022/EML-EMP022.eml"
+    }
   },
   {
     "emailId": "EML-EMP023",
@@ -249,8 +337,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-24T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP023/EML-EMP023.eml",
-    "documentConfidence": 0.83
+    "documentConfidence": 0.83,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP023/EML-EMP023.eml"
+    }
   },
   {
     "emailId": "EML-EMP024",
@@ -260,8 +352,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-25T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP024/EML-EMP024.eml",
-    "documentConfidence": 0.86
+    "documentConfidence": 0.86,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP024/EML-EMP024.eml"
+    }
   },
   {
     "emailId": "EML-EMP025",
@@ -271,8 +367,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-26T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP025/EML-EMP025.eml",
-    "documentConfidence": 0.7
+    "documentConfidence": 0.7,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP025/EML-EMP025.eml"
+    }
   },
   {
     "emailId": "EML-EMP026",
@@ -282,8 +382,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-27T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP026/EML-EMP026.eml",
-    "documentConfidence": 0.7
+    "documentConfidence": 0.7,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP026/EML-EMP026.eml"
+    }
   },
   {
     "emailId": "EML-EMP027",
@@ -293,8 +397,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-28T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP027/EML-EMP027.eml",
-    "documentConfidence": 0.89
+    "documentConfidence": 0.89,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP027/EML-EMP027.eml"
+    }
   },
   {
     "emailId": "EML-EMP028",
@@ -304,8 +412,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-01T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP028/EML-EMP028.eml",
-    "documentConfidence": 0.82
+    "documentConfidence": 0.82,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP028/EML-EMP028.eml"
+    }
   },
   {
     "emailId": "EML-EMP029",
@@ -315,8 +427,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-02T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP029/EML-EMP029.eml",
-    "documentConfidence": 0.89
+    "documentConfidence": 0.89,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP029/EML-EMP029.eml"
+    }
   },
   {
     "emailId": "EML-EMP030",
@@ -326,8 +442,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-03T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP030/EML-EMP030.eml",
-    "documentConfidence": 0.81
+    "documentConfidence": 0.81,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP030/EML-EMP030.eml"
+    }
   },
   {
     "emailId": "EML-EMP031",
@@ -337,8 +457,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-04T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP031/EML-EMP031.eml",
-    "documentConfidence": 0.69
+    "documentConfidence": 0.69,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP031/EML-EMP031.eml"
+    }
   },
   {
     "emailId": "EML-EMP032",
@@ -348,8 +472,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-05T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP032/EML-EMP032.eml",
-    "documentConfidence": 0.79
+    "documentConfidence": 0.79,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP032/EML-EMP032.eml"
+    }
   },
   {
     "emailId": "EML-EMP033",
@@ -359,8 +487,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-06T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP033/EML-EMP033.eml",
-    "documentConfidence": 0.69
+    "documentConfidence": 0.69,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP033/EML-EMP033.eml"
+    }
   },
   {
     "emailId": "EML-EMP034",
@@ -370,8 +502,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-07T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP034/EML-EMP034.eml",
-    "documentConfidence": 0.77
+    "documentConfidence": 0.77,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP034/EML-EMP034.eml"
+    }
   },
   {
     "emailId": "EML-EMP035",
@@ -381,8 +517,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-08T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP035/EML-EMP035.eml",
-    "documentConfidence": 0.91
+    "documentConfidence": 0.91,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP035/EML-EMP035.eml"
+    }
   },
   {
     "emailId": "EML-EMP036",
@@ -392,8 +532,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-09T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP036/EML-EMP036.eml",
-    "documentConfidence": 0.66
+    "documentConfidence": 0.66,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP036/EML-EMP036.eml"
+    }
   },
   {
     "emailId": "EML-EMP037",
@@ -403,8 +547,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-10T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP037/EML-EMP037.eml",
-    "documentConfidence": 0.9
+    "documentConfidence": 0.9,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP037/EML-EMP037.eml"
+    }
   },
   {
     "emailId": "EML-EMP038",
@@ -414,8 +562,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-11T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP038/EML-EMP038.eml",
-    "documentConfidence": 0.82
+    "documentConfidence": 0.82,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP038/EML-EMP038.eml"
+    }
   },
   {
     "emailId": "EML-EMP039",
@@ -425,8 +577,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-12T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP039/EML-EMP039.eml",
-    "documentConfidence": 0.76
+    "documentConfidence": 0.76,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP039/EML-EMP039.eml"
+    }
   },
   {
     "emailId": "EML-EMP040",
@@ -436,8 +592,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-13T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP040/EML-EMP040.eml",
-    "documentConfidence": 0.92
+    "documentConfidence": 0.92,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP040/EML-EMP040.eml"
+    }
   },
   {
     "emailId": "EML-EMP041",
@@ -447,8 +607,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-14T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP041/EML-EMP041.eml",
-    "documentConfidence": 0.61
+    "documentConfidence": 0.61,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP041/EML-EMP041.eml"
+    }
   },
   {
     "emailId": "EML-EMP042",
@@ -458,8 +622,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-15T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP042/EML-EMP042.eml",
-    "documentConfidence": 0.67
+    "documentConfidence": 0.67,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP042/EML-EMP042.eml"
+    }
   },
   {
     "emailId": "EML-EMP043",
@@ -469,8 +637,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-16T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP043/EML-EMP043.eml",
-    "documentConfidence": 0.78
+    "documentConfidence": 0.78,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP043/EML-EMP043.eml"
+    }
   },
   {
     "emailId": "EML-EMP044",
@@ -480,8 +652,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-17T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP044/EML-EMP044.eml",
-    "documentConfidence": 0.64
+    "documentConfidence": 0.64,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP044/EML-EMP044.eml"
+    }
   },
   {
     "emailId": "EML-EMP045",
@@ -491,8 +667,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-18T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP045/EML-EMP045.eml",
-    "documentConfidence": 0.84
+    "documentConfidence": 0.84,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP045/EML-EMP045.eml"
+    }
   },
   {
     "emailId": "EML-EMP046",
@@ -502,8 +682,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-19T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP046/EML-EMP046.eml",
-    "documentConfidence": 0.83
+    "documentConfidence": 0.83,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP046/EML-EMP046.eml"
+    }
   },
   {
     "emailId": "EML-EMP047",
@@ -513,8 +697,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-20T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP047/EML-EMP047.eml",
-    "documentConfidence": 0.62
+    "documentConfidence": 0.62,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP047/EML-EMP047.eml"
+    }
   },
   {
     "emailId": "EML-EMP048",
@@ -524,8 +712,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-21T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP048/EML-EMP048.eml",
-    "documentConfidence": 0.75
+    "documentConfidence": 0.75,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP048/EML-EMP048.eml"
+    }
   },
   {
     "emailId": "EML-EMP049",
@@ -535,8 +727,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-22T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP049/EML-EMP049.eml",
-    "documentConfidence": 0.9
+    "documentConfidence": 0.9,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP049/EML-EMP049.eml"
+    }
   },
   {
     "emailId": "EML-EMP050",
@@ -546,8 +742,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-23T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP050/EML-EMP050.eml",
-    "documentConfidence": 0.68
+    "documentConfidence": 0.68,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP050/EML-EMP050.eml"
+    }
   },
   {
     "emailId": "EML-EMP051",
@@ -557,8 +757,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-24T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP051/EML-EMP051.eml",
-    "documentConfidence": 0.65
+    "documentConfidence": 0.65,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP051/EML-EMP051.eml"
+    }
   },
   {
     "emailId": "EML-EMP052",
@@ -568,8 +772,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-25T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP052/EML-EMP052.eml",
-    "documentConfidence": 0.81
+    "documentConfidence": 0.81,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP052/EML-EMP052.eml"
+    }
   },
   {
     "emailId": "EML-EMP053",
@@ -579,8 +787,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-26T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP053/EML-EMP053.eml",
-    "documentConfidence": 0.62
+    "documentConfidence": 0.62,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP053/EML-EMP053.eml"
+    }
   },
   {
     "emailId": "EML-EMP054",
@@ -590,8 +802,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-27T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP054/EML-EMP054.eml",
-    "documentConfidence": 0.63
+    "documentConfidence": 0.63,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP054/EML-EMP054.eml"
+    }
   },
   {
     "emailId": "EML-EMP055",
@@ -601,8 +817,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-28T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP055/EML-EMP055.eml",
-    "documentConfidence": 0.88
+    "documentConfidence": 0.88,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP055/EML-EMP055.eml"
+    }
   },
   {
     "emailId": "EML-EMP056",
@@ -612,8 +832,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-01T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP056/EML-EMP056.eml",
-    "documentConfidence": 0.94
+    "documentConfidence": 0.94,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP056/EML-EMP056.eml"
+    }
   },
   {
     "emailId": "EML-EMP057",
@@ -623,8 +847,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-02T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP057/EML-EMP057.eml",
-    "documentConfidence": 0.78
+    "documentConfidence": 0.78,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP057/EML-EMP057.eml"
+    }
   },
   {
     "emailId": "EML-EMP058",
@@ -634,8 +862,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-03T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP058/EML-EMP058.eml",
-    "documentConfidence": 0.75
+    "documentConfidence": 0.75,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP058/EML-EMP058.eml"
+    }
   },
   {
     "emailId": "EML-EMP059",
@@ -645,8 +877,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-04T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP059/EML-EMP059.eml",
-    "documentConfidence": 0.62
+    "documentConfidence": 0.62,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP059/EML-EMP059.eml"
+    }
   },
   {
     "emailId": "EML-EMP060",
@@ -656,8 +892,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-05T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP060/EML-EMP060.eml",
-    "documentConfidence": 0.94
+    "documentConfidence": 0.94,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP060/EML-EMP060.eml"
+    }
   },
   {
     "emailId": "EML-EMP061",
@@ -667,8 +907,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-06T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP061/EML-EMP061.eml",
-    "documentConfidence": 0.75
+    "documentConfidence": 0.75,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP061/EML-EMP061.eml"
+    }
   },
   {
     "emailId": "EML-EMP062",
@@ -678,8 +922,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-07T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP062/EML-EMP062.eml",
-    "documentConfidence": 0.76
+    "documentConfidence": 0.76,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP062/EML-EMP062.eml"
+    }
   },
   {
     "emailId": "EML-EMP063",
@@ -689,8 +937,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-08T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP063/EML-EMP063.eml",
-    "documentConfidence": 0.93
+    "documentConfidence": 0.93,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP063/EML-EMP063.eml"
+    }
   },
   {
     "emailId": "EML-EMP064",
@@ -700,8 +952,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-09T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP064/EML-EMP064.eml",
-    "documentConfidence": 0.91
+    "documentConfidence": 0.91,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP064/EML-EMP064.eml"
+    }
   },
   {
     "emailId": "EML-EMP065",
@@ -711,8 +967,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-10T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP065/EML-EMP065.eml",
-    "documentConfidence": 0.91
+    "documentConfidence": 0.91,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP065/EML-EMP065.eml"
+    }
   },
   {
     "emailId": "EML-EMP066",
@@ -722,8 +982,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-11T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP066/EML-EMP066.eml",
-    "documentConfidence": 0.71
+    "documentConfidence": 0.71,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP066/EML-EMP066.eml"
+    }
   },
   {
     "emailId": "EML-EMP067",
@@ -733,8 +997,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-12T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP067/EML-EMP067.eml",
-    "documentConfidence": 0.69
+    "documentConfidence": 0.69,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP067/EML-EMP067.eml"
+    }
   },
   {
     "emailId": "EML-EMP068",
@@ -744,8 +1012,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-13T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP068/EML-EMP068.eml",
-    "documentConfidence": 0.94
+    "documentConfidence": 0.94,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP068/EML-EMP068.eml"
+    }
   },
   {
     "emailId": "EML-EMP069",
@@ -755,8 +1027,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-14T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP069/EML-EMP069.eml",
-    "documentConfidence": 0.77
+    "documentConfidence": 0.77,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP069/EML-EMP069.eml"
+    }
   },
   {
     "emailId": "EML-EMP070",
@@ -766,8 +1042,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-15T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP070/EML-EMP070.eml",
-    "documentConfidence": 0.63
+    "documentConfidence": 0.63,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP070/EML-EMP070.eml"
+    }
   },
   {
     "emailId": "EML-EMP071",
@@ -777,8 +1057,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-16T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP071/EML-EMP071.eml",
-    "documentConfidence": 0.71
+    "documentConfidence": 0.71,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP071/EML-EMP071.eml"
+    }
   },
   {
     "emailId": "EML-EMP072",
@@ -788,8 +1072,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-17T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP072/EML-EMP072.eml",
-    "documentConfidence": 0.8
+    "documentConfidence": 0.8,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP072/EML-EMP072.eml"
+    }
   },
   {
     "emailId": "EML-EMP073",
@@ -799,8 +1087,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-18T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP073/EML-EMP073.eml",
-    "documentConfidence": 0.78
+    "documentConfidence": 0.78,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP073/EML-EMP073.eml"
+    }
   },
   {
     "emailId": "EML-EMP074",
@@ -810,8 +1102,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-19T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP074/EML-EMP074.eml",
-    "documentConfidence": 0.72
+    "documentConfidence": 0.72,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP074/EML-EMP074.eml"
+    }
   },
   {
     "emailId": "EML-EMP075",
@@ -821,8 +1117,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-20T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP075/EML-EMP075.eml",
-    "documentConfidence": 0.68
+    "documentConfidence": 0.68,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP075/EML-EMP075.eml"
+    }
   },
   {
     "emailId": "EML-EMP076",
@@ -832,8 +1132,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-21T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP076/EML-EMP076.eml",
-    "documentConfidence": 0.92
+    "documentConfidence": 0.92,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP076/EML-EMP076.eml"
+    }
   },
   {
     "emailId": "EML-EMP077",
@@ -843,8 +1147,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-22T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP077/EML-EMP077.eml",
-    "documentConfidence": 0.86
+    "documentConfidence": 0.86,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP077/EML-EMP077.eml"
+    }
   },
   {
     "emailId": "EML-EMP078",
@@ -854,8 +1162,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-23T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP078/EML-EMP078.eml",
-    "documentConfidence": 0.8
+    "documentConfidence": 0.8,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP078/EML-EMP078.eml"
+    }
   },
   {
     "emailId": "EML-EMP079",
@@ -865,8 +1177,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-24T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP079/EML-EMP079.eml",
-    "documentConfidence": 0.92
+    "documentConfidence": 0.92,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP079/EML-EMP079.eml"
+    }
   },
   {
     "emailId": "EML-EMP080",
@@ -876,8 +1192,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-25T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP080/EML-EMP080.eml",
-    "documentConfidence": 0.65
+    "documentConfidence": 0.65,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP080/EML-EMP080.eml"
+    }
   },
   {
     "emailId": "EML-EMP081",
@@ -887,8 +1207,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-26T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP081/EML-EMP081.eml",
-    "documentConfidence": 0.73
+    "documentConfidence": 0.73,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP081/EML-EMP081.eml"
+    }
   },
   {
     "emailId": "EML-EMP082",
@@ -898,8 +1222,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-27T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP082/EML-EMP082.eml",
-    "documentConfidence": 0.65
+    "documentConfidence": 0.65,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP082/EML-EMP082.eml"
+    }
   },
   {
     "emailId": "EML-EMP083",
@@ -909,8 +1237,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-28T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP083/EML-EMP083.eml",
-    "documentConfidence": 0.71
+    "documentConfidence": 0.71,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP083/EML-EMP083.eml"
+    }
   },
   {
     "emailId": "EML-EMP084",
@@ -920,8 +1252,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-01T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP084/EML-EMP084.eml",
-    "documentConfidence": 0.86
+    "documentConfidence": 0.86,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP084/EML-EMP084.eml"
+    }
   },
   {
     "emailId": "EML-EMP085",
@@ -931,8 +1267,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-02T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP085/EML-EMP085.eml",
-    "documentConfidence": 0.91
+    "documentConfidence": 0.91,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP085/EML-EMP085.eml"
+    }
   },
   {
     "emailId": "EML-EMP086",
@@ -942,8 +1282,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-03T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP086/EML-EMP086.eml",
-    "documentConfidence": 0.78
+    "documentConfidence": 0.78,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP086/EML-EMP086.eml"
+    }
   },
   {
     "emailId": "EML-EMP087",
@@ -953,8 +1297,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-04T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP087/EML-EMP087.eml",
-    "documentConfidence": 0.69
+    "documentConfidence": 0.69,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP087/EML-EMP087.eml"
+    }
   },
   {
     "emailId": "EML-EMP088",
@@ -964,8 +1312,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-05T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP088/EML-EMP088.eml",
-    "documentConfidence": 0.73
+    "documentConfidence": 0.73,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP088/EML-EMP088.eml"
+    }
   },
   {
     "emailId": "EML-EMP089",
@@ -975,8 +1327,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-06T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP089/EML-EMP089.eml",
-    "documentConfidence": 0.63
+    "documentConfidence": 0.63,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP089/EML-EMP089.eml"
+    }
   },
   {
     "emailId": "EML-EMP090",
@@ -986,8 +1342,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-07T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP090/EML-EMP090.eml",
-    "documentConfidence": 0.77
+    "documentConfidence": 0.77,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP090/EML-EMP090.eml"
+    }
   },
   {
     "emailId": "EML-EMP091",
@@ -997,8 +1357,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-08T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP091/EML-EMP091.eml",
-    "documentConfidence": 0.62
+    "documentConfidence": 0.62,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP091/EML-EMP091.eml"
+    }
   },
   {
     "emailId": "EML-EMP092",
@@ -1008,8 +1372,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-09T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP092/EML-EMP092.eml",
-    "documentConfidence": 0.65
+    "documentConfidence": 0.65,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP092/EML-EMP092.eml"
+    }
   },
   {
     "emailId": "EML-EMP093",
@@ -1019,8 +1387,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-10T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP093/EML-EMP093.eml",
-    "documentConfidence": 0.92
+    "documentConfidence": 0.92,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP093/EML-EMP093.eml"
+    }
   },
   {
     "emailId": "EML-EMP094",
@@ -1030,8 +1402,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-11T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP094/EML-EMP094.eml",
-    "documentConfidence": 0.89
+    "documentConfidence": 0.89,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP094/EML-EMP094.eml"
+    }
   },
   {
     "emailId": "EML-EMP095",
@@ -1041,8 +1417,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-12T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP095/EML-EMP095.eml",
-    "documentConfidence": 0.64
+    "documentConfidence": 0.64,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP095/EML-EMP095.eml"
+    }
   },
   {
     "emailId": "EML-EMP096",
@@ -1052,8 +1432,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-13T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP096/EML-EMP096.eml",
-    "documentConfidence": 0.78
+    "documentConfidence": 0.78,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP096/EML-EMP096.eml"
+    }
   },
   {
     "emailId": "EML-EMP097",
@@ -1063,8 +1447,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-14T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP097/EML-EMP097.eml",
-    "documentConfidence": 0.8
+    "documentConfidence": 0.8,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP097/EML-EMP097.eml"
+    }
   },
   {
     "emailId": "EML-EMP098",
@@ -1074,8 +1462,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-15T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP098/EML-EMP098.eml",
-    "documentConfidence": 0.71
+    "documentConfidence": 0.71,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP098/EML-EMP098.eml"
+    }
   },
   {
     "emailId": "EML-EMP099",
@@ -1085,8 +1477,12 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-16T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP099/EML-EMP099.eml",
-    "documentConfidence": 0.85
+    "documentConfidence": 0.85,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP099/EML-EMP099.eml"
+    }
   },
   {
     "emailId": "EML-EMP100",
@@ -1096,7 +1492,11 @@
       "team@lamresearch.example.com"
     ],
     "sentDate": "2026-04-17T16:30:00Z",
-    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP100/EML-EMP100.eml",
-    "documentConfidence": 0.64
+    "documentConfidence": 0.64,
+    "storageRef": {
+      "endpointConfigKey": "azure.blobStorageEndpoint",
+      "container": "employee-knowledge-raw",
+      "relativePath": "EMP100/EML-EMP100.eml"
+    }
   }
 ]
