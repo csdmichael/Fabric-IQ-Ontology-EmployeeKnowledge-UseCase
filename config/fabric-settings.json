@@ -8,7 +8,8 @@
   "ingestion": {
     "batchSize": 200,
     "retryCount": 3,
-    "confidenceThreshold": 0.72
+    "confidenceThreshold": 0.72,
+    "confidenceThresholdRationale": "0.72 is a balanced demo baseline between precision and recall; increase for stricter quality, decrease for broader coverage."
   },
   "classification": {
     "categories": [
