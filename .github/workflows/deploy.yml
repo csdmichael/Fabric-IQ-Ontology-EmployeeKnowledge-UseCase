@@ -199,7 +199,12 @@ jobs:
         run: |
           set -euo pipefail
           UI_DIR="ui/ionic-angular"
-          # Copy config and data assets into src so they are included in the deployment package
+          # This UI is a demo scaffold. In a production pipeline replace the steps below with:
+          #   npm ci --prefix "$UI_DIR"
+          #   npm run build --prefix "$UI_DIR"   # ionic build → dist/
+          # and zip the dist/ output instead.
+          # For the demo we package the static source assets (config, data, src) directly so
+          # the app service can serve them via a static-file host or custom server.
           mkdir -p "$UI_DIR/dist-deploy/config" "$UI_DIR/dist-deploy/data"
           cp config/endpoints.json "$UI_DIR/dist-deploy/config/endpoints.json"
           cp data/employees.json data/digital_assets.json data/projects.json "$UI_DIR/dist-deploy/data/"

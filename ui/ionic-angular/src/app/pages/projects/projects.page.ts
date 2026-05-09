@@ -45,8 +45,8 @@ export class ProjectsPage {
   loadError = '';
 
   constructor() {
-    this.initialize().catch(() => {
-      this.loadError = 'Unable to load project data.';
+    this.initialize().catch((error: unknown) => {
+      this.loadError = `Unable to load project data: ${error instanceof Error ? error.message : String(error)}`;
     });
   }
 

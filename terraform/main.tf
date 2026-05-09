@@ -83,6 +83,8 @@ resource "azurerm_linux_web_app" "ui" {
   service_plan_id     = data.azurerm_service_plan.ui.id
 
   site_config {
+    # always_on = false is appropriate for this demo environment to stay within
+    # the B1 SKU free quota. Set to true for production workloads to eliminate cold starts.
     always_on = false
 
     application_stack {
