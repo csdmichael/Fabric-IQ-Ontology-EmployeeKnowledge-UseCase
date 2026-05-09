@@ -323,10 +323,12 @@ All deployment and upload workflows require the following GitHub repository secr
 az login
 
 # Create a service principal and capture the output
+# Replace <SUBSCRIPTION_ID> and <RESOURCE_GROUP_NAME> with your values
+# (see config/azure-hosting-resources.json for the resource group used by this project)
 az ad sp create-for-rbac \
   --name "github-actions-fabric-iq" \
   --role Contributor \
-  --scopes /subscriptions/<SUBSCRIPTION_ID>/resourceGroups/ai-myaacoub \
+  --scopes /subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RESOURCE_GROUP_NAME> \
   --json-auth
 ```
 
@@ -350,14 +352,14 @@ az role assignment create \
   --assignee-object-id "$SP_OBJECT_ID" \
   --assignee-principal-type ServicePrincipal \
   --role "Storage Blob Data Contributor" \
-  --scope /subscriptions/<SUBSCRIPTION_ID>/resourceGroups/ai-myaacoub
+  --scope /subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RESOURCE_GROUP_NAME>
 
 # Website Contributor — needed for App Service deploy
 az role assignment create \
   --assignee-object-id "$SP_OBJECT_ID" \
   --assignee-principal-type ServicePrincipal \
   --role "Website Contributor" \
-  --scope /subscriptions/<SUBSCRIPTION_ID>/resourceGroups/ai-myaacoub
+  --scope /subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RESOURCE_GROUP_NAME>
 ```
 
 ### Step 3 — Configure OIDC federated identity credentials (recommended)
@@ -365,23 +367,24 @@ az role assignment create \
 OIDC eliminates the need to store a client secret. Add a federated credential for each branch or environment that will trigger deployments:
 
 ```bash
+# Replace <GITHUB_ORG> and <REPO_NAME> with your GitHub organization/user and repository name
 # For the main branch
 az ad app federated-credential create \
   --id <AZURE_CLIENT_ID> \
   --parameters '{
     "name": "github-main",
     "issuer": "https://token.actions.githubusercontent.com",
-    "subject": "repo:csdmichael/Fabric-IQ-Ontology-EmployeeKnowledge-UseCase:ref:refs/heads/main",
+    "subject": "repo:<GITHUB_ORG>/<REPO_NAME>:ref:refs/heads/main",
     "audiences": ["api://AzureADTokenExchange"]
   }'
 
-# For workflow_dispatch (manual triggers from any branch)
+# For workflow_dispatch (manual triggers from any branch via a GitHub environment named "production")
 az ad app federated-credential create \
   --id <AZURE_CLIENT_ID> \
   --parameters '{
     "name": "github-dispatch",
     "issuer": "https://token.actions.githubusercontent.com",
-    "subject": "repo:csdmichael/Fabric-IQ-Ontology-EmployeeKnowledge-UseCase:environment:production",
+    "subject": "repo:<GITHUB_ORG>/<REPO_NAME>:environment:production",
     "audiences": ["api://AzureADTokenExchange"]
   }'
 ```
@@ -397,7 +400,7 @@ Go to **GitHub → Repository → Settings → Secrets and variables → Actions
 | `AZURE_CLIENT_ID` | `clientId` from Step 1 |
 | `AZURE_TENANT_ID` | `tenantId` from Step 1 |
 | `AZURE_SUBSCRIPTION_ID` | `subscriptionId` from Step 1 |
-| `AZURE_STORAGE_ACCOUNT` | e.g. `aistoragemyaacoub` (from `config/azure-hosting-resources.json`) |
+| `AZURE_STORAGE_ACCOUNT` | Your storage account name (see `config/azure-hosting-resources.json` → `dataAndAi.storageAccount`) |
 | `AZURE_CREDENTIALS` | Full JSON from Step 1 (only if NOT using OIDC) |
 
 Or use the GitHub CLI:
@@ -406,7 +409,7 @@ Or use the GitHub CLI:
 gh secret set AZURE_CLIENT_ID       --body "<clientId>"
 gh secret set AZURE_TENANT_ID       --body "<tenantId>"
 gh secret set AZURE_SUBSCRIPTION_ID --body "<subscriptionId>"
-gh secret set AZURE_STORAGE_ACCOUNT --body "aistoragemyaacoub"
+gh secret set AZURE_STORAGE_ACCOUNT --body "<your-storage-account-name>"
 
 # Only if using service principal JSON (not OIDC):
 gh secret set AZURE_CREDENTIALS     --body "$(cat sp-credentials.json)"
