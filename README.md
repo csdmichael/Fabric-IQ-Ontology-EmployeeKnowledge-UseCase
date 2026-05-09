@@ -87,7 +87,8 @@ It includes:
 ├── .github/workflows/
 │   ├── ci.yml
 │   ├── deploy.yml
-│   └── upload-employee-assets.yml
+│   ├── upload-employee-assets.yml
+│   └── provision-sre-agent.yml
 ├── data/
 │   ├── employees.json
 │   ├── digital_assets.json
@@ -373,6 +374,40 @@ This file includes:
 - `.github/workflows/ci.yml`: JSON/UI/Terraform validation checks
 - `.github/workflows/deploy.yml`: deployment packaging and Terraform plan/apply flow
 - `.github/workflows/upload-employee-assets.yml`: asset upload to Azure Blob, with dry-run mode
+- `.github/workflows/provision-sre-agent.yml`: dedicated workflow to provision or update all Azure Monitor and incident response components that wire this application into the shared SRE agent in `ai-myaacoub`
+
+### SRE Agent Provisioning Workflow
+
+The `provision-sre-agent.yml` workflow provisions only the SRE monitoring components using scoped Terraform targets, keeping them fully independent of the core infrastructure deployment.
+
+**Trigger:** `workflow_dispatch` with the following inputs:
+
+| Input | Default | Description |
+|-------|---------|-------------|
+| `apply` | `false` | Run `terraform apply` after a successful plan |
+| `destroy` | `false` | Destroy SRE components only (use with caution) |
+| `log_analytics_workspace_name` | _(empty)_ | Existing Log Analytics workspace name to reuse; leave empty to create new |
+| `sre_email` | _(empty)_ | Override SRE alert email (falls back to `SRE_ALERT_EMAIL` secret) |
+
+**Required secrets** (same as `deploy.yml`):
+- `AZURE_CLIENT_ID` + `AZURE_TENANT_ID` (OIDC preferred) or `AZURE_CREDENTIALS` (service principal JSON fallback)
+- `AZURE_SUBSCRIPTION_ID` (optional – falls back to `config/azure-hosting-resources.json`)
+
+**Optional secrets for notification wiring:**
+- `SRE_ALERT_EMAIL` – email DL for action group notifications
+- `SRE_WEBHOOK_URL` – Teams/Logic App webhook URL for action group
+
+**Jobs:**
+1. `load-config` – reads `config/workflows.json` and `config/azure-hosting-resources.json` for all config values including the `terraformTargets` list
+2. `sre-plan` – runs targeted `terraform plan` scoped to monitor resources only; uploads plan artifact
+3. `sre-apply` – runs `terraform apply` on the saved plan; captures and summarizes outputs (action group ID, workspace ID); prints instructions for capturing the Logic App trigger URL
+4. `sre-destroy` – safety-gated destroy of SRE components only (requires both `apply=true` and `destroy=true`)
+
+**After first apply:** Run the following to retrieve the Logic App HTTP trigger URL and set it as the `SRE_WEBHOOK_URL` repository secret to complete end-to-end alert routing:
+```bash
+cd terraform
+terraform output -raw incident_response_logic_app_trigger_url
+```
 
 ## Terraform Deployment
 Terraform resources are in `terraform/` and use values from:

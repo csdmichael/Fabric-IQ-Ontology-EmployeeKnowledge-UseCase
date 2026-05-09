@@ -1,0 +1,305 @@
+name: Provision SRE Agent Components
+
+# Dedicated workflow for provisioning or updating all Azure Monitor and incident
+# response components that wire this application into the shared SRE agent in
+# the ai-myaacoub resource group.
+#
+# Scoped Terraform targets keep this workflow independent of the core
+# infrastructure deploy so SRE components can be iterated without
+# re-deploying Storage, Cosmos DB, or the App Service.
+#
+# Required secrets (same as deploy.yml):
+#   AZURE_CLIENT_ID / AZURE_TENANT_ID   – preferred OIDC authentication
+#   AZURE_SUBSCRIPTION_ID               – optional (falls back to config file value)
+#   AZURE_CREDENTIALS                   – service principal JSON fallback
+#
+# Optional secrets for notification wiring (set before first apply):
+#   SRE_ALERT_EMAIL   – email DL for alert notifications
+#   SRE_WEBHOOK_URL   – Teams/Logic App webhook URL for action group
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: "Run terraform apply after successful plan (true/false)"
+        required: true
+        default: "false"
+      destroy:
+        description: "Destroy SRE components only (true/false) – use with caution"
+        required: false
+        default: "false"
+      log_analytics_workspace_name:
+        description: "Existing Log Analytics workspace name to reuse (leave empty to create new)"
+        required: false
+        default: ""
+      sre_email:
+        description: "Override SRE alert email (falls back to SRE_ALERT_EMAIL secret)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  # ── 1. Load configuration from repo files ────────────────────────────────────
+  load-config:
+    runs-on: ubuntu-latest
+    outputs:
+      terraform_version:     ${{ steps.read.outputs.terraform_version }}
+      tf_dir:                ${{ steps.read.outputs.tf_dir }}
+      tf_var_file:           ${{ steps.read.outputs.tf_var_file }}
+      tf_targets:            ${{ steps.read.outputs.tf_targets }}
+      monitor_resource_group: ${{ steps.read.outputs.monitor_resource_group }}
+      azure_subscription_id: ${{ steps.read.outputs.azure_subscription_id }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: read
+        run: |
+          set -euo pipefail
+          terraform_version=$(jq -r '.sre.terraformVersion'           config/workflows.json)
+          tf_dir=$(jq -r            '.sre.terraformWorkingDirectory'  config/workflows.json)
+          tf_var_file=$(jq -r       '.sre.terraformVarFile'           config/workflows.json)
+          monitor_resource_group=$(jq -r '.sre.monitorResourceGroup'  config/workflows.json)
+          azure_subscription_id=$(jq -r  '.subscriptionId'            config/azure-hosting-resources.json)
+
+          # Build -target flags from the targets array in config
+          tf_targets=$(jq -r '.sre.terraformTargets | map("-target=" + .) | join(" ")' config/workflows.json)
+
+          echo "terraform_version=$terraform_version"         >> "$GITHUB_OUTPUT"
+          echo "tf_dir=$tf_dir"                               >> "$GITHUB_OUTPUT"
+          echo "tf_var_file=$tf_var_file"                     >> "$GITHUB_OUTPUT"
+          echo "monitor_resource_group=$monitor_resource_group" >> "$GITHUB_OUTPUT"
+          echo "azure_subscription_id=$azure_subscription_id" >> "$GITHUB_OUTPUT"
+          echo "tf_targets=$tf_targets"                       >> "$GITHUB_OUTPUT"
+
+  # ── 2. Plan SRE component changes ────────────────────────────────────────────
+  sre-plan:
+    needs: load-config
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ needs.load-config.outputs.tf_dir }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ needs.load-config.outputs.terraform_version }}
+
+      # ── Azure login (OIDC preferred, service principal JSON fallback) ─────────
+      - name: Azure Login
+        if: ${{ secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '' }}
+        uses: azure/login@v2
+        with:
+          client-id:       ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id:       ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID != '' && secrets.AZURE_SUBSCRIPTION_ID || needs.load-config.outputs.azure_subscription_id }}
+
+      - name: Azure Login (service principal JSON credentials fallback)
+        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '') && secrets.AZURE_CREDENTIALS != '' }}
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Validate Azure authentication inputs
+        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '') && secrets.AZURE_CREDENTIALS == '' }}
+        run: |
+          echo "Missing Azure auth configuration." >&2
+          echo "Set either AZURE_CLIENT_ID/AZURE_TENANT_ID[/AZURE_SUBSCRIPTION_ID] or AZURE_CREDENTIALS JSON secret." >&2
+          exit 1
+
+      # ── Resolve runtime variable overrides ───────────────────────────────────
+      - name: Resolve SRE variable overrides
+        id: vars
+        env:
+          INPUT_LAW_NAME:  ${{ github.event.inputs.log_analytics_workspace_name }}
+          INPUT_SRE_EMAIL: ${{ github.event.inputs.sre_email }}
+          SECRET_SRE_EMAIL: ${{ secrets.SRE_ALERT_EMAIL }}
+          SECRET_WEBHOOK:   ${{ secrets.SRE_WEBHOOK_URL }}
+        run: |
+          set -euo pipefail
+          # Prefer the workflow_dispatch input; fall back to the secret
+          sre_email="${INPUT_SRE_EMAIL:-${SECRET_SRE_EMAIL:-}}"
+          sre_webhook="${SECRET_WEBHOOK:-}"
+          law_name="${INPUT_LAW_NAME:-}"
+
+          echo "sre_email=$sre_email"   >> "$GITHUB_OUTPUT"
+          echo "sre_webhook=$sre_webhook" >> "$GITHUB_OUTPUT"
+          echo "law_name=$law_name"     >> "$GITHUB_OUTPUT"
+
+      # ── Terraform init and targeted plan ─────────────────────────────────────
+      - name: Terraform init
+        run: |
+          set -euo pipefail
+          terraform init
+
+      - name: Terraform plan (SRE targets only)
+        env:
+          TF_VAR_FILE:     ${{ needs.load-config.outputs.tf_var_file }}
+          TF_TARGETS:      ${{ needs.load-config.outputs.tf_targets }}
+          SRE_EMAIL:       ${{ steps.vars.outputs.sre_email }}
+          SRE_WEBHOOK:     ${{ steps.vars.outputs.sre_webhook }}
+          LAW_NAME:        ${{ steps.vars.outputs.law_name }}
+        run: |
+          set -euo pipefail
+
+          # Build extra -var flags for runtime-supplied values (only when non-empty)
+          extra_vars=""
+          [ -n "$SRE_EMAIL"   ] && extra_vars="$extra_vars -var=sre_alert_email=$SRE_EMAIL"
+          [ -n "$SRE_WEBHOOK" ] && extra_vars="$extra_vars -var=sre_webhook_url=$SRE_WEBHOOK"
+          [ -n "$LAW_NAME"    ] && extra_vars="$extra_vars -var=existing_log_analytics_workspace_name=$LAW_NAME"
+
+          # shellcheck disable=SC2086
+          terraform plan \
+            -var-file="$TF_VAR_FILE" \
+            $extra_vars \
+            $TF_TARGETS \
+            -out=sre-tfplan
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sre-terraform-plan
+          path: ${{ needs.load-config.outputs.tf_dir }}/sre-tfplan
+          retention-days: 7
+
+  # ── 3. Apply SRE components ───────────────────────────────────────────────────
+  sre-apply:
+    if: ${{ github.event.inputs.apply == 'true' && github.event.inputs.destroy != 'true' }}
+    needs:
+      - load-config
+      - sre-plan
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ needs.load-config.outputs.tf_dir }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ needs.load-config.outputs.terraform_version }}
+
+      - name: Azure Login
+        if: ${{ secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '' }}
+        uses: azure/login@v2
+        with:
+          client-id:       ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id:       ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID != '' && secrets.AZURE_SUBSCRIPTION_ID || needs.load-config.outputs.azure_subscription_id }}
+
+      - name: Azure Login (service principal JSON credentials fallback)
+        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '') && secrets.AZURE_CREDENTIALS != '' }}
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Validate Azure authentication inputs
+        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '') && secrets.AZURE_CREDENTIALS == '' }}
+        run: |
+          echo "Missing Azure auth configuration." >&2
+          echo "Set either AZURE_CLIENT_ID/AZURE_TENANT_ID[/AZURE_SUBSCRIPTION_ID] or AZURE_CREDENTIALS JSON secret." >&2
+          exit 1
+
+      - uses: actions/download-artifact@v4.1.3
+        with:
+          name: sre-terraform-plan
+          path: ${{ needs.load-config.outputs.tf_dir }}
+
+      - name: Terraform init
+        run: |
+          set -euo pipefail
+          terraform init
+
+      - name: Terraform apply (SRE components)
+        run: |
+          set -euo pipefail
+          terraform apply -auto-approve sre-tfplan
+
+      # ── Capture outputs and surface the Logic App trigger URL ─────────────────
+      - name: Capture SRE provisioning outputs
+        id: tf-outputs
+        run: |
+          set -euo pipefail
+          logic_app_url=$(terraform output -raw incident_response_logic_app_trigger_url 2>/dev/null || echo "")
+          action_group_id=$(terraform output -raw monitor_action_group_id 2>/dev/null || echo "")
+          workspace_id=$(terraform output -raw log_analytics_workspace_id 2>/dev/null || echo "")
+
+          echo "logic_app_trigger_url=$logic_app_url" >> "$GITHUB_OUTPUT"
+          echo "action_group_id=$action_group_id"     >> "$GITHUB_OUTPUT"
+          echo "workspace_id=$workspace_id"           >> "$GITHUB_OUTPUT"
+
+      - name: Display provisioning summary
+        env:
+          ACTION_GROUP_ID: ${{ steps.tf-outputs.outputs.action_group_id }}
+          WORKSPACE_ID:    ${{ steps.tf-outputs.outputs.workspace_id }}
+        run: |
+          set -euo pipefail
+          echo "============================================================"
+          echo " SRE Agent Components – Provisioning Summary"
+          echo "============================================================"
+          echo " Monitor Action Group : $ACTION_GROUP_ID"
+          echo " Log Analytics WS     : $WORKSPACE_ID"
+          echo ""
+          echo " ⚠  The Logic App HTTP trigger URL is SENSITIVE."
+          echo "    Run the following locally to retrieve it and set it as"
+          echo "    the SRE_WEBHOOK_URL repository secret:"
+          echo ""
+          echo "    cd terraform"
+          echo "    terraform output -raw incident_response_logic_app_trigger_url"
+          echo "============================================================"
+
+  # ── 4. Destroy SRE components (safety-gated) ─────────────────────────────────
+  sre-destroy:
+    if: ${{ github.event.inputs.apply == 'true' && github.event.inputs.destroy == 'true' }}
+    needs:
+      - load-config
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ needs.load-config.outputs.tf_dir }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ needs.load-config.outputs.terraform_version }}
+
+      - name: Azure Login
+        if: ${{ secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '' }}
+        uses: azure/login@v2
+        with:
+          client-id:       ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id:       ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID != '' && secrets.AZURE_SUBSCRIPTION_ID || needs.load-config.outputs.azure_subscription_id }}
+
+      - name: Azure Login (service principal JSON credentials fallback)
+        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '') && secrets.AZURE_CREDENTIALS != '' }}
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Validate Azure authentication inputs
+        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '') && secrets.AZURE_CREDENTIALS == '' }}
+        run: |
+          echo "Missing Azure auth configuration." >&2
+          echo "Set either AZURE_CLIENT_ID/AZURE_TENANT_ID[/AZURE_SUBSCRIPTION_ID] or AZURE_CREDENTIALS JSON secret." >&2
+          exit 1
+
+      - name: Terraform init
+        run: |
+          set -euo pipefail
+          terraform init
+
+      - name: Terraform destroy (SRE targets only)
+        env:
+          TF_VAR_FILE: ${{ needs.load-config.outputs.tf_var_file }}
+          TF_TARGETS:  ${{ needs.load-config.outputs.tf_targets }}
+        run: |
+          set -euo pipefail
+          # shellcheck disable=SC2086
+          terraform destroy \
+            -var-file="$TF_VAR_FILE" \
+            $TF_TARGETS \
+            -auto-approve
