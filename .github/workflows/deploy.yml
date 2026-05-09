@@ -8,6 +8,9 @@ on:
         required: true
         default: "false"
 
+permissions:
+  contents: read
+
 jobs:
   load-config:
     runs-on: ubuntu-latest
