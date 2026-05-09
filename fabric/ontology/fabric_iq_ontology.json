@@ -1,0 +1,40 @@
+{
+  "ontology": "FabricIQEmployeeKnowledge",
+  "nodes": [
+    "Employee",
+    "Department",
+    "Manager",
+    "Document",
+    "Email",
+    "Skill",
+    "Project"
+  ],
+  "edges": [
+    {
+      "from": "Employee",
+      "to": "Manager",
+      "relationship": "REPORTS_TO"
+    },
+    {
+      "from": "Employee",
+      "to": "Department",
+      "relationship": "BELONGS_TO"
+    },
+    {
+      "from": "Employee",
+      "to": "Document",
+      "relationship": "OWNS"
+    },
+    {
+      "from": "Employee",
+      "to": "Email",
+      "relationship": "WRITES"
+    },
+    {
+      "from": "Employee",
+      "to": "Skill",
+      "relationship": "HAS"
+    }
+  ],
+  "onelakeLink": "/Lakehouses/EmployeeKnowledge/Lakehouse/Tables/OntologyGraph"
+}

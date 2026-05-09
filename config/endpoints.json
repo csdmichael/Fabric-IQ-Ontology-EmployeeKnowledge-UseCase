@@ -1,0 +1,19 @@
+{
+  "azure": {
+    "blobStorageEndpoint": "https://{storageAccount}.blob.core.windows.net",
+    "fileStorageEndpoint": "https://{storageAccount}.file.core.windows.net",
+    "cosmosDbEndpoint": "https://{cosmosAccount}.documents.azure.com:443/",
+    "documentIntelligenceEndpoint": "https://{docIntelResource}.cognitiveservices.azure.com/"
+  },
+  "microsoftFabric": {
+    "workspaceId": "{fabricWorkspaceId}",
+    "lakehouseId": "{fabricLakehouseId}",
+    "pipelineId": "{fabricPipelineId}",
+    "semanticModelId": "{fabricSemanticModelId}",
+    "dataAgentId": "{fabricDataAgentId}"
+  },
+  "integration": {
+    "teamsDevPortalUrl": "https://dev.teams.microsoft.com",
+    "copilotStudioUrl": "https://copilotstudio.microsoft.com"
+  }
+}

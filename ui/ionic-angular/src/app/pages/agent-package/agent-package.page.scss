@@ -1,0 +1,8 @@
+.layout-card {
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  padding: 12px;
+}
+@media (min-width: 1024px) { .layout-card { columns: 3; } }
+@media (min-width: 768px) and (max-width: 1023px) { .layout-card { columns: 2; } }
+@media (max-width: 767px) { .layout-card { columns: 1; } }

@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset='utf-8'><title>UI Preview</title>
+<style>
+body{font-family:Arial;margin:0;background:#f6f8fb}
+header{background:#0078d4;color:#fff;padding:12px 18px;display:flex;align-items:center;gap:10px}
+header img{height:20px}
+.wrapper{display:grid;grid-template-columns:260px 1fr;min-height:85vh}
+nav{background:#fff;border-right:1px solid #d0d7de;padding:12px}
+nav div{padding:10px;border-bottom:1px solid #eef2f7}
+main{padding:18px}
+.cards{display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
+.card{background:#fff;border:1px solid #d0d7de;border-radius:8px;padding:12px}
+@media (max-width:1023px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:767px){.wrapper{grid-template-columns:1fr} nav{display:none}.cards{grid-template-columns:1fr}}
+footer{background:#fff;border-top:1px solid #d0d7de;padding:10px 16px}
+</style></head>
+<body>
+<header><img src='../ui/ionic-angular/src/assets/microsoft-logo.svg'><strong>Fabric IQ Employee Knowledge Demo</strong></header>
+<div class='wrapper'>
+<nav><div>Data Sources</div><div>Ingestion & Intelligence</div><div>Data Agent Prompts</div><div>Agent Packaging</div></nav>
+<main><h2>Responsive Multi-Page Layout Preview</h2><div class='cards'>
+<div class='card'>Data sources + hierarchy visualization</div>
+<div class='card'>Fabric pipeline + document intelligence flow</div>
+<div class='card'>20 data agent prompts with copy/execute actions</div>
+<div class='card'>Package as zip and import to Teams/Copilot steps</div>
+<div class='card'>Web/Tablet/Mobile layout breakpoints</div>
+<div class='card'>Config-driven endpoint usage</div>
+</div></main></div>
+<footer>Michael Yaacoub | Experienced Full Stack & AI Software Engineer / Architect at Microsoft | <a href='https://www.linkedin.com/in/michael-yaacoub-7a46436'>LinkedIn</a> | <a href='https://github.com/csdmichael'>GitHub</a></footer>
+</body></html>

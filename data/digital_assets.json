@@ -1,0 +1,5002 @@
+[
+  {
+    "assetId": "AST-EMP001-01",
+    "employeeId": "EMP001",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP001",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP001/AST-EMP001-01.pptx",
+    "lastModified": "2025-01-03"
+  },
+  {
+    "assetId": "AST-EMP001-02",
+    "employeeId": "EMP001",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP001",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP001/AST-EMP001-02.pdf",
+    "lastModified": "2025-01-04"
+  },
+  {
+    "assetId": "AST-EMP001-03",
+    "employeeId": "EMP001",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP001",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP001/AST-EMP001-03.docx",
+    "lastModified": "2025-01-05"
+  },
+  {
+    "assetId": "AST-EMP001-04",
+    "employeeId": "EMP001",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP001",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP001/AST-EMP001-04.txt",
+    "lastModified": "2025-01-06"
+  },
+  {
+    "assetId": "AST-EMP001-05",
+    "employeeId": "EMP001",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP001",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP001/AST-EMP001-05.one",
+    "lastModified": "2025-01-07"
+  },
+  {
+    "assetId": "AST-EMP002-01",
+    "employeeId": "EMP002",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP002",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP002/AST-EMP002-01.pptx",
+    "lastModified": "2025-01-04"
+  },
+  {
+    "assetId": "AST-EMP002-02",
+    "employeeId": "EMP002",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP002",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP002/AST-EMP002-02.pdf",
+    "lastModified": "2025-01-05"
+  },
+  {
+    "assetId": "AST-EMP002-03",
+    "employeeId": "EMP002",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP002",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP002/AST-EMP002-03.docx",
+    "lastModified": "2025-01-06"
+  },
+  {
+    "assetId": "AST-EMP002-04",
+    "employeeId": "EMP002",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP002",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP002/AST-EMP002-04.txt",
+    "lastModified": "2025-01-07"
+  },
+  {
+    "assetId": "AST-EMP002-05",
+    "employeeId": "EMP002",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP002",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP002/AST-EMP002-05.one",
+    "lastModified": "2025-01-08"
+  },
+  {
+    "assetId": "AST-EMP003-01",
+    "employeeId": "EMP003",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP003",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP003/AST-EMP003-01.pptx",
+    "lastModified": "2025-01-05"
+  },
+  {
+    "assetId": "AST-EMP003-02",
+    "employeeId": "EMP003",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP003",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP003/AST-EMP003-02.pdf",
+    "lastModified": "2025-01-06"
+  },
+  {
+    "assetId": "AST-EMP003-03",
+    "employeeId": "EMP003",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP003",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP003/AST-EMP003-03.docx",
+    "lastModified": "2025-01-07"
+  },
+  {
+    "assetId": "AST-EMP003-04",
+    "employeeId": "EMP003",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP003",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP003/AST-EMP003-04.txt",
+    "lastModified": "2025-01-08"
+  },
+  {
+    "assetId": "AST-EMP003-05",
+    "employeeId": "EMP003",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP003",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP003/AST-EMP003-05.one",
+    "lastModified": "2025-01-09"
+  },
+  {
+    "assetId": "AST-EMP004-01",
+    "employeeId": "EMP004",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP004",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP004/AST-EMP004-01.pptx",
+    "lastModified": "2025-01-06"
+  },
+  {
+    "assetId": "AST-EMP004-02",
+    "employeeId": "EMP004",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP004",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP004/AST-EMP004-02.pdf",
+    "lastModified": "2025-01-07"
+  },
+  {
+    "assetId": "AST-EMP004-03",
+    "employeeId": "EMP004",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP004",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP004/AST-EMP004-03.docx",
+    "lastModified": "2025-01-08"
+  },
+  {
+    "assetId": "AST-EMP004-04",
+    "employeeId": "EMP004",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP004",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP004/AST-EMP004-04.txt",
+    "lastModified": "2025-01-09"
+  },
+  {
+    "assetId": "AST-EMP004-05",
+    "employeeId": "EMP004",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP004",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP004/AST-EMP004-05.one",
+    "lastModified": "2025-01-10"
+  },
+  {
+    "assetId": "AST-EMP005-01",
+    "employeeId": "EMP005",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP005",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP005/AST-EMP005-01.pptx",
+    "lastModified": "2025-01-07"
+  },
+  {
+    "assetId": "AST-EMP005-02",
+    "employeeId": "EMP005",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP005",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP005/AST-EMP005-02.pdf",
+    "lastModified": "2025-01-08"
+  },
+  {
+    "assetId": "AST-EMP005-03",
+    "employeeId": "EMP005",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP005",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP005/AST-EMP005-03.docx",
+    "lastModified": "2025-01-09"
+  },
+  {
+    "assetId": "AST-EMP005-04",
+    "employeeId": "EMP005",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP005",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP005/AST-EMP005-04.txt",
+    "lastModified": "2025-01-10"
+  },
+  {
+    "assetId": "AST-EMP005-05",
+    "employeeId": "EMP005",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP005",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP005/AST-EMP005-05.one",
+    "lastModified": "2025-01-11"
+  },
+  {
+    "assetId": "AST-EMP006-01",
+    "employeeId": "EMP006",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP006",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP006/AST-EMP006-01.pptx",
+    "lastModified": "2025-01-08"
+  },
+  {
+    "assetId": "AST-EMP006-02",
+    "employeeId": "EMP006",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP006",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP006/AST-EMP006-02.pdf",
+    "lastModified": "2025-01-09"
+  },
+  {
+    "assetId": "AST-EMP006-03",
+    "employeeId": "EMP006",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP006",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP006/AST-EMP006-03.docx",
+    "lastModified": "2025-01-10"
+  },
+  {
+    "assetId": "AST-EMP006-04",
+    "employeeId": "EMP006",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP006",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP006/AST-EMP006-04.txt",
+    "lastModified": "2025-01-11"
+  },
+  {
+    "assetId": "AST-EMP006-05",
+    "employeeId": "EMP006",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP006",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP006/AST-EMP006-05.one",
+    "lastModified": "2025-01-12"
+  },
+  {
+    "assetId": "AST-EMP007-01",
+    "employeeId": "EMP007",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP007",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP007/AST-EMP007-01.pptx",
+    "lastModified": "2025-01-09"
+  },
+  {
+    "assetId": "AST-EMP007-02",
+    "employeeId": "EMP007",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP007",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP007/AST-EMP007-02.pdf",
+    "lastModified": "2025-01-10"
+  },
+  {
+    "assetId": "AST-EMP007-03",
+    "employeeId": "EMP007",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP007",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP007/AST-EMP007-03.docx",
+    "lastModified": "2025-01-11"
+  },
+  {
+    "assetId": "AST-EMP007-04",
+    "employeeId": "EMP007",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP007",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP007/AST-EMP007-04.txt",
+    "lastModified": "2025-01-12"
+  },
+  {
+    "assetId": "AST-EMP007-05",
+    "employeeId": "EMP007",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP007",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP007/AST-EMP007-05.one",
+    "lastModified": "2025-01-13"
+  },
+  {
+    "assetId": "AST-EMP008-01",
+    "employeeId": "EMP008",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP008",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP008/AST-EMP008-01.pptx",
+    "lastModified": "2025-01-10"
+  },
+  {
+    "assetId": "AST-EMP008-02",
+    "employeeId": "EMP008",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP008",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP008/AST-EMP008-02.pdf",
+    "lastModified": "2025-01-11"
+  },
+  {
+    "assetId": "AST-EMP008-03",
+    "employeeId": "EMP008",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP008",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP008/AST-EMP008-03.docx",
+    "lastModified": "2025-01-12"
+  },
+  {
+    "assetId": "AST-EMP008-04",
+    "employeeId": "EMP008",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP008",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP008/AST-EMP008-04.txt",
+    "lastModified": "2025-01-13"
+  },
+  {
+    "assetId": "AST-EMP008-05",
+    "employeeId": "EMP008",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP008",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP008/AST-EMP008-05.one",
+    "lastModified": "2025-01-14"
+  },
+  {
+    "assetId": "AST-EMP009-01",
+    "employeeId": "EMP009",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP009",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP009/AST-EMP009-01.pptx",
+    "lastModified": "2025-01-11"
+  },
+  {
+    "assetId": "AST-EMP009-02",
+    "employeeId": "EMP009",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP009",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP009/AST-EMP009-02.pdf",
+    "lastModified": "2025-01-12"
+  },
+  {
+    "assetId": "AST-EMP009-03",
+    "employeeId": "EMP009",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP009",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP009/AST-EMP009-03.docx",
+    "lastModified": "2025-01-13"
+  },
+  {
+    "assetId": "AST-EMP009-04",
+    "employeeId": "EMP009",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP009",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP009/AST-EMP009-04.txt",
+    "lastModified": "2025-01-14"
+  },
+  {
+    "assetId": "AST-EMP009-05",
+    "employeeId": "EMP009",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP009",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP009/AST-EMP009-05.one",
+    "lastModified": "2025-01-15"
+  },
+  {
+    "assetId": "AST-EMP010-01",
+    "employeeId": "EMP010",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP010",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP010/AST-EMP010-01.pptx",
+    "lastModified": "2025-01-12"
+  },
+  {
+    "assetId": "AST-EMP010-02",
+    "employeeId": "EMP010",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP010",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP010/AST-EMP010-02.pdf",
+    "lastModified": "2025-01-13"
+  },
+  {
+    "assetId": "AST-EMP010-03",
+    "employeeId": "EMP010",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP010",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP010/AST-EMP010-03.docx",
+    "lastModified": "2025-01-14"
+  },
+  {
+    "assetId": "AST-EMP010-04",
+    "employeeId": "EMP010",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP010",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP010/AST-EMP010-04.txt",
+    "lastModified": "2025-01-15"
+  },
+  {
+    "assetId": "AST-EMP010-05",
+    "employeeId": "EMP010",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP010",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP010/AST-EMP010-05.one",
+    "lastModified": "2025-01-16"
+  },
+  {
+    "assetId": "AST-EMP011-01",
+    "employeeId": "EMP011",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP011",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP011/AST-EMP011-01.pptx",
+    "lastModified": "2025-01-13"
+  },
+  {
+    "assetId": "AST-EMP011-02",
+    "employeeId": "EMP011",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP011",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP011/AST-EMP011-02.pdf",
+    "lastModified": "2025-01-14"
+  },
+  {
+    "assetId": "AST-EMP011-03",
+    "employeeId": "EMP011",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP011",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP011/AST-EMP011-03.docx",
+    "lastModified": "2025-01-15"
+  },
+  {
+    "assetId": "AST-EMP011-04",
+    "employeeId": "EMP011",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP011",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP011/AST-EMP011-04.txt",
+    "lastModified": "2025-01-16"
+  },
+  {
+    "assetId": "AST-EMP011-05",
+    "employeeId": "EMP011",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP011",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP011/AST-EMP011-05.one",
+    "lastModified": "2025-01-17"
+  },
+  {
+    "assetId": "AST-EMP012-01",
+    "employeeId": "EMP012",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP012",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP012/AST-EMP012-01.pptx",
+    "lastModified": "2025-01-14"
+  },
+  {
+    "assetId": "AST-EMP012-02",
+    "employeeId": "EMP012",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP012",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP012/AST-EMP012-02.pdf",
+    "lastModified": "2025-01-15"
+  },
+  {
+    "assetId": "AST-EMP012-03",
+    "employeeId": "EMP012",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP012",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP012/AST-EMP012-03.docx",
+    "lastModified": "2025-01-16"
+  },
+  {
+    "assetId": "AST-EMP012-04",
+    "employeeId": "EMP012",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP012",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP012/AST-EMP012-04.txt",
+    "lastModified": "2025-01-17"
+  },
+  {
+    "assetId": "AST-EMP012-05",
+    "employeeId": "EMP012",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP012",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP012/AST-EMP012-05.one",
+    "lastModified": "2025-01-18"
+  },
+  {
+    "assetId": "AST-EMP013-01",
+    "employeeId": "EMP013",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP013",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP013/AST-EMP013-01.pptx",
+    "lastModified": "2025-01-15"
+  },
+  {
+    "assetId": "AST-EMP013-02",
+    "employeeId": "EMP013",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP013",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP013/AST-EMP013-02.pdf",
+    "lastModified": "2025-01-16"
+  },
+  {
+    "assetId": "AST-EMP013-03",
+    "employeeId": "EMP013",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP013",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP013/AST-EMP013-03.docx",
+    "lastModified": "2025-01-17"
+  },
+  {
+    "assetId": "AST-EMP013-04",
+    "employeeId": "EMP013",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP013",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP013/AST-EMP013-04.txt",
+    "lastModified": "2025-01-18"
+  },
+  {
+    "assetId": "AST-EMP013-05",
+    "employeeId": "EMP013",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP013",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP013/AST-EMP013-05.one",
+    "lastModified": "2025-01-19"
+  },
+  {
+    "assetId": "AST-EMP014-01",
+    "employeeId": "EMP014",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP014",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP014/AST-EMP014-01.pptx",
+    "lastModified": "2025-01-16"
+  },
+  {
+    "assetId": "AST-EMP014-02",
+    "employeeId": "EMP014",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP014",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP014/AST-EMP014-02.pdf",
+    "lastModified": "2025-01-17"
+  },
+  {
+    "assetId": "AST-EMP014-03",
+    "employeeId": "EMP014",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP014",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP014/AST-EMP014-03.docx",
+    "lastModified": "2025-01-18"
+  },
+  {
+    "assetId": "AST-EMP014-04",
+    "employeeId": "EMP014",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP014",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP014/AST-EMP014-04.txt",
+    "lastModified": "2025-01-19"
+  },
+  {
+    "assetId": "AST-EMP014-05",
+    "employeeId": "EMP014",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP014",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP014/AST-EMP014-05.one",
+    "lastModified": "2025-01-20"
+  },
+  {
+    "assetId": "AST-EMP015-01",
+    "employeeId": "EMP015",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP015",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP015/AST-EMP015-01.pptx",
+    "lastModified": "2025-01-17"
+  },
+  {
+    "assetId": "AST-EMP015-02",
+    "employeeId": "EMP015",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP015",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP015/AST-EMP015-02.pdf",
+    "lastModified": "2025-01-18"
+  },
+  {
+    "assetId": "AST-EMP015-03",
+    "employeeId": "EMP015",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP015",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP015/AST-EMP015-03.docx",
+    "lastModified": "2025-01-19"
+  },
+  {
+    "assetId": "AST-EMP015-04",
+    "employeeId": "EMP015",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP015",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP015/AST-EMP015-04.txt",
+    "lastModified": "2025-01-20"
+  },
+  {
+    "assetId": "AST-EMP015-05",
+    "employeeId": "EMP015",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP015",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP015/AST-EMP015-05.one",
+    "lastModified": "2025-01-21"
+  },
+  {
+    "assetId": "AST-EMP016-01",
+    "employeeId": "EMP016",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP016",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP016/AST-EMP016-01.pptx",
+    "lastModified": "2025-01-18"
+  },
+  {
+    "assetId": "AST-EMP016-02",
+    "employeeId": "EMP016",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP016",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP016/AST-EMP016-02.pdf",
+    "lastModified": "2025-01-19"
+  },
+  {
+    "assetId": "AST-EMP016-03",
+    "employeeId": "EMP016",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP016",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP016/AST-EMP016-03.docx",
+    "lastModified": "2025-01-20"
+  },
+  {
+    "assetId": "AST-EMP016-04",
+    "employeeId": "EMP016",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP016",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP016/AST-EMP016-04.txt",
+    "lastModified": "2025-01-21"
+  },
+  {
+    "assetId": "AST-EMP016-05",
+    "employeeId": "EMP016",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP016",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP016/AST-EMP016-05.one",
+    "lastModified": "2025-01-22"
+  },
+  {
+    "assetId": "AST-EMP017-01",
+    "employeeId": "EMP017",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP017",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP017/AST-EMP017-01.pptx",
+    "lastModified": "2025-01-19"
+  },
+  {
+    "assetId": "AST-EMP017-02",
+    "employeeId": "EMP017",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP017",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP017/AST-EMP017-02.pdf",
+    "lastModified": "2025-01-20"
+  },
+  {
+    "assetId": "AST-EMP017-03",
+    "employeeId": "EMP017",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP017",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP017/AST-EMP017-03.docx",
+    "lastModified": "2025-01-21"
+  },
+  {
+    "assetId": "AST-EMP017-04",
+    "employeeId": "EMP017",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP017",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP017/AST-EMP017-04.txt",
+    "lastModified": "2025-01-22"
+  },
+  {
+    "assetId": "AST-EMP017-05",
+    "employeeId": "EMP017",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP017",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP017/AST-EMP017-05.one",
+    "lastModified": "2025-01-23"
+  },
+  {
+    "assetId": "AST-EMP018-01",
+    "employeeId": "EMP018",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP018",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP018/AST-EMP018-01.pptx",
+    "lastModified": "2025-01-20"
+  },
+  {
+    "assetId": "AST-EMP018-02",
+    "employeeId": "EMP018",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP018",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP018/AST-EMP018-02.pdf",
+    "lastModified": "2025-01-21"
+  },
+  {
+    "assetId": "AST-EMP018-03",
+    "employeeId": "EMP018",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP018",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP018/AST-EMP018-03.docx",
+    "lastModified": "2025-01-22"
+  },
+  {
+    "assetId": "AST-EMP018-04",
+    "employeeId": "EMP018",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP018",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP018/AST-EMP018-04.txt",
+    "lastModified": "2025-01-23"
+  },
+  {
+    "assetId": "AST-EMP018-05",
+    "employeeId": "EMP018",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP018",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP018/AST-EMP018-05.one",
+    "lastModified": "2025-01-24"
+  },
+  {
+    "assetId": "AST-EMP019-01",
+    "employeeId": "EMP019",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP019",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP019/AST-EMP019-01.pptx",
+    "lastModified": "2025-01-21"
+  },
+  {
+    "assetId": "AST-EMP019-02",
+    "employeeId": "EMP019",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP019",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP019/AST-EMP019-02.pdf",
+    "lastModified": "2025-01-22"
+  },
+  {
+    "assetId": "AST-EMP019-03",
+    "employeeId": "EMP019",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP019",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP019/AST-EMP019-03.docx",
+    "lastModified": "2025-01-23"
+  },
+  {
+    "assetId": "AST-EMP019-04",
+    "employeeId": "EMP019",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP019",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP019/AST-EMP019-04.txt",
+    "lastModified": "2025-01-24"
+  },
+  {
+    "assetId": "AST-EMP019-05",
+    "employeeId": "EMP019",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP019",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP019/AST-EMP019-05.one",
+    "lastModified": "2025-01-25"
+  },
+  {
+    "assetId": "AST-EMP020-01",
+    "employeeId": "EMP020",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP020",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP020/AST-EMP020-01.pptx",
+    "lastModified": "2025-01-22"
+  },
+  {
+    "assetId": "AST-EMP020-02",
+    "employeeId": "EMP020",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP020",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP020/AST-EMP020-02.pdf",
+    "lastModified": "2025-01-23"
+  },
+  {
+    "assetId": "AST-EMP020-03",
+    "employeeId": "EMP020",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP020",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP020/AST-EMP020-03.docx",
+    "lastModified": "2025-01-24"
+  },
+  {
+    "assetId": "AST-EMP020-04",
+    "employeeId": "EMP020",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP020",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP020/AST-EMP020-04.txt",
+    "lastModified": "2025-01-25"
+  },
+  {
+    "assetId": "AST-EMP020-05",
+    "employeeId": "EMP020",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP020",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP020/AST-EMP020-05.one",
+    "lastModified": "2025-01-26"
+  },
+  {
+    "assetId": "AST-EMP021-01",
+    "employeeId": "EMP021",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP021",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP021/AST-EMP021-01.pptx",
+    "lastModified": "2025-01-23"
+  },
+  {
+    "assetId": "AST-EMP021-02",
+    "employeeId": "EMP021",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP021",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP021/AST-EMP021-02.pdf",
+    "lastModified": "2025-01-24"
+  },
+  {
+    "assetId": "AST-EMP021-03",
+    "employeeId": "EMP021",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP021",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP021/AST-EMP021-03.docx",
+    "lastModified": "2025-01-25"
+  },
+  {
+    "assetId": "AST-EMP021-04",
+    "employeeId": "EMP021",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP021",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP021/AST-EMP021-04.txt",
+    "lastModified": "2025-01-26"
+  },
+  {
+    "assetId": "AST-EMP021-05",
+    "employeeId": "EMP021",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP021",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP021/AST-EMP021-05.one",
+    "lastModified": "2025-01-27"
+  },
+  {
+    "assetId": "AST-EMP022-01",
+    "employeeId": "EMP022",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP022",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP022/AST-EMP022-01.pptx",
+    "lastModified": "2025-01-24"
+  },
+  {
+    "assetId": "AST-EMP022-02",
+    "employeeId": "EMP022",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP022",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP022/AST-EMP022-02.pdf",
+    "lastModified": "2025-01-25"
+  },
+  {
+    "assetId": "AST-EMP022-03",
+    "employeeId": "EMP022",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP022",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP022/AST-EMP022-03.docx",
+    "lastModified": "2025-01-26"
+  },
+  {
+    "assetId": "AST-EMP022-04",
+    "employeeId": "EMP022",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP022",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP022/AST-EMP022-04.txt",
+    "lastModified": "2025-01-27"
+  },
+  {
+    "assetId": "AST-EMP022-05",
+    "employeeId": "EMP022",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP022",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP022/AST-EMP022-05.one",
+    "lastModified": "2025-01-28"
+  },
+  {
+    "assetId": "AST-EMP023-01",
+    "employeeId": "EMP023",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP023",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP023/AST-EMP023-01.pptx",
+    "lastModified": "2025-01-25"
+  },
+  {
+    "assetId": "AST-EMP023-02",
+    "employeeId": "EMP023",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP023",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP023/AST-EMP023-02.pdf",
+    "lastModified": "2025-01-26"
+  },
+  {
+    "assetId": "AST-EMP023-03",
+    "employeeId": "EMP023",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP023",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP023/AST-EMP023-03.docx",
+    "lastModified": "2025-01-27"
+  },
+  {
+    "assetId": "AST-EMP023-04",
+    "employeeId": "EMP023",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP023",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP023/AST-EMP023-04.txt",
+    "lastModified": "2025-01-28"
+  },
+  {
+    "assetId": "AST-EMP023-05",
+    "employeeId": "EMP023",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP023",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP023/AST-EMP023-05.one",
+    "lastModified": "2025-01-29"
+  },
+  {
+    "assetId": "AST-EMP024-01",
+    "employeeId": "EMP024",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP024",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP024/AST-EMP024-01.pptx",
+    "lastModified": "2025-01-26"
+  },
+  {
+    "assetId": "AST-EMP024-02",
+    "employeeId": "EMP024",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP024",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP024/AST-EMP024-02.pdf",
+    "lastModified": "2025-01-27"
+  },
+  {
+    "assetId": "AST-EMP024-03",
+    "employeeId": "EMP024",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP024",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP024/AST-EMP024-03.docx",
+    "lastModified": "2025-01-28"
+  },
+  {
+    "assetId": "AST-EMP024-04",
+    "employeeId": "EMP024",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP024",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP024/AST-EMP024-04.txt",
+    "lastModified": "2025-01-29"
+  },
+  {
+    "assetId": "AST-EMP024-05",
+    "employeeId": "EMP024",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP024",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP024/AST-EMP024-05.one",
+    "lastModified": "2025-01-30"
+  },
+  {
+    "assetId": "AST-EMP025-01",
+    "employeeId": "EMP025",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP025",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP025/AST-EMP025-01.pptx",
+    "lastModified": "2025-01-27"
+  },
+  {
+    "assetId": "AST-EMP025-02",
+    "employeeId": "EMP025",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP025",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP025/AST-EMP025-02.pdf",
+    "lastModified": "2025-01-28"
+  },
+  {
+    "assetId": "AST-EMP025-03",
+    "employeeId": "EMP025",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP025",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP025/AST-EMP025-03.docx",
+    "lastModified": "2025-01-29"
+  },
+  {
+    "assetId": "AST-EMP025-04",
+    "employeeId": "EMP025",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP025",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP025/AST-EMP025-04.txt",
+    "lastModified": "2025-01-30"
+  },
+  {
+    "assetId": "AST-EMP025-05",
+    "employeeId": "EMP025",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP025",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP025/AST-EMP025-05.one",
+    "lastModified": "2025-01-31"
+  },
+  {
+    "assetId": "AST-EMP026-01",
+    "employeeId": "EMP026",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP026",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP026/AST-EMP026-01.pptx",
+    "lastModified": "2025-01-28"
+  },
+  {
+    "assetId": "AST-EMP026-02",
+    "employeeId": "EMP026",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP026",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP026/AST-EMP026-02.pdf",
+    "lastModified": "2025-01-29"
+  },
+  {
+    "assetId": "AST-EMP026-03",
+    "employeeId": "EMP026",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP026",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP026/AST-EMP026-03.docx",
+    "lastModified": "2025-01-30"
+  },
+  {
+    "assetId": "AST-EMP026-04",
+    "employeeId": "EMP026",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP026",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP026/AST-EMP026-04.txt",
+    "lastModified": "2025-01-31"
+  },
+  {
+    "assetId": "AST-EMP026-05",
+    "employeeId": "EMP026",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP026",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP026/AST-EMP026-05.one",
+    "lastModified": "2025-02-01"
+  },
+  {
+    "assetId": "AST-EMP027-01",
+    "employeeId": "EMP027",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP027",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP027/AST-EMP027-01.pptx",
+    "lastModified": "2025-01-29"
+  },
+  {
+    "assetId": "AST-EMP027-02",
+    "employeeId": "EMP027",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP027",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP027/AST-EMP027-02.pdf",
+    "lastModified": "2025-01-30"
+  },
+  {
+    "assetId": "AST-EMP027-03",
+    "employeeId": "EMP027",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP027",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP027/AST-EMP027-03.docx",
+    "lastModified": "2025-01-31"
+  },
+  {
+    "assetId": "AST-EMP027-04",
+    "employeeId": "EMP027",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP027",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP027/AST-EMP027-04.txt",
+    "lastModified": "2025-02-01"
+  },
+  {
+    "assetId": "AST-EMP027-05",
+    "employeeId": "EMP027",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP027",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP027/AST-EMP027-05.one",
+    "lastModified": "2025-02-02"
+  },
+  {
+    "assetId": "AST-EMP028-01",
+    "employeeId": "EMP028",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP028",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP028/AST-EMP028-01.pptx",
+    "lastModified": "2025-01-30"
+  },
+  {
+    "assetId": "AST-EMP028-02",
+    "employeeId": "EMP028",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP028",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP028/AST-EMP028-02.pdf",
+    "lastModified": "2025-01-31"
+  },
+  {
+    "assetId": "AST-EMP028-03",
+    "employeeId": "EMP028",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP028",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP028/AST-EMP028-03.docx",
+    "lastModified": "2025-02-01"
+  },
+  {
+    "assetId": "AST-EMP028-04",
+    "employeeId": "EMP028",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP028",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP028/AST-EMP028-04.txt",
+    "lastModified": "2025-02-02"
+  },
+  {
+    "assetId": "AST-EMP028-05",
+    "employeeId": "EMP028",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP028",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP028/AST-EMP028-05.one",
+    "lastModified": "2025-02-03"
+  },
+  {
+    "assetId": "AST-EMP029-01",
+    "employeeId": "EMP029",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP029",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP029/AST-EMP029-01.pptx",
+    "lastModified": "2025-01-31"
+  },
+  {
+    "assetId": "AST-EMP029-02",
+    "employeeId": "EMP029",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP029",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP029/AST-EMP029-02.pdf",
+    "lastModified": "2025-02-01"
+  },
+  {
+    "assetId": "AST-EMP029-03",
+    "employeeId": "EMP029",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP029",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP029/AST-EMP029-03.docx",
+    "lastModified": "2025-02-02"
+  },
+  {
+    "assetId": "AST-EMP029-04",
+    "employeeId": "EMP029",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP029",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP029/AST-EMP029-04.txt",
+    "lastModified": "2025-02-03"
+  },
+  {
+    "assetId": "AST-EMP029-05",
+    "employeeId": "EMP029",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP029",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP029/AST-EMP029-05.one",
+    "lastModified": "2025-02-04"
+  },
+  {
+    "assetId": "AST-EMP030-01",
+    "employeeId": "EMP030",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP030",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP030/AST-EMP030-01.pptx",
+    "lastModified": "2025-02-01"
+  },
+  {
+    "assetId": "AST-EMP030-02",
+    "employeeId": "EMP030",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP030",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP030/AST-EMP030-02.pdf",
+    "lastModified": "2025-02-02"
+  },
+  {
+    "assetId": "AST-EMP030-03",
+    "employeeId": "EMP030",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP030",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP030/AST-EMP030-03.docx",
+    "lastModified": "2025-02-03"
+  },
+  {
+    "assetId": "AST-EMP030-04",
+    "employeeId": "EMP030",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP030",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP030/AST-EMP030-04.txt",
+    "lastModified": "2025-02-04"
+  },
+  {
+    "assetId": "AST-EMP030-05",
+    "employeeId": "EMP030",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP030",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP030/AST-EMP030-05.one",
+    "lastModified": "2025-02-05"
+  },
+  {
+    "assetId": "AST-EMP031-01",
+    "employeeId": "EMP031",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP031",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP031/AST-EMP031-01.pptx",
+    "lastModified": "2025-02-02"
+  },
+  {
+    "assetId": "AST-EMP031-02",
+    "employeeId": "EMP031",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP031",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP031/AST-EMP031-02.pdf",
+    "lastModified": "2025-02-03"
+  },
+  {
+    "assetId": "AST-EMP031-03",
+    "employeeId": "EMP031",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP031",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP031/AST-EMP031-03.docx",
+    "lastModified": "2025-02-04"
+  },
+  {
+    "assetId": "AST-EMP031-04",
+    "employeeId": "EMP031",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP031",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP031/AST-EMP031-04.txt",
+    "lastModified": "2025-02-05"
+  },
+  {
+    "assetId": "AST-EMP031-05",
+    "employeeId": "EMP031",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP031",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP031/AST-EMP031-05.one",
+    "lastModified": "2025-02-06"
+  },
+  {
+    "assetId": "AST-EMP032-01",
+    "employeeId": "EMP032",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP032",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP032/AST-EMP032-01.pptx",
+    "lastModified": "2025-02-03"
+  },
+  {
+    "assetId": "AST-EMP032-02",
+    "employeeId": "EMP032",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP032",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP032/AST-EMP032-02.pdf",
+    "lastModified": "2025-02-04"
+  },
+  {
+    "assetId": "AST-EMP032-03",
+    "employeeId": "EMP032",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP032",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP032/AST-EMP032-03.docx",
+    "lastModified": "2025-02-05"
+  },
+  {
+    "assetId": "AST-EMP032-04",
+    "employeeId": "EMP032",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP032",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP032/AST-EMP032-04.txt",
+    "lastModified": "2025-02-06"
+  },
+  {
+    "assetId": "AST-EMP032-05",
+    "employeeId": "EMP032",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP032",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP032/AST-EMP032-05.one",
+    "lastModified": "2025-02-07"
+  },
+  {
+    "assetId": "AST-EMP033-01",
+    "employeeId": "EMP033",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP033",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP033/AST-EMP033-01.pptx",
+    "lastModified": "2025-02-04"
+  },
+  {
+    "assetId": "AST-EMP033-02",
+    "employeeId": "EMP033",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP033",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP033/AST-EMP033-02.pdf",
+    "lastModified": "2025-02-05"
+  },
+  {
+    "assetId": "AST-EMP033-03",
+    "employeeId": "EMP033",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP033",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP033/AST-EMP033-03.docx",
+    "lastModified": "2025-02-06"
+  },
+  {
+    "assetId": "AST-EMP033-04",
+    "employeeId": "EMP033",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP033",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP033/AST-EMP033-04.txt",
+    "lastModified": "2025-02-07"
+  },
+  {
+    "assetId": "AST-EMP033-05",
+    "employeeId": "EMP033",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP033",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP033/AST-EMP033-05.one",
+    "lastModified": "2025-02-08"
+  },
+  {
+    "assetId": "AST-EMP034-01",
+    "employeeId": "EMP034",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP034",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP034/AST-EMP034-01.pptx",
+    "lastModified": "2025-02-05"
+  },
+  {
+    "assetId": "AST-EMP034-02",
+    "employeeId": "EMP034",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP034",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP034/AST-EMP034-02.pdf",
+    "lastModified": "2025-02-06"
+  },
+  {
+    "assetId": "AST-EMP034-03",
+    "employeeId": "EMP034",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP034",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP034/AST-EMP034-03.docx",
+    "lastModified": "2025-02-07"
+  },
+  {
+    "assetId": "AST-EMP034-04",
+    "employeeId": "EMP034",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP034",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP034/AST-EMP034-04.txt",
+    "lastModified": "2025-02-08"
+  },
+  {
+    "assetId": "AST-EMP034-05",
+    "employeeId": "EMP034",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP034",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP034/AST-EMP034-05.one",
+    "lastModified": "2025-02-09"
+  },
+  {
+    "assetId": "AST-EMP035-01",
+    "employeeId": "EMP035",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP035",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP035/AST-EMP035-01.pptx",
+    "lastModified": "2025-02-06"
+  },
+  {
+    "assetId": "AST-EMP035-02",
+    "employeeId": "EMP035",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP035",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP035/AST-EMP035-02.pdf",
+    "lastModified": "2025-02-07"
+  },
+  {
+    "assetId": "AST-EMP035-03",
+    "employeeId": "EMP035",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP035",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP035/AST-EMP035-03.docx",
+    "lastModified": "2025-02-08"
+  },
+  {
+    "assetId": "AST-EMP035-04",
+    "employeeId": "EMP035",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP035",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP035/AST-EMP035-04.txt",
+    "lastModified": "2025-02-09"
+  },
+  {
+    "assetId": "AST-EMP035-05",
+    "employeeId": "EMP035",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP035",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP035/AST-EMP035-05.one",
+    "lastModified": "2025-02-10"
+  },
+  {
+    "assetId": "AST-EMP036-01",
+    "employeeId": "EMP036",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP036",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP036/AST-EMP036-01.pptx",
+    "lastModified": "2025-02-07"
+  },
+  {
+    "assetId": "AST-EMP036-02",
+    "employeeId": "EMP036",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP036",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP036/AST-EMP036-02.pdf",
+    "lastModified": "2025-02-08"
+  },
+  {
+    "assetId": "AST-EMP036-03",
+    "employeeId": "EMP036",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP036",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP036/AST-EMP036-03.docx",
+    "lastModified": "2025-02-09"
+  },
+  {
+    "assetId": "AST-EMP036-04",
+    "employeeId": "EMP036",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP036",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP036/AST-EMP036-04.txt",
+    "lastModified": "2025-02-10"
+  },
+  {
+    "assetId": "AST-EMP036-05",
+    "employeeId": "EMP036",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP036",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP036/AST-EMP036-05.one",
+    "lastModified": "2025-02-11"
+  },
+  {
+    "assetId": "AST-EMP037-01",
+    "employeeId": "EMP037",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP037",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP037/AST-EMP037-01.pptx",
+    "lastModified": "2025-02-08"
+  },
+  {
+    "assetId": "AST-EMP037-02",
+    "employeeId": "EMP037",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP037",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP037/AST-EMP037-02.pdf",
+    "lastModified": "2025-02-09"
+  },
+  {
+    "assetId": "AST-EMP037-03",
+    "employeeId": "EMP037",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP037",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP037/AST-EMP037-03.docx",
+    "lastModified": "2025-02-10"
+  },
+  {
+    "assetId": "AST-EMP037-04",
+    "employeeId": "EMP037",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP037",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP037/AST-EMP037-04.txt",
+    "lastModified": "2025-02-11"
+  },
+  {
+    "assetId": "AST-EMP037-05",
+    "employeeId": "EMP037",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP037",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP037/AST-EMP037-05.one",
+    "lastModified": "2025-02-12"
+  },
+  {
+    "assetId": "AST-EMP038-01",
+    "employeeId": "EMP038",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP038",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP038/AST-EMP038-01.pptx",
+    "lastModified": "2025-02-09"
+  },
+  {
+    "assetId": "AST-EMP038-02",
+    "employeeId": "EMP038",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP038",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP038/AST-EMP038-02.pdf",
+    "lastModified": "2025-02-10"
+  },
+  {
+    "assetId": "AST-EMP038-03",
+    "employeeId": "EMP038",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP038",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP038/AST-EMP038-03.docx",
+    "lastModified": "2025-02-11"
+  },
+  {
+    "assetId": "AST-EMP038-04",
+    "employeeId": "EMP038",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP038",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP038/AST-EMP038-04.txt",
+    "lastModified": "2025-02-12"
+  },
+  {
+    "assetId": "AST-EMP038-05",
+    "employeeId": "EMP038",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP038",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP038/AST-EMP038-05.one",
+    "lastModified": "2025-02-13"
+  },
+  {
+    "assetId": "AST-EMP039-01",
+    "employeeId": "EMP039",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP039",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP039/AST-EMP039-01.pptx",
+    "lastModified": "2025-02-10"
+  },
+  {
+    "assetId": "AST-EMP039-02",
+    "employeeId": "EMP039",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP039",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP039/AST-EMP039-02.pdf",
+    "lastModified": "2025-02-11"
+  },
+  {
+    "assetId": "AST-EMP039-03",
+    "employeeId": "EMP039",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP039",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP039/AST-EMP039-03.docx",
+    "lastModified": "2025-02-12"
+  },
+  {
+    "assetId": "AST-EMP039-04",
+    "employeeId": "EMP039",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP039",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP039/AST-EMP039-04.txt",
+    "lastModified": "2025-02-13"
+  },
+  {
+    "assetId": "AST-EMP039-05",
+    "employeeId": "EMP039",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP039",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP039/AST-EMP039-05.one",
+    "lastModified": "2025-02-14"
+  },
+  {
+    "assetId": "AST-EMP040-01",
+    "employeeId": "EMP040",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP040",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP040/AST-EMP040-01.pptx",
+    "lastModified": "2025-02-11"
+  },
+  {
+    "assetId": "AST-EMP040-02",
+    "employeeId": "EMP040",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP040",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP040/AST-EMP040-02.pdf",
+    "lastModified": "2025-02-12"
+  },
+  {
+    "assetId": "AST-EMP040-03",
+    "employeeId": "EMP040",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP040",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP040/AST-EMP040-03.docx",
+    "lastModified": "2025-02-13"
+  },
+  {
+    "assetId": "AST-EMP040-04",
+    "employeeId": "EMP040",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP040",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP040/AST-EMP040-04.txt",
+    "lastModified": "2025-02-14"
+  },
+  {
+    "assetId": "AST-EMP040-05",
+    "employeeId": "EMP040",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP040",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP040/AST-EMP040-05.one",
+    "lastModified": "2025-02-15"
+  },
+  {
+    "assetId": "AST-EMP041-01",
+    "employeeId": "EMP041",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP041",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP041/AST-EMP041-01.pptx",
+    "lastModified": "2025-02-12"
+  },
+  {
+    "assetId": "AST-EMP041-02",
+    "employeeId": "EMP041",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP041",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP041/AST-EMP041-02.pdf",
+    "lastModified": "2025-02-13"
+  },
+  {
+    "assetId": "AST-EMP041-03",
+    "employeeId": "EMP041",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP041",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP041/AST-EMP041-03.docx",
+    "lastModified": "2025-02-14"
+  },
+  {
+    "assetId": "AST-EMP041-04",
+    "employeeId": "EMP041",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP041",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP041/AST-EMP041-04.txt",
+    "lastModified": "2025-02-15"
+  },
+  {
+    "assetId": "AST-EMP041-05",
+    "employeeId": "EMP041",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP041",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP041/AST-EMP041-05.one",
+    "lastModified": "2025-02-16"
+  },
+  {
+    "assetId": "AST-EMP042-01",
+    "employeeId": "EMP042",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP042",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP042/AST-EMP042-01.pptx",
+    "lastModified": "2025-02-13"
+  },
+  {
+    "assetId": "AST-EMP042-02",
+    "employeeId": "EMP042",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP042",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP042/AST-EMP042-02.pdf",
+    "lastModified": "2025-02-14"
+  },
+  {
+    "assetId": "AST-EMP042-03",
+    "employeeId": "EMP042",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP042",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP042/AST-EMP042-03.docx",
+    "lastModified": "2025-02-15"
+  },
+  {
+    "assetId": "AST-EMP042-04",
+    "employeeId": "EMP042",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP042",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP042/AST-EMP042-04.txt",
+    "lastModified": "2025-02-16"
+  },
+  {
+    "assetId": "AST-EMP042-05",
+    "employeeId": "EMP042",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP042",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP042/AST-EMP042-05.one",
+    "lastModified": "2025-02-17"
+  },
+  {
+    "assetId": "AST-EMP043-01",
+    "employeeId": "EMP043",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP043",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP043/AST-EMP043-01.pptx",
+    "lastModified": "2025-02-14"
+  },
+  {
+    "assetId": "AST-EMP043-02",
+    "employeeId": "EMP043",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP043",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP043/AST-EMP043-02.pdf",
+    "lastModified": "2025-02-15"
+  },
+  {
+    "assetId": "AST-EMP043-03",
+    "employeeId": "EMP043",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP043",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP043/AST-EMP043-03.docx",
+    "lastModified": "2025-02-16"
+  },
+  {
+    "assetId": "AST-EMP043-04",
+    "employeeId": "EMP043",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP043",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP043/AST-EMP043-04.txt",
+    "lastModified": "2025-02-17"
+  },
+  {
+    "assetId": "AST-EMP043-05",
+    "employeeId": "EMP043",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP043",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP043/AST-EMP043-05.one",
+    "lastModified": "2025-02-18"
+  },
+  {
+    "assetId": "AST-EMP044-01",
+    "employeeId": "EMP044",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP044",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP044/AST-EMP044-01.pptx",
+    "lastModified": "2025-02-15"
+  },
+  {
+    "assetId": "AST-EMP044-02",
+    "employeeId": "EMP044",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP044",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP044/AST-EMP044-02.pdf",
+    "lastModified": "2025-02-16"
+  },
+  {
+    "assetId": "AST-EMP044-03",
+    "employeeId": "EMP044",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP044",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP044/AST-EMP044-03.docx",
+    "lastModified": "2025-02-17"
+  },
+  {
+    "assetId": "AST-EMP044-04",
+    "employeeId": "EMP044",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP044",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP044/AST-EMP044-04.txt",
+    "lastModified": "2025-02-18"
+  },
+  {
+    "assetId": "AST-EMP044-05",
+    "employeeId": "EMP044",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP044",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP044/AST-EMP044-05.one",
+    "lastModified": "2025-02-19"
+  },
+  {
+    "assetId": "AST-EMP045-01",
+    "employeeId": "EMP045",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP045",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP045/AST-EMP045-01.pptx",
+    "lastModified": "2025-02-16"
+  },
+  {
+    "assetId": "AST-EMP045-02",
+    "employeeId": "EMP045",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP045",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP045/AST-EMP045-02.pdf",
+    "lastModified": "2025-02-17"
+  },
+  {
+    "assetId": "AST-EMP045-03",
+    "employeeId": "EMP045",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP045",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP045/AST-EMP045-03.docx",
+    "lastModified": "2025-02-18"
+  },
+  {
+    "assetId": "AST-EMP045-04",
+    "employeeId": "EMP045",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP045",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP045/AST-EMP045-04.txt",
+    "lastModified": "2025-02-19"
+  },
+  {
+    "assetId": "AST-EMP045-05",
+    "employeeId": "EMP045",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP045",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP045/AST-EMP045-05.one",
+    "lastModified": "2025-02-20"
+  },
+  {
+    "assetId": "AST-EMP046-01",
+    "employeeId": "EMP046",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP046",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP046/AST-EMP046-01.pptx",
+    "lastModified": "2025-02-17"
+  },
+  {
+    "assetId": "AST-EMP046-02",
+    "employeeId": "EMP046",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP046",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP046/AST-EMP046-02.pdf",
+    "lastModified": "2025-02-18"
+  },
+  {
+    "assetId": "AST-EMP046-03",
+    "employeeId": "EMP046",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP046",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP046/AST-EMP046-03.docx",
+    "lastModified": "2025-02-19"
+  },
+  {
+    "assetId": "AST-EMP046-04",
+    "employeeId": "EMP046",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP046",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP046/AST-EMP046-04.txt",
+    "lastModified": "2025-02-20"
+  },
+  {
+    "assetId": "AST-EMP046-05",
+    "employeeId": "EMP046",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP046",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP046/AST-EMP046-05.one",
+    "lastModified": "2025-02-21"
+  },
+  {
+    "assetId": "AST-EMP047-01",
+    "employeeId": "EMP047",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP047",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP047/AST-EMP047-01.pptx",
+    "lastModified": "2025-02-18"
+  },
+  {
+    "assetId": "AST-EMP047-02",
+    "employeeId": "EMP047",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP047",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP047/AST-EMP047-02.pdf",
+    "lastModified": "2025-02-19"
+  },
+  {
+    "assetId": "AST-EMP047-03",
+    "employeeId": "EMP047",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP047",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP047/AST-EMP047-03.docx",
+    "lastModified": "2025-02-20"
+  },
+  {
+    "assetId": "AST-EMP047-04",
+    "employeeId": "EMP047",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP047",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP047/AST-EMP047-04.txt",
+    "lastModified": "2025-02-21"
+  },
+  {
+    "assetId": "AST-EMP047-05",
+    "employeeId": "EMP047",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP047",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP047/AST-EMP047-05.one",
+    "lastModified": "2025-02-22"
+  },
+  {
+    "assetId": "AST-EMP048-01",
+    "employeeId": "EMP048",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP048",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP048/AST-EMP048-01.pptx",
+    "lastModified": "2025-02-19"
+  },
+  {
+    "assetId": "AST-EMP048-02",
+    "employeeId": "EMP048",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP048",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP048/AST-EMP048-02.pdf",
+    "lastModified": "2025-02-20"
+  },
+  {
+    "assetId": "AST-EMP048-03",
+    "employeeId": "EMP048",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP048",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP048/AST-EMP048-03.docx",
+    "lastModified": "2025-02-21"
+  },
+  {
+    "assetId": "AST-EMP048-04",
+    "employeeId": "EMP048",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP048",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP048/AST-EMP048-04.txt",
+    "lastModified": "2025-02-22"
+  },
+  {
+    "assetId": "AST-EMP048-05",
+    "employeeId": "EMP048",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP048",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP048/AST-EMP048-05.one",
+    "lastModified": "2025-02-23"
+  },
+  {
+    "assetId": "AST-EMP049-01",
+    "employeeId": "EMP049",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP049",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP049/AST-EMP049-01.pptx",
+    "lastModified": "2025-02-20"
+  },
+  {
+    "assetId": "AST-EMP049-02",
+    "employeeId": "EMP049",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP049",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP049/AST-EMP049-02.pdf",
+    "lastModified": "2025-02-21"
+  },
+  {
+    "assetId": "AST-EMP049-03",
+    "employeeId": "EMP049",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP049",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP049/AST-EMP049-03.docx",
+    "lastModified": "2025-02-22"
+  },
+  {
+    "assetId": "AST-EMP049-04",
+    "employeeId": "EMP049",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP049",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP049/AST-EMP049-04.txt",
+    "lastModified": "2025-02-23"
+  },
+  {
+    "assetId": "AST-EMP049-05",
+    "employeeId": "EMP049",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP049",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP049/AST-EMP049-05.one",
+    "lastModified": "2025-02-24"
+  },
+  {
+    "assetId": "AST-EMP050-01",
+    "employeeId": "EMP050",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP050",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP050/AST-EMP050-01.pptx",
+    "lastModified": "2025-02-21"
+  },
+  {
+    "assetId": "AST-EMP050-02",
+    "employeeId": "EMP050",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP050",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP050/AST-EMP050-02.pdf",
+    "lastModified": "2025-02-22"
+  },
+  {
+    "assetId": "AST-EMP050-03",
+    "employeeId": "EMP050",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP050",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP050/AST-EMP050-03.docx",
+    "lastModified": "2025-02-23"
+  },
+  {
+    "assetId": "AST-EMP050-04",
+    "employeeId": "EMP050",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP050",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP050/AST-EMP050-04.txt",
+    "lastModified": "2025-02-24"
+  },
+  {
+    "assetId": "AST-EMP050-05",
+    "employeeId": "EMP050",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP050",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP050/AST-EMP050-05.one",
+    "lastModified": "2025-02-25"
+  },
+  {
+    "assetId": "AST-EMP051-01",
+    "employeeId": "EMP051",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP051",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP051/AST-EMP051-01.pptx",
+    "lastModified": "2025-02-22"
+  },
+  {
+    "assetId": "AST-EMP051-02",
+    "employeeId": "EMP051",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP051",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP051/AST-EMP051-02.pdf",
+    "lastModified": "2025-02-23"
+  },
+  {
+    "assetId": "AST-EMP051-03",
+    "employeeId": "EMP051",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP051",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP051/AST-EMP051-03.docx",
+    "lastModified": "2025-02-24"
+  },
+  {
+    "assetId": "AST-EMP051-04",
+    "employeeId": "EMP051",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP051",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP051/AST-EMP051-04.txt",
+    "lastModified": "2025-02-25"
+  },
+  {
+    "assetId": "AST-EMP051-05",
+    "employeeId": "EMP051",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP051",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP051/AST-EMP051-05.one",
+    "lastModified": "2025-02-26"
+  },
+  {
+    "assetId": "AST-EMP052-01",
+    "employeeId": "EMP052",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP052",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP052/AST-EMP052-01.pptx",
+    "lastModified": "2025-02-23"
+  },
+  {
+    "assetId": "AST-EMP052-02",
+    "employeeId": "EMP052",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP052",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP052/AST-EMP052-02.pdf",
+    "lastModified": "2025-02-24"
+  },
+  {
+    "assetId": "AST-EMP052-03",
+    "employeeId": "EMP052",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP052",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP052/AST-EMP052-03.docx",
+    "lastModified": "2025-02-25"
+  },
+  {
+    "assetId": "AST-EMP052-04",
+    "employeeId": "EMP052",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP052",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP052/AST-EMP052-04.txt",
+    "lastModified": "2025-02-26"
+  },
+  {
+    "assetId": "AST-EMP052-05",
+    "employeeId": "EMP052",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP052",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP052/AST-EMP052-05.one",
+    "lastModified": "2025-02-27"
+  },
+  {
+    "assetId": "AST-EMP053-01",
+    "employeeId": "EMP053",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP053",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP053/AST-EMP053-01.pptx",
+    "lastModified": "2025-02-24"
+  },
+  {
+    "assetId": "AST-EMP053-02",
+    "employeeId": "EMP053",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP053",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP053/AST-EMP053-02.pdf",
+    "lastModified": "2025-02-25"
+  },
+  {
+    "assetId": "AST-EMP053-03",
+    "employeeId": "EMP053",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP053",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP053/AST-EMP053-03.docx",
+    "lastModified": "2025-02-26"
+  },
+  {
+    "assetId": "AST-EMP053-04",
+    "employeeId": "EMP053",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP053",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP053/AST-EMP053-04.txt",
+    "lastModified": "2025-02-27"
+  },
+  {
+    "assetId": "AST-EMP053-05",
+    "employeeId": "EMP053",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP053",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP053/AST-EMP053-05.one",
+    "lastModified": "2025-02-28"
+  },
+  {
+    "assetId": "AST-EMP054-01",
+    "employeeId": "EMP054",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP054",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP054/AST-EMP054-01.pptx",
+    "lastModified": "2025-02-25"
+  },
+  {
+    "assetId": "AST-EMP054-02",
+    "employeeId": "EMP054",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP054",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP054/AST-EMP054-02.pdf",
+    "lastModified": "2025-02-26"
+  },
+  {
+    "assetId": "AST-EMP054-03",
+    "employeeId": "EMP054",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP054",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP054/AST-EMP054-03.docx",
+    "lastModified": "2025-02-27"
+  },
+  {
+    "assetId": "AST-EMP054-04",
+    "employeeId": "EMP054",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP054",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP054/AST-EMP054-04.txt",
+    "lastModified": "2025-02-28"
+  },
+  {
+    "assetId": "AST-EMP054-05",
+    "employeeId": "EMP054",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP054",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP054/AST-EMP054-05.one",
+    "lastModified": "2025-03-01"
+  },
+  {
+    "assetId": "AST-EMP055-01",
+    "employeeId": "EMP055",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP055",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP055/AST-EMP055-01.pptx",
+    "lastModified": "2025-02-26"
+  },
+  {
+    "assetId": "AST-EMP055-02",
+    "employeeId": "EMP055",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP055",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP055/AST-EMP055-02.pdf",
+    "lastModified": "2025-02-27"
+  },
+  {
+    "assetId": "AST-EMP055-03",
+    "employeeId": "EMP055",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP055",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP055/AST-EMP055-03.docx",
+    "lastModified": "2025-02-28"
+  },
+  {
+    "assetId": "AST-EMP055-04",
+    "employeeId": "EMP055",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP055",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP055/AST-EMP055-04.txt",
+    "lastModified": "2025-03-01"
+  },
+  {
+    "assetId": "AST-EMP055-05",
+    "employeeId": "EMP055",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP055",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP055/AST-EMP055-05.one",
+    "lastModified": "2025-03-02"
+  },
+  {
+    "assetId": "AST-EMP056-01",
+    "employeeId": "EMP056",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP056",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP056/AST-EMP056-01.pptx",
+    "lastModified": "2025-02-27"
+  },
+  {
+    "assetId": "AST-EMP056-02",
+    "employeeId": "EMP056",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP056",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP056/AST-EMP056-02.pdf",
+    "lastModified": "2025-02-28"
+  },
+  {
+    "assetId": "AST-EMP056-03",
+    "employeeId": "EMP056",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP056",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP056/AST-EMP056-03.docx",
+    "lastModified": "2025-03-01"
+  },
+  {
+    "assetId": "AST-EMP056-04",
+    "employeeId": "EMP056",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP056",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP056/AST-EMP056-04.txt",
+    "lastModified": "2025-03-02"
+  },
+  {
+    "assetId": "AST-EMP056-05",
+    "employeeId": "EMP056",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP056",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP056/AST-EMP056-05.one",
+    "lastModified": "2025-03-03"
+  },
+  {
+    "assetId": "AST-EMP057-01",
+    "employeeId": "EMP057",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP057",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP057/AST-EMP057-01.pptx",
+    "lastModified": "2025-02-28"
+  },
+  {
+    "assetId": "AST-EMP057-02",
+    "employeeId": "EMP057",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP057",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP057/AST-EMP057-02.pdf",
+    "lastModified": "2025-03-01"
+  },
+  {
+    "assetId": "AST-EMP057-03",
+    "employeeId": "EMP057",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP057",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP057/AST-EMP057-03.docx",
+    "lastModified": "2025-03-02"
+  },
+  {
+    "assetId": "AST-EMP057-04",
+    "employeeId": "EMP057",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP057",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP057/AST-EMP057-04.txt",
+    "lastModified": "2025-03-03"
+  },
+  {
+    "assetId": "AST-EMP057-05",
+    "employeeId": "EMP057",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP057",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP057/AST-EMP057-05.one",
+    "lastModified": "2025-03-04"
+  },
+  {
+    "assetId": "AST-EMP058-01",
+    "employeeId": "EMP058",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP058",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP058/AST-EMP058-01.pptx",
+    "lastModified": "2025-03-01"
+  },
+  {
+    "assetId": "AST-EMP058-02",
+    "employeeId": "EMP058",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP058",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP058/AST-EMP058-02.pdf",
+    "lastModified": "2025-03-02"
+  },
+  {
+    "assetId": "AST-EMP058-03",
+    "employeeId": "EMP058",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP058",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP058/AST-EMP058-03.docx",
+    "lastModified": "2025-03-03"
+  },
+  {
+    "assetId": "AST-EMP058-04",
+    "employeeId": "EMP058",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP058",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP058/AST-EMP058-04.txt",
+    "lastModified": "2025-03-04"
+  },
+  {
+    "assetId": "AST-EMP058-05",
+    "employeeId": "EMP058",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP058",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP058/AST-EMP058-05.one",
+    "lastModified": "2025-03-05"
+  },
+  {
+    "assetId": "AST-EMP059-01",
+    "employeeId": "EMP059",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP059",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP059/AST-EMP059-01.pptx",
+    "lastModified": "2025-03-02"
+  },
+  {
+    "assetId": "AST-EMP059-02",
+    "employeeId": "EMP059",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP059",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP059/AST-EMP059-02.pdf",
+    "lastModified": "2025-03-03"
+  },
+  {
+    "assetId": "AST-EMP059-03",
+    "employeeId": "EMP059",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP059",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP059/AST-EMP059-03.docx",
+    "lastModified": "2025-03-04"
+  },
+  {
+    "assetId": "AST-EMP059-04",
+    "employeeId": "EMP059",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP059",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP059/AST-EMP059-04.txt",
+    "lastModified": "2025-03-05"
+  },
+  {
+    "assetId": "AST-EMP059-05",
+    "employeeId": "EMP059",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP059",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP059/AST-EMP059-05.one",
+    "lastModified": "2025-03-06"
+  },
+  {
+    "assetId": "AST-EMP060-01",
+    "employeeId": "EMP060",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP060",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP060/AST-EMP060-01.pptx",
+    "lastModified": "2025-03-03"
+  },
+  {
+    "assetId": "AST-EMP060-02",
+    "employeeId": "EMP060",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP060",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP060/AST-EMP060-02.pdf",
+    "lastModified": "2025-03-04"
+  },
+  {
+    "assetId": "AST-EMP060-03",
+    "employeeId": "EMP060",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP060",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP060/AST-EMP060-03.docx",
+    "lastModified": "2025-03-05"
+  },
+  {
+    "assetId": "AST-EMP060-04",
+    "employeeId": "EMP060",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP060",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP060/AST-EMP060-04.txt",
+    "lastModified": "2025-03-06"
+  },
+  {
+    "assetId": "AST-EMP060-05",
+    "employeeId": "EMP060",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP060",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP060/AST-EMP060-05.one",
+    "lastModified": "2025-03-07"
+  },
+  {
+    "assetId": "AST-EMP061-01",
+    "employeeId": "EMP061",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP061",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP061/AST-EMP061-01.pptx",
+    "lastModified": "2025-03-04"
+  },
+  {
+    "assetId": "AST-EMP061-02",
+    "employeeId": "EMP061",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP061",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP061/AST-EMP061-02.pdf",
+    "lastModified": "2025-03-05"
+  },
+  {
+    "assetId": "AST-EMP061-03",
+    "employeeId": "EMP061",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP061",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP061/AST-EMP061-03.docx",
+    "lastModified": "2025-03-06"
+  },
+  {
+    "assetId": "AST-EMP061-04",
+    "employeeId": "EMP061",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP061",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP061/AST-EMP061-04.txt",
+    "lastModified": "2025-03-07"
+  },
+  {
+    "assetId": "AST-EMP061-05",
+    "employeeId": "EMP061",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP061",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP061/AST-EMP061-05.one",
+    "lastModified": "2025-03-08"
+  },
+  {
+    "assetId": "AST-EMP062-01",
+    "employeeId": "EMP062",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP062",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP062/AST-EMP062-01.pptx",
+    "lastModified": "2025-03-05"
+  },
+  {
+    "assetId": "AST-EMP062-02",
+    "employeeId": "EMP062",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP062",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP062/AST-EMP062-02.pdf",
+    "lastModified": "2025-03-06"
+  },
+  {
+    "assetId": "AST-EMP062-03",
+    "employeeId": "EMP062",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP062",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP062/AST-EMP062-03.docx",
+    "lastModified": "2025-03-07"
+  },
+  {
+    "assetId": "AST-EMP062-04",
+    "employeeId": "EMP062",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP062",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP062/AST-EMP062-04.txt",
+    "lastModified": "2025-03-08"
+  },
+  {
+    "assetId": "AST-EMP062-05",
+    "employeeId": "EMP062",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP062",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP062/AST-EMP062-05.one",
+    "lastModified": "2025-03-09"
+  },
+  {
+    "assetId": "AST-EMP063-01",
+    "employeeId": "EMP063",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP063",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP063/AST-EMP063-01.pptx",
+    "lastModified": "2025-03-06"
+  },
+  {
+    "assetId": "AST-EMP063-02",
+    "employeeId": "EMP063",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP063",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP063/AST-EMP063-02.pdf",
+    "lastModified": "2025-03-07"
+  },
+  {
+    "assetId": "AST-EMP063-03",
+    "employeeId": "EMP063",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP063",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP063/AST-EMP063-03.docx",
+    "lastModified": "2025-03-08"
+  },
+  {
+    "assetId": "AST-EMP063-04",
+    "employeeId": "EMP063",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP063",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP063/AST-EMP063-04.txt",
+    "lastModified": "2025-03-09"
+  },
+  {
+    "assetId": "AST-EMP063-05",
+    "employeeId": "EMP063",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP063",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP063/AST-EMP063-05.one",
+    "lastModified": "2025-03-10"
+  },
+  {
+    "assetId": "AST-EMP064-01",
+    "employeeId": "EMP064",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP064",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP064/AST-EMP064-01.pptx",
+    "lastModified": "2025-03-07"
+  },
+  {
+    "assetId": "AST-EMP064-02",
+    "employeeId": "EMP064",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP064",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP064/AST-EMP064-02.pdf",
+    "lastModified": "2025-03-08"
+  },
+  {
+    "assetId": "AST-EMP064-03",
+    "employeeId": "EMP064",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP064",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP064/AST-EMP064-03.docx",
+    "lastModified": "2025-03-09"
+  },
+  {
+    "assetId": "AST-EMP064-04",
+    "employeeId": "EMP064",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP064",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP064/AST-EMP064-04.txt",
+    "lastModified": "2025-03-10"
+  },
+  {
+    "assetId": "AST-EMP064-05",
+    "employeeId": "EMP064",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP064",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP064/AST-EMP064-05.one",
+    "lastModified": "2025-03-11"
+  },
+  {
+    "assetId": "AST-EMP065-01",
+    "employeeId": "EMP065",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP065",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP065/AST-EMP065-01.pptx",
+    "lastModified": "2025-03-08"
+  },
+  {
+    "assetId": "AST-EMP065-02",
+    "employeeId": "EMP065",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP065",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP065/AST-EMP065-02.pdf",
+    "lastModified": "2025-03-09"
+  },
+  {
+    "assetId": "AST-EMP065-03",
+    "employeeId": "EMP065",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP065",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP065/AST-EMP065-03.docx",
+    "lastModified": "2025-03-10"
+  },
+  {
+    "assetId": "AST-EMP065-04",
+    "employeeId": "EMP065",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP065",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP065/AST-EMP065-04.txt",
+    "lastModified": "2025-03-11"
+  },
+  {
+    "assetId": "AST-EMP065-05",
+    "employeeId": "EMP065",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP065",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP065/AST-EMP065-05.one",
+    "lastModified": "2025-03-12"
+  },
+  {
+    "assetId": "AST-EMP066-01",
+    "employeeId": "EMP066",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP066",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP066/AST-EMP066-01.pptx",
+    "lastModified": "2025-03-09"
+  },
+  {
+    "assetId": "AST-EMP066-02",
+    "employeeId": "EMP066",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP066",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP066/AST-EMP066-02.pdf",
+    "lastModified": "2025-03-10"
+  },
+  {
+    "assetId": "AST-EMP066-03",
+    "employeeId": "EMP066",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP066",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP066/AST-EMP066-03.docx",
+    "lastModified": "2025-03-11"
+  },
+  {
+    "assetId": "AST-EMP066-04",
+    "employeeId": "EMP066",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP066",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP066/AST-EMP066-04.txt",
+    "lastModified": "2025-03-12"
+  },
+  {
+    "assetId": "AST-EMP066-05",
+    "employeeId": "EMP066",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP066",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP066/AST-EMP066-05.one",
+    "lastModified": "2025-03-13"
+  },
+  {
+    "assetId": "AST-EMP067-01",
+    "employeeId": "EMP067",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP067",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP067/AST-EMP067-01.pptx",
+    "lastModified": "2025-03-10"
+  },
+  {
+    "assetId": "AST-EMP067-02",
+    "employeeId": "EMP067",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP067",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP067/AST-EMP067-02.pdf",
+    "lastModified": "2025-03-11"
+  },
+  {
+    "assetId": "AST-EMP067-03",
+    "employeeId": "EMP067",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP067",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP067/AST-EMP067-03.docx",
+    "lastModified": "2025-03-12"
+  },
+  {
+    "assetId": "AST-EMP067-04",
+    "employeeId": "EMP067",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP067",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP067/AST-EMP067-04.txt",
+    "lastModified": "2025-03-13"
+  },
+  {
+    "assetId": "AST-EMP067-05",
+    "employeeId": "EMP067",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP067",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP067/AST-EMP067-05.one",
+    "lastModified": "2025-03-14"
+  },
+  {
+    "assetId": "AST-EMP068-01",
+    "employeeId": "EMP068",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP068",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP068/AST-EMP068-01.pptx",
+    "lastModified": "2025-03-11"
+  },
+  {
+    "assetId": "AST-EMP068-02",
+    "employeeId": "EMP068",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP068",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP068/AST-EMP068-02.pdf",
+    "lastModified": "2025-03-12"
+  },
+  {
+    "assetId": "AST-EMP068-03",
+    "employeeId": "EMP068",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP068",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP068/AST-EMP068-03.docx",
+    "lastModified": "2025-03-13"
+  },
+  {
+    "assetId": "AST-EMP068-04",
+    "employeeId": "EMP068",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP068",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP068/AST-EMP068-04.txt",
+    "lastModified": "2025-03-14"
+  },
+  {
+    "assetId": "AST-EMP068-05",
+    "employeeId": "EMP068",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP068",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP068/AST-EMP068-05.one",
+    "lastModified": "2025-03-15"
+  },
+  {
+    "assetId": "AST-EMP069-01",
+    "employeeId": "EMP069",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP069",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP069/AST-EMP069-01.pptx",
+    "lastModified": "2025-03-12"
+  },
+  {
+    "assetId": "AST-EMP069-02",
+    "employeeId": "EMP069",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP069",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP069/AST-EMP069-02.pdf",
+    "lastModified": "2025-03-13"
+  },
+  {
+    "assetId": "AST-EMP069-03",
+    "employeeId": "EMP069",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP069",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP069/AST-EMP069-03.docx",
+    "lastModified": "2025-03-14"
+  },
+  {
+    "assetId": "AST-EMP069-04",
+    "employeeId": "EMP069",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP069",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP069/AST-EMP069-04.txt",
+    "lastModified": "2025-03-15"
+  },
+  {
+    "assetId": "AST-EMP069-05",
+    "employeeId": "EMP069",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP069",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP069/AST-EMP069-05.one",
+    "lastModified": "2025-03-16"
+  },
+  {
+    "assetId": "AST-EMP070-01",
+    "employeeId": "EMP070",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP070",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP070/AST-EMP070-01.pptx",
+    "lastModified": "2025-03-13"
+  },
+  {
+    "assetId": "AST-EMP070-02",
+    "employeeId": "EMP070",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP070",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP070/AST-EMP070-02.pdf",
+    "lastModified": "2025-03-14"
+  },
+  {
+    "assetId": "AST-EMP070-03",
+    "employeeId": "EMP070",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP070",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP070/AST-EMP070-03.docx",
+    "lastModified": "2025-03-15"
+  },
+  {
+    "assetId": "AST-EMP070-04",
+    "employeeId": "EMP070",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP070",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP070/AST-EMP070-04.txt",
+    "lastModified": "2025-03-16"
+  },
+  {
+    "assetId": "AST-EMP070-05",
+    "employeeId": "EMP070",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP070",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP070/AST-EMP070-05.one",
+    "lastModified": "2025-03-17"
+  },
+  {
+    "assetId": "AST-EMP071-01",
+    "employeeId": "EMP071",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP071",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP071/AST-EMP071-01.pptx",
+    "lastModified": "2025-03-14"
+  },
+  {
+    "assetId": "AST-EMP071-02",
+    "employeeId": "EMP071",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP071",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP071/AST-EMP071-02.pdf",
+    "lastModified": "2025-03-15"
+  },
+  {
+    "assetId": "AST-EMP071-03",
+    "employeeId": "EMP071",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP071",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP071/AST-EMP071-03.docx",
+    "lastModified": "2025-03-16"
+  },
+  {
+    "assetId": "AST-EMP071-04",
+    "employeeId": "EMP071",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP071",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP071/AST-EMP071-04.txt",
+    "lastModified": "2025-03-17"
+  },
+  {
+    "assetId": "AST-EMP071-05",
+    "employeeId": "EMP071",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP071",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP071/AST-EMP071-05.one",
+    "lastModified": "2025-03-18"
+  },
+  {
+    "assetId": "AST-EMP072-01",
+    "employeeId": "EMP072",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP072",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP072/AST-EMP072-01.pptx",
+    "lastModified": "2025-03-15"
+  },
+  {
+    "assetId": "AST-EMP072-02",
+    "employeeId": "EMP072",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP072",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP072/AST-EMP072-02.pdf",
+    "lastModified": "2025-03-16"
+  },
+  {
+    "assetId": "AST-EMP072-03",
+    "employeeId": "EMP072",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP072",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP072/AST-EMP072-03.docx",
+    "lastModified": "2025-03-17"
+  },
+  {
+    "assetId": "AST-EMP072-04",
+    "employeeId": "EMP072",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP072",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP072/AST-EMP072-04.txt",
+    "lastModified": "2025-03-18"
+  },
+  {
+    "assetId": "AST-EMP072-05",
+    "employeeId": "EMP072",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP072",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP072/AST-EMP072-05.one",
+    "lastModified": "2025-03-19"
+  },
+  {
+    "assetId": "AST-EMP073-01",
+    "employeeId": "EMP073",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP073",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP073/AST-EMP073-01.pptx",
+    "lastModified": "2025-03-16"
+  },
+  {
+    "assetId": "AST-EMP073-02",
+    "employeeId": "EMP073",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP073",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP073/AST-EMP073-02.pdf",
+    "lastModified": "2025-03-17"
+  },
+  {
+    "assetId": "AST-EMP073-03",
+    "employeeId": "EMP073",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP073",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP073/AST-EMP073-03.docx",
+    "lastModified": "2025-03-18"
+  },
+  {
+    "assetId": "AST-EMP073-04",
+    "employeeId": "EMP073",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP073",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP073/AST-EMP073-04.txt",
+    "lastModified": "2025-03-19"
+  },
+  {
+    "assetId": "AST-EMP073-05",
+    "employeeId": "EMP073",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP073",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP073/AST-EMP073-05.one",
+    "lastModified": "2025-03-20"
+  },
+  {
+    "assetId": "AST-EMP074-01",
+    "employeeId": "EMP074",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP074",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP074/AST-EMP074-01.pptx",
+    "lastModified": "2025-03-17"
+  },
+  {
+    "assetId": "AST-EMP074-02",
+    "employeeId": "EMP074",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP074",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP074/AST-EMP074-02.pdf",
+    "lastModified": "2025-03-18"
+  },
+  {
+    "assetId": "AST-EMP074-03",
+    "employeeId": "EMP074",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP074",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP074/AST-EMP074-03.docx",
+    "lastModified": "2025-03-19"
+  },
+  {
+    "assetId": "AST-EMP074-04",
+    "employeeId": "EMP074",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP074",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP074/AST-EMP074-04.txt",
+    "lastModified": "2025-03-20"
+  },
+  {
+    "assetId": "AST-EMP074-05",
+    "employeeId": "EMP074",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP074",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP074/AST-EMP074-05.one",
+    "lastModified": "2025-03-21"
+  },
+  {
+    "assetId": "AST-EMP075-01",
+    "employeeId": "EMP075",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP075",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP075/AST-EMP075-01.pptx",
+    "lastModified": "2025-03-18"
+  },
+  {
+    "assetId": "AST-EMP075-02",
+    "employeeId": "EMP075",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP075",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP075/AST-EMP075-02.pdf",
+    "lastModified": "2025-03-19"
+  },
+  {
+    "assetId": "AST-EMP075-03",
+    "employeeId": "EMP075",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP075",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP075/AST-EMP075-03.docx",
+    "lastModified": "2025-03-20"
+  },
+  {
+    "assetId": "AST-EMP075-04",
+    "employeeId": "EMP075",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP075",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP075/AST-EMP075-04.txt",
+    "lastModified": "2025-03-21"
+  },
+  {
+    "assetId": "AST-EMP075-05",
+    "employeeId": "EMP075",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP075",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP075/AST-EMP075-05.one",
+    "lastModified": "2025-03-22"
+  },
+  {
+    "assetId": "AST-EMP076-01",
+    "employeeId": "EMP076",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP076",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP076/AST-EMP076-01.pptx",
+    "lastModified": "2025-03-19"
+  },
+  {
+    "assetId": "AST-EMP076-02",
+    "employeeId": "EMP076",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP076",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP076/AST-EMP076-02.pdf",
+    "lastModified": "2025-03-20"
+  },
+  {
+    "assetId": "AST-EMP076-03",
+    "employeeId": "EMP076",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP076",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP076/AST-EMP076-03.docx",
+    "lastModified": "2025-03-21"
+  },
+  {
+    "assetId": "AST-EMP076-04",
+    "employeeId": "EMP076",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP076",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP076/AST-EMP076-04.txt",
+    "lastModified": "2025-03-22"
+  },
+  {
+    "assetId": "AST-EMP076-05",
+    "employeeId": "EMP076",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP076",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP076/AST-EMP076-05.one",
+    "lastModified": "2025-03-23"
+  },
+  {
+    "assetId": "AST-EMP077-01",
+    "employeeId": "EMP077",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP077",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP077/AST-EMP077-01.pptx",
+    "lastModified": "2025-03-20"
+  },
+  {
+    "assetId": "AST-EMP077-02",
+    "employeeId": "EMP077",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP077",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP077/AST-EMP077-02.pdf",
+    "lastModified": "2025-03-21"
+  },
+  {
+    "assetId": "AST-EMP077-03",
+    "employeeId": "EMP077",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP077",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP077/AST-EMP077-03.docx",
+    "lastModified": "2025-03-22"
+  },
+  {
+    "assetId": "AST-EMP077-04",
+    "employeeId": "EMP077",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP077",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP077/AST-EMP077-04.txt",
+    "lastModified": "2025-03-23"
+  },
+  {
+    "assetId": "AST-EMP077-05",
+    "employeeId": "EMP077",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP077",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP077/AST-EMP077-05.one",
+    "lastModified": "2025-03-24"
+  },
+  {
+    "assetId": "AST-EMP078-01",
+    "employeeId": "EMP078",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP078",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP078/AST-EMP078-01.pptx",
+    "lastModified": "2025-03-21"
+  },
+  {
+    "assetId": "AST-EMP078-02",
+    "employeeId": "EMP078",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP078",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP078/AST-EMP078-02.pdf",
+    "lastModified": "2025-03-22"
+  },
+  {
+    "assetId": "AST-EMP078-03",
+    "employeeId": "EMP078",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP078",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP078/AST-EMP078-03.docx",
+    "lastModified": "2025-03-23"
+  },
+  {
+    "assetId": "AST-EMP078-04",
+    "employeeId": "EMP078",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP078",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP078/AST-EMP078-04.txt",
+    "lastModified": "2025-03-24"
+  },
+  {
+    "assetId": "AST-EMP078-05",
+    "employeeId": "EMP078",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP078",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP078/AST-EMP078-05.one",
+    "lastModified": "2025-03-25"
+  },
+  {
+    "assetId": "AST-EMP079-01",
+    "employeeId": "EMP079",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP079",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP079/AST-EMP079-01.pptx",
+    "lastModified": "2025-03-22"
+  },
+  {
+    "assetId": "AST-EMP079-02",
+    "employeeId": "EMP079",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP079",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP079/AST-EMP079-02.pdf",
+    "lastModified": "2025-03-23"
+  },
+  {
+    "assetId": "AST-EMP079-03",
+    "employeeId": "EMP079",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP079",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP079/AST-EMP079-03.docx",
+    "lastModified": "2025-03-24"
+  },
+  {
+    "assetId": "AST-EMP079-04",
+    "employeeId": "EMP079",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP079",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP079/AST-EMP079-04.txt",
+    "lastModified": "2025-03-25"
+  },
+  {
+    "assetId": "AST-EMP079-05",
+    "employeeId": "EMP079",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP079",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP079/AST-EMP079-05.one",
+    "lastModified": "2025-03-26"
+  },
+  {
+    "assetId": "AST-EMP080-01",
+    "employeeId": "EMP080",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP080",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP080/AST-EMP080-01.pptx",
+    "lastModified": "2025-03-23"
+  },
+  {
+    "assetId": "AST-EMP080-02",
+    "employeeId": "EMP080",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP080",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP080/AST-EMP080-02.pdf",
+    "lastModified": "2025-03-24"
+  },
+  {
+    "assetId": "AST-EMP080-03",
+    "employeeId": "EMP080",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP080",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP080/AST-EMP080-03.docx",
+    "lastModified": "2025-03-25"
+  },
+  {
+    "assetId": "AST-EMP080-04",
+    "employeeId": "EMP080",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP080",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP080/AST-EMP080-04.txt",
+    "lastModified": "2025-03-26"
+  },
+  {
+    "assetId": "AST-EMP080-05",
+    "employeeId": "EMP080",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP080",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP080/AST-EMP080-05.one",
+    "lastModified": "2025-03-27"
+  },
+  {
+    "assetId": "AST-EMP081-01",
+    "employeeId": "EMP081",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP081",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP081/AST-EMP081-01.pptx",
+    "lastModified": "2025-03-24"
+  },
+  {
+    "assetId": "AST-EMP081-02",
+    "employeeId": "EMP081",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP081",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP081/AST-EMP081-02.pdf",
+    "lastModified": "2025-03-25"
+  },
+  {
+    "assetId": "AST-EMP081-03",
+    "employeeId": "EMP081",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP081",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP081/AST-EMP081-03.docx",
+    "lastModified": "2025-03-26"
+  },
+  {
+    "assetId": "AST-EMP081-04",
+    "employeeId": "EMP081",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP081",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP081/AST-EMP081-04.txt",
+    "lastModified": "2025-03-27"
+  },
+  {
+    "assetId": "AST-EMP081-05",
+    "employeeId": "EMP081",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP081",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP081/AST-EMP081-05.one",
+    "lastModified": "2025-03-28"
+  },
+  {
+    "assetId": "AST-EMP082-01",
+    "employeeId": "EMP082",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP082",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP082/AST-EMP082-01.pptx",
+    "lastModified": "2025-03-25"
+  },
+  {
+    "assetId": "AST-EMP082-02",
+    "employeeId": "EMP082",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP082",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP082/AST-EMP082-02.pdf",
+    "lastModified": "2025-03-26"
+  },
+  {
+    "assetId": "AST-EMP082-03",
+    "employeeId": "EMP082",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP082",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP082/AST-EMP082-03.docx",
+    "lastModified": "2025-03-27"
+  },
+  {
+    "assetId": "AST-EMP082-04",
+    "employeeId": "EMP082",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP082",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP082/AST-EMP082-04.txt",
+    "lastModified": "2025-03-28"
+  },
+  {
+    "assetId": "AST-EMP082-05",
+    "employeeId": "EMP082",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP082",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP082/AST-EMP082-05.one",
+    "lastModified": "2025-03-29"
+  },
+  {
+    "assetId": "AST-EMP083-01",
+    "employeeId": "EMP083",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP083",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP083/AST-EMP083-01.pptx",
+    "lastModified": "2025-03-26"
+  },
+  {
+    "assetId": "AST-EMP083-02",
+    "employeeId": "EMP083",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP083",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP083/AST-EMP083-02.pdf",
+    "lastModified": "2025-03-27"
+  },
+  {
+    "assetId": "AST-EMP083-03",
+    "employeeId": "EMP083",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP083",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP083/AST-EMP083-03.docx",
+    "lastModified": "2025-03-28"
+  },
+  {
+    "assetId": "AST-EMP083-04",
+    "employeeId": "EMP083",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP083",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP083/AST-EMP083-04.txt",
+    "lastModified": "2025-03-29"
+  },
+  {
+    "assetId": "AST-EMP083-05",
+    "employeeId": "EMP083",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP083",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP083/AST-EMP083-05.one",
+    "lastModified": "2025-03-30"
+  },
+  {
+    "assetId": "AST-EMP084-01",
+    "employeeId": "EMP084",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP084",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP084/AST-EMP084-01.pptx",
+    "lastModified": "2025-03-27"
+  },
+  {
+    "assetId": "AST-EMP084-02",
+    "employeeId": "EMP084",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP084",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP084/AST-EMP084-02.pdf",
+    "lastModified": "2025-03-28"
+  },
+  {
+    "assetId": "AST-EMP084-03",
+    "employeeId": "EMP084",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP084",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP084/AST-EMP084-03.docx",
+    "lastModified": "2025-03-29"
+  },
+  {
+    "assetId": "AST-EMP084-04",
+    "employeeId": "EMP084",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP084",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP084/AST-EMP084-04.txt",
+    "lastModified": "2025-03-30"
+  },
+  {
+    "assetId": "AST-EMP084-05",
+    "employeeId": "EMP084",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP084",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP084/AST-EMP084-05.one",
+    "lastModified": "2025-03-31"
+  },
+  {
+    "assetId": "AST-EMP085-01",
+    "employeeId": "EMP085",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP085",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP085/AST-EMP085-01.pptx",
+    "lastModified": "2025-03-28"
+  },
+  {
+    "assetId": "AST-EMP085-02",
+    "employeeId": "EMP085",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP085",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP085/AST-EMP085-02.pdf",
+    "lastModified": "2025-03-29"
+  },
+  {
+    "assetId": "AST-EMP085-03",
+    "employeeId": "EMP085",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP085",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP085/AST-EMP085-03.docx",
+    "lastModified": "2025-03-30"
+  },
+  {
+    "assetId": "AST-EMP085-04",
+    "employeeId": "EMP085",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP085",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP085/AST-EMP085-04.txt",
+    "lastModified": "2025-03-31"
+  },
+  {
+    "assetId": "AST-EMP085-05",
+    "employeeId": "EMP085",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP085",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP085/AST-EMP085-05.one",
+    "lastModified": "2025-04-01"
+  },
+  {
+    "assetId": "AST-EMP086-01",
+    "employeeId": "EMP086",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP086",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP086/AST-EMP086-01.pptx",
+    "lastModified": "2025-03-29"
+  },
+  {
+    "assetId": "AST-EMP086-02",
+    "employeeId": "EMP086",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP086",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP086/AST-EMP086-02.pdf",
+    "lastModified": "2025-03-30"
+  },
+  {
+    "assetId": "AST-EMP086-03",
+    "employeeId": "EMP086",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP086",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP086/AST-EMP086-03.docx",
+    "lastModified": "2025-03-31"
+  },
+  {
+    "assetId": "AST-EMP086-04",
+    "employeeId": "EMP086",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP086",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP086/AST-EMP086-04.txt",
+    "lastModified": "2025-04-01"
+  },
+  {
+    "assetId": "AST-EMP086-05",
+    "employeeId": "EMP086",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP086",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP086/AST-EMP086-05.one",
+    "lastModified": "2025-04-02"
+  },
+  {
+    "assetId": "AST-EMP087-01",
+    "employeeId": "EMP087",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP087",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP087/AST-EMP087-01.pptx",
+    "lastModified": "2025-03-30"
+  },
+  {
+    "assetId": "AST-EMP087-02",
+    "employeeId": "EMP087",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP087",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP087/AST-EMP087-02.pdf",
+    "lastModified": "2025-03-31"
+  },
+  {
+    "assetId": "AST-EMP087-03",
+    "employeeId": "EMP087",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP087",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP087/AST-EMP087-03.docx",
+    "lastModified": "2025-04-01"
+  },
+  {
+    "assetId": "AST-EMP087-04",
+    "employeeId": "EMP087",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP087",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP087/AST-EMP087-04.txt",
+    "lastModified": "2025-04-02"
+  },
+  {
+    "assetId": "AST-EMP087-05",
+    "employeeId": "EMP087",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP087",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP087/AST-EMP087-05.one",
+    "lastModified": "2025-04-03"
+  },
+  {
+    "assetId": "AST-EMP088-01",
+    "employeeId": "EMP088",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP088",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP088/AST-EMP088-01.pptx",
+    "lastModified": "2025-03-31"
+  },
+  {
+    "assetId": "AST-EMP088-02",
+    "employeeId": "EMP088",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP088",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP088/AST-EMP088-02.pdf",
+    "lastModified": "2025-04-01"
+  },
+  {
+    "assetId": "AST-EMP088-03",
+    "employeeId": "EMP088",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP088",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP088/AST-EMP088-03.docx",
+    "lastModified": "2025-04-02"
+  },
+  {
+    "assetId": "AST-EMP088-04",
+    "employeeId": "EMP088",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP088",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP088/AST-EMP088-04.txt",
+    "lastModified": "2025-04-03"
+  },
+  {
+    "assetId": "AST-EMP088-05",
+    "employeeId": "EMP088",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP088",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP088/AST-EMP088-05.one",
+    "lastModified": "2025-04-04"
+  },
+  {
+    "assetId": "AST-EMP089-01",
+    "employeeId": "EMP089",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP089",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP089/AST-EMP089-01.pptx",
+    "lastModified": "2025-04-01"
+  },
+  {
+    "assetId": "AST-EMP089-02",
+    "employeeId": "EMP089",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP089",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP089/AST-EMP089-02.pdf",
+    "lastModified": "2025-04-02"
+  },
+  {
+    "assetId": "AST-EMP089-03",
+    "employeeId": "EMP089",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP089",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP089/AST-EMP089-03.docx",
+    "lastModified": "2025-04-03"
+  },
+  {
+    "assetId": "AST-EMP089-04",
+    "employeeId": "EMP089",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP089",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP089/AST-EMP089-04.txt",
+    "lastModified": "2025-04-04"
+  },
+  {
+    "assetId": "AST-EMP089-05",
+    "employeeId": "EMP089",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP089",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP089/AST-EMP089-05.one",
+    "lastModified": "2025-04-05"
+  },
+  {
+    "assetId": "AST-EMP090-01",
+    "employeeId": "EMP090",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP090",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP090/AST-EMP090-01.pptx",
+    "lastModified": "2025-04-02"
+  },
+  {
+    "assetId": "AST-EMP090-02",
+    "employeeId": "EMP090",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP090",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP090/AST-EMP090-02.pdf",
+    "lastModified": "2025-04-03"
+  },
+  {
+    "assetId": "AST-EMP090-03",
+    "employeeId": "EMP090",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP090",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP090/AST-EMP090-03.docx",
+    "lastModified": "2025-04-04"
+  },
+  {
+    "assetId": "AST-EMP090-04",
+    "employeeId": "EMP090",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP090",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP090/AST-EMP090-04.txt",
+    "lastModified": "2025-04-05"
+  },
+  {
+    "assetId": "AST-EMP090-05",
+    "employeeId": "EMP090",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP090",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP090/AST-EMP090-05.one",
+    "lastModified": "2025-04-06"
+  },
+  {
+    "assetId": "AST-EMP091-01",
+    "employeeId": "EMP091",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP091",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP091/AST-EMP091-01.pptx",
+    "lastModified": "2025-04-03"
+  },
+  {
+    "assetId": "AST-EMP091-02",
+    "employeeId": "EMP091",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP091",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP091/AST-EMP091-02.pdf",
+    "lastModified": "2025-04-04"
+  },
+  {
+    "assetId": "AST-EMP091-03",
+    "employeeId": "EMP091",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP091",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP091/AST-EMP091-03.docx",
+    "lastModified": "2025-04-05"
+  },
+  {
+    "assetId": "AST-EMP091-04",
+    "employeeId": "EMP091",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP091",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP091/AST-EMP091-04.txt",
+    "lastModified": "2025-04-06"
+  },
+  {
+    "assetId": "AST-EMP091-05",
+    "employeeId": "EMP091",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP091",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP091/AST-EMP091-05.one",
+    "lastModified": "2025-04-07"
+  },
+  {
+    "assetId": "AST-EMP092-01",
+    "employeeId": "EMP092",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP092",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP092/AST-EMP092-01.pptx",
+    "lastModified": "2025-04-04"
+  },
+  {
+    "assetId": "AST-EMP092-02",
+    "employeeId": "EMP092",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP092",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP092/AST-EMP092-02.pdf",
+    "lastModified": "2025-04-05"
+  },
+  {
+    "assetId": "AST-EMP092-03",
+    "employeeId": "EMP092",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP092",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP092/AST-EMP092-03.docx",
+    "lastModified": "2025-04-06"
+  },
+  {
+    "assetId": "AST-EMP092-04",
+    "employeeId": "EMP092",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP092",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP092/AST-EMP092-04.txt",
+    "lastModified": "2025-04-07"
+  },
+  {
+    "assetId": "AST-EMP092-05",
+    "employeeId": "EMP092",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP092",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP092/AST-EMP092-05.one",
+    "lastModified": "2025-04-08"
+  },
+  {
+    "assetId": "AST-EMP093-01",
+    "employeeId": "EMP093",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP093",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP093/AST-EMP093-01.pptx",
+    "lastModified": "2025-04-05"
+  },
+  {
+    "assetId": "AST-EMP093-02",
+    "employeeId": "EMP093",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP093",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP093/AST-EMP093-02.pdf",
+    "lastModified": "2025-04-06"
+  },
+  {
+    "assetId": "AST-EMP093-03",
+    "employeeId": "EMP093",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP093",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP093/AST-EMP093-03.docx",
+    "lastModified": "2025-04-07"
+  },
+  {
+    "assetId": "AST-EMP093-04",
+    "employeeId": "EMP093",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP093",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP093/AST-EMP093-04.txt",
+    "lastModified": "2025-04-08"
+  },
+  {
+    "assetId": "AST-EMP093-05",
+    "employeeId": "EMP093",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP093",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP093/AST-EMP093-05.one",
+    "lastModified": "2025-04-09"
+  },
+  {
+    "assetId": "AST-EMP094-01",
+    "employeeId": "EMP094",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP094",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP094/AST-EMP094-01.pptx",
+    "lastModified": "2025-04-06"
+  },
+  {
+    "assetId": "AST-EMP094-02",
+    "employeeId": "EMP094",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP094",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP094/AST-EMP094-02.pdf",
+    "lastModified": "2025-04-07"
+  },
+  {
+    "assetId": "AST-EMP094-03",
+    "employeeId": "EMP094",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP094",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP094/AST-EMP094-03.docx",
+    "lastModified": "2025-04-08"
+  },
+  {
+    "assetId": "AST-EMP094-04",
+    "employeeId": "EMP094",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP094",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP094/AST-EMP094-04.txt",
+    "lastModified": "2025-04-09"
+  },
+  {
+    "assetId": "AST-EMP094-05",
+    "employeeId": "EMP094",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP094",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP094/AST-EMP094-05.one",
+    "lastModified": "2025-04-10"
+  },
+  {
+    "assetId": "AST-EMP095-01",
+    "employeeId": "EMP095",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP095",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP095/AST-EMP095-01.pptx",
+    "lastModified": "2025-04-07"
+  },
+  {
+    "assetId": "AST-EMP095-02",
+    "employeeId": "EMP095",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP095",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP095/AST-EMP095-02.pdf",
+    "lastModified": "2025-04-08"
+  },
+  {
+    "assetId": "AST-EMP095-03",
+    "employeeId": "EMP095",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP095",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP095/AST-EMP095-03.docx",
+    "lastModified": "2025-04-09"
+  },
+  {
+    "assetId": "AST-EMP095-04",
+    "employeeId": "EMP095",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP095",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP095/AST-EMP095-04.txt",
+    "lastModified": "2025-04-10"
+  },
+  {
+    "assetId": "AST-EMP095-05",
+    "employeeId": "EMP095",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP095",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP095/AST-EMP095-05.one",
+    "lastModified": "2025-04-11"
+  },
+  {
+    "assetId": "AST-EMP096-01",
+    "employeeId": "EMP096",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP096",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP096/AST-EMP096-01.pptx",
+    "lastModified": "2025-04-08"
+  },
+  {
+    "assetId": "AST-EMP096-02",
+    "employeeId": "EMP096",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP096",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP096/AST-EMP096-02.pdf",
+    "lastModified": "2025-04-09"
+  },
+  {
+    "assetId": "AST-EMP096-03",
+    "employeeId": "EMP096",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP096",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP096/AST-EMP096-03.docx",
+    "lastModified": "2025-04-10"
+  },
+  {
+    "assetId": "AST-EMP096-04",
+    "employeeId": "EMP096",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP096",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP096/AST-EMP096-04.txt",
+    "lastModified": "2025-04-11"
+  },
+  {
+    "assetId": "AST-EMP096-05",
+    "employeeId": "EMP096",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP096",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP096/AST-EMP096-05.one",
+    "lastModified": "2025-04-12"
+  },
+  {
+    "assetId": "AST-EMP097-01",
+    "employeeId": "EMP097",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP097",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP097/AST-EMP097-01.pptx",
+    "lastModified": "2025-04-09"
+  },
+  {
+    "assetId": "AST-EMP097-02",
+    "employeeId": "EMP097",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP097",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP097/AST-EMP097-02.pdf",
+    "lastModified": "2025-04-10"
+  },
+  {
+    "assetId": "AST-EMP097-03",
+    "employeeId": "EMP097",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP097",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP097/AST-EMP097-03.docx",
+    "lastModified": "2025-04-11"
+  },
+  {
+    "assetId": "AST-EMP097-04",
+    "employeeId": "EMP097",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP097",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP097/AST-EMP097-04.txt",
+    "lastModified": "2025-04-12"
+  },
+  {
+    "assetId": "AST-EMP097-05",
+    "employeeId": "EMP097",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP097",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP097/AST-EMP097-05.one",
+    "lastModified": "2025-04-13"
+  },
+  {
+    "assetId": "AST-EMP098-01",
+    "employeeId": "EMP098",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP098",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP098/AST-EMP098-01.pptx",
+    "lastModified": "2025-04-10"
+  },
+  {
+    "assetId": "AST-EMP098-02",
+    "employeeId": "EMP098",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP098",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP098/AST-EMP098-02.pdf",
+    "lastModified": "2025-04-11"
+  },
+  {
+    "assetId": "AST-EMP098-03",
+    "employeeId": "EMP098",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP098",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP098/AST-EMP098-03.docx",
+    "lastModified": "2025-04-12"
+  },
+  {
+    "assetId": "AST-EMP098-04",
+    "employeeId": "EMP098",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP098",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP098/AST-EMP098-04.txt",
+    "lastModified": "2025-04-13"
+  },
+  {
+    "assetId": "AST-EMP098-05",
+    "employeeId": "EMP098",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP098",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP098/AST-EMP098-05.one",
+    "lastModified": "2025-04-14"
+  },
+  {
+    "assetId": "AST-EMP099-01",
+    "employeeId": "EMP099",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP099",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP099/AST-EMP099-01.pptx",
+    "lastModified": "2025-04-11"
+  },
+  {
+    "assetId": "AST-EMP099-02",
+    "employeeId": "EMP099",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP099",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP099/AST-EMP099-02.pdf",
+    "lastModified": "2025-04-12"
+  },
+  {
+    "assetId": "AST-EMP099-03",
+    "employeeId": "EMP099",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP099",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP099/AST-EMP099-03.docx",
+    "lastModified": "2025-04-13"
+  },
+  {
+    "assetId": "AST-EMP099-04",
+    "employeeId": "EMP099",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP099",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP099/AST-EMP099-04.txt",
+    "lastModified": "2025-04-14"
+  },
+  {
+    "assetId": "AST-EMP099-05",
+    "employeeId": "EMP099",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP099",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP099/AST-EMP099-05.one",
+    "lastModified": "2025-04-15"
+  },
+  {
+    "assetId": "AST-EMP100-01",
+    "employeeId": "EMP100",
+    "assetType": "presentation",
+    "format": "pptx",
+    "title": "Project update deck - EMP100",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP100/AST-EMP100-01.pptx",
+    "lastModified": "2025-04-12"
+  },
+  {
+    "assetId": "AST-EMP100-02",
+    "employeeId": "EMP100",
+    "assetType": "pdf",
+    "format": "pdf",
+    "title": "Process compliance document - EMP100",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP100/AST-EMP100-02.pdf",
+    "lastModified": "2025-04-13"
+  },
+  {
+    "assetId": "AST-EMP100-03",
+    "employeeId": "EMP100",
+    "assetType": "word",
+    "format": "docx",
+    "title": "Design specification - EMP100",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP100/AST-EMP100-03.docx",
+    "lastModified": "2025-04-14"
+  },
+  {
+    "assetId": "AST-EMP100-04",
+    "employeeId": "EMP100",
+    "assetType": "text",
+    "format": "txt",
+    "title": "Shift handoff notes - EMP100",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP100/AST-EMP100-04.txt",
+    "lastModified": "2025-04-15"
+  },
+  {
+    "assetId": "AST-EMP100-05",
+    "employeeId": "EMP100",
+    "assetType": "onenote",
+    "format": "one",
+    "title": "Lab observations notebook - EMP100",
+    "sourceSystem": "OneDrive",
+    "storageUrl": "https://{storageAccount}.blob.core.windows.net/employee-knowledge-raw/EMP100/AST-EMP100-05.one",
+    "lastModified": "2025-04-16"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "name": "df_employee_knowledge_ingestion",
+  "description": "Loads raw employee assets from Azure Storage to Fabric OneLake staging.",
+  "sources": [
+    "AzureBlobRawAssets",
+    "AzureBlobEmails",
+    "AzureBlobOneNote"
+  ],
+  "transformations": [
+    "NormalizeMetadata",
+    "DeduplicateAssets",
+    "AttachEmployeeReference"
+  ],
+  "sink": "OneLake.Staging.EmployeeAssets",
+  "configRef": "../../config/fabric-settings.json"
+}

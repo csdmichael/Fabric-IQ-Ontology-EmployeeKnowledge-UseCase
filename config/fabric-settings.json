@@ -1,0 +1,29 @@
+{
+  "environment": "demo",
+  "storage": {
+    "inputContainer": "employee-knowledge-raw",
+    "processedContainer": "employee-knowledge-processed",
+    "assetsShareName": "employeeassets"
+  },
+  "ingestion": {
+    "batchSize": 200,
+    "retryCount": 3,
+    "confidenceThreshold": 0.72
+  },
+  "classification": {
+    "categories": [
+      "HR",
+      "Engineering",
+      "Procurement",
+      "Operations",
+      "Safety",
+      "Finance",
+      "R&D"
+    ],
+    "sectionWeights": {
+      "metadata": 0.2,
+      "content": 0.55,
+      "entities": 0.25
+    }
+  }
+}

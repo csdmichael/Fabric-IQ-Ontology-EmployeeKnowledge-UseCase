@@ -1,0 +1,7 @@
+{
+  "raw": "abfss://employee-knowledge-raw@{storageAccount}.dfs.core.windows.net/",
+  "processed": "abfss://employee-knowledge-processed@{storageAccount}.dfs.core.windows.net/",
+  "onedriveIngestionPath": "employee-knowledge-raw/{employeeId}/",
+  "cosmosContainer": "EmployeeDocumentParsing",
+  "onelakePath": "/Lakehouses/EmployeeKnowledge/Lakehouse/Tables/"
+}

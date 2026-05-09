@@ -1,0 +1,31 @@
+{
+  "name": "pl_employee_knowledge_end_to_end",
+  "activities": [
+    {
+      "name": "IngestRawAssets",
+      "type": "Dataflow",
+      "ref": "../dataflows/employee_ingestion_dataflow.json"
+    },
+    {
+      "name": "ClassifyWithDocIntelligence",
+      "type": "Notebook",
+      "uses": "AzureDocumentIntelligence"
+    },
+    {
+      "name": "PersistParsingToCosmos",
+      "type": "Copy",
+      "target": "CosmosDB.EmployeeDocumentParsing"
+    },
+    {
+      "name": "LoadCuratedToOneLake",
+      "type": "Dataflow",
+      "target": "OneLake.Curated.EmployeeKnowledge"
+    },
+    {
+      "name": "RefreshSemanticModel",
+      "type": "SemanticModelRefresh",
+      "target": "sm_employee_knowledge"
+    }
+  ],
+  "configRef": "../../config/endpoints.json"
+}
