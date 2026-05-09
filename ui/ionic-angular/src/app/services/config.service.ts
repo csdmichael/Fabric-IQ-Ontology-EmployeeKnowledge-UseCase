@@ -5,5 +5,5 @@ export interface EndpointConfig {
 }
 
 export class ConfigService {
-  configPath = '../../../config/endpoints.json';
+  configPath = '/config/endpoints.json';
 }

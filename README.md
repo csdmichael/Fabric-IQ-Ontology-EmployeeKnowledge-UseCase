@@ -80,6 +80,12 @@ All platform endpoints and runtime options are centralized in `/config`:
 
 UI and pipeline artifacts reference config files rather than embedding environment values directly.
 
+Config key resolution examples:
+- `azure.blobStorageEndpoint` → Azure Blob endpoint template in `config/endpoints.json`
+- `azure.documentIntelligenceEndpoint` → Document Intelligence endpoint in `config/endpoints.json`
+- `azure.cosmosDbEndpoint` → Cosmos DB endpoint in `config/endpoints.json`
+- `microsoftFabric.workspaceId` / `microsoftFabric.lakehouseId` → OneLake workspace/lakehouse IDs
+
 ## Synthetic Data Design
 Data includes **100 employees** and enterprise digital assets expected in Lam Research-like environments:
 - OneDrive assets in multiple formats: **pptx, pdf, docx, txt, one (OneNote)**
@@ -120,6 +126,10 @@ Each document record includes:
 - employee ownership and classification category
 
 This enables confidence rollups **by field section and by document**.
+
+Default threshold note:
+- `config/fabric-settings.json` sets `confidenceThreshold` to `0.72` as a balanced demo baseline.
+- Increase threshold for stricter quality gating; lower it when recall/coverage is more important.
 
 ## Semantic Model & ERD
 ![Semantic Model ERD](docs/semantic-model-erd.svg)
