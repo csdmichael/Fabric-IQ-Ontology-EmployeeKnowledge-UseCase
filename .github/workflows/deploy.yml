@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: read
+  id-token: write
 
 jobs:
   load-config:
@@ -20,6 +21,7 @@ jobs:
       tf_var_file: ${{ steps.read.outputs.tf_var_file }}
       artifact_name: ${{ steps.read.outputs.artifact_name }}
       artifact_paths: ${{ steps.read.outputs.artifact_paths }}
+      azure_subscription_id: ${{ steps.read.outputs.azure_subscription_id }}
     steps:
       - uses: actions/checkout@v4
       - id: read
@@ -30,12 +32,14 @@ jobs:
           tf_var_file=$(jq -r '.deploy.terraformVarFile' config/workflows.json)
           artifact_name=$(jq -r '.deploy.artifactName' config/workflows.json)
           artifact_paths=$(jq -c '.deploy.artifactPaths' config/workflows.json)
+          azure_subscription_id=$(jq -r '.subscriptionId' config/azure-hosting-resources.json)
 
           echo "terraform_version=$terraform_version" >> "$GITHUB_OUTPUT"
           echo "tf_dir=$tf_dir" >> "$GITHUB_OUTPUT"
           echo "tf_var_file=$tf_var_file" >> "$GITHUB_OUTPUT"
           echo "artifact_name=$artifact_name" >> "$GITHUB_OUTPUT"
           echo "artifact_paths=$artifact_paths" >> "$GITHUB_OUTPUT"
+          echo "azure_subscription_id=$azure_subscription_id" >> "$GITHUB_OUTPUT"
 
   package-fabric-bundle:
     needs: load-config
@@ -78,6 +82,24 @@ jobs:
       - uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: ${{ needs.load-config.outputs.terraform_version }}
+      - name: Azure Login
+        if: ${{ secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '' }}
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID != '' && secrets.AZURE_SUBSCRIPTION_ID || needs.load-config.outputs.azure_subscription_id }}
+      - name: Azure Login (service principal JSON credentials fallback)
+        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '') && secrets.AZURE_CREDENTIALS != '' }}
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Validate Azure authentication inputs
+        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '') && secrets.AZURE_CREDENTIALS == '' }}
+        run: |
+          echo "Missing Azure auth configuration." >&2
+          echo "Set either AZURE_CLIENT_ID/AZURE_TENANT_ID[/AZURE_SUBSCRIPTION_ID] or AZURE_CREDENTIALS JSON secret." >&2
+          exit 1
       - name: Terraform init and plan
         env:
           TF_VAR_FILE: ${{ needs.load-config.outputs.tf_var_file }}
@@ -105,6 +127,24 @@ jobs:
       - uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: ${{ needs.load-config.outputs.terraform_version }}
+      - name: Azure Login
+        if: ${{ secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '' }}
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID != '' && secrets.AZURE_SUBSCRIPTION_ID || needs.load-config.outputs.azure_subscription_id }}
+      - name: Azure Login (service principal JSON credentials fallback)
+        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '') && secrets.AZURE_CREDENTIALS != '' }}
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Validate Azure authentication inputs
+        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '') && secrets.AZURE_CREDENTIALS == '' }}
+        run: |
+          echo "Missing Azure auth configuration." >&2
+          echo "Set either AZURE_CLIENT_ID/AZURE_TENANT_ID[/AZURE_SUBSCRIPTION_ID] or AZURE_CREDENTIALS JSON secret." >&2
+          exit 1
       - uses: actions/download-artifact@v4.1.3
         with:
           name: terraform-plan

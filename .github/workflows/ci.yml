@@ -108,10 +108,8 @@ jobs:
         with:
           terraform_version: ${{ needs.load-config.outputs.terraform_version }}
       - name: Terraform fmt and validate
-        env:
-          TF_VAR_FILE: ${{ needs.load-config.outputs.tf_var_file }}
         run: |
           set -euo pipefail
           terraform fmt -check -recursive
           terraform init -backend=false
-          terraform validate -var-file="$TF_VAR_FILE"
+          terraform validate

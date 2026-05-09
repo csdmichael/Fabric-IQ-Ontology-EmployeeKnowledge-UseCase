@@ -6,6 +6,7 @@
 - [Folder Structure](#folder-structure)
 - [Technologies Used](#technologies-used)
 - [Configuration Strategy (No Hardcoding)](#configuration-strategy-no-hardcoding)
+- [Deployment & Component URLs](#deployment--component-urls)
 - [Synthetic Data Design](#synthetic-data-design)
 - [Employee Asset Generation](#employee-asset-generation)
 - [Upload Workflow – Datasource Ingestion](#upload-workflow--datasource-ingestion)
@@ -98,6 +99,22 @@ All platform endpoints and runtime options are centralized in `/config`:
 - `config/fabric-settings.json`: ingestion behavior, thresholds, and networking policy flags
 - `config/azure-hosting-resources.json`: reusable existing hosting resources in `ai-myaacoub`
 - `config/ontology-config.json`: ontology name, entities, and relationship catalog
+
+## Deployment & Component URLs
+| Component | URL / Link | Source |
+|---|---|---|
+| UI Web App | https://foundry-privatevnet-ui.azurewebsites.net | `config/endpoints.json` (`hosting.uiPublicUrl`) |
+| API Web App | https://foundry-privatevnet-api.azurewebsites.net | `config/endpoints.json` (`hosting.apiUrl`) |
+| API Management Gateway | https://ai-gateway-apim-poc-my.azure-api.net | `config/endpoints.json` (`azure.apiManagementGateway`) |
+| Azure Blob Storage Endpoint | https://aistoragemyaacoub.blob.core.windows.net | `config/endpoints.json` (`azure.blobStorageEndpoint`) |
+| Azure File Storage Endpoint | https://aistoragemyaacoub.file.core.windows.net | `config/endpoints.json` (`azure.fileStorageEndpoint`) |
+| Cosmos DB Endpoint | https://cosmos-ai-poc.documents.azure.com:443/ | `config/endpoints.json` (`azure.cosmosDbEndpoint`) |
+| Azure AI Search Endpoint | https://aisearch-poc-myaacoub.search.windows.net | `config/endpoints.json` (`azure.aiSearchEndpoint`) |
+| Azure Foundry Project Endpoint | https://002-ai-poc-private.services.ai.azure.com/api/projects/proj-default | `config/endpoints.json` (`azure.foundryProjectEndpoint`) |
+| Fabric IQ Ontology Artifact | [fabric/ontology/fabric_iq_ontology.json](fabric/ontology/fabric_iq_ontology.json) | Repository artifact |
+| Fabric Ontology Diagram | [docs/ontology-diagram.svg](docs/ontology-diagram.svg) | Repository documentation |
+| Teams Developer Portal | https://dev.teams.microsoft.com | `config/endpoints.json` (`integration.teamsDevPortalUrl`) |
+| Copilot Studio | https://copilotstudio.microsoft.com | `config/endpoints.json` (`integration.copilotStudioUrl`) |
 
 ## Synthetic Data Design
 Data includes **100 employees** and enterprise digital assets expected in Lam Research-like environments.
