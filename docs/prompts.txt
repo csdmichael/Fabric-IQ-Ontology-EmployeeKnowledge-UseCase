@@ -1,73 +1,94 @@
 # Fabric IQ Employee Knowledge Use Case - Consolidated Prompt Catalog
 
-## 1) Core Build Requirements (Original Scope)
+## Global Requirements
 1. Implement a Microsoft Fabric IQ demo for an employee knowledge graph use case.
 2. Keep all endpoints and runtime values in config files (no hardcoding).
-3. Maintain one README with architecture, diagrams, structure, technologies, data model, and best practices.
-4. Keep architecture and related artifacts under docs/, and reference them from README.
-5. Include license attribution for Michael Yaacoub at Microsoft.
-6. Generate synthetic data for 100 employees with OneDrive-style assets (ppt, pdf, word, txt, onenote), emails, and org hierarchy.
-7. Build Fabric dataflows/pipelines for ingestion, classification, parsing, confidence rollups, and Cosmos DB JSON persistence.
-8. Land curated data in OneLake and create semantic models.
-9. Document data pipelines and semantic model ERD in README.
-10. Implement Fabric IQ ontology and link to OneLake data.
-11. Keep README TOC at the top.
-12. Add Fabric data agent support for querying data.
-13. Build Ionic + Angular + TypeScript UI with web/tablet/mobile layouts.
-14. UI page: Data Sources for employee assets and org structure.
-15. UI page: Ingestion + intelligence flow.
-16. UI page: Fabric data agent prompts with one-click copy/execute behavior.
-17. UI page: Agent packaging (zip + Teams Dev Portal import guidance).
-18. Add Microsoft logo in header; footer with Michael Yaacoub identity + LinkedIn + GitHub.
+3. Reuse existing resources in resource group `ai-myaacoub` where applicable.
+4. Use existing private endpoints and private VNets for data plane services.
+5. Keep the UI internet-accessible.
+6. Maintain one README with complete architecture, diagrams, structure, technologies, data model, and best practices.
+7. Keep README Table of Contents at the top and accurate after each update.
+8. Keep architecture and related artifacts under `docs/` and reference them from README.
+9. Include license attribution for Michael Yaacoub at Microsoft.
+10. Keep this `docs/prompts.txt` catalog updated and clearly organized.
 
-## 2) Enhancement Requirements (Current Scope)
-1. Generate more assets per employee to better demonstrate the scenario.
-2. Reflect expanded assets in UI.
-3. Add pagination for employee asset browsing.
-4. Add search autocomplete to filter and find employees and their assets.
-5. In Fabric data agent prompts, require citations in responses.
-6. Add a UI document viewer that renders in browser for ppt, word, pdf, onenote, txt, email, and related formats.
-7. Document all enhancements in README.
-8. Reuse existing resources in resource group `ai-myaacoub` (used across other repos), and configure in config folder.
-9. Add managed identity setup instructions in README.
-10. Use existing private endpoints and private VNets for data plane services.
-11. Keep UI internet-accessible.
-12. Add both previous and new updates to prompts.txt, organized clearly, and reference this file from README.
+## UI Section
+1. Build an Ionic + Angular + TypeScript UI with web/tablet/mobile layouts.
+2. Include a Data Sources page for employee assets and org structure.
+3. Include an Ingestion + Intelligence Flow page.
+4. Include a Fabric Data Agent prompts page with one-click copy/execute behavior.
+5. Include an Agent Packaging page (zip + Teams Dev Portal import guidance).
+6. Reflect expanded employee assets in UI.
+7. Add pagination for employee asset browsing.
+8. Add search autocomplete to find/filter employees and assets.
+9. Add an in-browser document viewer for ppt, word, pdf, onenote, txt, email, and related formats.
+10. Add Microsoft logo in header and footer identity for Michael Yaacoub with LinkedIn + GitHub links.
 
-## 3) Agent Prompt Behavior Requirements
-1. Responses should include citation references for source records when applicable.
-2. Citation targets should include documentId, cosmosDbRecordId, and source storage path.
-3. Prompts should support employee lookup, asset lookup, confidence analysis, hierarchy analysis, and department rollups.
-4. Prompts should support operational troubleshooting scenarios (missing parse records, stale assets, low-confidence assets).
+## Fabric Section
+1. Build Fabric dataflows/pipelines for ingestion, classification, parsing, confidence rollups, and Cosmos DB JSON persistence.
+2. Land curated data in OneLake and create semantic models.
+3. Implement the Fabric IQ ontology and link it to OneLake data.
+4. Add Fabric data agent support for querying data.
+5. Data agent responses must include citations when applicable.
+6. Citation payloads must include `documentId`, `cosmosDbRecordId`, and source storage path.
+7. Prompts should support employee lookup, asset lookup, confidence analysis, hierarchy analysis, and department rollups.
+8. Prompts should support operational troubleshooting scenarios (missing parse records, stale assets, low-confidence assets).
 
-## 4) Azure Monitor & SRE Requirements
-1. Add Azure Monitor diagnostic settings for all managed resources: Storage Account, Cosmos DB, and UI App Service.
-2. Route all diagnostic logs to a Log Analytics workspace (reuse existing workspace in ai-myaacoub if available, otherwise create new).
-3. Create an SRE action group (ag-fabriciq-sre) that notifies via email DL and HTTP webhook.
-4. Reuse the existing SRE agent notification infrastructure in ai-myaacoub resource group.
-5. Add metric alerts for: Storage availability (<99%), Cosmos DB 5xx errors (>5 in 5 min), Cosmos DB 429 throttling (>10 in 5 min), UI App Service HTTP 5xx (>5 in 5 min), UI average response time (>5s over 15 min).
-6. Add a scheduled query rule alert for documents with parse confidence below 0.5 (>10 in 1 hour).
-7. All monitor and alert resources should be parameterized via Terraform variables with sensible defaults.
-8. Generate a Logic App with an HTTP trigger to serve as the incident response webhook receiver.
-9. The Logic App should: parse the alert payload, log an incident record to Cosmos DB, and send a Teams notification card to the SRE channel.
-10. After first `terraform apply`, the Logic App trigger URL should be captured from Terraform output (`incident_response_logic_app_trigger_url`) and set as the sre_webhook_url tfvar or action group webhook.
-11. Document all monitoring resources, alert thresholds, and the Logic App flow in the README.
-12. Reference the incident response plan from the README.
+## Architecture Diagrams and Documentation Section
+1. Architecture diagrams must be enterprise-ready, high-fidelity, and use official Microsoft/Azure iconography.
+2. Update the architecture diagram (SVG) to include Azure Monitor + SRE layer components:
+   - Log Analytics workspace
+   - Action Group
+   - Metric alerts
+   - Logic App HTTP trigger
+3. Document data pipelines and semantic model ERD in README.
+4. Document all delivered enhancements and implementation changes in README.
+5. Add managed identity setup instructions in README.
+6. Generate and maintain a comprehensive demo script at `docs/DEMO_SCRIPT.md` with:
+   - setup prerequisites
+   - step-by-step walkthrough
+   - expected outputs
+   - UI navigation guide
+   - data agent prompt examples
+7. Reference `docs/DEMO_SCRIPT.md` from README.
 
-## 5) Incident Response Requirements
-1. Maintain an incident response plan at `docs/incident-response-plan.md`.
-2. Define severity levels: Sev 1 (15-min SLA), Sev 2 (30-min), Sev 3 (2-hour), Sev 4 (next business day).
-3. Include a playbook for each alert: Storage availability, Cosmos DB 5xx, Cosmos DB 429, UI 5xx, UI response time, low parse confidence.
-4. Each playbook should include: triage steps, remediation steps, and escalation trigger.
-5. Include an escalation matrix with role, contact method, and condition.
-6. Include a post-incident review template and process.
-7. Incident records should be logged to a dedicated Cosmos DB container (`Incidents`).
-8. Reference `docs/incident-response-plan.md` from the main README.
+## Monitoring Section (SRE Agent + Azure Monitor)
+1. Add Azure Monitor diagnostic settings for Storage Account, Cosmos DB, and UI App Service.
+2. Route diagnostic logs to Log Analytics (reuse existing workspace in `ai-myaacoub` if available, otherwise create one).
+3. Create SRE action group `ag-fabriciq-sre` with email DL + HTTP webhook notifications.
+4. Reuse shared SRE agent notification infrastructure in `ai-myaacoub`.
+5. Add metric alerts for:
+   - Storage availability < 99%
+   - Cosmos DB 5xx errors > 5 in 5 minutes
+   - Cosmos DB 429 throttling > 10 in 5 minutes
+   - UI App Service HTTP 5xx > 5 in 5 minutes
+   - UI average response time > 5s over 15 minutes
+6. Add scheduled query rule alert for parse confidence < 0.5 when count > 10 in 1 hour.
+7. Parameterize all monitoring and alerting resources using Terraform variables with sensible defaults.
+8. Provision Logic App with HTTP trigger as incident response webhook receiver.
+9. Logic App flow must parse alert payload, log incident to Cosmos DB, and send Teams notification card to SRE channel.
+10. After first `terraform apply`, capture `incident_response_logic_app_trigger_url` output and set webhook (`sre_webhook_url` tfvar or Action Group webhook).
+11. Document monitoring resources, thresholds, and Logic App flow in README.
+12. Maintain incident response plan at `docs/incident-response-plan.md` and reference it in README.
+13. Incident response plan must define severities and SLAs:
+    - Sev 1: 15-minute SLA
+    - Sev 2: 30-minute SLA
+    - Sev 3: 2-hour SLA
+    - Sev 4: next business day
+14. Include alert-specific playbooks (triage, remediation, escalation) for:
+    - Storage availability
+    - Cosmos DB 5xx
+    - Cosmos DB 429
+    - UI 5xx
+    - UI response time
+    - Low parse confidence
+15. Include escalation matrix (role, contact method, condition), post-incident review template, and process.
+16. Log incident records to dedicated Cosmos DB container `Incidents`.
 
-## 6) Architecture & Demo Documentation Requirements
-1. Update the architecture diagram (SVG) to include an Azure Monitor + SRE layer showing: Log Analytics workspace, Action Group, metric alerts, Logic App HTTP trigger.
-2. Generate a comprehensive demo script at `docs/DEMO_SCRIPT.md` covering all major features end-to-end.
-3. The demo script should include: setup prerequisites, step-by-step walkthrough, expected outputs, UI navigation guide, and data agent prompt examples.
-4. Reference `docs/DEMO_SCRIPT.md` from the main README.
-5. Keep the README Table of Contents accurate and complete after all changes.
-
+## Data Section
+1. Generate synthetic data for 100 employees with:
+   - OneDrive-style assets (ppt, pdf, word, txt, onenote)
+   - emails
+   - org hierarchy data
+2. Generate additional assets per employee to better demonstrate scenario richness.
+3. Ensure generated/expanded data supports UI views, Fabric ingestion, ontology linking, and monitoring use cases.
