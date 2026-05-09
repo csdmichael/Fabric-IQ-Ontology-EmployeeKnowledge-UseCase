@@ -4,7 +4,23 @@ on:
   push:
     branches-ignore:
       - main
+    paths:
+      - ".github/workflows/ci.yml"
+      - "config/**"
+      - "data/**"
+      - "fabric/**"
+      - "scripts/**"
+      - "terraform/**"
+      - "ui/**"
   pull_request:
+    paths:
+      - ".github/workflows/ci.yml"
+      - "config/**"
+      - "data/**"
+      - "fabric/**"
+      - "scripts/**"
+      - "terraform/**"
+      - "ui/**"
 
 permissions:
   contents: read
