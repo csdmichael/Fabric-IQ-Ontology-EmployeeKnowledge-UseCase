@@ -2,7 +2,7 @@ title,Equipment Inventory Tracker
 employee,Casey Lee
 department,Manufacturing
 role,Architect
-date,2025-01-16
+date,2025-02-09
 
 Line ID,Equipment,OEE %,Downtime (min),Units Produced,Defect Rate %
 L-01,CNC Mill A,87.4,12,4200,0.8

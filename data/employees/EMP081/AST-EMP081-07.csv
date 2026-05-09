@@ -2,7 +2,7 @@ title,Equipment Inventory Tracker
 employee,Alex Garcia
 department,Manufacturing
 role,Architect
-date,2025-01-32
+date,2025-02-25
 
 Line ID,Equipment,OEE %,Downtime (min),Units Produced,Defect Rate %
 L-01,CNC Mill A,87.4,12,4200,0.8
