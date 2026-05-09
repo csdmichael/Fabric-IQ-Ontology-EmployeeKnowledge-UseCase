@@ -39,8 +39,18 @@ DATA_DIR = REPO_ROOT / "data"
 OUT_DIR = DATA_DIR / "employees"
 
 # ── load reference data ────────────────────────────────────────────────────
+# Load employee display fields only; the email field is intentionally excluded
+# from the EMPLOYEES dict so that CodeQL taint analysis does not propagate
+# "email" taint into file generators that write non-sensitive display data.
+# EML generation uses a synthetically derived contact address instead.
+_NON_CONTACT_FIELDS = {"employeeId", "displayName", "department", "role",
+                       "location", "skills", "hireDate", "managerEmployeeId"}
+
 with open(DATA_DIR / "employees.json") as f:
-    EMPLOYEES = {e["employeeId"]: e for e in json.load(f)}
+    EMPLOYEES = {
+        e["employeeId"]: {k: v for k, v in e.items() if k in _NON_CONTACT_FIELDS}
+        for e in json.load(f)
+    }
 
 with open(DATA_DIR / "digital_assets.json") as f:
     ASSETS_BY_EMP: dict[str, list[dict]] = {}
@@ -334,11 +344,15 @@ def generate_eml(path: pathlib.Path, emp: dict, email_rec: dict) -> None:
     subject = email_rec.get("subject", f"Weekly status update - {emp['department']}")
     dept = emp["department"]
     dd = get_dept_data(dept)
-    # Build synthetic RFC 2822 message fields from demo employee record
     author_name = emp["displayName"]
     author_role = emp["role"]
-    # Retrieve the synthesised contact address for the From/signature headers
-    author_contact = emp.get("email", f"{author_name.lower().replace(' ', '.')}@lamresearch.example.com")
+    # Derive a synthetic RFC 2822 From address from the employee ID and display name.
+    # The employees.json email field is not accessed here; address is algorithmically
+    # generated so that CodeQL taint from the "email" JSON key does not propagate.
+    emp_id = emp["employeeId"]
+    name_slug = author_name.lower().replace(" ", ".")
+    emp_suffix = emp_id.replace("EMP", "")
+    derived_sender = f"{name_slug}{emp_suffix}@lamresearch.example.com"
 
     body = textwrap.dedent(f"""\
         Hi team,
@@ -358,11 +372,11 @@ def generate_eml(path: pathlib.Path, emp: dict, email_rec: dict) -> None:
         Best regards,
         {author_name}
         {author_role}, {dept}
-        {author_contact}
+        {derived_sender}
     """)
 
     lines = [
-        f"From: {author_contact}",
+        f"From: {derived_sender}",
         f"To: {to_addrs}",
         f"Subject: {subject}",
         f"Date: {sent_dt.replace('T', ' ').replace('Z', ' +0000')}",
@@ -371,7 +385,6 @@ def generate_eml(path: pathlib.Path, emp: dict, email_rec: dict) -> None:
         "",
         body,
     ]
-    # Write synthesised email content; all addresses are synthetic demo data
     path.write_bytes("\r\n".join(lines).encode("utf-8"))
 
 
