@@ -7,6 +7,10 @@ on:
         description: "Dry run – list files without uploading"
         required: false
         default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
   push:
     branches:
       - main
@@ -56,8 +60,39 @@ jobs:
           echo "  storage_container   : $storage_container"
           echo "  ingestion_path_tmpl : $ingestion_path_template"
 
+  # Detect which Azure auth method is available without exposing secret values.
+  # Outputs auth_mode: "oidc" | "sp" | "none"
+  check-auth:
+    runs-on: ubuntu-latest
+    outputs:
+      auth_mode: ${{ steps.detect.outputs.auth_mode }}
+    steps:
+      - id: detect
+        name: Detect Azure credential availability
+        env:
+          _CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          _TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          _SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          _CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+        run: |
+          if [[ -n "${_CLIENT_ID}" && -n "${_TENANT_ID}" && -n "${_SUBSCRIPTION_ID}" ]]; then
+            echo "auth_mode=oidc" >> "$GITHUB_OUTPUT"
+            echo "Azure OIDC credentials detected (AZURE_CLIENT_ID + AZURE_TENANT_ID + AZURE_SUBSCRIPTION_ID)."
+          elif [[ -n "${_CREDENTIALS}" ]]; then
+            echo "auth_mode=sp" >> "$GITHUB_OUTPUT"
+            echo "Azure service principal credentials detected (AZURE_CREDENTIALS)."
+          else
+            echo "auth_mode=none" >> "$GITHUB_OUTPUT"
+            echo "::warning::No Azure credentials found. Asset upload steps will be skipped."
+            echo "Set AZURE_CLIENT_ID + AZURE_TENANT_ID + AZURE_SUBSCRIPTION_ID (OIDC) or AZURE_CREDENTIALS (service principal JSON) in repository secrets."
+            echo "Also set AZURE_STORAGE_ACCOUNT to the target storage account name."
+            echo "See the 'GitHub Secrets Setup' section of README.md for detailed instructions."
+          fi
+
   upload-assets:
-    needs: load-config
+    needs:
+      - load-config
+      - check-auth
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -69,28 +104,22 @@ jobs:
       # Secret names are documented in config/workflows.json under upload.azureCredentialsSecretName
       # and upload.storageAccountSecretName. They are referenced statically here (required by GitHub
       # Actions security model – dynamic secret lookup exposes all secrets to the runner).
-      - name: Azure Login
-        if: ${{ secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '' && secrets.AZURE_SUBSCRIPTION_ID != '' }}
+      - name: Azure Login (OIDC)
+        if: needs.check-auth.outputs.auth_mode == 'oidc'
         uses: azure/login@v2
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
-      - name: Azure Login (service principal JSON credentials fallback)
-        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '' && secrets.AZURE_SUBSCRIPTION_ID != '') && secrets.AZURE_CREDENTIALS != '' }}
+      - name: Azure Login (service principal JSON)
+        if: needs.check-auth.outputs.auth_mode == 'sp'
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Validate Azure authentication inputs
-        if: ${{ !(secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_TENANT_ID != '' && secrets.AZURE_SUBSCRIPTION_ID != '') && secrets.AZURE_CREDENTIALS == '' }}
-        run: |
-          echo "Missing Azure auth configuration." >&2
-          echo "Set either AZURE_CLIENT_ID/AZURE_TENANT_ID/AZURE_SUBSCRIPTION_ID (OIDC) or AZURE_CREDENTIALS JSON secret." >&2
-          exit 1
-
       - name: Upload employee assets to Azure Blob Storage
+        if: needs.check-auth.outputs.auth_mode != 'none'
         env:
           LOCAL_ASSETS_PATH: ${{ needs.load-config.outputs.local_assets_path }}
           STORAGE_CONTAINER: ${{ needs.load-config.outputs.storage_container }}
@@ -157,20 +186,10 @@ jobs:
               raise SystemExit(f"{errors} file(s) failed to upload.")
           PY
 
-      - name: Upload summary
-        if: always()
-        run: |
-          echo "### Employee Asset Upload" >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Setting | Value |" >> "$GITHUB_STEP_SUMMARY"
-          echo "|---------|-------|" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Container | ${{ needs.load-config.outputs.storage_container }} |" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Local path | ${{ needs.load-config.outputs.local_assets_path }} |" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Dry run | ${{ github.event.inputs.dry_run || 'false' }} |" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Trigger | ${{ github.event_name }} |" >> "$GITHUB_STEP_SUMMARY"
-
       - name: Upload projects.json to Azure Blob Storage
-        if: ${{ github.event.inputs.dry_run != 'true' }}
+        if: >-
+          needs.check-auth.outputs.auth_mode != 'none' &&
+          github.event.inputs.dry_run != 'true'
         env:
           STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
           STORAGE_CONTAINER: ${{ needs.load-config.outputs.storage_container }}
@@ -185,3 +204,25 @@ jobs:
             --auth-mode login \
             --output none
           echo "Uploaded data/projects.json -> ${STORAGE_CONTAINER}/projects.json"
+
+      - name: Upload summary
+        if: always()
+        env:
+          AUTH_MODE: ${{ needs.check-auth.outputs.auth_mode }}
+        run: |
+          echo "### Employee Asset Upload" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Setting | Value |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---------|-------|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Container | ${{ needs.load-config.outputs.storage_container }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Local path | ${{ needs.load-config.outputs.local_assets_path }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Dry run | ${{ github.event.inputs.dry_run || 'false' }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Trigger | ${{ github.event_name }} |" >> "$GITHUB_STEP_SUMMARY"
+          if [[ "$AUTH_MODE" == "none" ]]; then
+            echo "| Azure auth | ⚠️ Not configured — upload skipped |" >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "Set \`AZURE_CLIENT_ID\`, \`AZURE_TENANT_ID\`, \`AZURE_SUBSCRIPTION_ID\`, and \`AZURE_STORAGE_ACCOUNT\` (or \`AZURE_CREDENTIALS\`) in repository secrets to enable uploads." >> "$GITHUB_STEP_SUMMARY"
+            echo "See the **GitHub Secrets Setup** section in [README.md](README.md)." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "| Azure auth | ✅ \`$AUTH_MODE\` |" >> "$GITHUB_STEP_SUMMARY"
+          fi

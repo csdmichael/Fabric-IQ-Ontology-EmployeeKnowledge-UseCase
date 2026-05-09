@@ -25,6 +25,7 @@
 - [Prompt Catalog](#prompt-catalog)
 - [Teams & Copilot Agent Packaging Steps](#teams--copilot-agent-packaging-steps)
 - [GitHub Workflows](#github-workflows)
+- [GitHub Secrets Setup](#github-secrets-setup)
 - [Terraform Deployment](#terraform-deployment)
 - [Best Practices](#best-practices)
 - [License](#license)
@@ -297,7 +298,132 @@ This file includes:
 - `.github/workflows/deploy.yml`: deployment packaging and Terraform plan/apply flow
 - `.github/workflows/upload-employee-assets.yml`: asset upload to Azure Blob, with dry-run mode
 
-## Terraform Deployment
+> **Credential-free behavior:** All deployment workflows detect whether Azure credentials are configured before attempting any cloud operations. When no credentials are found, the workflow succeeds with a warning and generates a step summary explaining which secrets to add. No credentials = no deployment steps run; credentials present = full deployment proceeds.
+
+## GitHub Secrets Setup
+
+All deployment and upload workflows require the following GitHub repository secrets to interact with Azure. Without these secrets the workflows still **succeed** (no hard failure) but skip all Azure-dependent steps and emit a warning in the job summary.
+
+### Required secrets
+
+| Secret name | Required by | Description |
+|---|---|---|
+| `AZURE_CLIENT_ID` | deploy, upload | App registration (service principal) client/application ID — used for OIDC login |
+| `AZURE_TENANT_ID` | deploy, upload | Azure AD tenant ID for the subscription |
+| `AZURE_SUBSCRIPTION_ID` | deploy, upload | Azure subscription ID where resources are provisioned |
+| `AZURE_STORAGE_ACCOUNT` | deploy, upload | Name of the Azure Blob Storage account (e.g. `aistoragemyaacoub`) |
+| `AZURE_CREDENTIALS` | deploy, upload | *(Fallback)* Service principal JSON credentials — only needed if OIDC is not used |
+
+> **Recommended:** Use OIDC (`AZURE_CLIENT_ID` + `AZURE_TENANT_ID` + `AZURE_SUBSCRIPTION_ID`) — no long-lived client secret required. Use `AZURE_CREDENTIALS` only as a fallback.
+
+### Step 1 — Create an Azure App Registration (service principal)
+
+```bash
+# Log in to Azure CLI
+az login
+
+# Create a service principal and capture the output
+# Replace <SUBSCRIPTION_ID> and <RESOURCE_GROUP_NAME> with your values
+# (see config/azure-hosting-resources.json for the resource group used by this project)
+az ad sp create-for-rbac \
+  --name "github-actions-fabric-iq" \
+  --role Contributor \
+  --scopes /subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RESOURCE_GROUP_NAME> \
+  --json-auth
+```
+
+The `--json-auth` output is the value of `AZURE_CREDENTIALS` (service principal JSON fallback). Save all four fields:
+```json
+{
+  "clientId":       "<AZURE_CLIENT_ID>",
+  "clientSecret":   "<client secret — not needed for OIDC>",
+  "subscriptionId": "<AZURE_SUBSCRIPTION_ID>",
+  "tenantId":       "<AZURE_TENANT_ID>"
+}
+```
+
+### Step 2 — Grant additional RBAC roles
+
+```bash
+SP_OBJECT_ID=$(az ad sp show --id <AZURE_CLIENT_ID> --query id -o tsv)
+
+# Storage Blob Data Contributor — needed for blob upload steps
+az role assignment create \
+  --assignee-object-id "$SP_OBJECT_ID" \
+  --assignee-principal-type ServicePrincipal \
+  --role "Storage Blob Data Contributor" \
+  --scope /subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RESOURCE_GROUP_NAME>
+
+# Website Contributor — needed for App Service deploy
+az role assignment create \
+  --assignee-object-id "$SP_OBJECT_ID" \
+  --assignee-principal-type ServicePrincipal \
+  --role "Website Contributor" \
+  --scope /subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RESOURCE_GROUP_NAME>
+```
+
+### Step 3 — Configure OIDC federated identity credentials (recommended)
+
+OIDC eliminates the need to store a client secret. Add a federated credential for each branch or environment that will trigger deployments:
+
+```bash
+# Replace <GITHUB_ORG> and <REPO_NAME> with your GitHub organization/user and repository name
+# For the main branch
+az ad app federated-credential create \
+  --id <AZURE_CLIENT_ID> \
+  --parameters '{
+    "name": "github-main",
+    "issuer": "https://token.actions.githubusercontent.com",
+    "subject": "repo:<GITHUB_ORG>/<REPO_NAME>:ref:refs/heads/main",
+    "audiences": ["api://AzureADTokenExchange"]
+  }'
+
+# For workflow_dispatch (manual triggers from any branch via a GitHub environment named "production")
+az ad app federated-credential create \
+  --id <AZURE_CLIENT_ID> \
+  --parameters '{
+    "name": "github-dispatch",
+    "issuer": "https://token.actions.githubusercontent.com",
+    "subject": "repo:<GITHUB_ORG>/<REPO_NAME>:environment:production",
+    "audiences": ["api://AzureADTokenExchange"]
+  }'
+```
+
+> If you prefer not to use OIDC, skip this step and use `AZURE_CREDENTIALS` (the full JSON from Step 1) instead.
+
+### Step 4 — Add secrets to GitHub repository
+
+Go to **GitHub → Repository → Settings → Secrets and variables → Actions → New repository secret** and add each secret:
+
+| Secret | Value |
+|---|---|
+| `AZURE_CLIENT_ID` | `clientId` from Step 1 |
+| `AZURE_TENANT_ID` | `tenantId` from Step 1 |
+| `AZURE_SUBSCRIPTION_ID` | `subscriptionId` from Step 1 |
+| `AZURE_STORAGE_ACCOUNT` | Your storage account name (see `config/azure-hosting-resources.json` → `dataAndAi.storageAccount`) |
+| `AZURE_CREDENTIALS` | Full JSON from Step 1 (only if NOT using OIDC) |
+
+Or use the GitHub CLI:
+
+```bash
+gh secret set AZURE_CLIENT_ID       --body "<clientId>"
+gh secret set AZURE_TENANT_ID       --body "<tenantId>"
+gh secret set AZURE_SUBSCRIPTION_ID --body "<subscriptionId>"
+gh secret set AZURE_STORAGE_ACCOUNT --body "<your-storage-account-name>"
+
+# Only if using service principal JSON (not OIDC):
+gh secret set AZURE_CREDENTIALS     --body "$(cat sp-credentials.json)"
+```
+
+### Step 5 — Verify workflow permissions
+
+The `deploy.yml` and `upload-employee-assets.yml` workflows require `id-token: write` permission at the repository level for OIDC to work. This is already set in the workflow YAML. No additional GitHub repository settings are required beyond the secrets above.
+
+### Terraform backend (optional)
+
+By default, Terraform uses a **local** backend (state stored in the runner). For persistent state across runs, configure a remote backend (Azure Blob or Terraform Cloud) by adding a `backend` block to `terraform/versions.tf` and providing the required backend credentials as additional secrets.
+
+
 Terraform resources are in `terraform/` and use values from:
 - `config/terraform.tfvars.json`
 
