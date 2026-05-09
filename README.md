@@ -1,8 +1,11 @@
 # Microsoft Fabric IQ – Employee Knowledge Graph Demo
 
 ## Table of Contents
-- [Project Description](#project-description)
 - [Architecture](#architecture)
+- [Data Pipeline in Microsoft Fabric](#data-pipeline-in-microsoft-fabric)
+- [Semantic Model & ERD](#semantic-model--erd)
+- [Fabric IQ Ontology](#fabric-iq-ontology)
+- [Project Description](#project-description)
 - [Folder Structure](#folder-structure)
 - [Technologies Used](#technologies-used)
 - [Configuration Strategy (No Hardcoding)](#configuration-strategy-no-hardcoding)
@@ -10,10 +13,7 @@
 - [Synthetic Data Design](#synthetic-data-design)
 - [Employee Asset Generation](#employee-asset-generation)
 - [Upload Workflow – Datasource Ingestion](#upload-workflow--datasource-ingestion)
-- [Data Pipeline in Microsoft Fabric](#data-pipeline-in-microsoft-fabric)
 - [Document Intelligence & Confidence Scoring](#document-intelligence--confidence-scoring)
-- [Semantic Model & ERD](#semantic-model--erd)
-- [Fabric IQ Ontology](#fabric-iq-ontology)
 - [Fabric Data Agent](#fabric-data-agent)
 - [Ionic + Angular + TypeScript UI](#ionic--angular--typescript-ui)
 - [Reusable Azure Hosting Resources (ai-myaacoub)](#reusable-azure-hosting-resources-ai-myaacoub)
@@ -26,6 +26,36 @@
 - [Best Practices](#best-practices)
 - [License](#license)
 
+## Architecture
+
+![Architecture Diagram](docs/architecture-diagram.png)
+
+## Data Pipeline in Microsoft Fabric
+
+![Data Pipeline Diagram](docs/data-pipeline-diagram.png)
+
+Flow summary:
+1. Ingest from Azure Blob/File into OneLake staging
+2. Run classification/parsing with Document Intelligence
+3. Persist parse JSON to Cosmos DB
+4. Load curated data into OneLake
+5. Refresh semantic model for analytics and agent experiences
+
+## Semantic Model & ERD
+
+![Semantic Model ERD](docs/semantic-model-erd.png)
+
+Semantic model definition:
+- `fabric/semantic-model/employee_knowledge_semantic_model.json`
+
+## Fabric IQ Ontology
+
+![Ontology Diagram](docs/ontology-diagram.png)
+
+Ontology artifacts:
+- `fabric/ontology/fabric_iq_ontology.json`
+- `config/ontology-config.json`
+
 ## Project Description
 This repository provides a complete **demo blueprint** for implementing an **Employee Knowledge Graph** use case with **Microsoft Fabric IQ**.
 
@@ -37,9 +67,6 @@ It includes:
 - OneLake semantic model definitions and ontology mapping
 - Fabric Data Agent prompt pack with citation-ready prompts
 - Ionic/Angular/TypeScript UI scaffold with responsive layouts and document browsing
-
-## Architecture
-![Architecture Diagram](docs/architecture-diagram.svg)
 
 ## Folder Structure
 ```text
@@ -66,10 +93,10 @@ It includes:
 ├── scripts/
 │   └── generate_employee_files.py
 ├── docs/
-│   ├── architecture-diagram.svg
-│   ├── data-pipeline-diagram.svg
-│   ├── semantic-model-erd.svg
-│   ├── ontology-diagram.svg
+│   ├── architecture-diagram.png
+│   ├── data-pipeline-diagram.png
+│   ├── semantic-model-erd.png
+│   ├── ontology-diagram.png
 │   ├── prompts.txt
 │   └── ui-preview.html
 ├── fabric/
@@ -112,7 +139,7 @@ All platform endpoints and runtime options are centralized in `/config`:
 | Azure AI Search Endpoint | https://aisearch-poc-myaacoub.search.windows.net | `config/endpoints.json` (`azure.aiSearchEndpoint`) |
 | Azure Foundry Project Endpoint | https://002-ai-poc-private.services.ai.azure.com/api/projects/proj-default | `config/endpoints.json` (`azure.foundryProjectEndpoint`) |
 | Fabric IQ Ontology Artifact | [fabric/ontology/fabric_iq_ontology.json](fabric/ontology/fabric_iq_ontology.json) | Repository artifact |
-| Fabric Ontology Diagram | [docs/ontology-diagram.svg](docs/ontology-diagram.svg) | Repository documentation |
+| Fabric Ontology Diagram | [docs/ontology-diagram.png](docs/ontology-diagram.png) | Repository documentation |
 | Teams Developer Portal | https://dev.teams.microsoft.com | `config/endpoints.json` (`integration.teamsDevPortalUrl`) |
 | Copilot Studio | https://copilotstudio.microsoft.com | `config/endpoints.json` (`integration.copilotStudioUrl`) |
 
@@ -152,16 +179,6 @@ python scripts/generate_employee_files.py
 ## Upload Workflow – Datasource Ingestion
 `.github/workflows/upload-employee-assets.yml` uploads all generated employee assets from `data/employees/` to Azure Blob Storage.
 
-## Data Pipeline in Microsoft Fabric
-![Data Pipeline Diagram](docs/data-pipeline-diagram.svg)
-
-Flow summary:
-1. Ingest from Azure Blob/File into OneLake staging
-2. Run classification/parsing with Document Intelligence
-3. Persist parse JSON to Cosmos DB
-4. Load curated data into OneLake
-5. Refresh semantic model for analytics and agent experiences
-
 ## Document Intelligence & Confidence Scoring
 Parsed output is persisted in `data/parsed_documents_cosmosdb.json`.
 
@@ -171,19 +188,6 @@ Each document record includes:
 - `sectionConfidence.content`
 - `sectionConfidence.entities`
 - employee ownership and classification category
-
-## Semantic Model & ERD
-![Semantic Model ERD](docs/semantic-model-erd.svg)
-
-Semantic model definition:
-- `fabric/semantic-model/employee_knowledge_semantic_model.json`
-
-## Fabric IQ Ontology
-![Ontology Diagram](docs/ontology-diagram.svg)
-
-Ontology artifacts:
-- `fabric/ontology/fabric_iq_ontology.json`
-- `config/ontology-config.json`
 
 ## Fabric Data Agent
 Agent package metadata:
