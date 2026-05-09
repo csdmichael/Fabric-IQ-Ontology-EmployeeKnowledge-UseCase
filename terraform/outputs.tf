@@ -15,6 +15,11 @@ output "ui_app_service_url" {
   description = "Public URL of the newly provisioned UI App Service."
 }
 
+output "api_app_service_url" {
+  value       = "https://${azurerm_linux_web_app.api.default_hostname}"
+  description = "Public URL of the newly provisioned dedicated API App Service."
+}
+
 output "monitor_action_group_id" {
   value       = azurerm_monitor_action_group.sre.id
   description = "Resource ID of the SRE action group used by all Azure Monitor alerts."
