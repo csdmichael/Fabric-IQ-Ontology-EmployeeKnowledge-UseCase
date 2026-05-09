@@ -154,7 +154,7 @@ All platform endpoints and runtime options are centralized in `/config`:
 | Component | URL / Link | Source |
 |---|---|---|
 | UI Web App | https://fabric-iq-emp-knowledge-ui.azurewebsites.net | `config/endpoints.json` (`hosting.uiPublicUrl`) |
-| API Web App | https://foundry-privatevnet-api.azurewebsites.net | `config/endpoints.json` (`hosting.apiUrl`) |
+| API Web App | https://fabric-iq-emp-knowledge-api.azurewebsites.net | `config/endpoints.json` (`hosting.apiUrl`) |
 | API Management Gateway | https://ai-gateway-apim-poc-my.azure-api.net | `config/endpoints.json` (`azure.apiManagementGateway`) |
 | Azure Blob Storage Endpoint | https://aistoragemyaacoub.blob.core.windows.net | `config/endpoints.json` (`azure.blobStorageEndpoint`) |
 | Azure File Storage Endpoint | https://aistoragemyaacoub.file.core.windows.net | `config/endpoints.json` (`azure.fileStorageEndpoint`) |
@@ -263,7 +263,7 @@ This repository now includes reusable hosting/network metadata under:
 Configured references include:
 - Resource group: `ai-myaacoub`
 - UI web app: `fabric-iq-emp-knowledge-ui` (new, dedicated, public) — reuses `plan-taxforms` App Service Plan
-- API web app: `foundry-privatevnet-api`
+- API web app: `fabric-iq-emp-knowledge-api` (new, dedicated, private) — reuses `plan-taxforms` App Service Plan
 - APIM: `ai-gateway-apim-poc-my`
 - AI Search: `aisearch-poc-myaacoub`
 - Foundry account: `002-ai-poc-private`
