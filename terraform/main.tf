@@ -79,18 +79,23 @@ resource "azurerm_cosmosdb_sql_container" "incidents" {
   }
 }
 
-# ── App Service Plan (reuse existing plan-taxforms in westus2) ──────────────
-data "azurerm_service_plan" "main" {
-  name                = "plan-taxforms"
+# ── App Service Plan (dedicated B3 plan for Fabric IQ apps) ────────────────
+resource "azurerm_service_plan" "main" {
+  name                = var.app_service_plan_name
   resource_group_name = data.azurerm_resource_group.main.name
+  location            = var.app_service_plan_location
+  os_type             = "Linux"
+  sku_name            = var.app_service_plan_sku
+
+  tags = var.tags
 }
 
 # ── UI App Service ─────────────────────────────────────────────────────────
 resource "azurerm_linux_web_app" "ui" {
   name                = var.ui_app_service_name
   resource_group_name = data.azurerm_resource_group.main.name
-  location            = data.azurerm_service_plan.main.location
-  service_plan_id     = data.azurerm_service_plan.main.id
+  location            = azurerm_service_plan.main.location
+  service_plan_id     = azurerm_service_plan.main.id
 
   site_config {
     always_on = false
@@ -113,12 +118,12 @@ resource "azurerm_linux_web_app" "ui" {
 resource "azurerm_linux_web_app" "api" {
   name                = var.api_app_service_name
   resource_group_name = data.azurerm_resource_group.main.name
-  location            = data.azurerm_service_plan.main.location
-  service_plan_id     = data.azurerm_service_plan.main.id
+  location            = azurerm_service_plan.main.location
+  service_plan_id     = azurerm_service_plan.main.id
 
   site_config {
     always_on         = false
-    app_command_line  = "python api/server.py"
+    app_command_line  = "cd /home/site/wwwroot && python -u api/server.py"
 
     application_stack {
       python_version = "3.12"

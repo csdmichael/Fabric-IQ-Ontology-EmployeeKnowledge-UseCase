@@ -16,9 +16,9 @@
       "notes": "Dedicated API app service for Fabric IQ Employee Knowledge demo in ai-myaacoub."
     },
     "appServicePlan": {
-      "name": "plan-fabriciq-demo",
-      "sku": "B1",
-      "notes": "Terraform-managed Linux B1 plan in ai-myaacoub."
+      "name": "plan-fabriciq-b3",
+      "sku": "B3",
+      "notes": "Terraform-managed dedicated Linux B3 plan in ai-myaacoub for fabric-iq-emp-knowledge-ui and fabric-iq-emp-knowledge-api."
     },
     "apiManagement": {
       "name": "ai-gateway-apim-poc-my",

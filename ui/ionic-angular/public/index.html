@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fabric IQ – Employee Knowledge</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@8/css/ionic.bundle.css">
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@8/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@8/dist/ionic/ionic.js"></script>
+  <style>
+    :root { --ion-color-primary: #0078d4; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .kpi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px,1fr)); gap: 12px; margin: 16px 0; }
+    .kpi-card { background: #fff; border: 1px solid #d0d7de; border-radius: 8px; padding: 16px; text-align: center; }
+    .kpi-card .num { font-size: 2rem; font-weight: 700; color: var(--ion-color-primary); }
+    .kpi-card .label { font-size: .85rem; color: #555; margin-top: 4px; }
+    .page { display: none; padding: 16px; }
+    .page.active { display: block; }
+    table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+    th, td { padding: 8px 10px; border-bottom: 1px solid #e8e8e8; text-align: left; }
+    th { background: #f6f8fb; font-weight: 600; position: sticky; top: 0; }
+    tr:hover { background: #f0f6ff; cursor: pointer; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: .8rem; font-weight: 600; }
+    .badge-high { background: #e6f4ea; color: #1e7e34; }
+    .badge-mid  { background: #fff3cd; color: #856404; }
+    .badge-low  { background: #f8d7da; color: #721c24; }
+    .detail-panel { background: #fff; border: 1px solid #d0d7de; border-radius: 8px; padding: 16px; margin-top: 12px; }
+    .chip { display: inline-block; background: #e8f0fe; color: #1a73e8; padding: 2px 10px; border-radius: 12px; font-size: .8rem; margin: 2px; }
+    .prompt-card { background: #fff; border: 1px solid #d0d7de; border-radius: 8px; padding: 14px; margin: 8px 0; }
+    .prompt-card .num { color: var(--ion-color-primary); font-weight: 700; margin-right: 8px; }
+    #loading { text-align: center; padding: 40px; color: #888; }
+    .error-banner { background: #fde8e8; color: #c62828; padding: 10px 16px; border-radius: 6px; margin: 12px 0; }
+    .pagination { display: flex; align-items: center; gap: 12px; margin: 12px 0; }
+    .search-bar { margin: 12px 0; }
+    .search-bar input { width: 100%; padding: 10px; border: 1px solid #d0d7de; border-radius: 6px; font-size: .95rem; }
+  </style>
+</head>
+<body>
+  <ion-app>
+    <ion-split-pane content-id="main" when="md">
+      <ion-menu content-id="main">
+        <ion-header>
+          <ion-toolbar color="primary">
+            <ion-title>Fabric IQ</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <ion-list id="nav-list">
+            <ion-list-header>Source Data</ion-list-header>
+            <ion-item button onclick="navigate('dashboard')" class="nav-item active">
+              <ion-icon name="grid-outline" slot="start"></ion-icon>
+              <ion-label>Dashboard</ion-label>
+            </ion-item>
+            <ion-item button onclick="navigate('employees')">
+              <ion-icon name="people-outline" slot="start"></ion-icon>
+              <ion-label>Employees</ion-label>
+            </ion-item>
+            <ion-item button onclick="navigate('projects')">
+              <ion-icon name="folder-outline" slot="start"></ion-icon>
+              <ion-label>Projects</ion-label>
+            </ion-item>
+            <ion-item button onclick="navigate('org-chart')">
+              <ion-icon name="business-outline" slot="start"></ion-icon>
+              <ion-label>Org Structure</ion-label>
+            </ion-item>
+            <ion-list-header>Reports &amp; Dashboards</ion-list-header>
+            <ion-item button onclick="navigate('powerbi')">
+              <ion-icon name="bar-chart-outline" slot="start"></ion-icon>
+              <ion-label>Power BI Reports</ion-label>
+            </ion-item>
+            <ion-list-header>AI Agents</ion-list-header>
+            <ion-item button onclick="navigate('agent-prompts')">
+              <ion-icon name="chatbubbles-outline" slot="start"></ion-icon>
+              <ion-label>Agent Prompts</ion-label>
+            </ion-item>
+            <ion-item button onclick="navigate('config')">
+              <ion-icon name="settings-outline" slot="start"></ion-icon>
+              <ion-label>Config &amp; Endpoints</ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-menu>
+      <div class="ion-page" id="main">
+        <ion-header>
+          <ion-toolbar color="primary">
+            <ion-buttons slot="start"><ion-menu-button></ion-menu-button></ion-buttons>
+            <ion-title id="page-title">Dashboard</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+
+          <!-- DASHBOARD -->
+          <div id="page-dashboard" class="page active">
+            <div id="loading">Loading data…</div>
+            <div id="dashboard-content" style="display:none">
+              <div class="kpi-grid" id="kpi-grid"></div>
+              <div class="detail-panel">
+                <h3>Fabric Workspace</h3>
+                <p id="fabric-info"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- EMPLOYEES -->
+          <div id="page-employees" class="page">
+            <div class="search-bar"><input id="emp-search" placeholder="Search by name, ID, department, or skill…" oninput="filterEmployees()"></div>
+            <div id="emp-table-wrap"></div>
+            <div class="pagination" id="emp-pagination"></div>
+            <div class="detail-panel" id="emp-detail" style="display:none"></div>
+          </div>
+
+          <!-- PROJECTS -->
+          <div id="page-projects" class="page">
+            <div class="search-bar"><input id="proj-search" placeholder="Search projects…" oninput="filterProjects()"></div>
+            <div id="proj-table-wrap"></div>
+          </div>
+
+          <!-- ORG CHART -->
+          <div id="page-org-chart" class="page">
+            <div id="org-tree"></div>
+          </div>
+
+          <!-- POWERBI -->
+          <div id="page-powerbi" class="page">
+            <div id="pbi-list"></div>
+          </div>
+
+          <!-- AGENT PROMPTS -->
+          <div id="page-agent-prompts" class="page">
+            <h3>Employee Knowledge Agent – Sample Prompts</h3>
+            <div id="prompts-list"></div>
+          </div>
+
+          <!-- CONFIG -->
+          <div id="page-config" class="page">
+            <h3>Endpoint Configuration</h3>
+            <pre id="config-json" style="background:#f6f8fb;padding:16px;border-radius:8px;overflow:auto;font-size:.85rem"></pre>
+          </div>
+
+        </ion-content>
+      </div>
+    </ion-split-pane>
+  </ion-app>
+
+<script>
+const API = window.location.hostname.includes('ui')
+  ? window.location.origin.replace('-ui', '-api')
+  : (window.location.origin.replace(/:\d+$/, '') + ':8080');
+
+let data = {};
+
+async function fetchJson(path) {
+  const r = await fetch(`${API}${path}`);
+  if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
+  return r.json();
+}
+
+async function loadAll() {
+  try {
+    const [summary, employees, contributions, projects, orgHierarchy, reports, config] = await Promise.all([
+      fetchJson('/api/summary'),
+      fetchJson('/api/employees'),
+      fetchJson('/api/contributions'),
+      fetchJson('/api/projects'),
+      fetchJson('/api/org-hierarchy'),
+      fetchJson('/api/powerbi-reports'),
+      fetchJson('/api/config/endpoints'),
+    ]);
+    data = { summary, employees, contributions, projects, orgHierarchy, reports, config };
+    renderDashboard();
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('dashboard-content').style.display = '';
+  } catch (e) {
+    document.getElementById('loading').innerHTML = `<div class="error-banner">Failed to load: ${e.message}<br>API: ${API}</div>`;
+  }
+}
+
+function renderDashboard() {
+  const s = data.summary;
+  const kpis = [
+    { num: s.employees, label: 'Employees' },
+    { num: s.digitalAssets, label: 'Digital Assets' },
+    { num: s.contributions, label: 'Contributions' },
+    { num: s.projects, label: 'Projects' },
+    { num: s.powerBiReports, label: 'Power BI Reports' },
+    { num: s.parsedDocuments, label: 'Parsed Docs' },
+  ];
+  document.getElementById('kpi-grid').innerHTML = kpis.map(k =>
+    `<div class="kpi-card"><div class="num">${k.num}</div><div class="label">${k.label}</div></div>`
+  ).join('');
+  const cfg = data.config;
+  document.getElementById('fabric-info').innerHTML =
+    `Workspace: <code>${cfg.microsoftFabric?.workspaceId || '—'}</code><br>` +
+    `Lakehouse: <code>${cfg.microsoftFabric?.lakehouseId || '—'}</code><br>` +
+    `Pipeline: <code>${cfg.microsoftFabric?.pipelineId || '—'}</code><br>` +
+    `Semantic Model: <code>${cfg.microsoftFabric?.semanticModelId || '—'}</code><br>` +
+    `Data Agent: <code>${cfg.microsoftFabric?.dataAgentId || '—'}</code>`;
+}
+
+/* EMPLOYEES */
+let empPage = 1;
+const EMP_PAGE_SIZE = 20;
+let filteredEmps = [];
+
+function filterEmployees() {
+  const q = (document.getElementById('emp-search').value || '').toLowerCase();
+  filteredEmps = data.employees.filter(e =>
+    !q || [e.displayName, e.employeeId, e.department, e.role, ...(e.skills||[])].some(v => (v||'').toLowerCase().includes(q))
+  );
+  empPage = 1;
+  renderEmployees();
+}
+
+function renderEmployees() {
+  if (!filteredEmps.length) filteredEmps = data.employees || [];
+  const start = (empPage - 1) * EMP_PAGE_SIZE;
+  const page = filteredEmps.slice(start, start + EMP_PAGE_SIZE);
+  const totalPages = Math.max(1, Math.ceil(filteredEmps.length / EMP_PAGE_SIZE));
+
+  document.getElementById('emp-table-wrap').innerHTML = `
+    <table>
+      <thead><tr><th>Name</th><th>Department</th><th>Role</th><th>Location</th><th>Score</th></tr></thead>
+      <tbody>${page.map(e => {
+        const c = (data.contributions || []).find(x => x.employeeId === e.employeeId);
+        const score = c ? c.contributionScore : '—';
+        const cls = score >= 80 ? 'badge-high' : score >= 50 ? 'badge-mid' : 'badge-low';
+        return `<tr onclick="showEmployee('${e.employeeId}')">
+          <td><strong>${e.displayName}</strong><br><small>${e.employeeId}</small></td>
+          <td>${e.department}</td><td>${e.role}</td><td>${e.location}</td>
+          <td><span class="badge ${cls}">${score}</span></td></tr>`;
+      }).join('')}</tbody>
+    </table>`;
+
+  document.getElementById('emp-pagination').innerHTML =
+    `<button onclick="empPage=Math.max(1,empPage-1);renderEmployees()" ${empPage<=1?'disabled':''}>← Prev</button>` +
+    `<span>Page ${empPage} / ${totalPages} (${filteredEmps.length} employees)</span>` +
+    `<button onclick="empPage=Math.min(${totalPages},empPage+1);renderEmployees()" ${empPage>=totalPages?'disabled':''}>Next →</button>`;
+}
+
+function showEmployee(id) {
+  const e = data.employees.find(x => x.employeeId === id);
+  const c = (data.contributions||[]).find(x => x.employeeId === id);
+  if (!e) return;
+  const panel = document.getElementById('emp-detail');
+  panel.style.display = '';
+  panel.innerHTML = `
+    <h3>${e.displayName} <small>(${e.employeeId})</small></h3>
+    <p><strong>Department:</strong> ${e.department} | <strong>Role:</strong> ${e.role} | <strong>Location:</strong> ${e.location}</p>
+    <p><strong>Skills:</strong> ${(e.skills||[]).map(s => `<span class="chip">${s}</span>`).join(' ')}</p>
+    ${c ? `<p><strong>Score:</strong> ${c.contributionScore} | <strong>Projects:</strong> ${c.projectCount} | <strong>Assets:</strong> ${c.assetCount}</p>` : ''}`;
+}
+
+/* PROJECTS */
+function filterProjects() {
+  const q = (document.getElementById('proj-search').value || '').toLowerCase();
+  const list = (data.projects || []).filter(p =>
+    !q || [p.name, p.projectId, p.department, p.status].some(v => (v||'').toLowerCase().includes(q))
+  );
+  document.getElementById('proj-table-wrap').innerHTML = `
+    <table>
+      <thead><tr><th>Name</th><th>Department</th><th>Status</th><th>Team Size</th><th>Start</th></tr></thead>
+      <tbody>${list.map(p =>
+        `<tr><td><strong>${p.name}</strong><br><small>${p.projectId}</small></td>
+         <td>${p.department}</td><td>${p.status}</td><td>${(p.employeeIds||[]).length}</td><td>${p.startDate||''}</td></tr>`
+      ).join('')}</tbody>
+    </table>`;
+}
+
+/* ORG */
+function renderOrg() {
+  const tree = (data.orgHierarchy || []);
+  function renderNode(node, depth) {
+    return `<div style="margin-left:${depth*24}px;padding:6px 0;border-bottom:1px solid #eee">
+      <strong>${node.displayName || node.employeeId}</strong>
+      <small style="color:#666"> – ${node.department || ''} / ${node.role || ''}</small>
+      ${(node.directReports||[]).map(c => renderNode(c, depth+1)).join('')}
+    </div>`;
+  }
+  document.getElementById('org-tree').innerHTML = tree.map(n => renderNode(n, 0)).join('');
+}
+
+/* POWERBI */
+function renderPowerBI() {
+  const list = data.reports || [];
+  document.getElementById('pbi-list').innerHTML = list.map(r =>
+    `<div class="detail-panel" style="margin:8px 0">
+      <h4>${r.reportName || r.reportId}</h4>
+      <p>${r.description || ''}</p>
+      <small>Dataset: ${r.datasetId || '—'} | Created: ${r.createdDate || '—'}</small>
+    </div>`
+  ).join('');
+}
+
+/* PROMPTS */
+function renderPrompts() {
+  const agent = data.config?.microsoftFabric ? data : null;
+  // Load agent prompts from embedded data
+  const prompts = [
+    "Show all assets for EMP014 and average confidence score by format.",
+    "Which department has the lowest average document confidence this month?",
+    "List employees with OneNote assets containing safety-related terms.",
+    "Find managers with more than 20 direct and indirect reports.",
+    "Show top 10 employees by number of parsed documents.",
+    "What are the most common document categories in R&D?",
+    "Get all emails mentioning procurement delays and owner employees.",
+    "Compare confidence scores between PDF and DOCX for Operations.",
+    "List employees who own at least one PPTX and one OneNote document.",
+    "Find assets with confidence below 0.70 and suggest reprocessing order.",
+    "Show org hierarchy path for EMP077.",
+    "Which skills correlate with high confidence parsing results?",
+    "Display all documents mapped to project codenames in Engineering.",
+    "Find stale assets not modified in the last 120 days.",
+    "Show confidence rollup by section metadata/content/entities.",
+    "List all assets loaded to OneLake but missing Cosmos DB parse results.",
+    "Identify employees with cross-department collaboration emails.",
+    "Show average confidence trend by week for Finance.",
+    "Find top 5 entities extracted from OneNote records.",
+    "Generate briefing summary for manager EMP004 team knowledge assets."
+  ];
+  document.getElementById('prompts-list').innerHTML = prompts.map((p, i) =>
+    `<div class="prompt-card"><span class="num">#${i+1}</span>${p}</div>`
+  ).join('');
+}
+
+/* NAVIGATION */
+function navigate(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(`page-${page}`).classList.add('active');
+  document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+  const titles = { dashboard:'Dashboard', employees:'Employees', projects:'Projects',
+    'org-chart':'Org Structure', powerbi:'Power BI Reports', 'agent-prompts':'Agent Prompts', config:'Config & Endpoints' };
+  document.getElementById('page-title').textContent = titles[page] || page;
+
+  if (page === 'employees') { filteredEmps = data.employees || []; renderEmployees(); }
+  if (page === 'projects') filterProjects();
+  if (page === 'org-chart') renderOrg();
+  if (page === 'powerbi') renderPowerBI();
+  if (page === 'agent-prompts') renderPrompts();
+  if (page === 'config') document.getElementById('config-json').textContent = JSON.stringify(data.config, null, 2);
+}
+
+loadAll();
+</script>
+</body>
+</html>

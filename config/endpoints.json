@@ -3,7 +3,7 @@
     "blobStorageEndpoint": "https://aistoragemyaacoub.blob.core.windows.net",
     "fileStorageEndpoint": "https://aistoragemyaacoub.file.core.windows.net",
     "cosmosDbEndpoint": "https://cosmos-ai-poc.documents.azure.com:443/",
-    "documentIntelligenceEndpoint": "https://{docIntelResource}.cognitiveservices.azure.com/",
+    "documentIntelligenceEndpoint": "https://doc-intelligence-poc-my.cognitiveservices.azure.com/",
     "aiSearchEndpoint": "https://aisearch-poc-myaacoub.search.windows.net",
     "apiManagementGateway": "https://ai-gateway-apim-poc-my.azure-api.net",
     "foundryProjectEndpoint": "https://002-ai-poc-private.services.ai.azure.com/api/projects/proj-default"
@@ -12,9 +12,9 @@
     "workspaceId": "38362838-0531-4215-89af-a8a79221b545",
     "lakehouseId": "d11b209f-c774-481e-adcb-79920a94fd20",
     "capacityId": "6dc14689-95f7-416c-b542-a4a4819107df",
-    "pipelineId": "{fabricPipelineId}",
-    "semanticModelId": "{fabricSemanticModelId}",
-    "dataAgentId": "{fabricDataAgentId}"
+    "pipelineId": "944b78ab-c7da-465b-9559-c3461be2e11e",
+    "semanticModelId": "21e0a7be-1e7d-4110-8faa-d835f81c6559",
+    "dataAgentId": "bfe47d80-4ace-45b5-847b-0e7a68fff316"
   },
   "integration": {
     "teamsDevPortalUrl": "https://dev.teams.microsoft.com/apps",

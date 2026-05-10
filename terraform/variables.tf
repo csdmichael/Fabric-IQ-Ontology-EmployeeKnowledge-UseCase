@@ -43,6 +43,24 @@ variable "api_app_service_name" {
   description = "Name of the API App Service."
 }
 
+variable "app_service_plan_name" {
+  type        = string
+  description = "Name of the dedicated App Service plan for Fabric IQ UI/API."
+  default     = "plan-fabriciq-b3"
+}
+
+variable "app_service_plan_sku" {
+  type        = string
+  description = "SKU for the dedicated App Service plan for Fabric IQ UI/API."
+  default     = "B3"
+}
+
+variable "app_service_plan_location" {
+  type        = string
+  description = "Location for the dedicated App Service plan. Must match the web apps' region."
+  default     = "westus2"
+}
+
 variable "tags" {
   type        = map(string)
   description = "Tags applied to all resources."
