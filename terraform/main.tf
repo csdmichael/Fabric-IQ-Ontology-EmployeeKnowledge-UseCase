@@ -1,16 +1,17 @@
-resource "azurerm_resource_group" "main" {
-  name     = var.resource_group_name
-  location = var.location
-  tags     = var.tags
+# ── Existing Resource Group (ai-myaacoub) ──────────────────────────────────
+data "azurerm_resource_group" "main" {
+  name = var.resource_group_name
 }
 
+# ── Storage Account ────────────────────────────────────────────────────────
 resource "azurerm_storage_account" "main" {
-  name                     = var.storage_account_name
-  resource_group_name      = azurerm_resource_group.main.name
-  location                 = azurerm_resource_group.main.location
-  account_tier             = "Standard"
-  account_replication_type = "LRS"
-  min_tls_version          = "TLS1_2"
+  name                          = var.storage_account_name
+  resource_group_name           = data.azurerm_resource_group.main.name
+  location                      = data.azurerm_resource_group.main.location
+  account_tier                  = "Standard"
+  account_replication_type      = "LRS"
+  min_tls_version               = "TLS1_2"
+  shared_access_key_enabled     = true
 
   tags = var.tags
 }
@@ -27,10 +28,11 @@ resource "azurerm_storage_container" "processed" {
   container_access_type = "private"
 }
 
+# ── Cosmos DB ──────────────────────────────────────────────────────────────
 resource "azurerm_cosmosdb_account" "main" {
   name                = var.cosmos_account_name
-  location            = azurerm_resource_group.main.location
-  resource_group_name = azurerm_resource_group.main.name
+  location            = data.azurerm_resource_group.main.location
+  resource_group_name = data.azurerm_resource_group.main.name
   offer_type          = "Standard"
   kind                = "GlobalDocumentDB"
 
@@ -39,8 +41,9 @@ resource "azurerm_cosmosdb_account" "main" {
   }
 
   geo_location {
-    location          = azurerm_resource_group.main.location
+    location          = data.azurerm_resource_group.main.location
     failover_priority = 0
+    zone_redundant    = false
   }
 
   tags = var.tags
@@ -48,13 +51,13 @@ resource "azurerm_cosmosdb_account" "main" {
 
 resource "azurerm_cosmosdb_sql_database" "main" {
   name                = var.cosmos_database_name
-  resource_group_name = azurerm_resource_group.main.name
+  resource_group_name = data.azurerm_resource_group.main.name
   account_name        = azurerm_cosmosdb_account.main.name
 }
 
 resource "azurerm_cosmosdb_sql_container" "parsed_documents" {
   name                = var.cosmos_container_name
-  resource_group_name = azurerm_resource_group.main.name
+  resource_group_name = data.azurerm_resource_group.main.name
   account_name        = azurerm_cosmosdb_account.main.name
   database_name       = azurerm_cosmosdb_sql_database.main.name
   partition_key_paths = ["/employeeId"]
@@ -64,27 +67,32 @@ resource "azurerm_cosmosdb_sql_container" "parsed_documents" {
   }
 }
 
-# ── UI App Service (new, dedicated) ────────────────────────────────────────
-# Looks up the existing App Service Plan in ai-myaacoub (not managed by this
-# Terraform workspace) and creates a new web app that shares it.
-data "azurerm_resource_group" "ui" {
-  name = var.ui_resource_group_name
+resource "azurerm_cosmosdb_sql_container" "incidents" {
+  name                = "Incidents"
+  resource_group_name = data.azurerm_resource_group.main.name
+  account_name        = azurerm_cosmosdb_account.main.name
+  database_name       = azurerm_cosmosdb_sql_database.main.name
+  partition_key_paths = ["/alertRule"]
+
+  indexing_policy {
+    indexing_mode = "consistent"
+  }
 }
 
-data "azurerm_service_plan" "ui" {
-  name                = var.ui_app_service_plan_name
-  resource_group_name = data.azurerm_resource_group.ui.name
+# ── App Service Plan (reuse existing plan-taxforms in westus2) ──────────────
+data "azurerm_service_plan" "main" {
+  name                = "plan-taxforms"
+  resource_group_name = data.azurerm_resource_group.main.name
 }
 
+# ── UI App Service ─────────────────────────────────────────────────────────
 resource "azurerm_linux_web_app" "ui" {
   name                = var.ui_app_service_name
-  resource_group_name = data.azurerm_resource_group.ui.name
-  location            = data.azurerm_resource_group.ui.location
-  service_plan_id     = data.azurerm_service_plan.ui.id
+  resource_group_name = data.azurerm_resource_group.main.name
+  location            = data.azurerm_service_plan.main.location
+  service_plan_id     = data.azurerm_service_plan.main.id
 
   site_config {
-    # always_on = false is appropriate for this demo environment to stay within
-    # the B1 SKU free quota. Set to true for production workloads to eliminate cold starts.
     always_on = false
 
     application_stack {
@@ -102,24 +110,12 @@ resource "azurerm_linux_web_app" "ui" {
   tags = var.tags
 }
 
-# ── API App Service (new, dedicated) ───────────────────────────────────────
-# Looks up the existing App Service Plan (not managed by this Terraform
-# workspace) and creates a new web app for the Fabric IQ API. This does NOT
-# touch the pre-existing foundry-privatevnet-api app that hosts other workloads.
-data "azurerm_resource_group" "api" {
-  name = var.api_resource_group_name
-}
-
-data "azurerm_service_plan" "api" {
-  name                = var.api_app_service_plan_name
-  resource_group_name = data.azurerm_resource_group.api.name
-}
-
+# ── API App Service ────────────────────────────────────────────────────────
 resource "azurerm_linux_web_app" "api" {
   name                = var.api_app_service_name
-  resource_group_name = data.azurerm_resource_group.api.name
-  location            = data.azurerm_resource_group.api.location
-  service_plan_id     = data.azurerm_service_plan.api.id
+  resource_group_name = data.azurerm_resource_group.main.name
+  location            = data.azurerm_service_plan.main.location
+  service_plan_id     = data.azurerm_service_plan.main.id
 
   site_config {
     always_on = false
@@ -138,3 +134,12 @@ resource "azurerm_linux_web_app" "api" {
 
   tags = var.tags
 }
+
+# ── Microsoft Fabric Workspace ─────────────────────────────────────────────
+# Fabric workspaces are managed via the Fabric REST API (not ARM). After
+# terraform apply, create the workspace with:
+#   az rest --method POST \
+#     --url "https://api.fabric.microsoft.com/v1/workspaces" \
+#     --body '{"displayName":"Fabric IQ – Employee Knowledge","capacityId":"<GUID>","description":"..."}'
+# Then create OneLake lakehouse, semantic model, Power BI reports, and dashboards
+# via the Fabric portal or REST API.

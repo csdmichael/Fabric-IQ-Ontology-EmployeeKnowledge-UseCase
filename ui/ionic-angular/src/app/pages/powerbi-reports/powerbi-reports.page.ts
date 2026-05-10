@@ -38,7 +38,7 @@ export class PowerBIReportsPage {
   }
 
   async initialize(): Promise<void> {
-    const reports = await this.readJson<PowerBIReport[]>('/data/powerbi_reports.json');
+    const reports = await this.readJson<PowerBIReport[]>('/fabric/powerbi/powerbi_reports.json');
     this.reports = reports;
     this.filteredReports = [...reports];
     this.departments = [...new Set(reports.map((r) => r.department))].sort();

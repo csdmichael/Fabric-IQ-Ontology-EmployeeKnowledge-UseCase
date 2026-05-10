@@ -102,6 +102,7 @@ It includes:
 │   ├── org_hierarchy.json
 │   ├── projects.json
 │   ├── parsed_documents_cosmosdb.json
+│   ├── contributions.json
 │   ├── storage_map.json
 │   └── employees/
 ├── api/
@@ -129,6 +130,8 @@ It includes:
 │   ├── ontology/
 │   ├── agents/
 │   └── powerbi/
+│       ├── powerbi_reports.json
+│       └── employee_knowledge_dashboards.json
 ├── ui/
 │   └── ionic-angular/
 ├── terraform/
@@ -330,7 +333,7 @@ Preview page:
 | File | Description |
 |---|---|
 | `data/contributions.json` | Per-employee contribution metrics: score (varied 30–99), tier (star/average/low), project counts, asset counts, commits, emails, mentoring sessions. |
-| `data/powerbi_reports.json` | 8 Power BI report definitions with embed URLs, dataset/workspace IDs, refresh schedules, and tags. |
+| `fabric/powerbi/powerbi_reports.json` | 8 Power BI report definitions with embed URLs, dataset/workspace IDs, refresh schedules, and tags. |
 | `fabric/powerbi/employee_knowledge_dashboards.json` | 5 dashboard definitions mapped to Power BI report IDs and dataset bindings for Fabric workspace analytics. |
 
 ## UI Troubleshooting (Why UI May Not Render)

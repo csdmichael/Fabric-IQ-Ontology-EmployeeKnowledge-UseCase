@@ -16,7 +16,7 @@
     "dataAgentId": "{fabricDataAgentId}"
   },
   "integration": {
-    "teamsDevPortalUrl": "https://dev.teams.microsoft.com",
+    "teamsDevPortalUrl": "https://dev.teams.microsoft.com/apps",
     "copilotStudioUrl": "https://copilotstudio.microsoft.com"
   },
   "hosting": {

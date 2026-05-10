@@ -1,18 +1,16 @@
 # ── Azure Monitor – Log Analytics Workspace ──────────────────────────────────
-# Reuses the existing Log Analytics workspace in ai-myaacoub when one is
-# provided; otherwise creates a new workspace scoped to this demo deployment.
 
 data "azurerm_log_analytics_workspace" "sre" {
   count               = var.existing_log_analytics_workspace_name != "" ? 1 : 0
   name                = var.existing_log_analytics_workspace_name
-  resource_group_name = var.monitor_resource_group_name
+  resource_group_name = data.azurerm_resource_group.main.name
 }
 
 resource "azurerm_log_analytics_workspace" "main" {
   count               = var.existing_log_analytics_workspace_name != "" ? 0 : 1
   name                = "law-fabriciq-emp-knowledge"
-  location            = azurerm_resource_group.main.location
-  resource_group_name = azurerm_resource_group.main.name
+  location            = data.azurerm_resource_group.main.location
+  resource_group_name = data.azurerm_resource_group.main.name
   sku                 = "PerGB2018"
   retention_in_days   = 30
   tags                = var.tags
@@ -26,13 +24,11 @@ locals {
   )
 }
 
-# ── Action Group – reuse existing SRE agent notification group ────────────────
-# Points alerts to the shared SRE webhook and email DL already active in
-# ai-myaacoub.  The short-name is limited to 12 characters by the Azure API.
+# ── Action Group ──────────────────────────────────────────────────────────────
 
 resource "azurerm_monitor_action_group" "sre" {
   name                = "ag-fabriciq-sre"
-  resource_group_name = var.monitor_resource_group_name
+  resource_group_name = data.azurerm_resource_group.main.name
   short_name          = "fab-iq-sre"
   tags                = var.tags
 
@@ -62,17 +58,9 @@ resource "azurerm_monitor_diagnostic_setting" "storage" {
   target_resource_id         = "${azurerm_storage_account.main.id}/blobServices/default"
   log_analytics_workspace_id = local.log_analytics_workspace_id
 
-  enabled_log {
-    category = "StorageRead"
-  }
-
-  enabled_log {
-    category = "StorageWrite"
-  }
-
-  enabled_log {
-    category = "StorageDelete"
-  }
+  enabled_log { category = "StorageRead" }
+  enabled_log { category = "StorageWrite" }
+  enabled_log { category = "StorageDelete" }
 
   metric {
     category = "Transaction"
@@ -87,21 +75,10 @@ resource "azurerm_monitor_diagnostic_setting" "cosmos" {
   target_resource_id         = azurerm_cosmosdb_account.main.id
   log_analytics_workspace_id = local.log_analytics_workspace_id
 
-  enabled_log {
-    category = "DataPlaneRequests"
-  }
-
-  enabled_log {
-    category = "QueryRuntimeStatistics"
-  }
-
-  enabled_log {
-    category = "PartitionKeyStatistics"
-  }
-
-  enabled_log {
-    category = "ControlPlaneRequests"
-  }
+  enabled_log { category = "DataPlaneRequests" }
+  enabled_log { category = "QueryRuntimeStatistics" }
+  enabled_log { category = "PartitionKeyStatistics" }
+  enabled_log { category = "ControlPlaneRequests" }
 
   metric {
     category = "Requests"
@@ -116,17 +93,9 @@ resource "azurerm_monitor_diagnostic_setting" "ui_app" {
   target_resource_id         = azurerm_linux_web_app.ui.id
   log_analytics_workspace_id = local.log_analytics_workspace_id
 
-  enabled_log {
-    category = "AppServiceHTTPLogs"
-  }
-
-  enabled_log {
-    category = "AppServiceConsoleLogs"
-  }
-
-  enabled_log {
-    category = "AppServiceAppLogs"
-  }
+  enabled_log { category = "AppServiceHTTPLogs" }
+  enabled_log { category = "AppServiceConsoleLogs" }
+  enabled_log { category = "AppServiceAppLogs" }
 
   metric {
     category = "AllMetrics"
@@ -134,11 +103,11 @@ resource "azurerm_monitor_diagnostic_setting" "ui_app" {
   }
 }
 
-# ── Metric Alert – Storage Account Availability ───────────────────────────────
+# ── Metric Alerts ─────────────────────────────────────────────────────────────
 
 resource "azurerm_monitor_metric_alert" "storage_availability" {
   name                = "alert-storage-availability-fabriciq"
-  resource_group_name = azurerm_resource_group.main.name
+  resource_group_name = data.azurerm_resource_group.main.name
   scopes              = [azurerm_storage_account.main.id]
   description         = "Fires when blob storage availability drops below 99%."
   severity            = 1
@@ -154,16 +123,12 @@ resource "azurerm_monitor_metric_alert" "storage_availability" {
     threshold        = 99
   }
 
-  action {
-    action_group_id = azurerm_monitor_action_group.sre.id
-  }
+  action { action_group_id = azurerm_monitor_action_group.sre.id }
 }
-
-# ── Metric Alert – Cosmos DB 5xx Server Errors ────────────────────────────────
 
 resource "azurerm_monitor_metric_alert" "cosmos_server_errors" {
   name                = "alert-cosmos-server-errors-fabriciq"
-  resource_group_name = azurerm_resource_group.main.name
+  resource_group_name = data.azurerm_resource_group.main.name
   scopes              = [azurerm_cosmosdb_account.main.id]
   description         = "Fires when Cosmos DB returns more than 5 server-side (5xx) errors in 5 minutes."
   severity            = 1
@@ -185,16 +150,12 @@ resource "azurerm_monitor_metric_alert" "cosmos_server_errors" {
     }
   }
 
-  action {
-    action_group_id = azurerm_monitor_action_group.sre.id
-  }
+  action { action_group_id = azurerm_monitor_action_group.sre.id }
 }
-
-# ── Metric Alert – Cosmos DB Request Unit Consumption ─────────────────────────
 
 resource "azurerm_monitor_metric_alert" "cosmos_ru_throttle" {
   name                = "alert-cosmos-ru-throttle-fabriciq"
-  resource_group_name = azurerm_resource_group.main.name
+  resource_group_name = data.azurerm_resource_group.main.name
   scopes              = [azurerm_cosmosdb_account.main.id]
   description         = "Fires when Cosmos DB returns 429 (Too Many Requests) throttling responses."
   severity            = 2
@@ -216,16 +177,12 @@ resource "azurerm_monitor_metric_alert" "cosmos_ru_throttle" {
     }
   }
 
-  action {
-    action_group_id = azurerm_monitor_action_group.sre.id
-  }
+  action { action_group_id = azurerm_monitor_action_group.sre.id }
 }
-
-# ── Metric Alert – UI App Service HTTP 5xx ────────────────────────────────────
 
 resource "azurerm_monitor_metric_alert" "ui_http5xx" {
   name                = "alert-ui-http5xx-fabriciq"
-  resource_group_name = data.azurerm_resource_group.ui.name
+  resource_group_name = data.azurerm_resource_group.main.name
   scopes              = [azurerm_linux_web_app.ui.id]
   description         = "Fires when UI app returns more than 5 HTTP 5xx errors in 5 minutes."
   severity            = 1
@@ -241,16 +198,12 @@ resource "azurerm_monitor_metric_alert" "ui_http5xx" {
     threshold        = 5
   }
 
-  action {
-    action_group_id = azurerm_monitor_action_group.sre.id
-  }
+  action { action_group_id = azurerm_monitor_action_group.sre.id }
 }
-
-# ── Metric Alert – UI App Service Response Time ───────────────────────────────
 
 resource "azurerm_monitor_metric_alert" "ui_response_time" {
   name                = "alert-ui-response-time-fabriciq"
-  resource_group_name = data.azurerm_resource_group.ui.name
+  resource_group_name = data.azurerm_resource_group.main.name
   scopes              = [azurerm_linux_web_app.ui.id]
   description         = "Fires when average response time exceeds 5 seconds over a 15-minute window."
   severity            = 2
@@ -266,19 +219,15 @@ resource "azurerm_monitor_metric_alert" "ui_response_time" {
     threshold        = 5
   }
 
-  action {
-    action_group_id = azurerm_monitor_action_group.sre.id
-  }
+  action { action_group_id = azurerm_monitor_action_group.sre.id }
 }
 
-# ── Scheduled Query Alert – Document Intelligence Parse Failures ───────────────
-# Queries Cosmos DB diagnostic logs for documents with low confidence scores
-# or missing parse records.
+# ── Scheduled Query Alert – Low Confidence Docs ──────────────────────────────
 
 resource "azurerm_monitor_scheduled_query_rules_alert_v2" "low_confidence_docs" {
   name                = "sqr-low-confidence-docs-fabriciq"
-  resource_group_name = azurerm_resource_group.main.name
-  location            = azurerm_resource_group.main.location
+  resource_group_name = data.azurerm_resource_group.main.name
+  location            = data.azurerm_resource_group.main.location
   description         = "Fires when more than 10 parsed documents have confidence below 0.5 in the last hour."
   severity            = 2
   enabled             = true
@@ -288,6 +237,7 @@ resource "azurerm_monitor_scheduled_query_rules_alert_v2" "low_confidence_docs" 
   evaluation_frequency    = "PT15M"
   window_duration         = "PT1H"
   auto_mitigation_enabled = true
+  skip_query_validation   = true
 
   criteria {
     query = <<-KQL
@@ -315,18 +265,12 @@ resource "azurerm_monitor_scheduled_query_rules_alert_v2" "low_confidence_docs" 
   }
 }
 
-# ── HTTP Trigger – Incident Response Logic App ────────────────────────────────
-# A Logic App with an HTTP trigger acts as the webhook receiver for Azure Monitor
-# alerts and orchestrates the automated incident response workflow:
-#   1. Parse the alert payload
-#   2. Create an incident record in Cosmos DB
-#   3. Send Teams notification to the SRE channel
-#   4. Trigger remediation runbook if auto-remediation is enabled
+# ── Incident Response Logic App ───────────────────────────────────────────────
 
 resource "azurerm_logic_app_workflow" "incident_response" {
   name                = "logic-fabriciq-incident-response"
-  location            = azurerm_resource_group.main.location
-  resource_group_name = azurerm_resource_group.main.name
+  location            = data.azurerm_resource_group.main.location
+  resource_group_name = data.azurerm_resource_group.main.name
   tags                = var.tags
 
   parameters = {
@@ -432,13 +376,13 @@ resource "azurerm_logic_app_action_custom" "notify_teams" {
       uri     = "@{parameters('teamsWebhookUrl')}"
       headers = { "Content-Type" = "application/json" }
       body = {
-        "@type"    = "MessageCard"
-        "@context" = "http://schema.org/extensions"
+        "@@type"    = "MessageCard"
+        "@@context" = "http://schema.org/extensions"
         themeColor = "FF0000"
         summary    = "Fabric IQ Monitor Alert Fired"
         sections = [
           {
-            activityTitle    = "🚨 Fabric IQ – Monitor Alert"
+            activityTitle    = "Fabric IQ Monitor Alert"
             activitySubtitle = "@{triggerBody()?['data']?['essentials']?['alertRule']}"
             facts = [
               { name = "Severity", value = "@{triggerBody()?['data']?['essentials']?['severity']}" },

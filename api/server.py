@@ -18,7 +18,7 @@ JSON_ROUTES = {
     "/api/org-hierarchy": DATA_DIR / "org_hierarchy.json",
     "/api/projects": DATA_DIR / "projects.json",
     "/api/contributions": DATA_DIR / "contributions.json",
-    "/api/powerbi-reports": DATA_DIR / "powerbi_reports.json",
+    "/api/powerbi-reports": REPO_ROOT / "fabric" / "powerbi" / "powerbi_reports.json",
     "/api/parsed-documents": DATA_DIR / "parsed_documents_cosmosdb.json",
 }
 
@@ -106,7 +106,7 @@ def _summary() -> dict[str, object]:
     employees = _load_json(DATA_DIR / "employees.json")
     contributions = _load_json(DATA_DIR / "contributions.json")
     projects = _load_json(DATA_DIR / "projects.json")
-    reports = _load_json(DATA_DIR / "powerbi_reports.json")
+    reports = _load_json(REPO_ROOT / "fabric" / "powerbi" / "powerbi_reports.json")
     assets = _load_json(DATA_DIR / "digital_assets.json")
     parsed = _load_json(DATA_DIR / "parsed_documents_cosmosdb.json")
 

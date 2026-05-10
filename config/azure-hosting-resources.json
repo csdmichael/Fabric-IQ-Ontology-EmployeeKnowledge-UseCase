@@ -1,23 +1,24 @@
 {
   "subscriptionId": "86b37969-9445-49cf-b03f-d8866235171c",
   "resourceGroup": "ai-myaacoub",
-  "location": "eastus",
+  "location": "westus",
   "hosting": {
     "uiWebApp": {
       "name": "fabric-iq-emp-knowledge-ui",
       "publicUrl": "https://fabric-iq-emp-knowledge-ui.azurewebsites.net",
       "internetExposed": true,
-      "notes": "New dedicated UI app service for Fabric IQ Employee Knowledge demo. Does not share with other apps."
+      "notes": "Dedicated UI app service for Fabric IQ Employee Knowledge demo in ai-myaacoub."
     },
     "apiWebApp": {
       "name": "fabric-iq-emp-knowledge-api",
       "url": "https://fabric-iq-emp-knowledge-api.azurewebsites.net",
       "internetExposed": false,
-      "notes": "New dedicated API app service for Fabric IQ Employee Knowledge demo. Does not share with other apps. Provisioned on the existing plan-taxforms App Service Plan in ai-myaacoub."
+      "notes": "Dedicated API app service for Fabric IQ Employee Knowledge demo in ai-myaacoub."
     },
     "appServicePlan": {
-      "name": "plan-taxforms",
-      "sku": "B1"
+      "name": "plan-fabriciq-demo",
+      "sku": "B1",
+      "notes": "Terraform-managed Linux B1 plan in ai-myaacoub."
     },
     "apiManagement": {
       "name": "ai-gateway-apim-poc-my",
@@ -45,6 +46,17 @@
       "privatelink.documents.azure.com",
       "privatelink.database.windows.net"
     ]
+  },
+  "fabric": {
+    "capacityId": "/subscriptions/86b37969-9445-49cf-b03f-d8866235171c/resourceGroups/ai-myaacoub/providers/Microsoft.Fabric/capacities/fabcapmyaacoub",
+    "capacityName": "fabcapmyaacoub",
+    "workspaceName": "Fabric IQ \u2013 Employee Knowledge",
+    "workspaceResourceName": "ws-fabriciq-emp-knowledge",
+    "lakehouse": "lh-employee-knowledge",
+    "oneLakeTables": ["employees", "digital_assets", "contributions", "projects", "org_hierarchy", "parsed_documents"],
+    "semanticModel": "employee_knowledge_semantic_model",
+    "powerBiReports": ["RPT001", "RPT002", "RPT003", "RPT004", "RPT005", "RPT006", "RPT007", "RPT008"],
+    "dashboards": ["DSH001", "DSH002", "DSH003", "DSH004", "DSH005"]
   },
   "managedIdentity": {
     "strategy": "system-assigned",

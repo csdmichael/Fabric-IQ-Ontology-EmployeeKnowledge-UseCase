@@ -1,11 +1,6 @@
-variable "location" {
-  type        = string
-  description = "Azure region for all resources."
-}
-
 variable "resource_group_name" {
   type        = string
-  description = "Resource group name."
+  description = "Existing resource group name (ai-myaacoub). All resources are deployed here."
 }
 
 variable "storage_account_name" {
@@ -40,32 +35,12 @@ variable "cosmos_container_name" {
 
 variable "ui_app_service_name" {
   type        = string
-  description = "Name of the new UI App Service in the ai-myaacoub resource group."
-}
-
-variable "ui_resource_group_name" {
-  type        = string
-  description = "Resource group that contains the existing App Service Plan for the UI."
-}
-
-variable "ui_app_service_plan_name" {
-  type        = string
-  description = "Name of the existing App Service Plan to reuse for the UI app."
+  description = "Name of the UI App Service."
 }
 
 variable "api_app_service_name" {
   type        = string
-  description = "Name of the new dedicated API App Service (does not overwrite any existing app)."
-}
-
-variable "api_resource_group_name" {
-  type        = string
-  description = "Resource group that contains the existing App Service Plan for the API."
-}
-
-variable "api_app_service_plan_name" {
-  type        = string
-  description = "Name of the existing App Service Plan to reuse for the API app."
+  description = "Name of the API App Service."
 }
 
 variable "tags" {
@@ -73,17 +48,30 @@ variable "tags" {
   description = "Tags applied to all resources."
 }
 
-# ── Azure Monitor variables ───────────────────────────────────────────────────
+# ── Microsoft Fabric variables ────────────────────────────────────────────────
 
-variable "monitor_resource_group_name" {
+variable "fabric_capacity_id" {
   type        = string
-  description = "Resource group where the shared SRE monitor resources (action group, Log Analytics) live. Defaults to the ui_resource_group_name (ai-myaacoub)."
-  default     = "ai-myaacoub"
+  description = "Full resource ID of the Microsoft Fabric capacity to bind the workspace to."
 }
+
+variable "fabric_workspace_name" {
+  type        = string
+  description = "Internal name for the Fabric workspace resource."
+  default     = "ws-fabriciq-emp-knowledge"
+}
+
+variable "fabric_workspace_display_name" {
+  type        = string
+  description = "Display name shown in the Fabric portal."
+  default     = "Fabric IQ – Employee Knowledge"
+}
+
+# ── Azure Monitor variables ───────────────────────────────────────────────────
 
 variable "existing_log_analytics_workspace_name" {
   type        = string
-  description = "Name of an existing Log Analytics workspace in monitor_resource_group_name to reuse. Leave empty to create a new workspace."
+  description = "Name of an existing Log Analytics workspace in the resource group to reuse. Leave empty to create a new workspace."
   default     = ""
 }
 
