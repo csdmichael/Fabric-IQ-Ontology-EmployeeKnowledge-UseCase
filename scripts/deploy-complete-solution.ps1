@@ -265,10 +265,11 @@ function Invoke-Phase7-GenerateDocumentation {
     
     $Docs = @{
         "QUICK_START.md" = "Quick start guide"
-        "DEPLOYMENT_STATUS.md" = "Deployment status"
+        "DEPLOYMENT_STATUS.txt" = "Deployment status"
         "FABRIC_DEPLOYMENT_GUIDE.md" = "Fabric deployment guide"
-        "POWERBI_SETUP_GUIDE.md" = "Power BI setup guide"
-        "COMPLETION_SUMMARY.md" = "Completion summary"
+        "powerbi/README.md" = "Power BI documentation hub"
+        "powerbi/POWERBI_SETUP_GUIDE.md" = "Power BI setup guide"
+        "powerbi/FABRIC_POWERBI_DEPLOYMENT_PLAYBOOK.md" = "Power BI deployment playbook"
     }
     
     foreach ($Doc in $Docs.GetEnumerator()) {
@@ -357,7 +358,8 @@ Write-Host @"
    - Share with team
 
 For detailed instructions: See FABRIC_DEPLOYMENT_GUIDE.md
-For architecture overview: See DEPLOYMENT_STATUS.md
+For architecture overview: See README.md
+For Power BI setup details: See powerbi/FABRIC_POWERBI_DEPLOYMENT_PLAYBOOK.md
 "@
 
 if (($Results | Where-Object { -not $_.Success } | Measure-Object).Count -eq 0) {

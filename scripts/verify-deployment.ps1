@@ -186,8 +186,9 @@ function Test-SourceCode {
         "fabric/ontology/fabric_iq_ontology_complete.json" = "Ontology Config"
         "fabric/pipelines/employee_knowledge_pipeline_complete.json" = "Pipeline Config"
         "fabric/powerbi/powerbi_reports_config.json" = "Power BI Config"
-        "scripts/deploy_complete_solution.py" = "Python Deployment Script"
         "scripts/deploy-complete-solution.ps1" = "PowerShell Deployment Script"
+        "scripts/deploy-fabric-powerbi.ps1" = "Fabric/Power BI Verification Script"
+        "powerbi/README.md" = "Power BI Documentation Hub"
     }
     
     foreach ($File in $FilesToCheck.GetEnumerator()) {
@@ -262,12 +263,12 @@ function Test-Documentation {
     $Docs = @{
         "README.md" = "Main Documentation"
         "QUICK_START.md" = "Quick Start Guide"
-        "DEPLOYMENT_STATUS.md" = "Deployment Status"
+        "DEPLOYMENT_STATUS.txt" = "Deployment Status"
         "FABRIC_DEPLOYMENT_GUIDE.md" = "Fabric Guide"
-        "POWERBI_SETUP_GUIDE.md" = "Power BI Setup"
-        "REBUILD_GUIDE.md" = "Rebuild Instructions"
-        "COMPLETION_SUMMARY.md" = "Completion Summary"
-        "REPOSITORY_FILE_INVENTORY.md" = "File Inventory"
+        "powerbi/README.md" = "Power BI Documentation Hub"
+        "powerbi/POWERBI_SETUP_GUIDE.md" = "Power BI Setup"
+        "powerbi/FABRIC_POWERBI_DEPLOYMENT_PLAYBOOK.md" = "Power BI Deployment Playbook"
+        "powerbi/FABRIC_POWERBI_DEPLOYMENT_SUMMARY.md" = "Power BI Deployment Summary"
     }
     
     foreach ($Doc in $Docs.GetEnumerator()) {
@@ -354,5 +355,5 @@ Write-Host "To complete deployment:"
 Write-Host "- Upload data to OneLake (see FABRIC_DEPLOYMENT_GUIDE.md)"
 Write-Host "- Configure semantic model relationships"
 Write-Host "- Create Power BI reports and dashboards"
-Write-Host "- Publish Power BI app"
+Write-Host "- Publish Power BI app (see powerbi/FABRIC_POWERBI_DEPLOYMENT_PLAYBOOK.md)"
 Write-Host ""

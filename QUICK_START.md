@@ -29,9 +29,9 @@
 - Data Files: 1,020 rows ready for ingestion
 
 ### ✅ Documentation
-- `DEPLOYMENT_STATUS.md` - Complete infrastructure status
-- `POWERBI_SETUP_GUIDE.md` - Step-by-step Power BI setup
-- `scripts/load_onelake_data.py` - Data loading verification
+- `DEPLOYMENT_STATUS.txt` - Complete infrastructure status
+- `powerbi/POWERBI_SETUP_GUIDE.md` - Step-by-step Power BI setup
+- `scripts/deploy-fabric-powerbi.ps1` - Fabric/Power BI deployment verification
 
 ---
 
@@ -171,11 +171,12 @@ api/
   └── server.py                 ✓ Deployed & running
 
 DOCUMENTATION
-  ├── DEPLOYMENT_STATUS.md      ✓ Infrastructure status
-  ├── POWERBI_SETUP_GUIDE.md    ✓ Step-by-step setup
+  ├── DEPLOYMENT_STATUS.txt     ✓ Infrastructure status
+  ├── powerbi/README.md         ✓ Power BI docs hub
+  ├── powerbi/POWERBI_SETUP_GUIDE.md    ✓ Step-by-step setup
   ├── README.md                 ✓ Project overview
   └── scripts/
-      └── load_onelake_data.py  ✓ Data verification
+      └── deploy-fabric-powerbi.ps1  ✓ Deployment verification
 ```
 
 ---
@@ -229,7 +230,7 @@ Once Power BI app is published:
 ---
 
 ### Questions?
-1. Check `POWERBI_SETUP_GUIDE.md` for step-by-step instructions
-2. Check `DEPLOYMENT_STATUS.md` for infrastructure details
+1. Check `powerbi/FABRIC_POWERBI_DEPLOYMENT_PLAYBOOK.md` for step-by-step instructions
+2. Check `DEPLOYMENT_STATUS.txt` for infrastructure details
 3. Test API: curl `https://fabric-iq-emp-knowledge-api.azurewebsites.net/health`
 4. Access Fabric: `https://app.powerbi.com`
