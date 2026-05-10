@@ -152,7 +152,7 @@ def generate_architecture_diagram() -> None:
         (100, 460, "Operational Persistence", "Cosmos DB parsed documents and confidence payloads", "cosmos", "#FEF2F2"),
         (640, 460, "OneLake Curated Zone", "Standardized semantic-ready data products", "one_lake", "#ECFDF5"),
         (1180, 460, "Fabric Semantic + Ontology", "Graph intelligence and governed ontology layer", "graph_intelligence", "#F0FDFA"),
-        (1720, 460, "Experience Layer", "Fabric Data Agent, Copilot and Ionic executive UI", "copilot", "#F5F3FF"),
+        (1720, 460, "Experience Layer", "Data Agent, API, Power BI, Copilot and Ionic executive UI", "copilot", "#F5F3FF"),
     ]
 
     for x, y, title, sub, icon, fill in cards:
@@ -186,7 +186,7 @@ def generate_architecture_diagram() -> None:
 
     draw.text(
         (130, 1210),
-        "Outcome: trusted, governed and citation-ready employee knowledge for executive decision support.",
+        "Outcome: trusted, governed and citation-ready employee knowledge for API and executive dashboard decisions.",
         font=get_font(22),
         fill="#78350F",
     )
@@ -212,7 +212,7 @@ def generate_pipeline_diagram() -> None:
         (120, 560, "5. Curate", "OneLake curated layer aligns ontology keys", "one_lake", "#ECFDF5"),
         (560, 560, "6. Model", "Semantic model and DAX-ready dimensions", "power_bi", "#FEFCE8"),
         (1000, 560, "7. Ontology", "Fabric graph intelligence relationship map", "graph_intelligence", "#F0FDFA"),
-        (1440, 560, "8. Agent + UI", "Copilot/Fabric Agent surfaces grounded answers", "copilot", "#F5F3FF"),
+        (1440, 560, "8. API + Agent + Dashboards", "API, Power BI and Copilot/Fabric Agent experiences", "copilot", "#F5F3FF"),
     ]
 
     for x, y, title, sub, icon, fill in steps:

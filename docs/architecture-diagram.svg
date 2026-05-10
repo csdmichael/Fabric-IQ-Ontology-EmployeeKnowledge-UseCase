@@ -12,7 +12,7 @@
 <rect x='40' y='430' width='1120' height='58' fill='#f3f6fb' stroke='#8aa4c8' rx='8'/>
 <text x='60' y='460' font-size='20' font-family='Arial' fill='#1f2d3d'>Cosmos DB JSON parse persistence and OneLake curated zone</text>
 <rect x='40' y='520' width='1120' height='58' fill='#f3f6fb' stroke='#8aa4c8' rx='8'/>
-<text x='60' y='550' font-size='20' font-family='Arial' fill='#1f2d3d'>Fabric Semantic Model + Fabric IQ Ontology + Fabric Data Agent + Ionic UI</text>
+<text x='60' y='550' font-size='20' font-family='Arial' fill='#1f2d3d'>Semantic Model + Ontology + Data Agent + API Service + Power BI + Ionic UI</text>
 <!-- Azure Monitor / SRE layer -->
 <rect x='40' y='620' width='1120' height='200' fill='#fff8e1' stroke='#f59e0b' rx='8'/>
 <text x='60' y='650' font-size='20' font-family='Arial' font-weight='bold' fill='#92400e'>Azure Monitor &amp; SRE Layer</text>
@@ -24,7 +24,7 @@
 <text x='720' y='695' font-size='15' font-family='Arial' fill='#78350f'>SRE Action Group</text>
 <rect x='960' y='665' width='180' height='50' fill='#fef3c7' stroke='#f59e0b' rx='6'/>
 <text x='975' y='695' font-size='15' font-family='Arial' fill='#78350f'>Logic App (HTTP)</text>
-<text x='60' y='750' font-size='14' font-family='Arial' fill='#78350f'>Diagnostic Settings → Storage, Cosmos DB, App Service → Log Analytics</text>
+<text x='60' y='750' font-size='14' font-family='Arial' fill='#78350f'>Diagnostic Settings → Storage, Cosmos DB, API/UI App Services → Log Analytics</text>
 <text x='60' y='775' font-size='14' font-family='Arial' fill='#78350f'>Alerts fire → Action Group → Email DL + Webhook → Logic App HTTP Trigger</text>
 <text x='60' y='800' font-size='14' font-family='Arial' fill='#78350f'>Logic App: Log incident to Cosmos DB Incidents container + Notify Teams SRE channel</text>
 </svg>

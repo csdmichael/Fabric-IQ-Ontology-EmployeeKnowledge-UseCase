@@ -13,6 +13,8 @@ Default address: `http://localhost:8080`
 ## Endpoints
 
 - `GET /health` or `GET /api/health`
+- `GET /swagger` (Swagger UI)
+- `GET /swagger.json` (OpenAPI spec)
 - `GET /api/summary`
 - `GET /api/config/endpoints`
 - `GET /api/employees`

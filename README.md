@@ -17,8 +17,11 @@
 - [Project Data](#project-data)
 - [Upload Workflow – Datasource Ingestion](#upload-workflow--datasource-ingestion)
 - [Document Intelligence & Confidence Scoring](#document-intelligence--confidence-scoring)
+- [API Service](#api-service)
+- [Power BI Dashboard Artifacts](#power-bi-dashboard-artifacts)
 - [Fabric Data Agent](#fabric-data-agent)
 - [Ionic + Angular + TypeScript UI](#ionic--angular--typescript-ui)
+- [UI Troubleshooting (Why UI May Not Render)](#ui-troubleshooting-why-ui-may-not-render)
 - [Sample Agent Prompts (30)](#sample-agent-prompts-30)
 - [Reusable Azure Hosting Resources (ai-myaacoub)](#reusable-azure-hosting-resources-ai-myaacoub)
 - [Managed Identity Setup](#managed-identity-setup)
@@ -36,11 +39,11 @@
 
 ## Architecture
 
-![Architecture Diagram](docs/architecture-diagram.png)
+![Architecture Diagram](docs/architecture-diagram.svg)
 
 ## Data Pipeline in Microsoft Fabric
 
-![Data Pipeline Diagram](docs/data-pipeline-diagram.png)
+![Data Pipeline Diagram](docs/data-pipeline-diagram.svg)
 
 Flow summary:
 1. Ingest from Azure Blob/File into OneLake staging
@@ -48,6 +51,7 @@ Flow summary:
 3. Persist parse JSON to Cosmos DB
 4. Load curated data into OneLake
 5. Refresh semantic model for analytics and agent experiences
+6. Serve data through API + Power BI report/dashboard experiences
 
 ## Semantic Model & ERD
 
@@ -58,7 +62,7 @@ Semantic model definition:
 
 ## Fabric IQ Ontology
 
-![Ontology Diagram](docs/ontology-diagram.png)
+![Ontology Diagram](docs/ontology-diagram.svg)
 
 Ontology artifacts:
 - `fabric/ontology/fabric_iq_ontology.json`
@@ -100,6 +104,9 @@ It includes:
 │   ├── parsed_documents_cosmosdb.json
 │   ├── storage_map.json
 │   └── employees/
+├── api/
+│   ├── server.py
+│   └── README.md
 ├── scripts/
 │   └── generate_employee_files.py
 ├── docs/
@@ -120,7 +127,8 @@ It includes:
 │   ├── pipelines/
 │   ├── semantic-model/
 │   ├── ontology/
-│   └── agents/
+│   ├── agents/
+│   └── powerbi/
 ├── ui/
 │   └── ionic-angular/
 ├── terraform/
@@ -141,6 +149,7 @@ It includes:
 - **Azure Monitor** (Diagnostic Settings, Metric Alerts, Scheduled Query Rules)
 - **Azure Log Analytics** (centralized log aggregation and query)
 - **Azure Logic Apps** (HTTP trigger-based incident response orchestration)
+- **Python API** (standard-library HTTP server + OpenAPI/Swagger UI)
 - **Ionic + Angular + TypeScript** (UI)
 - **JSON/SVG** artifacts for demo portability
 
@@ -156,6 +165,7 @@ All platform endpoints and runtime options are centralized in `/config`:
 |---|---|---|
 | UI Web App | https://fabric-iq-emp-knowledge-ui.azurewebsites.net | `config/endpoints.json` (`hosting.uiPublicUrl`) |
 | API Web App | https://fabric-iq-emp-knowledge-api.azurewebsites.net | `config/endpoints.json` (`hosting.apiUrl`) |
+| API Swagger UI | https://fabric-iq-emp-knowledge-api.azurewebsites.net/swagger | API route served by `api/server.py` |
 | API Management Gateway | https://ai-gateway-apim-poc-my.azure-api.net | `config/endpoints.json` (`azure.apiManagementGateway`) |
 | Azure Blob Storage Endpoint | https://aistoragemyaacoub.blob.core.windows.net | `config/endpoints.json` (`azure.blobStorageEndpoint`) |
 | Azure File Storage Endpoint | https://aistoragemyaacoub.file.core.windows.net | `config/endpoints.json` (`azure.fileStorageEndpoint`) |
@@ -233,6 +243,49 @@ Each document record includes:
 - `sectionConfidence.entities`
 - employee ownership and classification category
 
+## API Service
+API source:
+- `api/server.py`
+- `api/README.md`
+
+Swagger/OpenAPI:
+- Swagger UI: `/swagger`
+- OpenAPI JSON: `/swagger.json`
+
+If deployed to the configured API host, Swagger URL is:
+- `https://fabric-iq-emp-knowledge-api.azurewebsites.net/swagger`
+
+### Sample API Calls (Quick Test)
+```bash
+# 1) health
+curl -s http://localhost:8080/health | jq
+
+# 2) swagger spec
+curl -s http://localhost:8080/swagger.json | jq '.info'
+
+# 3) summary counts
+curl -s http://localhost:8080/api/summary | jq
+
+# 4) filtered employees
+curl -s "http://localhost:8080/api/employees?department=IT" | jq '.[0:3]'
+
+# 5) filtered contributions
+curl -s "http://localhost:8080/api/contributions?employeeId=EMP001" | jq
+
+# 6) power bi reports
+curl -s http://localhost:8080/api/powerbi-reports | jq '.[].name'
+```
+
+## Power BI Dashboard Artifacts
+Fabric dashboard definitions:
+- `fabric/powerbi/employee_knowledge_dashboards.json`
+
+This artifact maps dashboard definitions to:
+- Workspace IDs
+- Dataset bindings
+- Report IDs (`RPT001`–`RPT008`)
+- Refresh cadence and tags
+
 ## Fabric Data Agent
 Agent package metadata:
 - `fabric/agents/employee_knowledge_agent.json`
@@ -278,6 +331,18 @@ Preview page:
 |---|---|
 | `data/contributions.json` | Per-employee contribution metrics: score (varied 30–99), tier (star/average/low), project counts, asset counts, commits, emails, mentoring sessions. |
 | `data/powerbi_reports.json` | 8 Power BI report definitions with embed URLs, dataset/workspace IDs, refresh schedules, and tags. |
+| `fabric/powerbi/employee_knowledge_dashboards.json` | 5 dashboard definitions mapped to Power BI report IDs and dataset bindings for Fabric workspace analytics. |
+
+## UI Troubleshooting (Why UI May Not Render)
+The current repository UI source under `ui/ionic-angular/` does not include a full Ionic/Angular runtime scaffold (for example `angular.json`, `src/main.ts`, and `src/index.html` are absent). Without these entry points, the browser cannot bootstrap the app shell.
+
+Additional issue found during troubleshooting:
+- `npm install` currently fails dependency resolution due Angular peer-version mismatch (`@ionic/angular` pulling `@angular/forms` latest while project pins Angular 19 packages).
+
+Recommended remediation:
+1. Regenerate or restore the full Ionic Angular scaffold files.
+2. Pin Angular package versions consistently (including `@angular/forms`) to the same major/minor line.
+3. Re-run `npm install` and `npm run build` from `ui/ionic-angular` before browser validation.
 
 ## Sample Agent Prompts (30)
 

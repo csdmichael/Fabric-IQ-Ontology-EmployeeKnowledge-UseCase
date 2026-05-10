@@ -53,6 +53,55 @@ def _apply_filters(payload: object, query: dict[str, list[str]]) -> object:
     return filtered
 
 
+def _openapi_schema(base_url: str) -> dict[str, object]:
+    list_paths = sorted(JSON_ROUTES.keys())
+    paths: dict[str, object] = {
+        "/health": {"get": {"summary": "Health check", "responses": {"200": {"description": "OK"}}}},
+        "/api/health": {"get": {"summary": "Health check", "responses": {"200": {"description": "OK"}}}},
+        "/api/summary": {
+            "get": {
+                "summary": "Dataset summary counts",
+                "responses": {"200": {"description": "Summary payload"}},
+            }
+        },
+    }
+
+    for route in list_paths:
+        paths[route] = {
+            "get": {
+                "summary": f"Read dataset for {route}",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "department",
+                        "schema": {"type": "string"},
+                        "required": False,
+                        "description": "Optional department filter when supported by payload.",
+                    },
+                    {
+                        "in": "query",
+                        "name": "employeeId",
+                        "schema": {"type": "string"},
+                        "required": False,
+                        "description": "Optional employee ID filter when supported by payload.",
+                    },
+                ],
+                "responses": {"200": {"description": "Dataset payload"}, "500": {"description": "Data load failure"}},
+            }
+        }
+
+    return {
+        "openapi": "3.0.3",
+        "info": {
+            "title": "Fabric IQ Employee Knowledge API",
+            "version": "1.0.0",
+            "description": "Lightweight API serving repository-backed employee knowledge datasets.",
+        },
+        "servers": [{"url": base_url}],
+        "paths": paths,
+    }
+
+
 def _summary() -> dict[str, object]:
     employees = _load_json(DATA_DIR / "employees.json")
     contributions = _load_json(DATA_DIR / "contributions.json")
@@ -98,6 +147,8 @@ class ApiHandler(BaseHTTPRequestHandler):
         parsed_url = urlparse(self.path)
         path = parsed_url.path.rstrip("/") or "/"
         query = parse_qs(parsed_url.query)
+        host = self.headers.get("Host", "localhost:8080")
+        base_url = f"http://{host}"
 
         if path in {"/", "/health", "/api/health"}:
             self._send_json(
@@ -108,6 +159,37 @@ class ApiHandler(BaseHTTPRequestHandler):
                     "timestampUtc": datetime.now(timezone.utc).isoformat(),
                 },
             )
+            return
+
+        if path == "/swagger.json":
+            self._send_json(200, _openapi_schema(base_url))
+            return
+
+        if path in {"/swagger", "/docs"}:
+            html = f"""<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Fabric IQ API Swagger</title>
+    <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5/swagger-ui.css" />
+  </head>
+  <body>
+    <div id="swagger-ui"></div>
+    <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
+    <script>
+      window.ui = SwaggerUIBundle({{
+        url: "{base_url}/swagger.json",
+        dom_id: "#swagger-ui"
+      }});
+    </script>
+  </body>
+</html>"""
+            self.send_response(200)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.send_header("Content-Length", str(len(html.encode("utf-8"))))
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(html.encode("utf-8"))
             return
 
         if path == "/api/summary":
