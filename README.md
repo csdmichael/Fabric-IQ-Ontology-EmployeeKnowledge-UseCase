@@ -1,4 +1,4 @@
-# Microsoft Fabric IQ – Employee Knowledge Graph Demo
+# Microsoft Fabric IQ ï¿½ Employee Knowledge Graph Demo
 
 Complete solution for building an employee knowledge graph using Microsoft Fabric, Azure services, and Power BI.
 
@@ -35,7 +35,8 @@ cd Fabric-IQ-Ontology-EmployeeKnowledge-UseCase
 |----------|---------|
 | [QUICK_START.md](QUICK_START.md) | 5-minute overview and key commands |
 | [FABRIC_DEPLOYMENT_GUIDE.md](FABRIC_DEPLOYMENT_GUIDE.md) | Step-by-step Fabric setup (20 min) |
-| [POWERBI_SETUP_GUIDE.md](POWERBI_SETUP_GUIDE.md) | Power BI configuration guide |
+| [powerbi/POWERBI_SETUP_GUIDE.md](powerbi/POWERBI_SETUP_GUIDE.md) | Power BI configuration guide |
+| [powerbi/FABRIC_POWERBI_DEPLOYMENT_PLAYBOOK.md](powerbi/FABRIC_POWERBI_DEPLOYMENT_PLAYBOOK.md) | Comprehensive 70-minute deployment playbook |
 | [api/README.md](api/README.md) | API endpoints and usage |
 
 ---
@@ -68,29 +69,29 @@ Power BI Reports & Dashboards
 
 ```
 +-- api/
-¦   +-- server.py              # FastAPI application
-¦   +-- README.md              # API documentation
+ï¿½   +-- server.py              # FastAPI application
+ï¿½   +-- README.md              # API documentation
 +-- config/
-¦   +-- endpoints.json         # Fabric IDs and Azure endpoints
-¦   +-- fabric-settings.json   # Fabric configuration
-¦   +-- ...                    # Other configs
+ï¿½   +-- endpoints.json         # Fabric IDs and Azure endpoints
+ï¿½   +-- fabric-settings.json   # Fabric configuration
+ï¿½   +-- ...                    # Other configs
 +-- data/
-¦   +-- employees.json         # 100 employee records
-¦   +-- contributions.json     # 100 contributions
-¦   +-- digital_assets.json    # 800 assets
-¦   +-- projects.json          # 20 projects
-¦   +-- exports/parquet/       # CSV exports for OneLake
+ï¿½   +-- employees.json         # 100 employee records
+ï¿½   +-- contributions.json     # 100 contributions
+ï¿½   +-- digital_assets.json    # 800 assets
+ï¿½   +-- projects.json          # 20 projects
+ï¿½   +-- exports/parquet/       # CSV exports for OneLake
 +-- fabric/
-¦   +-- ontology/              # Table schema and relationships
-¦   +-- pipelines/             # Data pipeline definitions
-¦   +-- powerbi/               # Power BI configurations
+ï¿½   +-- ontology/              # Table schema and relationships
+ï¿½   +-- pipelines/             # Data pipeline definitions
+ï¿½   +-- powerbi/               # Power BI configurations
 +-- scripts/
-¦   +-- deploy-complete-solution.ps1  # Main deployment
-¦   +-- populate_fabric_complete.py   # Data preparation
-¦   +-- verify-deployment.ps1         # Health checks
+ï¿½   +-- deploy-complete-solution.ps1  # Main deployment
+ï¿½   +-- populate_fabric_complete.py   # Data preparation
+ï¿½   +-- verify-deployment.ps1         # Health checks
 +-- terraform/
-¦   +-- main.tf                # Azure resources
-¦   +-- ...                    # Terraform files
+ï¿½   +-- main.tf                # Azure resources
+ï¿½   +-- ...                    # Terraform files
 +-- README.md                  # This file
 ```
 
@@ -278,12 +279,12 @@ See [api/README.md](api/README.md) for full endpoint documentation.
 
 1. **Clone repository** and run deployment script
 2. **Run verification** to confirm all systems working
-3. **Follow [FABRIC_DEPLOYMENT_GUIDE.md](FABRIC_DEPLOYMENT_GUIDE.md)** to:
-   - Load data to OneLake
-   - Create semantic model relationships
+3. **Follow [FABRIC_DEPLOYMENT_GUIDE.md](FABRIC_DEPLOYMENT_GUIDE.md)** to load data to OneLake
+4. **Follow [powerbi/FABRIC_POWERBI_DEPLOYMENT_PLAYBOOK.md](powerbi/FABRIC_POWERBI_DEPLOYMENT_PLAYBOOK.md)** for:
+   - Configure semantic model relationships
    - Build Power BI reports
    - Create dashboards
-4. **Follow [POWERBI_SETUP_GUIDE.md](POWERBI_SETUP_GUIDE.md)** for detailed Power BI steps
+   - Publish Power BI app
 
 ---
 
@@ -341,7 +342,9 @@ To rebuild the entire solution in a new environment:
 
 - **Quick Reference**: [QUICK_START.md](QUICK_START.md)
 - **Fabric Setup**: [FABRIC_DEPLOYMENT_GUIDE.md](FABRIC_DEPLOYMENT_GUIDE.md)
-- **Power BI Setup**: [POWERBI_SETUP_GUIDE.md](POWERBI_SETUP_GUIDE.md)
+- **Power BI Deployment**: [powerbi/FABRIC_POWERBI_DEPLOYMENT_PLAYBOOK.md](powerbi/FABRIC_POWERBI_DEPLOYMENT_PLAYBOOK.md)
+- **Power BI Guide**: [powerbi/POWERBI_SETUP_GUIDE.md](powerbi/POWERBI_SETUP_GUIDE.md)
+- **Power BI Summary**: [powerbi/FABRIC_POWERBI_DEPLOYMENT_SUMMARY.md](powerbi/FABRIC_POWERBI_DEPLOYMENT_SUMMARY.md)
 - **API Details**: [api/README.md](api/README.md)
 - **GitHub**: https://github.com/csdmichael/Fabric-IQ-Ontology-EmployeeKnowledge-UseCase
 
