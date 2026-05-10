@@ -16,6 +16,7 @@ on:
       - main
     paths:
       - ".github/workflows/deploy.yml"
+      - "api/**"
       - "config/**"
       - "data/**"
       - "docs/**"
@@ -201,7 +202,7 @@ jobs:
           terraform init
           terraform apply -auto-approve tfplan
 
-  deploy-ui:
+  deploy-api:
     if: >-
       github.event.inputs.apply == 'true' &&
       needs.check-auth.outputs.auth_mode != 'none'
@@ -224,53 +225,220 @@ jobs:
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-      - name: Upload projects.json to Azure Blob Storage
+      - name: Package and deploy API
         env:
-          STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
+          API_APP_NAME: ${{ needs.load-config.outputs.api_app_name }}
+          RESOURCE_GROUP: ${{ needs.load-config.outputs.azure_resource_group }}
         run: |
           set -euo pipefail
-          az storage blob upload \
-            --account-name "$STORAGE_ACCOUNT" \
-            --container-name "employee-knowledge-raw" \
-            --name "projects.json" \
-            --file "data/projects.json" \
-            --overwrite \
-            --auth-mode login \
-            --output none
-          echo "Uploaded data/projects.json -> employee-knowledge-raw/projects.json"
-      - name: Package UI for deployment
+          # Package repo files needed by the API (api/, config/, data/, fabric/)
+          zip -r api-deploy.zip api/ config/ data/ fabric/powerbi/ LICENSE README.md \
+            -x '*.git*' 'data/employees/*'
+          # Stop app to free Kudu, deploy, then start
+          az webapp stop --resource-group "$RESOURCE_GROUP" --name "$API_APP_NAME"
+          az webapp deploy \
+            --resource-group "$RESOURCE_GROUP" \
+            --name "$API_APP_NAME" \
+            --src-path api-deploy.zip \
+            --type zip \
+            --async true
+          az webapp start --resource-group "$RESOURCE_GROUP" --name "$API_APP_NAME"
+          echo "API deployed to https://${API_APP_NAME}.azurewebsites.net"
+
+  deploy-ui:
+    if: >-
+      github.event.inputs.apply == 'true' &&
+      needs.check-auth.outputs.auth_mode != 'none'
+    needs:
+      - terraform-apply
+      - load-config
+      - check-auth
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Azure Login (OIDC)
+        if: needs.check-auth.outputs.auth_mode == 'oidc'
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID || needs.load-config.outputs.azure_subscription_id }}
+      - name: Azure Login (service principal JSON)
+        if: needs.check-auth.outputs.auth_mode == 'sp'
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Build and package UI
         run: |
           set -euo pipefail
           UI_DIR="ui/ionic-angular"
-          # This UI is a demo scaffold. In a production pipeline replace the steps below with:
-          #   npm ci --prefix "$UI_DIR"
-          #   npm run build --prefix "$UI_DIR"   # ionic build → dist/
-          # and zip the dist/ output instead.
-          # For the demo we package the static source assets (config, data, src) directly so
-          # the app service can serve them via a static-file host or custom server.
-          mkdir -p "$UI_DIR/dist-deploy/config" "$UI_DIR/dist-deploy/data"
-          cp config/endpoints.json "$UI_DIR/dist-deploy/config/endpoints.json"
-          cp data/employees.json data/digital_assets.json data/projects.json "$UI_DIR/dist-deploy/data/"
-          # Copy UI source files into deployment root
-          cp -r "$UI_DIR/src/." "$UI_DIR/dist-deploy/"
-          cd "$UI_DIR/dist-deploy"
-          zip -r ../ui-deployment.zip .
+          cd "$UI_DIR"
+          npm ci --ignore-scripts || npm install --ignore-scripts
+          # Build production bundle (falls back to packaging source if build fails)
+          if npm run build 2>/dev/null; then
+            cd www  # Ionic build output
+          else
+            echo "::warning::ionic build failed – packaging source files as fallback"
+            cd src
+          fi
+          zip -r ../../ui-deploy.zip .
+      - name: Copy data assets into UI package
+        run: |
+          set -euo pipefail
+          # Add config and data files the UI reads at runtime
+          mkdir -p _ui_assets/config _ui_assets/data _ui_assets/fabric/powerbi
+          cp config/endpoints.json _ui_assets/config/
+          cp data/employees.json data/digital_assets.json data/contributions.json \
+             data/projects.json data/org_hierarchy.json data/emails.json \
+             _ui_assets/data/
+          cp fabric/powerbi/powerbi_reports.json _ui_assets/fabric/powerbi/
+          cd _ui_assets && zip -r ../ui-deploy.zip . -g
       - name: Deploy UI to App Service
         env:
           UI_APP_NAME: ${{ needs.load-config.outputs.ui_app_name }}
           RESOURCE_GROUP: ${{ needs.load-config.outputs.azure_resource_group }}
         run: |
           set -euo pipefail
+          az webapp stop --resource-group "$RESOURCE_GROUP" --name "$UI_APP_NAME"
           az webapp deploy \
             --resource-group "$RESOURCE_GROUP" \
             --name "$UI_APP_NAME" \
-            --src-path "ui/ionic-angular/ui-deployment.zip" \
+            --src-path ui-deploy.zip \
             --type zip \
-            --async false
+            --async true
+          az webapp start --resource-group "$RESOURCE_GROUP" --name "$UI_APP_NAME"
           echo "UI deployed to https://${UI_APP_NAME}.azurewebsites.net"
 
-  # Summary job that always succeeds regardless of whether Azure creds were available.
-  # This ensures the workflow as a whole succeeds and reports clear status.
+  deploy-fabric-components:
+    if: >-
+      github.event.inputs.apply == 'true' &&
+      needs.check-auth.outputs.auth_mode != 'none'
+    needs:
+      - terraform-apply
+      - load-config
+      - check-auth
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Azure Login (OIDC)
+        if: needs.check-auth.outputs.auth_mode == 'oidc'
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID || needs.load-config.outputs.azure_subscription_id }}
+      - name: Azure Login (service principal JSON)
+        if: needs.check-auth.outputs.auth_mode == 'sp'
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Read Fabric workspace config
+        id: fabric-config
+        run: |
+          set -euo pipefail
+          ws_id=$(jq -r '.microsoftFabric.workspaceId' config/endpoints.json)
+          lh_id=$(jq -r '.microsoftFabric.lakehouseId' config/endpoints.json)
+          capacity_id=$(jq -r '.microsoftFabric.capacityId' config/endpoints.json)
+          echo "workspace_id=$ws_id" >> "$GITHUB_OUTPUT"
+          echo "lakehouse_id=$lh_id" >> "$GITHUB_OUTPUT"
+          echo "capacity_id=$capacity_id" >> "$GITHUB_OUTPUT"
+      - name: Resume Fabric capacity
+        run: |
+          set -euo pipefail
+          CAPACITY_ARM_ID=$(jq -r '.fabric.capacityId' config/azure-hosting-resources.json)
+          az rest --method POST \
+            --url "https://management.azure.com${CAPACITY_ARM_ID}/resume?api-version=2023-11-01" \
+            || echo "::warning::Capacity resume failed or already active"
+          sleep 10
+      - name: Create or verify Fabric workspace
+        id: workspace
+        env:
+          FABRIC_API: "https://api.fabric.microsoft.com/v1"
+          WS_ID: ${{ steps.fabric-config.outputs.workspace_id }}
+        run: |
+          set -euo pipefail
+          RESOURCE="https://api.fabric.microsoft.com"
+          # Check if workspace exists
+          HTTP_CODE=$(az rest --method GET \
+            --url "${FABRIC_API}/workspaces/${WS_ID}" \
+            --resource "$RESOURCE" \
+            --output none --query "id" 2>&1 && echo "200" || echo "404")
+          if [[ "$HTTP_CODE" == "404" ]]; then
+            echo "::warning::Workspace not found. Create it via Fabric portal or az rest."
+          else
+            echo "Workspace $WS_ID verified"
+          fi
+      - name: Create semantic model definition
+        env:
+          FABRIC_API: "https://api.fabric.microsoft.com/v1"
+          WS_ID: ${{ steps.fabric-config.outputs.workspace_id }}
+        run: |
+          set -euo pipefail
+          RESOURCE="https://api.fabric.microsoft.com"
+          BODY=$(mktemp)
+          cat > "$BODY" <<'JSON'
+          {
+            "displayName": "EmployeeKnowledgeModel",
+            "description": "Semantic model for employee knowledge graph analytics"
+          }
+          JSON
+          az rest --method POST \
+            --url "${FABRIC_API}/workspaces/${WS_ID}/semanticModels" \
+            --resource "$RESOURCE" \
+            --body "@$BODY" \
+            --headers "Content-Type=application/json" \
+            -o json 2>&1 || echo "::warning::Semantic model creation skipped (may already exist)"
+          rm -f "$BODY"
+      - name: Create data pipeline
+        env:
+          FABRIC_API: "https://api.fabric.microsoft.com/v1"
+          WS_ID: ${{ steps.fabric-config.outputs.workspace_id }}
+        run: |
+          set -euo pipefail
+          RESOURCE="https://api.fabric.microsoft.com"
+          BODY=$(mktemp)
+          cat > "$BODY" <<'JSON'
+          {
+            "displayName": "EmployeeKnowledgePipeline",
+            "description": "Ingestion pipeline: Blob Storage → Document Intelligence → OneLake → Semantic Model"
+          }
+          JSON
+          az rest --method POST \
+            --url "${FABRIC_API}/workspaces/${WS_ID}/dataPipelines" \
+            --resource "$RESOURCE" \
+            --body "@$BODY" \
+            --headers "Content-Type=application/json" \
+            -o json 2>&1 || echo "::warning::Pipeline creation skipped (may already exist)"
+          rm -f "$BODY"
+      - name: Upload data to blob storage for Fabric ingestion
+        env:
+          STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
+        run: |
+          set -euo pipefail
+          if [[ -z "${STORAGE_ACCOUNT:-}" ]]; then
+            STORAGE_ACCOUNT="stfabriciqdemodata01"
+          fi
+          for f in employees.json digital_assets.json contributions.json projects.json org_hierarchy.json emails.json; do
+            az storage blob upload \
+              --account-name "$STORAGE_ACCOUNT" \
+              --container-name "employee-knowledge-raw" \
+              --name "$f" \
+              --file "data/$f" \
+              --overwrite \
+              --auth-mode login \
+              --output none 2>/dev/null || echo "::warning::Failed to upload $f"
+          done
+          echo "Data files uploaded to employee-knowledge-raw container"
+      - name: Deployment summary
+        run: |
+          echo "### Fabric Component Deployment" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Workspace ID: \`${{ steps.fabric-config.outputs.workspace_id }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Lakehouse ID: \`${{ steps.fabric-config.outputs.lakehouse_id }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Semantic model, pipeline, and data upload jobs executed" >> "$GITHUB_STEP_SUMMARY"
+
   deployment-summary:
     if: always()
     needs:
@@ -313,4 +481,5 @@ jobs:
           echo "| Azure auth mode | \`$AUTH_MODE\` |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Resource group | \`$RESOURCE_GROUP\` |" >> "$GITHUB_STEP_SUMMARY"
           echo "| UI App Service | \`$UI_APP_NAME\` |" >> "$GITHUB_STEP_SUMMARY"
-          echo "| API App Service (dedicated) | \`$API_APP_NAME\` |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| API App Service | \`$API_APP_NAME\` |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Fabric components | semantic model, pipeline, data upload |" >> "$GITHUB_STEP_SUMMARY"

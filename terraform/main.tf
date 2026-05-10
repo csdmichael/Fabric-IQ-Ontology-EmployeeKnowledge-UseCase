@@ -101,8 +101,7 @@ resource "azurerm_linux_web_app" "ui" {
   }
 
   app_settings = {
-    "WEBSITE_RUN_FROM_PACKAGE"       = "1"
-    "SCM_DO_BUILD_DURING_DEPLOYMENT" = "false"
+    "SCM_DO_BUILD_DURING_DEPLOYMENT" = "true"
   }
 
   https_only = true
@@ -118,7 +117,8 @@ resource "azurerm_linux_web_app" "api" {
   service_plan_id     = data.azurerm_service_plan.main.id
 
   site_config {
-    always_on = false
+    always_on         = false
+    app_command_line  = "python api/server.py"
 
     application_stack {
       python_version = "3.12"
@@ -126,8 +126,8 @@ resource "azurerm_linux_web_app" "api" {
   }
 
   app_settings = {
-    "WEBSITE_RUN_FROM_PACKAGE"       = "1"
-    "SCM_DO_BUILD_DURING_DEPLOYMENT" = "false"
+    "SCM_DO_BUILD_DURING_DEPLOYMENT" = "true"
+    "PORT"                           = "8080"
   }
 
   https_only = true

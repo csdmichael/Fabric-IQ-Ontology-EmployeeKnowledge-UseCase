@@ -209,7 +209,9 @@ class ApiHandler(BaseHTTPRequestHandler):
             self._send_json(500, {"error": "Failed to load data source", "details": str(exc)})
 
 
-def run(host: str = "127.0.0.1", port: int = 8080) -> None:
+def run(host: str = "0.0.0.0", port: int = 8080) -> None:
+    import os
+    port = int(os.environ.get("PORT", port))
     server = ThreadingHTTPServer((host, port), ApiHandler)
     print(f"Fabric IQ API listening on http://{host}:{port}")
     server.serve_forever()
