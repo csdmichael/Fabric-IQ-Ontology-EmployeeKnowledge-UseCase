@@ -10,11 +10,13 @@
   },
   "microsoftFabric": {
     "workspaceId": "38362838-0531-4215-89af-a8a79221b545",
+    "ontologyId": "2902d438-68bc-4760-ad6a-bef9208c14b2",
     "lakehouseId": "d11b209f-c774-481e-adcb-79920a94fd20",
     "capacityId": "6dc14689-95f7-416c-b542-a4a4819107df",
     "pipelineId": "944b78ab-c7da-465b-9559-c3461be2e11e",
     "semanticModelId": "21e0a7be-1e7d-4110-8faa-d835f81c6559",
-    "dataAgentId": "bfe47d80-4ace-45b5-847b-0e7a68fff316"
+    "dataAgentId": "bfe47d80-4ace-45b5-847b-0e7a68fff316",
+    "tenantId": "b158173c-91f6-4f99-b5e9-aa9bcb463863"
   },
   "integration": {
     "teamsDevPortalUrl": "https://dev.teams.microsoft.com/apps",
