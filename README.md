@@ -3,6 +3,9 @@
 > **Architecture diagrams and data-flow visuals are presented first below for quick reference, followed by full project documentation.**
 
 ## Table of Contents
+- **⚡ [QUICK START GUIDE](QUICK_START.md)** ← **START HERE**
+- **📋 [DEPLOYMENT STATUS](DEPLOYMENT_STATUS.md)** - Infrastructure overview
+- **🎯 [POWER BI SETUP](POWERBI_SETUP_GUIDE.md)** - Step-by-step guide
 - [Architecture](#architecture)
 - [Data Pipeline in Microsoft Fabric](#data-pipeline-in-microsoft-fabric)
 - [Semantic Model & ERD](#semantic-model--erd)
