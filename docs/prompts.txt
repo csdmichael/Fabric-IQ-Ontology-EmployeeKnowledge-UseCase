@@ -16,13 +16,22 @@
 1. Build an Ionic + Angular + TypeScript UI with web/tablet/mobile layouts.
 2. Include a Data Sources page for employee assets and org structure.
 3. Include an Ingestion + Intelligence Flow page.
-4. Include a Fabric Data Agent prompts page with one-click copy/execute behavior.
+4. Include a Fabric Data Agent prompts page with one-click copy/execute behavior and 30 categorized sample prompts.
 5. Include an Agent Packaging page (zip + Teams Dev Portal import guidance).
 6. Reflect expanded employee assets in UI.
 7. Add pagination for employee asset browsing.
 8. Add search autocomplete to find/filter employees and assets.
 9. Add an in-browser document viewer for ppt, word, pdf, onenote, txt, email, and related formats.
 10. Add Microsoft logo in header and footer identity for Michael Yaacoub with LinkedIn + GitHub links.
+11. Add an Employees page listing all employees with contribution KPIs (score, projects, assets), drill-through detail panel, and department filter/group-by.
+12. Add a Leaderboard page with bar charts (top 10 contributors by score), pie charts (department distribution), location/geography breakdown, and asset type breakdown. All charts filterable by department. Include Chart.js as the charting library.
+13. Add a Projects page (enhanced) with portfolio-level KPIs (total/active/completed/planning, avg team size) and per-project KPIs (team size, avg contribution score, top contributor, skill count).
+14. Add an Employee Copilot Agent page where managers can select any employee to generate an AI performance summary including headline, performance narrative, strengths, improvement opportunities, suggested learning path, recognition suggestion, and manager notes.
+15. Add a Power BI Reports page listing all available Fabric-backed reports with descriptions, refresh schedules, tags, dataset/workspace metadata, and an embed frame for each report.
+16. Add an Org Chart page that graphically renders the full employee organizational structure as an interactive SVG tree. Nodes show employee name, role, tier badge, and a KPI pill with direct report count, total report count, and contribution score. Support focus/drill-down on any manager's subtree. Show a detail panel with 6 KPIs (direct reports, total reports, own score, team avg score, projects, assets) and a direct-vs-indirect reports bar chart. Include department highlight filter and manager selector. Show summary KPIs: total employees, total managers, reporting levels, avg span of control.
+17. Add `data/contributions.json` with diversified per-employee contribution metrics (contribution score, project counts, asset counts, commits, emails, mentoring sessions, tier: star/average/low) to support leaderboard and KPI pages.
+18. Add `data/powerbi_reports.json` with 8 Power BI report definitions covering employee contributions, project portfolio, leaderboard, skill coverage, digital assets, HR talent, geographic heatmap, and ontology graph.
+19. Categorize the left navigation menu into three labeled sections: **Source Data** (Employees, Org Structure, Projects, Digital Assets), **Reports & Dashboards** (Leaderboard, Power BI Reports, Ingestion Pipeline), and **AI Agents** (Employee Copilot Agent, Agent Prompts, Agent Packaging). Each section has a header label, icon, and styled active-route highlighting. Include a branded sidebar header showing "Fabric IQ" and subtitle. Hamburger button visible in app header for mobile navigation.
 
 ## Fabric Section
 1. Build Fabric dataflows/pipelines for ingestion, classification, parsing, confidence rollups, and Cosmos DB JSON persistence.
@@ -33,6 +42,8 @@
 6. Citation payloads must include `documentId`, `cosmosDbRecordId`, and source storage path.
 7. Prompts should support employee lookup, asset lookup, confidence analysis, hierarchy analysis, and department rollups.
 8. Prompts should support operational troubleshooting scenarios (missing parse records, stale assets, low-confidence assets).
+9. Add Power BI reports and dashboards in Fabric workspace covering: employee contribution overview, project portfolio, top contributor leaderboard, department skill coverage map, digital asset analytics, HR talent & attrition risk, geographic contribution heatmap, and ontology knowledge graph report.
+10. Power BI reports must be embedded in the UI Power BI Reports page via embed URL and Fabric managed identity token minting.
 
 ## Architecture Diagrams and Documentation Section
 1. Architecture diagrams must be enterprise-ready, high-fidelity, and use official Microsoft/Azure iconography.
@@ -51,6 +62,8 @@
    - UI navigation guide
    - data agent prompt examples
 7. Reference `docs/DEMO_SCRIPT.md` from README.
+8. Document all new UI pages (Employees, Leaderboard, Employee Copilot Agent, Power BI Reports) in README with descriptions and navigation guide.
+9. Include the 30 sample agent prompts in the README under a dedicated "Sample Agent Prompts" section, organized by category.
 
 ## Monitoring Section (SRE Agent + Azure Monitor)
 1. Add Azure Monitor diagnostic settings for Storage Account, Cosmos DB, and UI App Service.
@@ -92,3 +105,51 @@
    - org hierarchy data
 2. Generate additional assets per employee to better demonstrate scenario richness.
 3. Ensure generated/expanded data supports UI views, Fabric ingestion, ontology linking, and monitoring use cases.
+4. Add `data/contributions.json` with per-employee contribution metrics including contribution score, tier (star/average/low), project counts, asset counts, commits, emails, and mentoring sessions. Diversify values so star-tier employees have 5+ projects and 12–18 assets while developing-tier employees have 1 project and 4–7 assets.
+5. Add `data/powerbi_reports.json` with report metadata for all 8 Fabric-backed Power BI reports including embed URLs, dataset IDs, workspace IDs, refresh schedules, and tags.
+
+## Sample Agent Prompts (30 Total — used in UI Agent Prompts page and README)
+
+### Contributors & Performance
+1. Who are the top 5 contributors across the entire organization by contribution score?
+2. Who are the top contributors in the Manufacturing department?
+3. Which employees have a contribution score above 85 and are involved in more than 4 projects?
+4. List all star-tier contributors and their departments.
+5. Who has the most mentoring sessions across the company?
+
+### Employee Lookup
+6. What did Alex Garcia (EMP001) work on in the last year?
+7. Show me the full contribution profile for Jordan Nguyen including projects and digital assets.
+8. What skills does Riley Patel have and which projects are they contributing to?
+9. Which employees are located in Bengaluru and what is their average contribution score?
+10. Who are the longest-tenured employees and how do their contribution scores compare?
+
+### Projects
+11. Who is working on the NextGen Etch Process Automation project?
+12. List all active projects in the IT department with their team sizes.
+13. Which projects use Azure AI and MLOps skills and who leads them?
+14. Which employee appears in the most projects across the organization?
+15. Show me all completed projects and the employees who contributed to them.
+
+### Digital Assets
+16. Which employees have the most digital assets and what types are they?
+17. How many presentations has EMP003 (Taylor Miller) created?
+18. List all knowledge assets created by employees in the R&D department.
+19. Which employees have fewer than 6 digital assets and may need knowledge-sharing support?
+20. What is the total asset count breakdown by type across all employees?
+
+### Department Analytics
+21. Compare average contribution scores across all departments.
+22. Which department has the highest average number of projects per employee?
+23. How many employees does each department have and what is their skill distribution?
+24. Which departments have the most developing-tier contributors that may need support?
+25. Show headcount and contribution score trends grouped by office location.
+
+### Skills & Ontology
+26. Which employees have both Python and Azure AI skills and work in R&D?
+27. What skills are most common across star-tier contributors?
+28. Find employees skilled in Fabric and Power BI who could join the OneLake Semantic Layer project.
+
+### Manager & Copilot Insights
+29. Generate a performance summary for EMP005 (Casey Lee) including improvement suggestions.
+30. Which employees in Engineering have not participated in any project and may need engagement?

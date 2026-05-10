@@ -1,0 +1,125 @@
+<ion-content class="ion-padding">
+  <h2>Power BI Reports &amp; Dashboards</h2>
+  <p>{{ description }}</p>
+
+  <div *ngIf="loadError" class="viewer-error">{{ loadError }}</div>
+
+  <div class="fabric-banner">
+    <span>⚡</span>
+    <span>Powered by <strong>Microsoft Fabric</strong> · OneLake semantic models · Real-time refresh via Fabric pipelines</span>
+  </div>
+
+  <div class="filter-bar">
+    <ion-item lines="none">
+      <ion-label>Department</ion-label>
+      <ion-select
+        [value]="departmentFilter"
+        placeholder="All Departments"
+        (ionChange)="onDepartmentFilter($any($event.detail).value || '')">
+        <ion-select-option value="">All Departments</ion-select-option>
+        <ion-select-option *ngFor="let d of departments" [value]="d">{{ d }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button size="small" color="medium" fill="outline" (click)="clearFilters()">Clear</ion-button>
+    <span class="meta">{{ filteredReports.length }} reports available</span>
+  </div>
+
+  <div class="layout-grid">
+    <!-- Report List -->
+    <div class="layout-card">
+      <h3>Available Reports</h3>
+
+      <div class="report-list">
+        <div
+          *ngFor="let report of filteredReports"
+          class="report-card"
+          [class.selected]="selectedReport?.reportId === report.reportId"
+          (click)="selectReport(report)"
+          style="cursor:pointer">
+          <div class="report-top-row">
+            <strong>{{ report.name }}</strong>
+            <ion-badge [color]="scheduleColor(report.refreshSchedule)">{{ report.refreshSchedule }}</ion-badge>
+          </div>
+          <p class="meta report-desc">{{ report.description }}</p>
+          <div class="tag-row">
+            <span *ngFor="let tag of report.tags" class="tag-chip">{{ tagIcon(tag) }} {{ tag }}</span>
+            <span class="tag-chip dept-chip" *ngIf="report.department !== 'All'">🏢 {{ report.department }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Report Detail & Embed -->
+    <div class="layout-card">
+      <h3>Report Viewer</h3>
+
+      <div *ngIf="!selectedReport" class="viewer-placeholder">
+        <div class="placeholder-icon">📊</div>
+        <p>Select a report from the list to preview it here.</p>
+        <p class="meta">Embed requires Power BI Pro license and Fabric workspace access in production.</p>
+      </div>
+
+      <div *ngIf="selectedReport">
+        <h4>{{ selectedReport.name }}</h4>
+        <p>{{ selectedReport.description }}</p>
+
+        <div class="report-meta-grid">
+          <div class="report-meta-item">
+            <span class="meta-label">Report ID</span>
+            <span>{{ selectedReport.reportId }}</span>
+          </div>
+          <div class="report-meta-item">
+            <span class="meta-label">Workspace</span>
+            <span>{{ selectedReport.workspaceId }}</span>
+          </div>
+          <div class="report-meta-item">
+            <span class="meta-label">Dataset</span>
+            <span>{{ selectedReport.datasetId }}</span>
+          </div>
+          <div class="report-meta-item">
+            <span class="meta-label">Refresh</span>
+            <ion-badge [color]="scheduleColor(selectedReport.refreshSchedule)">{{ selectedReport.refreshSchedule }}</ion-badge>
+          </div>
+        </div>
+
+        <div class="tag-row" style="margin-top:8px">
+          <span *ngFor="let tag of selectedReport.tags" class="tag-chip">{{ tagIcon(tag) }} {{ tag }}</span>
+        </div>
+
+        <!-- Embed placeholder or iframe -->
+        <div *ngIf="embedMode === 'placeholder'" class="embed-placeholder">
+          <div class="embed-icon">📊</div>
+          <p><strong>{{ selectedReport.name }}</strong></p>
+          <p class="meta">Power BI embed requires authenticated access to Fabric workspace <code>{{ selectedReport.workspaceId }}</code>.</p>
+          <ion-button fill="solid" color="primary" (click)="openEmbed()">Open Embed Frame</ion-button>
+          <ion-button fill="outline" color="medium" [href]="selectedReport.embedUrl" target="_blank">Open in Power BI ↗</ion-button>
+        </div>
+
+        <iframe
+          *ngIf="embedMode === 'iframe'"
+          [src]="selectedReport.embedUrl"
+          class="powerbi-frame"
+          title="{{ selectedReport.name }}"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fabric Architecture Note -->
+  <div class="layout-card arch-note" style="margin-top:12px">
+    <h4>⚡ Fabric Architecture</h4>
+    <div class="arch-flow">
+      <div class="arch-step">📦<br><small>OneLake<br>Storage</small></div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-step">🔄<br><small>Fabric<br>Pipelines</small></div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-step">🗃️<br><small>Semantic<br>Model</small></div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-step">📊<br><small>Power BI<br>Reports</small></div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-step">🖥️<br><small>UI<br>Embed</small></div>
+    </div>
+    <p class="meta">Reports are built on Fabric semantic models with OneLake as the single source of truth. Pipelines refresh datasets on the schedules shown above. Embed tokens are minted via the Power BI REST API using a managed identity.</p>
+  </div>
+</ion-content>

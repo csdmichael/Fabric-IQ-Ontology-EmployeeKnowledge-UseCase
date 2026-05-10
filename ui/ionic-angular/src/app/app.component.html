@@ -1,6 +1,7 @@
 <ion-app>
   <ion-header>
     <ion-toolbar color="primary">
+      <ion-menu-button slot="start" aria-label="Open navigation menu"></ion-menu-button>
       <ion-title>
         <img src="assets/microsoft-logo.svg" alt="Microsoft" class="ms-logo" />
         Fabric IQ Employee Knowledge Demo
@@ -10,12 +11,31 @@
 
   <ion-split-pane contentId="main-content" when="(min-width: 768px)">
     <ion-menu contentId="main-content" type="overlay">
-      <ion-content>
-        <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let page of pages">
-            <ion-item [routerLink]="page.url">{{ page.title }}</ion-item>
-          </ion-menu-toggle>
-        </ion-list>
+      <ion-content class="nav-content">
+
+        <div class="nav-brand">
+          <span class="nav-brand-icon">⚡</span>
+          <div>
+            <div class="nav-brand-title">Fabric IQ</div>
+            <div class="nav-brand-sub">Employee Knowledge Graph</div>
+          </div>
+        </div>
+
+        <div *ngFor="let section of navSections" class="nav-section">
+          <div class="nav-section-header">
+            <span class="nav-section-icon">{{ section.icon }}</span>
+            {{ section.title }}
+          </div>
+          <ion-list lines="none" class="nav-list">
+            <ion-menu-toggle auto-hide="false" *ngFor="let page of section.pages">
+              <ion-item [routerLink]="page.url" routerLinkActive="active-nav-item" class="nav-item">
+                <span class="nav-item-icon" slot="start">{{ page.icon }}</span>
+                {{ page.title }}
+              </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+        </div>
+
       </ion-content>
     </ion-menu>
 
@@ -25,7 +45,7 @@
   <ion-footer>
     <ion-toolbar>
       <ion-title size="small">
-        Michael Yaacoub | Experienced Full Stack & AI Software Engineer / Architect at Microsoft |
+        Michael Yaacoub | Experienced Full Stack &amp; AI Software Engineer / Architect at Microsoft |
         <a href="https://www.linkedin.com/in/michael-yaacoub-7a46436" target="_blank">LinkedIn</a> |
         <a href="https://github.com/csdmichael" target="_blank">GitHub</a>
       </ion-title>

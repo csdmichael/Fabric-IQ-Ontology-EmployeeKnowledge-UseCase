@@ -1,0 +1,232 @@
+<ion-content class="ion-padding">
+  <h2>Org Chart</h2>
+  <p>{{ description }}</p>
+
+  <div *ngIf="loadError" class="viewer-error">{{ loadError }}</div>
+
+  <!-- KPI Summary Bar -->
+  <div class="kpi-bar">
+    <div class="kpi-pill">
+      <span class="kpi-num">{{ totalEmployees }}</span>
+      <span class="kpi-lbl">Total Employees</span>
+    </div>
+    <div class="kpi-pill mgr">
+      <span class="kpi-num">{{ totalManagers }}</span>
+      <span class="kpi-lbl">Managers</span>
+    </div>
+    <div class="kpi-pill">
+      <span class="kpi-num">{{ maxDepth }}</span>
+      <span class="kpi-lbl">Reporting Levels</span>
+    </div>
+    <div class="kpi-pill">
+      <span class="kpi-num">{{ avgSpanOfControl }}</span>
+      <span class="kpi-lbl">Avg Span of Control</span>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls-bar">
+    <ion-item lines="none" class="control-item">
+      <ion-label>Focus Manager</ion-label>
+      <ion-select
+        [value]="focusManagerId"
+        placeholder="All Top Managers"
+        (ionChange)="onFocusManager($any($event.detail).value || '')">
+        <ion-select-option value="">All Top Managers (2 levels)</ion-select-option>
+        <ion-select-option *ngFor="let mgr of topManagers" [value]="mgr.employeeId">
+          {{ mgr.displayName }} ({{ mgr.department }})
+        </ion-select-option>
+        <ion-select-option *ngFor="let mgr of midManagers" [value]="mgr.employeeId">
+          {{ mgr.displayName }} ({{ mgr.department }}) — mid-level
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item lines="none" class="control-item">
+      <ion-label>Highlight Dept</ion-label>
+      <ion-select
+        [value]="departmentFilter"
+        placeholder="All"
+        (ionChange)="onDepartmentFilter($any($event.detail).value || '')">
+        <ion-select-option value="">All Departments</ion-select-option>
+        <ion-select-option *ngFor="let d of departments" [value]="d">{{ d }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button size="small" fill="outline" color="medium" (click)="clearFocus()">Reset</ion-button>
+
+    <span class="meta" *ngIf="focusManagerId">
+      Viewing subtree for <strong>{{ focusedManagerName }}</strong>
+    </span>
+  </div>
+
+  <div class="chart-and-detail">
+    <!-- SVG Org Chart -->
+    <div class="chart-area">
+      <div class="scroll-hint meta" *ngIf="svgWidth > 800">← Scroll horizontally to see full tree →</div>
+      <div class="svg-scroll-wrapper">
+        <svg
+          [attr.width]="svgWidth"
+          [attr.height]="svgHeight"
+          class="org-svg"
+          *ngIf="renderedNodes.length > 0">
+
+          <!-- Connector lines (drawn first, behind nodes) -->
+          <path
+            *ngFor="let edge of renderedEdges"
+            [attr.d]="getEdgePath(edge)"
+            fill="none"
+            stroke="#b0c8e8"
+            stroke-width="1.5"
+            stroke-dasharray="none">
+          </path>
+
+          <!-- Nodes -->
+          <g
+            *ngFor="let item of renderedNodes"
+            [attr.transform]="'translate(' + item.cx + ',' + item.cy + ')'"
+            (click)="selectNode(item.node)"
+            class="org-node-group"
+            style="cursor:pointer">
+
+            <!-- Node box -->
+            <rect
+              [attr.width]="NODE_W"
+              [attr.height]="NODE_H"
+              rx="8"
+              [attr.fill]="nodeFill(item.node)"
+              [attr.stroke]="nodeBorder(item.node)"
+              stroke-width="1.5">
+            </rect>
+
+            <!-- Avatar circle -->
+            <circle cx="22" cy="22" r="14" [attr.fill]="item.node.children.length > 0 ? '#0078d4' : '#8c8c8c'" opacity="0.85"/>
+            <text x="22" y="27" text-anchor="middle" font-size="9" font-weight="700" fill="white">
+              {{ initials(item.node.displayName) }}
+            </text>
+
+            <!-- Tier badge -->
+            <text x="{{ NODE_W - 10 }}" y="14" text-anchor="middle" font-size="11">
+              {{ nodeTierBadge(item.node) }}
+            </text>
+
+            <!-- Name -->
+            <text x="42" y="18" font-size="10" font-weight="600" fill="#1a1a1a" class="svg-text">
+              {{ item.node.displayName.split(' ')[0] }}
+            </text>
+            <text x="42" y="30" font-size="9" fill="#333" class="svg-text">
+              {{ item.node.displayName.split(' ').slice(1).join(' ') }}
+            </text>
+
+            <!-- Role -->
+            <text x="42" y="42" font-size="8" fill="#57606a" class="svg-text">
+              {{ item.node.role }}
+            </text>
+
+            <!-- Reports KPI -->
+            <rect x="6" y="50" [attr.width]="NODE_W - 12" height="17" rx="4" fill="#f0f4ff"/>
+            <text x="{{ NODE_W / 2 }}" y="62" text-anchor="middle" font-size="8" fill="#0078d4" font-weight="600">
+              {{ item.node.directReportCount }} direct
+              <tspan *ngIf="item.node.totalReportCount > item.node.directReportCount">
+                · {{ item.node.totalReportCount }} total
+              </tspan>
+              · Score: {{ item.node.contributionScore }}
+            </text>
+          </g>
+        </svg>
+
+        <div *ngIf="renderedNodes.length === 0 && !loadError" class="viewer-placeholder">
+          Loading org chart…
+        </div>
+      </div>
+    </div>
+
+    <!-- Detail Panel -->
+    <div class="detail-panel" *ngIf="selectedNode">
+      <div class="detail-header">
+        <div class="detail-avatar" [style.background]="selectedNode.children.length > 0 ? '#0078d4' : '#57606a'">
+          {{ initials(selectedNode.displayName) }}
+        </div>
+        <div>
+          <h4 style="margin:0">{{ selectedNode.displayName }}</h4>
+          <p class="meta">{{ selectedNode.role }} · {{ selectedNode.department }}</p>
+          <p class="meta">📍 {{ selectedNode.location }}</p>
+        </div>
+      </div>
+
+      <div class="detail-kpi-grid">
+        <div class="detail-kpi">
+          <div class="dkpi-val">{{ selectedNode.directReportCount }}</div>
+          <div class="dkpi-lbl">Direct Reports</div>
+        </div>
+        <div class="detail-kpi">
+          <div class="dkpi-val">{{ selectedNode.totalReportCount }}</div>
+          <div class="dkpi-lbl">Total Reports</div>
+        </div>
+        <div class="detail-kpi">
+          <div class="dkpi-val" [style.color]="scoreColor(selectedNode.contributionScore)">
+            {{ selectedNode.contributionScore }}
+          </div>
+          <div class="dkpi-lbl">Own Score</div>
+        </div>
+        <div class="detail-kpi">
+          <div class="dkpi-val" [style.color]="scoreColor(selectedNode.avgScore)">
+            {{ selectedNode.avgScore }}
+          </div>
+          <div class="dkpi-lbl">Team Avg Score</div>
+        </div>
+        <div class="detail-kpi">
+          <div class="dkpi-val">{{ selectedNode.projectCount }}</div>
+          <div class="dkpi-lbl">Projects</div>
+        </div>
+        <div class="detail-kpi">
+          <div class="dkpi-val">{{ selectedNode.assetCount }}</div>
+          <div class="dkpi-lbl">Assets</div>
+        </div>
+      </div>
+
+      <ion-button
+        *ngIf="selectedNode.directReportCount > 0"
+        size="small"
+        fill="solid"
+        color="primary"
+        (click)="onFocusManager(selectedNode.employeeId)"
+        style="margin-top:8px">
+        🔍 Focus on {{ selectedNode.displayName }}'s Tree
+      </ion-button>
+
+      <!-- Reports bar chart -->
+      <div *ngIf="selectedNode.directReportCount > 0" style="margin-top:12px">
+        <h5 style="margin-bottom:6px">Reports: Direct vs Total</h5>
+        <div class="reports-bar">
+          <span class="meta" style="width:80px">Direct</span>
+          <div class="bar-track">
+            <div class="bar-fill direct"
+              [style.width.%]="selectedNode.totalReportCount > 0 ? (selectedNode.directReportCount / selectedNode.totalReportCount * 100) : 100">
+            </div>
+          </div>
+          <span class="bar-val">{{ selectedNode.directReportCount }}</span>
+        </div>
+        <div class="reports-bar">
+          <span class="meta" style="width:80px">Indirect</span>
+          <div class="bar-track">
+            <div class="bar-fill indirect"
+              [style.width.%]="selectedNode.totalReportCount > 0 ? ((selectedNode.totalReportCount - selectedNode.directReportCount) / selectedNode.totalReportCount * 100) : 0">
+            </div>
+          </div>
+          <span class="bar-val">{{ selectedNode.totalReportCount - selectedNode.directReportCount }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-panel placeholder-panel" *ngIf="!selectedNode">
+      <p class="meta">Click any node in the chart to see detailed KPIs.</p>
+      <div class="legend">
+        <div class="legend-row"><span class="legend-dot mgr-dot"></span> Manager (has direct reports)</div>
+        <div class="legend-row"><span class="legend-dot leaf-dot"></span> Individual contributor</div>
+        <div class="legend-row"><span class="legend-dot star-dot"></span> Star contributor (⭐)</div>
+        <div class="legend-row"><span class="legend-dot hl-dot"></span> Highlighted department</div>
+      </div>
+    </div>
+  </div>
+</ion-content>

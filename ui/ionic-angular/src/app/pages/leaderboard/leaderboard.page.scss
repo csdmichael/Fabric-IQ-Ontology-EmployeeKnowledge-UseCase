@@ -1,0 +1,276 @@
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  background: #fff;
+}
+
+.meta {
+  color: #57606a;
+  font-size: 12px;
+}
+
+.chart-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.layout-card {
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fff;
+}
+
+/* Bar chart */
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 24px 1.6fr 1fr 44px;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.asset-bar-row {
+  grid-template-columns: 100px 1fr 44px;
+}
+
+.rank {
+  font-weight: 700;
+  color: #8c8c8c;
+  font-size: 13px;
+  text-align: right;
+}
+
+.bar-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.emp-name {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.emp-role {
+  font-size: 10px;
+  color: #57606a;
+}
+
+.bar-track {
+  background: #eaeef2;
+  border-radius: 4px;
+  height: 14px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.bar-score {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.bar-label-wide {
+  color: #57606a;
+  font-size: 12px;
+}
+
+/* Pie chart */
+.pie-container {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-top: 8px;
+}
+
+.pie-svg {
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
+}
+
+.pie-slice {
+  cursor: default;
+  transition: opacity 0.2s;
+}
+
+.pie-slice:hover {
+  opacity: 0.8;
+}
+
+.pie-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+}
+
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-label {
+  flex: 1;
+  color: #333;
+}
+
+.legend-count {
+  color: #57606a;
+  font-weight: 600;
+}
+
+.legend-score {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Geo table */
+.geo-table {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.geo-row {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr 1.4fr;
+  gap: 6px;
+  align-items: center;
+  font-size: 12px;
+  padding: 5px 6px;
+  border: 1px solid #eaeef2;
+  border-radius: 5px;
+}
+
+.geo-row.header {
+  font-weight: 600;
+  background: #f6f8fa;
+  border-color: #d0d7de;
+}
+
+.geo-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* World map SVG */
+.map-hint {
+  margin-top: 10px;
+  border: 1px solid #eaeef2;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.world-map-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Tier summary */
+.tier-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tier-card {
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+}
+
+.tier-card.star {
+  background: linear-gradient(135deg, #fff7e6, #ffecc0);
+  border: 1px solid #f0c060;
+}
+
+.tier-card.average {
+  background: linear-gradient(135deg, #e6f0ff, #c8dcf8);
+  border: 1px solid #90b8f0;
+}
+
+.tier-card.low {
+  background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+  border: 1px solid #ccc;
+}
+
+.tier-icon {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.tier-count {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.tier-name {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.viewer-error {
+  border: 1px solid #f1c0c0;
+  background: #fff5f5;
+  color: #8a1c1c;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1023px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+  .tier-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .bar-row {
+    grid-template-columns: 20px 1fr 0.8fr 36px;
+  }
+  .tier-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}

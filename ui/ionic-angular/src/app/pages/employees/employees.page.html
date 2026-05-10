@@ -1,0 +1,193 @@
+<ion-content class="ion-padding">
+  <h2>Employees</h2>
+  <p>{{ description }}</p>
+
+  <div *ngIf="loadError" class="viewer-error">{{ loadError }}</div>
+
+  <div class="search-panel">
+    <ion-item lines="none">
+      <ion-label position="stacked">Search Employees</ion-label>
+      <ion-input
+        [value]="query"
+        (ionInput)="onQueryInput($any($event.target).value || '')"
+        placeholder="Name, ID, role, location, or skill">
+      </ion-input>
+    </ion-item>
+
+    <div class="filter-row">
+      <ion-item lines="none">
+        <ion-label>Department</ion-label>
+        <ion-select
+          [value]="departmentFilter"
+          placeholder="All"
+          (ionChange)="onDepartmentFilter($any($event.detail).value || '')">
+          <ion-select-option value="">All Departments</ion-select-option>
+          <ion-select-option *ngFor="let d of departments" [value]="d">{{ d }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Group by Dept</ion-label>
+        <ion-toggle
+          [checked]="groupByDepartment"
+          (ionChange)="groupByDepartment = $any($event.detail).checked">
+        </ion-toggle>
+      </ion-item>
+
+      <ion-button size="small" color="medium" fill="outline" (click)="clearFilters()">Clear</ion-button>
+    </div>
+  </div>
+
+  <div class="layout-grid">
+    <div class="layout-card">
+      <h3>Employee List</h3>
+      <p class="meta">{{ totalEmployees }} employees{{ departmentFilter ? ' in ' + departmentFilter : '' }}</p>
+
+      <!-- Flat list with pagination -->
+      <div *ngIf="!groupByDepartment">
+        <div class="asset-table">
+          <div class="emp-row header">
+            <span>Name</span><span>Dept</span><span>Role</span><span>Location</span><span>Score</span><span>Projects</span>
+          </div>
+          <div
+            class="emp-row"
+            *ngFor="let emp of pagedEmployees"
+            [class.selected-row]="selectedEmployee?.employeeId === emp.employeeId"
+            (click)="selectEmployee(emp)"
+            style="cursor:pointer">
+            <span><strong>{{ emp.displayName }}</strong><br><small>{{ emp.employeeId }}</small></span>
+            <span>{{ emp.department }}</span>
+            <span>{{ emp.role }}</span>
+            <span>{{ emp.location }}</span>
+            <span>
+              <ion-badge [color]="scoreColor(contributionFor(emp.employeeId)?.contributionScore ?? 0)">
+                {{ contributionFor(emp.employeeId)?.contributionScore ?? '—' }}
+              </ion-badge>
+            </span>
+            <span>{{ contributionFor(emp.employeeId)?.projectCount ?? 0 }}</span>
+          </div>
+        </div>
+
+        <div class="pagination-row">
+          <ion-button size="small" fill="outline" [disabled]="page <= 1" (click)="goToPreviousPage()">Previous</ion-button>
+          <span class="meta">Page {{ page }} / {{ totalPages }}</span>
+          <ion-button size="small" fill="outline" [disabled]="page >= totalPages" (click)="goToNextPage()">Next</ion-button>
+        </div>
+      </div>
+
+      <!-- Grouped by department -->
+      <div *ngIf="groupByDepartment">
+        <div *ngFor="let group of groupedEmployees" class="dept-group">
+          <h4 class="dept-header">{{ group.department }} <span class="meta">({{ group.employees.length }})</span></h4>
+          <div
+            class="emp-row compact"
+            *ngFor="let emp of group.employees"
+            [class.selected-row]="selectedEmployee?.employeeId === emp.employeeId"
+            (click)="selectEmployee(emp)"
+            style="cursor:pointer">
+            <span>{{ emp.displayName }}</span>
+            <span>{{ emp.role }}</span>
+            <span>
+              <ion-badge [color]="scoreColor(contributionFor(emp.employeeId)?.contributionScore ?? 0)">
+                {{ contributionFor(emp.employeeId)?.contributionScore ?? '—' }}
+              </ion-badge>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Employee Detail Panel -->
+    <div class="layout-card">
+      <h3>Employee Detail</h3>
+
+      <div *ngIf="!selectedEmployee" class="viewer-placeholder">
+        Click an employee row to view their contribution KPIs, projects, and asset breakdown.
+      </div>
+
+      <div *ngIf="selectedEmployee">
+        <div class="emp-header-row">
+          <div class="emp-avatar">{{ selectedEmployee.displayName.split(' ').map(n => n[0]).join('') }}</div>
+          <div>
+            <h4 style="margin:0">{{ selectedEmployee.displayName }}</h4>
+            <p class="meta">{{ selectedEmployee.role }} · {{ selectedEmployee.department }} · {{ selectedEmployee.location }}</p>
+            <p class="meta">{{ selectedEmployee.email }}</p>
+          </div>
+        </div>
+
+        <div class="skill-row" *ngIf="selectedEmployee.skills?.length">
+          <ion-chip *ngFor="let s of selectedEmployee.skills" color="primary" outline>
+            <ion-label>{{ s }}</ion-label>
+          </ion-chip>
+        </div>
+
+        <!-- KPI Cards -->
+        <div *ngIf="contributionFor(selectedEmployee.employeeId) as contrib">
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-value" [style.color]="contrib.contributionScore >= 80 ? '#2d7d46' : contrib.contributionScore >= 55 ? '#d4832a' : '#b91c1c'">
+                {{ contrib.contributionScore }}
+              </div>
+              <div class="kpi-label">Contribution Score</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-value">{{ contrib.projectCount }}</div>
+              <div class="kpi-label">Projects</div>
+              <div class="kpi-sub">{{ contrib.activeProjectCount }} active · {{ contrib.completedProjectCount }} done</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-value">{{ contrib.assetCount }}</div>
+              <div class="kpi-label">Digital Assets</div>
+              <div class="kpi-sub">{{ contrib.presentationCount }} decks · {{ contrib.documentCount }} docs</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-value">{{ contrib.codeCommitCount }}</div>
+              <div class="kpi-label">Code Commits</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-value">{{ contrib.emailActivityCount }}</div>
+              <div class="kpi-label">Email Activity</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-value">{{ contrib.mentoringSessionCount }}</div>
+              <div class="kpi-label">Mentoring Sessions</div>
+            </div>
+          </div>
+
+          <div class="tier-badge-row">
+            <ion-badge [color]="tierColor(contrib.tier)">{{ tierLabel(contrib.tier) }}</ion-badge>
+          </div>
+
+          <!-- Contribution Bar Chart -->
+          <h5>Contribution Breakdown</h5>
+          <div class="bar-chart">
+            <div *ngFor="let bar of barData(contrib)" class="bar-row">
+              <span class="bar-label">{{ bar.label }}</span>
+              <div class="bar-track">
+                <div class="bar-fill" [style.width.%]="bar.max > 0 ? (bar.value / bar.max * 100) : 0" [style.background]="bar.color"></div>
+              </div>
+              <span class="bar-value">{{ bar.value }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects Section -->
+        <h5>Projects Involved</h5>
+        <div *ngIf="projectsForEmployee(selectedEmployee.employeeId).length === 0" class="meta">No projects found.</div>
+        <div *ngFor="let proj of projectsForEmployee(selectedEmployee.employeeId)" class="project-item">
+          <ion-badge [color]="proj.status === 'Active' ? 'success' : proj.status === 'Completed' ? 'medium' : 'warning'" style="margin-right:6px">{{ proj.status }}</ion-badge>
+          <strong>{{ proj.name }}</strong>
+          <p class="meta">{{ proj.projectId }} · {{ proj.department }} · {{ proj.employeeIds.length }} members</p>
+        </div>
+
+        <!-- Hire date -->
+        <p class="meta" style="margin-top:12px">
+          <strong>Hire Date:</strong> {{ selectedEmployee.hireDate }}
+          <span *ngIf="selectedEmployee.managerEmployeeId">
+            &nbsp;·&nbsp;<strong>Manager:</strong> {{ selectedEmployee.managerEmployeeId }}
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</ion-content>
