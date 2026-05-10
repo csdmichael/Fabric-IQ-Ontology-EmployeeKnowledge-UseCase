@@ -19,6 +19,7 @@
 - [Document Intelligence & Confidence Scoring](#document-intelligence--confidence-scoring)
 - [Fabric Data Agent](#fabric-data-agent)
 - [Ionic + Angular + TypeScript UI](#ionic--angular--typescript-ui)
+- [Sample Agent Prompts (30)](#sample-agent-prompts-30)
 - [Reusable Azure Hosting Resources (ai-myaacoub)](#reusable-azure-hosting-resources-ai-myaacoub)
 - [Managed Identity Setup](#managed-identity-setup)
 - [Private Networking Model](#private-networking-model)
@@ -245,16 +246,87 @@ The 20 sample prompts are now citation-oriented and explicitly instruct response
 UI scaffold:
 - `ui/ionic-angular/`
 
-Implemented page capabilities:
-- **Data Sources**: employee + asset search autocomplete, filtering, pagination, and asset list browsing
-- **Projects**: browse 20 employee-linked projects; filter by department/status; view team assignments and required skills
-- **Document Viewer**: in-browser preview flow for pptx/docx/pdf/one/txt/eml/csv/md (with format-aware rendering strategy)
-- **Ingestion & Intelligence**: Fabric pipeline and intelligence layer narrative
-- **Data Agent Prompts**: prompt interactions aligned with citation requirements
-- **Agent Packaging**: Teams/Copilot packaging flow
+The left navigation menu is organized into three labeled sections:
+
+### 🗂️ Source Data
+| Page | Description |
+|---|---|
+| **Employees** | List all 100 employees. Drill through to see contribution KPIs (score, projects, assets, commits, mentoring), bar chart breakdown, and projects involved. Filter + group by department. |
+| **Org Structure** | Interactive SVG org chart showing the full 3-level reporting hierarchy. Click any node to see direct/total reports, own score, team avg score, and a direct-vs-indirect bar chart. Focus/drill-down into any manager's subtree. |
+| **Projects** | Browse 20 employee-linked projects. Portfolio KPIs (active/completed/planning). Per-project KPIs: team size, avg contribution score, top contributor, skill count. Filter by department/status. |
+| **Digital Assets** | Employee asset search with autocomplete, format filtering, pagination, and in-browser document viewer (pptx/docx/pdf/txt/eml/csv/md). |
+
+### 📊 Reports & Dashboards
+| Page | Description |
+|---|---|
+| **Leaderboard** | Top 10 contributors bar chart, department pie chart, asset-type breakdown bar chart, geography/location table with world map dots. Filter all views by department. |
+| **Power BI Reports** | 8 Fabric-backed Power BI reports with descriptions, refresh schedules, embed frames, and Fabric architecture flow diagram. |
+| **Ingestion Pipeline** | Fabric pipeline and Document Intelligence layer narrative. |
+
+### 🤖 AI Agents
+| Page | Description |
+|---|---|
+| **Employee Copilot Agent** | Select any employee to generate an AI performance summary: headline, performance narrative, strengths, improvement opportunities, suggested learning path, recognition suggestion, and manager notes. |
+| **Agent Prompts (30)** | 30 categorized, one-click copy/execute sample prompts across 6 categories: Contributors, Employee Lookup, Projects, Digital Assets, Department Analytics, Skills & Ontology, Manager Insights. |
+| **Agent Packaging** | Teams/Copilot packaging flow and zip import guidance. |
 
 Preview page:
 - `docs/ui-preview.html`
+
+### New Data Files
+| File | Description |
+|---|---|
+| `data/contributions.json` | Per-employee contribution metrics: score (varied 30–99), tier (star/average/low), project counts, asset counts, commits, emails, mentoring sessions. |
+| `data/powerbi_reports.json` | 8 Power BI report definitions with embed URLs, dataset/workspace IDs, refresh schedules, and tags. |
+
+## Sample Agent Prompts (30)
+
+These 30 prompts are surfaced in the **Agent Prompts** page (one-click copy/execute) and usable directly against the Fabric Data Agent. Organized by category:
+
+### 🏆 Contributors & Performance
+1. Who are the top 5 contributors across the entire organization by contribution score?
+2. Who are the top contributors in the Manufacturing department?
+3. Which employees have a contribution score above 85 and are involved in more than 4 projects?
+4. List all star-tier contributors and their departments.
+5. Who has the most mentoring sessions across the company?
+
+### 👤 Employee Lookup
+6. What did Alex Garcia (EMP001) work on in the last year?
+7. Show me the full contribution profile for Jordan Nguyen including projects and digital assets.
+8. What skills does Riley Patel have and which projects are they contributing to?
+9. Which employees are located in Bengaluru and what is their average contribution score?
+10. Who are the longest-tenured employees and how do their contribution scores compare?
+
+### 🗂️ Projects
+11. Who is working on the NextGen Etch Process Automation project?
+12. List all active projects in the IT department with their team sizes.
+13. Which projects use Azure AI and MLOps skills and who leads them?
+14. Which employee appears in the most projects across the organization?
+15. Show me all completed projects and the employees who contributed to them.
+
+### 📂 Digital Assets
+16. Which employees have the most digital assets and what types are they?
+17. How many presentations has EMP003 (Taylor Miller) created?
+18. List all knowledge assets created by employees in the R&D department.
+19. Which employees have fewer than 6 digital assets and may need knowledge-sharing support?
+20. What is the total asset count breakdown by type across all employees?
+
+### 🏢 Department Analytics
+21. Compare average contribution scores across all departments.
+22. Which department has the highest average number of projects per employee?
+23. How many employees does each department have and what is their skill distribution?
+24. Which departments have the most developing-tier contributors that may need support?
+25. Show headcount and contribution score trends grouped by office location.
+
+### 🎓 Skills & Ontology
+26. Which employees have both Python and Azure AI skills and work in R&D?
+27. What skills are most common across star-tier contributors?
+28. Find employees skilled in Fabric and Power BI who could join the OneLake Semantic Layer project.
+
+### 👔 Manager & Copilot Insights
+29. Generate a performance summary for EMP005 (Casey Lee) including improvement suggestions.
+30. Which employees in Engineering have not participated in any project and may need engagement?
+
 
 ## Reusable Azure Hosting Resources (ai-myaacoub)
 This repository now includes reusable hosting/network metadata under:

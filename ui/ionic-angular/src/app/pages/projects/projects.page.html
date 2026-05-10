@@ -4,6 +4,15 @@
 
   <div *ngIf="loadError" class="viewer-error">{{ loadError }}</div>
 
+  <!-- Portfolio KPI Bar -->
+  <div class="kpi-bar">
+    <div class="kpi-pill"><span class="kpi-num">{{ portfolioKpis.total }}</span><span class="kpi-lbl">Total</span></div>
+    <div class="kpi-pill active"><span class="kpi-num">{{ portfolioKpis.active }}</span><span class="kpi-lbl">Active</span></div>
+    <div class="kpi-pill done"><span class="kpi-num">{{ portfolioKpis.completed }}</span><span class="kpi-lbl">Completed</span></div>
+    <div class="kpi-pill plan"><span class="kpi-num">{{ portfolioKpis.planning }}</span><span class="kpi-lbl">Planning</span></div>
+    <div class="kpi-pill"><span class="kpi-num">{{ portfolioKpis.avgTeamSize }}</span><span class="kpi-lbl">Avg Team Size</span></div>
+  </div>
+
   <div class="search-panel">
     <ion-item lines="none">
       <ion-label position="stacked">Search Projects</ion-label>
@@ -76,7 +85,7 @@
       <h3>Project Detail</h3>
 
       <div *ngIf="!selectedProject" class="viewer-placeholder">
-        Click a project row to view details and team members.
+        Click a project row to view details, team members, and project KPIs.
       </div>
 
       <div *ngIf="selectedProject">
@@ -92,6 +101,28 @@
           <span *ngIf="selectedProject.endDate">&nbsp;&nbsp;<strong>End:</strong> {{ selectedProject.endDate }}</span>
         </p>
 
+        <!-- Project KPIs -->
+        <div *ngIf="selectedProjectKpis as kpis" class="proj-kpi-grid">
+          <div class="proj-kpi">
+            <div class="proj-kpi-val">{{ kpis.activeCount }}</div>
+            <div class="proj-kpi-lbl">Team Members</div>
+          </div>
+          <div class="proj-kpi">
+            <div class="proj-kpi-val" [style.color]="kpis.avgScore >= 80 ? '#2d7d46' : kpis.avgScore >= 55 ? '#d4832a' : '#b91c1c'">
+              {{ kpis.avgScore }}
+            </div>
+            <div class="proj-kpi-lbl">Avg Score</div>
+          </div>
+          <div class="proj-kpi">
+            <div class="proj-kpi-val">{{ kpis.skillCount }}</div>
+            <div class="proj-kpi-lbl">Skills Required</div>
+          </div>
+          <div class="proj-kpi top-contrib">
+            <div class="proj-kpi-lbl">Top Contributor</div>
+            <div class="proj-kpi-name">{{ kpis.topContributor }}</div>
+          </div>
+        </div>
+
         <div class="skill-row">
           <ion-chip *ngFor="let skill of selectedProject.skills" color="primary">
             <ion-label>{{ skill }}</ion-label>
@@ -100,7 +131,12 @@
 
         <h5>Team Members ({{ selectedProject.employeeIds.length }})</h5>
         <ul class="employee-list">
-          <li *ngFor="let empId of selectedProject.employeeIds">{{ employeeDisplay(empId) }}</li>
+          <li *ngFor="let empId of selectedProject.employeeIds">
+            {{ employeeDisplay(empId) }}
+            <ion-badge *ngIf="employeeScore(empId)" [color]="scoreColor(employeeScore(empId))" style="float:right">
+              {{ employeeScore(empId) }}
+            </ion-badge>
+          </li>
         </ul>
       </div>
     </div>

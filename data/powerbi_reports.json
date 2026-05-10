@@ -1,0 +1,122 @@
+[
+  {
+    "reportId": "RPT001",
+    "name": "Employee Contribution Overview",
+    "description": "High-level KPI dashboard showing contribution scores, project counts, and asset counts by department and employee tier.",
+    "workspaceId": "fabric-iq-workspace",
+    "datasetId": "employee-knowledge-dataset",
+    "embedUrl": "https://app.powerbi.com/reportEmbed?reportId=RPT001&groupId=fabric-iq-workspace",
+    "department": "All",
+    "refreshSchedule": "Daily",
+    "tags": [
+      "employees",
+      "KPIs",
+      "contributions"
+    ]
+  },
+  {
+    "reportId": "RPT002",
+    "name": "Project Portfolio Dashboard",
+    "description": "Active vs. completed projects, team sizes, skill coverage, and timeline tracking across all departments.",
+    "workspaceId": "fabric-iq-workspace",
+    "datasetId": "employee-knowledge-dataset",
+    "embedUrl": "https://app.powerbi.com/reportEmbed?reportId=RPT002&groupId=fabric-iq-workspace",
+    "department": "All",
+    "refreshSchedule": "Daily",
+    "tags": [
+      "projects",
+      "portfolio",
+      "status"
+    ]
+  },
+  {
+    "reportId": "RPT003",
+    "name": "Top Contributor Leaderboard",
+    "description": "Ranked list and bar chart of top 20 contributors by score, project participation, and digital asset creation.",
+    "workspaceId": "fabric-iq-workspace",
+    "datasetId": "employee-knowledge-dataset",
+    "embedUrl": "https://app.powerbi.com/reportEmbed?reportId=RPT003&groupId=fabric-iq-workspace",
+    "department": "All",
+    "refreshSchedule": "Weekly",
+    "tags": [
+      "leaderboard",
+      "top contributors",
+      "ranking"
+    ]
+  },
+  {
+    "reportId": "RPT004",
+    "name": "Department Skill Coverage Map",
+    "description": "Heatmap of skills across departments, identifying capability gaps and areas of expertise concentration.",
+    "workspaceId": "fabric-iq-workspace",
+    "datasetId": "employee-knowledge-dataset",
+    "embedUrl": "https://app.powerbi.com/reportEmbed?reportId=RPT004&groupId=fabric-iq-workspace",
+    "department": "All",
+    "refreshSchedule": "Weekly",
+    "tags": [
+      "skills",
+      "departments",
+      "heatmap"
+    ]
+  },
+  {
+    "reportId": "RPT005",
+    "name": "Digital Asset Analytics",
+    "description": "Volume, types, and source system distribution of digital assets per employee. Tracks presentation, document, spreadsheet, and email contributions.",
+    "workspaceId": "fabric-iq-workspace",
+    "datasetId": "employee-knowledge-dataset",
+    "embedUrl": "https://app.powerbi.com/reportEmbed?reportId=RPT005&groupId=fabric-iq-workspace",
+    "department": "All",
+    "refreshSchedule": "Daily",
+    "tags": [
+      "assets",
+      "digital",
+      "analytics"
+    ]
+  },
+  {
+    "reportId": "RPT006",
+    "name": "HR Talent & Attrition Risk",
+    "description": "Talent risk scores, tenure vs. contribution analysis, and AI-predicted attrition indicators for HR leadership.",
+    "workspaceId": "fabric-iq-workspace",
+    "datasetId": "employee-knowledge-dataset",
+    "embedUrl": "https://app.powerbi.com/reportEmbed?reportId=RPT006&groupId=fabric-iq-workspace",
+    "department": "HR",
+    "refreshSchedule": "Monthly",
+    "tags": [
+      "HR",
+      "attrition",
+      "talent"
+    ]
+  },
+  {
+    "reportId": "RPT007",
+    "name": "Geographic Contribution Heatmap",
+    "description": "World map showing contribution scores and employee counts by office location (Fremont, Portland, Bengaluru, Austin, Hsinchu).",
+    "workspaceId": "fabric-iq-workspace",
+    "datasetId": "employee-knowledge-dataset",
+    "embedUrl": "https://app.powerbi.com/reportEmbed?reportId=RPT007&groupId=fabric-iq-workspace",
+    "department": "All",
+    "refreshSchedule": "Weekly",
+    "tags": [
+      "geography",
+      "heatmap",
+      "locations"
+    ]
+  },
+  {
+    "reportId": "RPT008",
+    "name": "Ontology Knowledge Graph Report",
+    "description": "Visual summary of the Fabric IQ ontology entity coverage \u2014 employees, skills, projects, and relationships mapped to knowledge graph nodes.",
+    "workspaceId": "fabric-iq-workspace",
+    "datasetId": "ontology-dataset",
+    "embedUrl": "https://app.powerbi.com/reportEmbed?reportId=RPT008&groupId=fabric-iq-workspace",
+    "department": "IT",
+    "refreshSchedule": "Monthly",
+    "tags": [
+      "ontology",
+      "knowledge graph",
+      "Fabric IQ"
+    ]
+  }
+]

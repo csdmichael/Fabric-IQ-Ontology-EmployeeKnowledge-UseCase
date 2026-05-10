@@ -1,0 +1,189 @@
+<ion-content class="ion-padding">
+  <h2>Contributor Leaderboard</h2>
+  <p>{{ description }}</p>
+
+  <div *ngIf="loadError" class="viewer-error">{{ loadError }}</div>
+
+  <div class="filter-bar">
+    <ion-item lines="none">
+      <ion-label>Filter by Department</ion-label>
+      <ion-select
+        [value]="departmentFilter"
+        placeholder="All Departments"
+        (ionChange)="onDepartmentFilter($any($event.detail).value || '')">
+        <ion-select-option value="">All Departments</ion-select-option>
+        <ion-select-option *ngFor="let d of departments" [value]="d">{{ d }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button size="small" color="medium" fill="outline" (click)="clearFilter()">Clear</ion-button>
+    <span class="meta">{{ filtered.length }} employees in scope</span>
+  </div>
+
+  <!-- Row 1: Top 10 bar chart + Pie chart -->
+  <div class="chart-grid two-col">
+    <!-- Top 10 Contributors Bar Chart -->
+    <div class="layout-card">
+      <h3>🏆 Top 10 Contributors</h3>
+      <p class="meta">Ranked by contribution score{{ departmentFilter ? ' · ' + departmentFilter : '' }}</p>
+      <div class="bar-chart" *ngIf="topContributors.length > 0">
+        <div *ngFor="let c of topContributors; let i = index" class="bar-row">
+          <span class="rank">{{ i + 1 }}</span>
+          <div class="bar-info">
+            <span class="emp-name">{{ employeeName(c.employeeId) }}</span>
+            <span class="emp-role">{{ employeeRole(c.employeeId) }}</span>
+          </div>
+          <div class="bar-track">
+            <div
+              class="bar-fill"
+              [style.width.%]="maxScore > 0 ? (c.contributionScore / maxScore * 100) : 0"
+              [style.background]="barColor(c.employeeId)">
+            </div>
+          </div>
+          <span class="bar-score" [style.color]="scoreColor(c.contributionScore)">{{ c.contributionScore }}</span>
+        </div>
+      </div>
+      <p class="meta" *ngIf="topContributors.length === 0">No data available.</p>
+    </div>
+
+    <!-- Department Pie Chart (SVG) -->
+    <div class="layout-card">
+      <h3>🥧 Department Distribution</h3>
+      <p class="meta">Employee count and average score per department</p>
+      <div class="pie-container">
+        <svg viewBox="0 0 200 200" class="pie-svg" *ngIf="pieSlices.length > 0">
+          <path
+            *ngFor="let slice of pieSlices"
+            [attr.d]="slice.pathD"
+            [attr.fill]="slice.color"
+            stroke="#fff"
+            stroke-width="1.5"
+            class="pie-slice">
+            <title>{{ slice.department }}: {{ slice.count }} employees, avg score {{ slice.avgScore }}</title>
+          </path>
+        </svg>
+        <div class="pie-legend">
+          <div *ngFor="let slice of pieSlices" class="legend-row">
+            <span class="legend-dot" [style.background]="slice.color"></span>
+            <span class="legend-label">{{ slice.department }}</span>
+            <span class="legend-count">{{ slice.count }}</span>
+            <span class="legend-score" [style.color]="scoreColor(slice.avgScore)">avg {{ slice.avgScore }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 2: Asset type breakdown + Geography -->
+  <div class="chart-grid two-col" style="margin-top:12px">
+    <!-- Asset Type Breakdown Bar Chart -->
+    <div class="layout-card">
+      <h3>📂 Asset Type Breakdown</h3>
+      <p class="meta">Total digital assets by type across {{ filtered.length }} employees</p>
+      <div class="bar-chart">
+        <div *ngFor="let asset of assetBreakdown" class="bar-row asset-bar-row">
+          <span class="bar-label-wide">{{ asset.label }}</span>
+          <div class="bar-track">
+            <div
+              class="bar-fill"
+              [style.width.%]="assetBreakdownMax > 0 ? (asset.total / assetBreakdownMax * 100) : 0"
+              [style.background]="asset.color">
+            </div>
+          </div>
+          <span class="bar-score">{{ asset.total }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Geography Map Table -->
+    <div class="layout-card">
+      <h3>🌍 Contributions by Location</h3>
+      <p class="meta">Office locations ranked by average contribution score</p>
+      <div class="geo-table">
+        <div class="geo-row header">
+          <span>Location</span><span>Employees</span><span>Avg Score</span><span>Top Contributor</span>
+        </div>
+        <div *ngFor="let loc of locationStats; let i = index" class="geo-row">
+          <span>
+            <span class="geo-dot"
+              [style.background]="i === 0 ? '#2d7d46' : i === 1 ? '#0078d4' : i === 2 ? '#d4832a' : '#888'">
+            </span>
+            {{ loc.location }}
+          </span>
+          <span>{{ loc.count }}</span>
+          <span [style.color]="scoreColor(loc.avgScore)"><strong>{{ loc.avgScore }}</strong></span>
+          <span>{{ loc.topEmployee }}</span>
+        </div>
+      </div>
+
+      <!-- Simple world map SVG hint -->
+      <div class="map-hint">
+        <svg viewBox="0 0 400 200" class="world-map-svg">
+          <!-- Simplified location dots on approximate world coordinates -->
+          <!-- Fremont/Austin ~US West/Central -->
+          <rect width="400" height="200" fill="#f0f7ff" rx="4"/>
+          <text x="200" y="95" text-anchor="middle" font-size="10" fill="#8c8c8c">World Location Map</text>
+
+          <!-- Fremont, CA USA  -->
+          <circle cx="55" cy="90" r="6" fill="#0078d4" opacity="0.8">
+            <title>Fremont, CA</title>
+          </circle>
+          <text x="55" y="105" text-anchor="middle" font-size="7" fill="#333">Fremont</text>
+
+          <!-- Portland, OR USA -->
+          <circle cx="48" cy="78" r="6" fill="#2d7d46" opacity="0.8">
+            <title>Portland, OR</title>
+          </circle>
+          <text x="48" y="73" text-anchor="middle" font-size="7" fill="#333">Portland</text>
+
+          <!-- Austin, TX USA -->
+          <circle cx="90" cy="100" r="6" fill="#8a63d2" opacity="0.8">
+            <title>Austin, TX</title>
+          </circle>
+          <text x="90" y="115" text-anchor="middle" font-size="7" fill="#333">Austin</text>
+
+          <!-- Bengaluru, India -->
+          <circle cx="280" cy="105" r="6" fill="#d4832a" opacity="0.8">
+            <title>Bengaluru, India</title>
+          </circle>
+          <text x="280" y="120" text-anchor="middle" font-size="7" fill="#333">Bengaluru</text>
+
+          <!-- Hsinchu, Taiwan -->
+          <circle cx="330" cy="98" r="6" fill="#e74c3c" opacity="0.8">
+            <title>Hsinchu, Taiwan</title>
+          </circle>
+          <text x="330" y="90" text-anchor="middle" font-size="7" fill="#333">Hsinchu</text>
+
+          <!-- Continent outlines (very simplified) -->
+          <path d="M 30 60 Q 110 50 130 110 Q 90 130 30 120 Z" fill="none" stroke="#cce" stroke-width="0.5" opacity="0.4"/>
+          <path d="M 160 50 Q 240 45 270 130 Q 220 140 160 120 Z" fill="none" stroke="#cce" stroke-width="0.5" opacity="0.4"/>
+          <path d="M 250 60 Q 370 55 390 130 Q 340 145 250 120 Z" fill="none" stroke="#cce" stroke-width="0.5" opacity="0.4"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 3: Tier distribution summary -->
+  <div class="layout-card" style="margin-top:12px">
+    <h3>🎯 Contributor Tier Summary</h3>
+    <div class="tier-summary-grid">
+      <div class="tier-card star">
+        <div class="tier-icon">⭐</div>
+        <div class="tier-count">{{ tierCount('star') }}</div>
+        <div class="tier-name">Star Contributors</div>
+        <p class="meta">Score ≥ 82 · 5+ projects · High asset output</p>
+      </div>
+      <div class="tier-card average">
+        <div class="tier-icon">📊</div>
+        <div class="tier-count">{{ tierCount('average') }}</div>
+        <div class="tier-name">Average Contributors</div>
+        <p class="meta">Score 55–81 · 2–4 projects · Steady output</p>
+      </div>
+      <div class="tier-card low">
+        <div class="tier-icon">📉</div>
+        <div class="tier-count">{{ tierCount('low') }}</div>
+        <div class="tier-name">Developing Contributors</div>
+        <p class="meta">Score &lt; 55 · 1 project · Improvement opportunities</p>
+      </div>
+    </div>
+  </div>
+</ion-content>

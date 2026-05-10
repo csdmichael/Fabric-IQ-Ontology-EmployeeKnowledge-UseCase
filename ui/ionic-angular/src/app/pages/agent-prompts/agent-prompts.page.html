@@ -1,7 +1,35 @@
 <ion-content class="ion-padding">
   <h2>Agent Prompts</h2>
   <p>{{ description }}</p>
-  <div class="layout-card">
-    <p>Responsive layouts: web (3-column), tablet (2-column), mobile (single-column).</p>
+
+  <div class="filter-bar">
+    <ion-item lines="none">
+      <ion-label>Category</ion-label>
+      <ion-select
+        [value]="categoryFilter"
+        placeholder="All Categories"
+        (ionChange)="onCategoryFilter($any($event.detail).value || '')">
+        <ion-select-option value="">All Categories</ion-select-option>
+        <ion-select-option *ngFor="let c of categories" [value]="c">{{ c }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <span class="meta">{{ filtered.length }} prompts</span>
+  </div>
+
+  <div class="prompts-grid">
+    <div *ngFor="let prompt of filtered" class="prompt-card">
+      <div class="prompt-top">
+        <span class="prompt-icon">{{ prompt.icon }}</span>
+        <span class="prompt-category">{{ prompt.category }}</span>
+        <span class="prompt-id">#{{ prompt.id }}</span>
+      </div>
+      <p class="prompt-text">{{ prompt.text }}</p>
+      <div class="prompt-actions">
+        <ion-button size="small" fill="outline" (click)="copyPrompt(prompt)">
+          {{ copiedId === prompt.id ? '✓ Copied' : '📋 Copy' }}
+        </ion-button>
+        <ion-button size="small" fill="solid" color="primary">▶ Execute in Agent</ion-button>
+      </div>
+    </div>
   </div>
 </ion-content>
