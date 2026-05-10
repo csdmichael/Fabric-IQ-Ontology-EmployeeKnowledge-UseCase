@@ -2,8 +2,35 @@
 
 > **Architecture diagrams and data-flow visuals are presented first below for quick reference, followed by full project documentation.**
 
+## 🚀 Quick Deploy & Rebuild
+
+**Everything in this repository is reproducible from GitHub.** Clone, configure, and redeploy in ~2 hours.
+
+### Deploy Locally (Clone & Run)
+```bash
+git clone https://github.com/csdmichael/Fabric-IQ-Ontology-EmployeeKnowledge-UseCase.git
+cd Fabric-IQ-Ontology-EmployeeKnowledge-UseCase
+
+# For Windows (PowerShell)
+.\scripts\deploy-complete-solution.ps1 -SubscriptionId "YOUR_SUB_ID"
+
+# For Cross-platform (Python)
+python scripts/deploy_complete_solution.py
+```
+
+**See [REBUILD_GUIDE.md](REBUILD_GUIDE.md) for complete rebuild instructions**
+
+### What Gets Deployed
+- ✓ FastAPI Python server to Azure App Service
+- ✓ All configuration and data files
+- ✓ Fabric ontology, pipelines, and Power BI configs
+- ✗ Manual: Power BI data load, report creation, dashboards (see guide)
+
+---
+
 ## Table of Contents
 - **⚡ [QUICK START GUIDE](QUICK_START.md)** ← **START HERE**
+- **🔧 [REBUILD GUIDE](REBUILD_GUIDE.md)** - Deploy from GitHub
 - **📋 [DEPLOYMENT STATUS](DEPLOYMENT_STATUS.md)** - Infrastructure overview
 - **🎯 [POWER BI SETUP](POWERBI_SETUP_GUIDE.md)** - Step-by-step guide
 - [Architecture](#architecture)
