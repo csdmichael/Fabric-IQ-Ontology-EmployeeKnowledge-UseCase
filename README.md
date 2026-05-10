@@ -39,7 +39,7 @@
 
 ## Architecture
 
-![Architecture Diagram](docs/architecture-diagram.svg)
+![Architecture Diagram](docs/architecture-diagram.png)
 
 ## Data Pipeline in Microsoft Fabric
 
@@ -401,14 +401,16 @@ This repository now includes reusable hosting/network metadata under:
 - `config/azure-hosting-resources.json`
 
 Configured references include:
-- Resource group: `ai-myaacoub`
-- UI web app: `fabric-iq-emp-knowledge-ui` (new, dedicated, public) — reuses `plan-taxforms` App Service Plan
-- API web app: `fabric-iq-emp-knowledge-api` (new, dedicated, private) — reuses `plan-taxforms` App Service Plan
+- Resource group: `ai-myaacoub` (all resources consolidated here)
+- UI web app: `fabric-iq-emp-knowledge-ui` (dedicated, public) — on `plan-taxforms` App Service Plan
+- API web app: `fabric-iq-emp-knowledge-api` (dedicated, private) — on `plan-taxforms` App Service Plan
+- Fabric workspace: `Fabric IQ - Employee Knowledge` on capacity `fabcapmyaacoub`
+- Fabric lakehouse: `EmployeeKnowledgeLH` (OneLake)
 - APIM: `ai-gateway-apim-poc-my`
 - AI Search: `aisearch-poc-myaacoub`
 - Foundry account: `002-ai-poc-private`
-- Cosmos DB: `cosmos-ai-poc`
-- Storage account: `aistoragemyaacoub`
+- Cosmos DB: `cosmos-fabriciq-demo-01`
+- Storage account: `stfabriciqdemodata01`
 - Existing VNet and private endpoint naming guidance
 
 ## Managed Identity Setup
@@ -680,9 +682,9 @@ Terraform resources are in `terraform/` and use values from:
 - `config/terraform.tfvars.json`
 
 Modules:
-- `terraform/main.tf` – core resources (Storage, Cosmos DB, App Service)
+- `terraform/main.tf` – core resources (Storage, Cosmos DB, App Service) in `ai-myaacoub`
 - `terraform/monitors.tf` – Azure Monitor resources (Log Analytics, Action Group, Diagnostic Settings, Metric Alerts, Scheduled Query Rules, Logic App)
-- `terraform/variables.tf` – all input variables including monitor variables
+- `terraform/variables.tf` – all input variables including Fabric and monitor variables
 - `terraform/outputs.tf` – outputs including monitor action group ID and Logic App trigger URL
 
 Typical commands:
@@ -703,7 +705,8 @@ Monitor variables (set in `config/terraform.tfvars.json`):
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `monitor_resource_group_name` | `ai-myaacoub` | RG for SRE monitor resources |
+| `resource_group_name` | `ai-myaacoub` | All resources deployed here |
+| `fabric_capacity_id` | *(required)* | Full ARM resource ID of the Fabric capacity |
 | `existing_log_analytics_workspace_name` | `""` | Existing workspace name to reuse; leave empty to create new |
 | `sre_alert_email` | `""` | SRE email DL for alert notifications |
 | `sre_webhook_url` | `""` | Logic App HTTP trigger URL (set after first apply) |

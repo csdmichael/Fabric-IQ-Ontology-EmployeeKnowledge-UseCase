@@ -3,9 +3,10 @@
 ## Global Requirements
 1. Implement a Microsoft Fabric IQ demo for an employee knowledge graph use case.
 2. Keep all endpoints and runtime values in config files (no hardcoding).
-3. Reuse existing resources in resource group `ai-myaacoub` where applicable.
+3. All resources (Storage, Cosmos DB, App Service, Log Analytics, Logic App, alerts) are deployed to the `ai-myaacoub` resource group.
 4. Use existing private endpoints and private VNets for data plane services.
 5. Keep the UI internet-accessible.
+6. Fabric workspace (`Fabric IQ - Employee Knowledge`) is provisioned on capacity `fabcapmyaacoub` with OneLake lakehouse `EmployeeKnowledgeLH`.
 6. Maintain one README with complete architecture, diagrams, structure, technologies, data model, and best practices.
 7. Keep README Table of Contents at the top and accurate after each update.
 8. Keep architecture and related artifacts under `docs/` and reference them from README.
@@ -30,7 +31,7 @@
 15. Add a Power BI Reports page listing all available Fabric-backed reports with descriptions, refresh schedules, tags, dataset/workspace metadata, and an embed frame for each report.
 16. Add an Org Chart page that graphically renders the full employee organizational structure as an interactive SVG tree. Nodes show employee name, role, tier badge, and a KPI pill with direct report count, total report count, and contribution score. Support focus/drill-down on any manager's subtree. Show a detail panel with 6 KPIs (direct reports, total reports, own score, team avg score, projects, assets) and a direct-vs-indirect reports bar chart. Include department highlight filter and manager selector. Show summary KPIs: total employees, total managers, reporting levels, avg span of control.
 17. Add `data/contributions.json` with diversified per-employee contribution metrics (contribution score, project counts, asset counts, commits, emails, mentoring sessions, tier: star/average/low) to support leaderboard and KPI pages.
-18. Add `data/powerbi_reports.json` with 8 Power BI report definitions covering employee contributions, project portfolio, leaderboard, skill coverage, digital assets, HR talent, geographic heatmap, and ontology graph.
+18. Move `powerbi_reports.json` to `fabric/powerbi/powerbi_reports.json` alongside dashboard definitions. Update all references in server.py, UI code, and README.
 19. Categorize the left navigation menu into three labeled sections: **Source Data** (Employees, Org Structure, Projects, Digital Assets), **Reports & Dashboards** (Leaderboard, Power BI Reports, Ingestion Pipeline), and **AI Agents** (Employee Copilot Agent, Agent Prompts, Agent Packaging). Each section has a header label, icon, and styled active-route highlighting. Include a branded sidebar header showing "Fabric IQ" and subtitle. Hamburger button visible in app header for mobile navigation.
 
 ## Fabric Section
@@ -49,7 +50,7 @@
 1. Generate API source code under `api/` with health and data endpoints for employee, project, contribution, and report payloads.
 2. Keep API behavior config-driven by reading endpoint metadata from `config/endpoints.json`.
 3. Expose API routes for all core JSON data artifacts and include an aggregate summary endpoint for operational checks.
-4. Add Fabric Power BI dashboard artifact definitions under `fabric/powerbi/` mapped to report IDs and dataset bindings.
+4. Add Fabric Power BI dashboard artifact definitions under `fabric/powerbi/` mapped to report IDs and dataset bindings. Power BI reports data (`powerbi_reports.json`) is co-located under `fabric/powerbi/`.
 5. Ensure architecture and pipeline diagrams call out the API serving layer and dashboard consumption layer.
 
 ## Architecture Diagrams and Documentation Section
@@ -113,7 +114,7 @@
 2. Generate additional assets per employee to better demonstrate scenario richness.
 3. Ensure generated/expanded data supports UI views, Fabric ingestion, ontology linking, and monitoring use cases.
 4. Add `data/contributions.json` with per-employee contribution metrics including contribution score, tier (star/average/low), project counts, asset counts, commits, emails, and mentoring sessions. Diversify values so star-tier employees have 5+ projects and 12–18 assets while developing-tier employees have 1 project and 4–7 assets.
-5. Add `data/powerbi_reports.json` with report metadata for all 8 Fabric-backed Power BI reports including embed URLs, dataset IDs, workspace IDs, refresh schedules, and tags.
+5. Add `fabric/powerbi/powerbi_reports.json` with report metadata for all 8 Fabric-backed Power BI reports including embed URLs, dataset IDs, workspace IDs, refresh schedules, and tags (moved from `data/` to `fabric/powerbi/`).
 
 ## Sample Agent Prompts (30 Total — used in UI Agent Prompts page and README)
 

@@ -9,8 +9,9 @@
     "foundryProjectEndpoint": "https://002-ai-poc-private.services.ai.azure.com/api/projects/proj-default"
   },
   "microsoftFabric": {
-    "workspaceId": "{fabricWorkspaceId}",
-    "lakehouseId": "{fabricLakehouseId}",
+    "workspaceId": "38362838-0531-4215-89af-a8a79221b545",
+    "lakehouseId": "d11b209f-c774-481e-adcb-79920a94fd20",
+    "capacityId": "6dc14689-95f7-416c-b542-a4a4819107df",
     "pipelineId": "{fabricPipelineId}",
     "semanticModelId": "{fabricSemanticModelId}",
     "dataAgentId": "{fabricDataAgentId}"
