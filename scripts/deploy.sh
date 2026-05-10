@@ -43,7 +43,6 @@ fi
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 TF_DIR="$REPO_ROOT/terraform"
 VAR_FILE="$REPO_ROOT/config/terraform.tfvars.json"
-STORAGE_MAP="$REPO_ROOT/data/storage_map.json"
 
 # ── Colour helpers ───────────────────────────────────────────────────────────
 
@@ -106,8 +105,6 @@ fi
 if [[ "$UPLOAD_DATA" == true && "$RUN_APPLY" == true ]]; then
     info "Uploading data files to Azure Blob Storage..."
 
-    STORAGE_ACCOUNT=$(jq -r '.raw.storageConfigKey' "$STORAGE_MAP" 2>/dev/null || true)
-    # Fall back to reading from terraform.tfvars.json
     STORAGE_ACCOUNT=$(jq -r '.storage_account_name' "$VAR_FILE")
     CONTAINER=$(jq -r '.raw_container_name' "$VAR_FILE")
 
