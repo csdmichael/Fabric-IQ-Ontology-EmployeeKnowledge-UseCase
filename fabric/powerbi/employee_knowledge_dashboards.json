@@ -1,0 +1,93 @@
+{
+  "workspaceId": "fabric-iq-workspace",
+  "reportMetadataSource": "../../data/powerbi_reports.json",
+  "datasetBindings": [
+    {
+      "datasetId": "employee-knowledge-dataset",
+      "subjectArea": "Employee knowledge and contribution analytics"
+    },
+    {
+      "datasetId": "ontology-dataset",
+      "subjectArea": "Ontology relationship graph analytics"
+    }
+  ],
+  "dashboards": [
+    {
+      "dashboardId": "DSH001",
+      "name": "Executive Employee Knowledge Dashboard",
+      "description": "Executive KPI landing dashboard for employee contributions, project portfolio health, and digital asset production.",
+      "reportIds": [
+        "RPT001",
+        "RPT002",
+        "RPT003"
+      ],
+      "refreshSchedule": "Daily",
+      "tags": [
+        "executive",
+        "kpi",
+        "employee"
+      ]
+    },
+    {
+      "dashboardId": "DSH002",
+      "name": "Department Performance Dashboard",
+      "description": "Department-level performance view for contribution trends, top contributors, and skill coverage gaps.",
+      "reportIds": [
+        "RPT001",
+        "RPT003",
+        "RPT004"
+      ],
+      "refreshSchedule": "Daily",
+      "tags": [
+        "departments",
+        "performance",
+        "skills"
+      ]
+    },
+    {
+      "dashboardId": "DSH003",
+      "name": "Portfolio Delivery Dashboard",
+      "description": "Project execution dashboard for active/completed/planning portfolio status, staffing coverage, and delivery risks.",
+      "reportIds": [
+        "RPT002",
+        "RPT006"
+      ],
+      "refreshSchedule": "Daily",
+      "tags": [
+        "projects",
+        "portfolio",
+        "delivery"
+      ]
+    },
+    {
+      "dashboardId": "DSH004",
+      "name": "Digital Asset Operations Dashboard",
+      "description": "Digital asset production and quality dashboard grouped by format, location, and team ownership.",
+      "reportIds": [
+        "RPT005",
+        "RPT007"
+      ],
+      "refreshSchedule": "Weekly",
+      "tags": [
+        "assets",
+        "operations",
+        "quality"
+      ]
+    },
+    {
+      "dashboardId": "DSH005",
+      "name": "Ontology Coverage Dashboard",
+      "description": "Knowledge graph quality and ontology coverage dashboard for mapped entities and relationships.",
+      "reportIds": [
+        "RPT008",
+        "RPT004"
+      ],
+      "refreshSchedule": "Weekly",
+      "tags": [
+        "ontology",
+        "graph",
+        "coverage"
+      ]
+    }
+  ]
+}

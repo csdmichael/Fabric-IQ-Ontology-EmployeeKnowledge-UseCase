@@ -12,5 +12,5 @@
 <rect x='40' y='430' width='1120' height='58' fill='#f3f6fb' stroke='#8aa4c8' rx='8'/>
 <text x='60' y='460' font-size='20' font-family='Arial' fill='#1f2d3d'>Stage 5: Refresh semantic model and ontology graph</text>
 <rect x='40' y='520' width='1120' height='58' fill='#f3f6fb' stroke='#8aa4c8' rx='8'/>
-<text x='60' y='550' font-size='20' font-family='Arial' fill='#1f2d3d'>Stage 6: Serve Fabric Data Agent to Ionic app / Teams / Copilot</text>
+<text x='60' y='550' font-size='20' font-family='Arial' fill='#1f2d3d'>Stage 6: Serve Data Agent + API + Power BI dashboards to UI/Teams/Copilot</text>
 </svg>

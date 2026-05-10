@@ -45,6 +45,13 @@
 9. Add Power BI reports and dashboards in Fabric workspace covering: employee contribution overview, project portfolio, top contributor leaderboard, department skill coverage map, digital asset analytics, HR talent & attrition risk, geographic contribution heatmap, and ontology knowledge graph report.
 10. Power BI reports must be embedded in the UI Power BI Reports page via embed URL and Fabric managed identity token minting.
 
+## API & Dashboard Delivery Section
+1. Generate API source code under `api/` with health and data endpoints for employee, project, contribution, and report payloads.
+2. Keep API behavior config-driven by reading endpoint metadata from `config/endpoints.json`.
+3. Expose API routes for all core JSON data artifacts and include an aggregate summary endpoint for operational checks.
+4. Add Fabric Power BI dashboard artifact definitions under `fabric/powerbi/` mapped to report IDs and dataset bindings.
+5. Ensure architecture and pipeline diagrams call out the API serving layer and dashboard consumption layer.
+
 ## Architecture Diagrams and Documentation Section
 1. Architecture diagrams must be enterprise-ready, high-fidelity, and use official Microsoft/Azure iconography.
 2. Update the architecture diagram (SVG) to include Azure Monitor + SRE layer components:
