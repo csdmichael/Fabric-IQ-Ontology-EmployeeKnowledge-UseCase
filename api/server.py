@@ -121,6 +121,14 @@ def _summary() -> dict[str, object]:
     }
 
 
+def _base_url_from_headers(headers) -> str:
+    forwarded_proto = headers.get("X-Forwarded-Proto", "").split(",")[0].strip()
+    host = headers.get("Host", "localhost:8080")
+    is_local_host = host.startswith("localhost") or host.startswith("127.0.0.1")
+    proto = forwarded_proto or ("http" if is_local_host else "https")
+    return f"{proto}://{host}"
+
+
 class ApiHandler(BaseHTTPRequestHandler):
     server_version = "FabricIQApi/1.0"
 
@@ -147,8 +155,7 @@ class ApiHandler(BaseHTTPRequestHandler):
         parsed_url = urlparse(self.path)
         path = parsed_url.path.rstrip("/") or "/"
         query = parse_qs(parsed_url.query)
-        host = self.headers.get("Host", "localhost:8080")
-        base_url = f"http://{host}"
+        base_url = _base_url_from_headers(self.headers)
 
         if path in {"/", "/health", "/api/health"}:
             self._send_json(
