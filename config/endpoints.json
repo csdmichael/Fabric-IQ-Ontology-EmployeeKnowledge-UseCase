@@ -18,12 +18,20 @@
     "dataAgentId": "bfe47d80-4ace-45b5-847b-0e7a68fff316",
     "tenantId": "b158173c-91f6-4f99-b5e9-aa9bcb463863"
   },
+  "microsoftGraph": {
+    "endpoint": "https://graph.microsoft.com/v1.0",
+    "betaEndpoint": "https://graph.microsoft.com/beta",
+    "tenantId": "b158173c-91f6-4f99-b5e9-aa9bcb463863"
+  },
   "integration": {
     "teamsDevPortalUrl": "https://dev.teams.microsoft.com/apps",
     "copilotStudioUrl": "https://copilotstudio.microsoft.com"
   },
   "hosting": {
     "uiPublicUrl": "https://fabric-iq-emp-knowledge-ui.azurewebsites.net",
-    "apiUrl": "https://fabric-iq-emp-knowledge-api.azurewebsites.net"
+    "apiUrl": "https://fabric-iq-emp-knowledge-api.azurewebsites.net",
+    "swaggerUrl": "https://fabric-iq-emp-knowledge-api.azurewebsites.net/docs",
+    "openApiSpecUrl": "https://fabric-iq-emp-knowledge-api.azurewebsites.net/swagger.json",
+    "healthCheckUrl": "https://fabric-iq-emp-knowledge-api.azurewebsites.net/health"
   }
 }

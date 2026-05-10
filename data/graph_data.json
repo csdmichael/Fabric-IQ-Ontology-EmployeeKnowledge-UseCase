@@ -1,0 +1,216 @@
+{
+  "syncedAt": "2026-05-10T15:30:00Z",
+  "tenantId": "b158173c-91f6-4f99-b5e9-aa9bcb463863",
+  "sources": ["SharePoint", "OneDrive", "Outlook", "Teams"],
+  "summary": {
+    "totalUsers": 100,
+    "totalFiles": 384,
+    "totalEmails": 1240,
+    "totalTeamsMessages": 520,
+    "totalCalendarEvents": 310
+  },
+  "users": [
+    {
+      "graphUserId": "aad-emp001",
+      "employeeId": "EMP001",
+      "displayName": "Alice Chen",
+      "mail": "alice.chen@contoso.com",
+      "jobTitle": "Senior Data Engineer",
+      "department": "R&D",
+      "officeLocation": "Seattle, WA",
+      "presenceStatus": "Available",
+      "lastActiveDateTime": "2026-05-10T14:22:00Z",
+      "driveItemCount": 42,
+      "sharedWithMe": 18,
+      "teamsMessageCount": 87,
+      "calendarEventsThisWeek": 6,
+      "skills": ["Python", "Azure AI", "Fabric", "Power BI"]
+    },
+    {
+      "graphUserId": "aad-emp002",
+      "employeeId": "EMP002",
+      "displayName": "David Kim",
+      "mail": "david.kim@contoso.com",
+      "jobTitle": "Cloud Architect",
+      "department": "Engineering",
+      "officeLocation": "Redmond, WA",
+      "presenceStatus": "Busy",
+      "lastActiveDateTime": "2026-05-10T13:55:00Z",
+      "driveItemCount": 38,
+      "sharedWithMe": 12,
+      "teamsMessageCount": 64,
+      "calendarEventsThisWeek": 8,
+      "skills": ["Azure", "Terraform", "Python", "Power BI"]
+    },
+    {
+      "graphUserId": "aad-emp003",
+      "employeeId": "EMP003",
+      "displayName": "Sofia Hernandez",
+      "mail": "sofia.hernandez@contoso.com",
+      "jobTitle": "DevOps Engineer",
+      "department": "DevOps",
+      "officeLocation": "Austin, TX",
+      "presenceStatus": "Away",
+      "lastActiveDateTime": "2026-05-10T11:30:00Z",
+      "driveItemCount": 29,
+      "sharedWithMe": 8,
+      "teamsMessageCount": 45,
+      "calendarEventsThisWeek": 4,
+      "skills": ["GitHub Actions", "Terraform", "az CLI", "PowerShell"]
+    },
+    {
+      "graphUserId": "aad-emp004",
+      "employeeId": "EMP004",
+      "displayName": "Maria Santos",
+      "mail": "maria.santos@contoso.com",
+      "jobTitle": "Solution Architect",
+      "department": "Architecture",
+      "officeLocation": "Chicago, IL",
+      "presenceStatus": "Available",
+      "lastActiveDateTime": "2026-05-10T15:10:00Z",
+      "driveItemCount": 55,
+      "sharedWithMe": 22,
+      "teamsMessageCount": 72,
+      "calendarEventsThisWeek": 9,
+      "skills": ["Ontology", "Purview", "Fabric", "Azure"]
+    },
+    {
+      "graphUserId": "aad-emp005",
+      "employeeId": "EMP005",
+      "displayName": "James Wilson",
+      "mail": "james.wilson@contoso.com",
+      "jobTitle": "Analytics Lead",
+      "department": "Analytics",
+      "officeLocation": "New York, NY",
+      "presenceStatus": "Do Not Disturb",
+      "lastActiveDateTime": "2026-05-10T12:45:00Z",
+      "driveItemCount": 47,
+      "sharedWithMe": 19,
+      "teamsMessageCount": 58,
+      "calendarEventsThisWeek": 7,
+      "skills": ["Power BI", "DAX", "Python", "SQL"]
+    }
+  ],
+  "recentFiles": [
+    {
+      "graphItemId": "drv-item-001",
+      "employeeId": "EMP001",
+      "name": "EMP001_knowledge_graph_presentation.pptx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": 4821934,
+      "webUrl": "https://contoso.sharepoint.com/sites/rnd/Shared%20Documents/EMP001_knowledge_graph_presentation.pptx",
+      "createdDateTime": "2026-04-15T09:00:00Z",
+      "lastModifiedDateTime": "2026-05-08T14:30:00Z",
+      "source": "SharePoint",
+      "aiSearchIndexed": true
+    },
+    {
+      "graphItemId": "drv-item-002",
+      "employeeId": "EMP002",
+      "name": "EMP002_skills_matrix.xlsx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "size": 218640,
+      "webUrl": "https://contoso.sharepoint.com/sites/engineering/Shared%20Documents/EMP002_skills_matrix.xlsx",
+      "createdDateTime": "2026-03-28T10:00:00Z",
+      "lastModifiedDateTime": "2026-05-01T09:20:00Z",
+      "source": "SharePoint",
+      "aiSearchIndexed": true
+    },
+    {
+      "graphItemId": "drv-item-003",
+      "employeeId": "EMP003",
+      "name": "EMP003_runbook_fabric_deployment.docx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "size": 386420,
+      "webUrl": "https://contoso.sharepoint.com/sites/devops/Shared%20Documents/EMP003_runbook_fabric_deployment.docx",
+      "createdDateTime": "2026-04-02T08:00:00Z",
+      "lastModifiedDateTime": "2026-04-28T16:00:00Z",
+      "source": "OneDrive",
+      "aiSearchIndexed": true
+    },
+    {
+      "graphItemId": "drv-item-004",
+      "employeeId": "EMP004",
+      "name": "EMP004_ontology_design_spec.pdf",
+      "mimeType": "application/pdf",
+      "size": 1024768,
+      "webUrl": "https://contoso.sharepoint.com/sites/architecture/Shared%20Documents/EMP004_ontology_design_spec.pdf",
+      "createdDateTime": "2026-03-15T11:00:00Z",
+      "lastModifiedDateTime": "2026-04-20T10:30:00Z",
+      "source": "SharePoint",
+      "aiSearchIndexed": true
+    },
+    {
+      "graphItemId": "drv-item-005",
+      "employeeId": "EMP005",
+      "name": "EMP005_powerbi_dashboard_demo.pptx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "size": 6340096,
+      "webUrl": "https://contoso.sharepoint.com/sites/analytics/Shared%20Documents/EMP005_powerbi_dashboard_demo.pptx",
+      "createdDateTime": "2026-04-20T13:00:00Z",
+      "lastModifiedDateTime": "2026-05-05T11:00:00Z",
+      "source": "SharePoint",
+      "aiSearchIndexed": true
+    }
+  ],
+  "recentEmails": [
+    {
+      "graphMessageId": "msg-001",
+      "employeeId": "EMP001",
+      "subject": "Fabric IQ Architecture Review – Action Items",
+      "receivedDateTime": "2026-05-09T09:30:00Z",
+      "from": "david.kim@contoso.com",
+      "toRecipients": ["alice.chen@contoso.com", "maria.santos@contoso.com"],
+      "hasAttachments": true,
+      "importance": "high",
+      "isRead": true,
+      "bodyPreview": "Following up on yesterday's architecture review. Please review the updated ontology design and confirm the AI Search index schema before end of week."
+    },
+    {
+      "graphMessageId": "msg-002",
+      "employeeId": "EMP002",
+      "subject": "Skills Matrix Updated – Q1 2026",
+      "receivedDateTime": "2026-05-08T14:15:00Z",
+      "from": "david.kim@contoso.com",
+      "toRecipients": ["sofia.hernandez@contoso.com", "james.wilson@contoso.com"],
+      "hasAttachments": true,
+      "importance": "normal",
+      "isRead": true,
+      "bodyPreview": "I have updated the skills matrix with Q1 certifications. Please review and add any missing certifications for your team members."
+    },
+    {
+      "graphMessageId": "msg-003",
+      "employeeId": "EMP003",
+      "subject": "Deployment Runbook v3.2 – Ready for Review",
+      "receivedDateTime": "2026-05-07T11:00:00Z",
+      "from": "sofia.hernandez@contoso.com",
+      "toRecipients": ["alice.chen@contoso.com", "david.kim@contoso.com"],
+      "hasAttachments": true,
+      "importance": "normal",
+      "isRead": false,
+      "bodyPreview": "The deployment runbook has been updated to v3.2 including the new OIDC auth steps and Fabric REST API deployment procedure."
+    }
+  ],
+  "teamsActivity": [
+    {
+      "employeeId": "EMP001",
+      "teamId": "team-fabriciq",
+      "teamName": "Fabric IQ Engineering",
+      "channelName": "Architecture",
+      "messageCount": 34,
+      "reactionCount": 18,
+      "mentionCount": 7,
+      "lastActivityDateTime": "2026-05-10T14:00:00Z"
+    },
+    {
+      "employeeId": "EMP002",
+      "teamId": "team-fabriciq",
+      "teamName": "Fabric IQ Engineering",
+      "channelName": "DevOps",
+      "messageCount": 28,
+      "reactionCount": 12,
+      "mentionCount": 5,
+      "lastActivityDateTime": "2026-05-10T13:45:00Z"
+    }
+  ]
+}

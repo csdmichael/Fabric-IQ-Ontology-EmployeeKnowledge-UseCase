@@ -12,6 +12,7 @@ DATA_DIR = REPO_ROOT / "data"
 
 JSON_ROUTES = {
     "/api/config/endpoints": CONFIG_DIR / "endpoints.json",
+    "/api/config/service-config": CONFIG_DIR / "service-config.json",
     "/api/employees": DATA_DIR / "employees.json",
     "/api/digital-assets": DATA_DIR / "digital_assets.json",
     "/api/emails": DATA_DIR / "emails.json",
@@ -20,6 +21,9 @@ JSON_ROUTES = {
     "/api/contributions": DATA_DIR / "contributions.json",
     "/api/powerbi-reports": REPO_ROOT / "fabric" / "powerbi" / "powerbi_reports.json",
     "/api/parsed-documents": DATA_DIR / "parsed_documents_cosmosdb.json",
+    "/api/document-intelligence": DATA_DIR / "document_intelligence_results.json",
+    "/api/graph-data": DATA_DIR / "graph_data.json",
+    "/api/ai-search": DATA_DIR / "ai_search_results.json",
 }
 
 
@@ -109,6 +113,12 @@ def _summary() -> dict[str, object]:
     reports = _load_json(REPO_ROOT / "fabric" / "powerbi" / "powerbi_reports.json")
     assets = _load_json(DATA_DIR / "digital_assets.json")
     parsed = _load_json(DATA_DIR / "parsed_documents_cosmosdb.json")
+    doc_intel = _load_json(DATA_DIR / "document_intelligence_results.json")
+    graph = _load_json(DATA_DIR / "graph_data.json")
+    search = _load_json(DATA_DIR / "ai_search_results.json")
+
+    graph_summary = graph.get("summary", {}) if isinstance(graph, dict) else {}
+    search_stats = search.get("indexStats", {}) if isinstance(search, dict) else {}
 
     return {
         "employees": len(employees) if isinstance(employees, list) else 0,
@@ -117,6 +127,10 @@ def _summary() -> dict[str, object]:
         "powerBiReports": len(reports) if isinstance(reports, list) else 0,
         "digitalAssets": len(assets) if isinstance(assets, list) else 0,
         "parsedDocuments": len(parsed) if isinstance(parsed, list) else 0,
+        "documentIntelligenceResults": len(doc_intel) if isinstance(doc_intel, list) else 0,
+        "graphUsers": graph_summary.get("totalUsers", 0),
+        "graphFiles": graph_summary.get("totalFiles", 0),
+        "aiSearchDocuments": search_stats.get("documentCount", 0),
         "timestampUtc": datetime.now(timezone.utc).isoformat(),
     }
 
