@@ -1,0 +1,101 @@
+employeeId,displayName,email,department,role,location,managerEmployeeId,skills,hireDate
+EMP001,Alex Garcia,alex.garcia1@lamresearch.example.com,Manufacturing,Architect,Fremont,,"Fabric,Python,Synapse,Power BI",2012-02-01
+EMP002,Jordan Nguyen,jordan.nguyen2@lamresearch.example.com,HR,Manager,Portland,,"Power BI,Ontology,Kusto,Fabric",2012-03-03
+EMP003,Taylor Miller,taylor.miller3@lamresearch.example.com,IT,Lead,Bengaluru,,"TypeScript,Azure AI,Ontology,MLOps",2012-04-03
+EMP004,Morgan Smith,morgan.smith4@lamresearch.example.com,Finance,Analyst,Hsinchu,,"TypeScript,Synapse,SQL,MLOps",2012-05-04
+EMP005,Casey Lee,casey.lee5@lamresearch.example.com,Procurement,Senior Engineer,Bengaluru,,"Ontology,SQL,Python,MLOps",2012-06-04
+EMP006,Avery Wilson,avery.wilson6@lamresearch.example.com,Operations,Specialist,Portland,EMP001,"Azure AI,MLOps,Fabric,Python",2012-07-05
+EMP007,Riley Patel,riley.patel7@lamresearch.example.com,R&D,Director,Austin,EMP001,"Python,Kusto,TypeScript,Synapse",2012-08-05
+EMP008,Jamie Brown,jamie.brown8@lamresearch.example.com,Engineering,Engineer,Austin,EMP001,"SQL,Kusto,Synapse,Fabric",2012-09-05
+EMP009,Drew Kim,drew.kim9@lamresearch.example.com,Manufacturing,Architect,Hsinchu,EMP001,"Power BI,Fabric,MLOps,SQL",2012-10-06
+EMP010,Skyler Chen,skyler.chen10@lamresearch.example.com,HR,Manager,Hsinchu,EMP001,"MLOps,Fabric,TypeScript,Ontology",2012-11-06
+EMP011,Alex Garcia,alex.garcia11@lamresearch.example.com,IT,Lead,Portland,EMP002,"Synapse,TypeScript,Ontology,Azure AI",2012-12-07
+EMP012,Jordan Nguyen,jordan.nguyen12@lamresearch.example.com,Finance,Analyst,Hsinchu,EMP002,"MLOps,Fabric,Python,TypeScript",2013-01-07
+EMP013,Taylor Miller,taylor.miller13@lamresearch.example.com,Procurement,Senior Engineer,Austin,EMP002,"Python,Azure AI,SQL,Ontology",2013-02-07
+EMP014,Morgan Smith,morgan.smith14@lamresearch.example.com,Operations,Specialist,Austin,EMP002,"Azure AI,Ontology,Kusto,Fabric",2013-03-10
+EMP015,Casey Lee,casey.lee15@lamresearch.example.com,R&D,Director,Austin,EMP002,"Kusto,TypeScript,Python,Ontology",2013-04-10
+EMP016,Avery Wilson,avery.wilson16@lamresearch.example.com,Engineering,Engineer,Fremont,EMP003,"Kusto,Fabric,Synapse,Azure AI",2013-05-11
+EMP017,Riley Patel,riley.patel17@lamresearch.example.com,Manufacturing,Architect,Fremont,EMP003,"Python,Ontology,Synapse,SQL",2013-06-11
+EMP018,Jamie Brown,jamie.brown18@lamresearch.example.com,HR,Manager,Hsinchu,EMP003,"Power BI,SQL,Kusto,TypeScript",2013-07-12
+EMP019,Drew Kim,drew.kim19@lamresearch.example.com,IT,Lead,Bengaluru,EMP003,"Ontology,MLOps,Kusto,SQL",2013-08-12
+EMP020,Skyler Chen,skyler.chen20@lamresearch.example.com,Finance,Analyst,Austin,EMP003,"Synapse,Power BI,Kusto,Ontology",2013-09-12
+EMP021,Alex Garcia,alex.garcia21@lamresearch.example.com,Procurement,Senior Engineer,Portland,EMP004,"Kusto,SQL,Fabric,Synapse",2013-10-13
+EMP022,Jordan Nguyen,jordan.nguyen22@lamresearch.example.com,Operations,Specialist,Bengaluru,EMP004,"Python,Kusto,Ontology,MLOps",2013-11-13
+EMP023,Taylor Miller,taylor.miller23@lamresearch.example.com,R&D,Director,Hsinchu,EMP004,"Power BI,Azure AI,Python,Fabric",2013-12-14
+EMP024,Morgan Smith,morgan.smith24@lamresearch.example.com,Engineering,Engineer,Fremont,EMP004,"Kusto,SQL,Power BI,Synapse",2014-01-14
+EMP025,Casey Lee,casey.lee25@lamresearch.example.com,Manufacturing,Architect,Hsinchu,EMP004,"Ontology,Kusto,TypeScript,Fabric",2014-02-14
+EMP026,Avery Wilson,avery.wilson26@lamresearch.example.com,HR,Manager,Bengaluru,EMP005,"Synapse,Python,TypeScript,Ontology",2014-03-17
+EMP027,Riley Patel,riley.patel27@lamresearch.example.com,IT,Lead,Fremont,EMP005,"Synapse,Python,Ontology,Azure AI",2014-04-17
+EMP028,Jamie Brown,jamie.brown28@lamresearch.example.com,Finance,Analyst,Bengaluru,EMP005,"SQL,Power BI,Fabric,MLOps",2014-05-18
+EMP029,Drew Kim,drew.kim29@lamresearch.example.com,Procurement,Senior Engineer,Portland,EMP005,"Power BI,Azure AI,Synapse,Ontology",2014-06-18
+EMP030,Skyler Chen,skyler.chen30@lamresearch.example.com,Operations,Specialist,Fremont,EMP005,"Fabric,Azure AI,Python,SQL",2014-07-19
+EMP031,Alex Garcia,alex.garcia31@lamresearch.example.com,R&D,Director,Fremont,EMP006,"Python,Fabric,Azure AI,Synapse",2014-08-19
+EMP032,Jordan Nguyen,jordan.nguyen32@lamresearch.example.com,Engineering,Engineer,Fremont,EMP006,"Kusto,MLOps,Fabric,TypeScript",2014-09-19
+EMP033,Taylor Miller,taylor.miller33@lamresearch.example.com,Manufacturing,Architect,Fremont,EMP006,"Synapse,Power BI,SQL,Fabric",2014-10-20
+EMP034,Morgan Smith,morgan.smith34@lamresearch.example.com,HR,Manager,Fremont,EMP006,"Python,Ontology,SQL,Kusto",2014-11-20
+EMP035,Casey Lee,casey.lee35@lamresearch.example.com,IT,Lead,Fremont,EMP006,"Azure AI,MLOps,TypeScript,Kusto",2014-12-21
+EMP036,Avery Wilson,avery.wilson36@lamresearch.example.com,Finance,Analyst,Fremont,EMP007,"Ontology,Power BI,Synapse,TypeScript",2015-01-21
+EMP037,Riley Patel,riley.patel37@lamresearch.example.com,Procurement,Senior Engineer,Fremont,EMP007,"Ontology,Kusto,Synapse,SQL",2015-02-21
+EMP038,Jamie Brown,jamie.brown38@lamresearch.example.com,Operations,Specialist,Fremont,EMP007,"Synapse,Kusto,TypeScript,Python",2015-03-24
+EMP039,Drew Kim,drew.kim39@lamresearch.example.com,R&D,Director,Fremont,EMP007,"Python,SQL,Fabric,Ontology",2015-04-24
+EMP040,Skyler Chen,skyler.chen40@lamresearch.example.com,Engineering,Engineer,Fremont,EMP007,"Azure AI,Synapse,Kusto,SQL",2015-05-25
+EMP041,Alex Garcia,alex.garcia41@lamresearch.example.com,Manufacturing,Architect,Portland,EMP008,"Kusto,Power BI,Azure AI,Fabric",2015-06-25
+EMP042,Jordan Nguyen,jordan.nguyen42@lamresearch.example.com,HR,Manager,Portland,EMP008,"Synapse,SQL,MLOps,Power BI",2015-07-26
+EMP043,Taylor Miller,taylor.miller43@lamresearch.example.com,IT,Lead,Hsinchu,EMP008,"Synapse,Ontology,MLOps,Azure AI",2015-08-26
+EMP044,Morgan Smith,morgan.smith44@lamresearch.example.com,Finance,Analyst,Fremont,EMP008,"SQL,Ontology,TypeScript,Python",2015-09-26
+EMP045,Casey Lee,casey.lee45@lamresearch.example.com,Procurement,Senior Engineer,Hsinchu,EMP008,"Ontology,MLOps,TypeScript,Synapse",2015-10-27
+EMP046,Avery Wilson,avery.wilson46@lamresearch.example.com,Operations,Specialist,Bengaluru,EMP009,"Power BI,Ontology,MLOps,Fabric",2015-11-27
+EMP047,Riley Patel,riley.patel47@lamresearch.example.com,R&D,Director,Austin,EMP009,"Power BI,TypeScript,MLOps,Fabric",2015-12-28
+EMP048,Jamie Brown,jamie.brown48@lamresearch.example.com,Engineering,Engineer,Fremont,EMP009,"Power BI,MLOps,Synapse,SQL",2016-01-28
+EMP049,Drew Kim,drew.kim49@lamresearch.example.com,Manufacturing,Architect,Portland,EMP009,"Ontology,SQL,Python,Fabric",2016-02-28
+EMP050,Skyler Chen,skyler.chen50@lamresearch.example.com,HR,Manager,Fremont,EMP009,"Kusto,Fabric,SQL,MLOps",2016-03-30
+EMP051,Alex Garcia,alex.garcia51@lamresearch.example.com,IT,Lead,Austin,EMP010,"Power BI,MLOps,Ontology,Python",2016-04-30
+EMP052,Jordan Nguyen,jordan.nguyen52@lamresearch.example.com,Finance,Analyst,Fremont,EMP010,"SQL,Ontology,Python,Kusto",2016-05-31
+EMP053,Taylor Miller,taylor.miller53@lamresearch.example.com,Procurement,Senior Engineer,Hsinchu,EMP010,"Azure AI,Fabric,SQL,MLOps",2016-07-01
+EMP054,Morgan Smith,morgan.smith54@lamresearch.example.com,Operations,Specialist,Fremont,EMP010,"MLOps,Kusto,Python,Azure AI",2016-08-01
+EMP055,Casey Lee,casey.lee55@lamresearch.example.com,R&D,Director,Bengaluru,EMP010,"MLOps,TypeScript,Fabric,Azure AI",2016-09-01
+EMP056,Avery Wilson,avery.wilson56@lamresearch.example.com,Engineering,Engineer,Austin,EMP011,"SQL,Fabric,Kusto,Azure AI",2016-10-02
+EMP057,Riley Patel,riley.patel57@lamresearch.example.com,Manufacturing,Architect,Austin,EMP011,"Ontology,Azure AI,Python,Fabric",2016-11-02
+EMP058,Jamie Brown,jamie.brown58@lamresearch.example.com,HR,Manager,Austin,EMP011,"Kusto,Power BI,TypeScript,MLOps",2016-12-03
+EMP059,Drew Kim,drew.kim59@lamresearch.example.com,IT,Lead,Portland,EMP011,"Synapse,Python,Power BI,Fabric",2017-01-03
+EMP060,Skyler Chen,skyler.chen60@lamresearch.example.com,Finance,Analyst,Hsinchu,EMP011,"MLOps,Ontology,Fabric,Synapse",2017-02-03
+EMP061,Alex Garcia,alex.garcia61@lamresearch.example.com,Procurement,Senior Engineer,Bengaluru,EMP012,"Azure AI,Ontology,Power BI,TypeScript",2017-03-06
+EMP062,Jordan Nguyen,jordan.nguyen62@lamresearch.example.com,Operations,Specialist,Bengaluru,EMP012,"SQL,Kusto,TypeScript,Power BI",2017-04-06
+EMP063,Taylor Miller,taylor.miller63@lamresearch.example.com,R&D,Director,Portland,EMP012,"Ontology,Kusto,Python,TypeScript",2017-05-07
+EMP064,Morgan Smith,morgan.smith64@lamresearch.example.com,Engineering,Engineer,Portland,EMP012,"SQL,Power BI,Azure AI,Python",2017-06-07
+EMP065,Casey Lee,casey.lee65@lamresearch.example.com,Manufacturing,Architect,Bengaluru,EMP012,"Power BI,TypeScript,MLOps,SQL",2017-07-08
+EMP066,Avery Wilson,avery.wilson66@lamresearch.example.com,HR,Manager,Fremont,EMP013,"Python,Kusto,SQL,Ontology",2017-08-08
+EMP067,Riley Patel,riley.patel67@lamresearch.example.com,IT,Lead,Austin,EMP013,"TypeScript,MLOps,Python,Kusto",2017-09-08
+EMP068,Jamie Brown,jamie.brown68@lamresearch.example.com,Finance,Analyst,Austin,EMP013,"Ontology,Kusto,Fabric,Synapse",2017-10-09
+EMP069,Drew Kim,drew.kim69@lamresearch.example.com,Procurement,Senior Engineer,Austin,EMP013,"TypeScript,MLOps,Power BI,Azure AI",2017-11-09
+EMP070,Skyler Chen,skyler.chen70@lamresearch.example.com,Operations,Specialist,Fremont,EMP013,"Kusto,MLOps,SQL,Power BI",2017-12-10
+EMP071,Alex Garcia,alex.garcia71@lamresearch.example.com,R&D,Director,Hsinchu,EMP014,"SQL,MLOps,Python,Kusto",2018-01-10
+EMP072,Jordan Nguyen,jordan.nguyen72@lamresearch.example.com,Engineering,Engineer,Hsinchu,EMP014,"TypeScript,Azure AI,Kusto,Python",2018-02-10
+EMP073,Taylor Miller,taylor.miller73@lamresearch.example.com,Manufacturing,Architect,Fremont,EMP014,"Ontology,SQL,Azure AI,Python",2018-03-13
+EMP074,Morgan Smith,morgan.smith74@lamresearch.example.com,HR,Manager,Hsinchu,EMP014,"TypeScript,SQL,Kusto,Azure AI",2018-04-13
+EMP075,Casey Lee,casey.lee75@lamresearch.example.com,IT,Lead,Portland,EMP014,"Python,Power BI,Kusto,Synapse",2018-05-14
+EMP076,Avery Wilson,avery.wilson76@lamresearch.example.com,Finance,Analyst,Austin,EMP015,"Fabric,Power BI,Kusto,Azure AI",2018-06-14
+EMP077,Riley Patel,riley.patel77@lamresearch.example.com,Procurement,Senior Engineer,Austin,EMP015,"Kusto,Azure AI,Fabric,Ontology",2018-07-15
+EMP078,Jamie Brown,jamie.brown78@lamresearch.example.com,Operations,Specialist,Portland,EMP015,"Azure AI,Fabric,TypeScript,Kusto",2018-08-15
+EMP079,Drew Kim,drew.kim79@lamresearch.example.com,R&D,Director,Hsinchu,EMP015,"Fabric,Python,TypeScript,SQL",2018-09-15
+EMP080,Skyler Chen,skyler.chen80@lamresearch.example.com,Engineering,Engineer,Hsinchu,EMP015,"Synapse,Ontology,Power BI,Python",2018-10-16
+EMP081,Alex Garcia,alex.garcia81@lamresearch.example.com,Manufacturing,Architect,Bengaluru,EMP016,"SQL,Fabric,Ontology,TypeScript",2018-11-16
+EMP082,Jordan Nguyen,jordan.nguyen82@lamresearch.example.com,HR,Manager,Bengaluru,EMP016,"SQL,Kusto,MLOps,Fabric",2018-12-17
+EMP083,Taylor Miller,taylor.miller83@lamresearch.example.com,IT,Lead,Austin,EMP016,"Power BI,Fabric,Kusto,Python",2019-01-17
+EMP084,Morgan Smith,morgan.smith84@lamresearch.example.com,Finance,Analyst,Hsinchu,EMP016,"TypeScript,Synapse,Python,Power BI",2019-02-17
+EMP085,Casey Lee,casey.lee85@lamresearch.example.com,Procurement,Senior Engineer,Bengaluru,EMP016,"Synapse,Ontology,Python,Kusto",2019-03-20
+EMP086,Avery Wilson,avery.wilson86@lamresearch.example.com,Operations,Specialist,Austin,EMP017,"Ontology,MLOps,Synapse,SQL",2019-04-20
+EMP087,Riley Patel,riley.patel87@lamresearch.example.com,R&D,Director,Bengaluru,EMP017,"SQL,Power BI,Ontology,Kusto",2019-05-21
+EMP088,Jamie Brown,jamie.brown88@lamresearch.example.com,Engineering,Engineer,Bengaluru,EMP017,"SQL,Ontology,Azure AI,TypeScript",2019-06-21
+EMP089,Drew Kim,drew.kim89@lamresearch.example.com,Manufacturing,Architect,Hsinchu,EMP017,"Ontology,SQL,MLOps,Fabric",2019-07-22
+EMP090,Skyler Chen,skyler.chen90@lamresearch.example.com,HR,Manager,Bengaluru,EMP017,"SQL,Synapse,MLOps,Azure AI",2019-08-22
+EMP091,Alex Garcia,alex.garcia91@lamresearch.example.com,IT,Lead,Fremont,EMP018,"Power BI,Python,Fabric,Ontology",2019-09-22
+EMP092,Jordan Nguyen,jordan.nguyen92@lamresearch.example.com,Finance,Analyst,Bengaluru,EMP018,"Synapse,Power BI,TypeScript,Python",2019-10-23
+EMP093,Taylor Miller,taylor.miller93@lamresearch.example.com,Procurement,Senior Engineer,Austin,EMP018,"Kusto,TypeScript,MLOps,Fabric",2019-11-23
+EMP094,Morgan Smith,morgan.smith94@lamresearch.example.com,Operations,Specialist,Austin,EMP018,"Ontology,MLOps,Azure AI,TypeScript",2019-12-24
+EMP095,Casey Lee,casey.lee95@lamresearch.example.com,R&D,Director,Bengaluru,EMP018,"TypeScript,SQL,Ontology,Synapse",2020-01-24
+EMP096,Avery Wilson,avery.wilson96@lamresearch.example.com,Engineering,Engineer,Hsinchu,EMP019,"Synapse,MLOps,Azure AI,TypeScript",2020-02-24
+EMP097,Riley Patel,riley.patel97@lamresearch.example.com,Manufacturing,Architect,Bengaluru,EMP019,"MLOps,Fabric,TypeScript,SQL",2020-03-26
+EMP098,Jamie Brown,jamie.brown98@lamresearch.example.com,HR,Manager,Hsinchu,EMP019,"Synapse,SQL,TypeScript,Ontology",2020-04-26
+EMP099,Drew Kim,drew.kim99@lamresearch.example.com,IT,Lead,Portland,EMP019,"Fabric,Power BI,Ontology,Kusto",2020-05-27
+EMP100,Skyler Chen,skyler.chen100@lamresearch.example.com,Finance,Analyst,Austin,EMP019,"Python,Power BI,MLOps,Kusto",2020-06-27

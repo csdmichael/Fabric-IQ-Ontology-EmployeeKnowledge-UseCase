@@ -1,0 +1,145 @@
+{
+  "workspace_id": "38362838-0531-4215-89af-a8a79221b545",
+  "semantic_model_id": "21e0a7be-1e7d-4110-8faa-d835f81c6559",
+  "created": "2026-05-10T06:18:20.178137",
+  "reports": [
+    {
+      "name": "Employee Skills Dashboard",
+      "description": "Employee skills, contributions, and career metrics",
+      "pages": [
+        {
+          "name": "Overview",
+          "visuals": [
+            {
+              "type": "card",
+              "title": "Total Employees",
+              "measure": "Total Employees"
+            },
+            {
+              "type": "card",
+              "title": "Average Contribution Score",
+              "measure": "Average Employee Score"
+            },
+            {
+              "type": "table",
+              "title": "Employee Skills Matrix",
+              "fields": [
+                "displayName",
+                "department",
+                "role",
+                "skills",
+                "contributionScore"
+              ]
+            },
+            {
+              "type": "bar",
+              "title": "Contributions by Department",
+              "category": "department",
+              "measure": "Total Contributions"
+            }
+          ]
+        }
+      ],
+      "data_source": {
+        "tables": [
+          "Employees",
+          "Contributions"
+        ],
+        "relationships": [
+          "FK_Contributions_Employees"
+        ]
+      }
+    },
+    {
+      "name": "Project Contribution Analysis",
+      "description": "Project involvement and team collaboration metrics",
+      "pages": [
+        {
+          "name": "Project View",
+          "visuals": [
+            {
+              "type": "card",
+              "title": "Total Projects",
+              "measure": "Total Projects"
+            },
+            {
+              "type": "table",
+              "title": "Projects Overview",
+              "fields": [
+                "projectName",
+                "description",
+                "status",
+                "lead"
+              ]
+            },
+            {
+              "type": "scatter",
+              "title": "Project vs Employee Contributions",
+              "x_axis": "projectCount",
+              "y_axis": "contributionScore"
+            }
+          ]
+        }
+      ],
+      "data_source": {
+        "tables": [
+          "Projects",
+          "Contributions",
+          "Employees"
+        ],
+        "relationships": [
+          "FK_Contributions_Employees"
+        ]
+      }
+    },
+    {
+      "name": "Digital Assets Distribution",
+      "description": "Document and asset inventory across organization",
+      "pages": [
+        {
+          "name": "Assets",
+          "visuals": [
+            {
+              "type": "card",
+              "title": "Total Assets",
+              "measure": "Total Assets"
+            },
+            {
+              "type": "pie",
+              "title": "Assets by Type",
+              "category": "assetType",
+              "measure": "count"
+            },
+            {
+              "type": "bar",
+              "title": "Assets by Employee (Top 10)",
+              "category": "displayName",
+              "measure": "count",
+              "limit": 10
+            },
+            {
+              "type": "table",
+              "title": "Asset Catalog",
+              "fields": [
+                "assetId",
+                "displayName",
+                "assetType",
+                "title",
+                "lastModified"
+              ]
+            }
+          ]
+        }
+      ],
+      "data_source": {
+        "tables": [
+          "DigitalAssets",
+          "Employees"
+        ],
+        "relationships": [
+          "FK_DigitalAssets_Employees"
+        ]
+      }
+    }
+  ]
+}

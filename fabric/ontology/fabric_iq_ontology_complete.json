@@ -1,0 +1,109 @@
+{
+  "workspace_id": "38362838-0531-4215-89af-a8a79221b545",
+  "lakehouse_id": "d11b209f-c774-481e-adcb-79920a94fd20",
+  "semantic_model_id": "21e0a7be-1e7d-4110-8faa-d835f81c6559",
+  "created": "2026-05-10T06:18:20.135838",
+  "tables": {
+    "Employees": {
+      "columns": [
+        "employeeId",
+        "displayName",
+        "email",
+        "department",
+        "role",
+        "location",
+        "skills",
+        "hireDate"
+      ],
+      "primary_key": "employeeId",
+      "business_key": "email"
+    },
+    "Contributions": {
+      "columns": [
+        "employeeId",
+        "projectCount",
+        "assetCount",
+        "codeCommitCount",
+        "contributionScore",
+        "tier"
+      ],
+      "primary_key": "employeeId",
+      "foreign_keys": [
+        "employeeId"
+      ]
+    },
+    "DigitalAssets": {
+      "columns": [
+        "assetId",
+        "employeeId",
+        "assetType",
+        "title",
+        "lastModified"
+      ],
+      "primary_key": "assetId",
+      "foreign_keys": [
+        "employeeId"
+      ]
+    },
+    "Projects": {
+      "columns": [
+        "projectId",
+        "projectName",
+        "description",
+        "status",
+        "lead"
+      ],
+      "primary_key": "projectId"
+    }
+  },
+  "relationships": [
+    {
+      "name": "FK_Contributions_Employees",
+      "from_table": "Contributions",
+      "from_column": "employeeId",
+      "to_table": "Employees",
+      "to_column": "employeeId",
+      "cardinality": "many-to-one"
+    },
+    {
+      "name": "FK_DigitalAssets_Employees",
+      "from_table": "DigitalAssets",
+      "from_column": "employeeId",
+      "to_table": "Employees",
+      "to_column": "employeeId",
+      "cardinality": "many-to-one"
+    }
+  ],
+  "measures": [
+    {
+      "name": "Total Employees",
+      "table": "Employees",
+      "expression": "COUNTA(Employees[employeeId])",
+      "format": "0"
+    },
+    {
+      "name": "Total Contributions",
+      "table": "Contributions",
+      "expression": "SUM(Contributions[contributionScore])",
+      "format": "0"
+    },
+    {
+      "name": "Total Assets",
+      "table": "DigitalAssets",
+      "expression": "COUNTA(DigitalAssets[assetId])",
+      "format": "0"
+    },
+    {
+      "name": "Total Projects",
+      "table": "Projects",
+      "expression": "COUNTA(Projects[projectId])",
+      "format": "0"
+    },
+    {
+      "name": "Average Employee Score",
+      "table": "Contributions",
+      "expression": "AVERAGE(Contributions[contributionScore])",
+      "format": "0.00"
+    }
+  ]
+}

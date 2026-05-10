@@ -1,0 +1,99 @@
+{
+  "name": "Employee Knowledge Data Pipeline",
+  "description": "Fabric dataflow for ingesting employee knowledge data into OneLake",
+  "created": "2026-05-10T06:18:20.139509",
+  "workspace_id": "38362838-0531-4215-89af-a8a79221b545",
+  "lakehouse_id": "d11b209f-c774-481e-adcb-79920a94fd20",
+  "stages": [
+    {
+      "stage": 1,
+      "name": "Extract",
+      "description": "Extract from JSON files in /data",
+      "sources": [
+        {
+          "type": "json",
+          "file": "data/employees.json",
+          "table": "Employees"
+        },
+        {
+          "type": "json",
+          "file": "data/contributions.json",
+          "table": "Contributions"
+        },
+        {
+          "type": "json",
+          "file": "data/digital_assets.json",
+          "table": "DigitalAssets"
+        },
+        {
+          "type": "json",
+          "file": "data/projects.json",
+          "table": "Projects"
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "name": "Transform",
+      "description": "Clean and normalize data",
+      "transformations": [
+        {
+          "table": "Employees",
+          "rules": [
+            "Convert skills array to comma-separated string",
+            "Normalize email to lowercase",
+            "Parse hireDate to date format"
+          ]
+        },
+        {
+          "table": "Contributions",
+          "rules": [
+            "Ensure contributionScore is numeric",
+            "Fill null tier with 'standard'",
+            "Calculate projectCount from projectIds"
+          ]
+        },
+        {
+          "table": "DigitalAssets",
+          "rules": [
+            "Flatten storageRef structure",
+            "Normalize assetType to lowercase"
+          ]
+        }
+      ]
+    },
+    {
+      "stage": 3,
+      "name": "Load",
+      "description": "Load into OneLake tables",
+      "destination": "OneLake",
+      "mode": "upsert",
+      "key_columns": {
+        "Employees": [
+          "employeeId"
+        ],
+        "Contributions": [
+          "employeeId"
+        ],
+        "DigitalAssets": [
+          "assetId"
+        ],
+        "Projects": [
+          "projectId"
+        ]
+      }
+    },
+    {
+      "stage": 4,
+      "name": "Validate",
+      "description": "Data quality checks",
+      "checks": [
+        "No null employeeId in Employees",
+        "ContributionScore between 0-100",
+        "Valid email format",
+        "Project status in [active, completed, pending]"
+      ]
+    }
+  ],
+  "transformations": []
+}
