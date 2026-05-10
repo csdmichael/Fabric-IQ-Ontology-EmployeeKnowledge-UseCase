@@ -267,6 +267,10 @@ export class OrgChartPage {
   }
 
   // ── Template helpers ──────────────────────────────────────────────────────
+  getEdgePath(edge: RenderedEdge): string {
+    return `M ${edge.x1} ${edge.y1} C ${edge.x1} ${edge.y1 + 30} ${edge.x2} ${edge.y2 - 30} ${edge.x2} ${edge.y2}`;
+  }
+
   scoreColor(score: number): string {
     if (score >= 80) return '#2d7d46';
     if (score >= 55) return '#d4832a';

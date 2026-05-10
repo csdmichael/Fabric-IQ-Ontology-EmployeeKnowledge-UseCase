@@ -74,7 +74,7 @@
           <!-- Connector lines (drawn first, behind nodes) -->
           <path
             *ngFor="let edge of renderedEdges"
-            [attr.d]="'M ' + edge.x1 + ' ' + edge.y1 + ' C ' + edge.x1 + ' ' + (edge.y1 + 30) + ' ' + edge.x2 + ' ' + (edge.y2 - 30) + ' ' + edge.x2 + ' ' + edge.y2"
+            [attr.d]="getEdgePath(edge)"
             fill="none"
             stroke="#b0c8e8"
             stroke-width="1.5"

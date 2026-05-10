@@ -83,7 +83,7 @@ export class ProjectsPage {
       ? Math.round(members.reduce((s, c) => s + c.contributionScore, 0) / members.length)
       : 0;
 
-    const top = members.sort((a, b) => b.contributionScore - a.contributionScore)[0];
+    const top = [...members].sort((a, b) => b.contributionScore - a.contributionScore)[0];
     const topName = top ? (this.employees.find((e) => e.employeeId === top.employeeId)?.displayName ?? top.employeeId) : '—';
 
     return {
