@@ -183,12 +183,11 @@ function Test-SourceCode {
     $FilesToCheck = @{
         "api/server.py" = "API Server"
         "config/endpoints.json" = "Endpoints Config"
+        "config/terraform.tfvars.json" = "Terraform Variables"
         "fabric/ontology/fabric_iq_ontology_complete.json" = "Ontology Config"
         "fabric/pipelines/employee_knowledge_pipeline_complete.json" = "Pipeline Config"
-        "fabric/powerbi/powerbi_reports_config.json" = "Power BI Config"
-        "scripts/deploy-complete-solution.ps1" = "PowerShell Deployment Script"
-        "scripts/deploy-fabric-powerbi.ps1" = "Fabric/Power BI Verification Script"
-        "powerbi/README.md" = "Power BI Documentation Hub"
+        "scripts/deploy.sh" = "Bash Deploy Script"
+        "scripts/deploy-complete-solution.ps1" = "PowerShell Deploy Script"
     }
     
     foreach ($File in $FilesToCheck.GetEnumerator()) {
@@ -261,19 +260,13 @@ function Test-Documentation {
     Write-Host "`n=== DOCUMENTATION ===" -ForegroundColor Cyan
     
     $Docs = @{
-        "README.md" = "Main Documentation"
-        "QUICK_START.md" = "Quick Start Guide"
-        "DEPLOYMENT_STATUS.txt" = "Deployment Status"
-        "FABRIC_DEPLOYMENT_GUIDE.md" = "Fabric Guide"
-        "powerbi/README.md" = "Power BI Documentation Hub"
-        "powerbi/POWERBI_SETUP_GUIDE.md" = "Power BI Setup"
-        "powerbi/FABRIC_POWERBI_DEPLOYMENT_PLAYBOOK.md" = "Power BI Deployment Playbook"
-        "powerbi/FABRIC_POWERBI_DEPLOYMENT_SUMMARY.md" = "Power BI Deployment Summary"
+        "README.md"                = "Main Documentation"
+        "FABRIC_DEPLOYMENT_GUIDE.md" = "Fabric Deployment Guide"
+        "api/README.md"            = "API Reference"
     }
     
     foreach ($Doc in $Docs.GetEnumerator()) {
         if (Test-Path $Doc.Key) {
-            $Size = (Get-Item $Doc.Key).Length / 1KB
             Write-Check "PASS" "Documentation" "$($Doc.Value)"
         } else {
             Write-Check "WARN" "Documentation" "$($Doc.Key) not found"
@@ -351,9 +344,6 @@ Write-Host "2. All source code is in GitHub"
 Write-Host "3. Data is prepared (1,020 records)"
 Write-Host "4. Configuration is in place"
 Write-Host ""
-Write-Host "To complete deployment:"
-Write-Host "- Upload data to OneLake (see FABRIC_DEPLOYMENT_GUIDE.md)"
-Write-Host "- Configure semantic model relationships"
-Write-Host "- Create Power BI reports and dashboards"
-Write-Host "- Publish Power BI app (see powerbi/FABRIC_POWERBI_DEPLOYMENT_PLAYBOOK.md)"
+Write-Host "To configure and deploy: see FABRIC_DEPLOYMENT_GUIDE.md"
+Write-Host "To trigger CI/CD:        push to main or run the Deploy workflow in GitHub Actions"
 Write-Host ""

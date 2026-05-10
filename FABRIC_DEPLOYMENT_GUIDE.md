@@ -1,136 +1,179 @@
+# Fabric Deployment Guide
 
-# FABRIC ONELAKE DATA DEPLOYMENT GUIDE
-
-## Current Status
-[OK] Data loaded from 4 JSON sources (1,020 records)
-[OK] Ontology defined with relationships
-[OK] Data pipeline configured (4 stages)
-[OK] Power BI reports configured (11 visuals)
-[OK] Dashboards ready for creation
-
-## Step 1: Load Data into OneLake (Manual via Power BI Portal)
-
-### Option A: Quick Upload
-1. Go to: https://app.powerbi.com
-2. Navigate to workspace
-3. Go to Lakehouse
-4. Click "Get Data" → "Upload files"
-5. Upload CSV files from: data/exports/parquet/
-   - Employees.csv (100 rows)
-   - Contributions.csv (100 rows)
-   - DigitalAssets.csv (800 rows)
-   - Projects.csv (20 rows)
-6. Map each file to corresponding OneLake table
-
-### Option B: Power Query (Recommended)
-1. In Power BI Desktop or Online:
-   - New → Get Data → Web (blank)
-   - Paste: fabric/powerbi/PowerQuery_OneLake_Loader.m
-   - Replace DataSource URL with your GitHub raw content URL
-   - Load all 4 queries
-2. Transform as needed
-3. Click "Close & Apply"
-4. Publish to workspace
-
-## Step 2: Configure Semantic Model
-
-1. Go to semantic model: 21e0a7be-1e7d-4110-8faa-d835f81c6559
-2. In Model view:
-   - Add relationships from ontology:
-     * Contributions[employeeId] → Employees[employeeId]
-     * DigitalAssets[employeeId] → Employees[employeeId]
-   - Add measures from powerbi_reports_config.json:
-     * Total Employees
-     * Total Contribution Score
-     * Avg Employee Score
-     * Total Assets
-     * Total Projects
-
-## Step 3: Update Power BI Reports
-
-### Report 1: Employee Skills Dashboard
-1. Open in edit mode
-2. Add visuals from config:
-   - KPI Card: Total Employees
-   - Table: Employee name, department, role, skills, score
-   - Bar Chart: Contributions by Department
-   - Pie Chart: Employees by Tier
-3. Save
-
-### Report 2: Project Contribution Analysis
-1. Open in edit mode
-2. Add visuals:
-   - KPI Card: Total Projects
-   - Table: Project name, status, lead
-   - Scatter: Projects vs Contributions
-   - Bar: Top 10 employees by projects
-3. Save
-
-### Report 3: Digital Assets Distribution
-1. Open in edit mode
-2. Add visuals:
-   - KPI Card: Total Assets
-   - Pie: Assets by Type
-   - Bar: Assets by Employee
-   - Table: Asset catalog
-3. Save
-
-## Step 4: Create Dashboards
-
-1. New Dashboard: "Employee Knowledge Dashboard"
-2. From Employee Skills Dashboard report:
-   - Pin "Total Employees" KPI
-   - Pin "Contributions by Department" chart
-   - Pin "Employees by Tier" chart
-3. From Project Analysis:
-   - Pin "Total Projects" KPI
-   - Pin "Top 10 Employees" chart
-4. From Assets:
-   - Pin "Total Assets" KPI
-   - Pin "Assets by Type" chart
-5. Arrange, format, and save
-
-## Step 5: Create Power BI App
-
-1. Go to Apps → Create App
-2. Fill in:
-   - App Name: "Employee Knowledge App"
-   - Description: "Enterprise employee knowledge and insights platform"
-   - Logo: (optional)
-3. Navigation:
-   - Add dashboards
-   - Add reports
-   - Organize by section
-4. Permissions:
-   - Share with: Entire organization / Specific groups
-5. Publish
-
-## Step 6: Data Refresh Schedule
-
-1. Set up refresh schedule for OneLake data
-2. Configure Power BI to refresh:
-   - Daily: Employee data updates
-   - Weekly: Contribution scores recalculation
-   - As needed: Asset catalog updates
-
-## Configuration Files Reference
-
-| File | Purpose |
-|------|---------|
-| fabric/ontology/fabric_iq_ontology_complete.json | Ontology with relationships & measures |
-| fabric/pipelines/employee_knowledge_pipeline_complete.json | Data pipeline stages |
-| fabric/powerbi/powerbi_reports_config.json | Report & visual definitions |
-| fabric/powerbi/PowerQuery_OneLake_Loader.m | Power Query M script for data loading |
-## Configuration Files Reference
-
-| File | Purpose |
-|------|---------|
-| fabric/ontology/fabric_iq_ontology_complete.json | Ontology with relationships & measures |
-| fabric/pipelines/employee_knowledge_pipeline_complete.json | Data pipeline stages |
-| fabric/powerbi/powerbi_reports_config.json | Report & visual definitions |
-| fabric/powerbi/PowerQuery_OneLake_Loader.m | Power Query M script for data loading |
-| data/exports/parquet/* | CSV files ready for upload |
+This guide covers everything you need to configure before running the deployment workflows. All Fabric workspace creation, semantic model provisioning, and pipeline setup is handled automatically by the `deploy.yml` GitHub Actions workflow via the Fabric REST API — no Fabric portal steps are required.
 
 ---
-**Status**: Ready for data loading and deployment
-**Last Updated**: May 10, 2026
+
+## Prerequisites
+
+| Tool | Minimum version | Notes |
+|---|---|---|
+| Terraform | 1.6.0+ | Used by CI and deploy workflows |
+| Azure CLI | 2.55.0+ | Used by deploy workflow and local scripts |
+| Python | 3.9+ | Used by data-prep script |
+| Node.js | 20 LTS | Used by UI build step |
+
+---
+
+## Step 1 — Configure Terraform variables
+
+Edit `config/terraform.tfvars.json` with your environment values. All fields are required unless marked optional.
+
+```json
+{
+  "resource_group_name":            "your-resource-group",
+  "storage_account_name":           "globally-unique-storage-name",
+  "raw_container_name":             "employee-knowledge-raw",
+  "processed_container_name":       "employee-knowledge-processed",
+  "cosmos_account_name":            "globally-unique-cosmos-name",
+  "cosmos_database_name":           "EmployeeKnowledgeGraph",
+  "cosmos_container_name":          "EmployeeDocumentParsing",
+  "ui_app_service_name":            "your-ui-app-name",
+  "api_app_service_name":           "your-api-app-name",
+  "app_service_plan_name":          "plan-fabriciq-b3",
+  "app_service_plan_sku":           "B3",
+  "app_service_plan_location":      "westus2",
+  "fabric_capacity_id":             "/subscriptions/<SUB_ID>/resourceGroups/<RG>/providers/Microsoft.Fabric/capacities/<NAME>",
+  "fabric_workspace_display_name":  "Fabric IQ – Employee Knowledge",
+  "existing_log_analytics_workspace_name": "",
+  "sre_alert_email":                "sre@yourcompany.com",
+  "sre_webhook_url":                "https://your-teams-webhook-url",
+  "tags": {
+    "project": "fabric-iq-employee-knowledge",
+    "environment": "demo",
+    "owner": "your-alias"
+  }
+}
+```
+
+**Key fields:**
+
+| Field | How to obtain |
+|---|---|
+| `resource_group_name` | Must already exist in your Azure subscription |
+| `storage_account_name` | Must be globally unique (3–24 lowercase alphanumeric chars) |
+| `cosmos_account_name` | Must be globally unique (3–44 lowercase chars) |
+| `fabric_capacity_id` | Azure portal → Microsoft Fabric → Capacities → select capacity → copy resource ID; or run `az resource list --resource-type Microsoft.Fabric/capacities -o table` |
+| `sre_alert_email` | Email that receives Azure Monitor alert notifications |
+| `sre_webhook_url` | Teams incoming webhook or similar (leave empty to skip notifications) |
+
+---
+
+## Step 2 — Configure Fabric and Azure endpoint IDs
+
+Edit `config/endpoints.json` with the GUIDs for your Fabric resources. The `deploy-fabric-components` job creates the workspace and returns IDs in its log output — copy them here after the first run, then re-push so subsequent runs use the correct IDs.
+
+```json
+{
+  "microsoftFabric": {
+    "workspaceId":    "<fabric-workspace-guid>",
+    "ontologyId":     "<ontology-guid>",
+    "lakehouseId":    "<lakehouse-guid>",
+    "capacityId":     "<capacity-short-guid>",
+    "pipelineId":     "<pipeline-guid>",
+    "semanticModelId":"<semantic-model-guid>",
+    "dataAgentId":    "<data-agent-guid>",
+    "tenantId":       "<azure-ad-tenant-guid>"
+  },
+  "hosting": {
+    "uiPublicUrl": "https://<ui_app_service_name>.azurewebsites.net",
+    "apiUrl":      "https://<api_app_service_name>.azurewebsites.net"
+  }
+}
+```
+
+---
+
+## Step 3 — Configure Azure hosting resource names
+
+Edit `config/azure-hosting-resources.json` so the deploy workflow targets the correct subscription and app names.
+
+```json
+{
+  "subscriptionId": "<your-azure-subscription-id>",
+  "resourceGroup":  "your-resource-group",
+  "hosting": {
+    "apiWebApp": { "name": "your-api-app-name" },
+    "uiWebApp":  { "name": "your-ui-app-name" }
+  },
+  "fabric": {
+    "capacityId": "/subscriptions/<SUB_ID>/resourceGroups/<RG>/providers/Microsoft.Fabric/capacities/<NAME>"
+  }
+}
+```
+
+---
+
+## Step 4 — Set GitHub repository secrets
+
+Navigate to **Settings → Secrets and variables → Actions → New repository secret** and add:
+
+| Secret | Value |
+|---|---|
+| `AZURE_CLIENT_ID` | Client ID of the service principal or managed identity |
+| `AZURE_TENANT_ID` | Azure AD tenant ID |
+| `AZURE_SUBSCRIPTION_ID` | Azure subscription ID (overrides the value in `azure-hosting-resources.json`) |
+| `AZURE_CREDENTIALS` | Full service principal JSON — only needed if not using OIDC |
+| `AZURE_STORAGE_ACCOUNT` | Storage account name for blob upload steps |
+
+**Recommended: OIDC authentication**
+
+Create a federated credential on your service principal so no secret rotation is needed:
+
+```bash
+az ad app federated-credential create \
+  --id <APP_OBJECT_ID> \
+  --parameters '{
+    "name": "github-actions-main",
+    "issuer": "https://token.actions.githubusercontent.com",
+    "subject": "repo:<OWNER>/<REPO>:ref:refs/heads/main",
+    "audiences": ["api://AzureADTokenExchange"]
+  }'
+```
+
+Then set only `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SUBSCRIPTION_ID` (no `AZURE_CREDENTIALS` needed).
+
+---
+
+## Step 5 — (Optional) Pre-generate data exports
+
+Run the data-prep script locally if you want to validate the source data before deploying:
+
+```bash
+pip install pandas
+python scripts/populate_fabric_complete.py
+```
+
+This regenerates:
+- `fabric/ontology/fabric_iq_ontology_complete.json`
+- `fabric/pipelines/employee_knowledge_pipeline_complete.json`
+- `data/exports/parquet/*.csv` (4 CSV files)
+
+The deploy workflow also runs equivalent logic automatically, so this step is optional.
+
+---
+
+## What the deploy workflow creates automatically
+
+The `deploy-fabric-components` job in `deploy.yml` handles all Fabric provisioning via the Fabric REST API (`https://api.fabric.microsoft.com/v1`):
+
+| Action | How |
+|---|---|
+| Resume Fabric capacity | `az rest POST .../resume` |
+| Create / verify workspace | `GET /workspaces/{id}` — warns if not found; create with `POST /workspaces` |
+| Create semantic model | `POST /workspaces/{id}/semanticModels` |
+| Create data pipeline | `POST /workspaces/{id}/dataPipelines` |
+| Upload data to blob | `az storage blob upload` for each JSON file in `data/` |
+
+The `terraform-apply` job creates all Azure infrastructure:
+
+| Resource | Terraform file |
+|---|---|
+| Storage account + containers | `terraform/main.tf` |
+| Cosmos DB account, database, containers | `terraform/main.tf` |
+| App Service plan (B3 Linux) | `terraform/main.tf` |
+| UI and API web apps | `terraform/main.tf` |
+| Log Analytics workspace | `terraform/monitors.tf` |
+| Diagnostic settings | `terraform/monitors.tf` |
+| Monitor metric alerts | `terraform/monitors.tf` |
+| Logic App (incident response) | `terraform/monitors.tf` |
