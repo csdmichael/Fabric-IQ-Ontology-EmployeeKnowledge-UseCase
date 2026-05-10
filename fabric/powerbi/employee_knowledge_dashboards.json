@@ -1,5 +1,6 @@
 {
   "workspaceId": "fabric-iq-workspace",
+  "reportMetadataSource": "../../data/powerbi_reports.json",
   "datasetBindings": [
     {
       "datasetId": "employee-knowledge-dataset",

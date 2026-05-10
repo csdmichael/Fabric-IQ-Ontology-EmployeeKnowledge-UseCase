@@ -337,7 +337,7 @@ Preview page:
 The current repository UI source under `ui/ionic-angular/` does not include a full Ionic/Angular runtime scaffold (for example `angular.json`, `src/main.ts`, and `src/index.html` are absent). Without these entry points, the browser cannot bootstrap the app shell.
 
 Additional issue found during troubleshooting:
-- `npm install` currently fails dependency resolution due Angular peer-version mismatch (`@ionic/angular` pulling `@angular/forms` latest while project pins Angular 19 packages).
+- `npm install` currently fails dependency resolution due to Angular peer-version mismatch (`@ionic/angular` pulling `@angular/forms` latest while project pins Angular 19 packages).
 
 Recommended remediation:
 1. Regenerate or restore the full Ionic Angular scaffold files.
