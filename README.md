@@ -1,78 +1,166 @@
 # Microsoft Fabric IQ – Employee Knowledge Graph
 
-A complete demo solution that builds an employee knowledge graph using **Microsoft Fabric**, **Azure** cloud services, **Power BI**, and a **FastAPI** backend — all provisioned and deployed through **Terraform** and **GitHub Actions**.
+A complete demo solution that builds an employee knowledge graph using **Microsoft Fabric**, **Azure AI Document Intelligence**, **Azure AI Search**, **Microsoft Graph**, **Azure OpenAI**, **Power BI**, and a **FastAPI** backend — all provisioned and deployed through **Terraform** and **GitHub Actions**.
 
 ---
 
 ## Table of Contents
 
 1. [Architecture](#architecture)
-2. [Data Flow](#data-flow)
-3. [Ontology & Data Model](#ontology--data-model)
-4. [UI Overview](#ui-overview)
-5. [Technologies](#technologies)
-6. [Repository Structure](#repository-structure)
-7. [Quick Start](#quick-start)
-8. [Configuration](#configuration)
-9. [Deployment](#deployment)
-10. [API Reference](#api-reference)
-11. [Monitoring](#monitoring)
-12. [License](#license)
+2. [Public URLs](#public-urls)
+3. [Data Flow](#data-flow)
+4. [Services Overview](#services-overview)
+5. [Ontology & Data Model](#ontology--data-model)
+6. [UI Overview](#ui-overview)
+7. [Technologies](#technologies)
+8. [Repository Structure](#repository-structure)
+9. [Quick Start](#quick-start)
+10. [Configuration](#configuration)
+11. [Deployment](#deployment)
+12. [API Reference](#api-reference)
+13. [Monitoring](#monitoring)
+14. [License](#license)
 
 ---
 
 ## Architecture
 
-The solution runs entirely on Azure, with Microsoft Fabric providing the data lakehouse and semantic layer, and Power BI delivering analytics reports.
+The solution implements a four-layer enterprise knowledge architecture:
 
-![Architecture Diagram](docs/architecture-diagram.png)
+![Architecture Diagram](https://github.com/user-attachments/assets/68b19276-08b7-49f4-833e-c02e558a51e5)
 
 | Layer | Components |
 |---|---|
-| **Data Ingestion** | Azure Blob Storage (raw → processed) → Fabric data pipeline |
-| **Knowledge Layer** | Microsoft Fabric OneLake lakehouse + ontology + semantic model |
-| **Analytics** | Power BI reports and dashboards |
-| **API** | FastAPI (Python) on Azure App Service |
-| **UI** | Ionic Angular on Azure App Service |
-| **Observability** | Azure Monitor alerts + Log Analytics + Logic App for SRE |
+| **Data Sources & Ingestion** | M365 (SharePoint, Teams, Outlook) via **Microsoft Graph Connectors** · External SaaS (ServiceNow, Jira, Salesforce) · Custom Apps & SQL DBs via **Azure Data Factory / Fabric Dataflow Gen2** · Physical/Legacy Docs via **Azure AI Document Intelligence** |
+| **Knowledge Layer** | **Microsoft Fabric OneLake** (Raw → Bronze → Silver → Curated zones) · **Microsoft Purview Unified Catalog** (governance, lineage, metadata) · **Fabric Ontologies / Semantic Link** |
+| **Intelligence & Reasoning** | **Azure AI Search** (semantic + vector indexing) · **Azure OpenAI Service** (RAG engine, GPT-4o, text-embedding-ada-002) · **Microsoft Graph** (relationship traversal) |
+| **User Experience** | **Microsoft 365 Copilot** (personalized answers, expert identification) · **Viva Engage** (Answers in Viva) · **Microsoft Search** · **Viva Insights** · **Teams** |
+
+---
+
+## Public URLs
+
+These are the internet-accessible URLs for demoing the solution:
+
+| Resource | URL |
+|---|---|
+| **UI (Web App)** | `https://fabric-iq-emp-knowledge-ui.azurewebsites.net` |
+| **API Base URL** | `https://fabric-iq-emp-knowledge-api.azurewebsites.net` |
+| **Swagger UI** | `https://fabric-iq-emp-knowledge-api.azurewebsites.net/docs` |
+| **OpenAPI Spec** | `https://fabric-iq-emp-knowledge-api.azurewebsites.net/swagger.json` |
+| **API Health Check** | `https://fabric-iq-emp-knowledge-api.azurewebsites.net/health` |
+| **APIM Gateway** | `https://ai-gateway-apim-poc-my.azure-api.net` |
+
+> All URLs are also stored in `config/endpoints.json` and `config/service-config.json` under the `hosting` key.
 
 ---
 
 ## Data Flow
 
-The diagram below shows how data moves from source JSON files through Azure services and into Power BI.
+The diagram below shows how data moves from source documents and M365 through Azure services into Power BI.
 
 ![Data Pipeline Diagram](docs/data-pipeline-diagram.png)
 
 ```
-JSON source files  (data/*.json)
-        │
+M365 Data (SharePoint, Teams, Outlook)
+        │  [Microsoft Graph Connectors]
+        ▼
+Physical/Legacy Docs (PDF, PPTX, XLSX, DOCX)
+        │  [Azure AI Document Intelligence → JSON extraction]
         ▼
 Azure Blob Storage  (employee-knowledge-raw container)
-        │  [upload-employee-assets workflow]
+        │  [upload-employee-assets workflow / Fabric Dataflow Gen2]
         ▼
-Fabric Data Pipeline  (4-stage: Extract → Transform → Load → Validate)
+Fabric OneLake — Raw Zone
+        │  [Bronze Stage: structured ingestion]
+        ▼
+OneLake — Bronze (Structured)
+        │  [Silver Stage: curation, metadata enrichment]
+        ▼
+OneLake — Silver/Curated
+        │  [Purview: governance & lineage | Fabric Ontologies: semantic link]
+        ▼
+Azure AI Search  (semantic + vector index, 1536-dim embeddings)
+        │  [text-embedding-ada-002 via Azure OpenAI]
+        ▼
+Azure OpenAI Service  (RAG — GPT-4o + AI Search context)
         │
         ▼
-OneLake Lakehouse  (4 tables: Employees, Contributions, DigitalAssets, Projects)
-        │
-        ▼
-Fabric Semantic Model  (2 relationships, 5 DAX measures)
+FastAPI  (/api/* endpoints) → Ionic Angular UI
         │
         ▼
 Power BI Reports & Dashboards  (3 reports, 11 visuals)
         │
         ▼
-FastAPI  (/api/* endpoints consumed by the Ionic Angular UI)
+Microsoft 365 Copilot / Viva Engage / Microsoft Search
 ```
 
-The `populate_fabric_complete.py` script pre-processes JSON files, generates the ontology and pipeline config, and exports CSV files that the Fabric pipeline ingests. Data upload to blob storage is automated by the `upload-employee-assets` GitHub Actions workflow.
+---
+
+## Services Overview
+
+### Azure AI Document Intelligence
+
+Extracts structured JSON from employee knowledge documents — PDFs, PowerPoint decks, Excel spreadsheets, and Word documents. Results are stored in **Cosmos DB** (`EmployeeDocumentParsing` container) and indexed in **Azure AI Search**.
+
+- **Endpoint**: configured in `config/service-config.json` → `documentIntelligence.endpoint`
+- **Supported formats**: `pdf`, `docx`, `pptx`, `xlsx`, `png`, `jpg`, `tiff`
+- **Models used**: `prebuilt-layout` (forms, tables, key-value pairs), `prebuilt-document` (paragraphs, entities)
+- **Extraction outputs**: tables, key-value pairs, paragraphs, languages, barcodes
+- **API route**: `GET /api/document-intelligence`
+- **UI page**: `/document-intelligence`
+- **Sample data**: `data/document_intelligence_results.json`
+
+### Microsoft Graph
+
+Ingests M365 data — **SharePoint** files, **OneDrive** documents, **Outlook** emails, **Teams** activity, and **Calendar** events — into OneLake via **Graph Connectors** and **Fabric Dataflow Gen2**.
+
+- **Endpoint**: `https://graph.microsoft.com/v1.0` — configured in `config/service-config.json` → `microsoftGraph`
+- **Scopes**: `User.Read.All`, `Mail.Read`, `Files.Read.All`, `Calendars.Read`, `Sites.Read.All`, `Team.ReadBasic.All`
+- **Resources ingested**: users, driveItems (SharePoint/OneDrive), messages (Outlook), events, teams
+- **API route**: `GET /api/graph-data`
+- **UI page**: `/ms-graph`
+- **Sample data**: `data/graph_data.json`
+
+### Azure AI Search
+
+Provides **semantic and vector indexing** over all employee knowledge assets. The index is powered by **text-embedding-ada-002** (1536-dim vectors) and enriched via an **AI Skillset** (entity recognition, key-phrase extraction, language detection, Document Intelligence enrichment).
+
+- **Endpoint**: configured in `config/service-config.json` → `aiSearch.endpoint`
+- **Index name**: `employee-knowledge-index`
+- **Query types**: hybrid (BM25 + vector), semantic re-ranking
+- **Facets**: department, format, documentType
+- **Indexer schedule**: hourly (Cosmos DB change feed source)
+- **API route**: `GET /api/ai-search`
+- **UI page**: `/ai-search`
+- **Sample data**: `data/ai_search_results.json`
+
+### Azure OpenAI Service
+
+Powers the **RAG engine** — combining AI Search results with **GPT-4o** to deliver personalized, relevant answers about employees, projects, and expertise. Also generates `text-embedding-ada-002` vectors used by AI Search.
+
+- **Endpoint**: configured in `config/service-config.json` → `openAI.endpoint`
+- **Deployment**: `gpt-4o` for chat, `text-embedding-ada-002` for embeddings
+
+### Microsoft Fabric OneLake
+
+Central knowledge layer with four zones (Raw → Bronze → Silver → Curated). Data flows from Blob Storage, Graph Connectors, and Document Intelligence results into OneLake tables.
+
+- **Tables**: `employees`, `digital_assets`, `contributions`, `projects`, `org_hierarchy`, `parsed_documents`, `graph_items`, `search_index_log`
+- **Workspace ID**: configured in `config/endpoints.json` → `microsoftFabric.workspaceId`
+- **Lakehouse ID**: configured in `config/endpoints.json` → `microsoftFabric.lakehouseId`
+
+### Microsoft Purview
+
+Manages **governance, lineage, and metadata** across all data assets. Exposes business terminology via the Unified Catalog and enforces data classification policies.
+
+- **Endpoint**: configured in `config/service-config.json` → `purview.catalogEndpoint`
 
 ---
 
 ## Ontology & Data Model
 
-The knowledge graph models employees and their relationships to projects, digital assets, and contributions.
+The knowledge graph models employees and their relationships to projects, digital assets, contributions, and parsed documents.
 
 ![Ontology Diagram](docs/ontology-diagram.png)
 
@@ -86,12 +174,16 @@ The knowledge graph models employees and their relationships to projects, digita
 | **Contributions** | 100 | `employeeId` | Contribution score, project count, asset count, tier |
 | **DigitalAssets** | 800 | `assetId` | Owner, type, title, last modified date |
 | **Projects** | 20 | `projectId` | Name, status, lead, description |
+| **ParsedDocuments** | varies | `documentId` | Document Intelligence extraction results |
+| **GraphItems** | varies | `graphItemId` | Microsoft Graph files and emails |
 
 ### Relationships
 
 ```
 Contributions[employeeId]  →  Employees[employeeId]   (many-to-one)
 DigitalAssets[employeeId]  →  Employees[employeeId]   (many-to-one)
+ParsedDocuments[employeeId]→  Employees[employeeId]   (many-to-one)
+GraphItems[employeeId]     →  Employees[employeeId]   (many-to-one)
 ```
 
 ### Power BI DAX Measures
@@ -108,11 +200,18 @@ DigitalAssets[employeeId]  →  Employees[employeeId]   (many-to-one)
 
 ## UI Overview
 
-The Ionic Angular frontend provides dashboards, employee directory, org chart, leaderboard, Power BI report links, and an AI agent chat interface.
+The Ionic Angular frontend provides dashboards, employee directory, org chart, leaderboard, Power BI report links, Document Intelligence viewer, Microsoft Graph explorer, AI Search results, and an AI agent chat interface.
 
 ![UI Screenshot](docs/ui-screenshot.png)
 
-Navigation is organised into three sections: **Source Data** (employees, projects, data sources), **Reports & Dashboards** (Power BI reports, leaderboard, org chart), and **AI Agents** (employee agent, agent prompts).
+Navigation is organised into four sections:
+
+| Section | Pages |
+|---|---|
+| **Source Data** | Employees, Org Structure, Projects, Digital Assets |
+| **Reports & Dashboards** | Leaderboard, Power BI Reports, Ingestion Pipeline |
+| **AI & Data Services** | Document Intelligence, Microsoft Graph, AI Search |
+| **AI Agents** | Employee Copilot Agent, Agent Prompts, Agent Packaging |
 
 ---
 
@@ -120,17 +219,22 @@ Navigation is organised into three sections: **Source Data** (employees, project
 
 | Technology | Role |
 |---|---|
-| **Microsoft Fabric** | Workspace, OneLake lakehouse, data pipeline, semantic model, ontology |
+| **Microsoft Fabric** | Workspace, OneLake lakehouse, data pipeline, semantic model, ontology, Fabric Dataflow Gen2 |
+| **Azure AI Document Intelligence** | Extracts structured JSON from PDF, PPTX, XLSX, DOCX, and image files; results stored in Cosmos DB |
+| **Azure AI Search** | Semantic + vector indexing (1536-dim) of all employee knowledge assets; hybrid BM25 + vector queries |
+| **Microsoft Graph** | Ingests M365 data (SharePoint, OneDrive, Outlook, Teams, Calendar) via Graph Connectors |
+| **Azure OpenAI Service** | GPT-4o RAG engine + text-embedding-ada-002 vector generation |
+| **Microsoft Purview** | Unified Catalog for governance, lineage, and metadata across OneLake, Cosmos DB, and Blob Storage |
 | **Power BI** | Analytical reports and dashboards built on the Fabric semantic model |
 | **Azure App Service** | Hosts the FastAPI backend (`api`) and Ionic Angular frontend (`ui`) |
 | **Azure Blob Storage** | Stores raw and processed employee asset files; Fabric pipeline ingestion source |
-| **Azure Cosmos DB** | Stores parsed employee documents and SRE incident records |
-| **Azure Monitor** | Metric alerts (storage availability, Cosmos errors, App Service 5xx / response time), Log Analytics workspace, and a Logic App for automated SRE incident response |
-| **FastAPI (Python 3.12)** | REST API serving employee data, org hierarchy, Power BI report metadata, and agent configurations |
+| **Azure Cosmos DB** | Stores parsed employee documents, SRE incident records, Graph item metadata |
+| **Azure Monitor** | Metric alerts, Log Analytics workspace, Logic App for automated SRE incident response |
+| **Azure API Management** | Gateway for AI service calls — rate limiting, auth, monitoring |
+| **FastAPI (Python 3.12)** | REST API serving all employee data, document intelligence, graph data, AI search, and config |
 | **Ionic Angular** | Single-page web app providing the UI |
-| **Terraform** | Infrastructure as Code for all Azure resources (storage, Cosmos DB, App Service plan, web apps, Log Analytics, Monitor alerts, Logic App) |
-| **GitHub Actions** | CI validation (`ci.yml`), Terraform plan/apply + API/UI deployment (`deploy.yml`), employee asset upload (`upload-employee-assets.yml`), and integration smoke tests (`test-deployment.yml`) |
-| **Python scripts** | Data preparation (`populate_fabric_complete.py`) and employee file generation |
+| **Terraform** | Infrastructure as Code for all Azure resources |
+| **GitHub Actions** | CI validation, Terraform plan/apply, API/UI deployment, employee asset upload, smoke tests |
 
 ---
 
@@ -148,9 +252,10 @@ api/
   server.py                     # FastAPI application (all /api/* endpoints)
   README.md                     # API endpoint reference
 
-config/
+config/                         # ← All IDs, endpoints, and settings live here (no secrets)
   endpoints.json                # Fabric workspace/lakehouse/model IDs and Azure URLs
-  azure-hosting-resources.json  # Resource group, app names (read by deploy.yml)
+  service-config.json           # All service configs: Document Intelligence, Graph, AI Search, OpenAI, hosting URLs
+  azure-hosting-resources.json  # Resource group, app names, networking (read by deploy.yml)
   fabric-settings.json          # Fabric workspace settings
   ontology-config.json          # Local ontology entity/relationship reference
   terraform.tfvars.json         # Terraform variable values (edit before first deploy)
@@ -164,11 +269,14 @@ data/
   org_hierarchy.json            # Org chart hierarchy
   emails.json                   # Sample email activity
   parsed_documents_cosmosdb.json# Parsed document metadata (served by API)
+  document_intelligence_results.json  # Document Intelligence JSON extraction results (PDF, PPTX, XLS, DOCX)
+  graph_data.json               # Microsoft Graph sample data (users, files, emails, Teams activity)
+  ai_search_results.json        # Azure AI Search index stats, semantic query results, and facets
   storage_map.json              # Blob storage path config (read by upload workflow)
   exports/parquet/              # CSV exports for Fabric ingestion
 
 docs/
-  architecture-diagram.png      # Full solution architecture
+  architecture-diagram.png      # Full solution architecture (4-layer: Data Sources → Knowledge → Intelligence → UX)
   data-pipeline-diagram.png     # End-to-end data flow
   ontology-diagram.png          # Knowledge graph ontology
   semantic-model-erd.png        # Power BI semantic model ERD
@@ -196,6 +304,7 @@ scripts/
   deploy.sh                     # Primary Terraform-based deploy (Linux/macOS)
   deploy-complete-solution.ps1  # Windows wrapper (calls Terraform + az CLI)
   populate_fabric_complete.py   # Data prep: loads JSON, generates configs, exports CSVs
+  generate_employee_files.py    # Generates 700 employee asset files (PDF, PPTX, XLSX, DOCX)
   test-integration.ps1          # Integration smoke tests (API + agent + data checks)
   verify-deployment.ps1         # Local health check (API, Azure resources, data files)
 
@@ -209,8 +318,20 @@ terraform/
 
 ui/
   ionic-angular/                # Ionic Angular web application
-    src/app/pages/              # Page components (employees, org-chart, leaderboard, …)
-    src/app/services/           # Config service
+    src/app/pages/              # Page components:
+      employees/                #   Employee directory with KPIs and project breakdown
+      org-chart/                #   Organisation hierarchy tree
+      leaderboard/              #   Contribution leaderboard with charts
+      powerbi-reports/          #   Power BI report metadata
+      data-sources/             #   Digital asset browser with file preview
+      ingestion-flow/           #   Fabric pipeline stage visualisation
+      document-intelligence/    #   Document Intelligence extraction viewer (PDF, PPTX, XLS, DOCX)
+      ms-graph/                 #   Microsoft Graph data explorer (users, files, emails)
+      ai-search/                #   Azure AI Search results, facets, and indexer config
+      employee-agent/           #   Employee Copilot Agent chat interface
+      agent-prompts/            #   30 sample agent prompts
+      agent-package/            #   Agent packaging reference
+    src/app/services/           # Config service (loads endpoints.json)
     server.js                   # Node.js static server
 ```
 
@@ -226,6 +347,7 @@ cd Fabric-IQ-Ontology-EmployeeKnowledge-UseCase
 # 2. Fill in your values (see Configuration section below)
 #    - config/terraform.tfvars.json
 #    - config/endpoints.json
+#    - config/service-config.json
 #    - GitHub repository secrets
 
 # 3. Push to main (triggers Terraform plan/apply + deploy)
@@ -234,20 +356,65 @@ git push origin main
 # 4. (Optional) Trigger apply manually from GitHub Actions → Deploy → Run workflow → apply=true
 ```
 
-After the workflow completes:
-- API: `https://<api_app_service_name>.azurewebsites.net/health`
-- UI: `https://<ui_app_service_name>.azurewebsites.net`
-- Swagger: `https://<api_app_service_name>.azurewebsites.net/docs`
+After the workflow completes, your demo is live at these public URLs:
+
+| URL | Description |
+|---|---|
+| `https://<ui_app_service_name>.azurewebsites.net` | Web UI |
+| `https://<api_app_service_name>.azurewebsites.net/docs` | Swagger UI |
+| `https://<api_app_service_name>.azurewebsites.net/swagger.json` | OpenAPI spec |
+| `https://<api_app_service_name>.azurewebsites.net/health` | Health check |
 
 ---
 
 ## Configuration
 
-All configuration lives in `config/`. Edit these files before the first deployment — no portal steps required.
+**All configuration lives in `config/`.** Edit these files before the first deployment — no portal steps required. No secrets are stored in this folder; use GitHub Secrets or Azure Key Vault for credentials.
 
-### Terraform Variables — `config/terraform.tfvars.json`
+### `config/service-config.json` ← Primary config for all AI services
 
-These values are passed directly to Terraform on every `plan`/`apply` run.
+This is the single source of truth for all service endpoints, IDs, and settings. Reference it in your code with `GET /api/config/service-config`.
+
+| Key path | Description |
+|---|---|
+| `documentIntelligence.endpoint` | Azure AI Document Intelligence endpoint URL |
+| `documentIntelligence.supportedFormats` | List of file formats processed (pdf, docx, pptx, xlsx, …) |
+| `documentIntelligence.defaultModel` | Default extraction model (`prebuilt-layout`) |
+| `documentIntelligence.cosmosDbContainer` | Cosmos container for extracted results |
+| `microsoftGraph.endpoint` | Microsoft Graph v1.0 API endpoint |
+| `microsoftGraph.scopes` | Required OAuth2 permission scopes |
+| `microsoftGraph.tenantId` | Azure AD tenant ID |
+| `microsoftGraph.enabledResources` | M365 resource types to ingest |
+| `aiSearch.endpoint` | Azure AI Search service endpoint |
+| `aiSearch.indexName` | Search index name |
+| `aiSearch.embeddingModel` | Embedding model for vector fields |
+| `aiSearch.vectorDimensions` | Vector field dimensions (1536 for ada-002) |
+| `aiSearch.semanticConfigurationName` | Semantic search configuration name |
+| `openAI.endpoint` | Azure OpenAI / AI Foundry project endpoint |
+| `openAI.deploymentName` | Chat model deployment name (gpt-4o) |
+| `openAI.embeddingDeploymentName` | Embedding model deployment name |
+| `fabricOneLake.workspaceId` | Fabric workspace GUID |
+| `fabricOneLake.lakehouseId` | OneLake lakehouse GUID |
+| `hosting.uiPublicUrl` | Public URL for the UI App Service |
+| `hosting.apiPublicUrl` | Public URL for the API App Service |
+| `hosting.swaggerUrl` | Swagger UI URL |
+
+### `config/endpoints.json` — Fabric & Azure Endpoints
+
+Update after the Fabric workspace is provisioned.
+
+| Key path | Description |
+|---|---|
+| `microsoftFabric.workspaceId` | Fabric workspace GUID |
+| `microsoftFabric.lakehouseId` | OneLake lakehouse GUID |
+| `microsoftFabric.semanticModelId` | Power BI semantic model GUID |
+| `azure.documentIntelligenceEndpoint` | Document Intelligence endpoint |
+| `azure.aiSearchEndpoint` | AI Search service endpoint |
+| `azure.cosmosDbEndpoint` | Cosmos DB endpoint |
+| `hosting.uiPublicUrl` | Deployed UI URL |
+| `hosting.apiUrl` | Deployed API URL |
+
+### `config/terraform.tfvars.json` — Terraform Variables
 
 | Variable | Description | Example |
 |---|---|---|
@@ -255,32 +422,12 @@ These values are passed directly to Terraform on every `plan`/`apply` run.
 | `storage_account_name` | Globally unique storage account name | `"stfabriciqdemodata01"` |
 | `cosmos_account_name` | Globally unique Cosmos DB account name | `"cosmos-fabriciq-demo-01"` |
 | `cosmos_database_name` | Cosmos DB database name | `"EmployeeKnowledgeGraph"` |
-| `cosmos_container_name` | Primary Cosmos container | `"EmployeeDocumentParsing"` |
 | `ui_app_service_name` | Azure App Service name for the UI | `"fabric-iq-emp-knowledge-ui"` |
 | `api_app_service_name` | Azure App Service name for the API | `"fabric-iq-emp-knowledge-api"` |
 | `app_service_plan_sku` | App Service SKU | `"B3"` |
-| `app_service_plan_location` | Region for App Service plan | `"westus2"` |
-| `fabric_capacity_id` | Full ARM resource ID of the Fabric capacity | `"/subscriptions/.../capacities/..."` |
 | `sre_alert_email` | Email for Azure Monitor alert notifications | `"sre@example.com"` |
-| `sre_webhook_url` | Teams/Slack webhook for SRE alerts | `"https://..."` |
-| `tags` | Tags applied to all resources | `{"project":"fabric-iq","env":"demo"}` |
 
-### Fabric & Azure Endpoints — `config/endpoints.json`
-
-Update after the Fabric workspace is provisioned (the `deploy-fabric-components` workflow step creates it automatically if it does not exist).
-
-| Key path | Description |
-|---|---|
-| `microsoftFabric.workspaceId` | Fabric workspace GUID |
-| `microsoftFabric.lakehouseId` | OneLake lakehouse GUID |
-| `microsoftFabric.semanticModelId` | Power BI semantic model GUID |
-| `microsoftFabric.capacityId` | Fabric capacity GUID (short form) |
-| `microsoftFabric.pipelineId` | Data pipeline GUID |
-| `microsoftFabric.dataAgentId` | Fabric data agent GUID |
-| `hosting.apiUrl` | Deployed API URL |
-| `hosting.uiPublicUrl` | Deployed UI URL |
-
-### Azure Hosting Config — `config/azure-hosting-resources.json`
+### `config/azure-hosting-resources.json` — Azure Resource Config
 
 Read by the deploy workflow to know which resource group and App Service names to target.
 
@@ -290,6 +437,8 @@ Read by the deploy workflow to know which resource group and App Service names t
 | `resourceGroup` | Resource group name |
 | `hosting.apiWebApp.name` | API App Service name |
 | `hosting.uiWebApp.name` | UI App Service name |
+| `dataAndAi.aiSearch` | AI Search service name |
+| `fabric.workspaceName` | Fabric workspace name |
 
 ### GitHub Secrets
 
@@ -304,6 +453,15 @@ Set these in **Settings → Secrets and variables → Actions** of your reposito
 | `AZURE_STORAGE_ACCOUNT` | Yes | Storage account name for data upload steps |
 
 > **OIDC is recommended** — it requires no secret rotation. Create a federated credential on your service principal for the `repo:<owner>/<repo>:ref:refs/heads/main` subject.
+
+### Employee Asset Generation
+
+Regenerate the 700 employee asset files (PDF, PPTX, XLSX, DOCX) used as input to Document Intelligence:
+
+```bash
+pip install python-pptx python-docx openpyxl reportlab
+python scripts/generate_employee_files.py
+```
 
 ---
 
@@ -338,7 +496,7 @@ To provision and deploy from scratch:
 
 ### Data Upload — `upload-employee-assets.yml`
 
-Uploads employee asset files from `data/employees/` to the `employee-knowledge-raw` blob container. Triggered manually or on pushes that modify `data/employees/`.
+Uploads employee asset files from `data/employees/` to the `employee-knowledge-raw` blob container. These files are then processed by Azure AI Document Intelligence. Triggered manually or on pushes that modify `data/employees/`.
 
 ### Local Deploy (Linux/macOS)
 
@@ -353,16 +511,12 @@ bash scripts/deploy.sh --subscription YOUR_SUBSCRIPTION_ID
 .\scripts\deploy-complete-solution.ps1 -SubscriptionId "YOUR_SUBSCRIPTION_ID"
 ```
 
-Both scripts run `terraform init && terraform apply` for infrastructure, then the data-prep Python script, then optionally upload data files to blob storage.
-
 ### Data Preparation (standalone)
 
 ```bash
 pip install pandas
 python scripts/populate_fabric_complete.py
 ```
-
-Loads JSON source files, validates records, generates `fabric/ontology/fabric_iq_ontology_complete.json` and `fabric/pipelines/employee_knowledge_pipeline_complete.json`, and exports CSV files to `data/exports/parquet/`.
 
 ---
 
@@ -375,15 +529,21 @@ Base URL: `https://<api_app_service_name>.azurewebsites.net`
 | `GET` | `/health` | Health check — returns `200 OK` |
 | `GET` | `/docs` | Interactive Swagger UI |
 | `GET` | `/swagger.json` | OpenAPI spec |
-| `GET` | `/api/summary` | Record counts for all entities |
+| `GET` | `/api/summary` | Record counts for all entities (includes doc intelligence, graph, search stats) |
 | `GET` | `/api/employees` | All 100 employee records |
 | `GET` | `/api/contributions` | All 100 contribution records |
 | `GET` | `/api/digital-assets` | All 800 digital asset records |
 | `GET` | `/api/projects` | All 20 project records |
 | `GET` | `/api/org-hierarchy` | Organisation hierarchy tree |
 | `GET` | `/api/powerbi-reports` | Power BI report metadata |
-| `GET` | `/api/parsed-documents` | Parsed document records from Cosmos DB |
+| `GET` | `/api/parsed-documents` | Parsed document metadata from Cosmos DB |
+| `GET` | `/api/document-intelligence` | Document Intelligence JSON extraction results (PDF, PPTX, XLSX, DOCX) |
+| `GET` | `/api/graph-data` | Microsoft Graph sample data (users, files, emails, Teams activity) |
+| `GET` | `/api/ai-search` | Azure AI Search index stats, semantic query results, and facets |
 | `GET` | `/api/config/endpoints` | Current `endpoints.json` values |
+| `GET` | `/api/config/service-config` | All service configurations from `service-config.json` |
+
+All list endpoints support optional `?department=<dept>` and `?employeeId=<id>` query parameters.
 
 See [api/README.md](api/README.md) for request/response schemas.
 

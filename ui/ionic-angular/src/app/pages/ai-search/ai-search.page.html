@@ -1,0 +1,199 @@
+<ion-content class="ion-padding">
+  <h2>🔎 Azure AI Search</h2>
+  <p>{{ description }}</p>
+
+  <div *ngIf="loadError" class="viewer-error">{{ loadError }}</div>
+
+  <div *ngIf="searchData">
+    <!-- Index Stats Banner -->
+    <div class="stats-banner">
+      <div class="stat-card">
+        <div class="stat-icon">📦</div>
+        <div class="stat-value">{{ searchData.indexStats.documentCount | number }}</div>
+        <div class="stat-label">Indexed Documents</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🧮</div>
+        <div class="stat-value">{{ searchData.indexStats.vectorDimensions }}</div>
+        <div class="stat-label">Vector Dimensions</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">💾</div>
+        <div class="stat-value">{{ searchData.indexStats.storageSize }}</div>
+        <div class="stat-label">Index Size</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🕐</div>
+        <div class="stat-value" style="font-size:14px">{{ searchData.indexStats.lastIndexerRun | date:'shortTime' }}</div>
+        <div class="stat-label">Last Indexer Run</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">✅</div>
+        <div class="stat-value" style="font-size:14px;color:#2d7d46">{{ searchData.indexStats.indexerStatus | titlecase }}</div>
+        <div class="stat-label">Indexer Status</div>
+      </div>
+    </div>
+
+    <!-- Sample Query Box -->
+    <div class="query-box">
+      <div class="query-label">🔍 Sample Semantic Query</div>
+      <div class="query-text">"{{ searchData.sampleQuery.query }}"</div>
+      <div class="query-meta">
+        Index: <strong>{{ searchData.indexName }}</strong> &nbsp;·&nbsp;
+        Type: <strong>{{ searchData.sampleQuery.queryType }}</strong> &nbsp;·&nbsp;
+        Semantic config: <strong>{{ searchData.sampleQuery.semanticConfiguration }}</strong> &nbsp;·&nbsp;
+        Top: <strong>{{ searchData.sampleQuery.top }}</strong>
+      </div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <button class="tab-btn" [class.active]="activeTab === 'results'" (click)="setTab('results')">📋 Search Results</button>
+      <button class="tab-btn" [class.active]="activeTab === 'facets'" (click)="setTab('facets')">📊 Facets & Index</button>
+      <button class="tab-btn" [class.active]="activeTab === 'config'" (click)="setTab('config')">⚙️ Indexer Config</button>
+    </div>
+
+    <!-- Results Tab -->
+    <div *ngIf="activeTab === 'results'" class="layout-grid">
+      <div class="layout-card">
+        <h3>Semantic Search Results</h3>
+        <p class="meta">{{ searchData.results.length }} results returned · Ranked by reranker score</p>
+        <div class="result-list">
+          <div
+            class="result-item"
+            *ngFor="let r of searchData.results; let i = index"
+            [class.selected-row]="selectedResult?.documentId === r.documentId"
+            (click)="selectResult(r)"
+            style="cursor:pointer">
+            <div class="result-rank">{{ i + 1 }}</div>
+            <div class="result-body">
+              <div class="result-title">
+                {{ formatIcon[r.format] || '📄' }} {{ r.title }}
+              </div>
+              <div class="meta">{{ r.employeeId }} · {{ r.department }} · {{ r.documentType }}</div>
+              <div class="result-caption">{{ r.caption }}</div>
+            </div>
+            <div class="result-score">
+              <ion-badge [color]="scoreColor(r.score)">{{ r.score.toFixed(3) }}</ion-badge>
+              <div class="meta" style="text-align:center">score</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="layout-card">
+        <h3>Result Detail</h3>
+        <div *ngIf="!selectedResult" class="viewer-placeholder">Click a result to view semantic highlights and reranker details.</div>
+        <div *ngIf="selectedResult">
+          <h4>{{ selectedResult.title }}</h4>
+          <p class="meta">{{ selectedResult.documentId }} · {{ selectedResult.employeeId }} ({{ selectedResult.displayName }}) · {{ selectedResult.department }}</p>
+
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-value" [style.color]="selectedResult.score >= 0.95 ? '#2d7d46' : selectedResult.score >= 0.9 ? '#d4832a' : '#57606a'">
+                {{ selectedResult.score.toFixed(4) }}
+              </div>
+              <div class="kpi-label">BM25+Vector Score</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-value" style="color:#0078d4">{{ selectedResult.rerankerScore.toFixed(3) }}</div>
+              <div class="kpi-label">Reranker Score</div>
+            </div>
+          </div>
+
+          <h5>🖊️ Semantic Caption</h5>
+          <div class="caption-box">{{ selectedResult.caption }}</div>
+
+          <h5>🎯 Highlights</h5>
+          <div class="highlight-box" [innerHTML]="selectedResult.highlights"></div>
+
+          <h5>Key Topics</h5>
+          <div class="chip-row">
+            <ion-chip *ngFor="let t of selectedResult.keyTopics" color="tertiary" outline>
+              <ion-label>{{ t }}</ion-label>
+            </ion-chip>
+          </div>
+
+          <p class="meta">
+            Format: <strong>{{ selectedResult.format.toUpperCase() }}</strong> &nbsp;·&nbsp;
+            <ion-badge color="success">AI Search Indexed</ion-badge>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Facets Tab -->
+    <div *ngIf="activeTab === 'facets'" class="facets-grid">
+      <div class="layout-card">
+        <h3>By Department</h3>
+        <div class="facet-list">
+          <div *ngFor="let f of searchData.facets.department" class="facet-row">
+            <span class="facet-label">{{ f.value }}</span>
+            <div class="facet-bar-track">
+              <div class="facet-bar-fill" [style.width.%]="(f.count / searchData.indexStats.documentCount) * 100 * 5"></div>
+            </div>
+            <span class="facet-count">{{ f.count }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="layout-card">
+        <h3>By Format</h3>
+        <div class="facet-list">
+          <div *ngFor="let f of searchData.facets.format" class="facet-row">
+            <span class="facet-label">{{ formatIcon[f.value] || '📄' }} {{ f.value.toUpperCase() }}</span>
+            <div class="facet-bar-track">
+              <div class="facet-bar-fill" [style.width.%]="(f.count / searchData.indexStats.documentCount) * 100 * 5" style="background:#0078d4"></div>
+            </div>
+            <span class="facet-count">{{ f.count }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="layout-card">
+        <h3>By Document Type</h3>
+        <div class="facet-list">
+          <div *ngFor="let f of searchData.facets.documentType" class="facet-row">
+            <span class="facet-label">{{ f.value }}</span>
+            <div class="facet-bar-track">
+              <div class="facet-bar-fill" [style.width.%]="(f.count / searchData.indexStats.documentCount) * 100 * 5" style="background:#6264a7"></div>
+            </div>
+            <span class="facet-count">{{ f.count }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Config Tab -->
+    <div *ngIf="activeTab === 'config'" class="layout-card">
+      <h3>Indexer Configuration</h3>
+      <div class="config-table">
+        <div class="config-row">
+          <span class="config-key">Index Name</span>
+          <span class="config-val">{{ searchData.indexName }}</span>
+        </div>
+        <div class="config-row">
+          <span class="config-key">Indexer Schedule</span>
+          <span class="config-val">{{ searchData.indexerConfig.schedule }} (hourly)</span>
+        </div>
+        <div class="config-row">
+          <span class="config-key">Data Source</span>
+          <span class="config-val">{{ searchData.indexerConfig.dataSourceType | titlecase }}</span>
+        </div>
+        <div class="config-row">
+          <span class="config-key">Target Index</span>
+          <span class="config-val">{{ searchData.indexerConfig.targetIndexName }}</span>
+        </div>
+      </div>
+
+      <h4 style="margin-top:16px">AI Enrichment Skills</h4>
+      <div class="skills-list">
+        <div *ngFor="let skill of searchData.indexerConfig.skills" class="skill-item">
+          <div class="skill-name">{{ skill.name }}</div>
+          <div class="skill-type meta">{{ skill.type }}</div>
+          <div *ngIf="skill.model" class="skill-model">Model: <strong>{{ skill.model }}</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

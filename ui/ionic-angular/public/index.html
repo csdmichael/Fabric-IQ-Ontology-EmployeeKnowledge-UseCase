@@ -106,6 +106,19 @@
               <ion-icon name="chatbubbles-outline" slot="start"></ion-icon>
               <ion-label>Agent Prompts</ion-label>
             </ion-item>
+            <ion-list-header>AI &amp; Data Services</ion-list-header>
+            <ion-item button onclick="navigate('document-intelligence')">
+              <ion-icon name="document-text-outline" slot="start"></ion-icon>
+              <ion-label>Document Intelligence</ion-label>
+            </ion-item>
+            <ion-item button onclick="navigate('ms-graph')">
+              <ion-icon name="share-social-outline" slot="start"></ion-icon>
+              <ion-label>Microsoft Graph</ion-label>
+            </ion-item>
+            <ion-item button onclick="navigate('ai-search')">
+              <ion-icon name="search-outline" slot="start"></ion-icon>
+              <ion-label>AI Search</ion-label>
+            </ion-item>
             <ion-item button onclick="navigate('config')">
               <ion-icon name="settings-outline" slot="start"></ion-icon>
               <ion-label>Config &amp; Endpoints</ion-label>
@@ -235,6 +248,79 @@
           <div id="page-agent-prompts" class="page">
             <h2>AI Agent Prompts</h2>
             <div id="agent-content"><p>Loading…</p></div>
+          </div>
+
+          <!-- DOCUMENT INTELLIGENCE -->
+          <div id="page-document-intelligence" class="page">
+            <h2>🔍 Document Intelligence</h2>
+            <p>Azure AI Document Intelligence extracts structured JSON from employee documents — PDFs, PowerPoint decks, Excel spreadsheets, and Word documents. Results are stored in Cosmos DB and indexed in Azure AI Search.</p>
+            <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+              <input type="text" id="di-search" placeholder="Search by title, employee, type, topic…" oninput="filterDocIntel()" style="flex:1;min-width:200px;padding:8px;border:1px solid #d0d7de;border-radius:6px">
+              <select id="di-format" onchange="filterDocIntel()" style="padding:8px;border:1px solid #d0d7de;border-radius:6px">
+                <option value="">All Formats</option>
+                <option value="pdf">📄 PDF</option>
+                <option value="pptx">📊 PPTX</option>
+                <option value="xlsx">📗 XLSX</option>
+                <option value="docx">📝 DOCX</option>
+              </select>
+              <button onclick="clearDocIntelFilters()" style="padding:8px 12px;border:1px solid #d0d7de;border-radius:6px;background:#f6f8fa;cursor:pointer">Clear</button>
+            </div>
+            <div id="di-stats" class="kpi-grid" style="margin-bottom:12px"></div>
+            <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:12px" class="di-grid">
+              <div class="detail-panel" style="padding:0;overflow:auto">
+                <table id="di-table">
+                  <thead><tr><th>Fmt</th><th>Document</th><th>Employee</th><th>Type</th><th>Pages</th><th>Confidence</th></tr></thead>
+                  <tbody id="di-tbody"></tbody>
+                </table>
+              </div>
+              <div class="detail-panel" id="di-detail"><p style="color:#888">Click a document row to view extraction details.</p></div>
+            </div>
+          </div>
+
+          <!-- MICROSOFT GRAPH -->
+          <div id="page-ms-graph" class="page">
+            <h2>🔗 Microsoft Graph</h2>
+            <p>Microsoft Graph ingests M365 data — SharePoint files, OneDrive documents, Outlook emails, Teams activity, and Calendar events — into Microsoft Fabric OneLake via Graph Connectors and Fabric Dataflow Gen2.</p>
+            <div id="graph-stats" class="kpi-grid" style="margin-bottom:12px"></div>
+            <div style="display:flex;gap:4px;margin-bottom:12px">
+              <button class="tab-button active" onclick="switchGraphTab('users')" id="graph-tab-users">👥 Users</button>
+              <button class="tab-button" onclick="switchGraphTab('files')" id="graph-tab-files">📁 Files</button>
+              <button class="tab-button" onclick="switchGraphTab('emails')" id="graph-tab-emails">✉️ Emails</button>
+            </div>
+            <div id="graph-users-panel" class="detail-panel"></div>
+            <div id="graph-files-panel" class="detail-panel" style="display:none"></div>
+            <div id="graph-emails-panel" class="detail-panel" style="display:none"></div>
+          </div>
+
+          <!-- AI SEARCH -->
+          <div id="page-ai-search" class="page">
+            <h2>🔎 Azure AI Search</h2>
+            <p>Azure AI Search provides semantic and vector indexing over all employee knowledge assets — PDFs, presentations, spreadsheets, and documents extracted by Document Intelligence and ingested from Microsoft Graph.</p>
+            <div id="search-stats" class="kpi-grid" style="margin-bottom:12px"></div>
+            <div class="detail-panel" style="background:#f0f7ff;border-color:#0078d4;margin-bottom:12px">
+              <div style="font-size:11px;font-weight:600;color:#0078d4;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px">🔍 Sample Semantic Query</div>
+              <div id="search-query-text" style="font-size:15px;font-weight:600;margin-bottom:4px"></div>
+              <div id="search-query-meta" style="font-size:11px;color:#57606a"></div>
+            </div>
+            <div style="display:flex;gap:4px;margin-bottom:12px">
+              <button class="tab-button active" onclick="switchSearchTab('results')" id="search-tab-results">📋 Results</button>
+              <button class="tab-button" onclick="switchSearchTab('facets')" id="search-tab-facets">📊 Facets</button>
+              <button class="tab-button" onclick="switchSearchTab('config')" id="search-tab-config">⚙️ Indexer</button>
+            </div>
+            <div id="search-results-panel">
+              <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:12px">
+                <div class="detail-panel" style="padding:0;overflow:auto"><table id="search-table"><thead><tr><th>#</th><th>Document</th><th>Employee</th><th>Score</th></tr></thead><tbody id="search-tbody"></tbody></table></div>
+                <div class="detail-panel" id="search-result-detail"><p style="color:#888">Click a result to view semantic highlights.</p></div>
+              </div>
+            </div>
+            <div id="search-facets-panel" style="display:none">
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+                <div class="detail-panel"><h4>By Department</h4><div id="facet-dept"></div></div>
+                <div class="detail-panel"><h4>By Format</h4><div id="facet-format"></div></div>
+                <div class="detail-panel"><h4>By Doc Type</h4><div id="facet-type"></div></div>
+              </div>
+            </div>
+            <div id="search-config-panel" class="detail-panel" style="display:none"><div id="search-indexer-config"></div></div>
           </div>
 
           <!-- CONFIG -->
@@ -472,9 +558,294 @@
     function navigate(page) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.getElementById('page-' + page).classList.add('active');
-      document.getElementById('page-title').textContent = page.replace('-', ' ').toUpperCase();
+      document.getElementById('page-title').textContent = page.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
       currentPage = page;
       if (page === 'geo-analytics' && !map) setTimeout(() => { if(window.L) map = L.map('map').setView([39.8283, -98.5795], 4); }, 100);
+      if (page === 'document-intelligence') loadDocumentIntelligence();
+      if (page === 'ms-graph') loadMsGraph();
+      if (page === 'ai-search') loadAiSearch();
+    }
+
+    // ─── Document Intelligence ───────────────────────────────────────────────
+    let diData = null;
+    let diFiltered = [];
+    let diSelected = null;
+
+    async function loadDocumentIntelligence() {
+      if (diData) return renderDocIntel();
+      try {
+        const r = await fetch('/data/document_intelligence_results.json');
+        diData = await r.json();
+        diFiltered = [...diData];
+        renderDocIntel();
+      } catch(e) {
+        document.getElementById('di-tbody').innerHTML = `<tr><td colspan="6">Error: ${e.message}</td></tr>`;
+      }
+    }
+
+    function renderDocIntel() {
+      const fmtIcon = { pdf:'📄', pptx:'📊', xlsx:'📗', docx:'📝' };
+      const stats = document.getElementById('di-stats');
+      const counts = { pdf:0, pptx:0, xlsx:0, docx:0 };
+      let indexed = 0;
+      diData.forEach(r => { if(counts[r.format]!==undefined) counts[r.format]++; if(r.aiSearchIndexed) indexed++; });
+      stats.innerHTML = ['pdf','pptx','xlsx','docx'].map(f =>
+        `<div class="kpi-card"><div class="num">${fmtIcon[f]}</div><div class="num">${counts[f]}</div><div class="label">${f.toUpperCase()}</div></div>`
+      ).join('') +
+        `<div class="kpi-card"><div class="num">${diData.length}</div><div class="label">Total</div></div>` +
+        `<div class="kpi-card"><div class="num" style="color:#2d7d46">${indexed}</div><div class="label">AI Indexed</div></div>`;
+
+      const tbody = document.getElementById('di-tbody');
+      tbody.innerHTML = diFiltered.map((r,i) =>
+        `<tr onclick="selectDocIntel(${diData.indexOf(r)})" style="cursor:pointer" id="di-row-${diData.indexOf(r)}">
+          <td>${fmtIcon[r.format]||'📄'} ${r.format.toUpperCase()}</td>
+          <td><strong>${r.extractedFields.title}</strong><br><small style="color:#57606a">${r.documentId}</small></td>
+          <td>${r.employeeId}</td>
+          <td>${r.documentType}</td>
+          <td>${r.pageCount}</td>
+          <td><span class="badge ${r.documentConfidence>=0.95?'badge-high':r.documentConfidence>=0.85?'badge-mid':'badge-low'}">${(r.documentConfidence*100).toFixed(0)}%</span></td>
+        </tr>`
+      ).join('');
+    }
+
+    function selectDocIntel(idx) {
+      diSelected = diData[idx];
+      document.querySelectorAll('#di-tbody tr').forEach(r => r.style.background='');
+      const row = document.getElementById('di-row-'+idx);
+      if (row) row.style.background = '#e6f0ff';
+      const fmtIcon = { pdf:'📄', pptx:'📊', xlsx:'📗', docx:'📝' };
+      const r = diSelected;
+      const kvHtml = r.keyValuePairs.map(kv => `<div style="display:grid;grid-template-columns:140px 1fr;gap:8px;padding:4px 6px;border:1px solid #eaeef2;border-radius:4px;font-size:12px;margin-bottom:3px"><strong>${kv.key}</strong><span>${kv.value}</span></div>`).join('');
+      const tblHtml = r.tables.map(t =>
+        `<p style="font-size:11px;color:#57606a;margin-bottom:4px">Table ${t.tableId} · ${t.rowCount}×${t.columnCount}</p>
+        <div style="overflow-x:auto;margin-bottom:10px"><table style="font-size:11px;border-collapse:collapse;width:100%">
+          <thead><tr>${t.headers.map(h=>`<th style="border:1px solid #d0d7de;padding:4px 8px;background:#f6f8fa">${h}</th>`).join('')}</tr></thead>
+          <tbody>${t.rows.map(row=>`<tr>${row.map(c=>`<td style="border:1px solid #d0d7de;padding:4px 8px;white-space:nowrap">${c}</td>`).join('')}</tr>`).join('')}</tbody>
+        </table></div>`
+      ).join('');
+      const chipHtml = r.extractedFields.keyTopics.map(t=>`<span class="chip">${t}</span>`).join('');
+      document.getElementById('di-detail').innerHTML = `
+        <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:12px">
+          <div style="font-size:36px">${fmtIcon[r.format]||'📄'}</div>
+          <div><h4 style="margin:0">${r.extractedFields.title}</h4>
+            <p style="font-size:12px;color:#57606a;margin:4px 0">${r.originalFileName}</p>
+            <p style="font-size:12px;color:#57606a;margin:0">${r.documentType} · ${r.classification} · ${r.extractedFields.department}</p></div>
+        </div>
+        <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:12px">
+          <div class="kpi-card"><div class="num" style="font-size:1.4rem">${(r.documentConfidence*100).toFixed(0)}%</div><div class="label">Confidence</div></div>
+          <div class="kpi-card"><div class="num" style="font-size:1.4rem">${r.pageCount}</div><div class="label">Pages</div></div>
+          <div class="kpi-card"><div class="num" style="font-size:1.4rem">${r.tables.length}</div><div class="label">Tables</div></div>
+          <div class="kpi-card"><div class="num" style="font-size:1.4rem">${r.keyValuePairs.length}</div><div class="label">Key-Values</div></div>
+        </div>
+        <p style="font-size:11px;color:#57606a">Model: <strong>${r.modelUsed}</strong> · Extracted: <strong>${new Date(r.extractedAt).toLocaleString()}</strong> ${r.aiSearchIndexed?'<span class="badge badge-high">✓ AI Indexed</span>':''}</p>
+        <h5>Key Topics</h5><div>${chipHtml}</div>
+        <h5 style="margin-top:12px">Key-Value Pairs</h5>${kvHtml}
+        ${r.tables.length?`<h5 style="margin-top:12px">Extracted Tables</h5>${tblHtml}`:''}
+        <h5 style="margin-top:12px">Text Samples</h5>
+        ${r.paragraphs.map(p=>`<div style="font-size:12px;border-left:3px solid #0078d4;padding:6px 10px;background:#f6f8fa;border-radius:0 4px 4px 0;margin-bottom:6px">${p}</div>`).join('')}
+        <p style="font-size:10px;color:#888;margin-top:10px;word-break:break-all">${r.blobPath}</p>`;
+    }
+
+    function filterDocIntel() {
+      const q = document.getElementById('di-search').value.toLowerCase();
+      const fmt = document.getElementById('di-format').value;
+      diFiltered = diData.filter(r =>
+        (!fmt || r.format === fmt) &&
+        (!q || r.documentId.toLowerCase().includes(q) || r.employeeId.toLowerCase().includes(q) ||
+               r.originalFileName.toLowerCase().includes(q) || r.documentType.toLowerCase().includes(q) ||
+               r.extractedFields.title.toLowerCase().includes(q) ||
+               r.extractedFields.keyTopics.some(t => t.toLowerCase().includes(q)))
+      );
+      renderDocIntel();
+    }
+
+    function clearDocIntelFilters() {
+      document.getElementById('di-search').value = '';
+      document.getElementById('di-format').value = '';
+      diFiltered = [...diData];
+      renderDocIntel();
+    }
+
+    // ─── Microsoft Graph ─────────────────────────────────────────────────────
+    let graphData = null;
+    let activeGraphTab = 'users';
+
+    async function loadMsGraph() {
+      if (graphData) return renderGraph();
+      try {
+        const r = await fetch('/data/graph_data.json');
+        graphData = await r.json();
+        renderGraph();
+      } catch(e) {
+        document.getElementById('graph-stats').innerHTML = `<div class="error-banner">Error: ${e.message}</div>`;
+      }
+    }
+
+    function renderGraph() {
+      const s = graphData.summary;
+      document.getElementById('graph-stats').innerHTML = [
+        { icon:'👥', val:s.totalUsers, label:'M365 Users' },
+        { icon:'📁', val:s.totalFiles, label:'Files' },
+        { icon:'✉️', val:s.totalEmails, label:'Emails' },
+        { icon:'💬', val:s.totalTeamsMessages, label:'Teams Msgs' },
+        { icon:'📅', val:s.totalCalendarEvents, label:'Calendar Events' }
+      ].map(c=>`<div class="kpi-card"><div class="num">${c.icon}</div><div class="num">${c.val}</div><div class="label">${c.label}</div></div>`).join('');
+
+      renderGraphUsers();
+      renderGraphFiles();
+      renderGraphEmails();
+    }
+
+    function renderGraphUsers() {
+      const presenceColor = { Available:'#2d7d46', Busy:'#b91c1c', Away:'#d4832a', 'Do Not Disturb':'#b91c1c', Offline:'#888' };
+      document.getElementById('graph-users-panel').innerHTML = `
+        <h3>M365 Users (via /users)</h3>
+        <table><thead><tr><th>User</th><th>Role</th><th>Dept</th><th>Presence</th><th>Drive Items</th><th>Teams Msgs</th></tr></thead>
+        <tbody>${graphData.users.map(u=>`<tr>
+          <td><strong>${u.displayName}</strong><br><small style="color:#57606a">${u.mail}</small></td>
+          <td>${u.jobTitle}</td><td>${u.department}</td>
+          <td><span class="badge" style="background:${presenceColor[u.presenceStatus]||'#888'}20;color:${presenceColor[u.presenceStatus]||'#888'}">${u.presenceStatus}</span></td>
+          <td>${u.driveItemCount}</td><td>${u.teamsMessageCount}</td>
+        </tr>`).join('')}</tbody></table>`;
+    }
+
+    function renderGraphFiles() {
+      const fmtIcon = { pdf:'📄', pptx:'📊', xlsx:'📗', docx:'📝' };
+      function icon(mime) {
+        if(mime.includes('pdf')) return '📄';
+        if(mime.includes('presentation')) return '📊';
+        if(mime.includes('spreadsheet')||mime.includes('excel')) return '📗';
+        if(mime.includes('word')) return '📝';
+        return '📎';
+      }
+      function fmtBytes(b) { return b<1024*1024?`${(b/1024).toFixed(1)} KB`:`${(b/(1024*1024)).toFixed(1)} MB`; }
+      document.getElementById('graph-files-panel').innerHTML = `
+        <h3>Recent Files (SharePoint & OneDrive via /drive/items)</h3>
+        <table><thead><tr><th>Type</th><th>Name</th><th>Owner</th><th>Size</th><th>Source</th><th>Modified</th><th>Indexed</th></tr></thead>
+        <tbody>${graphData.recentFiles.map(f=>`<tr>
+          <td>${icon(f.mimeType)}</td>
+          <td><a href="${f.webUrl}" target="_blank" rel="noopener noreferrer">${f.name}</a></td>
+          <td>${f.employeeId}</td><td>${fmtBytes(f.size)}</td>
+          <td><span class="chip">${f.source}</span></td>
+          <td style="font-size:11px">${new Date(f.lastModifiedDateTime).toLocaleDateString()}</td>
+          <td><span class="badge ${f.aiSearchIndexed?'badge-high':'badge-low'}">${f.aiSearchIndexed?'✓ Indexed':'Pending'}</span></td>
+        </tr>`).join('')}</tbody></table>`;
+    }
+
+    function renderGraphEmails() {
+      document.getElementById('graph-emails-panel').innerHTML = `
+        <h3>Recent Emails (Outlook via /messages)</h3>
+        ${graphData.recentEmails.map(e=>`
+          <div class="detail-panel" style="margin-bottom:8px">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+              <div style="flex:1;font-weight:${e.isRead?'normal':'700'}">${e.subject}</div>
+              <span class="badge ${e.importance==='high'?'badge-low':'badge-mid'}">${e.importance}</span>
+              ${e.hasAttachments?'<span title="Has attachments">📎</span>':''}
+            </div>
+            <div style="font-size:11px;color:#57606a;margin-bottom:4px"><strong>From:</strong> ${e.from} · <strong>To:</strong> ${e.toRecipients.join(', ')} · ${new Date(e.receivedDateTime).toLocaleString()}</div>
+            <div style="font-size:12px;border-left:3px solid #0078d4;padding:6px 10px;background:#f6f8fa;border-radius:0 4px 4px 0">${e.bodyPreview}</div>
+          </div>`).join('')}`;
+    }
+
+    function switchGraphTab(tab) {
+      ['users','files','emails'].forEach(t => {
+        document.getElementById(`graph-${t}-panel`).style.display = t===tab?'block':'none';
+        document.getElementById(`graph-tab-${t}`).classList.toggle('active', t===tab);
+      });
+    }
+
+    // ─── AI Search ───────────────────────────────────────────────────────────
+    let searchData = null;
+
+    async function loadAiSearch() {
+      if (searchData) return renderSearch();
+      try {
+        const r = await fetch('/data/ai_search_results.json');
+        searchData = await r.json();
+        renderSearch();
+      } catch(e) {
+        document.getElementById('search-stats').innerHTML = `<div class="error-banner">Error: ${e.message}</div>`;
+      }
+    }
+
+    function renderSearch() {
+      const s = searchData.indexStats;
+      document.getElementById('search-stats').innerHTML = [
+        { icon:'📦', val:s.documentCount.toLocaleString(), label:'Indexed Docs' },
+        { icon:'🧮', val:s.vectorDimensions, label:'Vector Dims' },
+        { icon:'💾', val:s.storageSize, label:'Index Size' },
+        { icon:'✅', val:s.indexerStatus, label:'Indexer Status' }
+      ].map(c=>`<div class="kpi-card"><div class="num">${c.icon}</div><div class="num" style="font-size:1.2rem">${c.val}</div><div class="label">${c.label}</div></div>`).join('');
+
+      document.getElementById('search-query-text').textContent = `"${searchData.sampleQuery.query}"`;
+      document.getElementById('search-query-meta').textContent =
+        `Index: ${searchData.indexName} · Type: ${searchData.sampleQuery.queryType} · Semantic: ${searchData.sampleQuery.semanticConfiguration} · Top ${searchData.sampleQuery.top}`;
+
+      const fmtIcon = { pdf:'📄', pptx:'📊', xlsx:'📗', docx:'📝' };
+      document.getElementById('search-tbody').innerHTML = searchData.results.map((r,i)=>`
+        <tr onclick="selectSearchResult(${i})" style="cursor:pointer" id="sr-row-${i}">
+          <td style="font-weight:700;color:#aaa">${i+1}</td>
+          <td><strong>${fmtIcon[r.format]||'📄'} ${r.title}</strong><br><small style="color:#57606a">${r.documentType}</small></td>
+          <td>${r.employeeId}</td>
+          <td><span class="badge ${r.score>=0.95?'badge-high':r.score>=0.9?'badge-mid':'badge-low'}">${r.score.toFixed(3)}</span></td>
+        </tr>`).join('');
+
+      // Facets
+      function facetBar(f, total, color) {
+        return `<div style="display:grid;grid-template-columns:110px 1fr 36px;align-items:center;gap:8px;font-size:12px;margin-bottom:4px">
+          <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${f.value}</span>
+          <div style="background:#eaeef2;border-radius:4px;height:12px;overflow:hidden">
+            <div style="width:${Math.min(100,(f.count/total)*500)}%;height:100%;background:${color};border-radius:4px"></div>
+          </div><span style="font-weight:700">${f.count}</span></div>`;
+      }
+      const total = s.documentCount;
+      document.getElementById('facet-dept').innerHTML = searchData.facets.department.map(f=>facetBar(f,total,'#2d7d46')).join('');
+      document.getElementById('facet-format').innerHTML = searchData.facets.format.map(f=>facetBar(f,total,'#0078d4')).join('');
+      document.getElementById('facet-type').innerHTML = searchData.facets.documentType.map(f=>facetBar(f,total,'#6264a7')).join('');
+
+      // Indexer config
+      const ic = searchData.indexerConfig;
+      document.getElementById('search-indexer-config').innerHTML = `
+        <h4>Indexer Configuration</h4>
+        <div style="display:grid;grid-template-columns:160px 1fr;gap:4px;margin-bottom:12px">
+          ${[['Index Name',searchData.indexName],['Schedule',`${ic.schedule} (hourly)`],['Data Source',ic.dataSourceType],['Target Index',ic.targetIndexName]]
+            .map(([k,v])=>`<div style="font-weight:600;font-size:12px;border:1px solid #eaeef2;padding:4px 8px;border-radius:4px">${k}</div><div style="font-size:12px;border:1px solid #eaeef2;padding:4px 8px;border-radius:4px;color:#57606a">${v}</div>`).join('')}
+        </div>
+        <h4>AI Enrichment Skills</h4>
+        ${ic.skills.map(sk=>`<div class="detail-panel" style="margin-bottom:6px;padding:8px 10px">
+          <div style="font-weight:600">${sk.name}</div>
+          <div style="font-size:11px;color:#57606a;word-break:break-word">${sk.type}</div>
+          ${sk.model?`<div style="font-size:11px;color:#0078d4">Model: <strong>${sk.model}</strong></div>`:''}
+        </div>`).join('')}`;
+    }
+
+    function selectSearchResult(idx) {
+      const r = searchData.results[idx];
+      document.querySelectorAll('#search-tbody tr').forEach(tr => tr.style.background='');
+      const row = document.getElementById(`sr-row-${idx}`);
+      if(row) row.style.background='#e6f0ff';
+      const fmtIcon = { pdf:'📄', pptx:'📊', xlsx:'📗', docx:'📝' };
+      document.getElementById('search-result-detail').innerHTML = `
+        <h4>${r.title}</h4>
+        <p style="font-size:12px;color:#57606a">${r.documentId} · ${r.employeeId} (${r.displayName}) · ${r.department}</p>
+        <div class="kpi-grid" style="grid-template-columns:1fr 1fr">
+          <div class="kpi-card"><div class="num" style="font-size:1.3rem;color:${r.score>=0.95?'#2d7d46':r.score>=0.9?'#d4832a':'#888'}">${r.score.toFixed(4)}</div><div class="label">BM25+Vector Score</div></div>
+          <div class="kpi-card"><div class="num" style="font-size:1.3rem">${r.rerankerScore.toFixed(3)}</div><div class="label">Reranker Score</div></div>
+        </div>
+        <h5>Semantic Caption</h5>
+        <div style="font-size:12px;border-left:3px solid #0078d4;padding:8px 10px;background:#f6f8fa;border-radius:0 4px 4px 0;margin-bottom:10px">${r.caption}</div>
+        <h5>Highlights</h5>
+        <div style="font-size:12px;border-left:3px solid #d4832a;padding:8px 10px;background:#fffbee;border-radius:0 4px 4px 0;margin-bottom:10px">${r.highlights}</div>
+        <h5>Key Topics</h5>
+        <div>${r.keyTopics.map(t=>`<span class="chip">${t}</span>`).join('')}</div>
+        <p style="font-size:11px;color:#57606a;margin-top:8px">Format: <strong>${r.format.toUpperCase()}</strong> &nbsp;·&nbsp; <span class="badge badge-high">✓ AI Search Indexed</span></p>`;
+    }
+
+    function switchSearchTab(tab) {
+      ['results','facets','config'].forEach(t => {
+        document.getElementById(`search-${t}-panel`).style.display = t===tab?'block':'none';
+        document.getElementById(`search-tab-${t}`).classList.toggle('active', t===tab);
+      });
     }
 
     function filterEmployees() { /* Implement search */ }

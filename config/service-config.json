@@ -1,0 +1,118 @@
+{
+  "_description": "All Azure and Microsoft service IDs, endpoints, and settings for the Fabric IQ Employee Knowledge POC. Edit these values after provisioning resources. No secrets are stored here — use Azure Key Vault or GitHub Secrets for credentials.",
+
+  "documentIntelligence": {
+    "endpoint": "https://doc-intelligence-poc-my.cognitiveservices.azure.com/",
+    "apiVersion": "2024-11-30",
+    "supportedFormats": ["pdf", "docx", "pptx", "xlsx", "png", "jpg", "tiff"],
+    "defaultModel": "prebuilt-layout",
+    "models": {
+      "layout": "prebuilt-layout",
+      "document": "prebuilt-document",
+      "businessCard": "prebuilt-business-card",
+      "invoice": "prebuilt-invoice"
+    },
+    "extractionFeatures": ["keyValuePairs", "tables", "paragraphs", "languages", "barcodes"],
+    "outputFormat": "json",
+    "storageContainer": "employee-knowledge-raw",
+    "processedContainer": "employee-knowledge-processed",
+    "cosmosDbContainer": "EmployeeDocumentParsing",
+    "notes": "Azure AI Document Intelligence extracts structured JSON from employee documents (PDF, PPTX, XLS, DOCX, images). Results are stored in Cosmos DB and surfaced in the UI."
+  },
+
+  "microsoftGraph": {
+    "endpoint": "https://graph.microsoft.com/v1.0",
+    "betaEndpoint": "https://graph.microsoft.com/beta",
+    "scopes": [
+      "User.Read.All",
+      "Mail.Read",
+      "Files.Read.All",
+      "Calendars.Read",
+      "Sites.Read.All",
+      "Team.ReadBasic.All",
+      "Directory.Read.All"
+    ],
+    "tenantId": "b158173c-91f6-4f99-b5e9-aa9bcb463863",
+    "enabledResources": ["users", "messages", "driveItems", "events", "sites", "teams"],
+    "sharePointSiteId": "replace-with-sharepoint-site-id",
+    "teamId": "replace-with-teams-team-id",
+    "syncInterval": "PT1H",
+    "notes": "Microsoft Graph is used to ingest M365 data (SharePoint files, Outlook emails, Teams activity, OneDrive documents) into OneLake via Graph Connectors and Fabric Dataflow Gen2."
+  },
+
+  "aiSearch": {
+    "endpoint": "https://aisearch-poc-myaacoub.search.windows.net",
+    "apiVersion": "2024-07-01",
+    "indexName": "employee-knowledge-index",
+    "indexerName": "employee-knowledge-indexer",
+    "dataSourceName": "employee-knowledge-cosmosdb",
+    "skillsetName": "employee-knowledge-skillset",
+    "vectorDimensions": 1536,
+    "embeddingModel": "text-embedding-ada-002",
+    "semanticConfigurationName": "employee-knowledge-semantic",
+    "queryType": "semantic",
+    "fields": {
+      "keyField": "documentId",
+      "contentField": "extractedText",
+      "vectorField": "contentVector",
+      "filterFields": ["employeeId", "department", "documentType", "format"],
+      "facetFields": ["department", "documentType", "format", "tier"]
+    },
+    "notes": "Azure AI Search provides semantic and vector indexing over all employee knowledge assets — documents, emails, presentations, and spreadsheets extracted by Document Intelligence and ingested from Microsoft Graph."
+  },
+
+  "openAI": {
+    "endpoint": "https://002-ai-poc-private.services.ai.azure.com/api/projects/proj-default",
+    "deploymentName": "gpt-4o",
+    "embeddingDeploymentName": "text-embedding-ada-002",
+    "apiVersion": "2024-08-01-preview",
+    "maxTokens": 4096,
+    "temperature": 0.2,
+    "ragSystemPrompt": "You are an expert employee knowledge assistant. Use only the provided context from the employee knowledge graph to answer questions. Cite source document IDs and employee IDs when referencing specific information.",
+    "notes": "Azure OpenAI Service powers the RAG engine — combining AI Search results with GPT-4o to deliver personalized, accurate answers about employees, projects, and expertise."
+  },
+
+  "fabricOneLake": {
+    "workspaceId": "38362838-0531-4215-89af-a8a79221b545",
+    "lakehouseId": "d11b209f-c774-481e-adcb-79920a94fd20",
+    "oneLakeEndpoint": "https://onelake.dfs.fabric.microsoft.com",
+    "tables": ["employees", "digital_assets", "contributions", "projects", "org_hierarchy", "parsed_documents", "graph_items", "search_index_log"],
+    "dataflowGen2Name": "employee-knowledge-dataflow",
+    "notes": "Microsoft Fabric OneLake is the central knowledge layer. Data flows from raw ingestion (Blob Storage, Graph Connectors) through Bronze, Silver, and Curated zones."
+  },
+
+  "cosmosDb": {
+    "endpoint": "https://cosmos-ai-poc.documents.azure.com:443/",
+    "databaseName": "EmployeeKnowledgeGraph",
+    "containers": {
+      "documentParsing": "EmployeeDocumentParsing",
+      "incidents": "Incidents",
+      "graphItems": "GraphItems",
+      "searchLog": "SearchLog"
+    },
+    "consistencyLevel": "Session",
+    "notes": "Azure Cosmos DB stores parsed document JSON, SRE incident records, Microsoft Graph item metadata, and AI Search query logs."
+  },
+
+  "apiManagement": {
+    "gatewayUrl": "https://ai-gateway-apim-poc-my.azure-api.net",
+    "resourceId": "/subscriptions/86b37969-9445-49cf-b03f-d8866235171c/resourceGroups/ai-myaacoub/providers/Microsoft.ApiManagement/service/ai-gateway-apim-poc-my",
+    "subscriptionKeyHeader": "Ocp-Apim-Subscription-Key",
+    "notes": "Azure API Management acts as the gateway for all AI service calls — providing rate limiting, auth, and monitoring for Document Intelligence, OpenAI, and AI Search requests."
+  },
+
+  "purview": {
+    "accountEndpoint": "https://purview.microsoft.com",
+    "catalogEndpoint": "https://replace-with-purview-account.purview.azure.com/catalog",
+    "notes": "Microsoft Purview Unified Catalog manages business terminology, data lineage, and metadata across OneLake, Cosmos DB, and Blob Storage."
+  },
+
+  "hosting": {
+    "uiPublicUrl": "https://fabric-iq-emp-knowledge-ui.azurewebsites.net",
+    "apiPublicUrl": "https://fabric-iq-emp-knowledge-api.azurewebsites.net",
+    "swaggerUrl": "https://fabric-iq-emp-knowledge-api.azurewebsites.net/docs",
+    "openApiSpecUrl": "https://fabric-iq-emp-knowledge-api.azurewebsites.net/swagger.json",
+    "healthCheckUrl": "https://fabric-iq-emp-knowledge-api.azurewebsites.net/health",
+    "notes": "All internet-accessible URLs for the demo. The UI is a public Azure App Service. The API exposes /docs (Swagger UI) and /swagger.json (OpenAPI spec)."
+  }
+}

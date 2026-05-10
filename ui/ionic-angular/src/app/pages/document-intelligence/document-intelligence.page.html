@@ -1,0 +1,189 @@
+<ion-content class="ion-padding">
+  <h2>🔍 Document Intelligence</h2>
+  <p>{{ description }}</p>
+
+  <div *ngIf="loadError" class="viewer-error">{{ loadError }}</div>
+
+  <!-- Filters -->
+  <div class="filter-bar">
+    <ion-item lines="none" class="filter-input">
+      <ion-label position="stacked">Search Documents</ion-label>
+      <ion-input
+        [value]="query"
+        (ionInput)="onQueryInput($any($event.target).value || '')"
+        placeholder="Employee ID, title, type, topic, format">
+      </ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Format</ion-label>
+      <ion-select
+        [value]="formatFilter"
+        placeholder="All Formats"
+        (ionChange)="onFormatFilter($any($event.detail).value || '')">
+        <ion-select-option value="">All Formats</ion-select-option>
+        <ion-select-option *ngFor="let f of formats" [value]="f">
+          {{ formatIcon[f] || '📄' }} {{ f.toUpperCase() }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button size="small" color="medium" fill="outline" (click)="clearFilters()">Clear</ion-button>
+    <span class="meta">{{ filtered.length }} result{{ filtered.length !== 1 ? 's' : '' }}</span>
+  </div>
+
+  <!-- Stats Banner -->
+  <div class="stats-banner" *ngIf="results.length > 0">
+    <div class="stat-card" *ngFor="let f of ['pdf','pptx','xlsx','docx']">
+      <div class="stat-icon">{{ formatIcon[f] }}</div>
+      <div class="stat-value">{{ countByFormat(f) }}</div>
+      <div class="stat-label">{{ f.toUpperCase() }}</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">🗄️</div>
+      <div class="stat-value">{{ results.length }}</div>
+      <div class="stat-label">Total Extracted</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">🔎</div>
+      <div class="stat-value">{{ countIndexed() }}</div>
+      <div class="stat-label">AI Search Indexed</div>
+    </div>
+  </div>
+
+  <div class="layout-grid">
+    <!-- Results List -->
+    <div class="layout-card">
+      <h3>Extracted Documents</h3>
+      <div class="doc-table">
+        <div class="doc-row header">
+          <span>Format</span>
+          <span>Document</span>
+          <span>Employee</span>
+          <span>Type</span>
+          <span>Pages</span>
+          <span>Confidence</span>
+        </div>
+        <div
+          class="doc-row"
+          *ngFor="let r of filtered"
+          [class.selected-row]="selected?.documentId === r.documentId"
+          (click)="selectResult(r)"
+          style="cursor:pointer">
+          <span class="format-badge">{{ formatIcon[r.format] || '📄' }} <span class="fmt-text">{{ r.format.toUpperCase() }}</span></span>
+          <span>
+            <strong>{{ r.extractedFields.title }}</strong>
+            <br><small class="meta">{{ r.documentId }}</small>
+          </span>
+          <span>{{ r.employeeId }}</span>
+          <span>{{ r.documentType }}</span>
+          <span>{{ r.pageCount }}</span>
+          <span>
+            <ion-badge [color]="confidenceColor(r.documentConfidence)">
+              {{ (r.documentConfidence * 100).toFixed(0) }}%
+            </ion-badge>
+          </span>
+        </div>
+        <div *ngIf="filtered.length === 0" class="meta" style="padding:12px">No documents match the current filters.</div>
+      </div>
+    </div>
+
+    <!-- Detail Panel -->
+    <div class="layout-card">
+      <h3>Extraction Detail</h3>
+      <div *ngIf="!selected" class="viewer-placeholder">
+        Click a document row to view extracted JSON fields, tables, and key-value pairs.
+      </div>
+
+      <div *ngIf="selected">
+        <div class="doc-header-row">
+          <div class="doc-fmt-icon">{{ formatIcon[selected.format] || '📄' }}</div>
+          <div>
+            <h4 style="margin:0">{{ selected.extractedFields.title }}</h4>
+            <p class="meta">{{ selected.originalFileName }}</p>
+            <p class="meta">{{ selected.documentType }} · {{ selected.classification }} · {{ selected.extractedFields.department }}</p>
+          </div>
+        </div>
+
+        <!-- KPIs -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-value" [style.color]="selected.documentConfidence >= 0.95 ? '#2d7d46' : selected.documentConfidence >= 0.85 ? '#d4832a' : '#b91c1c'">
+              {{ (selected.documentConfidence * 100).toFixed(0) }}%
+            </div>
+            <div class="kpi-label">Confidence</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-value">{{ selected.pageCount }}</div>
+            <div class="kpi-label">Pages</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-value">{{ selected.tables.length }}</div>
+            <div class="kpi-label">Tables</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-value">{{ selected.keyValuePairs.length }}</div>
+            <div class="kpi-label">Key-Value Pairs</div>
+          </div>
+        </div>
+
+        <!-- Model info -->
+        <p class="meta" style="margin-top:8px">
+          <strong>Model:</strong> {{ selected.modelUsed }} &nbsp;·&nbsp;
+          <strong>Extracted:</strong> {{ selected.extractedAt | date:'medium' }} &nbsp;·&nbsp;
+          <ion-badge color="success" *ngIf="selected.aiSearchIndexed">AI Search Indexed</ion-badge>
+        </p>
+
+        <!-- Key Topics -->
+        <h5>Key Topics</h5>
+        <div class="chip-row">
+          <ion-chip *ngFor="let t of selected.extractedFields.keyTopics" color="primary" outline>
+            <ion-label>{{ t }}</ion-label>
+          </ion-chip>
+        </div>
+
+        <!-- Key-Value Pairs -->
+        <h5>Extracted Key-Value Pairs</h5>
+        <div class="kv-table">
+          <div class="kv-row" *ngFor="let kv of selected.keyValuePairs">
+            <span class="kv-key">{{ kv.key }}</span>
+            <span class="kv-value">{{ kv.value }}</span>
+          </div>
+        </div>
+
+        <!-- Tables -->
+        <div *ngIf="selected.tables.length > 0">
+          <h5>Extracted Tables</h5>
+          <div *ngFor="let tbl of selected.tables" class="extracted-table">
+            <p class="meta">Table {{ tbl.tableId }} · {{ tbl.rowCount }} rows × {{ tbl.columnCount }} columns</p>
+            <div class="tbl-scroll">
+              <table class="mini-table">
+                <thead>
+                  <tr>
+                    <th *ngFor="let h of tbl.headers">{{ h }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let row of tbl.rows">
+                    <td *ngFor="let cell of row">{{ cell }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paragraphs -->
+        <h5>Extracted Text Samples</h5>
+        <div class="paragraph-list">
+          <div *ngFor="let p of selected.paragraphs" class="paragraph-item">{{ p }}</div>
+        </div>
+
+        <!-- Blob path -->
+        <p class="meta" style="margin-top:10px; word-break:break-all">
+          <strong>Blob Path:</strong> {{ selected.blobPath }}
+        </p>
+      </div>
+    </div>
+  </div>
+</ion-content>
