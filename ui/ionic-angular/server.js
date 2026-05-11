@@ -4,6 +4,16 @@ const path = require('path');
 
 const PORT = parseInt(process.env.PORT || '8080', 10);
 const PUBLIC = path.join(__dirname, 'public');
+// Repo root is two directories above this file (ui/ionic-angular/ -> repo root)
+const REPO_ROOT = path.resolve(__dirname, '..', '..');
+
+// Static data directories served from the repo root.
+// URL prefix -> absolute filesystem base directory.
+const REPO_STATIC = [
+  { prefix: '/data/',   dir: path.join(REPO_ROOT, 'data') },
+  { prefix: '/fabric/', dir: path.join(REPO_ROOT, 'fabric') },
+  { prefix: '/config/', dir: path.join(REPO_ROOT, 'config') },
+];
 
 const MIME = {
   '.html': 'text/html',
@@ -14,6 +24,23 @@ const MIME = {
   '.png': 'image/png',
   '.ico': 'image/x-icon',
 };
+
+/**
+ * Resolve the filesystem path for a URL pathname.
+ * Returns null if no mapping matches.
+ */
+function resolveRepoPath(pathname) {
+  for (const { prefix, dir } of REPO_STATIC) {
+    if (pathname.startsWith(prefix) || pathname === prefix.slice(0, -1)) {
+      const relative = pathname.slice(prefix.length);
+      // Prevent path-traversal attacks
+      const resolved = path.resolve(dir, relative);
+      if (!resolved.startsWith(dir + path.sep) && resolved !== dir) return null;
+      return resolved;
+    }
+  }
+  return null;
+}
 
 function serve(res, filePath) {
   const ext = path.extname(filePath);
@@ -34,7 +61,17 @@ function serve(res, filePath) {
 
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, `http://localhost:${PORT}`);
-  let filePath = path.join(PUBLIC, url.pathname === '/' ? 'index.html' : url.pathname);
+  const pathname = url.pathname;
+
+  // Try repo-root data directories first
+  const repoPath = resolveRepoPath(pathname);
+  if (repoPath) {
+    serve(res, repoPath);
+    return;
+  }
+
+  // Fall back to public/ (SPA)
+  const filePath = path.join(PUBLIC, pathname === '/' ? 'index.html' : pathname);
   serve(res, filePath);
 });
 

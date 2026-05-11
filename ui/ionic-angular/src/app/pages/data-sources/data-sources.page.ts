@@ -200,6 +200,12 @@ export class DataSourcesPage {
   private async resolveAssetSourceUrl(asset: Asset): Promise<string> {
     const localPath = `/data/employees/${asset.storageRef.relativePath}`;
 
+    // Always use local path when running on localhost (dev / demo mode)
+    if (typeof window !== 'undefined' &&
+        (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+      return localPath;
+    }
+
     try {
       const config = await this.configService.loadConfig();
       const endpointTemplate = config.azure?.blobStorageEndpoint;
