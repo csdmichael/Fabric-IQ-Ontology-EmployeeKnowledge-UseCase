@@ -68,7 +68,7 @@ try {
     az storage blob upload-batch --account-name $storageAccount --destination $containerName --source $fullSourcePath --auth-mode login --overwrite --no-progress --output none
 
     $items = az storage blob list --account-name $storageAccount --container-name $containerName --auth-mode login -o json | ConvertFrom-Json
-    Write-Host "Upload complete. Blob count in $containerName: $($items.Count)" -ForegroundColor Green
+    Write-Host "Upload complete. Blob count in ${containerName}: $($items.Count)" -ForegroundColor Green
 } finally {
     if ($restoreDeny) {
         az storage account update --name $storageAccount --resource-group $resourceGroup --default-action Deny --public-network-access Enabled --only-show-errors --output none
