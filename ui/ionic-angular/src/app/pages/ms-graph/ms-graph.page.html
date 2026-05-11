@@ -1,0 +1,173 @@
+<ion-content class="ion-padding">
+  <h2>🔗 Microsoft Graph</h2>
+  <p>{{ description }}</p>
+
+  <div *ngIf="loadError" class="viewer-error">{{ loadError }}</div>
+
+  <div *ngIf="graphData">
+    <!-- Sync Status -->
+    <div class="sync-banner">
+      <span class="sync-dot"></span>
+      <span class="sync-text">Last synced: <strong>{{ graphData.syncedAt | date:'medium' }}</strong></span>
+      <div class="source-chips">
+        <ion-badge *ngFor="let src of graphData.sources" color="primary">{{ src }}</ion-badge>
+      </div>
+    </div>
+
+    <!-- Summary Cards -->
+    <div class="stats-banner">
+      <div class="stat-card">
+        <div class="stat-icon">👥</div>
+        <div class="stat-value">{{ graphData.summary.totalUsers }}</div>
+        <div class="stat-label">M365 Users</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">📁</div>
+        <div class="stat-value">{{ graphData.summary.totalFiles }}</div>
+        <div class="stat-label">Files</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">✉️</div>
+        <div class="stat-value">{{ graphData.summary.totalEmails }}</div>
+        <div class="stat-label">Emails</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">💬</div>
+        <div class="stat-value">{{ graphData.summary.totalTeamsMessages }}</div>
+        <div class="stat-label">Teams Messages</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">📅</div>
+        <div class="stat-value">{{ graphData.summary.totalCalendarEvents }}</div>
+        <div class="stat-label">Calendar Events</div>
+      </div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <button class="tab-btn" [class.active]="activeTab === 'users'" (click)="setTab('users')">👥 Users</button>
+      <button class="tab-btn" [class.active]="activeTab === 'files'" (click)="setTab('files')">📁 Recent Files</button>
+      <button class="tab-btn" [class.active]="activeTab === 'emails'" (click)="setTab('emails')">✉️ Recent Emails</button>
+    </div>
+
+    <!-- Users Tab -->
+    <div *ngIf="activeTab === 'users'" class="layout-grid">
+      <div class="layout-card">
+        <h3>M365 Users (via /users)</h3>
+        <div class="user-list">
+          <div
+            class="user-row"
+            *ngFor="let user of graphData.users"
+            [class.selected-row]="selectedUser?.graphUserId === user.graphUserId"
+            (click)="selectUser(user)"
+            style="cursor:pointer">
+            <div class="user-avatar">{{ user.displayName.split(' ').map(n => n[0]).join('') }}</div>
+            <div class="user-info">
+              <div class="user-name">{{ user.displayName }}</div>
+              <div class="meta">{{ user.jobTitle }} · {{ user.department }}</div>
+            </div>
+            <ion-badge [color]="presenceColor(user.presenceStatus)" class="presence-badge">{{ user.presenceStatus }}</ion-badge>
+          </div>
+        </div>
+      </div>
+
+      <div class="layout-card">
+        <h3>User Detail</h3>
+        <div *ngIf="!selectedUser" class="viewer-placeholder">Click a user to see their M365 activity metrics.</div>
+        <div *ngIf="selectedUser">
+          <div class="user-detail-header">
+            <div class="user-avatar large">{{ selectedUser.displayName.split(' ').map(n => n[0]).join('') }}</div>
+            <div>
+              <h4 style="margin:0">{{ selectedUser.displayName }}</h4>
+              <p class="meta">{{ selectedUser.jobTitle }} · {{ selectedUser.department }}</p>
+              <p class="meta">{{ selectedUser.mail }}</p>
+              <p class="meta">📍 {{ selectedUser.officeLocation }}</p>
+            </div>
+          </div>
+
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-value">{{ selectedUser.driveItemCount }}</div>
+              <div class="kpi-label">Drive Items</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-value">{{ selectedUser.sharedWithMe }}</div>
+              <div class="kpi-label">Shared Files</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-value">{{ selectedUser.teamsMessageCount }}</div>
+              <div class="kpi-label">Teams Msgs</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-value">{{ selectedUser.calendarEventsThisWeek }}</div>
+              <div class="kpi-label">This Week Events</div>
+            </div>
+          </div>
+
+          <h5>Skills</h5>
+          <div class="chip-row">
+            <ion-chip *ngFor="let s of selectedUser.skills" color="primary" outline>
+              <ion-label>{{ s }}</ion-label>
+            </ion-chip>
+          </div>
+
+          <p class="meta">
+            <strong>Last Active:</strong> {{ selectedUser.lastActiveDateTime | date:'medium' }} &nbsp;·&nbsp;
+            <strong>Employee ID:</strong> {{ selectedUser.employeeId }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Files Tab -->
+    <div *ngIf="activeTab === 'files'" class="layout-card">
+      <h3>Recent Files (SharePoint & OneDrive via /drive/items)</h3>
+      <div class="file-table">
+        <div class="file-row header">
+          <span>Type</span>
+          <span>Name</span>
+          <span>Owner</span>
+          <span>Size</span>
+          <span>Source</span>
+          <span>Modified</span>
+          <span>Indexed</span>
+        </div>
+        <div class="file-row" *ngFor="let file of graphData.recentFiles">
+          <span>{{ fileIcon(file.mimeType) }}</span>
+          <span>
+            <a [href]="file.webUrl" target="_blank" rel="noopener noreferrer">{{ file.name }}</a>
+          </span>
+          <span>{{ file.employeeId }}</span>
+          <span>{{ formatBytes(file.size) }}</span>
+          <span><ion-badge color="secondary">{{ file.source }}</ion-badge></span>
+          <span class="meta">{{ file.lastModifiedDateTime | date:'shortDate' }}</span>
+          <span>
+            <ion-badge [color]="file.aiSearchIndexed ? 'success' : 'medium'">
+              {{ file.aiSearchIndexed ? '✓ Indexed' : 'Pending' }}
+            </ion-badge>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Emails Tab -->
+    <div *ngIf="activeTab === 'emails'" class="layout-card">
+      <h3>Recent Emails (Outlook via /messages)</h3>
+      <div class="email-list">
+        <div class="email-item" *ngFor="let email of graphData.recentEmails">
+          <div class="email-header">
+            <div class="email-subject" [class.unread]="!email.isRead">{{ email.subject }}</div>
+            <ion-badge [color]="email.importance === 'high' ? 'danger' : 'medium'">{{ email.importance }}</ion-badge>
+            <span *ngIf="email.hasAttachments" class="attachment-icon" title="Has attachments">📎</span>
+          </div>
+          <div class="email-meta">
+            <span><strong>From:</strong> {{ email.from }}</span> &nbsp;·&nbsp;
+            <span><strong>To:</strong> {{ email.toRecipients.join(', ') }}</span> &nbsp;·&nbsp;
+            <span>{{ email.receivedDateTime | date:'medium' }}</span>
+          </div>
+          <div class="email-preview">{{ email.bodyPreview }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

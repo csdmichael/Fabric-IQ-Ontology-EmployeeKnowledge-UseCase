@@ -33,6 +33,15 @@ export class AppComponent {
       ]
     },
     {
+      title: 'AI & Data Services',
+      icon: '🧠',
+      pages: [
+        { title: 'Document Intelligence', url: '/document-intelligence', icon: '🔍' },
+        { title: 'Microsoft Graph',       url: '/ms-graph',              icon: '🔗' },
+        { title: 'AI Search',             url: '/ai-search',             icon: '🔎' }
+      ]
+    },
+    {
       title: 'AI Agents',
       icon: '🤖',
       pages: [

@@ -1,0 +1,374 @@
+[
+  {
+    "documentId": "AST-EMP001-01",
+    "employeeId": "EMP001",
+    "format": "pdf",
+    "originalFileName": "EMP001_project_summary_report.pdf",
+    "documentType": "Report",
+    "classification": "R&D",
+    "extractedAt": "2026-05-02T09:00:00Z",
+    "modelUsed": "prebuilt-layout",
+    "apiVersion": "2024-11-30",
+    "documentConfidence": 0.96,
+    "pageCount": 8,
+    "extractedFields": {
+      "title": "Q1 R&D Project Summary",
+      "author": "EMP001",
+      "date": "2026-03-31",
+      "department": "R&D",
+      "projectIds": ["PRJ001", "PRJ003"],
+      "keyTopics": ["machine learning", "data pipeline", "ontology design"]
+    },
+    "tables": [
+      {
+        "tableId": 1,
+        "rowCount": 5,
+        "columnCount": 3,
+        "headers": ["Milestone", "Status", "Owner"],
+        "rows": [
+          ["Data ingestion pipeline", "Completed", "EMP001"],
+          ["Ontology mapping", "Completed", "EMP002"],
+          ["Semantic model", "In Progress", "EMP001"],
+          ["Power BI reports", "In Progress", "EMP005"],
+          ["Agent packaging", "Planned", "EMP003"]
+        ]
+      }
+    ],
+    "keyValuePairs": [
+      { "key": "Project", "value": "Fabric IQ Ontology POC" },
+      { "key": "Status", "value": "Active" },
+      { "key": "Budget", "value": "$240,000" },
+      { "key": "Due Date", "value": "2026-06-30" }
+    ],
+    "paragraphs": [
+      "This report summarizes Q1 R&D activities related to the Employee Knowledge Graph proof-of-concept.",
+      "The team successfully completed the data ingestion pipeline and ontology mapping phases ahead of schedule."
+    ],
+    "cosmosDbRecordId": "cosmos-ast-emp001-01",
+    "blobPath": "employee-knowledge-raw/employees/EMP001/EMP001_project_summary_report.pdf",
+    "aiSearchIndexed": true,
+    "aiSearchDocumentKey": "search-ast-emp001-01"
+  },
+  {
+    "documentId": "AST-EMP001-02",
+    "employeeId": "EMP001",
+    "format": "pptx",
+    "originalFileName": "EMP001_knowledge_graph_presentation.pptx",
+    "documentType": "Presentation",
+    "classification": "R&D",
+    "extractedAt": "2026-05-03T09:00:00Z",
+    "modelUsed": "prebuilt-layout",
+    "apiVersion": "2024-11-30",
+    "documentConfidence": 0.94,
+    "pageCount": 22,
+    "extractedFields": {
+      "title": "Employee Knowledge Graph – Architecture Overview",
+      "author": "EMP001",
+      "date": "2026-04-15",
+      "department": "R&D",
+      "slideCount": 22,
+      "keyTopics": ["Microsoft Fabric", "OneLake", "knowledge graph", "RAG", "Azure AI Search"]
+    },
+    "tables": [],
+    "keyValuePairs": [
+      { "key": "Presented To", "value": "Architecture Review Board" },
+      { "key": "Version", "value": "v2.1" },
+      { "key": "Classification", "value": "Internal" }
+    ],
+    "paragraphs": [
+      "Slide 1: Employee Knowledge Graph – Architecture Overview. Presented by the R&D Team.",
+      "Slide 5: OneLake serves as the unified knowledge layer ingesting data from Microsoft Graph, Blob Storage, and legacy document stores.",
+      "Slide 12: Azure AI Search indexes all extracted content with vector embeddings for semantic search and RAG."
+    ],
+    "cosmosDbRecordId": "cosmos-ast-emp001-02",
+    "blobPath": "employee-knowledge-raw/employees/EMP001/EMP001_knowledge_graph_presentation.pptx",
+    "aiSearchIndexed": true,
+    "aiSearchDocumentKey": "search-ast-emp001-02"
+  },
+  {
+    "documentId": "AST-EMP002-01",
+    "employeeId": "EMP002",
+    "format": "xlsx",
+    "originalFileName": "EMP002_skills_matrix.xlsx",
+    "documentType": "Spreadsheet",
+    "classification": "Operations",
+    "extractedAt": "2026-05-04T10:30:00Z",
+    "modelUsed": "prebuilt-layout",
+    "apiVersion": "2024-11-30",
+    "documentConfidence": 0.98,
+    "pageCount": 3,
+    "extractedFields": {
+      "title": "Engineering Skills Matrix Q1 2026",
+      "author": "EMP002",
+      "date": "2026-03-28",
+      "department": "Engineering",
+      "sheetNames": ["Skills Overview", "Certifications", "Training Plan"],
+      "keyTopics": ["Python", "Azure", "Terraform", "Power BI", "Fabric"]
+    },
+    "tables": [
+      {
+        "tableId": 1,
+        "rowCount": 12,
+        "columnCount": 5,
+        "headers": ["Employee", "Skill", "Proficiency", "Certified", "Last Assessed"],
+        "rows": [
+          ["EMP002", "Python", "Expert", "Yes", "2025-12-01"],
+          ["EMP002", "Azure AI", "Advanced", "Yes", "2026-01-15"],
+          ["EMP002", "Terraform", "Intermediate", "No", "2025-11-10"],
+          ["EMP002", "Power BI", "Advanced", "Yes", "2026-02-01"],
+          ["EMP004", "Python", "Intermediate", "No", "2026-01-20"]
+        ]
+      }
+    ],
+    "keyValuePairs": [
+      { "key": "Department", "value": "Engineering" },
+      { "key": "Team Size", "value": "18" },
+      { "key": "Certifications on File", "value": "42" }
+    ],
+    "paragraphs": [
+      "Sheet 1: Skills Overview – captures current proficiency levels across 6 technical domains for 18 team members.",
+      "Sheet 2: Certifications – lists active Microsoft and cloud certifications with expiry dates."
+    ],
+    "cosmosDbRecordId": "cosmos-ast-emp002-01",
+    "blobPath": "employee-knowledge-raw/employees/EMP002/EMP002_skills_matrix.xlsx",
+    "aiSearchIndexed": true,
+    "aiSearchDocumentKey": "search-ast-emp002-01"
+  },
+  {
+    "documentId": "AST-EMP003-01",
+    "employeeId": "EMP003",
+    "format": "docx",
+    "originalFileName": "EMP003_runbook_fabric_deployment.docx",
+    "documentType": "Document",
+    "classification": "DevOps",
+    "extractedAt": "2026-05-05T08:15:00Z",
+    "modelUsed": "prebuilt-document",
+    "apiVersion": "2024-11-30",
+    "documentConfidence": 0.97,
+    "pageCount": 14,
+    "extractedFields": {
+      "title": "Fabric IQ Deployment Runbook",
+      "author": "EMP003",
+      "date": "2026-04-02",
+      "department": "DevOps",
+      "wordCount": 4820,
+      "keyTopics": ["Terraform", "GitHub Actions", "Azure App Service", "Fabric REST API", "CI/CD"]
+    },
+    "tables": [
+      {
+        "tableId": 1,
+        "rowCount": 8,
+        "columnCount": 4,
+        "headers": ["Step", "Tool", "Owner", "SLA"],
+        "rows": [
+          ["Provision infra", "Terraform", "DevOps", "< 20 min"],
+          ["Deploy API", "GitHub Actions", "DevOps", "< 5 min"],
+          ["Deploy UI", "GitHub Actions", "Frontend", "< 5 min"],
+          ["Upload assets", "az CLI", "Data Eng", "< 10 min"],
+          ["Validate smoke tests", "PowerShell", "QA", "< 3 min"]
+        ]
+      }
+    ],
+    "keyValuePairs": [
+      { "key": "Document Type", "value": "Runbook" },
+      { "key": "Version", "value": "3.2" },
+      { "key": "Last Reviewed", "value": "2026-04-28" },
+      { "key": "Owner", "value": "EMP003" }
+    ],
+    "paragraphs": [
+      "This runbook describes the end-to-end deployment process for the Fabric IQ Employee Knowledge solution.",
+      "All infrastructure is provisioned via Terraform. GitHub Actions orchestrates API and UI deployments.",
+      "Step 1: Authenticate to Azure using OIDC federated credentials from GitHub Actions.",
+      "Step 5: Run smoke tests against /health, /api/summary, and /api/employees to confirm deployment success."
+    ],
+    "cosmosDbRecordId": "cosmos-ast-emp003-01",
+    "blobPath": "employee-knowledge-raw/employees/EMP003/EMP003_runbook_fabric_deployment.docx",
+    "aiSearchIndexed": true,
+    "aiSearchDocumentKey": "search-ast-emp003-01"
+  },
+  {
+    "documentId": "AST-EMP004-01",
+    "employeeId": "EMP004",
+    "format": "pdf",
+    "originalFileName": "EMP004_ontology_design_spec.pdf",
+    "documentType": "Specification",
+    "classification": "Architecture",
+    "extractedAt": "2026-05-06T11:00:00Z",
+    "modelUsed": "prebuilt-document",
+    "apiVersion": "2024-11-30",
+    "documentConfidence": 0.93,
+    "pageCount": 19,
+    "extractedFields": {
+      "title": "Employee Knowledge Ontology Design Specification",
+      "author": "EMP004",
+      "date": "2026-03-15",
+      "department": "Architecture",
+      "keyTopics": ["ontology", "semantic model", "knowledge graph", "Fabric ontology", "Purview"]
+    },
+    "tables": [
+      {
+        "tableId": 1,
+        "rowCount": 5,
+        "columnCount": 3,
+        "headers": ["Entity", "Primary Key", "Relationships"],
+        "rows": [
+          ["Employee", "employeeId", "→ Contribution, → DigitalAsset, → Project"],
+          ["Contribution", "employeeId", "→ Employee"],
+          ["DigitalAsset", "assetId", "→ Employee"],
+          ["Project", "projectId", "← Employee"],
+          ["OrgNode", "nodeId", "→ Employee"]
+        ]
+      }
+    ],
+    "keyValuePairs": [
+      { "key": "Ontology Version", "value": "2.0" },
+      { "key": "Fabric Workspace", "value": "ws-fabriciq-emp-knowledge" },
+      { "key": "Semantic Model", "value": "employee_knowledge_semantic_model" }
+    ],
+    "paragraphs": [
+      "The Employee Knowledge Ontology defines entities, relationships, and metadata to represent the complete employee knowledge graph.",
+      "Entities are aligned to Microsoft Fabric Ontologies and exposed via Purview Unified Catalog for governance and lineage."
+    ],
+    "cosmosDbRecordId": "cosmos-ast-emp004-01",
+    "blobPath": "employee-knowledge-raw/employees/EMP004/EMP004_ontology_design_spec.pdf",
+    "aiSearchIndexed": true,
+    "aiSearchDocumentKey": "search-ast-emp004-01"
+  },
+  {
+    "documentId": "AST-EMP005-01",
+    "employeeId": "EMP005",
+    "format": "pptx",
+    "originalFileName": "EMP005_powerbi_dashboard_demo.pptx",
+    "documentType": "Presentation",
+    "classification": "Analytics",
+    "extractedAt": "2026-05-07T13:00:00Z",
+    "modelUsed": "prebuilt-layout",
+    "apiVersion": "2024-11-30",
+    "documentConfidence": 0.91,
+    "pageCount": 15,
+    "extractedFields": {
+      "title": "Power BI Dashboard Demo – Employee Knowledge Analytics",
+      "author": "EMP005",
+      "date": "2026-04-20",
+      "department": "Analytics",
+      "slideCount": 15,
+      "keyTopics": ["Power BI", "DAX", "semantic model", "contribution score", "leaderboard"]
+    },
+    "tables": [],
+    "keyValuePairs": [
+      { "key": "Report Suite", "value": "RPT001 through RPT008" },
+      { "key": "Audience", "value": "Executive Leadership" }
+    ],
+    "paragraphs": [
+      "Slide 1: Power BI Dashboard Demo – Employee Knowledge Analytics.",
+      "Slide 4: The Contribution Score is computed via DAX as a weighted sum of project participation, asset creation, and mentoring sessions.",
+      "Slide 9: The leaderboard report ranks all employees by contribution tier: Star, Average, and Growth."
+    ],
+    "cosmosDbRecordId": "cosmos-ast-emp005-01",
+    "blobPath": "employee-knowledge-raw/employees/EMP005/EMP005_powerbi_dashboard_demo.pptx",
+    "aiSearchIndexed": true,
+    "aiSearchDocumentKey": "search-ast-emp005-01"
+  },
+  {
+    "documentId": "AST-EMP006-01",
+    "employeeId": "EMP006",
+    "format": "xlsx",
+    "originalFileName": "EMP006_budget_tracker_2026.xlsx",
+    "documentType": "Spreadsheet",
+    "classification": "Finance",
+    "extractedAt": "2026-05-08T09:45:00Z",
+    "modelUsed": "prebuilt-layout",
+    "apiVersion": "2024-11-30",
+    "documentConfidence": 0.99,
+    "pageCount": 5,
+    "extractedFields": {
+      "title": "R&D Budget Tracker 2026",
+      "author": "EMP006",
+      "date": "2026-04-01",
+      "department": "Finance",
+      "sheetNames": ["Summary", "Q1 Actuals", "Q2 Forecast", "Headcount", "Tools & Licenses"],
+      "keyTopics": ["budget", "headcount", "Azure spend", "Fabric capacity", "licensing"]
+    },
+    "tables": [
+      {
+        "tableId": 1,
+        "rowCount": 6,
+        "columnCount": 4,
+        "headers": ["Category", "Budget", "Actual", "Variance"],
+        "rows": [
+          ["Azure Compute", "$120,000", "$108,400", "+$11,600"],
+          ["Fabric Capacity", "$48,000", "$46,200", "+$1,800"],
+          ["Licensing", "$36,000", "$34,800", "+$1,200"],
+          ["Headcount", "$540,000", "$538,000", "+$2,000"],
+          ["Training", "$18,000", "$14,200", "+$3,800"]
+        ]
+      }
+    ],
+    "keyValuePairs": [
+      { "key": "Fiscal Year", "value": "2026" },
+      { "key": "Total Budget", "value": "$762,000" },
+      { "key": "YTD Spend", "value": "$741,600" },
+      { "key": "Remaining", "value": "$20,400" }
+    ],
+    "paragraphs": [
+      "Q1 Azure costs came in under budget, primarily due to reserved instance discounts negotiated in December.",
+      "Fabric capacity utilization is at 82%, well within planned capacity."
+    ],
+    "cosmosDbRecordId": "cosmos-ast-emp006-01",
+    "blobPath": "employee-knowledge-raw/employees/EMP006/EMP006_budget_tracker_2026.xlsx",
+    "aiSearchIndexed": true,
+    "aiSearchDocumentKey": "search-ast-emp006-01"
+  },
+  {
+    "documentId": "AST-EMP007-01",
+    "employeeId": "EMP007",
+    "format": "docx",
+    "originalFileName": "EMP007_ai_search_index_design.docx",
+    "documentType": "Design Document",
+    "classification": "Architecture",
+    "extractedAt": "2026-05-09T14:20:00Z",
+    "modelUsed": "prebuilt-document",
+    "apiVersion": "2024-11-30",
+    "documentConfidence": 0.95,
+    "pageCount": 11,
+    "extractedFields": {
+      "title": "Azure AI Search Index Design – Employee Knowledge",
+      "author": "EMP007",
+      "date": "2026-04-10",
+      "department": "Architecture",
+      "wordCount": 3640,
+      "keyTopics": ["AI Search", "vector index", "semantic search", "embeddings", "RAG pipeline"]
+    },
+    "tables": [
+      {
+        "tableId": 1,
+        "rowCount": 7,
+        "columnCount": 3,
+        "headers": ["Field Name", "Type", "Purpose"],
+        "rows": [
+          ["documentId", "Edm.String (key)", "Unique document identifier"],
+          ["employeeId", "Edm.String (filterable)", "Owner employee ID"],
+          ["extractedText", "Edm.String (searchable)", "Full document text content"],
+          ["contentVector", "Collection(Edm.Single)", "1536-dim embedding for vector search"],
+          ["department", "Edm.String (facetable)", "Department filter"],
+          ["format", "Edm.String (facetable)", "Document format: pdf, docx, pptx, xlsx"]
+        ]
+      }
+    ],
+    "keyValuePairs": [
+      { "key": "Index Name", "value": "employee-knowledge-index" },
+      { "key": "Vector Dimensions", "value": "1536" },
+      { "key": "Embedding Model", "value": "text-embedding-ada-002" },
+      { "key": "Semantic Config", "value": "employee-knowledge-semantic" }
+    ],
+    "paragraphs": [
+      "The AI Search index combines full-text BM25 with 1536-dimension vector embeddings to enable hybrid semantic search.",
+      "Faceting on department, format, and documentType enables drill-down filtering in the UI.",
+      "The indexer is scheduled to run hourly, pulling new documents from Cosmos DB via a change feed trigger."
+    ],
+    "cosmosDbRecordId": "cosmos-ast-emp007-01",
+    "blobPath": "employee-knowledge-raw/employees/EMP007/EMP007_ai_search_index_design.docx",
+    "aiSearchIndexed": true,
+    "aiSearchDocumentKey": "search-ast-emp007-01"
+  }
+]

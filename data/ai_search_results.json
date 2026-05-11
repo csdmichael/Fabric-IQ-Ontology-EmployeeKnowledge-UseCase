@@ -1,0 +1,134 @@
+{
+  "indexName": "employee-knowledge-index",
+  "indexStats": {
+    "documentCount": 847,
+    "vectorDimensions": 1536,
+    "lastIndexerRun": "2026-05-10T15:00:00Z",
+    "indexerStatus": "success",
+    "storageSize": "142 MB"
+  },
+  "sampleQuery": {
+    "query": "employees with expertise in Azure AI and machine learning",
+    "queryType": "semantic",
+    "semanticConfiguration": "employee-knowledge-semantic",
+    "top": 5,
+    "select": "documentId,employeeId,documentType,format,department,caption,score"
+  },
+  "results": [
+    {
+      "documentId": "search-ast-emp001-01",
+      "employeeId": "EMP001",
+      "displayName": "Alice Chen",
+      "department": "R&D",
+      "documentType": "Report",
+      "format": "pdf",
+      "title": "Q1 R&D Project Summary",
+      "caption": "The R&D team completed the data ingestion pipeline and ontology mapping phases, with active focus on machine learning model integration and Azure AI Search configuration.",
+      "score": 0.9842,
+      "rerankerScore": 2.731,
+      "highlights": "employees with expertise in <em>Azure AI</em> and <em>machine learning</em> contributed 4 major deliverables in Q1",
+      "keyTopics": ["machine learning", "data pipeline", "ontology design", "Azure AI"],
+      "aiSearchIndexed": true
+    },
+    {
+      "documentId": "search-ast-emp007-01",
+      "employeeId": "EMP007",
+      "displayName": "Raj Patel",
+      "department": "Architecture",
+      "documentType": "Design Document",
+      "format": "docx",
+      "title": "Azure AI Search Index Design – Employee Knowledge",
+      "caption": "This design document defines the AI Search index schema, vector embedding configuration, and semantic search settings for the Employee Knowledge Graph.",
+      "score": 0.9714,
+      "rerankerScore": 2.618,
+      "highlights": "<em>Azure AI Search</em> provides hybrid semantic and vector search over all employee knowledge assets",
+      "keyTopics": ["AI Search", "vector index", "semantic search", "embeddings", "RAG pipeline"],
+      "aiSearchIndexed": true
+    },
+    {
+      "documentId": "search-ast-emp004-01",
+      "employeeId": "EMP004",
+      "displayName": "Maria Santos",
+      "department": "Architecture",
+      "documentType": "Specification",
+      "format": "pdf",
+      "title": "Employee Knowledge Ontology Design Specification",
+      "caption": "The ontology aligns to Microsoft Fabric Ontologies and is exposed through Purview Unified Catalog for governance. It models employees, contributions, and digital assets.",
+      "score": 0.9510,
+      "rerankerScore": 2.405,
+      "highlights": "Ontology entities expose <em>machine learning</em> model metadata and <em>Azure</em> resource identifiers",
+      "keyTopics": ["ontology", "semantic model", "knowledge graph", "Fabric", "Purview"],
+      "aiSearchIndexed": true
+    },
+    {
+      "documentId": "search-ast-emp001-02",
+      "employeeId": "EMP001",
+      "displayName": "Alice Chen",
+      "department": "R&D",
+      "documentType": "Presentation",
+      "format": "pptx",
+      "title": "Employee Knowledge Graph – Architecture Overview",
+      "caption": "Architecture overview presentation covering OneLake, Microsoft Graph Connectors, Azure AI Search, and the RAG engine powered by Azure OpenAI.",
+      "score": 0.9380,
+      "rerankerScore": 2.301,
+      "highlights": "<em>Azure AI Search</em> indexes all extracted content with vector embeddings for semantic search and RAG",
+      "keyTopics": ["Microsoft Fabric", "OneLake", "knowledge graph", "RAG", "Azure AI Search"],
+      "aiSearchIndexed": true
+    },
+    {
+      "documentId": "search-ast-emp002-01",
+      "employeeId": "EMP002",
+      "displayName": "David Kim",
+      "department": "Engineering",
+      "documentType": "Spreadsheet",
+      "format": "xlsx",
+      "title": "Engineering Skills Matrix Q1 2026",
+      "caption": "Skills matrix tracking proficiency in Azure AI, Python, Power BI, and Terraform across 18 engineering team members, with 42 active certifications.",
+      "score": 0.9124,
+      "rerankerScore": 2.186,
+      "highlights": "18 engineers hold <em>Azure AI</em> proficiency; 42 certifications on file covering <em>machine learning</em> and cloud engineering",
+      "keyTopics": ["Python", "Azure", "Terraform", "Power BI", "Fabric"],
+      "aiSearchIndexed": true
+    }
+  ],
+  "facets": {
+    "department": [
+      { "value": "R&D", "count": 187 },
+      { "value": "Engineering", "count": 162 },
+      { "value": "Architecture", "count": 134 },
+      { "value": "Analytics", "count": 98 },
+      { "value": "DevOps", "count": 87 },
+      { "value": "Finance", "count": 76 },
+      { "value": "Operations", "count": 63 },
+      { "value": "HR", "count": 40 }
+    ],
+    "format": [
+      { "value": "pdf", "count": 320 },
+      { "value": "docx", "count": 248 },
+      { "value": "pptx", "count": 176 },
+      { "value": "xlsx", "count": 103 }
+    ],
+    "documentType": [
+      { "value": "Report", "count": 214 },
+      { "value": "Presentation", "count": 176 },
+      { "value": "Document", "count": 163 },
+      { "value": "Spreadsheet", "count": 103 },
+      { "value": "Specification", "count": 91 },
+      { "value": "Design Document", "count": 60 },
+      { "value": "Runbook", "count": 40 }
+    ]
+  },
+  "indexerConfig": {
+    "schedule": "PT1H",
+    "dataSourceType": "cosmosdb",
+    "targetIndexName": "employee-knowledge-index",
+    "skillset": "employee-knowledge-skillset",
+    "skills": [
+      { "name": "entity-recognition", "type": "@odata.type/Microsoft.Skills.Text.EntityRecognitionSkill" },
+      { "name": "key-phrase-extraction", "type": "@odata.type/Microsoft.Skills.Text.KeyPhraseExtractionSkill" },
+      { "name": "language-detection", "type": "@odata.type/Microsoft.Skills.Text.LanguageDetectionSkill" },
+      { "name": "text-embedding", "type": "@odata.type/Microsoft.Skills.Text.AzureOpenAIEmbeddingSkill", "model": "text-embedding-ada-002" },
+      { "name": "document-intelligence-enrichment", "type": "@odata.type/Microsoft.Skills.Custom.WebApiSkill" }
+    ]
+  }
+}
