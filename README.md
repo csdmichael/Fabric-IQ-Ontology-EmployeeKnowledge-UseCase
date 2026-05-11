@@ -57,7 +57,7 @@ Power BI Reports & Dashboards
 ```
 
 ### Core Components
-- **API**: FastAPI server at `https://fabric-iq-emp-knowledge-api.azurewebsites.net`
+- **API**: FastAPI server at [https://fabric-iq-emp-knowledge-api.azurewebsites.net](https://fabric-iq-emp-knowledge-api.azurewebsites.net)
 - **Data**: 1,020 records (100 employees, 100 contributions, 800 digital assets, 20 projects)
 - **Fabric**: Ontology with 4 tables, 2 relationships, 5 measures
 - **Pipeline**: 4-stage process (Extract, Transform, Load, Validate)
@@ -346,7 +346,7 @@ To rebuild the entire solution in a new environment:
 - **Power BI Guide**: [powerbi/POWERBI_SETUP_GUIDE.md](powerbi/POWERBI_SETUP_GUIDE.md)
 - **Power BI Summary**: [powerbi/FABRIC_POWERBI_DEPLOYMENT_SUMMARY.md](powerbi/FABRIC_POWERBI_DEPLOYMENT_SUMMARY.md)
 - **API Details**: [api/README.md](api/README.md)
-- **GitHub**: https://github.com/csdmichael/Fabric-IQ-Ontology-EmployeeKnowledge-UseCase
+- **GitHub**: [https://github.com/csdmichael/Fabric-IQ-Ontology-EmployeeKnowledge-UseCase](https://github.com/csdmichael/Fabric-IQ-Ontology-EmployeeKnowledge-UseCase)
 
 ---
 
