@@ -25,7 +25,7 @@ import subprocess
 import time
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Tuple
 
 import requests
 from azure.core.credentials import AzureKeyCredential
@@ -58,6 +58,9 @@ SERVICE_CFG = REPO_ROOT / "config" / "service-config.json"
 
 DOC_RESULTS_FILE = DATA_DIR / "document_intelligence_results.json"
 PARSED_FILE = DATA_DIR / "parsed_documents_cosmosdb.json"
+
+# Extensions that are usually accepted by prebuilt-layout. Others are handled via fallback parsing.
+DOCINTEL_SUPPORTED_EXTENSIONS = {".pdf", ".docx", ".xlsx", ".pptx", ".jpg", ".jpeg", ".png", ".tif", ".tiff", ".bmp"}
 
 
 @dataclass
@@ -126,6 +129,10 @@ def iter_documents() -> List[Path]:
     return docs
 
 
+def is_docintel_candidate(path: Path) -> bool:
+    return path.suffix.lower() in DOCINTEL_SUPPORTED_EXTENSIONS
+
+
 def upload_to_blob(cfg: Config, docs: List[Path]) -> Dict[str, str]:
     account_url = f"https://{cfg.storage_account}.blob.core.windows.net"
     service = BlobServiceClient(account_url=account_url, credential=cfg.storage_key or DefaultAzureCredential())
@@ -164,6 +171,46 @@ def upload_to_blob(cfg: Config, docs: List[Path]) -> Dict[str, str]:
     return blob_urls
 
 
+def _submit_with_retry(url: str, headers: dict, payload: bytes, max_attempts: int = 6) -> requests.Response:
+    delay = 1.0
+    for attempt in range(1, max_attempts + 1):
+        resp = requests.post(url, headers=headers, data=payload, timeout=120)
+        if resp.status_code != 429:
+            return resp
+
+        retry_after = resp.headers.get("Retry-After")
+        wait = float(retry_after) if retry_after and retry_after.isdigit() else delay
+        print(f"WARN doc intel submit throttled (attempt {attempt}/{max_attempts}); sleeping {wait:.1f}s")
+        time.sleep(wait)
+        delay = min(delay * 2, 30)
+
+    return resp
+
+
+def _poll_with_retry(op_loc: str, headers: dict, max_polls: int = 160) -> dict:
+    delay = 2.0
+    for _ in range(max_polls):
+        r = requests.get(op_loc, headers=headers, timeout=60)
+        if r.status_code == 429:
+            retry_after = r.headers.get("Retry-After")
+            wait = float(retry_after) if retry_after and retry_after.isdigit() else delay
+            print(f"WARN doc intel poll throttled; sleeping {wait:.1f}s")
+            time.sleep(wait)
+            delay = min(delay * 1.5, 30)
+            continue
+
+        r.raise_for_status()
+        payload = r.json()
+        status = payload.get("status")
+        if status == "succeeded":
+            return payload
+        if status == "failed":
+            raise RuntimeError("Doc Intel analysis failed")
+        time.sleep(2)
+
+    raise TimeoutError("Doc Intel polling timeout")
+
+
 def analyze_document(cfg: Config, token: str, path: Path) -> dict:
     url = (
         f"{cfg.docintel_endpoint}/documentintelligence/documentModels/prebuilt-layout:analyze"
@@ -174,7 +221,7 @@ def analyze_document(cfg: Config, token: str, path: Path) -> dict:
         "Content-Type": "application/octet-stream",
     }
     with path.open("rb") as f:
-        resp = requests.post(url, headers=headers, data=f.read(), timeout=120)
+        resp = _submit_with_retry(url, headers, f.read())
     resp.raise_for_status()
 
     op_loc = resp.headers.get("operation-location")
@@ -182,17 +229,10 @@ def analyze_document(cfg: Config, token: str, path: Path) -> dict:
         raise RuntimeError(f"Missing operation-location for {path}")
 
     poll_headers = {"Authorization": f"Bearer {token}"}
-    for _ in range(120):
-        r = requests.get(op_loc, headers=poll_headers, timeout=60)
-        r.raise_for_status()
-        payload = r.json()
-        status = payload.get("status")
-        if status == "succeeded":
-            return payload
-        if status == "failed":
-            raise RuntimeError(f"Doc Intel failed for {path}")
-        time.sleep(2)
-    raise TimeoutError(f"Doc Intel polling timeout for {path}")
+    try:
+        return _poll_with_retry(op_loc, poll_headers)
+    except TimeoutError:
+        raise TimeoutError(f"Doc Intel polling timeout for {path}")
 
 
 def normalize_doc_result(path: Path, blob_url: str, payload: dict) -> dict:
@@ -253,7 +293,10 @@ def fallback_normalize_doc(path: Path, blob_url: str, reason: str) -> dict:
 
 
 def upsert_cosmos(cfg: Config, docs: List[dict]):
-    if cfg.cosmos_key:
+    # In App Service private-path execution, prefer managed identity first.
+    if os.environ.get("WEBSITE_INSTANCE_ID"):
+        client = CosmosClient(cfg.cosmos_endpoint, credential=DefaultAzureCredential())
+    elif cfg.cosmos_key:
         try:
             client = CosmosClient(cfg.cosmos_endpoint, credential=cfg.cosmos_key)
             # Probe account to fail fast on local-auth-disabled accounts.
@@ -435,6 +478,8 @@ def main() -> int:
 
     for idx, p in enumerate(docs, start=1):
         try:
+            if not is_docintel_candidate(p):
+                raise RuntimeError(f"unsupported-format-for-docintel:{p.suffix.lower()}")
             payload = analyze_document(cfg, token, p)
             results.append(payload)
             normalized.append(normalize_doc_result(p, blob_urls[str(p)], payload))

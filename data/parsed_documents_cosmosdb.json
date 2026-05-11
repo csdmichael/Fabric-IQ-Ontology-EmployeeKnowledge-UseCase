@@ -51,7 +51,7 @@
     "language": "unknown",
     "confidence": 0.0,
     "parseFallback": true,
-    "parseError": "400 Client Error: Bad Request for url: https://doc-intelligence-poc-my.cognitiveservices.azure.com/documentintelligence/documentModels/prebuilt-layout:analyze?api-version=2024-11-30"
+    "parseError": "unsupported-format-for-docintel:.txt"
   },
   {
     "id": "DOC-EMP001-AST-EMP001-05",
@@ -66,7 +66,7 @@
     "language": "unknown",
     "confidence": 0.0,
     "parseFallback": true,
-    "parseError": "400 Client Error: Bad Request for url: https://doc-intelligence-poc-my.cognitiveservices.azure.com/documentintelligence/documentModels/prebuilt-layout:analyze?api-version=2024-11-30"
+    "parseError": "unsupported-format-for-docintel:.one"
   },
   {
     "id": "DOC-EMP001-AST-EMP001-06",
@@ -94,7 +94,7 @@
     "language": "unknown",
     "confidence": 0.0,
     "parseFallback": true,
-    "parseError": "400 Client Error: Bad Request for url: https://doc-intelligence-poc-my.cognitiveservices.azure.com/documentintelligence/documentModels/prebuilt-layout:analyze?api-version=2024-11-30"
+    "parseError": "unsupported-format-for-docintel:.csv"
   },
   {
     "id": "DOC-EMP001-AST-EMP001-08",
@@ -109,7 +109,7 @@
     "language": "unknown",
     "confidence": 0.0,
     "parseFallback": true,
-    "parseError": "400 Client Error: Bad Request for url: https://doc-intelligence-poc-my.cognitiveservices.azure.com/documentintelligence/documentModels/prebuilt-layout:analyze?api-version=2024-11-30"
+    "parseError": "unsupported-format-for-docintel:.md"
   },
   {
     "id": "DOC-EMP001-AST-EMP001-09",

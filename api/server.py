@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -9,6 +10,7 @@ from urllib.parse import parse_qs, urlparse
 REPO_ROOT = Path(__file__).resolve().parents[1]
 CONFIG_DIR = REPO_ROOT / "config"
 DATA_DIR = REPO_ROOT / "data"
+SERVICE_CONFIG_PATH = CONFIG_DIR / "service-config.json"
 
 JSON_ROUTES = {
     "/api/config/endpoints": CONFIG_DIR / "endpoints.json",
@@ -30,6 +32,53 @@ JSON_ROUTES = {
 def _load_json(path: Path) -> object:
     with path.open(encoding="utf-8") as f:
         return json.load(f)
+
+
+def _cosmos_sync_parsed_documents() -> dict[str, object]:
+    try:
+        from azure.cosmos import CosmosClient, PartitionKey
+        from azure.identity import DefaultAzureCredential
+    except Exception as exc:
+        return {
+            "ok": False,
+            "error": "Missing Azure SDK dependencies in API runtime",
+            "details": str(exc),
+        }
+
+    service_cfg = _load_json(SERVICE_CONFIG_PATH)
+    cosmos_cfg = service_cfg.get("cosmosDb", {}) if isinstance(service_cfg, dict) else {}
+    endpoint = cosmos_cfg.get("endpoint")
+    db_name = cosmos_cfg.get("databaseName")
+    container_name = (cosmos_cfg.get("containers") or {}).get("documentParsing")
+
+    if not endpoint or not db_name or not container_name:
+        return {"ok": False, "error": "Cosmos configuration is incomplete in config/service-config.json"}
+
+    parsed = _load_json(DATA_DIR / "parsed_documents_cosmosdb.json")
+    if not isinstance(parsed, list):
+        return {"ok": False, "error": "parsed_documents_cosmosdb.json is not a list"}
+
+    client = CosmosClient(endpoint, credential=DefaultAzureCredential())
+    db = client.create_database_if_not_exists(id=db_name)
+    container = db.create_container_if_not_exists(
+        id=container_name,
+        partition_key=PartitionKey(path="/employeeId"),
+        offer_throughput=400,
+    )
+
+    upserted = 0
+    for item in parsed:
+        if isinstance(item, dict):
+            container.upsert_item(item)
+            upserted += 1
+
+    return {
+        "ok": True,
+        "upserted": upserted,
+        "database": db_name,
+        "container": container_name,
+        "timestampUtc": datetime.now(timezone.utc).isoformat(),
+    }
 
 
 def _apply_filters(payload: object, query: dict[str, list[str]]) -> object:
@@ -161,9 +210,27 @@ class ApiHandler(BaseHTTPRequestHandler):
     def do_OPTIONS(self) -> None:  # noqa: N802
         self.send_response(204)
         self.send_header("Access-Control-Allow-Origin", "*")
-        self.send_header("Access-Control-Allow-Methods", "GET, OPTIONS")
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
         self.end_headers()
+
+    def do_POST(self) -> None:  # noqa: N802
+        parsed_url = urlparse(self.path)
+        path = parsed_url.path.rstrip("/") or "/"
+
+        if path != "/api/admin/sync-cosmos":
+            self._send_json(404, {"error": "Not found", "path": path})
+            return
+
+        # Basic guard to avoid accidental triggering.
+        expected_key = os.environ.get("API_ADMIN_KEY", "")
+        provided_key = self.headers.get("X-API-Key", "")
+        if expected_key and provided_key != expected_key:
+            self._send_json(403, {"error": "Forbidden"})
+            return
+
+        result = _cosmos_sync_parsed_documents()
+        self._send_json(200 if result.get("ok") else 500, result)
 
     def do_GET(self) -> None:  # noqa: N802
         parsed_url = urlparse(self.path)
@@ -231,7 +298,6 @@ class ApiHandler(BaseHTTPRequestHandler):
 
 
 def run(host: str = "0.0.0.0", port: int = 8080) -> None:
-    import os
     port = int(os.environ.get("PORT", port))
     server = ThreadingHTTPServer((host, port), ApiHandler)
     print(f"Fabric IQ API listening on http://{host}:{port}")
