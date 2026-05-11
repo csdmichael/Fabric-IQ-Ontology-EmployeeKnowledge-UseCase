@@ -12,7 +12,7 @@
     Azure subscription ID (optional, uses default if not specified)
 
 .PARAMETER ResourceGroup
-    Azure resource group name (default: ai-myaacoub)
+    Azure resource group name (default: value from config/azure-hosting-resources.json)
 
 .EXAMPLE
     .\verify-deployment.ps1
@@ -25,21 +25,35 @@ param(
     [string]$SubscriptionId,
     
     [Parameter(Mandatory=$false)]
-    [string]$ResourceGroup = "ai-myaacoub"
+    [string]$ResourceGroup
 )
+
+$RepoRoot = Split-Path -Parent $PSScriptRoot
+$HostingConfigPath = Join-Path $RepoRoot "config/azure-hosting-resources.json"
+$EndpointsConfigPath = Join-Path $RepoRoot "config/endpoints.json"
+
+if (-not (Test-Path $HostingConfigPath) -or -not (Test-Path $EndpointsConfigPath)) {
+    throw "Missing required config files under config/."
+}
+
+$HostingConfig = Get-Content $HostingConfigPath -Raw | ConvertFrom-Json
+$EndpointsConfig = Get-Content $EndpointsConfigPath -Raw | ConvertFrom-Json
+
+if (-not $SubscriptionId) { $SubscriptionId = $HostingConfig.subscriptionId }
+if (-not $ResourceGroup) { $ResourceGroup = $HostingConfig.resourceGroup }
 
 # ============================================================================
 # CONFIGURATION
 # ============================================================================
 
 $Config = @{
-    ApiName = "fabric-iq-emp-knowledge-api"
-    ApiUrl = "https://fabric-iq-emp-knowledge-api.azurewebsites.net"
-    UiName = "fabric-iq-emp-knowledge-ui"
-    UiUrl = "https://fabric-iq-emp-knowledge-ui.azurewebsites.net"
-    FabricWorkspaceId = "38362838-0531-4215-89af-a8a79221b545"
-    FabricLakehouseId = "d11b209f-c774-481e-adcb-79920a94fd20"
-    StorageAccount = "aistoragemyaacoub"
+    ApiName = $HostingConfig.hosting.apiWebApp.name
+    ApiUrl = $HostingConfig.hosting.apiWebApp.url
+    UiName = $HostingConfig.hosting.uiWebApp.name
+    UiUrl = $HostingConfig.hosting.uiWebApp.publicUrl
+    FabricWorkspaceId = $EndpointsConfig.microsoftFabric.workspaceId
+    FabricLakehouseId = $EndpointsConfig.microsoftFabric.lakehouseId
+    StorageAccount = ([Uri]$EndpointsConfig.azure.blobStorageEndpoint).Host.Split('.')[0]
 }
 
 # ============================================================================

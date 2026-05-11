@@ -44,6 +44,8 @@
     "endpoint": "https://aisearch-poc-myaacoub.search.windows.net",
     "apiVersion": "2024-07-01",
     "indexName": "employee-knowledge-index",
+    "jsonIndexName": "employee-knowledge-json-index",
+    "docIndexName": "employee-knowledge-doc-index",
     "indexerName": "employee-knowledge-indexer",
     "dataSourceName": "employee-knowledge-cosmosdb",
     "skillsetName": "employee-knowledge-skillset",

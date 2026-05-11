@@ -43,7 +43,8 @@ param(
     [switch]$SkipLakehouse,
     [switch]$SkipPipeline,
     [switch]$SkipSemanticModel,
-    [switch]$SkipReports
+    [switch]$SkipReports,
+    [switch]$SkipOntologyPublish
 )
 
 Set-StrictMode -Version Latest
@@ -126,6 +127,87 @@ function Invoke-FabricApi {
         Write-Err $_.Exception.Message
         if ($_.ErrorDetails.Message) { Write-Info $_.ErrorDetails.Message }
         throw
+    }
+}
+
+function Publish-OntologyEntities {
+    param(
+        [string]$WorkspaceId,
+        [string]$OntologyId,
+        [object]$OntologyDefinition
+    )
+
+    $tableEntities = @()
+    foreach ($tableProp in $OntologyDefinition.tables.PSObject.Properties) {
+        $tableName = $tableProp.Name
+        $tableDef = $tableProp.Value
+        $foreignKeys = @()
+        if ($tableDef.PSObject.Properties.Name -contains "foreign_keys") {
+            $foreignKeys = @($tableDef.foreign_keys)
+        }
+        $businessKey = $null
+        if ($tableDef.PSObject.Properties.Name -contains "business_key") {
+            $businessKey = $tableDef.business_key
+        }
+        $tableEntities += @{
+            name = $tableName
+            kind = "Table"
+            attributes = @{
+                columns = $tableDef.columns
+                primaryKey = $tableDef.primary_key
+                foreignKeys = $foreignKeys
+                businessKey = $businessKey
+            }
+        }
+    }
+
+    $relationshipEntities = @()
+    foreach ($rel in $OntologyDefinition.relationships) {
+        $relationshipEntities += @{
+            name = $rel.name
+            kind = "Relationship"
+            attributes = @{
+                fromTable = $rel.from_table
+                fromColumn = $rel.from_column
+                toTable = $rel.to_table
+                toColumn = $rel.to_column
+                cardinality = $rel.cardinality
+            }
+        }
+    }
+
+    $payload = @{
+        entities = @($tableEntities + $relationshipEntities)
+        measures = $OntologyDefinition.measures
+        metadata = @{
+            workspaceId = $WorkspaceId
+            ontologyId = $OntologyId
+            source = "fabric/ontology/fabric_iq_ontology_complete.json"
+            generatedAt = (Get-Date).ToString("o")
+        }
+    }
+
+    $candidateCalls = @(
+        @{ Method = "POST"; Url = "$FabricApiBase/workspaces/$WorkspaceId/ontologies/$OntologyId/entities:upsert" },
+        @{ Method = "POST"; Url = "$FabricApiBase/workspaces/$WorkspaceId/ontologies/$OntologyId/entities" },
+        @{ Method = "PUT"; Url = "$FabricApiBase/workspaces/$WorkspaceId/items/$OntologyId/definition" }
+    )
+
+    $errors = @()
+    foreach ($call in $candidateCalls) {
+        try {
+            Invoke-FabricApi -Method $call.Method -Url $call.Url -Body $payload | Out-Null
+            Write-Ok "Published ontology entities using endpoint: $($call.Url)"
+            return
+        } catch {
+            $errors += "$($call.Method) $($call.Url) :: $($_.Exception.Message)"
+        }
+    }
+
+    Write-Warn "Could not publish ontology entities via REST endpoints for this tenant/API version."
+    Write-Info "Tried endpoints:"
+    foreach ($e in $errors) {
+        Write-Info "  $e"
     }
 }
 
@@ -286,6 +368,10 @@ $ontologyDef = Get-Content (Join-Path $FabricDir 'ontology\fabric_iq_ontology_co
 $ontologyItem = Invoke-FabricApi -Url "$FabricApiBase/workspaces/$WorkspaceId/items/$ontologyId" -AllowNotFound
 if ($ontologyItem) {
     Write-Ok "Ontology item exists: $($ontologyItem.displayName) ($ontologyId)"
+    if (-not $SkipOntologyPublish) {
+        Write-Step 'Publishing ontology entities from fabric/ontology/fabric_iq_ontology_complete.json...'
+        Publish-OntologyEntities -WorkspaceId $WorkspaceId -OntologyId $ontologyId -OntologyDefinition $ontologyDef
+    }
 } else {
     Write-Warn "Ontology item $ontologyId not found in workspace."
     Write-Info "The ontology definition is at: $FabricDir\ontology\fabric_iq_ontology_complete.json"

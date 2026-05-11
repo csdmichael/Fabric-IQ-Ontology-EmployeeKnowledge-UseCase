@@ -55,6 +55,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = REPO_ROOT / "data"
 EMP_DIR = DATA_DIR / "employees"
 SERVICE_CFG = REPO_ROOT / "config" / "service-config.json"
+ENDPOINTS_CFG = REPO_ROOT / "config" / "endpoints.json"
 
 DOC_RESULTS_FILE = DATA_DIR / "document_intelligence_results.json"
 PARSED_FILE = DATA_DIR / "parsed_documents_cosmosdb.json"
@@ -67,6 +68,7 @@ DOCINTEL_SUPPORTED_EXTENSIONS = {".pdf", ".docx", ".xlsx", ".pptx", ".jpg", ".jp
 class Config:
     storage_account: str
     storage_key: str | None
+    storage_account_url: str
     storage_container: str
     cosmos_endpoint: str
     cosmos_key: str | None
@@ -83,10 +85,31 @@ class Config:
 def load_cfg() -> Config:
     with SERVICE_CFG.open("r", encoding="utf-8") as f:
         cfg = json.load(f)
+    with ENDPOINTS_CFG.open("r", encoding="utf-8") as f:
+        endpoints_cfg = json.load(f)
+
+    configured_blob_endpoint = endpoints_cfg.get("azure", {}).get("blobStorageEndpoint", "")
+    endpoint_account_name = ""
+    if configured_blob_endpoint:
+        endpoint_account_name = configured_blob_endpoint.replace("https://", "").split(".")[0]
+
+    account_name = os.environ.get("AZ_STORAGE_ACCOUNT") or endpoint_account_name
+    if not account_name:
+        raise RuntimeError("Unable to resolve storage account name from env or config/endpoints.json")
+
+    configured_account_url = os.environ.get("AZ_STORAGE_ACCOUNT_URL")
+    if not configured_account_url:
+        configured_account_url = configured_blob_endpoint or f"https://{account_name}.blob.core.windows.net"
+
+    # Keep the public blob FQDN for TLS while letting Private DNS resolve it to the PE IP.
+    configured_account_url = configured_account_url.replace(
+        ".privatelink.blob.core.windows.net", ".blob.core.windows.net"
+    ).rstrip("/")
 
     return Config(
-        storage_account=os.environ.get("AZ_STORAGE_ACCOUNT", "aistoragemyaacoub"),
+        storage_account=account_name,
         storage_key=os.environ.get("AZ_STORAGE_KEY"),
+        storage_account_url=configured_account_url,
         storage_container=cfg["documentIntelligence"]["storageContainer"],
         cosmos_endpoint=cfg["cosmosDb"]["endpoint"],
         cosmos_key=os.environ.get("AZ_COSMOS_KEY"),
@@ -94,8 +117,8 @@ def load_cfg() -> Config:
         cosmos_container=cfg["cosmosDb"]["containers"]["documentParsing"],
         search_endpoint=cfg["aiSearch"]["endpoint"],
         search_key=os.environ["AZ_SEARCH_ADMIN_KEY"],
-        search_json_index=os.environ.get("AZ_SEARCH_JSON_INDEX", "employee-knowledge-json-index"),
-        search_doc_index=os.environ.get("AZ_SEARCH_DOC_INDEX", "employee-knowledge-doc-index"),
+        search_json_index=os.environ.get("AZ_SEARCH_JSON_INDEX", cfg["aiSearch"].get("jsonIndexName", cfg["aiSearch"]["indexName"])),
+        search_doc_index=os.environ.get("AZ_SEARCH_DOC_INDEX", cfg["aiSearch"].get("docIndexName", cfg["aiSearch"]["indexName"])),
         docintel_endpoint=cfg["documentIntelligence"]["endpoint"].rstrip("/"),
         docintel_api_version=cfg["documentIntelligence"]["apiVersion"],
     )
@@ -134,7 +157,7 @@ def is_docintel_candidate(path: Path) -> bool:
 
 
 def upload_to_blob(cfg: Config, docs: List[Path]) -> Dict[str, str]:
-    account_url = f"https://{cfg.storage_account}.blob.core.windows.net"
+    account_url = cfg.storage_account_url
     service = BlobServiceClient(account_url=account_url, credential=cfg.storage_key or DefaultAzureCredential())
     container = service.get_container_client(cfg.storage_container)
     try:
@@ -148,7 +171,7 @@ def upload_to_blob(cfg: Config, docs: List[Path]) -> Dict[str, str]:
         try:
             with p.open("rb") as f:
                 container.upload_blob(name=rel, data=f, overwrite=True)
-            blob_urls[str(p)] = f"https://{cfg.storage_account}.blob.core.windows.net/{cfg.storage_container}/{rel}"
+            blob_urls[str(p)] = f"{account_url}/{cfg.storage_container}/{rel}"
             continue
         except Exception as ex:
             msg = str(ex)
@@ -159,7 +182,7 @@ def upload_to_blob(cfg: Config, docs: List[Path]) -> Dict[str, str]:
                     container = service.get_container_client(cfg.storage_container)
                     with p.open("rb") as f:
                         container.upload_blob(name=rel, data=f, overwrite=True)
-                    blob_urls[str(p)] = f"https://{cfg.storage_account}.blob.core.windows.net/{cfg.storage_container}/{rel}"
+                    blob_urls[str(p)] = f"{account_url}/{cfg.storage_container}/{rel}"
                     continue
                 except Exception as inner_ex:
                     print(f"WARN blob upload failed for {rel}: {inner_ex}")

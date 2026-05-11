@@ -7,13 +7,30 @@ Loads employee knowledge data and creates semantic model relationships
 import json
 import pandas as pd
 from pathlib import Path
-import os
 from datetime import datetime
 
-# Configuration
-WORKSPACE_ID = "38362838-0531-4215-89af-a8a79221b545"
-LAKEHOUSE_ID = "d11b209f-c774-481e-adcb-79920a94fd20"
-SEMANTIC_MODEL_ID = "21e0a7be-1e7d-4110-8faa-d835f81c6559"
+REPO_ROOT = Path(__file__).resolve().parents[1]
+ENDPOINTS_PATH = REPO_ROOT / "config" / "endpoints.json"
+
+
+def load_fabric_ids():
+    """Load Fabric IDs from config/endpoints.json."""
+    with open(ENDPOINTS_PATH, 'r', encoding='utf-8') as f:
+        endpoints = json.load(f)
+
+    fabric = endpoints.get("microsoftFabric", {})
+    workspace_id = fabric.get("workspaceId")
+    lakehouse_id = fabric.get("lakehouseId")
+    semantic_model_id = fabric.get("semanticModelId")
+
+    if not workspace_id or not lakehouse_id or not semantic_model_id:
+        raise RuntimeError("Missing microsoftFabric workspace/lakehouse/semantic model IDs in config/endpoints.json")
+
+    return {
+        "workspace_id": workspace_id,
+        "lakehouse_id": lakehouse_id,
+        "semantic_model_id": semantic_model_id,
+    }
 
 def load_json_to_dataframe(file_path):
     """Load JSON file and convert to DataFrame"""
@@ -87,10 +104,11 @@ def create_ontology(tables):
     print("STEP 2: CREATE ONTOLOGY & DATA RELATIONSHIPS")
     print("="*70)
     
+    fabric_ids = load_fabric_ids()
     ontology = {
-        "workspace_id": WORKSPACE_ID,
-        "lakehouse_id": LAKEHOUSE_ID,
-        "semantic_model_id": SEMANTIC_MODEL_ID,
+        "workspace_id": fabric_ids["workspace_id"],
+        "lakehouse_id": fabric_ids["lakehouse_id"],
+        "semantic_model_id": fabric_ids["semantic_model_id"],
         "created": datetime.now().isoformat(),
         "tables": {},
         "relationships": [],
@@ -209,12 +227,13 @@ def create_dataflow_config(tables):
     print("STEP 3: CREATE DATA PIPELINE CONFIGURATION")
     print("="*70)
     
+    fabric_ids = load_fabric_ids()
     dataflow = {
         "name": "Employee Knowledge Data Pipeline",
         "description": "Fabric dataflow for ingesting employee knowledge data into OneLake",
         "created": datetime.now().isoformat(),
-        "workspace_id": WORKSPACE_ID,
-        "lakehouse_id": LAKEHOUSE_ID,
+        "workspace_id": fabric_ids["workspace_id"],
+        "lakehouse_id": fabric_ids["lakehouse_id"],
         "stages": [],
         "transformations": []
     }
@@ -350,9 +369,10 @@ def create_powerbi_config(tables, ontology):
     print("STEP 5: CREATE POWER BI REPORT CONFIGURATION")
     print("="*70)
     
+    fabric_ids = load_fabric_ids()
     reports_config = {
-        "workspace_id": WORKSPACE_ID,
-        "semantic_model_id": SEMANTIC_MODEL_ID,
+        "workspace_id": fabric_ids["workspace_id"],
+        "semantic_model_id": fabric_ids["semantic_model_id"],
         "created": datetime.now().isoformat(),
         "reports": []
     }
@@ -488,11 +508,12 @@ def create_summary(tables, ontology, dataflow, powerbi_config):
     print("DEPLOYMENT SUMMARY")
     print("="*70)
     
+    fabric_ids = load_fabric_ids()
     summary = {
         "timestamp": datetime.now().isoformat(),
-        "workspace_id": WORKSPACE_ID,
-        "lakehouse_id": LAKEHOUSE_ID,
-        "semantic_model_id": SEMANTIC_MODEL_ID,
+        "workspace_id": fabric_ids["workspace_id"],
+        "lakehouse_id": fabric_ids["lakehouse_id"],
+        "semantic_model_id": fabric_ids["semantic_model_id"],
         "data_loaded": {
             "Employees": len(tables.get('Employees', pd.DataFrame())),
             "Contributions": len(tables.get('Contributions', pd.DataFrame())),
