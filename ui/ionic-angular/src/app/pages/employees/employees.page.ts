@@ -101,9 +101,9 @@ export class EmployeesPage {
 
   async initialize(): Promise<void> {
     const [employees, contributions, projects] = await Promise.all([
-      this.readJson<Employee[]>('/data/employees.json'),
-      this.readJson<Contribution[]>('/data/contributions.json'),
-      this.readJson<Project[]>('/data/projects.json')
+      this.readJson<Employee[]>('/api/employees'),
+      this.readJson<Contribution[]>('/api/contributions'),
+      this.readJson<Project[]>('/api/projects')
     ]);
 
     this.employees = employees;

@@ -116,7 +116,7 @@ export class MsGraphPage {
   }
 
   async initialize(): Promise<void> {
-    this.graphData = await this.readJson<GraphData>('/data/graph_data.json');
+    this.graphData = await this.readJson<GraphData>('/api/graph-data');
   }
 
   private async readJson<T>(url: string): Promise<T> {

@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-05-10T20:04:27.278852",
+  "workspace_id": "38362838-0531-4215-89af-a8a79221b545",
+  "lakehouse_id": "d11b209f-c774-481e-adcb-79920a94fd20",
+  "semantic_model_id": "21e0a7be-1e7d-4110-8faa-d835f81c6559",
+  "data_loaded": {
+    "Employees": 100,
+    "Contributions": 100,
+    "DigitalAssets": 800,
+    "Projects": 20
+  },
+  "total_records": 1020,
+  "ontology_created": true,
+  "ontology_relationships": 2,
+  "ontology_measures": 5,
+  "pipeline_stages": 4,
+  "powerbi_reports": 3,
+  "powerbi_visuals": 11,
+  "status": "READY FOR DEPLOYMENT"
+}

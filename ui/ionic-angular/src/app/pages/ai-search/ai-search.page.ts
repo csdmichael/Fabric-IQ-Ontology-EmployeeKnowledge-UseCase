@@ -87,7 +87,7 @@ export class AiSearchPage {
   }
 
   async initialize(): Promise<void> {
-    this.searchData = await this.readJson<SearchData>('/data/ai_search_results.json');
+    this.searchData = await this.readJson<SearchData>('/api/ai-search');
   }
 
   private async readJson<T>(url: string): Promise<T> {

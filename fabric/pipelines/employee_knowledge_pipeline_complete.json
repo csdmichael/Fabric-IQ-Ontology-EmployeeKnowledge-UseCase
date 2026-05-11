@@ -1,7 +1,7 @@
 {
   "name": "Employee Knowledge Data Pipeline",
   "description": "Fabric dataflow for ingesting employee knowledge data into OneLake",
-  "created": "2026-05-10T06:18:20.139509",
+  "created": "2026-05-10T20:04:27.230878",
   "workspace_id": "38362838-0531-4215-89af-a8a79221b545",
   "lakehouse_id": "d11b209f-c774-481e-adcb-79920a94fd20",
   "stages": [

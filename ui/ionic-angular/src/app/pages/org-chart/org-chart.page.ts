@@ -128,9 +128,9 @@ export class OrgChartPage {
   // ── Load ─────────────────────────────────────────────────────────────────
   async initialize(): Promise<void> {
     const [employees, contributions, hierarchy] = await Promise.all([
-      this.readJson<Employee[]>('/data/employees.json'),
-      this.readJson<Contribution[]>('/data/contributions.json'),
-      this.readJson<OrgHierarchy>('/data/org_hierarchy.json')
+      this.readJson<Employee[]>('/api/employees'),
+      this.readJson<Contribution[]>('/api/contributions'),
+      this.readJson<OrgHierarchy>('/api/org-hierarchy')
     ]);
     this.employees    = employees;
     this.contributions = contributions;

@@ -72,8 +72,8 @@ export class DataSourcesPage {
 
   async initialize(): Promise<void> {
     const [employees, assets] = await Promise.all([
-      this.readJson<Employee[]>('/data/employees.json'),
-      this.readJson<Asset[]>('/data/digital_assets.json')
+      this.readJson<Employee[]>('/api/employees'),
+      this.readJson<Asset[]>('/api/digital-assets')
     ]);
 
     this.employees = employees;

@@ -86,7 +86,7 @@ export class DocumentIntelligencePage {
   }
 
   async initialize(): Promise<void> {
-    const data = await this.readJson<DocIntelResult[]>('/data/document_intelligence_results.json');
+    const data = await this.readJson<DocIntelResult[]>('/api/document-intelligence');
     this.results = data;
     this.filtered = [...data];
   }

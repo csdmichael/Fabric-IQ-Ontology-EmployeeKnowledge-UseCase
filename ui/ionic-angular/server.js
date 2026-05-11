@@ -1,9 +1,11 @@
 const http = require('http');
+const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
 const PORT = parseInt(process.env.PORT || '8080', 10);
 const PUBLIC = path.join(__dirname, 'public');
+const API_BASE_URL = process.env.API_BASE_URL || 'https://fabric-iq-emp-knowledge-api.azurewebsites.net';
 // Repo root is two directories above this file (ui/ionic-angular/ -> repo root)
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
 
@@ -59,9 +61,46 @@ function serve(res, filePath) {
   });
 }
 
+function proxyApi(req, res, pathname, search) {
+  const targetBase = new URL(API_BASE_URL);
+  const targetPath = `${pathname}${search || ''}`;
+  const client = targetBase.protocol === 'http:' ? http : https;
+
+  const proxyReq = client.request(
+    {
+      protocol: targetBase.protocol,
+      hostname: targetBase.hostname,
+      port: targetBase.port || (targetBase.protocol === 'https:' ? 443 : 80),
+      method: req.method,
+      path: targetPath,
+      headers: {
+        ...req.headers,
+        host: targetBase.host,
+      },
+    },
+    (proxyRes) => {
+      res.writeHead(proxyRes.statusCode || 502, proxyRes.headers);
+      proxyRes.pipe(res);
+    }
+  );
+
+  proxyReq.on('error', (error) => {
+    res.writeHead(502, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ error: 'API proxy failed', details: String(error) }));
+  });
+
+  req.pipe(proxyReq);
+}
+
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, `http://localhost:${PORT}`);
   const pathname = url.pathname;
+
+  // Dynamic API proxy: route /api/* through the backend App Service.
+  if (pathname === '/api' || pathname.startsWith('/api/')) {
+    proxyApi(req, res, pathname, url.search);
+    return;
+  }
 
   // Try repo-root data directories first
   const repoPath = resolveRepoPath(pathname);

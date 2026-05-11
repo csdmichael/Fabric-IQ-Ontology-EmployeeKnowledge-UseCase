@@ -63,8 +63,8 @@ export class EmployeeAgentPage {
 
   async initialize(): Promise<void> {
     const [employees, contributions] = await Promise.all([
-      this.readJson<Employee[]>('/data/employees.json'),
-      this.readJson<Contribution[]>('/data/contributions.json')
+      this.readJson<Employee[]>('/api/employees'),
+      this.readJson<Contribution[]>('/api/contributions')
     ]);
     this.employees = employees;
     this.contributions = contributions;

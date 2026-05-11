@@ -5,7 +5,7 @@ export interface EndpointConfig {
 }
 
 export class ConfigService {
-  configPath = '/config/endpoints.json';
+  configPath = '/api/config/endpoints';
   private cachedConfig?: EndpointConfig;
 
   async loadConfig(): Promise<EndpointConfig> {
