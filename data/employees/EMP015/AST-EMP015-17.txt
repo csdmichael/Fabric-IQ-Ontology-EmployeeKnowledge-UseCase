@@ -1,0 +1,5 @@
+Employee: EMP015
+Asset: AST-EMP015-17
+Department: R&D
+Format: txt
+Knowledge summary: project updates, contributions, lessons learned.

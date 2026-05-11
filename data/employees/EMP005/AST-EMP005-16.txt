@@ -1,0 +1,5 @@
+Employee: EMP005
+Asset: AST-EMP005-16
+Department: Procurement
+Format: txt
+Knowledge summary: project updates, contributions, lessons learned.

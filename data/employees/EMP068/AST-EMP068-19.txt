@@ -1,0 +1,5 @@
+Employee: EMP068
+Asset: AST-EMP068-19
+Department: Finance
+Format: txt
+Knowledge summary: project updates, contributions, lessons learned.

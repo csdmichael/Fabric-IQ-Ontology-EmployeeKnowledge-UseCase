@@ -1,0 +1,5 @@
+Employee: EMP074
+Asset: AST-EMP074-10
+Department: HR
+Format: txt
+Knowledge summary: project updates, contributions, lessons learned.

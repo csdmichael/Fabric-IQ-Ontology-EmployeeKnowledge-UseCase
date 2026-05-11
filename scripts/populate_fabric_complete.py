@@ -310,11 +310,26 @@ def export_tables_for_powerbi(tables):
     
     export_dir = Path("data/exports/parquet")
     export_dir.mkdir(parents=True, exist_ok=True)
+    csv_export_dir = Path("data/exports")
+    csv_export_dir.mkdir(parents=True, exist_ok=True)
     
     print("\n→ Exporting tables to Parquet format...")
     
     for table_name, df in tables.items():
         if df is not None:
+            # Always produce a top-level CSV for deployment scripts that upload OneLake seed files.
+            csv_name_map = {
+                "Employees": "employees.csv",
+                "Contributions": "contributions.csv",
+                "DigitalAssets": "digital_assets.csv",
+                "Projects": "projects.csv",
+            }
+            csv_path = csv_export_dir / csv_name_map.get(table_name, f"{table_name.lower()}.csv")
+            try:
+                df.to_csv(csv_path, index=False)
+            except Exception as e:
+                print(f"  ✗ Failed to export CSV {csv_path.name}: {e}")
+
             file_path = export_dir / f"{table_name}.parquet"
             try:
                 df.to_parquet(file_path, index=False)

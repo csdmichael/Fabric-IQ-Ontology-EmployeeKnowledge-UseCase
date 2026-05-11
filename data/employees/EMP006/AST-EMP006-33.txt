@@ -1,0 +1,5 @@
+Employee: EMP006
+Asset: AST-EMP006-33
+Department: Operations
+Format: txt
+Knowledge summary: project updates, contributions, lessons learned.

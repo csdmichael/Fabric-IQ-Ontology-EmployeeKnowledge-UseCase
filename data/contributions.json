@@ -13,15 +13,16 @@
     "projectCount": 5,
     "activeProjectCount": 5,
     "completedProjectCount": 0,
-    "assetCount": 17,
+    "assetCount": 28,
     "presentationCount": 5,
     "documentCount": 8,
     "reportCount": 5,
     "emailActivityCount": 32,
     "mentoringSessionCount": 10,
-    "codeCommitCount": 53,
+    "codeCommitCount": 126,
     "contributionScore": 85,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 21
   },
   {
     "employeeId": "EMP002",
@@ -36,15 +37,16 @@
     "projectCount": 4,
     "activeProjectCount": 4,
     "completedProjectCount": 0,
-    "assetCount": 12,
+    "assetCount": 11,
     "presentationCount": 2,
     "documentCount": 6,
     "reportCount": 1,
     "emailActivityCount": 12,
     "mentoringSessionCount": 2,
-    "codeCommitCount": 28,
+    "codeCommitCount": 58,
     "contributionScore": 78,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 4
   },
   {
     "employeeId": "EMP003",
@@ -59,15 +61,16 @@
     "projectCount": 4,
     "activeProjectCount": 3,
     "completedProjectCount": 1,
-    "assetCount": 8,
+    "assetCount": 16,
     "presentationCount": 2,
     "documentCount": 4,
     "reportCount": 4,
     "emailActivityCount": 19,
     "mentoringSessionCount": 5,
-    "codeCommitCount": 52,
+    "codeCommitCount": 125,
     "contributionScore": 71,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 8
   },
   {
     "employeeId": "EMP004",
@@ -78,18 +81,19 @@
       "PRJ010",
       "PRJ017"
     ],
-    "projectCount": 3,
+    "projectCount": 7,
     "activeProjectCount": 3,
     "completedProjectCount": 0,
-    "assetCount": 9,
+    "assetCount": 28,
     "presentationCount": 2,
     "documentCount": 4,
     "reportCount": 4,
     "emailActivityCount": 22,
     "mentoringSessionCount": 4,
-    "codeCommitCount": 24,
+    "codeCommitCount": 138,
     "contributionScore": 80,
-    "tier": "average"
+    "tier": "star",
+    "mentoringSessions": 19
   },
   {
     "employeeId": "EMP005",
@@ -100,18 +104,19 @@
       "PRJ012",
       "PRJ019"
     ],
-    "projectCount": 3,
+    "projectCount": 4,
     "activeProjectCount": 3,
     "completedProjectCount": 0,
-    "assetCount": 8,
+    "assetCount": 16,
     "presentationCount": 4,
     "documentCount": 3,
     "reportCount": 1,
     "emailActivityCount": 24,
     "mentoringSessionCount": 2,
-    "codeCommitCount": 37,
+    "codeCommitCount": 119,
     "contributionScore": 79,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 9
   },
   {
     "employeeId": "EMP006",
@@ -125,18 +130,19 @@
       "PRJ011",
       "PRJ013"
     ],
-    "projectCount": 6,
+    "projectCount": 7,
     "activeProjectCount": 6,
     "completedProjectCount": 0,
-    "assetCount": 18,
+    "assetCount": 26,
     "presentationCount": 9,
     "documentCount": 8,
     "reportCount": 4,
     "emailActivityCount": 48,
     "mentoringSessionCount": 15,
-    "codeCommitCount": 108,
+    "codeCommitCount": 261,
     "contributionScore": 93,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 23
   },
   {
     "employeeId": "EMP007",
@@ -148,15 +154,16 @@
     "projectCount": 1,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 4,
+    "assetCount": 6,
     "presentationCount": 1,
     "documentCount": 3,
     "reportCount": 1,
     "emailActivityCount": 15,
     "mentoringSessionCount": 2,
-    "codeCommitCount": 11,
+    "codeCommitCount": 12,
     "contributionScore": 42,
-    "tier": "low"
+    "tier": "low",
+    "mentoringSessions": 2
   },
   {
     "employeeId": "EMP008",
@@ -169,15 +176,16 @@
     "projectCount": 2,
     "activeProjectCount": 2,
     "completedProjectCount": 0,
-    "assetCount": 12,
+    "assetCount": 15,
     "presentationCount": 2,
     "documentCount": 4,
     "reportCount": 3,
     "emailActivityCount": 14,
     "mentoringSessionCount": 8,
-    "codeCommitCount": 29,
+    "codeCommitCount": 113,
     "contributionScore": 57,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 5
   },
   {
     "employeeId": "EMP009",
@@ -193,15 +201,16 @@
     "projectCount": 5,
     "activeProjectCount": 5,
     "completedProjectCount": 0,
-    "assetCount": 7,
+    "assetCount": 15,
     "presentationCount": 4,
     "documentCount": 6,
     "reportCount": 3,
     "emailActivityCount": 17,
     "mentoringSessionCount": 4,
-    "codeCommitCount": 37,
+    "codeCommitCount": 76,
     "contributionScore": 67,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 6
   },
   {
     "employeeId": "EMP010",
@@ -212,18 +221,19 @@
       "PRJ015",
       "PRJ018"
     ],
-    "projectCount": 3,
+    "projectCount": 4,
     "activeProjectCount": 2,
     "completedProjectCount": 1,
-    "assetCount": 8,
+    "assetCount": 11,
     "presentationCount": 4,
     "documentCount": 3,
     "reportCount": 2,
     "emailActivityCount": 19,
     "mentoringSessionCount": 3,
-    "codeCommitCount": 44,
+    "codeCommitCount": 130,
     "contributionScore": 76,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 10
   },
   {
     "employeeId": "EMP011",
@@ -236,18 +246,19 @@
       "PRJ010",
       "PRJ017"
     ],
-    "projectCount": 5,
+    "projectCount": 8,
     "activeProjectCount": 5,
     "completedProjectCount": 0,
-    "assetCount": 15,
+    "assetCount": 23,
     "presentationCount": 9,
     "documentCount": 7,
     "reportCount": 6,
     "emailActivityCount": 49,
     "mentoringSessionCount": 20,
-    "codeCommitCount": 47,
+    "codeCommitCount": 225,
     "contributionScore": 90,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 17
   },
   {
     "employeeId": "EMP012",
@@ -256,18 +267,19 @@
     "projectIds": [
       "PRJ001"
     ],
-    "projectCount": 1,
+    "projectCount": 5,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 8,
+    "assetCount": 18,
     "presentationCount": 2,
     "documentCount": 5,
     "reportCount": 4,
     "emailActivityCount": 20,
     "mentoringSessionCount": 2,
-    "codeCommitCount": 28,
+    "codeCommitCount": 180,
     "contributionScore": 81,
-    "tier": "average"
+    "tier": "star",
+    "mentoringSessions": 12
   },
   {
     "employeeId": "EMP013",
@@ -276,18 +288,19 @@
     "projectIds": [
       "PRJ008"
     ],
-    "projectCount": 1,
+    "projectCount": 3,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 11,
+    "assetCount": 12,
     "presentationCount": 4,
     "documentCount": 4,
     "reportCount": 4,
     "emailActivityCount": 24,
     "mentoringSessionCount": 7,
-    "codeCommitCount": 44,
+    "codeCommitCount": 52,
     "contributionScore": 77,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 3
   },
   {
     "employeeId": "EMP014",
@@ -299,15 +312,16 @@
     "projectCount": 1,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 5,
+    "assetCount": 7,
     "presentationCount": 1,
     "documentCount": 1,
     "reportCount": 2,
     "emailActivityCount": 13,
     "mentoringSessionCount": 2,
-    "codeCommitCount": 18,
+    "codeCommitCount": 20,
     "contributionScore": 38,
-    "tier": "low"
+    "tier": "low",
+    "mentoringSessions": 3
   },
   {
     "employeeId": "EMP015",
@@ -317,18 +331,19 @@
       "PRJ002",
       "PRJ014"
     ],
-    "projectCount": 2,
+    "projectCount": 3,
     "activeProjectCount": 1,
     "completedProjectCount": 1,
-    "assetCount": 11,
+    "assetCount": 12,
     "presentationCount": 4,
     "documentCount": 4,
     "reportCount": 2,
     "emailActivityCount": 28,
     "mentoringSessionCount": 5,
-    "codeCommitCount": 20,
+    "codeCommitCount": 130,
     "contributionScore": 67,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 8
   },
   {
     "employeeId": "EMP016",
@@ -345,15 +360,16 @@
     "projectCount": 6,
     "activeProjectCount": 6,
     "completedProjectCount": 0,
-    "assetCount": 18,
+    "assetCount": 26,
     "presentationCount": 5,
     "documentCount": 7,
     "reportCount": 5,
     "emailActivityCount": 50,
     "mentoringSessionCount": 18,
-    "codeCommitCount": 94,
+    "codeCommitCount": 249,
     "contributionScore": 83,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 14
   },
   {
     "employeeId": "EMP017",
@@ -362,18 +378,19 @@
     "projectIds": [
       "PRJ011"
     ],
-    "projectCount": 1,
+    "projectCount": 5,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 11,
+    "assetCount": 12,
     "presentationCount": 5,
     "documentCount": 6,
     "reportCount": 4,
     "emailActivityCount": 28,
     "mentoringSessionCount": 4,
-    "codeCommitCount": 50,
+    "codeCommitCount": 77,
     "contributionScore": 57,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 3
   },
   {
     "employeeId": "EMP018",
@@ -386,15 +403,16 @@
     "projectCount": 2,
     "activeProjectCount": 2,
     "completedProjectCount": 0,
-    "assetCount": 7,
+    "assetCount": 16,
     "presentationCount": 2,
     "documentCount": 5,
     "reportCount": 3,
     "emailActivityCount": 15,
     "mentoringSessionCount": 4,
-    "codeCommitCount": 42,
+    "codeCommitCount": 59,
     "contributionScore": 76,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 4
   },
   {
     "employeeId": "EMP019",
@@ -403,18 +421,19 @@
     "projectIds": [
       "PRJ007"
     ],
-    "projectCount": 1,
+    "projectCount": 5,
     "activeProjectCount": 0,
     "completedProjectCount": 1,
-    "assetCount": 8,
+    "assetCount": 13,
     "presentationCount": 2,
     "documentCount": 5,
     "reportCount": 2,
     "emailActivityCount": 28,
     "mentoringSessionCount": 2,
-    "codeCommitCount": 55,
+    "codeCommitCount": 124,
     "contributionScore": 69,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 5
   },
   {
     "employeeId": "EMP020",
@@ -424,18 +443,19 @@
       "PRJ006",
       "PRJ016"
     ],
-    "projectCount": 2,
+    "projectCount": 8,
     "activeProjectCount": 1,
     "completedProjectCount": 1,
-    "assetCount": 9,
+    "assetCount": 18,
     "presentationCount": 3,
     "documentCount": 4,
     "reportCount": 3,
     "emailActivityCount": 17,
     "mentoringSessionCount": 6,
-    "codeCommitCount": 48,
+    "codeCommitCount": 176,
     "contributionScore": 81,
-    "tier": "average"
+    "tier": "star",
+    "mentoringSessions": 13
   },
   {
     "employeeId": "EMP021",
@@ -449,18 +469,19 @@
       "PRJ013",
       "PRJ020"
     ],
-    "projectCount": 6,
+    "projectCount": 7,
     "activeProjectCount": 6,
     "completedProjectCount": 0,
-    "assetCount": 12,
+    "assetCount": 19,
     "presentationCount": 8,
     "documentCount": 6,
     "reportCount": 4,
     "emailActivityCount": 36,
     "mentoringSessionCount": 20,
-    "codeCommitCount": 79,
+    "codeCommitCount": 165,
     "contributionScore": 92,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 19
   },
   {
     "employeeId": "EMP022",
@@ -473,15 +494,16 @@
     "projectCount": 2,
     "activeProjectCount": 2,
     "completedProjectCount": 0,
-    "assetCount": 8,
+    "assetCount": 14,
     "presentationCount": 3,
     "documentCount": 3,
     "reportCount": 1,
     "emailActivityCount": 27,
     "mentoringSessionCount": 8,
-    "codeCommitCount": 19,
+    "codeCommitCount": 130,
     "contributionScore": 56,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 8
   },
   {
     "employeeId": "EMP023",
@@ -490,18 +512,19 @@
     "projectIds": [
       "PRJ012"
     ],
-    "projectCount": 1,
+    "projectCount": 4,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 11,
+    "assetCount": 10,
     "presentationCount": 3,
     "documentCount": 4,
     "reportCount": 4,
     "emailActivityCount": 17,
     "mentoringSessionCount": 4,
-    "codeCommitCount": 48,
+    "codeCommitCount": 96,
     "contributionScore": 79,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 3
   },
   {
     "employeeId": "EMP024",
@@ -511,18 +534,19 @@
       "PRJ008",
       "PRJ019"
     ],
-    "projectCount": 2,
+    "projectCount": 3,
     "activeProjectCount": 2,
     "completedProjectCount": 0,
-    "assetCount": 11,
+    "assetCount": 15,
     "presentationCount": 3,
     "documentCount": 4,
     "reportCount": 3,
     "emailActivityCount": 24,
     "mentoringSessionCount": 7,
-    "codeCommitCount": 38,
+    "codeCommitCount": 129,
     "contributionScore": 68,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 4
   },
   {
     "employeeId": "EMP025",
@@ -531,18 +555,19 @@
     "projectIds": [
       "PRJ013"
     ],
-    "projectCount": 1,
+    "projectCount": 3,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 10,
+    "assetCount": 14,
     "presentationCount": 5,
     "documentCount": 3,
     "reportCount": 2,
     "emailActivityCount": 19,
     "mentoringSessionCount": 2,
-    "codeCommitCount": 36,
+    "codeCommitCount": 94,
     "contributionScore": 71,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 10
   },
   {
     "employeeId": "EMP026",
@@ -559,15 +584,16 @@
     "projectCount": 6,
     "activeProjectCount": 6,
     "completedProjectCount": 0,
-    "assetCount": 12,
+    "assetCount": 25,
     "presentationCount": 6,
     "documentCount": 10,
     "reportCount": 5,
     "emailActivityCount": 25,
     "mentoringSessionCount": 9,
-    "codeCommitCount": 120,
+    "codeCommitCount": 238,
     "contributionScore": 99,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 20
   },
   {
     "employeeId": "EMP027",
@@ -580,15 +606,16 @@
     "projectCount": 2,
     "activeProjectCount": 1,
     "completedProjectCount": 1,
-    "assetCount": 7,
+    "assetCount": 16,
     "presentationCount": 2,
     "documentCount": 3,
     "reportCount": 3,
     "emailActivityCount": 14,
     "mentoringSessionCount": 6,
-    "codeCommitCount": 30,
+    "codeCommitCount": 62,
     "contributionScore": 62,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 5
   },
   {
     "employeeId": "EMP028",
@@ -597,18 +624,19 @@
     "projectIds": [
       "PRJ001"
     ],
-    "projectCount": 1,
+    "projectCount": 2,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 6,
+    "assetCount": 7,
     "presentationCount": 2,
     "documentCount": 1,
     "reportCount": 2,
     "emailActivityCount": 7,
     "mentoringSessionCount": 3,
-    "codeCommitCount": 12,
+    "codeCommitCount": 35,
     "contributionScore": 51,
-    "tier": "low"
+    "tier": "low",
+    "mentoringSessions": 0
   },
   {
     "employeeId": "EMP029",
@@ -617,18 +645,19 @@
     "projectIds": [
       "PRJ005"
     ],
-    "projectCount": 1,
+    "projectCount": 6,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 10,
+    "assetCount": 25,
     "presentationCount": 5,
     "documentCount": 4,
     "reportCount": 1,
     "emailActivityCount": 15,
     "mentoringSessionCount": 7,
-    "codeCommitCount": 42,
+    "codeCommitCount": 189,
     "contributionScore": 80,
-    "tier": "average"
+    "tier": "star",
+    "mentoringSessions": 16
   },
   {
     "employeeId": "EMP030",
@@ -637,18 +666,19 @@
     "projectIds": [
       "PRJ011"
     ],
-    "projectCount": 1,
+    "projectCount": 4,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 9,
+    "assetCount": 14,
     "presentationCount": 5,
     "documentCount": 6,
     "reportCount": 1,
     "emailActivityCount": 15,
     "mentoringSessionCount": 2,
-    "codeCommitCount": 40,
+    "codeCommitCount": 98,
     "contributionScore": 68,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 7
   },
   {
     "employeeId": "EMP031",
@@ -665,15 +695,16 @@
     "projectCount": 6,
     "activeProjectCount": 6,
     "completedProjectCount": 0,
-    "assetCount": 17,
+    "assetCount": 21,
     "presentationCount": 5,
     "documentCount": 7,
     "reportCount": 5,
     "emailActivityCount": 31,
     "mentoringSessionCount": 16,
-    "codeCommitCount": 97,
+    "codeCommitCount": 241,
     "contributionScore": 92,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 20
   },
   {
     "employeeId": "EMP032",
@@ -682,18 +713,19 @@
     "projectIds": [
       "PRJ015"
     ],
-    "projectCount": 1,
+    "projectCount": 5,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 8,
+    "assetCount": 13,
     "presentationCount": 3,
     "documentCount": 5,
     "reportCount": 4,
     "emailActivityCount": 19,
     "mentoringSessionCount": 8,
-    "codeCommitCount": 19,
+    "codeCommitCount": 129,
     "contributionScore": 68,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 8
   },
   {
     "employeeId": "EMP033",
@@ -702,18 +734,19 @@
     "projectIds": [
       "PRJ003"
     ],
-    "projectCount": 1,
+    "projectCount": 7,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 10,
+    "assetCount": 29,
     "presentationCount": 2,
     "documentCount": 3,
     "reportCount": 1,
     "emailActivityCount": 14,
     "mentoringSessionCount": 8,
-    "codeCommitCount": 30,
+    "codeCommitCount": 277,
     "contributionScore": 80,
-    "tier": "average"
+    "tier": "star",
+    "mentoringSessions": 22
   },
   {
     "employeeId": "EMP034",
@@ -722,18 +755,19 @@
     "projectIds": [
       "PRJ007"
     ],
-    "projectCount": 1,
+    "projectCount": 3,
     "activeProjectCount": 0,
     "completedProjectCount": 1,
-    "assetCount": 8,
+    "assetCount": 9,
     "presentationCount": 5,
     "documentCount": 6,
     "reportCount": 2,
     "emailActivityCount": 24,
     "mentoringSessionCount": 2,
-    "codeCommitCount": 25,
+    "codeCommitCount": 97,
     "contributionScore": 68,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 10
   },
   {
     "employeeId": "EMP035",
@@ -745,15 +779,16 @@
     "projectCount": 1,
     "activeProjectCount": 0,
     "completedProjectCount": 1,
-    "assetCount": 7,
+    "assetCount": 6,
     "presentationCount": 2,
     "documentCount": 2,
     "reportCount": 1,
     "emailActivityCount": 9,
     "mentoringSessionCount": 3,
-    "codeCommitCount": 20,
+    "codeCommitCount": 24,
     "contributionScore": 30,
-    "tier": "low"
+    "tier": "low",
+    "mentoringSessions": 2
   },
   {
     "employeeId": "EMP036",
@@ -766,18 +801,19 @@
       "PRJ013",
       "PRJ020"
     ],
-    "projectCount": 5,
+    "projectCount": 7,
     "activeProjectCount": 5,
     "completedProjectCount": 0,
-    "assetCount": 13,
+    "assetCount": 23,
     "presentationCount": 7,
     "documentCount": 7,
     "reportCount": 4,
     "emailActivityCount": 43,
     "mentoringSessionCount": 19,
-    "codeCommitCount": 109,
+    "codeCommitCount": 236,
     "contributionScore": 88,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 14
   },
   {
     "employeeId": "EMP037",
@@ -786,18 +822,19 @@
     "projectIds": [
       "PRJ010"
     ],
-    "projectCount": 1,
+    "projectCount": 3,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 7,
+    "assetCount": 16,
     "presentationCount": 4,
     "documentCount": 3,
     "reportCount": 1,
     "emailActivityCount": 27,
     "mentoringSessionCount": 6,
-    "codeCommitCount": 48,
+    "codeCommitCount": 80,
     "contributionScore": 78,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 3
   },
   {
     "employeeId": "EMP038",
@@ -810,15 +847,16 @@
     "projectCount": 2,
     "activeProjectCount": 2,
     "completedProjectCount": 0,
-    "assetCount": 8,
+    "assetCount": 9,
     "presentationCount": 2,
     "documentCount": 4,
     "reportCount": 1,
     "emailActivityCount": 14,
     "mentoringSessionCount": 7,
-    "codeCommitCount": 30,
+    "codeCommitCount": 96,
     "contributionScore": 56,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 10
   },
   {
     "employeeId": "EMP039",
@@ -827,18 +865,19 @@
     "projectIds": [
       "PRJ012"
     ],
-    "projectCount": 1,
+    "projectCount": 3,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 10,
+    "assetCount": 14,
     "presentationCount": 3,
     "documentCount": 3,
     "reportCount": 1,
     "emailActivityCount": 25,
     "mentoringSessionCount": 7,
-    "codeCommitCount": 52,
+    "codeCommitCount": 111,
     "contributionScore": 58,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 9
   },
   {
     "employeeId": "EMP040",
@@ -847,18 +886,19 @@
     "projectIds": [
       "PRJ017"
     ],
-    "projectCount": 1,
+    "projectCount": 2,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 11,
+    "assetCount": 16,
     "presentationCount": 4,
     "documentCount": 5,
     "reportCount": 2,
     "emailActivityCount": 22,
     "mentoringSessionCount": 3,
-    "codeCommitCount": 31,
+    "codeCommitCount": 65,
     "contributionScore": 71,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 3
   },
   {
     "employeeId": "EMP041",
@@ -875,15 +915,16 @@
     "projectCount": 6,
     "activeProjectCount": 6,
     "completedProjectCount": 0,
-    "assetCount": 15,
+    "assetCount": 21,
     "presentationCount": 7,
     "documentCount": 9,
     "reportCount": 6,
     "emailActivityCount": 49,
     "mentoringSessionCount": 9,
-    "codeCommitCount": 41,
+    "codeCommitCount": 188,
     "contributionScore": 86,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 23
   },
   {
     "employeeId": "EMP042",
@@ -895,15 +936,16 @@
     "projectCount": 1,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 7,
+    "assetCount": 3,
     "presentationCount": 1,
     "documentCount": 1,
     "reportCount": 2,
     "emailActivityCount": 8,
     "mentoringSessionCount": 2,
-    "codeCommitCount": 9,
+    "codeCommitCount": 19,
     "contributionScore": 49,
-    "tier": "low"
+    "tier": "low",
+    "mentoringSessions": 0
   },
   {
     "employeeId": "EMP043",
@@ -912,18 +954,19 @@
     "projectIds": [
       "PRJ009"
     ],
-    "projectCount": 1,
+    "projectCount": 5,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 9,
+    "assetCount": 15,
     "presentationCount": 3,
     "documentCount": 5,
     "reportCount": 3,
     "emailActivityCount": 17,
     "mentoringSessionCount": 5,
-    "codeCommitCount": 49,
+    "codeCommitCount": 80,
     "contributionScore": 57,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 5
   },
   {
     "employeeId": "EMP044",
@@ -936,15 +979,16 @@
     "projectCount": 2,
     "activeProjectCount": 1,
     "completedProjectCount": 1,
-    "assetCount": 12,
+    "assetCount": 16,
     "presentationCount": 2,
     "documentCount": 5,
     "reportCount": 1,
     "emailActivityCount": 16,
     "mentoringSessionCount": 4,
-    "codeCommitCount": 22,
+    "codeCommitCount": 103,
     "contributionScore": 64,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 4
   },
   {
     "employeeId": "EMP045",
@@ -953,18 +997,19 @@
     "projectIds": [
       "PRJ005"
     ],
-    "projectCount": 1,
+    "projectCount": 3,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 7,
+    "assetCount": 8,
     "presentationCount": 3,
     "documentCount": 5,
     "reportCount": 3,
     "emailActivityCount": 18,
     "mentoringSessionCount": 7,
-    "codeCommitCount": 36,
+    "codeCommitCount": 79,
     "contributionScore": 78,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 5
   },
   {
     "employeeId": "EMP046",
@@ -981,15 +1026,16 @@
     "projectCount": 6,
     "activeProjectCount": 6,
     "completedProjectCount": 0,
-    "assetCount": 13,
+    "assetCount": 26,
     "presentationCount": 9,
     "documentCount": 9,
     "reportCount": 6,
     "emailActivityCount": 26,
     "mentoringSessionCount": 9,
-    "codeCommitCount": 94,
+    "codeCommitCount": 261,
     "contributionScore": 90,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 16
   },
   {
     "employeeId": "EMP047",
@@ -998,18 +1044,19 @@
     "projectIds": [
       "PRJ002"
     ],
-    "projectCount": 1,
+    "projectCount": 2,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 9,
+    "assetCount": 12,
     "presentationCount": 2,
     "documentCount": 5,
     "reportCount": 2,
     "emailActivityCount": 20,
     "mentoringSessionCount": 3,
-    "codeCommitCount": 43,
+    "codeCommitCount": 81,
     "contributionScore": 56,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 7
   },
   {
     "employeeId": "EMP048",
@@ -1018,7 +1065,7 @@
     "projectIds": [
       "PRJ015"
     ],
-    "projectCount": 1,
+    "projectCount": 3,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
     "assetCount": 11,
@@ -1027,9 +1074,10 @@
     "reportCount": 1,
     "emailActivityCount": 14,
     "mentoringSessionCount": 7,
-    "codeCommitCount": 24,
+    "codeCommitCount": 118,
     "contributionScore": 77,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 9
   },
   {
     "employeeId": "EMP049",
@@ -1038,10 +1086,10 @@
     "projectIds": [
       "PRJ018"
     ],
-    "projectCount": 1,
+    "projectCount": 2,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 4,
+    "assetCount": 7,
     "presentationCount": 1,
     "documentCount": 2,
     "reportCount": 0,
@@ -1049,7 +1097,8 @@
     "mentoringSessionCount": 2,
     "codeCommitCount": 16,
     "contributionScore": 41,
-    "tier": "low"
+    "tier": "low",
+    "mentoringSessions": 3
   },
   {
     "employeeId": "EMP050",
@@ -1058,18 +1107,19 @@
     "projectIds": [
       "PRJ007"
     ],
-    "projectCount": 1,
+    "projectCount": 5,
     "activeProjectCount": 0,
     "completedProjectCount": 1,
-    "assetCount": 7,
+    "assetCount": 9,
     "presentationCount": 3,
     "documentCount": 4,
     "reportCount": 1,
     "emailActivityCount": 23,
     "mentoringSessionCount": 8,
-    "codeCommitCount": 50,
+    "codeCommitCount": 78,
     "contributionScore": 66,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 8
   },
   {
     "employeeId": "EMP051",
@@ -1085,15 +1135,16 @@
     "projectCount": 5,
     "activeProjectCount": 5,
     "completedProjectCount": 0,
-    "assetCount": 18,
+    "assetCount": 27,
     "presentationCount": 9,
     "documentCount": 7,
     "reportCount": 5,
     "emailActivityCount": 30,
     "mentoringSessionCount": 20,
-    "codeCommitCount": 62,
+    "codeCommitCount": 180,
     "contributionScore": 95,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 20
   },
   {
     "employeeId": "EMP052",
@@ -1102,25 +1153,26 @@
     "projectIds": [
       "PRJ003"
     ],
-    "projectCount": 1,
+    "projectCount": 3,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 10,
+    "assetCount": 15,
     "presentationCount": 3,
     "documentCount": 5,
     "reportCount": 4,
     "emailActivityCount": 19,
     "mentoringSessionCount": 4,
-    "codeCommitCount": 25,
+    "codeCommitCount": 74,
     "contributionScore": 55,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 10
   },
   {
     "employeeId": "EMP053",
     "department": "Procurement",
     "location": "Hsinchu",
     "projectIds": [],
-    "projectCount": 0,
+    "projectCount": 3,
     "activeProjectCount": 0,
     "completedProjectCount": 0,
     "assetCount": 12,
@@ -1129,9 +1181,10 @@
     "reportCount": 4,
     "emailActivityCount": 19,
     "mentoringSessionCount": 3,
-    "codeCommitCount": 44,
+    "codeCommitCount": 94,
     "contributionScore": 58,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 10
   },
   {
     "employeeId": "EMP054",
@@ -1140,18 +1193,19 @@
     "projectIds": [
       "PRJ010"
     ],
-    "projectCount": 1,
+    "projectCount": 3,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 9,
+    "assetCount": 12,
     "presentationCount": 3,
     "documentCount": 4,
     "reportCount": 1,
     "emailActivityCount": 18,
     "mentoringSessionCount": 5,
-    "codeCommitCount": 36,
+    "codeCommitCount": 122,
     "contributionScore": 64,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 8
   },
   {
     "employeeId": "EMP055",
@@ -1160,18 +1214,19 @@
     "projectIds": [
       "PRJ016"
     ],
-    "projectCount": 1,
+    "projectCount": 7,
     "activeProjectCount": 0,
     "completedProjectCount": 1,
-    "assetCount": 9,
+    "assetCount": 22,
     "presentationCount": 2,
     "documentCount": 5,
     "reportCount": 3,
     "emailActivityCount": 28,
     "mentoringSessionCount": 5,
-    "codeCommitCount": 49,
+    "codeCommitCount": 226,
     "contributionScore": 82,
-    "tier": "average"
+    "tier": "star",
+    "mentoringSessions": 12
   },
   {
     "employeeId": "EMP056",
@@ -1184,18 +1239,19 @@
       "PRJ017",
       "PRJ019"
     ],
-    "projectCount": 5,
+    "projectCount": 7,
     "activeProjectCount": 5,
     "completedProjectCount": 0,
-    "assetCount": 14,
+    "assetCount": 18,
     "presentationCount": 5,
     "documentCount": 8,
     "reportCount": 5,
     "emailActivityCount": 43,
     "mentoringSessionCount": 12,
-    "codeCommitCount": 44,
+    "codeCommitCount": 257,
     "contributionScore": 82,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 11
   },
   {
     "employeeId": "EMP057",
@@ -1204,18 +1260,19 @@
     "projectIds": [
       "PRJ019"
     ],
-    "projectCount": 1,
+    "projectCount": 2,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 7,
+    "assetCount": 8,
     "presentationCount": 5,
     "documentCount": 5,
     "reportCount": 3,
     "emailActivityCount": 25,
     "mentoringSessionCount": 6,
-    "codeCommitCount": 47,
+    "codeCommitCount": 83,
     "contributionScore": 74,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 10
   },
   {
     "employeeId": "EMP058",
@@ -1224,18 +1281,19 @@
     "projectIds": [
       "PRJ006"
     ],
-    "projectCount": 1,
+    "projectCount": 5,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 7,
+    "assetCount": 16,
     "presentationCount": 3,
     "documentCount": 5,
     "reportCount": 1,
     "emailActivityCount": 25,
     "mentoringSessionCount": 2,
-    "codeCommitCount": 48,
+    "codeCommitCount": 120,
     "contributionScore": 67,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 5
   },
   {
     "employeeId": "EMP059",
@@ -1244,18 +1302,19 @@
     "projectIds": [
       "PRJ017"
     ],
-    "projectCount": 1,
+    "projectCount": 5,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 11,
+    "assetCount": 8,
     "presentationCount": 3,
     "documentCount": 5,
     "reportCount": 4,
     "emailActivityCount": 14,
     "mentoringSessionCount": 7,
-    "codeCommitCount": 36,
+    "codeCommitCount": 80,
     "contributionScore": 76,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 6
   },
   {
     "employeeId": "EMP060",
@@ -1264,18 +1323,19 @@
     "projectIds": [
       "PRJ012"
     ],
-    "projectCount": 1,
+    "projectCount": 3,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 11,
+    "assetCount": 10,
     "presentationCount": 2,
     "documentCount": 5,
     "reportCount": 3,
     "emailActivityCount": 25,
     "mentoringSessionCount": 4,
-    "codeCommitCount": 40,
+    "codeCommitCount": 53,
     "contributionScore": 65,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 6
   },
   {
     "employeeId": "EMP061",
@@ -1292,15 +1352,16 @@
     "projectCount": 6,
     "activeProjectCount": 6,
     "completedProjectCount": 0,
-    "assetCount": 17,
+    "assetCount": 30,
     "presentationCount": 9,
     "documentCount": 7,
     "reportCount": 5,
     "emailActivityCount": 38,
     "mentoringSessionCount": 18,
-    "codeCommitCount": 88,
+    "codeCommitCount": 148,
     "contributionScore": 91,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 20
   },
   {
     "employeeId": "EMP062",
@@ -1309,18 +1370,19 @@
     "projectIds": [
       "PRJ014"
     ],
-    "projectCount": 1,
+    "projectCount": 5,
     "activeProjectCount": 0,
     "completedProjectCount": 1,
-    "assetCount": 12,
+    "assetCount": 14,
     "presentationCount": 3,
     "documentCount": 5,
     "reportCount": 4,
     "emailActivityCount": 12,
     "mentoringSessionCount": 4,
-    "codeCommitCount": 33,
+    "codeCommitCount": 58,
     "contributionScore": 78,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 10
   },
   {
     "employeeId": "EMP063",
@@ -1329,10 +1391,10 @@
     "projectIds": [
       "PRJ013"
     ],
-    "projectCount": 1,
+    "projectCount": 2,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 5,
+    "assetCount": 7,
     "presentationCount": 2,
     "documentCount": 2,
     "reportCount": 1,
@@ -1340,25 +1402,27 @@
     "mentoringSessionCount": 1,
     "codeCommitCount": 20,
     "contributionScore": 43,
-    "tier": "low"
+    "tier": "low",
+    "mentoringSessions": 0
   },
   {
     "employeeId": "EMP064",
     "department": "Engineering",
     "location": "Portland",
     "projectIds": [],
-    "projectCount": 0,
+    "projectCount": 5,
     "activeProjectCount": 0,
     "completedProjectCount": 0,
-    "assetCount": 12,
+    "assetCount": 15,
     "presentationCount": 2,
     "documentCount": 5,
     "reportCount": 3,
     "emailActivityCount": 14,
     "mentoringSessionCount": 8,
-    "codeCommitCount": 30,
+    "codeCommitCount": 98,
     "contributionScore": 60,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 4
   },
   {
     "employeeId": "EMP065",
@@ -1367,18 +1431,19 @@
     "projectIds": [
       "PRJ008"
     ],
-    "projectCount": 1,
+    "projectCount": 2,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 12,
+    "assetCount": 16,
     "presentationCount": 3,
     "documentCount": 4,
     "reportCount": 2,
     "emailActivityCount": 12,
     "mentoringSessionCount": 2,
-    "codeCommitCount": 30,
+    "codeCommitCount": 120,
     "contributionScore": 64,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 8
   },
   {
     "employeeId": "EMP066",
@@ -1391,18 +1456,19 @@
       "PRJ011",
       "PRJ013"
     ],
-    "projectCount": 5,
+    "projectCount": 7,
     "activeProjectCount": 5,
     "completedProjectCount": 0,
-    "assetCount": 15,
+    "assetCount": 26,
     "presentationCount": 8,
     "documentCount": 9,
     "reportCount": 8,
     "emailActivityCount": 31,
     "mentoringSessionCount": 19,
-    "codeCommitCount": 89,
+    "codeCommitCount": 149,
     "contributionScore": 84,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 22
   },
   {
     "employeeId": "EMP067",
@@ -1411,18 +1477,19 @@
     "projectIds": [
       "PRJ009"
     ],
-    "projectCount": 1,
+    "projectCount": 3,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 10,
+    "assetCount": 13,
     "presentationCount": 3,
     "documentCount": 4,
     "reportCount": 1,
     "emailActivityCount": 15,
     "mentoringSessionCount": 8,
-    "codeCommitCount": 42,
+    "codeCommitCount": 92,
     "contributionScore": 67,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 7
   },
   {
     "employeeId": "EMP068",
@@ -1431,18 +1498,19 @@
     "projectIds": [
       "PRJ018"
     ],
-    "projectCount": 1,
+    "projectCount": 3,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 8,
+    "assetCount": 12,
     "presentationCount": 5,
     "documentCount": 3,
     "reportCount": 2,
     "emailActivityCount": 15,
     "mentoringSessionCount": 5,
-    "codeCommitCount": 23,
+    "codeCommitCount": 110,
     "contributionScore": 60,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 4
   },
   {
     "employeeId": "EMP069",
@@ -1451,18 +1519,19 @@
     "projectIds": [
       "PRJ011"
     ],
-    "projectCount": 1,
+    "projectCount": 4,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 10,
+    "assetCount": 11,
     "presentationCount": 4,
     "documentCount": 6,
     "reportCount": 4,
     "emailActivityCount": 26,
     "mentoringSessionCount": 3,
-    "codeCommitCount": 45,
+    "codeCommitCount": 72,
     "contributionScore": 76,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 5
   },
   {
     "employeeId": "EMP070",
@@ -1471,10 +1540,10 @@
     "projectIds": [
       "PRJ015"
     ],
-    "projectCount": 1,
+    "projectCount": 2,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 7,
+    "assetCount": 4,
     "presentationCount": 1,
     "documentCount": 3,
     "reportCount": 1,
@@ -1482,7 +1551,8 @@
     "mentoringSessionCount": 3,
     "codeCommitCount": 12,
     "contributionScore": 38,
-    "tier": "low"
+    "tier": "low",
+    "mentoringSessions": 3
   },
   {
     "employeeId": "EMP071",
@@ -1495,18 +1565,19 @@
       "PRJ017",
       "PRJ019"
     ],
-    "projectCount": 5,
+    "projectCount": 7,
     "activeProjectCount": 5,
     "completedProjectCount": 0,
-    "assetCount": 14,
+    "assetCount": 19,
     "presentationCount": 5,
     "documentCount": 8,
     "reportCount": 5,
     "emailActivityCount": 33,
     "mentoringSessionCount": 13,
-    "codeCommitCount": 80,
+    "codeCommitCount": 267,
     "contributionScore": 96,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 16
   },
   {
     "employeeId": "EMP072",
@@ -1515,36 +1586,38 @@
     "projectIds": [
       "PRJ010"
     ],
-    "projectCount": 1,
+    "projectCount": 4,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 11,
+    "assetCount": 12,
     "presentationCount": 3,
     "documentCount": 4,
     "reportCount": 2,
     "emailActivityCount": 24,
     "mentoringSessionCount": 7,
-    "codeCommitCount": 24,
+    "codeCommitCount": 73,
     "contributionScore": 57,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 8
   },
   {
     "employeeId": "EMP073",
     "department": "Manufacturing",
     "location": "Fremont",
     "projectIds": [],
-    "projectCount": 0,
+    "projectCount": 4,
     "activeProjectCount": 0,
     "completedProjectCount": 0,
-    "assetCount": 12,
+    "assetCount": 10,
     "presentationCount": 2,
     "documentCount": 6,
     "reportCount": 4,
     "emailActivityCount": 22,
     "mentoringSessionCount": 6,
-    "codeCommitCount": 44,
+    "codeCommitCount": 70,
     "contributionScore": 61,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 5
   },
   {
     "employeeId": "EMP074",
@@ -1553,18 +1626,19 @@
     "projectIds": [
       "PRJ004"
     ],
-    "projectCount": 1,
+    "projectCount": 5,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 10,
+    "assetCount": 9,
     "presentationCount": 3,
     "documentCount": 6,
     "reportCount": 4,
     "emailActivityCount": 12,
     "mentoringSessionCount": 8,
-    "codeCommitCount": 51,
+    "codeCommitCount": 101,
     "contributionScore": 56,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 7
   },
   {
     "employeeId": "EMP075",
@@ -1573,18 +1647,19 @@
     "projectIds": [
       "PRJ019"
     ],
-    "projectCount": 1,
+    "projectCount": 4,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 10,
+    "assetCount": 8,
     "presentationCount": 2,
     "documentCount": 5,
     "reportCount": 3,
     "emailActivityCount": 24,
     "mentoringSessionCount": 8,
-    "codeCommitCount": 41,
+    "codeCommitCount": 81,
     "contributionScore": 70,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 4
   },
   {
     "employeeId": "EMP076",
@@ -1597,36 +1672,38 @@
       "PRJ003",
       "PRJ008"
     ],
-    "projectCount": 5,
+    "projectCount": 8,
     "activeProjectCount": 5,
     "completedProjectCount": 0,
-    "assetCount": 16,
+    "assetCount": 23,
     "presentationCount": 9,
     "documentCount": 7,
     "reportCount": 7,
     "emailActivityCount": 32,
     "mentoringSessionCount": 12,
-    "codeCommitCount": 95,
+    "codeCommitCount": 248,
     "contributionScore": 99,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 12
   },
   {
     "employeeId": "EMP077",
     "department": "Procurement",
     "location": "Austin",
     "projectIds": [],
-    "projectCount": 0,
+    "projectCount": 1,
     "activeProjectCount": 0,
     "completedProjectCount": 0,
-    "assetCount": 7,
+    "assetCount": 5,
     "presentationCount": 2,
     "documentCount": 2,
     "reportCount": 2,
     "emailActivityCount": 15,
     "mentoringSessionCount": 3,
-    "codeCommitCount": 10,
+    "codeCommitCount": 40,
     "contributionScore": 30,
-    "tier": "low"
+    "tier": "low",
+    "mentoringSessions": 3
   },
   {
     "employeeId": "EMP078",
@@ -1635,7 +1712,7 @@
     "projectIds": [
       "PRJ017"
     ],
-    "projectCount": 1,
+    "projectCount": 4,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
     "assetCount": 10,
@@ -1644,27 +1721,29 @@
     "reportCount": 1,
     "emailActivityCount": 14,
     "mentoringSessionCount": 7,
-    "codeCommitCount": 42,
+    "codeCommitCount": 84,
     "contributionScore": 59,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 9
   },
   {
     "employeeId": "EMP079",
     "department": "R&D",
     "location": "Hsinchu",
     "projectIds": [],
-    "projectCount": 0,
+    "projectCount": 7,
     "activeProjectCount": 0,
     "completedProjectCount": 0,
-    "assetCount": 8,
+    "assetCount": 26,
     "presentationCount": 5,
     "documentCount": 4,
     "reportCount": 1,
     "emailActivityCount": 20,
     "mentoringSessionCount": 5,
-    "codeCommitCount": 35,
+    "codeCommitCount": 124,
     "contributionScore": 82,
-    "tier": "average"
+    "tier": "star",
+    "mentoringSessions": 15
   },
   {
     "employeeId": "EMP080",
@@ -1673,18 +1752,19 @@
     "projectIds": [
       "PRJ013"
     ],
-    "projectCount": 1,
+    "projectCount": 3,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 8,
+    "assetCount": 13,
     "presentationCount": 4,
     "documentCount": 5,
     "reportCount": 4,
     "emailActivityCount": 20,
     "mentoringSessionCount": 8,
-    "codeCommitCount": 41,
+    "codeCommitCount": 101,
     "contributionScore": 69,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 7
   },
   {
     "employeeId": "EMP081",
@@ -1697,36 +1777,38 @@
       "PRJ013",
       "PRJ020"
     ],
-    "projectCount": 5,
+    "projectCount": 8,
     "activeProjectCount": 5,
     "completedProjectCount": 0,
-    "assetCount": 14,
+    "assetCount": 26,
     "presentationCount": 8,
     "documentCount": 6,
     "reportCount": 8,
     "emailActivityCount": 26,
     "mentoringSessionCount": 13,
-    "codeCommitCount": 68,
+    "codeCommitCount": 161,
     "contributionScore": 84,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 23
   },
   {
     "employeeId": "EMP082",
     "department": "HR",
     "location": "Bengaluru",
     "projectIds": [],
-    "projectCount": 0,
+    "projectCount": 4,
     "activeProjectCount": 0,
     "completedProjectCount": 0,
-    "assetCount": 12,
+    "assetCount": 16,
     "presentationCount": 2,
     "documentCount": 3,
     "reportCount": 2,
     "emailActivityCount": 18,
     "mentoringSessionCount": 8,
-    "codeCommitCount": 16,
+    "codeCommitCount": 75,
     "contributionScore": 57,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 9
   },
   {
     "employeeId": "EMP083",
@@ -1735,54 +1817,57 @@
     "projectIds": [
       "PRJ008"
     ],
-    "projectCount": 1,
+    "projectCount": 2,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 11,
+    "assetCount": 9,
     "presentationCount": 3,
     "documentCount": 4,
     "reportCount": 4,
     "emailActivityCount": 15,
     "mentoringSessionCount": 6,
-    "codeCommitCount": 28,
+    "codeCommitCount": 77,
     "contributionScore": 59,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 6
   },
   {
     "employeeId": "EMP084",
     "department": "Finance",
     "location": "Hsinchu",
     "projectIds": [],
-    "projectCount": 0,
+    "projectCount": 1,
     "activeProjectCount": 0,
     "completedProjectCount": 0,
-    "assetCount": 7,
+    "assetCount": 3,
     "presentationCount": 2,
     "documentCount": 2,
     "reportCount": 0,
     "emailActivityCount": 14,
     "mentoringSessionCount": 0,
-    "codeCommitCount": 10,
+    "codeCommitCount": 31,
     "contributionScore": 52,
-    "tier": "low"
+    "tier": "low",
+    "mentoringSessions": 3
   },
   {
     "employeeId": "EMP085",
     "department": "Procurement",
     "location": "Bengaluru",
     "projectIds": [],
-    "projectCount": 0,
+    "projectCount": 2,
     "activeProjectCount": 0,
     "completedProjectCount": 0,
-    "assetCount": 9,
+    "assetCount": 16,
     "presentationCount": 2,
     "documentCount": 5,
     "reportCount": 4,
     "emailActivityCount": 24,
     "mentoringSessionCount": 7,
-    "codeCommitCount": 27,
+    "codeCommitCount": 125,
     "contributionScore": 58,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 6
   },
   {
     "employeeId": "EMP086",
@@ -1798,15 +1883,16 @@
     "projectCount": 5,
     "activeProjectCount": 5,
     "completedProjectCount": 0,
-    "assetCount": 12,
+    "assetCount": 26,
     "presentationCount": 5,
     "documentCount": 8,
     "reportCount": 8,
     "emailActivityCount": 50,
     "mentoringSessionCount": 9,
-    "codeCommitCount": 112,
+    "codeCommitCount": 219,
     "contributionScore": 89,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 23
   },
   {
     "employeeId": "EMP087",
@@ -1815,54 +1901,57 @@
     "projectIds": [
       "PRJ015"
     ],
-    "projectCount": 1,
+    "projectCount": 2,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 7,
+    "assetCount": 11,
     "presentationCount": 5,
     "documentCount": 5,
     "reportCount": 1,
     "emailActivityCount": 28,
     "mentoringSessionCount": 7,
-    "codeCommitCount": 36,
+    "codeCommitCount": 70,
     "contributionScore": 66,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 3
   },
   {
     "employeeId": "EMP088",
     "department": "Engineering",
     "location": "Bengaluru",
     "projectIds": [],
-    "projectCount": 0,
+    "projectCount": 5,
     "activeProjectCount": 0,
     "completedProjectCount": 0,
-    "assetCount": 7,
+    "assetCount": 30,
     "presentationCount": 5,
     "documentCount": 6,
     "reportCount": 1,
     "emailActivityCount": 25,
     "mentoringSessionCount": 4,
-    "codeCommitCount": 55,
+    "codeCommitCount": 204,
     "contributionScore": 82,
-    "tier": "average"
+    "tier": "star",
+    "mentoringSessions": 14
   },
   {
     "employeeId": "EMP089",
     "department": "Manufacturing",
     "location": "Hsinchu",
     "projectIds": [],
-    "projectCount": 0,
+    "projectCount": 5,
     "activeProjectCount": 0,
     "completedProjectCount": 0,
-    "assetCount": 10,
+    "assetCount": 13,
     "presentationCount": 3,
     "documentCount": 6,
     "reportCount": 2,
     "emailActivityCount": 28,
     "mentoringSessionCount": 7,
-    "codeCommitCount": 32,
+    "codeCommitCount": 50,
     "contributionScore": 77,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 8
   },
   {
     "employeeId": "EMP090",
@@ -1871,18 +1960,19 @@
     "projectIds": [
       "PRJ019"
     ],
-    "projectCount": 1,
+    "projectCount": 6,
     "activeProjectCount": 1,
     "completedProjectCount": 0,
-    "assetCount": 11,
+    "assetCount": 19,
     "presentationCount": 5,
     "documentCount": 6,
     "reportCount": 4,
     "emailActivityCount": 20,
     "mentoringSessionCount": 4,
-    "codeCommitCount": 30,
+    "codeCommitCount": 213,
     "contributionScore": 80,
-    "tier": "average"
+    "tier": "star",
+    "mentoringSessions": 15
   },
   {
     "employeeId": "EMP091",
@@ -1895,90 +1985,95 @@
       "PRJ008",
       "PRJ012"
     ],
-    "projectCount": 5,
+    "projectCount": 8,
     "activeProjectCount": 5,
     "completedProjectCount": 0,
-    "assetCount": 18,
+    "assetCount": 26,
     "presentationCount": 7,
     "documentCount": 9,
     "reportCount": 5,
     "emailActivityCount": 49,
     "mentoringSessionCount": 15,
-    "codeCommitCount": 112,
+    "codeCommitCount": 263,
     "contributionScore": 84,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 11
   },
   {
     "employeeId": "EMP092",
     "department": "Finance",
     "location": "Bengaluru",
     "projectIds": [],
-    "projectCount": 0,
+    "projectCount": 3,
     "activeProjectCount": 0,
     "completedProjectCount": 0,
-    "assetCount": 11,
+    "assetCount": 9,
     "presentationCount": 5,
     "documentCount": 5,
     "reportCount": 1,
     "emailActivityCount": 27,
     "mentoringSessionCount": 8,
-    "codeCommitCount": 35,
+    "codeCommitCount": 62,
     "contributionScore": 76,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 6
   },
   {
     "employeeId": "EMP093",
     "department": "Procurement",
     "location": "Austin",
     "projectIds": [],
-    "projectCount": 0,
+    "projectCount": 4,
     "activeProjectCount": 0,
     "completedProjectCount": 0,
-    "assetCount": 8,
+    "assetCount": 9,
     "presentationCount": 3,
     "documentCount": 5,
     "reportCount": 3,
     "emailActivityCount": 22,
     "mentoringSessionCount": 4,
-    "codeCommitCount": 53,
+    "codeCommitCount": 95,
     "contributionScore": 70,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 10
   },
   {
     "employeeId": "EMP094",
     "department": "Operations",
     "location": "Austin",
     "projectIds": [],
-    "projectCount": 0,
+    "projectCount": 4,
     "activeProjectCount": 0,
     "completedProjectCount": 0,
-    "assetCount": 12,
+    "assetCount": 16,
     "presentationCount": 2,
     "documentCount": 4,
     "reportCount": 1,
     "emailActivityCount": 19,
     "mentoringSessionCount": 7,
-    "codeCommitCount": 41,
+    "codeCommitCount": 61,
     "contributionScore": 63,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 5
   },
   {
     "employeeId": "EMP095",
     "department": "R&D",
     "location": "Bengaluru",
     "projectIds": [],
-    "projectCount": 0,
+    "projectCount": 3,
     "activeProjectCount": 0,
     "completedProjectCount": 0,
-    "assetCount": 10,
+    "assetCount": 12,
     "presentationCount": 3,
     "documentCount": 6,
     "reportCount": 4,
     "emailActivityCount": 26,
     "mentoringSessionCount": 8,
-    "codeCommitCount": 16,
+    "codeCommitCount": 126,
     "contributionScore": 72,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 7
   },
   {
     "employeeId": "EMP096",
@@ -1991,43 +2086,45 @@
       "PRJ013",
       "PRJ020"
     ],
-    "projectCount": 5,
+    "projectCount": 7,
     "activeProjectCount": 5,
     "completedProjectCount": 0,
-    "assetCount": 12,
+    "assetCount": 18,
     "presentationCount": 6,
     "documentCount": 9,
     "reportCount": 5,
     "emailActivityCount": 34,
     "mentoringSessionCount": 18,
-    "codeCommitCount": 114,
+    "codeCommitCount": 173,
     "contributionScore": 91,
-    "tier": "star"
+    "tier": "star",
+    "mentoringSessions": 22
   },
   {
     "employeeId": "EMP097",
     "department": "Manufacturing",
     "location": "Bengaluru",
     "projectIds": [],
-    "projectCount": 0,
+    "projectCount": 4,
     "activeProjectCount": 0,
     "completedProjectCount": 0,
-    "assetCount": 9,
+    "assetCount": 11,
     "presentationCount": 4,
     "documentCount": 6,
     "reportCount": 3,
     "emailActivityCount": 23,
     "mentoringSessionCount": 7,
-    "codeCommitCount": 44,
+    "codeCommitCount": 122,
     "contributionScore": 70,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 5
   },
   {
     "employeeId": "EMP098",
     "department": "HR",
     "location": "Hsinchu",
     "projectIds": [],
-    "projectCount": 0,
+    "projectCount": 1,
     "activeProjectCount": 0,
     "completedProjectCount": 0,
     "assetCount": 6,
@@ -2036,34 +2133,36 @@
     "reportCount": 0,
     "emailActivityCount": 8,
     "mentoringSessionCount": 2,
-    "codeCommitCount": 8,
+    "codeCommitCount": 22,
     "contributionScore": 39,
-    "tier": "low"
+    "tier": "low",
+    "mentoringSessions": 3
   },
   {
     "employeeId": "EMP099",
     "department": "IT",
     "location": "Portland",
     "projectIds": [],
-    "projectCount": 0,
+    "projectCount": 3,
     "activeProjectCount": 0,
     "completedProjectCount": 0,
-    "assetCount": 12,
+    "assetCount": 14,
     "presentationCount": 3,
     "documentCount": 4,
     "reportCount": 2,
     "emailActivityCount": 27,
     "mentoringSessionCount": 4,
-    "codeCommitCount": 52,
+    "codeCommitCount": 65,
     "contributionScore": 72,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 8
   },
   {
     "employeeId": "EMP100",
     "department": "Finance",
     "location": "Austin",
     "projectIds": [],
-    "projectCount": 0,
+    "projectCount": 3,
     "activeProjectCount": 0,
     "completedProjectCount": 0,
     "assetCount": 11,
@@ -2072,8 +2171,9 @@
     "reportCount": 2,
     "emailActivityCount": 21,
     "mentoringSessionCount": 3,
-    "codeCommitCount": 38,
+    "codeCommitCount": 119,
     "contributionScore": 74,
-    "tier": "average"
+    "tier": "average",
+    "mentoringSessions": 8
   }
 ]

@@ -1,0 +1,5 @@
+Employee: EMP011
+Asset: AST-EMP011-11
+Department: IT
+Format: txt
+Knowledge summary: project updates, contributions, lessons learned.

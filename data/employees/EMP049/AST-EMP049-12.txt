@@ -1,0 +1,5 @@
+Employee: EMP049
+Asset: AST-EMP049-12
+Department: Manufacturing
+Format: txt
+Knowledge summary: project updates, contributions, lessons learned.
